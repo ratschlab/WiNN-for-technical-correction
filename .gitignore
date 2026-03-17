@@ -2,7 +2,7 @@
 .Rhistory
 .Rapp.history
 
-# Session Data files
+# Session data files
 .RData
 .RDataTmp
 
@@ -21,22 +21,18 @@
 # RStudio files
 .Rproj.user/
 
-# produced vignettes
-vignettes/*.html
-vignettes/*.pdf
-
-# OAuth2 token, see https://github.com/hadley/httr/releases/tag/v0.3
+# OAuth2 token
 .httr-oauth
 
-# knitr and R markdown default cache directories
+# knitr and R Markdown cache directories
 *_cache/
 /cache/
 
-# Temporary files created by R markdown
+# Temporary files created by R Markdown
 *.utf8.md
 *.knit.md
 
-# R Environment Variables
+# R environment variables
 .Renviron
 
 # pkgdown site
@@ -47,3 +43,16 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# OS files
+.DS_Store
+
+# Binary outputs
+*.pdf
+!manuscript/*.pdf
+
+# Public benchmark inputs and derived files are created locally
+data/public/raw/*
+!data/public/raw/.gitkeep
+data/public/processed/*
+!data/public/processed/.gitkeep
