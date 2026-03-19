@@ -1,0 +1,1377 @@
+---
+title: "Simulation Benchmark: Technical Correction Comparison"
+author: "Tanmay Tanna <ttanna@ethz.ch>"
+output:
+  rmarkdown::html_notebook:
+    toc: true
+    number_sections: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  fig.align = "center",
+  dpi = 180
+)
+
+options(
+  width = 130,
+  dplyr.summarise.inform = FALSE,
+  pdf.useDingbats = FALSE
+)
+
+resolve_repo_root <- function() {
+  candidates <- c(".", "..")
+  for (cand in candidates) {
+    if (
+      file.exists(file.path(cand, "LICENSE")) &&
+      dir.exists(file.path(cand, "data")) &&
+      dir.exists(file.path(cand, "notebooks"))
+    ) {
+      return(normalizePath(cand, mustWork = TRUE))
+    }
+  }
+  stop("Could not locate repository root.")
+}
+
+repo_root <- resolve_repo_root()
+```
+
+This notebook benchmarks technical correction methods on the simulated dataset in `data/simulated/`. It runs the full-method comparison and reports held-out QC-CV, residual run-order GAM deviance, per-feature ICC(A,1), per-sample Pearson correlation, and post-correction Ljung-Box autocorrelation counts.
+
+## 1. Dependencies
+
+```{r dependencies}
+ensure_cran_package <- function(pkg) {
+  if (!requireNamespace(pkg, quietly = TRUE)) {
+    install.packages(pkg, repos = "https://cloud.r-project.org")
+  }
+  if (!requireNamespace(pkg, quietly = TRUE)) {
+    stop("Unable to load required CRAN package: ", pkg)
+  }
+}
+
+ensure_bioc_package <- function(pkg) {
+  if (!requireNamespace("BiocManager", quietly = TRUE)) {
+    install.packages("BiocManager", repos = "https://cloud.r-project.org")
+  }
+  if (!requireNamespace(pkg, quietly = TRUE)) {
+    BiocManager::install(pkg, ask = FALSE, update = FALSE)
+  }
+  if (!requireNamespace(pkg, quietly = TRUE)) {
+    stop("Unable to load required Bioconductor package: ", pkg)
+  }
+}
+
+ensure_github_package <- function(pkg, repo) {
+  if (!requireNamespace(pkg, quietly = TRUE)) {
+    ensure_cran_package("remotes")
+    remotes::install_github(repo, upgrade = "never")
+  }
+  if (!requireNamespace(pkg, quietly = TRUE)) {
+    stop("Unable to install required GitHub package: ", pkg, " from ", repo)
+  }
+}
+
+cran_pkgs <- c(
+  "ggplot2", "dplyr", "tidyr", "purrr", "scales", "glue", "tibble",
+  "readr", "qcrlscR", "pmartR", "rlang", "mgcv"
+)
+invisible(lapply(cran_pkgs, ensure_cran_package))
+
+ensure_bioc_package("sva")
+ensure_bioc_package("statTarget")
+ensure_bioc_package("limma")
+ensure_github_package("malbacR", "pmartR/malbacR")
+ensure_github_package("TIGERr", "HAN-Siyu/TIGER")
+ensure_github_package("winn", "ratschlab/winn")
+
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(purrr)
+library(scales)
+library(glue)
+library(tibble)
+library(readr)
+library(sva)
+library(statTarget)
+library(qcrlscR)
+library(pmartR)
+library(malbacR)
+library(TIGERr)
+library(limma)
+library(winn)
+```
+
+## 2. Styling And Global Objects
+
+```{r style}
+plot_dir <- file.path(repo_root, "notebooks", ".cache", "simulation_comparison")
+dir.create(plot_dir, showWarnings = FALSE, recursive = TRUE)
+
+method_order_all <- c(
+  "Raw",
+  "ComBat",
+  "QC-RLSC",
+  "QC-RFSC",
+  "TIGER",
+  "SERRF",
+  "WINN auto (QC)",
+  "WINN auto-batch (QC)",
+  "WINN default (no QC)"
+)
+
+method_palette <- c(
+  "Raw" = "#4D4D4D",
+  "ComBat" = "#0072B2",
+  "QC-RLSC" = "#009E73",
+  "QC-RFSC" = "#E69F00",
+  "TIGER" = "#D55E00",
+  "SERRF" = "#CC79A7",
+  "WINN auto (QC)" = "#56B4E9",
+  "WINN auto-batch (QC)" = "#F0E442",
+  "WINN default (no QC)" = "#000000"
+)
+
+format_value_label <- function(x, digits = 2, integer_threshold = 1e-10) {
+  ifelse(abs(x - round(x)) < integer_threshold, sprintf("%.0f", round(x)), sprintf(paste0("%.", digits, "f"), x))
+}
+
+format_mean_se_label <- function(mean_x, se_x, digits = 3) {
+  ifelse(
+    is.finite(mean_x) & is.finite(se_x),
+    sprintf(paste0("%.", digits, "f \u00b1 %.", digits, "f"), mean_x, se_x),
+    NA_character_
+  )
+}
+
+build_contiguous_run_segments <- function(meta_df, sample_id_col = "sample_id", order_col = "run_order", batch_col = "batch") {
+  md <- meta_df[order(meta_df[[order_col]], na.last = TRUE), , drop = FALSE]
+  if (nrow(md) == 0L) {
+    md$segment_index <- integer(0)
+    md$segment_id <- character(0)
+    return(md)
+  }
+
+  batch_vals <- as.character(md[[batch_col]])
+  segment_index <- cumsum(c(TRUE, batch_vals[-1] != batch_vals[-length(batch_vals)]))
+
+  md$segment_index <- segment_index
+  md$segment_id <- paste0("batch_", batch_vals, "_segment_", sprintf("%03d", segment_index))
+  md
+}
+
+fit_run_order_gam_explained <- function(series, run_order, min_obs = 6L, k_max = 6L) {
+  ok <- is.finite(series) & is.finite(run_order)
+  n_obs <- sum(ok)
+
+  if (n_obs < min_obs) {
+    return(c(explained = NA_real_, n_obs = n_obs, k = NA_real_))
+  }
+
+  y <- as.numeric(series[ok])
+  x <- as.numeric(run_order[ok])
+  n_unique_x <- length(unique(x))
+
+  if (n_unique_x < 4L) {
+    return(c(explained = NA_real_, n_obs = n_obs, k = NA_real_))
+  }
+
+  if (stats::sd(y) <= .Machine$double.eps) {
+    return(c(explained = 0, n_obs = n_obs, k = NA_real_))
+  }
+
+  k_use <- min(as.integer(k_max), n_unique_x - 1L, max(3L, floor(n_obs / 2L)))
+  if (!is.finite(k_use) || k_use < 3L) {
+    return(c(explained = NA_real_, n_obs = n_obs, k = NA_real_))
+  }
+
+  fit <- tryCatch(
+    mgcv::gam(y ~ s(x, bs = "cr", k = k_use), method = "REML"),
+    error = function(e) NULL
+  )
+
+  if (is.null(fit)) {
+    return(c(explained = NA_real_, n_obs = n_obs, k = as.numeric(k_use)))
+  }
+
+  fit_summary <- tryCatch(summary(fit), error = function(e) NULL)
+  if (is.null(fit_summary)) {
+    return(c(explained = NA_real_, n_obs = n_obs, k = as.numeric(k_use)))
+  }
+
+  explained <- if (is.finite(fit_summary$dev.expl)) fit_summary$dev.expl else fit_summary$r.sq
+  explained <- if (is.finite(explained)) min(max(as.numeric(explained), 0), 1) else NA_real_
+
+  c(explained = explained, n_obs = n_obs, k = as.numeric(k_use))
+}
+
+compute_metabolite_segment_gam <- function(
+  mat,
+  meta_df,
+  method_label,
+  sample_id_col = "sample_id",
+  order_col = "run_order",
+  batch_col = "batch",
+  transform_fun = log1p,
+  min_obs = 6L,
+  k_max = 6L
+) {
+  md <- meta_df[meta_df[[sample_id_col]] %in% colnames(mat), , drop = FALSE]
+  md <- build_contiguous_run_segments(md, sample_id_col = sample_id_col, order_col = order_col, batch_col = batch_col)
+
+  if (nrow(md) == 0L || nrow(mat) == 0L) {
+    return(tibble::tibble(
+      method = character(),
+      metabolite = character(),
+      batch = character(),
+      segment_id = character(),
+      n_obs = integer(),
+      k = numeric(),
+      explained = numeric()
+    ))
+  }
+
+  seg_ids <- unique(md$segment_id)
+  transformed <- transform_fun(mat[, md[[sample_id_col]], drop = FALSE])
+
+  dplyr::bind_rows(lapply(seg_ids, function(seg_id) {
+    seg_md <- md[md$segment_id == seg_id, , drop = FALSE]
+    seg_sample_ids <- seg_md[[sample_id_col]]
+    seg_mat <- transformed[, seg_sample_ids, drop = FALSE]
+
+    gam_stats <- t(vapply(
+      seq_len(nrow(seg_mat)),
+      function(i) fit_run_order_gam_explained(seg_mat[i, ], seg_md[[order_col]], min_obs = min_obs, k_max = k_max),
+      numeric(3)
+    ))
+
+    tibble::tibble(
+      method = method_label,
+      metabolite = rownames(seg_mat),
+      batch = as.character(seg_md[[batch_col]][1]),
+      segment_id = seg_id,
+      n_obs = as.integer(gam_stats[, "n_obs"]),
+      k = as.numeric(gam_stats[, "k"]),
+      explained = as.numeric(gam_stats[, "explained"])
+    )
+  }))
+}
+
+summarise_metabolite_segment_gam <- function(df, digits = 4) {
+  df |>
+    dplyr::group_by(method) |>
+    dplyr::summarise(
+      n_pairs = sum(is.finite(explained)),
+      mean_explained = mean(explained, na.rm = TRUE),
+      median_explained = stats::median(explained, na.rm = TRUE),
+      sd_explained = stats::sd(explained, na.rm = TRUE),
+      mean_sd = ifelse(
+        is.finite(mean_explained),
+        sprintf(paste0("%.", digits, "f \u00b1 %.", digits, "f"), mean_explained, ifelse(is.finite(sd_explained), sd_explained, NA_real_)),
+        NA_character_
+      ),
+      .groups = "drop"
+    ) |>
+    arrange(method)
+}
+
+ljung_box_series_metrics <- function(series, max_lag = 10L, min_obs = 8L) {
+  x <- as.numeric(series)
+  x <- x[is.finite(x)]
+  n_obs <- length(x)
+  lag_use <- min(as.integer(max_lag), max(1L, floor(n_obs / 3L)), n_obs - 1L)
+
+  if (n_obs < min_obs || lag_use < 1L || isTRUE(stats::sd(x, na.rm = TRUE) < .Machine$double.eps)) {
+    return(c(lb_stat = NA_real_, p_value = NA_real_, lag = as.numeric(lag_use), n_obs = as.numeric(n_obs)))
+  }
+
+  lb <- tryCatch(
+    stats::Box.test(x, lag = lag_use, type = "Ljung-Box"),
+    error = function(e) NULL
+  )
+
+  if (is.null(lb)) {
+    return(c(lb_stat = NA_real_, p_value = NA_real_, lag = as.numeric(lag_use), n_obs = as.numeric(n_obs)))
+  }
+
+  c(
+    lb_stat = as.numeric(lb$statistic),
+    p_value = as.numeric(lb$p.value),
+    lag = as.numeric(lag_use),
+    n_obs = as.numeric(n_obs)
+  )
+}
+
+compute_metabolite_segment_ljung_box <- function(
+  mat,
+  meta_df,
+  method_label,
+  sample_id_col = "sample_id",
+  order_col = "run_order",
+  batch_col = "batch",
+  transform_fun = log1p,
+  min_obs = 8L,
+  max_lag = 10L
+) {
+  md <- meta_df[meta_df[[sample_id_col]] %in% colnames(mat), , drop = FALSE]
+  md <- build_contiguous_run_segments(md, sample_id_col = sample_id_col, order_col = order_col, batch_col = batch_col)
+
+  if (nrow(md) == 0L || nrow(mat) == 0L) {
+    return(tibble::tibble(
+      method = character(),
+      metabolite = character(),
+      batch = character(),
+      segment_id = character(),
+      n_obs = integer(),
+      lag = numeric(),
+      lb_stat = numeric(),
+      p_value = numeric()
+    ))
+  }
+
+  seg_ids <- unique(md$segment_id)
+  transformed <- transform_fun(mat[, md[[sample_id_col]], drop = FALSE])
+
+  dplyr::bind_rows(lapply(seg_ids, function(seg_id) {
+    seg_md <- md[md$segment_id == seg_id, , drop = FALSE]
+    seg_sample_ids <- seg_md[[sample_id_col]]
+    seg_mat <- transformed[, seg_sample_ids, drop = FALSE]
+
+    lb_stats <- t(vapply(
+      seq_len(nrow(seg_mat)),
+      function(i) ljung_box_series_metrics(seg_mat[i, ], max_lag = max_lag, min_obs = min_obs),
+      numeric(4)
+    ))
+
+    tibble::tibble(
+      method = method_label,
+      metabolite = rownames(seg_mat),
+      batch = as.character(seg_md[[batch_col]][1]),
+      segment_id = seg_id,
+      n_obs = as.integer(lb_stats[, "n_obs"]),
+      lag = as.numeric(lb_stats[, "lag"]),
+      lb_stat = as.numeric(lb_stats[, "lb_stat"]),
+      p_value = as.numeric(lb_stats[, "p_value"])
+    )
+  }))
+}
+
+annotate_metabolite_segment_ljung_box <- function(df, alpha = 0.05, adjust_method = "BH") {
+  df |>
+    dplyr::group_by(method) |>
+    dplyr::mutate(
+      p_adj = stats::p.adjust(p_value, method = adjust_method),
+      is_autocorrelated = is.finite(p_adj) & (p_adj < alpha)
+    ) |>
+    dplyr::ungroup()
+}
+
+summarise_metabolite_segment_ljung_box <- function(df) {
+  df |>
+    dplyr::group_by(method) |>
+    dplyr::summarise(
+      n_tested = sum(is.finite(p_value)),
+      n_autocorrelated = sum(is_autocorrelated, na.rm = TRUE),
+      prop_autocorrelated = ifelse(n_tested > 0, n_autocorrelated / n_tested, NA_real_),
+      median_lb_stat = stats::median(lb_stat, na.rm = TRUE),
+      .groups = "drop"
+    ) |>
+    arrange(method)
+}
+```
+
+## 3. Data Load And Validation
+
+```{r data}
+simulated_dir <- file.path(repo_root, "data", "simulated")
+gt_path <- file.path(simulated_dir, "ground_truth.tsv")
+shift_path <- file.path(simulated_dir, "shifted_profiles.tsv")
+meta_path <- file.path(simulated_dir, "sample_metadata.tsv")
+
+if (!file.exists(gt_path)) stop("Missing simulated data file: ", gt_path)
+if (!file.exists(shift_path)) stop("Missing simulated data file: ", shift_path)
+if (!file.exists(meta_path)) stop("Missing simulated data file: ", meta_path)
+
+gt_tbl <- readr::read_tsv(gt_path, show_col_types = FALSE)
+shift_tbl <- readr::read_tsv(shift_path, show_col_types = FALSE)
+meta <- readr::read_tsv(meta_path, show_col_types = FALSE)
+
+tbl_to_mat <- function(tbl) {
+  feat_col <- colnames(tbl)[1]
+  m <- as.matrix(tbl[, -1, drop = FALSE])
+  storage.mode(m) <- "double"
+  rownames(m) <- tbl[[feat_col]]
+  colnames(m) <- colnames(tbl)[-1]
+  m
+}
+
+GT <- tbl_to_mat(gt_tbl)
+x <- tbl_to_mat(shift_tbl)
+
+meta <- meta |>
+  mutate(
+    sample_id = as.character(sample_id),
+    plate = as.character(plate),
+    batch = as.integer(sub("^P", "", plate)),
+    class = if_else(sample_type == "control", "QC", "Sample")
+  ) |>
+  arrange(run_order)
+
+common_samples <- Reduce(intersect, list(meta$sample_id, colnames(GT), colnames(x)))
+if (length(common_samples) < 10L) {
+  stop("Insufficient shared sample IDs between metadata and matrices.")
+}
+
+common_features <- intersect(rownames(GT), rownames(x))
+if (length(common_features) < 10L) {
+  stop("Insufficient shared metabolites between GT and shifted matrix.")
+}
+
+meta <- meta[match(common_samples, meta$sample_id), , drop = FALSE]
+GT <- GT[common_features, common_samples, drop = FALSE]
+x <- x[common_features, common_samples, drop = FALSE]
+
+qc_ids <- meta$sample_id[meta$class == "QC"]
+non_qc_ids <- meta$sample_id[meta$class != "QC"]
+
+if (length(qc_ids) < 6L) stop("Need at least 6 QC samples for QC-CV evaluation.")
+if (length(non_qc_ids) < 10L) stop("Need at least 10 non-QC samples for correlation evaluation.")
+
+cohort_summary <- tibble(
+  Metric = c("Total samples", "QC samples", "Non-QC samples", "Metabolites", "Batches"),
+  Value = c(ncol(x), length(qc_ids), length(non_qc_ids), nrow(x), dplyr::n_distinct(meta$batch))
+)
+
+knitr::kable(cohort_summary, align = c("l", "r"))
+```
+
+## 4. Method Helpers
+
+```{r method-helpers}
+clip_nonnegative <- function(m) {
+  m <- as.matrix(m)
+  storage.mode(m) <- "double"
+  m[is.infinite(m)] <- NA_real_
+  pmax(m, 0)
+}
+
+run_silently <- function(code) {
+  suppressWarnings(suppressMessages(force(code)))
+}
+
+safe_cor <- function(a, b, method = "pearson", min_n = 6L) {
+  ok <- is.finite(a) & is.finite(b)
+  if (sum(ok) < min_n) return(NA_real_)
+  if (stats::sd(a[ok]) <= 0 || stats::sd(b[ok]) <= 0) return(NA_real_)
+  suppressWarnings(cor(a[ok], b[ok], method = method))
+}
+
+calc_icc_a1_matrix <- function(ratings) {
+  ratings <- as.matrix(ratings)
+  ratings <- ratings[complete.cases(ratings), , drop = FALSE]
+
+  n <- nrow(ratings)
+  k <- ncol(ratings)
+  if (n < 2L || k < 2L) {
+    return(NA_real_)
+  }
+
+  grand_mean <- mean(ratings)
+  row_means <- rowMeans(ratings)
+  col_means <- colMeans(ratings)
+
+  ss_rows <- k * sum((row_means - grand_mean)^2)
+  ss_cols <- n * sum((col_means - grand_mean)^2)
+  ss_total <- sum((ratings - grand_mean)^2)
+  ss_error <- ss_total - ss_rows - ss_cols
+
+  ms_rows <- ss_rows / (n - 1L)
+  ms_cols <- ss_cols / (k - 1L)
+  ms_error <- ss_error / ((n - 1L) * (k - 1L))
+
+  denom <- ms_rows + (k - 1L) * ms_error + (k * (ms_cols - ms_error) / n)
+  if (!is.finite(denom) || denom <= 0) {
+    return(NA_real_)
+  }
+
+  (ms_rows - ms_error) / denom
+}
+
+calc_icc_a1_pair <- function(reference, candidate, min_n = 6L) {
+  dat <- cbind(reference, candidate)
+  dat <- dat[complete.cases(dat), , drop = FALSE]
+  if (nrow(dat) < min_n) {
+    return(NA_real_)
+  }
+  calc_icc_a1_matrix(dat)
+}
+
+align_meta_to_mat <- function(x_mat, meta_df = meta) {
+  sample_ids <- colnames(x_mat)
+  md <- meta_df[match(sample_ids, meta_df$sample_id), , drop = FALSE]
+  if (anyNA(md$sample_id)) {
+    stop("Sample IDs in matrix do not match metadata sample IDs.")
+  }
+  md
+}
+
+attach_qc_passthrough <- function(corrected_mat, raw_mat, meta_df) {
+  qc_samples <- meta_df$sample_id[meta_df$class == "QC" & meta_df$sample_id %in% colnames(raw_mat)]
+  if (length(qc_samples) == 0L) {
+    return(corrected_mat)
+  }
+
+  feature_ids <- intersect(rownames(corrected_mat), rownames(raw_mat))
+  corrected_mat <- corrected_mat[feature_ids, , drop = FALSE]
+  raw_aligned <- raw_mat[feature_ids, , drop = FALSE]
+
+  missing_qc <- setdiff(qc_samples, colnames(corrected_mat))
+  if (length(missing_qc) > 0L) {
+    corrected_mat <- cbind(corrected_mat, raw_aligned[, missing_qc, drop = FALSE])
+  }
+
+  output_ids <- meta_df$sample_id[meta_df$sample_id %in% colnames(corrected_mat)]
+  corrected_mat[, output_ids, drop = FALSE]
+}
+
+run_method <- function(label, fn) {
+  elapsed <- system.time({
+    out <- fn()
+  })[["elapsed"]]
+
+  list(
+    label = label,
+    data = clip_nonnegative(out),
+    elapsed_sec = elapsed
+  )
+}
+
+run_method_cached <- function(label, fn, force = FALSE, cache_tag = "") {
+  cache_dir <- file.path(plot_dir, "method_cache")
+  dir.create(cache_dir, showWarnings = FALSE, recursive = TRUE)
+
+  safe_label <- gsub("[^A-Za-z0-9]+", "_", tolower(label))
+  tag <- ifelse(nzchar(cache_tag), paste0("_", cache_tag), "")
+  cache_file <- file.path(cache_dir, paste0(safe_label, tag, ".rds"))
+
+  if (!isTRUE(force) && file.exists(cache_file)) {
+    return(readRDS(cache_file))
+  }
+
+  out <- run_method(label = label, fn = fn)
+  saveRDS(out, cache_file)
+  out
+}
+
+run_matrix_cached <- function(label, fn, force = FALSE, cache_tag = "") {
+  cache_dir <- file.path(plot_dir, "matrix_cache")
+  dir.create(cache_dir, showWarnings = FALSE, recursive = TRUE)
+
+  safe_label <- gsub("[^A-Za-z0-9]+", "_", tolower(label))
+  tag <- ifelse(nzchar(cache_tag), paste0("_", cache_tag), "")
+  cache_file <- file.path(cache_dir, paste0(safe_label, tag, ".rds"))
+
+  if (!isTRUE(force) && file.exists(cache_file)) {
+    return(readRDS(cache_file))
+  }
+
+  out <- clip_nonnegative(fn())
+  saveRDS(out, cache_file)
+  out
+}
+
+with_no_cluster <- function(code, patch_do_parallel = FALSE) {
+  parallel_ns <- asNamespace("parallel")
+  original_parallel <- list(
+    makeCluster = get("makeCluster", envir = parallel_ns),
+    clusterExport = get("clusterExport", envir = parallel_ns),
+    stopCluster = get("stopCluster", envir = parallel_ns)
+  )
+
+  if (bindingIsLocked("makeCluster", parallel_ns)) unlockBinding("makeCluster", parallel_ns)
+  if (bindingIsLocked("clusterExport", parallel_ns)) unlockBinding("clusterExport", parallel_ns)
+  if (bindingIsLocked("stopCluster", parallel_ns)) unlockBinding("stopCluster", parallel_ns)
+
+  assign("makeCluster", function(spec, ...) NULL, envir = parallel_ns)
+  assign("clusterExport", function(cl, ...) invisible(NULL), envir = parallel_ns)
+  assign("stopCluster", function(cl, ...) invisible(NULL), envir = parallel_ns)
+
+  lockBinding("makeCluster", parallel_ns)
+  lockBinding("clusterExport", parallel_ns)
+  lockBinding("stopCluster", parallel_ns)
+
+  do_parallel_ns <- NULL
+  original_register <- NULL
+
+  if (isTRUE(patch_do_parallel) && requireNamespace("doParallel", quietly = TRUE)) {
+    do_parallel_ns <- asNamespace("doParallel")
+    original_register <- get("registerDoParallel", envir = do_parallel_ns)
+    if (bindingIsLocked("registerDoParallel", do_parallel_ns)) unlockBinding("registerDoParallel", do_parallel_ns)
+    assign("registerDoParallel", function(cl, ...) foreach::registerDoSEQ(), envir = do_parallel_ns)
+    lockBinding("registerDoParallel", do_parallel_ns)
+  }
+
+  on.exit({
+    if (!is.null(do_parallel_ns) && !is.null(original_register)) {
+      if (bindingIsLocked("registerDoParallel", do_parallel_ns)) unlockBinding("registerDoParallel", do_parallel_ns)
+      assign("registerDoParallel", original_register, envir = do_parallel_ns)
+      lockBinding("registerDoParallel", do_parallel_ns)
+    }
+
+    if (bindingIsLocked("makeCluster", parallel_ns)) unlockBinding("makeCluster", parallel_ns)
+    if (bindingIsLocked("clusterExport", parallel_ns)) unlockBinding("clusterExport", parallel_ns)
+    if (bindingIsLocked("stopCluster", parallel_ns)) unlockBinding("stopCluster", parallel_ns)
+
+    assign("makeCluster", original_parallel$makeCluster, envir = parallel_ns)
+    assign("clusterExport", original_parallel$clusterExport, envir = parallel_ns)
+    assign("stopCluster", original_parallel$stopCluster, envir = parallel_ns)
+
+    lockBinding("makeCluster", parallel_ns)
+    lockBinding("clusterExport", parallel_ns)
+    lockBinding("stopCluster", parallel_ns)
+  }, add = TRUE)
+
+  force(code)
+}
+
+make_malbac_object <- function(x_mat, meta_df, jitter_eps = 0) {
+  x_mat <- as.matrix(x_mat)
+  if (jitter_eps > 0) {
+    x_mat <- x_mat + matrix(runif(length(x_mat), min = 0, max = jitter_eps), nrow = nrow(x_mat))
+  }
+
+  safe_sample <- paste0("Sample_", seq_len(ncol(x_mat)))
+  sample_map <- setNames(meta_df$sample_id, safe_sample)
+
+  x_safe <- x_mat
+  colnames(x_safe) <- safe_sample
+
+  f_data <- data.frame(
+    sampleID = safe_sample,
+    sample_type = meta_df$class,
+    batch = meta_df$batch,
+    run_order = meta_df$run_order,
+    stringsAsFactors = FALSE
+  )
+  rownames(f_data) <- f_data$sampleID
+
+  e_data <- data.frame(
+    feature = rownames(x_safe),
+    x_safe,
+    check.names = FALSE,
+    stringsAsFactors = FALSE
+  )
+
+  obj <- pmartR::as.metabData(
+    e_data = e_data,
+    f_data = f_data,
+    edata_cname = "feature",
+    fdata_cname = "sampleID"
+  )
+
+  obj <- pmartR::group_designation(
+    omicsData = obj,
+    main_effects = "sample_type",
+    batch_id = "batch"
+  )
+
+  list(obj = obj, sample_map = sample_map)
+}
+
+extract_malbac_matrix <- function(malbac_obj, sample_map) {
+  e_data <- malbac_obj$e_data
+  m <- as.matrix(e_data[, -1, drop = FALSE])
+  rownames(m) <- e_data[, 1]
+
+  mapped <- sample_map[colnames(m)]
+  colnames(m) <- unname(mapped)
+  m
+}
+
+run_combat <- function(x_mat, meta_df = meta, par_prior = TRUE) {
+  md <- align_meta_to_mat(x_mat, meta_df)
+  x_log <- log1p(x_mat)
+  y_log <- sva::ComBat(
+    dat = x_log,
+    batch = md$batch,
+    mod = NULL,
+    par.prior = par_prior,
+    prior.plots = FALSE
+  )
+  expm1(y_log)
+}
+
+run_qc_rlsc_with_controls <- function(x_mat, control_ids, meta_df = meta, span = 0.75) {
+  md <- align_meta_to_mat(x_mat, meta_df) |>
+    arrange(run_order)
+  x_ord <- x_mat[, md$sample_id, drop = FALSE]
+  dat <- as.data.frame(t(x_ord), check.names = FALSE)
+  y <- ifelse(md$sample_id %in% control_ids, "QC", "Sample")
+  corrected <- qcrlscR::qc.rlsc.wrap(
+    dat = dat,
+    cls.qc = y,
+    cls.bl = factor(md$batch),
+    method = "divide",
+    intra = TRUE,
+    opti = FALSE,
+    log10 = FALSE,
+    outl = FALSE,
+    shift = TRUE,
+    span = span
+  )
+  corrected <- t(as.matrix(corrected))
+  rownames(corrected) <- rownames(x_ord)
+  colnames(corrected) <- md$sample_id
+  corrected[, meta_df$sample_id, drop = FALSE]
+}
+
+run_qc_rfsc_with_controls <- function(x_mat, control_ids, meta_df = meta, ntree = 500, coCV = 30, Frule = 0.8) {
+  md <- align_meta_to_mat(x_mat, meta_df) |>
+    arrange(run_order)
+  x_ord <- x_mat[, md$sample_id, drop = FALSE]
+
+  control_ids <- intersect(control_ids, md$sample_id)
+  if (length(control_ids) < 2L) {
+    stop("QC-RFSC requires at least 2 QC controls.")
+  }
+
+  first_id <- md$sample_id[1]
+  last_id <- md$sample_id[nrow(md)]
+  if (!(first_id %in% control_ids) || !(last_id %in% control_ids)) {
+    first_qc <- control_ids[which.min(md$run_order[match(control_ids, md$sample_id)])]
+    last_qc <- control_ids[which.max(md$run_order[match(control_ids, md$sample_id)])]
+    reordered_ids <- c(first_qc, setdiff(md$sample_id, c(first_qc, last_qc)), last_qc)
+    md <- md[match(reordered_ids, md$sample_id), , drop = FALSE]
+    x_ord <- x_ord[, reordered_ids, drop = FALSE]
+  }
+
+  qc_flag <- md$sample_id %in% control_ids
+  stat_names <- ifelse(qc_flag, paste0(md$sample_id, "_QC"), md$sample_id)
+
+  samPeno <- data.frame(
+    sample = stat_names,
+    batch = md$batch,
+    class = ifelse(qc_flag, NA_integer_, 1L),
+    order = seq_len(nrow(md)),
+    stringsAsFactors = FALSE
+  )
+
+  if (!is.na(samPeno$class[1]) || !is.na(samPeno$class[nrow(samPeno)])) {
+    stop("QC-RFSC setup failed to place QC at first and last positions.")
+  }
+
+  samFile <- data.frame(name = rownames(x_ord), x_ord, check.names = FALSE)
+  colnames(samFile)[-1] <- stat_names
+
+  tmp <- tempfile("sim_shiftcor_")
+  dir.create(tmp)
+  old <- getwd()
+  setwd(tmp)
+  on.exit(setwd(old), add = TRUE)
+
+  write.csv(samPeno, "samPeno.csv", row.names = FALSE, quote = FALSE)
+  write.csv(samFile, "samFile.csv", row.names = FALSE, quote = FALSE)
+
+  run_silently(
+    statTarget::shiftCor(
+      samPeno = "samPeno.csv",
+      samFile = "samFile.csv",
+      Frule = Frule,
+      MLmethod = "QCRFSC",
+      ntree = ntree,
+      coCV = coCV,
+      plot = FALSE
+    )
+  )
+
+  out_file <- file.path("statTarget", "shiftCor", "After_shiftCor", "shift_all_cor.csv")
+  if (!file.exists(out_file)) stop("statTarget did not produce shift_all_cor.csv")
+
+  corrected_df <- read.csv(out_file, check.names = FALSE, row.names = 1, stringsAsFactors = FALSE)
+  if ("class" %in% rownames(corrected_df)) {
+    corrected_df <- corrected_df[rownames(corrected_df) != "class", , drop = FALSE]
+  }
+
+  corrected <- apply(corrected_df, 2, as.numeric)
+  rownames(corrected) <- rownames(corrected_df)
+  colnames(corrected) <- sub("_QC$", "", colnames(corrected_df))
+  corrected <- corrected / 1000
+
+  corrected[, colnames(x_mat), drop = FALSE]
+}
+
+run_tiger <- function(x_mat, meta_df = meta, use_injection = TRUE, include_qc_passthrough = TRUE) {
+  md <- align_meta_to_mat(x_mat, meta_df)
+
+  sample_df <- tibble(
+    sampleID = md$sample_id,
+    sampleType = md$class,
+    batchID = md$batch,
+    injectionOrder = md$run_order
+  ) |>
+    bind_cols(as.data.frame(t(x_mat), check.names = FALSE))
+
+  train_samples <- sample_df |> filter(sampleType == "QC")
+  if (nrow(train_samples) < 2L) {
+    stop("TIGER requires at least two QC samples in training data.")
+  }
+
+  test_samples <- sample_df |> filter(sampleType != "QC")
+
+  if (!isTRUE(use_injection)) {
+    train_samples <- train_samples |> select(-injectionOrder)
+    test_samples <- test_samples |> select(-injectionOrder)
+  }
+
+  corrected <- run_silently(
+    TIGERr::run_TIGER(
+      test_samples = test_samples,
+      train_samples = train_samples,
+      col_sampleID = "sampleID",
+      col_sampleType = "sampleType",
+      col_batchID = "batchID",
+      col_order = if (isTRUE(use_injection)) "injectionOrder" else NULL
+    )
+  )
+
+  meta_cols <- c("sampleID", "sampleType", "batchID")
+  if (isTRUE(use_injection)) {
+    meta_cols <- c(meta_cols, "injectionOrder")
+  }
+
+  feature_cols <- setdiff(colnames(corrected), meta_cols)
+  m <- t(as.matrix(corrected[, feature_cols, drop = FALSE]))
+  rownames(m) <- feature_cols
+  colnames(m) <- corrected$sampleID
+
+  if (isTRUE(include_qc_passthrough)) {
+    attach_qc_passthrough(m, x_mat, md)
+  } else {
+    m
+  }
+}
+
+run_tiger_with_holdout_qc <- function(
+  x_mat,
+  train_qc_ids,
+  test_qc_ids,
+  meta_df = meta,
+  use_injection = TRUE,
+  mtry_percent = 0.4,
+  nodesize_percent = 0.4,
+  ntree = 5,
+  parallel_cores = 2,
+  duplicate_test_qc = TRUE,
+  include_nonqc_test = TRUE
+) {
+  md <- align_meta_to_mat(x_mat, meta_df)
+
+  sample_df <- tibble(
+    sampleID = md$sample_id,
+    sampleType = md$class,
+    batchID = md$batch,
+    injectionOrder = md$run_order
+  ) |>
+    bind_cols(as.data.frame(t(x_mat), check.names = FALSE))
+
+  train_qc_ids <- intersect(train_qc_ids, md$sample_id[md$class == "QC"])
+  test_qc_ids <- intersect(test_qc_ids, md$sample_id[md$class == "QC"])
+  if (length(train_qc_ids) < 2L) stop("TIGER holdout run requires at least 2 training QCs.")
+  if (length(test_qc_ids) < 1L) stop("TIGER holdout run requires at least 1 test QC.")
+
+  train_samples <- sample_df |> filter(sampleID %in% train_qc_ids)
+  if (isTRUE(duplicate_test_qc)) {
+    nonqc_test <- if (isTRUE(include_nonqc_test)) {
+      sample_df |> filter(sampleType != "QC")
+    } else {
+      sample_df[0, , drop = FALSE]
+    }
+    qc_test_dup <- sample_df |>
+      filter(sampleID %in% test_qc_ids) |>
+      mutate(sampleID = paste0("QCtest__", sampleID), sampleType = "QC_test")
+    test_samples <- bind_rows(nonqc_test, qc_test_dup)
+  } else {
+    test_ids <- if (isTRUE(include_nonqc_test)) {
+      unique(c(md$sample_id[md$class != "QC"], test_qc_ids))
+    } else {
+      unique(test_qc_ids)
+    }
+    test_samples <- sample_df |> filter(sampleID %in% test_ids)
+  }
+
+  if (!isTRUE(use_injection)) {
+    train_samples <- train_samples |> select(-injectionOrder)
+    test_samples <- test_samples |> select(-injectionOrder)
+  }
+
+  corrected <- run_silently(
+    TIGERr::run_TIGER(
+      test_samples = test_samples,
+      train_samples = train_samples,
+      col_sampleID = "sampleID",
+      col_sampleType = "sampleType",
+      col_batchID = "batchID",
+      col_order = if (isTRUE(use_injection)) "injectionOrder" else NULL,
+      mtry_percent = mtry_percent,
+      nodesize_percent = nodesize_percent,
+      ntree = ntree,
+      parallel.cores = parallel_cores
+    )
+  )
+
+  meta_cols <- c("sampleID", "sampleType", "batchID")
+  if (isTRUE(use_injection)) {
+    meta_cols <- c(meta_cols, "injectionOrder")
+  }
+
+  feature_cols <- setdiff(colnames(corrected), meta_cols)
+  m <- t(as.matrix(corrected[, feature_cols, drop = FALSE]))
+  rownames(m) <- feature_cols
+  colnames(m) <- corrected$sampleID
+
+  if (isTRUE(duplicate_test_qc)) {
+    dup_cols <- grep("^QCtest__", colnames(m), value = TRUE)
+    if (length(dup_cols) > 0L) {
+      m_qc <- m[, dup_cols, drop = FALSE]
+      colnames(m_qc) <- sub("^QCtest__", "", dup_cols)
+      nondup_cols <- setdiff(colnames(m), dup_cols)
+      m <- cbind(m[, nondup_cols, drop = FALSE], m_qc)
+    }
+  }
+
+  m
+}
+
+run_serrf <- function(x_mat, meta_df = meta, jitter_eps = 0, include_qc_passthrough = TRUE) {
+  md <- align_meta_to_mat(x_mat, meta_df)
+
+  jitter_candidates <- unique(c(
+    as.numeric(jitter_eps),
+    if (isTRUE(jitter_eps <= 0)) c(1e-6, 1e-4) else c(as.numeric(jitter_eps) * 10)
+  ))
+
+  out <- NULL
+  sample_map <- NULL
+  last_err <- NULL
+  for (jit in jitter_candidates) {
+    mal <- make_malbac_object(x_mat, md, jitter_eps = jit)
+    out_try <- tryCatch(
+      run_silently(
+        with_no_cluster(
+          malbacR::bc_serrf(
+            omicsData = mal$obj,
+            sampletype_cname = "sample_type",
+            test_val = "QC",
+            group_cname = "sample_type"
+          ),
+          patch_do_parallel = TRUE
+        )
+      ),
+      error = function(e) e
+    )
+
+    if (!inherits(out_try, "error")) {
+      out <- out_try
+      sample_map <- mal$sample_map
+      break
+    }
+    last_err <- out_try
+  }
+
+  if (is.null(out)) {
+    stop(last_err)
+  }
+
+  corrected <- extract_malbac_matrix(out, sample_map)
+  corrected <- corrected[, md$sample_id[md$sample_id %in% colnames(corrected)], drop = FALSE]
+
+  if (!isTRUE(include_qc_passthrough)) {
+    return(corrected)
+  }
+
+  attach_qc_passthrough(corrected, x_mat, md)
+}
+
+run_serrf_with_holdout_qc <- function(
+  x_mat,
+  train_qc_ids,
+  test_qc_ids,
+  meta_df = meta,
+  jitter_eps = 0,
+  duplicate_test_qc = TRUE,
+  include_nonqc_samples = TRUE
+) {
+  md <- align_meta_to_mat(x_mat, meta_df)
+
+  if (!isTRUE(include_nonqc_samples)) {
+    keep_ids <- md$sample_id[md$class == "QC"]
+    md <- md[match(keep_ids, md$sample_id), , drop = FALSE]
+    x_mat <- x_mat[, keep_ids, drop = FALSE]
+  }
+
+  train_qc_ids <- intersect(train_qc_ids, md$sample_id[md$class == "QC"])
+  test_qc_ids <- intersect(test_qc_ids, md$sample_id[md$class == "QC"])
+  if (length(train_qc_ids) < 2L) stop("SERRF holdout run requires at least 2 training QCs.")
+  if (length(test_qc_ids) < 1L) stop("SERRF holdout run requires at least 1 test QC.")
+
+  md_serrf <- md
+  md_serrf$class <- as.character(md_serrf$class)
+  md_serrf$class[md_serrf$class == "QC"] <- "QC_holdout"
+  md_serrf$class[md_serrf$sample_id %in% train_qc_ids] <- "QC"
+
+  x_serrf <- x_mat
+  if (isTRUE(duplicate_test_qc)) {
+    dup_ids <- paste0("QCtest__", test_qc_ids)
+    dup_block <- x_mat[, test_qc_ids, drop = FALSE]
+    colnames(dup_block) <- dup_ids
+    x_serrf <- cbind(x_serrf, dup_block)
+
+    dup_meta <- md[match(test_qc_ids, md$sample_id), , drop = FALSE]
+    dup_meta$sample_id <- dup_ids
+    dup_meta$class <- "QC_test"
+    dup_meta$run_order <- dup_meta$run_order + seq_along(test_qc_ids) * 1e-4
+    md_serrf <- bind_rows(md_serrf, dup_meta)
+  } else {
+    md_serrf$class[md_serrf$sample_id %in% test_qc_ids] <- "QC_test"
+  }
+
+  md_serrf <- md_serrf[match(colnames(x_serrf), md_serrf$sample_id), , drop = FALSE]
+
+  jitter_candidates <- unique(c(
+    as.numeric(jitter_eps),
+    if (isTRUE(jitter_eps <= 0)) c(1e-6, 1e-4) else c(as.numeric(jitter_eps) * 10)
+  ))
+
+  out <- NULL
+  sample_map <- NULL
+  last_err <- NULL
+  for (jit in jitter_candidates) {
+    mal <- make_malbac_object(x_serrf, md_serrf, jitter_eps = jit)
+    out_try <- tryCatch(
+      run_silently(
+        with_no_cluster(
+          malbacR::bc_serrf(
+            omicsData = mal$obj,
+            sampletype_cname = "sample_type",
+            test_val = "QC",
+            group_cname = "sample_type"
+          ),
+          patch_do_parallel = TRUE
+        )
+      ),
+      error = function(e) e
+    )
+
+    if (!inherits(out_try, "error")) {
+      out <- out_try
+      sample_map <- mal$sample_map
+      break
+    }
+    last_err <- out_try
+  }
+
+  if (is.null(out)) stop(last_err)
+
+  m <- extract_malbac_matrix(out, sample_map)
+  if (isTRUE(duplicate_test_qc)) {
+    dup_cols <- paste0("QCtest__", test_qc_ids)
+    dup_cols <- dup_cols[dup_cols %in% colnames(m)]
+    if (length(dup_cols) > 0L) {
+      m_qc <- m[, dup_cols, drop = FALSE]
+      colnames(m_qc) <- sub("^QCtest__", "", dup_cols)
+      nondup_cols <- setdiff(colnames(m), dup_cols)
+      m <- cbind(m[, nondup_cols, drop = FALSE], m_qc)
+    }
+  }
+
+  m
+}
+
+run_winn_with_controls <- function(x_mat, control_ids = NULL, meta_df = meta, auto_batch = FALSE, parameters = "auto") {
+  md <- align_meta_to_mat(x_mat, meta_df)
+  control_idx_local <- if (is.null(control_ids)) NULL else which(md$sample_id %in% control_ids)
+
+  winn::winn(
+    data = x_mat,
+    batch = if (isTRUE(auto_batch)) NULL else md$batch,
+    run_order = md$run_order,
+    control_samples = control_idx_local,
+    parameters = parameters
+  )
+}
+
+run_winn_mode1_auto_qc <- function(x_mat, meta_df = meta) {
+  run_winn_with_controls(x_mat, control_ids = meta_df$sample_id[meta_df$class == "QC"], meta_df = meta_df, auto_batch = FALSE, parameters = "auto")
+}
+
+run_winn_mode2_auto_batch_qc <- function(x_mat, meta_df = meta) {
+  run_winn_with_controls(x_mat, control_ids = meta_df$sample_id[meta_df$class == "QC"], meta_df = meta_df, auto_batch = TRUE, parameters = "auto")
+}
+
+run_winn_mode3_default_no_qc <- function(x_mat, meta_df = meta) {
+  run_winn_with_controls(x_mat, control_ids = NULL, meta_df = meta_df, auto_batch = FALSE, parameters = "fixed")
+}
+```
+
+## 5. Run Methods
+
+```{r run-methods, cache=TRUE}
+method_results <- list(
+  run_method_cached("Raw", function() x),
+  run_method_cached("ComBat", function() run_combat(x, meta_df = meta)),
+  run_method_cached("QC-RLSC", function() run_qc_rlsc_with_controls(x, control_ids = qc_ids, meta_df = meta)),
+  run_method_cached("QC-RFSC", function() run_qc_rfsc_with_controls(x, control_ids = qc_ids, meta_df = meta)),
+  run_method_cached("TIGER", function() run_tiger(x, meta_df = meta, use_injection = TRUE, include_qc_passthrough = TRUE)),
+  run_method_cached("SERRF", function() run_serrf(x, meta_df = meta, jitter_eps = 0, include_qc_passthrough = TRUE)),
+  run_method_cached("WINN auto (QC)", function() run_winn_mode1_auto_qc(x, meta_df = meta)),
+  run_method_cached("WINN auto-batch (QC)", function() run_winn_mode2_auto_batch_qc(x, meta_df = meta)),
+  run_method_cached("WINN default (no QC)", function() run_winn_mode3_default_no_qc(x, meta_df = meta))
+)
+
+method_mats <- setNames(
+  lapply(method_results, function(res) res$data),
+  vapply(method_results, function(res) res$label, character(1))
+)
+```
+
+## 6. Metrics
+
+```{r metrics, cache=TRUE}
+cv_percent <- function(mat, sample_ids) {
+  sample_ids <- intersect(sample_ids, colnames(mat))
+  if (length(sample_ids) < 3L || nrow(mat) < 2L) {
+    return(setNames(rep(NA_real_, nrow(mat)), rownames(mat)))
+  }
+
+  sub <- mat[, sample_ids, drop = FALSE]
+  mean_vec <- rowMeans(sub, na.rm = TRUE)
+  sd_vec <- apply(sub, 1, sd, na.rm = TRUE)
+  denom <- pmax(abs(mean_vec), .Machine$double.eps)
+  out <- 100 * sd_vec / denom
+  names(out) <- rownames(sub)
+  out
+}
+
+set.seed(20260311)
+holdout_qc_ids <- meta |>
+  filter(class == "QC") |>
+  group_by(batch) |>
+  group_modify(~ {
+    n_hold <- min(2L, max(0L, nrow(.x) - 3L))
+    if (n_hold <= 0L) {
+      return(.x[0, , drop = FALSE])
+    }
+    .x |>
+      slice_sample(n = n_hold)
+  }) |>
+  ungroup() |>
+  pull(sample_id)
+
+train_qc_ids <- setdiff(qc_ids, holdout_qc_ids)
+if (length(train_qc_ids) < 2L) stop("Insufficient train QCs after holdout split.")
+
+holdout_tag_num <- abs(sum(utf8ToInt(paste(sort(holdout_qc_ids), collapse = "|"))))
+holdout_tag <- paste0("holdout_", holdout_tag_num)
+
+qccv_tiger_holdout <- run_matrix_cached(
+  "TIGER_QCCV_HOLDOUT",
+  function() run_tiger_with_holdout_qc(
+    x_mat = x,
+    train_qc_ids = train_qc_ids,
+    test_qc_ids = holdout_qc_ids,
+    meta_df = meta,
+    use_injection = TRUE,
+    mtry_percent = 0.4,
+    nodesize_percent = 0.4,
+    ntree = 5,
+    parallel_cores = 2,
+    duplicate_test_qc = TRUE,
+    include_nonqc_test = TRUE
+  ),
+  cache_tag = paste0(holdout_tag, "_ntree5_nonqc1")
+)
+
+qccv_serrf_holdout <- run_matrix_cached(
+  "SERRF_QCCV_HOLDOUT",
+  function() run_serrf_with_holdout_qc(
+    x_mat = x,
+    train_qc_ids = train_qc_ids,
+    test_qc_ids = holdout_qc_ids,
+    meta_df = meta,
+    jitter_eps = 0,
+    duplicate_test_qc = TRUE,
+    include_nonqc_samples = TRUE
+  ),
+  cache_tag = holdout_tag
+)
+
+qccv_holdout_mats <- list(
+  "Raw" = method_mats[["Raw"]],
+  "ComBat" = method_mats[["ComBat"]],
+  "QC-RLSC" = run_matrix_cached(
+    "QC-RLSC_HOLDOUT",
+    function() run_qc_rlsc_with_controls(x, control_ids = train_qc_ids, meta_df = meta),
+    cache_tag = holdout_tag
+  ),
+  "QC-RFSC" = run_matrix_cached(
+    "QC-RFSC_HOLDOUT",
+    function() run_qc_rfsc_with_controls(x, control_ids = train_qc_ids, meta_df = meta),
+    cache_tag = holdout_tag
+  ),
+  "TIGER" = qccv_tiger_holdout,
+  "SERRF" = qccv_serrf_holdout,
+  "WINN auto (QC)" = run_matrix_cached(
+    "WINN_AUTO_QC_HOLDOUT",
+    function() run_winn_with_controls(x, control_ids = train_qc_ids, meta_df = meta, auto_batch = FALSE, parameters = "auto"),
+    cache_tag = holdout_tag
+  ),
+  "WINN auto-batch (QC)" = run_matrix_cached(
+    "WINN_AUTOBATCH_QC_HOLDOUT",
+    function() run_winn_with_controls(x, control_ids = train_qc_ids, meta_df = meta, auto_batch = TRUE, parameters = "auto"),
+    cache_tag = holdout_tag
+  ),
+  "WINN default (no QC)" = method_mats[["WINN default (no QC)"]]
+)
+
+qccv_summary <- bind_rows(lapply(method_order_all, function(label) {
+  vals <- cv_percent(qccv_holdout_mats[[label]], holdout_qc_ids)
+  tibble(method = label, value = as.numeric(vals)) |>
+    filter(is.finite(value))
+})) |>
+  group_by(method) |>
+  summarise(
+    heldout_qc_cv_mean = mean(value, na.rm = TRUE),
+    heldout_qc_cv_sd = sd(value, na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  arrange(method)
+
+feature_icc_summary <- bind_rows(lapply(method_order_all, function(label) {
+  mat <- method_mats[[label]]
+  sample_ids <- intersect(non_qc_ids, colnames(mat))
+  feature_ids <- intersect(rownames(GT), rownames(mat))
+  if (length(sample_ids) < 6L || length(feature_ids) < 2L) {
+    return(tibble(method = label, value = numeric(0)))
+  }
+
+  tibble(
+    method = label,
+    value = vapply(feature_ids, function(fid) {
+      calc_icc_a1_pair(
+        log1p(as.numeric(GT[fid, sample_ids])),
+        log1p(as.numeric(mat[fid, sample_ids])),
+        min_n = 6L
+      )
+    }, numeric(1))
+  ) |>
+    filter(is.finite(value))
+})) |>
+  group_by(method) |>
+  summarise(
+    per_feature_icc_mean = mean(value, na.rm = TRUE),
+    per_feature_icc_sd = sd(value, na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  arrange(method)
+
+sample_corr_summary <- bind_rows(lapply(method_order_all, function(label) {
+  mat <- method_mats[[label]]
+  sample_ids <- intersect(non_qc_ids, colnames(mat))
+  feature_ids <- intersect(rownames(GT), rownames(mat))
+  if (length(sample_ids) < 2L || length(feature_ids) < 20L) {
+    return(tibble(method = label, value = numeric(0)))
+  }
+
+  tibble(
+    method = label,
+    value = vapply(sample_ids, function(sid) {
+      safe_cor(
+        log1p(as.numeric(GT[feature_ids, sid])),
+        log1p(as.numeric(mat[feature_ids, sid])),
+        method = "pearson",
+        min_n = 20L
+      )
+    }, numeric(1))
+  ) |>
+    filter(is.finite(value))
+})) |>
+  group_by(method) |>
+  summarise(
+    per_sample_pearson_mean = mean(value, na.rm = TRUE),
+    per_sample_pearson_sd = sd(value, na.rm = TRUE),
+    .groups = "drop"
+  ) |>
+  arrange(method)
+
+nonqc_segment_meta <- meta |>
+  filter(class != "QC", sample_id %in% colnames(method_mats[["Raw"]])) |>
+  arrange(run_order)
+
+run_order_gam_summary <- bind_rows(lapply(method_order_all, function(label) {
+  compute_metabolite_segment_gam(
+    method_mats[[label]],
+    nonqc_segment_meta,
+    method_label = label,
+    transform_fun = log1p,
+    min_obs = 6L,
+    k_max = 5L
+  )
+})) |>
+  filter(is.finite(explained)) |>
+  summarise_metabolite_segment_gam() |>
+  rename(
+    residual_run_order_gam_mean = mean_explained,
+    residual_run_order_gam_sd = sd_explained
+  ) |>
+  select(method, residual_run_order_gam_mean, residual_run_order_gam_sd) |>
+  arrange(method)
+
+ljungbox_summary <- bind_rows(lapply(method_order_all, function(label) {
+  compute_metabolite_segment_ljung_box(
+    method_mats[[label]],
+    nonqc_segment_meta,
+    method_label = label,
+    transform_fun = log1p,
+    min_obs = 8L,
+    max_lag = 10L
+  )
+})) |>
+  annotate_metabolite_segment_ljung_box(alpha = 0.05, adjust_method = "BH") |>
+  summarise_metabolite_segment_ljung_box() |>
+  transmute(
+    method,
+    autocorrelated_metabolite_plate_count = n_autocorrelated
+  ) |>
+  arrange(method)
+
+metric_summary <- tibble(method = method_order_all) |>
+  left_join(qccv_summary, by = "method") |>
+  left_join(feature_icc_summary, by = "method") |>
+  left_join(sample_corr_summary, by = "method") |>
+  left_join(run_order_gam_summary, by = "method") |>
+  left_join(ljungbox_summary, by = "method") |>
+  mutate(method = factor(method, levels = method_order_all)) |>
+  arrange(method)
+```
+
+## 7. Summary
+
+```{r summary}
+knitr::kable(
+  metric_summary |>
+    mutate(across(where(is.numeric), ~ round(.x, 4))),
+  caption = "Simulation benchmark summary."
+)
+
+holdout_summary <- tibble(
+  holdout_seed = 20260311L,
+  n_holdout_qc = length(holdout_qc_ids),
+  holdout_qc_ids = paste(holdout_qc_ids, collapse = ", ")
+)
+
+knitr::kable(holdout_summary, caption = "Held-out QC split used for QC-CV evaluation.")
+```

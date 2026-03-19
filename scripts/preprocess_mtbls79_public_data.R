@@ -6,6 +6,7 @@ preprocess_mtbls79_public_data <- function(
   file_path = file.path("data", "public", "raw", "Dataset07__SFPM.xlsx"),
   output_dir = file.path("data", "public", "processed"),
   seed = 42L,
+  maxiter = 3L,
   reuse_existing = FALSE,
   verbose = interactive()
 ) {
@@ -67,6 +68,7 @@ preprocess_mtbls79_public_data <- function(
     set.seed(seed)
     imputation <- missForest::missForest(
       filtered_data,
+      maxiter = as.integer(maxiter),
       verbose = isTRUE(verbose)
     )
     imputed_data <- imputation$ximp
@@ -110,5 +112,6 @@ if (sys.nframe() == 0L) {
   args <- commandArgs(trailingOnly = TRUE)
   file_path <- if (length(args) >= 1L) args[[1]] else file.path("data", "public", "raw", "Dataset07__SFPM.xlsx")
   output_dir <- if (length(args) >= 2L) args[[2]] else file.path("data", "public", "processed")
-  preprocess_mtbls79_public_data(file_path = file_path, output_dir = output_dir, verbose = TRUE)
+  maxiter <- if (length(args) >= 3L) as.integer(args[[3]]) else 3L
+  preprocess_mtbls79_public_data(file_path = file_path, output_dir = output_dir, maxiter = maxiter, verbose = TRUE)
 }

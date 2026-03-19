@@ -27,10 +27,15 @@
 # knitr and R Markdown cache directories
 *_cache/
 /cache/
+notebooks/.cache/
 
 # Temporary files created by R Markdown
 *.utf8.md
 *.knit.md
+
+# Local notebook working outputs
+notebooks/*.nb.html
+notebooks/*_files/
 
 # R environment variables
 .Renviron
