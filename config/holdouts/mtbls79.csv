@@ -1,0 +1,13 @@
+"strategy","seed","sample_id","batch","run_order"
+"holdout_12_qc",20260327,"batch01_QC02",1,2
+"holdout_12_qc",20260327,"batch01_QC03",1,3
+"holdout_12_qc",20260327,"batch01_QC04",1,7
+"holdout_12_qc",20260327,"batch01_QC05",1,13
+"holdout_12_qc",20260327,"batch02_QC10",2,41
+"holdout_12_qc",20260327,"batch03_QC13",3,59
+"holdout_12_qc",20260327,"batch04_QC18",4,87
+"holdout_12_qc",20260327,"batch05_QC21",5,97
+"holdout_12_qc",20260327,"batch05_QC23",5,104
+"holdout_12_qc",20260327,"Batch06_QC28",6,123
+"holdout_12_qc",20260327,"Batch07_QC31",7,135
+"holdout_12_qc",20260327,"Batch08_QC38",8,166

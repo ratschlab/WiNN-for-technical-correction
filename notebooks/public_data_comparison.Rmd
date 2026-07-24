@@ -119,18 +119,9 @@ set.seed(20260306)
 ```{r style}
 plot_dir <- file.path(repo_root, "notebooks", ".cache", "public_data_comparison")
 dir.create(plot_dir, showWarnings = FALSE, recursive = TRUE)
+source(file.path(repo_root, "scripts", "plot_theme.R"))
 
-method_order_all <- c(
-  "Raw",
-  "ComBat",
-  "QC-RLSC",
-  "QC-RFSC",
-  "TIGER",
-  "SERRF",
-  "WINN auto (QC)",
-  "WINN auto-batch (QC)",
-  "WINN default (no QC)"
-)
+method_order_all <- winn_method_order()
 
 external_methods <- c(
   "Raw",
@@ -148,17 +139,7 @@ winn_methods <- c(
   "WINN default (no QC)"
 )
 
-method_palette <- c(
-  "Raw" = "#4D4D4D",
-  "ComBat" = "#0072B2",
-  "QC-RLSC" = "#009E73",
-  "QC-RFSC" = "#E69F00",
-  "TIGER" = "#D55E00",
-  "SERRF" = "#CC79A7",
-  "WINN auto (QC)" = "#56B4E9",
-  "WINN auto-batch (QC)" = "#F0E442",
-  "WINN default (no QC)" = "#000000"
-)
+method_palette <- winn_method_palette()
 
 theme_publication <- function() {
   theme_minimal(base_size = 12, base_family = "Helvetica") +

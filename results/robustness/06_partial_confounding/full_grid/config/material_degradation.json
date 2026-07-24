@@ -1,0 +1,13 @@
+{
+  "schema": "partial_confounding_material_degradation_v1",
+  "frozen_before_full_grid": true,
+  "primary_reference": "clean-observed log1p effect and paired zero scenario",
+  "criteria": {
+    "clean_attenuation": "median_attenuation_ratio_clean_responsive < 0.80",
+    "clean_effect_rmse": "effect_rmse_vs_clean_responsive > 0.20",
+    "paired_tpr_loss": "TPR_zero - TPR_scenario > 0.20"
+  },
+  "material_degradation": "any criterion is TRUE",
+  "non_estimable": "NA degradation flag; retain explicit design/effect status",
+  "full_curves_primary": true
+}

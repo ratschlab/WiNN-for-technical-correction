@@ -1,0 +1,253 @@
+---
+title: "BatchCorrMetabolomics Set 1: correction benchmark"
+author: "Reproducible public-data benchmark"
+date: "2026-07-22"
+output:
+  html_document:
+    self_contained: true
+    toc: true
+    toc_float: true
+    number_sections: true
+params:
+  rerun_benchmark: false
+---
+
+```{r setup, include=FALSE}
+find_repo_root <- function(start = getwd()) {
+  here <- normalizePath(start, mustWork = TRUE)
+  repeat {
+    if (file.exists(file.path(here, "scripts", "run_batchcorr_set1_benchmark.R"))) return(here)
+    parent <- dirname(here)
+    if (identical(parent, here)) stop("Could not locate the repository root.")
+    here <- parent
+  }
+}
+
+repo_root <- find_repo_root()
+knitr::opts_knit$set(root.dir = repo_root)
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE, fig.align = "center", dpi = 120)
+
+suppressPackageStartupMessages({
+  library(dplyr)
+  library(ggplot2)
+  library(jsonlite)
+  library(knitr)
+  library(tidyr)
+})
+source(file.path(repo_root, "scripts", "plot_theme.R"))
+
+result_dir <- file.path(repo_root, "results", "batchcorr_set1")
+processed_dir <- file.path(repo_root, "data", "public", "batchcorr_set1", "processed")
+figure_data_dir <- file.path(result_dir, "figures", "source_data")
+
+if (isTRUE(params$rerun_benchmark)) {
+  r_exec <- file.path(R.home(), "bin", "exec", "R")
+  env <- c(
+    paste0("R_HOME=", R.home()),
+    paste0("R_SHARE_DIR=", R.home("share")),
+    paste0("R_INCLUDE_DIR=", R.home("include")),
+    paste0("R_DOC_DIR=", R.home("doc"))
+  )
+  status <- system2(
+    r_exec,
+    args = c("--vanilla", "--no-echo", "--file=scripts/run_batchcorr_set1_benchmark.R", "--args", "--force"),
+    stdout = "",
+    stderr = "",
+    env = env
+  )
+  if (!identical(status, 0L)) stop("Benchmark rerun failed with status ", status, ". See results/batchcorr_set1/analysis_log.txt.")
+}
+
+required_results <- c(
+  "analysis_complete.json", "method_attempts.csv", "method_metrics.csv",
+  "method_parameters.csv", "hidden_qc_method_protocol.csv"
+)
+missing_results <- required_results[!file.exists(file.path(result_dir, required_results))]
+if (length(missing_results)) stop("Missing benchmark output(s): ", paste(missing_results, collapse = ", "))
+
+theme_set(theme_minimal(base_size = 11))
+method_order <- winn_method_order()
+method_palette <- winn_method_palette()
+
+metadata <- read.csv(file.path(processed_dir, "BatchCorr_set1_metadata.csv"), stringsAsFactors = FALSE)
+attempts <- read.csv(file.path(result_dir, "method_attempts.csv"), check.names = FALSE, stringsAsFactors = FALSE)
+metrics <- read.csv(file.path(result_dir, "method_metrics.csv"), check.names = FALSE, stringsAsFactors = FALSE)
+parameters <- read.csv(file.path(result_dir, "method_parameters.csv"), check.names = FALSE, stringsAsFactors = FALSE)
+protocol <- read.csv(file.path(result_dir, "hidden_qc_method_protocol.csv"), check.names = FALSE, stringsAsFactors = FALSE)
+completion <- read_json(file.path(result_dir, "analysis_complete.json"), simplifyVector = TRUE)
+preprocessing <- read_json(file.path(processed_dir, "BatchCorr_set1_preprocessing_summary.json"), simplifyVector = TRUE)
+```
+
+# Suitability decision
+
+**Verdict: suitable with limitations.** BatchCorrMetabolomics Set 1 supplies a minimally processed but explicitly uncorrected negative-ion LC–MS matrix, exact acquisition sequence (`SeqNr`), ten batch labels, pooled references (`SCode == "ref"`), and accession identities with genuine biological replicates. The formal criterion-level decision is in `reports/batchcorr_set1_suitability.md` and `.csv`.
+
+The earlier oral-cavity candidate was audited first and stopped as unsuitable: its small public files do not include an injection-level feature-intensity matrix. Its raw archives were inventoried but not downloaded. No correction benchmark was run for that dataset.
+
+# Provenance and preprocessing
+
+The source is `set.1` plus `set.1.Y` from `rwehrens/BatchCorrMetabolomics`, pinned to commit `e0c7668140e206dcdae9afa602dd2e1b337ac4f6`. The 761 × 567 deposited matrix has 206,376 missing values (47.83%) and no zeros. Features observed in at least 80% of all injections were retained, leaving 199 features with 3.11% missingness; the remaining values were imputed by missForest with seed 42 and 100 trees.
+
+The deposited values are documented as already log-scaled, but the log base is not documented. Imputation was therefore performed on that scale. A reversible `expm1` representation supplies nonnegative multiplicative inputs to the correction wrappers, and every evaluation uses `log1p`, returning exactly to the deposited/imputed scale. Feature IDs preserve original column positions because the package object has no m/z, retention time, or feature names.
+
+```{r preprocessing-summary}
+batch_summary <- metadata |>
+  mutate(type = ifelse(is_qc, "QC", "Study")) |>
+  count(batch_order_index, batch, type, name = "n") |>
+  pivot_wider(names_from = type, values_from = n, values_fill = 0) |>
+  mutate(Total = QC + Study) |>
+  arrange(batch_order_index) |>
+  select(Batch = batch, Total, Study, QC)
+kable(batch_summary, caption = "Analytical batches in true acquisition order.")
+```
+
+There are 710 study injections, 51 pooled references, and 357 accession IDs. Of these, 351 accessions have two injections, one has three, and five are singletons; 346 accessions span more than one batch. Replicate analyses use only genuine repeated accession measurements.
+
+```{r dataset-design, fig.width=11, fig.height=5}
+design <- read.csv(file.path(figure_data_dir, "dataset_design.csv"), stringsAsFactors = FALSE)
+ggplot(design, aes(run_order, batch_order_index, color = sample_type, shape = sample_type)) +
+  geom_point(alpha = 0.75, size = 1.4) +
+  scale_y_continuous(breaks = sort(unique(design$batch_order_index)),
+                     labels = unique(design$batch[order(design$batch_order_index)])) +
+  scale_color_manual(values = c(Study = "#9CA3AF", QC = "#D55E00")) +
+  labs(title = "BatchCorr Set 1 acquisition design", subtitle = "True SeqNr order; pooled references in orange",
+       x = "Global acquisition sequence number", y = "Analytical batch", color = NULL, shape = NULL)
+```
+
+# Hidden-QC protocol
+
+Ten interior references—one per batch, selected with fresh seed 20260809—were fixed as the common holdout. This set has no overlap with the superseded QC-RLSC audit holdout. The first and last reference in every batch remain training controls, and each batch retains four or five training references. Before every method call, held-out references are relabelled as ordinary study/test samples. Their identities and values are used only after correction for evaluation, never for fitting, parameter selection, or WiNN auto-selection.
+
+```{r holdout-tables}
+holdout <- read.csv(file.path(result_dir, "qc_holdout_ids.csv"), stringsAsFactors = FALSE)
+kable(holdout, caption = "Common held-out reference injections.")
+kable(protocol, caption = "Method-facing information firewall.")
+```
+
+# Method execution and selected parameters
+
+All nine requested variants were attempted. Tunable competitor candidates were ranked using accession association, accession weighted-PC variance, genuine replicate agreement, feature repeatability, and batch weighted-PC variance. Held-out QC metrics were excluded from tuning. Complete grids and rankings are under `results/batchcorr_set1/tuning_candidates/`.
+
+QC-RLSC is fixed rather than tuned because only four or five training QCs remain per batch. A Set 1-specific wrapper performs subtractive, degree-1, full-span LOESS separately within each supplied batch on the exact `log1p` analysis scale, preserves returned sample IDs explicitly, and performs batch shifting on that log scale. This replaces a withdrawn implementation that allowed `qcrlscR::qc.rlsc.wrap()` to reorder batches and silently ignore the nominal span grid. The complete audit is in `reports/batchcorr_set1_qc_rlsc_correction.md`.
+
+```{r methods}
+kable(attempts, digits = 3, caption = "Execution status and runtime, including tuning.")
+kable(parameters, caption = "Selected parameters and control sets.")
+```
+
+```{r method-coverage-note, results='asis'}
+rfsc_features <- metrics$retained_features[metrics$method == "QC-RFSC"]
+rfsc_removed <- 199L - rfsc_features
+cat(sprintf("QC-RFSC completed but its selected package-level CV rule removed %d features, so it returns %d rather than 199 features. No other method-specific sample or feature reduction occurred; this loss is explicit in all coverage tables.", rfsc_removed, rfsc_features))
+```
+
+# Technical correction and biological preservation
+
+Technical metrics use the ten hidden references or study-only within-batch profiles as appropriate. Biological metrics use the 710 non-QC injections. Accession is the biological identity endpoint; no pseudo-replicates were constructed.
+
+```{r headline-metrics}
+headline <- metrics |>
+  transmute(
+    Method = method,
+    Features = retained_features,
+    Samples = output_samples,
+    `QC CV mean (%)` = heldout_qc_cv_mean,
+    `GAM deviance` = run_order_gam_mean,
+    `Ljung-Box significant (%)` = 100 * ljung_significant_proportion,
+    `Batch weighted-PC R2` = batch_pc_r2,
+    `Accession weighted-PC R2` = accession_pc_r2,
+    `Associated features` = accession_associated_features,
+    `Replicate Pearson` = replicate_pearson_median,
+    `Replicate ICC(A,1)` = replicate_icc_median,
+    `Runtime (s)` = runtime_sec
+  )
+kable(headline, digits = 3, caption = "Primary technical and biological metrics.")
+```
+
+Associated-feature counts use a feature-wise one-way accession F-test on the deposited/imputed log analysis scale, followed by Benjamini–Hochberg correction at adjusted p < 0.05. Eta-squared is saved for every feature and method. A larger associated-feature count alone is not interpreted as proof of better correction; weighted-PC identity variance and genuine replicate agreement provide complementary preservation checks.
+
+```{r method-comparison, fig.width=12, fig.height=7}
+comparison <- read.csv(file.path(figure_data_dir, "method_comparison.csv"), stringsAsFactors = FALSE)
+comparison$method <- factor(comparison$method, levels = method_order)
+ggplot(comparison, aes(method, value, fill = method)) +
+  geom_col() +
+  facet_wrap(~metric, scales = "free_y", ncol = 2) +
+  scale_fill_manual(values = method_palette, guide = "none") +
+  labs(title = "Technical correction and biological preservation", x = NULL, y = NULL) +
+  theme(axis.text.x = element_text(angle = 32, hjust = 1))
+```
+
+```{r pca, fig.width=12, fig.height=5.5}
+pca <- read.csv(file.path(figure_data_dir, "raw_vs_winn_pca.csv"), stringsAsFactors = FALSE)
+ggplot(pca, aes(PC1, PC2, color = batch, group = interaction(method, accession_id))) +
+  geom_line(color = "#D1D5DB", alpha = 0.25, linewidth = 0.25) +
+  geom_point(alpha = 0.68, size = 1.1) +
+  facet_wrap(~method, scales = "free") +
+  labs(title = "Raw versus WiNN auto (QC)", subtitle = "Lines connect genuine accession replicates; color denotes batch",
+       color = "Batch")
+```
+
+```{r association-change, fig.width=11, fig.height=5}
+assoc_change <- read.csv(file.path(figure_data_dir, "accession_association_change.csv"), stringsAsFactors = FALSE)
+assoc_change$method <- factor(assoc_change$method, levels = method_order)
+ggplot(assoc_change, aes(method, change_from_raw, fill = method)) +
+  geom_col() + geom_hline(yintercept = 0, linewidth = 0.4) +
+  scale_fill_manual(values = method_palette, guide = "none") +
+  labs(title = "Change in accession-associated features relative to Raw",
+       subtitle = "BH-adjusted p < 0.05; count alone is not a correction-quality score",
+       x = NULL, y = "Associated-feature count change") +
+  theme(axis.text.x = element_text(angle = 32, hjust = 1))
+```
+
+```{r qc-trends, fig.width=12, fig.height=10}
+qc_trends <- read.csv(file.path(figure_data_dir, "representative_qc_trends.csv"), stringsAsFactors = FALSE)
+ggplot(qc_trends, aes(run_order, log_intensity, color = qc_role, shape = qc_role)) +
+  geom_line(aes(group = interaction(method, feature_id, batch)), color = "#D1D5DB", linewidth = 0.25) +
+  geom_point(size = 1.2) +
+  facet_grid(feature_id ~ method, scales = "free_y") +
+  scale_color_manual(values = c(Training = "#0072B2", `Held out` = "#D55E00")) +
+  labs(title = "Representative pooled-reference trajectories",
+       subtitle = "Features selected reproducibly at fixed Raw QC-CV quantiles",
+       x = "Global acquisition sequence number", y = "Deposited/imputed log analysis scale",
+       color = NULL, shape = NULL)
+```
+
+# Reproducibility and validation
+
+```{r validation}
+matrix_files <- list.files(file.path(result_dir, "method_outputs"), pattern = "\\.rds$", full.names = TRUE)
+matrix_validation <- bind_rows(lapply(matrix_files, function(path) {
+  mat <- readRDS(path)
+  data.frame(
+    file = basename(path), features = nrow(mat), samples = ncol(mat),
+    metadata_aligned = identical(colnames(mat), metadata$sample_id[metadata$sample_id %in% colnames(mat)]),
+    finite = all(is.finite(mat)), stringsAsFactors = FALSE
+  )
+}))
+checks <- data.frame(
+  check = c(
+    "All nine method labels attempted exactly once",
+    "No held-out QC IDs supplied to any method",
+    "No tuning score uses held-out QC values",
+    "Every saved method matrix aligns to metadata",
+    "Every saved method matrix is finite",
+    "Genuine accession IDs used for replicate metrics"
+  ),
+  passed = c(
+    identical(attempts$method, method_order) && nrow(attempts) == 9,
+    all(!protocol$supplied_holdout_qc_ids),
+    all(!protocol$tuning_uses_holdout_values),
+    all(matrix_validation$metadata_aligned),
+    all(matrix_validation$finite),
+    all(c("accession_id", "biological_replicate") %in% names(metadata))
+  )
+)
+kable(checks, caption = "Notebook validation checks.")
+kable(matrix_validation, caption = "Saved matrix dimensions and alignment.")
+```
+
+All numerical source data for the figures are saved under `results/batchcorr_set1/figures/source_data/`. Complete feature-level QC CV, GAM, Ljung–Box, accession association, and replicate tables are saved alongside the cached method matrices, selected parameters, warnings/errors, analysis log, and `sessionInfo.txt`.
+
+```{r session-info}
+sessionInfo()
+```

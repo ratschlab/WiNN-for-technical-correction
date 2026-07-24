@@ -1,0 +1,11 @@
+criterion_id,requirement,status,blocking,evidence
+1,"Uncorrected or minimally processed feature-intensity matrix","PASS WITH LIMITATION",false,"set.1 is a 761-injection by 567-reconstructed-metabolite numeric matrix. It is peak-picked/aligned/clustered, occurrence-filtered, anonymized, and already log-scaled, but the paper and demo explicitly treat it as uncorrected input."
+2,"Reliable batch and acquisition-order metadata","PASS",false,"set.1.Y supplies Batch and globally unique SeqNr for every row. Ten contiguous analytical batches are recovered without alphabetical ordering."
+3,"Identifiable QCs/reference samples","PASS",false,"SCode == ref identifies 51 pooled reference QCs; every batch has 5 QCs except B2, which has 6."
+4,"Biological labels or replicate identities","PASS",false,"SCode identifies 357 anonymized Arabidopsis accessions. There are 351 accessions with two injections, one with three, and five with one."
+5,"Sufficient samples and QCs per batch","PASS",false,"Batches contain 43-75 study injections and 5-6 QCs. Holding out one interior QC per batch leaves 4-5 training QCs and retains both endpoint QCs."
+6,"No evidence the matrix was already batch/drift corrected","PASS",false,"The paper labels the supplied Set I values uncorrected and demonstrates correction from this matrix; the package demo performs corrections after loading set.1."
+7,"Study samples and QCs represented together","PASS",false,"All 710 study injections and 51 QCs occur as aligned rows of set.1 and set.1.Y."
+8,"Unambiguous matrix-to-metadata alignment","PASS",false,"rownames(set.1) and rownames(set.1.Y) are identical and unique."
+9,"Reliable within-batch order and QC endpoints","PASS",false,"SeqNr is unique; within-batch rank is deterministic. Every batch begins and ends with a QC in the retained matrix."
+10,"Biology not severely confounded with batch/order","PASS WITH LIMITATION",false,"346 of 357 accessions have replicates spanning batches. Eleven accessions do not, including five with only one retained injection; this is recorded and excluded where a paired metric requires replication."

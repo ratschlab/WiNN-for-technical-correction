@@ -42,6 +42,10 @@ notebooks/*_files/
 
 # pkgdown site
 docs/
+!docs/
+docs/*
+!docs/DATASETS.md
+!docs/REPRODUCIBILITY.md
 
 # translation temp files
 po/*~
@@ -61,3 +65,42 @@ data/public/raw/*
 !data/public/raw/.gitkeep
 data/public/processed/*
 !data/public/processed/.gitkeep
+
+# Dataset-specific public downloads and generated outputs
+data/public/*/source/
+data/public/*/processed/
+data/public/*/audit/
+data/public/*/manifests/
+data/public/*/*.log
+results/**
+!results/README.md
+!results/robustness/
+results/robustness/**
+!results/robustness/00_provenance/
+!results/robustness/00_provenance/seed_manifest.csv
+!results/robustness/04_simulation_seed_stability/
+!results/robustness/04_simulation_seed_stability/config/
+!results/robustness/04_simulation_seed_stability/config/**
+!results/robustness/06_partial_confounding/
+results/robustness/06_partial_confounding/**
+!results/robustness/06_partial_confounding/scenario_manifest.csv
+!results/robustness/06_partial_confounding/seed_ledger.csv
+!results/robustness/06_partial_confounding/bundles/
+!results/robustness/06_partial_confounding/bundles/CONF0[1-9]_*.rds
+!results/robustness/06_partial_confounding/bundles/CONF10_*.rds
+!results/robustness/06_partial_confounding/full_grid/
+!results/robustness/06_partial_confounding/full_grid/config/
+!results/robustness/06_partial_confounding/full_grid/config/**
+!results/robustness/06_partial_confounding/pilot_CONF01/
+!results/robustness/06_partial_confounding/pilot_CONF01/method_parameters.csv
+!results/robustness/06_partial_confounding/pilot_CONF01/method_parameters.sha256
+notebooks/rendered/
+
+# The WiNN source can be cloned here for exact robustness reruns
+winn/
+
+# Local release artifacts and agent configuration are never versioned
+*.zip
+AGENTS.md
+.agents/
+.codex/

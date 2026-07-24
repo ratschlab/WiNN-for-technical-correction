@@ -1,0 +1,21 @@
+{
+  "schema": "canonical_seed_stability_v1",
+  "seed_ids": ["SIM01", "SIM02", "SIM03", "SIM04", "SIM05", "SIM06", "SIM07", "SIM08", "SIM09", "SIM10", "SIM11", "SIM12", "SIM13", "SIM14", "SIM15", "SIM16", "SIM17", "SIM18", "SIM19", "SIM20", "SIM21", "SIM22", "SIM23", "SIM24", "SIM25", "SIM26", "SIM27", "SIM28", "SIM29", "SIM30"],
+  "display_seed": "SIM01",
+  "independent_units": "one prespecified simulation realization and one prespecified hidden-reference split per seed",
+  "hidden_references": {
+    "total": 10,
+    "per_plate": 2,
+    "training_per_plate": 8
+  },
+  "bootstrap": {
+    "seed": 202608291,
+    "replicates": 10000,
+    "unit": "seed"
+  },
+  "equality_tolerance": 1e-08,
+  "frozen_parameter_sha256": "3f8355bea4e0005fc819fb8b31f7a7fc266dcc5096b488552c88e9ceb5d16fa8",
+  "parameter_source": "results/robustness/03_canonical_simulation/pilot_SIM01/method_parameters.csv",
+  "no_seed_split_cross_product": true,
+  "prepared_at": "2026-07-23T18:03:57+0200"
+}
