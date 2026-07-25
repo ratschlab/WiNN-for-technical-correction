@@ -80,7 +80,7 @@ Rscript -e "rmarkdown::render('notebooks/waveica_adenocarcinoma_comparison.Rmd',
 
 Use `--force` on a command-line runner only when a deliberate full rerun is intended. Existing results are otherwise reused.
 
-After a WiNN package update, `--winn-only` refreshes the three WiNN variants and regenerates downstream tables and figures while requiring and reusing the existing competitor caches. It cannot be combined with `--force`:
+After a WiNN package update, `--winn-only` refreshes the three WiNN variants and regenerates downstream tables and figures while requiring and reusing the existing competitor caches. Reused competitor caches are read-only and are not reserialized, so their file hashes remain stable. The option cannot be combined with `--force`:
 
 ```bash
 Rscript scripts/run_batchcorr_set1_benchmark.R --winn-only

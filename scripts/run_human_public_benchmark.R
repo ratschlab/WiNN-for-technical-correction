@@ -378,7 +378,11 @@ run_full <- function(label, fn, tuning_sec = 0) {
     winn_drift[[label]] <<- value$drift
     winn_batches[[label]] <<- data.frame(method = label, sample_id = meta$sample_id, supplied_batch = meta$batch, detected_batch = as.character(value$detected_batch), global_run_order = meta$global_run_order)
   }
-  saveRDS(mat, cache_file, compress = "xz")
+  # In a WiNN-only refresh, competitor caches are immutable inputs. Reading and
+  # re-saving an unchanged matrix can alter its serialized bytes across R or
+  # compression versions, which obscures the provenance guarantee even though
+  # the numerical object is identical.
+  if (!reuse_cache) saveRDS(mat, cache_file, compress = "xz")
   method_results[[label]] <<- mat
   attempt_rows[[label]] <<- data.frame(method = label, status = "completed", tuning_sec = tuning_sec, correction_sec = captured$elapsed_sec, total_sec = tuning_sec + captured$elapsed_sec, error = "", stringsAsFactors = FALSE)
   log_line("Method completed: ", label, " (", nrow(mat), " × ", ncol(mat), ").")
