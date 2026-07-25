@@ -7,6 +7,8 @@ script_path <- normalizePath(sub("^--file=", "", file_arg), mustWork = TRUE)
 repo_root <- dirname(dirname(script_path))
 args <- commandArgs(trailingOnly = TRUE)
 force <- "--force" %in% args
+winn_only <- "--winn-only" %in% args
+if (force && winn_only) stop("Use either --force or --winn-only, not both.")
 
 required_packages <- c(
   "dplyr", "ggplot2", "jsonlite", "lmtest", "malbacR", "mgcv",
@@ -55,6 +57,8 @@ log_line <- function(...) {
   cat(line, "\n", file = log_path, append = TRUE)
   message(line)
 }
+log_line("Starting BatchCorr Set 1 benchmark; force=", force,
+         "; winn_only=", winn_only, ".")
 
 read_feature_matrix <- function(path) {
   d <- read.csv(path, check.names = FALSE, stringsAsFactors = FALSE)
@@ -435,7 +439,30 @@ best_params <- list()
 tuning_seconds <- setNames(rep(0, length(tuning_grids)), names(tuning_grids))
 tuning_diagnostics <- list()
 
-for (method_label in names(tuning_grids)) {
+if (winn_only) {
+  frozen_path <- file.path(tuning_dir, "selected_competitor_parameters.csv")
+  if (!file.exists(frozen_path)) stop("WiNN-only refresh requires frozen competitor parameters: ", frozen_path)
+  frozen <- read.csv(frozen_path, check.names = FALSE, stringsAsFactors = FALSE)
+  for (method_label in names(tuning_grids)) {
+    row <- frozen[frozen$method == method_label, , drop = FALSE]
+    if (nrow(row) != 1L) stop("Frozen parameters are missing or duplicated for ", method_label, ".")
+    parameter_names <- names(tuning_grids[[method_label]])
+    best_params[[method_label]] <- row[, c(parameter_names, "selection_status"), drop = FALSE]
+  }
+  runtime_path <- file.path(result_dir, "runtime.csv")
+  if (file.exists(runtime_path)) {
+    frozen_runtime <- read.csv(runtime_path, check.names = FALSE, stringsAsFactors = FALSE)
+    for (method_label in names(tuning_grids)) {
+      value <- frozen_runtime$tuning_sec[frozen_runtime$method == method_label]
+      if (length(value) == 1L && is.finite(value)) tuning_seconds[[method_label]] <- value
+    }
+  }
+  diagnostics_path <- file.path(tuning_dir, "candidate_diagnostics.csv")
+  if (file.exists(diagnostics_path)) {
+    tuning_diagnostics <- list(read.csv(diagnostics_path, check.names = FALSE, stringsAsFactors = FALSE))
+  }
+  log_line("Loaded frozen competitor tuning parameters; no competitor tuning was rerun.")
+} else for (method_label in names(tuning_grids)) {
   grid <- tuning_grids[[method_label]]
   candidate_rows <- vector("list", nrow(grid))
   log_line("Tuning ", method_label, " across ", nrow(grid), " candidates.")
@@ -508,12 +535,20 @@ cache_version <- "batchcorr_set1_freshqc10_qcrlsc_corrected_v2"
 
 run_full_method <- function(label, fn, tuning_sec = 0) {
   log_line("Starting full method: ", label)
+  is_winn_method <- startsWith(label, "WINN")
+  cache_file <- file.path(
+    result_dir, "method_cache",
+    paste0(gsub("[^A-Za-z0-9]+", "_", tolower(label)), "_", cache_version, ".rds")
+  )
+  if (winn_only && !is_winn_method && !file.exists(cache_file)) {
+    stop("WiNN-only refresh requires the frozen competitor cache: ", cache_file)
+  }
   captured <- capture_call(function() run_method_cached(
     label = label,
     fn = fn,
     plot_dir = result_dir,
     tuning_sec = tuning_sec,
-    force = force,
+    force = force || (winn_only && is_winn_method),
     cache_version = cache_version
   ))
   method_messages[[length(method_messages) + 1L]] <<- data.frame(
@@ -966,7 +1001,9 @@ completion <- list(
   attempted_methods = method_order,
   completed_methods = completed_methods,
   failed_methods = setdiff(method_order, completed_methods),
-  heldout_labels_supplied_to_methods = FALSE
+  heldout_labels_supplied_to_methods = FALSE,
+  winn_version = as.character(packageVersion("winn")),
+  refresh_scope = if (winn_only) "winn_only" else "all_methods"
 )
 jsonlite::write_json(completion, file.path(result_dir, "analysis_complete.json"), pretty = TRUE, auto_unbox = TRUE)
 log_line("Analysis complete. Attempted all nine methods; completed ", length(completed_methods), ".")

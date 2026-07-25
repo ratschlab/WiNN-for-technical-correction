@@ -10,6 +10,8 @@ dataset_arg <- grep("^--dataset=", args, value = TRUE)
 if (length(dataset_arg) != 1L) stop("Supply exactly one of --dataset=sacurine or --dataset=waveica_adenocarcinoma.")
 dataset <- sub("^--dataset=", "", dataset_arg)
 force <- "--force" %in% args
+winn_only <- "--winn-only" %in% args
+if (force && winn_only) stop("Use either --force or --winn-only, not both.")
 if (!dataset %in% c("sacurine", "waveica_adenocarcinoma")) stop("Unknown dataset: ", dataset)
 
 required_packages <- c(
@@ -71,7 +73,15 @@ log_line <- function(...) {
   cat(line, "\n")
   cat(line, "\n", file = log_path, append = TRUE)
 }
-log_line("Starting ", config$title, " benchmark; force=", force, ".")
+log_line("Starting ", config$title, " benchmark; force=", force,
+         "; winn_only=", winn_only, ".")
+local_winn_commit <- tryCatch(
+  system2(
+    "git", c("-C", shQuote(file.path(repo_root, "winn")), "rev-parse", "HEAD"),
+    stdout = TRUE, stderr = FALSE
+  )[[1L]],
+  error = function(e) NA_character_
+)
 
 x <- readRDS(config$matrix_path)
 meta <- read.csv(config$metadata_path, check.names = FALSE, stringsAsFactors = FALSE)
@@ -184,10 +194,36 @@ run_tuning_grid <- function(label, grid, fn) {
   grid[valid$candidate_id[1], , drop = FALSE]
 }
 
-selected[["QC-RLSC"]] <- run_tuning_grid("QC-RLSC", data.frame(span = c(0.30, 0.50, 0.70, 0.90)), function(p) run_qc_rlsc_id_safe(x_tune, training_ids, meta_hidden, span = p$span, degree = 1L, shift_batches = TRUE))
-selected[["QC-RFSC"]] <- run_tuning_grid("QC-RFSC", expand.grid(ntree = c(200L, 500L), coCV = c(20, 30), Frule = 0.8, KEEP.OUT.ATTRS = FALSE), function(p) run_qc_rfsc_with_controls(x_tune, training_ids, meta_hidden, ntree = p$ntree, coCV = p$coCV, Frule = p$Frule))
-selected[["TIGER"]] <- run_tuning_grid("TIGER", data.frame(use_injection = c(TRUE, FALSE)), function(p) run_tiger_all_corrected(x_tune, training_ids, meta_hidden, use_injection = p$use_injection, mtry_percent = 0.4, nodesize_percent = 0.4, ntree = 5, parallel_cores = 1))
-selected[["SERRF"]] <- run_tuning_grid("SERRF", data.frame(jitter_eps = c(0, 1e-6, 1e-5)), function(p) run_serrf_all_corrected(x_tune, training_ids, meta_hidden, jitter_eps = p$jitter_eps))
+competitor_grids <- list(
+  "QC-RLSC" = data.frame(span = c(0.30, 0.50, 0.70, 0.90)),
+  "QC-RFSC" = expand.grid(ntree = c(200L, 500L), coCV = c(20, 30), Frule = 0.8, KEEP.OUT.ATTRS = FALSE),
+  "TIGER" = data.frame(use_injection = c(TRUE, FALSE)),
+  "SERRF" = data.frame(jitter_eps = c(0, 1e-6, 1e-5))
+)
+
+load_frozen_competitor_tuning <- function(label) {
+  path <- file.path(tuning_dir, paste0(gsub("[^A-Za-z0-9]+", "_", tolower(label)), ".csv"))
+  if (!file.exists(path)) stop("WiNN-only refresh requires the frozen competitor tuning table: ", path)
+  tab <- read.csv(path, check.names = FALSE, stringsAsFactors = FALSE)
+  selected_index <- which(as.logical(tab$selected))
+  if (!length(selected_index)) selected_index <- 1L
+  parameter_names <- names(competitor_grids[[label]])
+  if (!nrow(tab) || !all(parameter_names %in% names(tab))) {
+    stop("Frozen competitor tuning table is invalid for ", label, ".")
+  }
+  tuning_rows[[label]] <<- tab
+  selected[[label]] <<- tab[selected_index[1L], parameter_names, drop = FALSE]
+}
+
+if (winn_only) {
+  invisible(lapply(names(competitor_grids), load_frozen_competitor_tuning))
+  log_line("Loaded frozen competitor tuning tables; only WiNN tuning will be recomputed.")
+} else {
+  selected[["QC-RLSC"]] <- run_tuning_grid("QC-RLSC", competitor_grids[["QC-RLSC"]], function(p) run_qc_rlsc_id_safe(x_tune, training_ids, meta_hidden, span = p$span, degree = 1L, shift_batches = TRUE))
+  selected[["QC-RFSC"]] <- run_tuning_grid("QC-RFSC", competitor_grids[["QC-RFSC"]], function(p) run_qc_rfsc_with_controls(x_tune, training_ids, meta_hidden, ntree = p$ntree, coCV = p$coCV, Frule = p$Frule))
+  selected[["TIGER"]] <- run_tuning_grid("TIGER", competitor_grids[["TIGER"]], function(p) run_tiger_all_corrected(x_tune, training_ids, meta_hidden, use_injection = p$use_injection, mtry_percent = 0.4, nodesize_percent = 0.4, ntree = 5, parallel_cores = 1))
+  selected[["SERRF"]] <- run_tuning_grid("SERRF", competitor_grids[["SERRF"]], function(p) run_serrf_all_corrected(x_tune, training_ids, meta_hidden, jitter_eps = p$jitter_eps))
+}
 
 log_line("Starting WiNN automatic selection on ", nrow(x_tune), " deterministic tuning features.")
 winn_auto <- run_winn_auto_tuning_subset(x_tune, training_ids, meta_hidden, auto_batch = FALSE)
@@ -261,7 +297,11 @@ previous_runtime <- if (file.exists(file.path(result_dir, "method_runtime.csv"))
 previous_diagnostics <- if (file.exists(file.path(result_dir, "method_warnings_messages_errors.csv"))) read.csv(file.path(result_dir, "method_warnings_messages_errors.csv"), stringsAsFactors = FALSE) else data.frame()
 run_full <- function(label, fn, tuning_sec = 0) {
   cache_file <- file.path(cache_dir, paste0(gsub("[^A-Za-z0-9]+", "_", tolower(label)), "_", cache_tag, ".rds"))
-  reuse_cache <- !force && file.exists(cache_file)
+  is_winn_method <- startsWith(label, "WINN")
+  if (winn_only && !is_winn_method && !file.exists(cache_file)) {
+    stop("WiNN-only refresh requires the frozen competitor cache: ", cache_file)
+  }
+  reuse_cache <- !force && !(winn_only && is_winn_method) && file.exists(cache_file)
   captured <- if (reuse_cache) {
     previous_elapsed <- if (nrow(previous_runtime) && label %in% previous_runtime$method) previous_runtime$correction_sec[match(label, previous_runtime$method)] else 0
     list(value = readRDS(cache_file), elapsed_sec = previous_elapsed, warnings = character(), messages = "reused valid cache", error = "")
@@ -823,6 +863,6 @@ validation <- data.frame(
 )
 write.csv(validation, file.path(result_dir, "final_validation.csv"), row.names = FALSE, quote = TRUE)
 if (!all(validation$passed)) stop("One or more final validation checks failed.")
-completion <- list(dataset = dataset, completed_at = format(Sys.time(), "%Y-%m-%dT%H:%M:%S%z"), dimensions = dim(x), hidden_qcs = hidden_ids, training_qcs = training_ids, attempted_methods = method_order, completed_methods = completed, failed_methods = attempts$method[attempts$status == "failed"], validations_passed = all(validation$passed), winn_version = as.character(packageVersion("winn")), winn_commit = "b72aa80a2a6400126092b0814a8ba6012f5f863e")
+completion <- list(dataset = dataset, completed_at = format(Sys.time(), "%Y-%m-%dT%H:%M:%S%z"), dimensions = dim(x), hidden_qcs = hidden_ids, training_qcs = training_ids, attempted_methods = method_order, completed_methods = completed, failed_methods = attempts$method[attempts$status == "failed"], validations_passed = all(validation$passed), winn_version = as.character(packageVersion("winn")), winn_commit = local_winn_commit, refresh_scope = if (winn_only) "winn_only" else "all_methods")
 jsonlite::write_json(completion, file.path(result_dir, "analysis_complete.json"), auto_unbox = TRUE, pretty = TRUE)
 log_line("Benchmark completed and validated for ", config$title, ".")

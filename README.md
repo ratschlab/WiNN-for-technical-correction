@@ -22,7 +22,7 @@ A fixed set of interior QCs is hidden before any method is trained or tuned. The
 
 ## Set up the software
 
-The final runs used R 4.5 and WiNN 0.1.2. For an exact robustness rerun, clone the package into the directory expected by the provenance checks, then install it:
+The current runs use R 4.5 and WiNN 0.1.3. In this version, the outlier stage computes each feature's median and MAD once from the original eligible values, identifies both tails from those fixed thresholds, and shrinks upper and lower extremes independently in one non-iterative pass. For an exact rerun, clone the package into the directory expected by the provenance checks, then install it:
 
 ```bash
 git clone https://github.com/ratschlab/winn.git winn
@@ -80,6 +80,16 @@ Rscript -e "rmarkdown::render('notebooks/waveica_adenocarcinoma_comparison.Rmd',
 
 Use `--force` on a command-line runner only when a deliberate full rerun is intended. Existing results are otherwise reused.
 
+After a WiNN package update, `--winn-only` refreshes the three WiNN variants and regenerates downstream tables and figures while requiring and reusing the existing competitor caches. It cannot be combined with `--force`:
+
+```bash
+Rscript scripts/run_batchcorr_set1_benchmark.R --winn-only
+Rscript scripts/run_human_public_benchmark.R --dataset=sacurine --winn-only
+Rscript scripts/run_human_public_benchmark.R --dataset=waveica_adenocarcinoma --winn-only
+```
+
+The final 0.1.3 refresh archived the preceding outputs before execution and verified frozen competitor artifacts by SHA-256 before and after the WiNN-only runs.
+
 ## Run the WiNN ablation
 
 The cumulative ablation evaluates Raw, outlier handling, selective drift correction, selective batch correction, and PQN shrinkage. A 2 × 2 gate experiment additionally compares selective versus forced-all drift and batch correction.
@@ -115,6 +125,12 @@ Rscript scripts/robustness/aggregate_partial_confounding_winn_only_grid.R
 ```
 
 These loops are intentionally simple local examples. On a scheduler, submit one seed or scenario per array task. The methods within a task are fixed by the script; the partial-confounding task does not execute comparator methods.
+
+For a package-only refresh of an existing complete canonical simulation run, use `--winn-only`. This reruns the three WiNN modes and the WiNN ablation while requiring the six frozen Raw/competitor caches:
+
+```bash
+Rscript scripts/robustness/run_canonical_simulation_seed.R --seed-id=SIM01 --winn-only
+```
 
 ## Repository map
 

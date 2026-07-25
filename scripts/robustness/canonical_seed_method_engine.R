@@ -74,6 +74,7 @@ run_canonical_seed_methods <- function(
   run_dir,
   global_context,
   force = FALSE,
+  winn_only = FALSE,
   log_line = function(...) invisible(NULL)
 ) {
   for (subdir in c("cache", "logs", "matrices", "diagnostics")) {
@@ -116,6 +117,28 @@ run_canonical_seed_methods <- function(
   runtime_rows <- list()
   cache_rows <- list()
   log_rows <- list()
+  winn_methods <- c(
+    "WINN auto (QC)", "WINN auto-batch (QC)", "WINN default (no QC)"
+  )
+
+  read_frozen_competitor_cache <- function(path) {
+    if (!file.exists(path)) {
+      stop("WiNN-only refresh requires the frozen competitor cache: ", path)
+    }
+    envelope <- readRDS(path)
+    required <- c("cache_schema", "key", "runtime_sec", "value")
+    if (!is.list(envelope) || !all(required %in% names(envelope)) ||
+        !identical(envelope$cache_schema, "canonical-simulation-v1")) {
+      stop("Frozen competitor cache has an invalid envelope: ", path)
+    }
+    list(
+      value = envelope$value,
+      cache_hit = TRUE,
+      cache_reason = "frozen_pre_two_tail_competitor",
+      cache_key = envelope$key,
+      runtime_sec = as.numeric(envelope$runtime_sec)
+    )
+  }
 
   for (method in names(method_specs)) {
     parameter <- canonical_seed_parameter_row(method_parameters, method)
@@ -129,7 +152,14 @@ run_canonical_seed_methods <- function(
     log_line("Running ", method, " (seed ", rng_seed, ").")
     captured <- canonical_seed_capture(function() {
       set.seed(rng_seed)
-      canonical_cached_call(cache_path, context, method_specs[[method]], force = force)
+      if (isTRUE(winn_only) && !method %in% winn_methods) {
+        read_frozen_competitor_cache(cache_path)
+      } else {
+        canonical_cached_call(
+          cache_path, context, method_specs[[method]],
+          force = force || (isTRUE(winn_only) && method %in% winn_methods)
+        )
+      }
     })
 
     if (inherits(captured$value, "canonical_seed_method_error")) {
@@ -251,7 +281,7 @@ run_canonical_seed_methods <- function(
           diagnostics = lapply(variants, `[[`, "diagnostics")
         )
       },
-      force = force
+      force = force || isTRUE(winn_only)
     )
   })
 
@@ -377,7 +407,15 @@ run_canonical_seed_methods <- function(
   matrix_rows <- list()
   for (method in names(method_matrices)) {
     path <- file.path(run_dir, "matrices", paste0(canonical_seed_safe_name(method), ".rds"))
-    saveRDS(method_matrices[[method]], path, version = 3, compress = "gzip")
+    frozen_competitor <- isTRUE(winn_only) && method %in% names(method_specs) &&
+      !method %in% winn_methods
+    if (frozen_competitor) {
+      if (!file.exists(path) || !identical(readRDS(path), method_matrices[[method]])) {
+        stop("Frozen competitor matrix is missing or differs from its cache: ", path)
+      }
+    } else {
+      saveRDS(method_matrices[[method]], path, version = 3, compress = "gzip")
+    }
     matrix_rows[[method]] <- data.frame(
       seed_id = seed_id, method = method,
       relative_path = file.path("matrices", basename(path)),

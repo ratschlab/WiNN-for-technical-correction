@@ -23,6 +23,10 @@ if (is.null(seed_id) || !grepl("^SIM(0[1-9]|[12][0-9]|30)$", seed_id)) {
 }
 force <- "--force" %in% args
 dry_run <- "--dry-run" %in% args
+winn_only <- "--winn-only" %in% args
+if (force && winn_only) {
+  stop("Use either --force or --winn-only, not both.", call. = FALSE)
+}
 
 project_library <- Sys.getenv("WINN_ROBUSTNESS_R_LIB", unset = "")
 if (nzchar(project_library)) {
@@ -50,7 +54,8 @@ log_line <- function(...) {
 }
 run_started <- Sys.time()
 log_line("Starting canonical repeated-simulation unit ", seed_id,
-         "; force=", force, "; dry_run=", dry_run, ".")
+         "; force=", force, "; dry_run=", dry_run,
+         "; winn_only=", winn_only, ".")
 
 required_packages <- c(
   "devtools", "digest", "jsonlite", "dplyr", "tibble", "limma", "lmtest", "mgcv", "sva",
@@ -262,7 +267,7 @@ if (is.na(winn_commit) || !nzchar(winn_commit)) {
   stop("Unable to record the local WiNN Git commit; refusing an unaudited run.", call. = FALSE)
 }
 global_context <- list(
-  schema = "canonical_seed_stability_run_v1",
+  schema = "canonical_seed_stability_run_v2",
   seed_id = seed_id,
   bundle_config_sha256 = bundle_provenance$config_sha256,
   bundle_file_sha256 = stats::setNames(bundle_files$sha256, bundle_files$relative_path),
@@ -273,7 +278,8 @@ global_context <- list(
   winn_status_sha256 = canonical_sha256_object(winn_status),
   training_ids_sha256 = canonical_sha256_object(training_ids),
   hidden_ids_sha256 = canonical_sha256_object(hidden_ids),
-  label_blinding = "only training controls labeled QC; hidden references labeled ordinary Sample"
+  label_blinding = "only training controls labeled QC; hidden references labeled ordinary Sample",
+  refresh_scope = if (winn_only) "winn_only_with_frozen_competitors" else "all_methods"
 )
 analysis_context_sha256 <- canonical_sha256_object(global_context)
 
@@ -354,7 +360,7 @@ if (dry_run) {
 }
 
 completed_run_reusable <- validate_completed_run()
-if (!force && completed_run_reusable) {
+if (!force && !winn_only && completed_run_reusable) {
   message(seed_id, " already has a complete content-matched run; reusing it without recomputation.")
   quit(save = "no", status = 0L)
 }
@@ -362,7 +368,7 @@ if (!force && completed_run_reusable) {
 canonical_has_files <- dir.exists(canonical_run_dir) &&
   length(list.files(canonical_run_dir, all.files = TRUE, no.. = TRUE)) > 0L
 canonical_has_completion_artifact <- file.exists(completion_path) || file.exists(artifact_path)
-if (canonical_has_files && !force && canonical_has_completion_artifact) {
+if (canonical_has_files && !force && !winn_only && canonical_has_completion_artifact) {
   stop(
     seed_id, " has a completed-looking run that does not match the current content context. ",
     "Refusing to overwrite it; use --force to archive that run and recompute.",
@@ -378,6 +384,20 @@ if (canonical_has_files && force) {
   )
   if (file.exists(archive_dir) || !file.rename(canonical_run_dir, archive_dir)) {
     stop("Could not archive the existing canonical run before forced recomputation.", call. = FALSE)
+  }
+}
+
+if (isTRUE(winn_only)) {
+  required_frozen_cache <- file.path(
+    canonical_run_dir, "cache",
+    paste0(c("Raw", "ComBat", "QC_RLSC", "QC_RFSC", "TIGER", "SERRF"), ".rds")
+  )
+  if (!all(file.exists(required_frozen_cache))) {
+    stop(
+      "WiNN-only refresh requires all frozen non-WiNN caches in the existing run: ",
+      paste(required_frozen_cache[!file.exists(required_frozen_cache)], collapse = ", "),
+      call. = FALSE
+    )
   }
 }
 
@@ -411,7 +431,7 @@ execution <- run_canonical_seed_methods(
   x = x, meta_blind = meta_blind, training_ids = training_ids,
   seed_ledger = seed_ledger, method_parameters = method_parameters,
   run_dir = run_dir, global_context = global_context,
-  force = force, log_line = log_line
+  force = force, winn_only = winn_only, log_line = log_line
 )
 
 method_order <- method_parameters$method
@@ -613,6 +633,7 @@ manifest_row <- data.frame(
   metrics_rows = nrow(metrics$method_metrics), invariants_passed = all(invariants$passed),
   metric_equivalences_passed = all(metric_equivalences$passed),
   hidden_exclusion_passed = all(exposure$n_hidden_controls_supplied == 0L & !exposure$hidden_used_for_tuning),
+  refresh_scope = if (winn_only) "winn_only_with_frozen_competitors" else "all_methods",
   stringsAsFactors = FALSE
 )
 write_csv(manifest_row, file.path(run_dir, "run_manifest.csv"))
@@ -624,6 +645,7 @@ completion <- list(
   bundle_config_sha256 = bundle_provenance$config_sha256,
   invariants_passed = TRUE, metrics_complete = TRUE,
   method_count = 18L, metric_rows = nrow(metrics$method_metrics),
+  refresh_scope = if (winn_only) "winn_only_with_frozen_competitors" else "all_methods",
   completed_at = format(run_completed, "%Y-%m-%dT%H:%M:%S%z")
 )
 jsonlite::write_json(completion, completion_path, auto_unbox = TRUE, pretty = TRUE)

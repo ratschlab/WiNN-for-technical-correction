@@ -20,7 +20,13 @@ The clinical benchmark uses adjacent-pair independent units for drift and batch 
 
 ## Caching and reruns
 
-Command-line runners are idempotent and reuse completed results unless `--force` is supplied. Robustness runs store source hashes, parameter hashes, matrix checksums, method status, errors, warnings, runtime, session information, and completion manifests. A forced rerun archives an incompatible completed result before replacement.
+Command-line runners are idempotent and reuse completed results unless `--force` is supplied. The public empirical runners and canonical simulation runner also accept `--winn-only` for a package-only refresh: competitor tuning and matrices must already exist, are reused without recomputation, and only WiNN outputs plus downstream evaluations are regenerated. The release workflow records SHA-256 hashes of frozen competitor artifacts before and after such a refresh.
+
+Robustness runs store source hashes, parameter hashes, matrix checksums, method status, errors, warnings, runtime, session information, and completion manifests. A forced rerun archives an incompatible completed result before replacement.
+
+## WiNN outlier handling
+
+WiNN 0.1.3 calculates a feature's median, MAD, and both tail thresholds once from the original eligible values. Upper- and lower-tail masks are therefore defined against the same center and scale. Both tails are shrunk independently in one non-iterative pass; modifying one tail cannot alter the threshold used for the other.
 
 ## Plotting
 
