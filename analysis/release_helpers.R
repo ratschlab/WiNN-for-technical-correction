@@ -26,6 +26,7 @@ suppressPackageStartupMessages({
   library(tibble)
 })
 source(file.path(source_root, "clinical_comparison_helpers.R"), local = FALSE)
+source(file.path(release_root, "scripts", "benchmark_helpers.R"), local = FALSE)
 source(file.path(source_root, "scripts", "public_benchmark_method_helpers.R"), local = FALSE)
 source(file.path(source_root, "scripts", "weighted_pc_r2.R"), local = FALSE)
 source(file.path(source_root, "scripts", "winn_ablation_helpers.R"), local = FALSE)

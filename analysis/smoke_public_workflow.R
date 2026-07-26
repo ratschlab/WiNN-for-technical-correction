@@ -163,6 +163,15 @@ tiger_nonfinite_fallback_ok <-
   identical(dimnames(tiger_finite_result), dimnames(tiger_input)) &&
   inherits(tiger_alignment_error, "try-error")
 
+release_helper_text <- paste(
+  readLines(file.path(repo_root, "analysis", "release_helpers.R"), warn = FALSE),
+  collapse = "\n"
+)
+repository_wrapper_loader_ok <- grepl(
+  'source(file.path(release_root, "scripts", "benchmark_helpers.R"), local = FALSE)',
+  release_helper_text, fixed = TRUE
+)
+
 checks <- data.frame(
   check = c(
     "frozen_tarball_sha256", "installed_version", "isolated_installation_path",
@@ -170,7 +179,8 @@ checks <- data.frame(
     "finite_output", "dimensions_preserved", "permutation_invariance",
     "canonical_simulation_identity", "selection_endpoint_separation",
     "selection_software_seed_provenance", "categorical_batch_guard",
-    "nonnegative_output_domain_guard", "tiger_nonfinite_feature_fallback"
+    "nonnegative_output_domain_guard", "tiger_nonfinite_feature_fallback",
+    "repository_competitor_wrapper_loader"
   ),
   passed = c(
     observed_sha == expected_sha, as.character(utils::packageVersion("winn")) == "0.1.4",
@@ -182,7 +192,7 @@ checks <- data.frame(
     identical(dim(baseline$data), dim(x_small)), permutation_difference < 1e-10,
     simulation_identity_ok, selection_separation_ok, selection_provenance_ok,
     categorical_batch_guard_ok, output_domain_guard_ok,
-    tiger_nonfinite_fallback_ok
+    tiger_nonfinite_fallback_ok, repository_wrapper_loader_ok
   ),
   detail = c(
     observed_sha, as.character(utils::packageVersion("winn")),
@@ -195,7 +205,8 @@ checks <- data.frame(
     paste(nrow(selection), "selection records with software and seed provenance"),
     "batch metric requires explicit categorical target type",
     "negative values floored with provenance; non-finite values rejected",
-    "one affected TIGER feature restored in full; finite features unchanged"
+    "one affected TIGER feature restored in full; finite features unchanged",
+    "release loader explicitly sources the repository competitor wrappers"
   ),
   stringsAsFactors = FALSE
 )
