@@ -7,7 +7,9 @@ export WINN_CANONICAL_SOURCE_ROOT="${WINN_CANONICAL_SOURCE_ROOT:-${WINN_RELEASE_
 script_root="${WINN_RELEASE_ROOT}/analysis/euler"
 
 submit() {
-  sbatch --parsable "$@"
+  local response
+  response=$(sbatch --parsable "$@")
+  printf '%s\n' "${response%%;*}"
 }
 
 primary_fast=$(submit "${script_root}/primary_fast.sbatch")
