@@ -148,13 +148,20 @@ tiger_record <- attr(tiger_result, "tiger_nonfinite_fallback", exact = TRUE)
 tiger_finite_result <- tiger_environment$restore_tiger_nonfinite_features(
   tiger_input + 10, tiger_input
 )
+tiger_alignment_error <- try(
+  tiger_environment$restore_tiger_nonfinite_features(
+    tiger_input + 10, tiger_input[2:1, , drop = FALSE]
+  ),
+  silent = TRUE
+)
 tiger_nonfinite_fallback_ok <-
   identical(as.numeric(tiger_result[1, ]), as.numeric(tiger_input[1, ])) &&
   identical(as.numeric(tiger_result[2, ]), as.numeric(tiger_candidate[2, ])) &&
   isTRUE(tiger_record$applied) && tiger_record$n_nonfinite_values == 1L &&
   tiger_record$n_features == 1L && tiger_record$n_samples == 1L &&
   identical(as.vector(tiger_finite_result), as.vector(tiger_input + 10)) &&
-  identical(dimnames(tiger_finite_result), dimnames(tiger_input))
+  identical(dimnames(tiger_finite_result), dimnames(tiger_input)) &&
+  inherits(tiger_alignment_error, "try-error")
 
 checks <- data.frame(
   check = c(
