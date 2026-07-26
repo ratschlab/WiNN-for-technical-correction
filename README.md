@@ -12,6 +12,7 @@ Competitor parameters are fixed from published or package-native defaults, nativ
 
 - `analysis/`: task runners, evaluators, aggregation code, validation checks, and Euler job arrays.
 - `analysis/config/`: the frozen run matrix, method settings, QC splits, task manifests, and metric definitions.
+- `config/holdouts/`: fixed primary held-out-QC definitions for the public datasets.
 - `scripts/`: public-data download and preprocessing code plus shared method and metric helpers.
 - `data/simulated/canonical/SIM01/`: the canonical simulation used by both the primary comparison and the main ablation.
 - `reports/`: suitability audits for the added public datasets.

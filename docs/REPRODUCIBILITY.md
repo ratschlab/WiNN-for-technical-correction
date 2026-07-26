@@ -10,6 +10,8 @@ Public downloads are pinned to a source commit or file checksum. Download script
 
 Reference assignments are fixed before method fitting. Held-out references are relabelled as ordinary observations in method-facing metadata and are excluded from fitting, automatic selection, and candidate ranking. Competitor candidates are selected only from published/native defaults, method-native procedures, or training-QC behavior. The frozen result is evaluated once on held-out QCs and preservation endpoints.
 
+The primary public-dataset holdouts are stored under `config/holdouts/`; the simulation holdout is stored with the canonical sample metadata. Both the holdout files and the larger task/split manifests are covered by `analysis/config/file_manifest.csv`.
+
 The selection manifest records the candidate count, selected setting, selection seed, source package and version, information available during selection, and the justification for any departure from a native default. It also records that every configuration was frozen before final evaluation. Automatic-batch WiNN receives training-QC identities and run order but no supplied batch labels.
 
 Reference-split stability repeats this separation across 10 shared splits per dataset. Split results describe within-dataset sensitivity; they are not treated as independent studies.

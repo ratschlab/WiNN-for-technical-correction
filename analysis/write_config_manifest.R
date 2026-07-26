@@ -5,18 +5,23 @@ script_file <- sub("^--file=", "", grep("^--file=", script_args, value = TRUE)[1
 repo_root <- normalizePath(file.path(dirname(script_file), ".."), mustWork = TRUE)
 config_root <- file.path(repo_root, "analysis", "config")
 manifest_path <- file.path(config_root, "file_manifest.csv")
+holdout_root <- file.path(repo_root, "config")
 
 if (!requireNamespace("digest", quietly = TRUE)) {
   stop("The digest package is required.", call. = FALSE)
 }
 
-config_files <- list.files(config_root, full.names = TRUE, recursive = FALSE)
+config_files <- c(
+  list.files(config_root, full.names = TRUE, recursive = FALSE),
+  list.files(holdout_root, full.names = TRUE, recursive = TRUE)
+)
 config_files <- config_files[
-  !file.info(config_files)$isdir & basename(config_files) != basename(manifest_path)
+  !file.info(config_files)$isdir &
+    normalizePath(config_files, mustWork = TRUE) != normalizePath(manifest_path, mustWork = TRUE)
 ]
 config_files <- sort(config_files)
 observed <- data.frame(
-  file = basename(config_files),
+  file = substring(config_files, nchar(repo_root) + 2L),
   bytes = as.numeric(file.info(config_files)$size),
   sha256 = unname(vapply(
     config_files, digest::digest, character(1), file = TRUE, algo = "sha256"
