@@ -125,7 +125,7 @@ bash analysis/euler/submit_release.sh
 
 The submission command prints every Slurm job ID. Correction, ablation, simulation, reference-split, and confounding arrays are launched together; evaluations wait only for their own inputs, and aggregation waits for all evaluation families. Individual successful tasks are idempotent, so a failed array element can be resubmitted without overwriting verified outputs.
 
-The full task matrix is compute-intensive because TIGER uses its native 4 x 4 ensemble with 500 trees. Fast methods generally finish in minutes; TIGER determines the wall time. Reference stability consists of exactly 10 splits x 9 methods x 6 datasets (540 tasks). The partial-confounding grid contains 10 seeds x 16 scenarios and runs only Raw and fixed/default WiNN.
+The full task matrix is compute-intensive because TIGER uses its native 4 x 4 ensemble with 500 trees. Fast correction tasks request 24–32 GB, evaluations request 48 GB, and TIGER tasks request eight cores with 64 GB total memory. Fast methods generally finish in minutes; the largest TIGER fits take several hours and determine wall time. Allow at least 15 GB of working storage for the complete correction and evaluation tree. Reference stability consists of exactly 10 splits x 9 methods x 6 datasets (540 tasks). The partial-confounding grid contains 10 seeds x 16 scenarios and runs only Raw and fixed/default WiNN.
 
 ## Outputs
 
