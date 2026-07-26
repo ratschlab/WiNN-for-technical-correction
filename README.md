@@ -112,19 +112,18 @@ Corrected matrices are required to remain on the nonnegative intensity scale. If
 
 ## Running on Euler
 
-The scheduler scripts in `analysis/euler/` use Slurm arrays. On Euler, load the shell profile and R 4.5.1, define the release and data roots, and submit independent families concurrently. For example:
+The scheduler scripts in `analysis/euler/` use Slurm arrays. On Euler, load the shell profile and R 4.5.1, define the release and data roots, and submit all independent families and their evaluation dependencies with:
 
 ```bash
 source ~/.bashrc
 source ~/.bash_profile
 module load r/4.5.1
-export WINN_RELEASE_ROOT="$PWD/release"
+export WINN_RELEASE_ROOT="$PWD"
 export WINN_CANONICAL_SOURCE_ROOT="$PWD"
-
-sbatch analysis/euler/primary_fast.sbatch
-sbatch analysis/euler/primary_tiger.sbatch
-sbatch analysis/euler/ablation_bundles.sbatch
+bash analysis/euler/submit_release.sh
 ```
+
+The submission command prints every Slurm job ID. Correction, ablation, simulation, reference-split, and confounding arrays are launched together; evaluations wait only for their own inputs, and aggregation waits for all evaluation families. Individual successful tasks are idempotent, so a failed array element can be resubmitted without overwriting verified outputs.
 
 The full task matrix is compute-intensive because TIGER uses its native 4 x 4 ensemble with 500 trees. Fast methods generally finish in minutes; TIGER determines the wall time. Reference stability consists of exactly 10 splits x 9 methods x 6 datasets (540 tasks). The partial-confounding grid contains 10 seeds x 16 scenarios and runs only Raw and fixed/default WiNN.
 
