@@ -1,0 +1,7 @@
+"dataset_key","dataset_label","features","correction_units","batches","training_references","heldout_or_external_references","study_units","matrix_sha256","correction_unit","public_data"
+"simulation","Truth-known simulation (SIM01)",1000,500,5,40,10,450,"c26a82004d6084e7f28595edacd63ad688e7ff3f8735569e69149e228a3bd295","injection",TRUE
+"mtbls79","MTBLS79",2488,172,8,26,12,134,"534b8cb02685f04aeff548208d3127967d756e0203c4c56ee056b445c6b4a408","injection",TRUE
+"clinical_fiams","Clinical FIA-MS (pair-aware)",1594,660,8,86,38,536,"38d77f7fe5f065af7f6b3188c1e5d6f00998327ebba349075e83a226865211cd","adjacent_dip_pair",FALSE
+"batchcorr_set1","BatchCorrMetabolomics Set 1",199,761,10,41,10,710,"0ce473b2f1b9db0345f2e9235ac86e028235fc01d52506d2fe159616fbb8b09d","injection",TRUE
+"sacurine","Sacurine",113,210,2,18,8,184,"f93bc72dbe6c9c9db9855b98e3422db52e54e294a4a89622f644b5176263a58c","injection",TRUE
+"waveica","WaveICA adenocarcinoma",6461,642,3,59,15,568,"fd78ee44fe9e3844589bd2586133bc2685432b135026875a98cf8b621909a47f","injection",TRUE

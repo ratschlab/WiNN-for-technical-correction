@@ -1,0 +1,24 @@
+{
+  "n_features": 1000,
+  "n_injections": 500,
+  "n_plates": 5,
+  "plate_size": 100,
+  "qc_interval": 10,
+  "n_controls": 50,
+  "n_study_injections": 450,
+  "clean_log_sd": 0.35,
+  "prop_batch_affected": 0.7,
+  "sigma_plate_shift": 0.6,
+  "prop_batch_strong_within_affected": 0.1,
+  "sigma_plate_shift_strong": 1.35,
+  "prop_drift_feature_affected": 0.6,
+  "prop_drift_active_plate": 0.55,
+  "drift_type_probabilities": {
+    "linear": 0.35,
+    "nonlinear": 0.3,
+    "ar1": 0.15,
+    "mixed": 0.2
+  },
+  "drift_amplitude_log_min": 0.2,
+  "drift_amplitude_log_max": 0.85
+}

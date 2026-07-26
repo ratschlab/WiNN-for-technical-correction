@@ -1,14 +1,14 @@
-# Data directories
+# Data layout
 
-`simulated/` contains the public display simulation committed with this repository.
+`simulated/canonical/SIM01/` contains the truth-known realization shared by the primary comparison and main WiNN ablation.
 
-The four empirical datasets are created beneath `public/` by the download and preprocessing commands in the main README:
+The public-data download and preprocessing scripts create the following directories:
 
 - `public/raw/` and `public/processed/` for MTBLS79;
 - `public/batchcorr_set1/`;
 - `public/sacurine/`;
 - `public/waveica_adenocarcinoma/`.
 
-Source and processed files are intentionally not committed. Each downloader records its source URL, checksum, size, and download date. Raw mass-spectrometry files are not required and are not downloaded.
+Processed files are not committed. Each downloader records source provenance and checksums. Raw spectra are not downloaded.
 
-The internal clinical cohort is not part of this repository.
+The internal cohort is not distributed. Authorized users may place its standardized prepared bundle at `private/clinical_fiams/prepared_injection_level.rds`; the entire `private/` tree is ignored by Git.

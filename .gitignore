@@ -1,106 +1,57 @@
-# History files
+# R session and project files
 .Rhistory
 .Rapp.history
-
-# Session data files
 .RData
 .RDataTmp
-
-# User-specific files
 .Ruserdata
-
-# Example code in package build process
-*-Ex.R
-
-# Output files from R CMD build
-/*.tar.gz
-
-# Output files from R CMD check
-/*.Rcheck/
-
-# RStudio files
+.Renviron
 .Rproj.user/
 
-# OAuth2 token
-.httr-oauth
+# Local dependency library and package checks
+Rlib/
+renv/library/
+renv/staging/
+*.Rcheck/
+*-Ex.R
 
-# knitr and R Markdown cache directories
+# Notebook intermediates
 *_cache/
-/cache/
-notebooks/.cache/
-
-# Temporary files created by R Markdown
+cache/
 *.utf8.md
 *.knit.md
-
-# Local notebook working outputs
-notebooks/*.nb.html
+notebooks/.cache/
+notebooks/rendered/
 notebooks/*_files/
 
-# R environment variables
-.Renviron
-
-# pkgdown site
-docs/
-!docs/
-docs/*
-!docs/DATASETS.md
-!docs/REPRODUCIBILITY.md
-
-# translation temp files
-po/*~
-
-# RStudio Connect folder
-rsconnect/
-
-# OS files
-.DS_Store
-
-# Binary outputs
-*.pdf
-!manuscript/*.pdf
-
-# Public benchmark inputs and derived files are created locally
+# Public downloads and processed matrices
 data/public/raw/*
 !data/public/raw/.gitkeep
 data/public/processed/*
 !data/public/processed/.gitkeep
-
-# Dataset-specific public downloads and generated outputs
 data/public/*/source/
 data/public/*/processed/
 data/public/*/audit/
 data/public/*/manifests/
 data/public/*/*.log
-results/**
+
+# Reconstructed repeated-simulation bundles; SIM01 is the committed canonical input
+data/simulated/canonical/SIM0[2-9]/
+data/simulated/canonical/SIM10/
+
+# Restricted inputs
+data/private/
+
+# Large generated analysis outputs; compact final results are committed
+results/*
 !results/README.md
-!results/robustness/
-results/robustness/**
-!results/robustness/00_provenance/
-!results/robustness/00_provenance/seed_manifest.csv
-!results/robustness/04_simulation_seed_stability/
-!results/robustness/04_simulation_seed_stability/config/
-!results/robustness/04_simulation_seed_stability/config/**
-!results/robustness/06_partial_confounding/
-results/robustness/06_partial_confounding/**
-!results/robustness/06_partial_confounding/scenario_manifest.csv
-!results/robustness/06_partial_confounding/seed_ledger.csv
-!results/robustness/06_partial_confounding/bundles/
-!results/robustness/06_partial_confounding/bundles/CONF0[1-9]_*.rds
-!results/robustness/06_partial_confounding/bundles/CONF10_*.rds
-!results/robustness/06_partial_confounding/full_grid/
-!results/robustness/06_partial_confounding/full_grid/config/
-!results/robustness/06_partial_confounding/full_grid/config/**
-!results/robustness/06_partial_confounding/pilot_CONF01/
-!results/robustness/06_partial_confounding/pilot_CONF01/method_parameters.csv
-!results/robustness/06_partial_confounding/pilot_CONF01/method_parameters.sha256
-notebooks/rendered/
+!results/final/
+!results/final/**
 
-# The WiNN source can be cloned here for exact robustness reruns
-winn/
-
-# Local release artifacts and agent configuration are never versioned
+# Scheduler and temporary files
+scheduler/
+slurm-*.out
+*.tmp
 *.zip
-AGENTS.md
-.agents/
-.codex/
+
+# Local tool configuration and operating-system files
+.DS_Store

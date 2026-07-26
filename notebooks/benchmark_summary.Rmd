@@ -1,0 +1,64 @@
+---
+title: "WiNN benchmark result summary"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    self_contained: true
+params:
+  final_root: "../results/final"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+final_root <- normalizePath(params$final_root, mustWork = TRUE)
+read_result <- function(...) read.csv(file.path(final_root, ...), stringsAsFactors = FALSE, check.names = FALSE)
+primary <- read_result("tables", "primary_method_metrics_wide.csv")
+completion <- read_result("validation", "task_completeness.csv")
+validation <- read_result("validation", "release_validation.csv")
+figures <- read_result("figures", "figure_manifest.csv")
+```
+
+## Scope
+
+This report is rendered from the frozen aggregate result release. It contains six datasets, nine method variants, the WiNN stage and gate ablations, ten simulation seeds, ten reference splits per dataset, and the WiNN-only partial-confounding grid.
+
+## Completion checks
+
+```{r completion}
+knitr::kable(completion, digits = 0)
+```
+
+```{r validation}
+knitr::kable(validation)
+```
+
+## Primary benchmark
+
+```{r primary}
+display_columns <- intersect(
+  c("dataset", "method", "heldout_qc_cv_mean", "residual_run_order_gam_mean_deviance",
+    "batch_weighted_pc_r2_categorical", "biological_weighted_pc_r2",
+    "metabolite_icc_a1_median", "feature_repeatability_ratio_median",
+    "sample_replicate_pearson_median", "genuine_replicate_icc_median",
+    "truth_metabolite_profile_icc_mean", "truth_sample_profile_pearson_mean",
+    "retained_features", "runtime_sec"),
+  names(primary)
+)
+knitr::kable(primary[, display_columns], digits = 4)
+```
+
+## Figures
+
+```{r figures, results='asis'}
+for (index in seq_len(nrow(figures))) {
+  if (!nzchar(figures$png[index])) next
+  path <- file.path(final_root, figures$png[index])
+  cat("### ", gsub("_", " ", figures$figure[index]), "\n\n", sep = "")
+  cat("![](", path, "){width=100%}\n\n", sep = "")
+}
+```
+
+## Provenance
+
+The complete package, task, metric, output, and checksum records are stored alongside the tables in `results/final/` and `analysis/config/`. The output-domain audit also records any negative competitor extrapolations floored at zero before evaluation.

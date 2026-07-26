@@ -1,0 +1,11 @@
+"family","scheduler_task_count","completed_output_directory_count","logical_method_or_variant_count"
+"primary_methods",54,54,54
+"reference_split_methods",540,540,540
+"simulation_seed_methods",90,90,90
+"primary_ablation_bundles",6,6,54
+"simulation_ablation_bundles",10,10,90
+"partial_confounding_scenarios",160,160,160
+"primary_evaluations",6,6,54
+"ablation_evaluations",6,6,54
+"simulation_seed_evaluations",10,10,90
+"reference_split_evaluations",60,60,540

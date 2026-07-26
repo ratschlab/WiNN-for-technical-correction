@@ -1,0 +1,7 @@
+"dataset","correction_unit","hidden_count","hidden_rule","protect_first_last","min_training_per_batch","fixed_external_count","external_rule"
+"simulation","injection",10,"two controls per plate",FALSE,8,0,"none"
+"mtbls79","injection",12,"at least one per batch, then capacity-weighted extras to 12",TRUE,3,0,"none"
+"batchcorr_set1","injection",10,"one interior reference per batch",TRUE,4,0,"none"
+"sacurine","injection",8,"four interior QCs per batch",TRUE,6,0,"none"
+"waveica","injection",15,"five interior QCs per batch",TRUE,15,0,"none"
+"clinical_fiams","adjacent_dip_pair",8,"one interior internal-control pair per batch",TRUE,7,38,"all NIST1950 pairs remain external to fitting, training, and tuning"

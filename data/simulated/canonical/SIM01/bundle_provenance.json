@@ -1,0 +1,29 @@
+{
+  "bundle_format_version": "1.1.0",
+  "seed_id": "SIM01",
+  "role": "Canonical realization used for both the primary benchmark and the main ablation.",
+  "frozen_input_manifest": "analysis/config/dataset_manifest.csv",
+  "seed_manifest": "analysis/config/simulation_seed_ledger.csv",
+  "seed_manifest_sha256": "b4168ab36867dbc4a2cea5e6dcffe3af0ff8b249084942baa2011155e88c979c",
+  "simulation_core": "scripts/robustness/simulation_core.R",
+  "simulation_core_sha256": "0b1527a1236395c6cea458d96ad15e40ae18dfb1f49390808356dcd2c6254bb4",
+  "bundle_writer": "scripts/robustness/generate_simulation_bundles.R",
+  "bundle_writer_sha256": "e2b5e82fffc869af5c2134f4990d701b398e3577f72a79fe9e45c6f41c6137ed",
+  "dimensions": {
+    "features": 1000,
+    "injections": 500,
+    "batches": 5,
+    "reference_injections": 50,
+    "study_injections": 450
+  },
+  "object_sha256": {
+    "raw_intensity": "c26a82004d6084e7f28595edacd63ad688e7ff3f8735569e69149e228a3bd295",
+    "clean_ground_truth": "20f15f65d022bc006365f4c9ccbd67f5a501589443c951c0f733300d1018e64b"
+  },
+  "file_sha256": {
+    "raw_intensity.rds": "405497102ad7ebdafd7078ac7ba1bf7a5790af8776d38f21818e9cf187ea6517",
+    "clean_ground_truth.rds": "dcb00148f7706ae8f7a76de771bde749b9474584b96e228b6e5849922f2e7cff",
+    "sample_metadata.csv": "54b7d1d44f6a1548bbdbc5a83fc9f50094c151c25c249b19e4e673732c684cfe",
+    "feature_truth.csv": "d672045acfdd3c1ed14693d12300ce98995d73e9d317aa2ca1133edfe1818c19"
+  }
+}

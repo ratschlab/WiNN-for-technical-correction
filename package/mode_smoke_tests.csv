@@ -1,0 +1,4 @@
+"mode","status","seconds","output_features","output_samples","batch_source","detected_batches","controls_supplied"
+"supplied_batch_fixed_no_qc","passed",0.156,12,60,"supplied",3,0
+"supplied_batch_auto_qc","passed",0.11,12,60,"supplied",3,12
+"auto_batch_auto_qc","passed",1.927,12,60,"auto_detected",1,12

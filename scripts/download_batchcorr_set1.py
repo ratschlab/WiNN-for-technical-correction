@@ -12,6 +12,7 @@ import os
 from pathlib import Path
 import shutil
 import tempfile
+from typing import Optional
 import urllib.request
 
 
@@ -25,6 +26,13 @@ FILES = {
     "BC_demo.R": f"{RAW_BASE}/demo/BC.R",
     "DESCRIPTION": f"{RAW_BASE}/DESCRIPTION",
     "README.md": f"{RAW_BASE}/README.md",
+}
+EXPECTED_SHA256 = {
+    "BC.RData": "a5d3918c69a902af3886c0141292a614cc20c01526a68930853157e5c9aec113",
+    "BC.Rd": "c1d60f1765436187bffb23a86ce4254d0edbe0d967917cba478249f1ddcaf644",
+    "BC_demo.R": "70f0abb3d056eb12ea283db367c6b05ee7e6b862c8c566c531a824636061e187",
+    "DESCRIPTION": "3aee180104116f2d61226b5aed8a232616aae2504aebd501ae32887d462ba830",
+    "README.md": "8c41f92e73731a7caecc088fbbeadca7783502d0bc9deca7465b44ef7e8e7d95",
 }
 PAPER_XML_URL = (
     "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
@@ -40,10 +48,12 @@ def sha256(path: Path) -> str:
     return digest.hexdigest()
 
 
-def fetch(url: str, target: Path, refresh: bool) -> None:
+def fetch(url: str, target: Path, refresh: bool, expected_sha256: Optional[str]) -> str:
     target.parent.mkdir(parents=True, exist_ok=True)
     if target.exists() and not refresh:
-        return
+        if expected_sha256 is None or sha256(target) == expected_sha256:
+            return "reused_checksum_match" if expected_sha256 else "reused_recorded_file"
+        raise RuntimeError(f"Existing file failed SHA-256 validation: {target}")
     request = urllib.request.Request(
         url, headers={"User-Agent": "metabolomics-winn-audit/1.0"}
     )
@@ -54,10 +64,13 @@ def fetch(url: str, target: Path, refresh: bool) -> None:
         with urllib.request.urlopen(request, timeout=120) as response:
             with temporary_path.open("wb") as handle:
                 shutil.copyfileobj(response, handle)
+        if expected_sha256 is not None and sha256(temporary_path) != expected_sha256:
+            raise RuntimeError(f"Downloaded file failed SHA-256 validation: {target.name}")
         temporary_path.replace(target)
     finally:
         if temporary_path.exists():
             temporary_path.unlink()
+    return "downloaded"
 
 
 def main() -> None:
@@ -72,7 +85,7 @@ def main() -> None:
     all_files["PMC4796354_full_text.xml"] = PAPER_XML_URL
     for filename, url in all_files.items():
         target = SOURCE_DIR / filename
-        fetch(url, target, args.refresh)
+        disposition = fetch(url, target, args.refresh, EXPECTED_SHA256.get(filename))
         rows.append(
             {
                 "source_url": url,
@@ -83,8 +96,10 @@ def main() -> None:
                 "file_type": mimetypes.guess_type(target.name)[0]
                 or "application/octet-stream",
                 "inferred_assay": "BatchCorrMetabolomics Set 1 LC-MS negative ion",
+                "license": "GPL (>= 2) (BatchCorrMetabolomics DESCRIPTION)",
                 "used": "true",
                 "source_commit": COMMIT if url.startswith(RAW_BASE) else "",
+                "disposition": disposition,
             }
         )
 

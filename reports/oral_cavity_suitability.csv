@@ -1,0 +1,9 @@
+criterion_id,requirement,status,blocking,evidence
+1,"Uncorrected or minimally processed feature-intensity matrix","FAIL",true,"No deposited non-spectral file is a sample-by-feature matrix. The Mendeley records contain only a settings DOCX and raw-spectrum ZIPs; the supplements contain summary statistics and annotations."
+2,"Reliable batch and acquisition-order metadata","FAIL",true,"The Mendeley descriptions document a raw-filename schema containing batch and injection number, but no standalone injection manifest or actual filename list is deposited outside the raw ZIPs."
+3,"Identifiable QCs/reference samples","PASS WITH LIMITATION",false,"The filename schema documents QC and blank sample types and the paper documents pooled-QC placement, but individual QC injection identities are available only through names inside the raw archives."
+4,"Biological labels or replicate identities","PASS WITH LIMITATION",false,"The filename schema documents subject, collection time, and oral location, and the paper reports repeated sampling of 20 subjects; no standalone row-level sample table is deposited."
+5,"Sufficient samples and QCs per batch","FAIL",true,"The paper documents a QC pool every five samples, but exact usable per-batch sample/QC counts cannot be verified without an injection manifest or reading the raw archives."
+6,"Matrix has not already been batch/drift corrected","FAIL",true,"There is no intensity matrix whose processing state can be audited. Supplement tables are final inferential summaries, not correction inputs."
+7,"Study samples and QCs represented together in one matrix","FAIL",true,"No feature-intensity matrix is deposited."
+8,"Matrix columns match injection metadata unambiguously","FAIL",true,"Neither matrix columns nor a standalone injection table exist in the non-spectral deposit."

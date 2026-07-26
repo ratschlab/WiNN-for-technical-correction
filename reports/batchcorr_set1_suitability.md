@@ -72,7 +72,7 @@ This is strong genuine biological replication for accession-level agreement and 
 
 Set 1 retains only four or five training QCs per batch after the common holdout, and its deposited values are already log-scaled. The benchmark therefore uses a dataset-specific, sample-ID-preserving QC-RLSC implementation: subtractive per-batch LOESS on the exact `log1p` analysis scale with fixed `span = 1` and `degree = 1`, followed by batch shifting on that log scale. Parameters are fixed from the QC design and never selected using hidden-QC values.
 
-This avoids two behaviours in `qcrlscR::qc.rlsc.wrap(intra = TRUE)` 0.1.3 that invalidated a superseded benchmark row: batch concatenation in factor-level rather than input order, and failure to forward fixed-span arguments to the internal LOESS calls. The formal implementation audit and before/after results are in `reports/batchcorr_set1_qc_rlsc_correction.md` and `.csv`.
+The wrapper preserves input sample order explicitly and forwards the fixed span to each within-batch LOESS fit. These safeguards are checked before the corrected matrix is accepted.
 
 ## Audit artifacts
 
@@ -85,4 +85,3 @@ This avoids two behaviours in `qcrlscR::qc.rlsc.wrap(intra = TRUE)` 0.1.3 that i
 - QC positions: `data/public/batchcorr_set1/audit/qc_positions.csv`
 - Accession/batch balance: `data/public/batchcorr_set1/audit/accession_batch_balance.csv`
 - Machine-readable criterion report: `reports/batchcorr_set1_suitability.csv`
-- QC-RLSC implementation correction: `reports/batchcorr_set1_qc_rlsc_correction.md`

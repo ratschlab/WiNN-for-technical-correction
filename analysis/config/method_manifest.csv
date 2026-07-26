@@ -1,0 +1,10 @@
+"method_id","method","order","family","needs_training_qc","supplied_batch"
+"raw","Raw",1,"baseline",FALSE,FALSE
+"combat","ComBat",2,"competitor",FALSE,TRUE
+"qc_rlsc","QC-RLSC",3,"competitor",TRUE,TRUE
+"qc_rfsc","QC-RFSC",4,"competitor",TRUE,TRUE
+"tiger","TIGER",5,"competitor",TRUE,TRUE
+"serrf","SERRF",6,"competitor",TRUE,TRUE
+"winn_auto_qc","WiNN auto (QC)",7,"winn",TRUE,TRUE
+"winn_auto_batch_qc","WiNN auto-batch (QC)",8,"winn",TRUE,FALSE
+"winn_fixed_no_qc","WiNN fixed default (no QC)",9,"winn",FALSE,TRUE

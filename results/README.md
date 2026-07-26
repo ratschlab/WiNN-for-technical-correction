@@ -1,7 +1,5 @@
-# Generated results
+# Results
 
-Benchmark outputs are created here and are intentionally excluded from Git, except for the small frozen configuration files required by the synthetic robustness workflows.
+`final/` contains the compact, validated result release used to generate the benchmark tables and figures. It includes aggregate clinical statistics but no row-level clinical data.
 
-Each empirical dataset runner writes method matrices, hidden-QC assignments, tuning candidates, selected parameters, runtime, feature-level metrics, figure source data, figures, logs, and session information beneath its own directory. The WiNN ablation writes one directory per dataset and a combined public summary.
-
-The manuscript-facing six-dataset results, including aggregate-only internal clinical results, are distributed separately from this code repository.
+Large method matrices, candidate fits, per-feature diagnostics, scheduler logs, and caches are generated locally beneath `results/` and are not committed. Their expected locations are defined by the task manifests in `analysis/config/`.

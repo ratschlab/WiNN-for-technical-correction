@@ -1,145 +1,150 @@
-# WiNN technical-correction benchmarks
+# WiNN benchmark analyses
 
-This repository accompanies the WiNN manuscript and contains the shareable analysis code for the simulation, MTBLS79, BatchCorrMetabolomics Set 1, Sacurine, and WaveICA plasma benchmarks. It also contains the fixed-parameter ablation and synthetic robustness workflows used for the revision.
+## Overview
 
-The full study includes a sixth, internal clinical FIA-MS cohort. Its row-level data, identifiers, and cohort-specific adapter are deliberately absent. The repository can therefore reproduce the five public or synthetic datasets, while the accompanying results release reports only aggregate clinical endpoints.
+This repository contains the analysis code and compact result tables for the WiNN metabolomics technical-correction study. The benchmark covers a truth-known simulation, MTBLS79, an internal pair-aware FIA-MS cohort, BatchCorrMetabolomics Set 1, Sacurine, and the WaveICA adenocarcinoma plasma dataset.
 
-## Analysis design
+Nine method variants are evaluated in a fixed order: Raw, ComBat, QC-RLSC, QC-RFSC, TIGER, SERRF, WiNN auto with supplied batches and training QCs, WiNN auto-batch with training QCs, and fixed/default WiNN with supplied batches but no QC identities. The fixed/default mode is the prespecified primary WiNN configuration. The automatic modes are reported separately.
 
-Every empirical benchmark attempts the same nine methods in this order:
+Competitor parameters are fixed from published or package-native defaults, native training procedures, or training-QC-only criteria. Held-out QCs, biological labels, replicate identities, and final evaluation metrics are not available during parameter selection. The exact choices and their provenance are recorded in `analysis/config/endpoint_free_selection_manifest.csv`.
 
-1. Raw
-2. ComBat
-3. QC-RLSC
-4. QC-RFSC
-5. TIGER
-6. SERRF
-7. WiNN auto (QC), with supplied batches
-8. WiNN auto-batch (QC)
-9. WiNN fixed default without QCs
+## Repository structure
 
-A fixed set of interior QCs is hidden before any method is trained or tuned. The saved holdout files in `config/holdouts/` are shared by the method comparison and the WiNN ablation. All plotting code uses the common colour definitions in `scripts/plot_theme.R`.
+- `analysis/`: task runners, evaluators, aggregation code, validation checks, and Euler job arrays.
+- `analysis/config/`: the frozen run matrix, method settings, QC splits, task manifests, and metric definitions.
+- `scripts/`: public-data download and preprocessing code plus shared method and metric helpers.
+- `data/simulated/canonical/SIM01/`: the canonical simulation used by both the primary comparison and the main ablation.
+- `reports/`: suitability audits for the added public datasets.
+- `results/final/`: compact final tables, figures, figure source data, and validation summaries.
+- `package/`: the exact WiNN 0.1.4 source archive and its validation record.
 
-## Set up the software
+The production flow is:
 
-The current runs use R 4.5 and WiNN 0.1.3. In this version, the outlier stage computes each feature's median and MAD once from the original eligible values, identifies both tails from those fixed thresholds, and shrinks upper and lower extremes independently in one non-iterative pass. For an exact rerun, clone the package into the directory expected by the provenance checks, then install it:
-
-```bash
-git clone https://github.com/ratschlab/winn.git winn
-R CMD INSTALL winn
+```text
+download and preprocess data
+        -> execute method tasks
+        -> evaluate saved matrices
+        -> aggregate dataset tables
+        -> render figures and reports
 ```
 
-Install the benchmark dependencies once:
+## Datasets
+
+The five public or synthetic datasets can be prepared from this repository. The internal FIA-MS cohort is not public; only aggregate results are distributed. Its correction unit is the log-scale mean of each adjacent two-injection pair, which prevents the injection design from being interpreted as lag-1 drift. The generic pair-collapse implementation is included, but the repository contains no clinical matrix, identifiers, feature names, row-level results, or split assignments. Clinical tasks therefore require the restricted inputs and assignments held by the study team; the public split audit reports only aggregate counts and hashes.
+
+Dataset sources, assay details, suitability limitations, and preprocessing decisions are documented in [docs/DATASETS.md](docs/DATASETS.md).
+
+## Software requirements
+
+The production runs used R 4.5.1 and WiNN 0.1.4. Restore the recorded R environment and install the bundled package archive into the project library:
 
 ```bash
-Rscript -e "install.packages(c('BiocManager','digest','dplyr','ggplot2','jsonlite','lmtest','mgcv','missForest','openxlsx','patchwork','pmartR','qcrlscR','remotes','rmarkdown','scales','tibble','tidyr'))"
-Rscript -e "BiocManager::install(c('limma','statTarget','sva'), ask=FALSE, update=FALSE)"
-Rscript -e "remotes::install_github(c('pmartR/malbacR','HAN-Siyu/TIGER'), upgrade='never')"
+Rscript -e 'if (!requireNamespace("renv", quietly=TRUE)) install.packages("renv")'
+Rscript -e 'renv::restore(prompt=FALSE)'
+mkdir -p Rlib
+R CMD INSTALL --library=Rlib package/winn_0.1.4.tar.gz
 ```
 
-## Download and preprocess the public datasets
+The package archive has SHA-256
+`71a0964cee2778b2e5789d20621147e074c7945e813cf76af2ceeb696104aae1`.
+The source commit, build information, smoke tests, and package checks are in `package/frozen_package.json` and `package/VALIDATION.md`.
 
-Only small processed matrices and supporting metadata are downloaded. None of these commands downloads raw spectra.
+## Downloading and preprocessing public data
+
+These commands download processed matrices and supporting metadata, not raw spectra:
 
 ```bash
-# MTBLS79
 python3 scripts/download_mtbls79.py
 Rscript scripts/preprocess_mtbls79_public_data.R
 
-# BatchCorrMetabolomics Set 1
 python3 scripts/download_batchcorr_set1.py
 Rscript scripts/preprocess_batchcorr_set1.R
 
-# Sacurine / W4M00001 / MTBLS404
 python3 scripts/download_sacurine.py
 Rscript scripts/preprocess_sacurine.R
 
-# WaveICA 2.0 adenocarcinoma plasma data
 python3 scripts/download_waveica_adenocarcinoma.py
 Rscript scripts/preprocess_waveica_adenocarcinoma.R
 ```
 
-Each downloader is checksum-aware and writes a manifest. The preprocessing scripts validate matrix orientation, sample order, batch and run-order fields, QC identities, missingness, and feature variance. Details and dataset-specific limitations are in [docs/DATASETS.md](docs/DATASETS.md).
+The downloaders are idempotent and write checksums and source manifests. The preprocessing scripts preserve sample order and feature identifiers, validate batch/run-order/QC fields, apply the declared missing-data rules, and reject misaligned matrices.
 
-## Run the four public-data benchmarks
-
-```bash
-# MTBLS79: this notebook executes the benchmark and renders its report
-Rscript -e "rmarkdown::render('notebooks/public_data_comparison.Rmd', output_dir='notebooks/rendered', clean=TRUE)"
-
-# BatchCorr Set 1
-Rscript scripts/run_batchcorr_set1_benchmark.R
-Rscript -e "rmarkdown::render('notebooks/batchcorr_set1_comparison.Rmd', output_dir='notebooks/rendered', clean=TRUE)"
-
-# Sacurine and WaveICA
-Rscript scripts/run_human_public_benchmark.R --dataset=sacurine
-Rscript scripts/run_human_public_benchmark.R --dataset=waveica_adenocarcinoma
-Rscript -e "rmarkdown::render('notebooks/sacurine_comparison.Rmd', output_dir='notebooks/rendered', clean=TRUE)"
-Rscript -e "rmarkdown::render('notebooks/waveica_adenocarcinoma_comparison.Rmd', output_dir='notebooks/rendered', clean=TRUE)"
-```
-
-Use `--force` on a command-line runner only when a deliberate full rerun is intended. Existing results are otherwise reused.
-
-After a WiNN package update, `--winn-only` refreshes the three WiNN variants and regenerates downstream tables and figures while requiring and reusing the existing competitor caches. Reused competitor caches are read-only and are not reserialized, so their file hashes remain stable. The option cannot be combined with `--force`:
+Generate the remaining prespecified simulation realizations with:
 
 ```bash
-Rscript scripts/run_batchcorr_set1_benchmark.R --winn-only
-Rscript scripts/run_human_public_benchmark.R --dataset=sacurine --winn-only
-Rscript scripts/run_human_public_benchmark.R --dataset=waveica_adenocarcinoma --winn-only
+make simulations
 ```
 
-The final 0.1.3 refresh archived the preceding outputs before execution and verified frozen competitor artifacts by SHA-256 before and after the WiNN-only runs.
+The committed `SIM01` bundle is verified and reused; `SIM02` through `SIM10` are generated from `analysis/config/simulation_seed_ledger.csv`. Generated matrices are checked against the frozen identities in `analysis/config/simulation_bundle_hashes.csv`. The cross-platform gate hashes matrices after rounding to nine decimal places because elementary floating-point operations can differ by a few units in the last place between R platforms; exact reference-platform object hashes are retained as provenance diagnostics.
 
-## Run the WiNN ablation
+## Reproducing the analyses
 
-The cumulative ablation evaluates Raw, outlier handling, selective drift correction, selective batch correction, and PQN shrinkage. A 2 × 2 gate experiment additionally compares selective versus forced-all drift and batch correction.
+The committed final tables and figures can be checked and rendered without recomputing method matrices:
 
 ```bash
-for dataset in simulation mtbls79 batchcorr_set1 sacurine waveica; do
-  Rscript scripts/run_public_winn_ablations.R --dataset="$dataset"
-done
-Rscript scripts/summarize_public_winn_ablations.R
-Rscript scripts/generate_public_ablation_step_impact_tables.R
+make validate-results
+make report
 ```
 
-## Synthetic benchmark and robustness analyses
-
-The revision uses 30 independent simulation realizations and a reviewer-scoped partial-confounding grid. The partial-confounding analysis contains ten seeds, sixteen scenarios per seed, and only Raw plus fixed QC-free WiNN.
+A lightweight package-and-input smoke test is available after installing the project library:
 
 ```bash
-# Generate and execute the 30 canonical simulation realizations
-Rscript scripts/robustness/generate_simulation_bundles.R --all
-for seed in $(seq -w 1 30); do
-  Rscript scripts/robustness/run_canonical_simulation_seed.R --seed-id="SIM${seed}"
-done
-Rscript scripts/robustness/aggregate_canonical_simulation_seeds.R
-
-# Execute the 160 active partial-confounding scenarios
-awk -F, 'NR>1 && $2 ~ /^CONF(0[1-9]|10)_/ {gsub(/\"/,"",$2); print $2}' \
-  results/robustness/06_partial_confounding/full_grid/config/scenario_order.csv |
-while read -r scenario; do
-  Rscript scripts/robustness/run_partial_confounding_scenario.R \
-    --scenario-id="$scenario" --analysis-mode=winn_only
-done
-Rscript scripts/robustness/aggregate_partial_confounding_winn_only_grid.R
+make smoke
 ```
 
-These loops are intentionally simple local examples. On a scheduler, submit one seed or scenario per array task. The methods within a task are fixed by the script; the partial-confounding task does not execute comparator methods.
-
-For a package-only refresh of an existing complete canonical simulation run, use `--winn-only`. This reruns the three WiNN modes and the WiNN ablation while requiring the six frozen Raw/competitor caches:
+Full correction runs require the processed inputs and method dependencies. Set the repository as both the release and canonical-data root. The public workflow recomputes every method because large correction matrices are not distributed:
 
 ```bash
-Rscript scripts/robustness/run_canonical_simulation_seed.R --seed-id=SIM01 --winn-only
+export WINN_RELEASE_ROOT="$PWD"
+export WINN_CANONICAL_SOURCE_ROOT="$PWD"
+export R_LIBS_USER="$PWD/Rlib"
+
+Rscript analysis/run_primary_method.R --task-id=PRIMARY_001
+Rscript analysis/evaluate_dataset_family.R --dataset=simulation --family=primary
 ```
 
-## Repository map
+`analysis/config/primary_run_matrix.csv` defines the 54 primary tasks. The other manifests define 10 simulation seeds, 10 reference splits per dataset, nine WiNN ablation variants, and 160 WiNN-only partial-confounding scenarios. Each task writes to its own directory and can be safely retried. Aggregation refuses to run until the declared output counts are complete.
 
-- `scripts/`: download, preprocessing, benchmark, evaluation, and plotting code.
-- `scripts/robustness/`: canonical simulation and partial-confounding workflows.
-- `notebooks/`: manuscript-facing reports.
-- `config/holdouts/`: frozen public hidden-QC assignments.
-- `reports/`: suitability audits for the public datasets.
-- `data/simulated/`: the original display simulation.
-- `archive/`: superseded material retained for provenance, not used by current commands.
+`analysis/config/competitor_reuse_audit.tsv` distinguishes the provenance of the released Euler results from this clean-checkout behavior. The released analysis reused only checksum-validated endpoint-free artifacts; the public workflow refits those methods because the large matrices themselves are not redistributed.
 
-Generated downloads, processed matrices, caches, results, and rendered notebooks are ignored by Git. See [docs/REPRODUCIBILITY.md](docs/REPRODUCIBILITY.md) for validation and provenance conventions.
+Corrected matrices are required to remain on the nonnegative intensity scale. If a regression-based competitor extrapolates below zero, the shared wrapper floors those values at zero before training-QC scoring or evaluation and records the affected count and original minimum. Non-finite outputs are rejected.
+
+## Running on Euler
+
+The scheduler scripts in `analysis/euler/` use Slurm arrays. On Euler, load the shell profile and R 4.5.1, define the release and data roots, and submit independent families concurrently. For example:
+
+```bash
+source ~/.bashrc
+source ~/.bash_profile
+module load r/4.5.1
+export WINN_RELEASE_ROOT="$PWD/release"
+export WINN_CANONICAL_SOURCE_ROOT="$PWD"
+
+sbatch analysis/euler/primary_fast.sbatch
+sbatch analysis/euler/primary_tiger.sbatch
+sbatch analysis/euler/ablation_bundles.sbatch
+```
+
+The full task matrix is compute-intensive because TIGER uses its native 4 x 4 ensemble with 500 trees. Fast methods generally finish in minutes; TIGER determines the wall time. Reference stability consists of exactly 10 splits x 9 methods x 6 datasets (540 tasks). The partial-confounding grid contains 10 seeds x 16 scenarios and runs only Raw and fixed/default WiNN.
+
+## Outputs
+
+`results/final/tables/` contains the per-dataset and combined primary results, cumulative-stage impact tables, selective-versus-forced contrasts, ten-seed simulation summaries, ten-split reference summaries, runtime/retention data, and partial-confounding results. Training-QC candidate rankings are retained for every competitor selected by that procedure; the current selected settings and training-QC scores are saved for each WiNN automatic mode. Every figure in `results/final/figures/` has a numerical source table in `results/final/figures/source_data/`. When an exact competitor matrix was reused, cache-loading time is retained as execution provenance but is not reported as method runtime; unrepeated fit times are therefore `NA` rather than artificially near zero.
+
+The metric crosswalk in `analysis/config/metric_crosswalk.csv` states the dataset scope, analysis unit, feature panel, missing-value handling, direction, implementation, and whether a metric was available during selection. Batch weighted-PC R-squared is always calculated with batch treated as a categorical factor. True metabolite ICC(A,1) and the between/within feature repeatability ratio are kept as separate metrics rather than sharing one label.
+
+## Data availability
+
+MTBLS79, BatchCorrMetabolomics Set 1, Sacurine, and WaveICA are obtained from the public sources listed in [docs/DATASETS.md](docs/DATASETS.md). The clinical cohort is subject to its original access restrictions and is not redistributed. Its public outputs are aggregate statistics only.
+
+## Citation
+
+Please cite the WiNN manuscript and the original source publication for each dataset used. Package citation information is available with `citation("winn")` after installation.
+
+## License
+
+The analysis code is distributed under the license in [LICENSE](LICENSE). Source datasets retain their original licenses and terms.
+
+## Contact
+
+Questions about the benchmark or access to restricted study material should be directed to the manuscript authors.

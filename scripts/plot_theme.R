@@ -3,7 +3,8 @@
 winn_method_order <- function() {
   c(
     "Raw", "ComBat", "QC-RLSC", "QC-RFSC", "TIGER", "SERRF",
-    "WINN auto (QC)", "WINN auto-batch (QC)", "WINN default (no QC)"
+    "WiNN auto (QC)", "WiNN auto-batch (QC)",
+    "WiNN fixed default (no QC)"
   )
 }
 
@@ -15,9 +16,9 @@ winn_method_palette <- function() {
     "QC-RFSC" = "#56B4E9",
     "TIGER" = "#E69F00",
     "SERRF" = "#D55E00",
-    "WINN auto (QC)" = "#CC79A7",
-    "WINN auto-batch (QC)" = "#6F4E7C",
-    "WINN default (no QC)" = "#B79F00"
+    "WiNN auto (QC)" = "#CC79A7",
+    "WiNN auto-batch (QC)" = "#6F4E7C",
+    "WiNN fixed default (no QC)" = "#B79F00"
   )
 }
 
@@ -25,6 +26,7 @@ winn_dataset_palette <- function() {
   c(
     "Simulation" = "#4477AA",
     "MTBLS79" = "#228833",
+    "Clinical FIA-MS" = "#EE7733",
     "BatchCorr Set 1" = "#CC6677",
     "Sacurine" = "#AA3377",
     "WaveICA" = "#66CCEE"

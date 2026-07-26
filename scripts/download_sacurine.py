@@ -129,7 +129,7 @@ def main() -> None:
                 "sha256": sha256(target),
                 "download_date_utc": downloaded_at,
                 "file_type": mimetypes.guess_type(target.name)[0] or "text/tab-separated-values",
-                "license": "Artistic-2.0 (phenomis DESCRIPTION)",
+                "license": "CeCILL (phenomis DESCRIPTION)",
                 "dataset": "Sacurine / W4M00001 / MTBLS404 negative-ion LC-MS",
                 "role": metadata["role"],
                 "used": str(bool(metadata["used"])).lower(),

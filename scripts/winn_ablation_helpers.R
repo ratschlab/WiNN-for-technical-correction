@@ -21,33 +21,24 @@ read_tab_feature_matrix <- function(path) {
 
 load_winn_ablation_dataset <- function(repo_root, dataset) {
   dataset <- match.arg(dataset, c(
-    "simulation", "mtbls79", "batchcorr_set1", "sacurine", "waveica"
+    "simulation", "mtbls79", "clinical_fiams", "batchcorr_set1",
+    "sacurine", "waveica"
   ))
 
   if (dataset == "simulation") {
-    data_dir <- file.path(repo_root, "data", "simulated")
-    x <- read_tab_feature_matrix(file.path(data_dir, "shifted_profiles.tsv"))
-    truth <- read_tab_feature_matrix(file.path(data_dir, "ground_truth.tsv"))
-    meta <- read.delim(file.path(data_dir, "sample_metadata.tsv"), check.names = FALSE)
+    data_dir <- file.path(repo_root, "data", "simulated", "canonical", "SIM01")
+    x <- readRDS(file.path(data_dir, "raw_intensity.rds"))
+    truth <- readRDS(file.path(data_dir, "clean_ground_truth.rds"))
+    meta <- read.csv(file.path(data_dir, "sample_metadata.csv"), check.names = FALSE)
     meta$sample_id <- as.character(meta$sample_id)
-    meta$batch <- as.integer(sub("^P", "", meta$plate))
-    meta$run_order <- as.integer(meta$run_order)
-    meta$within_batch_order <- as.integer(meta$order_in_plate)
-    meta$is_qc <- meta$sample_type == "control"
+    meta$is_qc <- as.logical(meta$is_qc)
     meta$is_study <- !meta$is_qc
     meta$biological_label <- ifelse(meta$is_qc, "QC", "study")
-    meta <- meta[order(meta$run_order), , drop = FALSE]
+    meta <- meta[match(colnames(x), meta$sample_id), , drop = FALSE]
     x <- x[, meta$sample_id, drop = FALSE]
     truth <- truth[rownames(x), meta$sample_id, drop = FALSE]
-    holdout <- read.csv(
-      file.path(repo_root, "config", "holdouts", "simulation.csv"),
-      stringsAsFactors = FALSE
-    )
-    hidden_ids <- as.character(holdout$sample_id)
-    truth_annotations <- read.delim(
-      file.path(data_dir, "simulation_design_table.tsv"),
-      check.names = FALSE
-    )
+    hidden_ids <- as.character(meta$sample_id[as.logical(meta$is_hidden_reference)])
+    truth_annotations <- read.csv(file.path(data_dir, "feature_truth.csv"), check.names = FALSE)
     extra <- list(truth = truth, truth_annotations = truth_annotations)
   } else if (dataset == "mtbls79") {
     processed <- file.path(repo_root, "data", "public", "processed")
@@ -77,6 +68,25 @@ load_winn_ablation_dataset <- function(repo_root, dataset) {
     )
     hidden_ids <- as.character(holdout$sample_id)
     extra <- list()
+  } else if (dataset == "clinical_fiams") {
+    private_path <- file.path(
+      repo_root, "data", "private", "clinical_fiams", "prepared_injection_level.rds"
+    )
+    if (!file.exists(private_path)) {
+      stop(
+        "The clinical input is restricted. Place the authorized prepared bundle at ",
+        private_path, "."
+      )
+    }
+    private <- readRDS(private_path)
+    x <- as.matrix(private$x)
+    meta <- private$meta[match(colnames(x), private$meta$sample_id), , drop = FALSE]
+    meta$within_batch_order <- ave(meta$run_order, meta$batch, FUN = seq_along)
+    meta$is_qc <- meta$role != "clinical"
+    meta$is_study <- meta$role == "clinical"
+    meta$biological_label <- meta$sample
+    hidden_ids <- as.character(meta$sample_id[meta$role == "NIST1950"])
+    extra <- list(training_reference_ids = meta$sample_id[meta$role == "control"])
   } else if (dataset == "batchcorr_set1") {
     processed <- file.path(repo_root, "data", "public", "batchcorr_set1", "processed")
     meta <- read.csv(

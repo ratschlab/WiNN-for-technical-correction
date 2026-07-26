@@ -2,8 +2,8 @@
 #
 # This file deliberately performs no file I/O.  The companion
 # generate_simulation_bundles.R script is responsible for provenance, hashes,
-# and persistence.  Keeping generation separate makes it possible to test a
-# realization against the historical simulation without modifying that input.
+# and persistence. Keeping generation separate makes each realization easy to
+# test without modifying its input configuration.
 
 .canonical_required_seed_components <- c(
   "clean_truth",
