@@ -239,6 +239,7 @@ release_run_method <- function(dataset_key, method_id, prepared) {
 }
 
 release_validate_output <- function(value, prepared, method_id) {
+  tiger_fallback <- attr(value, "tiger_nonfinite_fallback", exact = TRUE)
   value <- as.matrix(value)
   storage.mode(value) <- "double"
   if (!identical(dim(value), dim(prepared$x)) ||
@@ -261,6 +262,9 @@ release_validate_output <- function(value, prepared, method_id) {
     )
     value[negative] <- 0
     attr(value, "intensity_floor") <- floor_record
+  }
+  if (!is.null(tiger_fallback)) {
+    attr(value, "tiger_nonfinite_fallback") <- tiger_fallback
   }
   value
 }

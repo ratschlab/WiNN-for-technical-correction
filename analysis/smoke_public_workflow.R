@@ -125,6 +125,37 @@ output_domain_guard_ok <-
   domain_record$minimum_before_floor == -2 &&
   inherits(nonfinite_error, "try-error")
 
+benchmark_expressions <- parse(file.path(repo_root, "scripts", "benchmark_helpers.R"))
+tiger_fallback_expression <- vapply(benchmark_expressions, function(value) {
+  is.call(value) && identical(value[[1L]], as.name("<-")) &&
+    identical(value[[2L]], as.name("restore_tiger_nonfinite_features"))
+}, logical(1))
+if (sum(tiger_fallback_expression) != 1L) {
+  stop("Could not isolate the TIGER non-finite fallback for its smoke test.", call. = FALSE)
+}
+tiger_environment <- new.env(parent = baseenv())
+eval(benchmark_expressions[[which(tiger_fallback_expression)]], envir = tiger_environment)
+tiger_input <- matrix(
+  1:6, nrow = 2,
+  dimnames = list(c("feature_1", "feature_2"), paste0("sample_", 1:3))
+)
+tiger_candidate <- tiger_input + 10
+tiger_candidate[1, 2] <- NA_real_
+tiger_result <- tiger_environment$restore_tiger_nonfinite_features(
+  tiger_candidate, tiger_input
+)
+tiger_record <- attr(tiger_result, "tiger_nonfinite_fallback", exact = TRUE)
+tiger_finite_result <- tiger_environment$restore_tiger_nonfinite_features(
+  tiger_input + 10, tiger_input
+)
+tiger_nonfinite_fallback_ok <-
+  identical(as.numeric(tiger_result[1, ]), as.numeric(tiger_input[1, ])) &&
+  identical(as.numeric(tiger_result[2, ]), as.numeric(tiger_candidate[2, ])) &&
+  isTRUE(tiger_record$applied) && tiger_record$n_nonfinite_values == 1L &&
+  tiger_record$n_features == 1L && tiger_record$n_samples == 1L &&
+  identical(as.vector(tiger_finite_result), as.vector(tiger_input + 10)) &&
+  identical(dimnames(tiger_finite_result), dimnames(tiger_input))
+
 checks <- data.frame(
   check = c(
     "frozen_tarball_sha256", "installed_version", "isolated_installation_path",
@@ -132,7 +163,7 @@ checks <- data.frame(
     "finite_output", "dimensions_preserved", "permutation_invariance",
     "canonical_simulation_identity", "selection_endpoint_separation",
     "selection_software_seed_provenance", "categorical_batch_guard",
-    "nonnegative_output_domain_guard"
+    "nonnegative_output_domain_guard", "tiger_nonfinite_feature_fallback"
   ),
   passed = c(
     observed_sha == expected_sha, as.character(utils::packageVersion("winn")) == "0.1.4",
@@ -143,7 +174,8 @@ checks <- data.frame(
     identical(colnames(x_small), meta_small$sample_id), all(is.finite(baseline$data)),
     identical(dim(baseline$data), dim(x_small)), permutation_difference < 1e-10,
     simulation_identity_ok, selection_separation_ok, selection_provenance_ok,
-    categorical_batch_guard_ok, output_domain_guard_ok
+    categorical_batch_guard_ok, output_domain_guard_ok,
+    tiger_nonfinite_fallback_ok
   ),
   detail = c(
     observed_sha, as.character(utils::packageVersion("winn")),
@@ -155,7 +187,8 @@ checks <- data.frame(
     paste(length(unavailable), "evaluation fields unavailable during selection"),
     paste(nrow(selection), "selection records with software and seed provenance"),
     "batch metric requires explicit categorical target type",
-    "negative values floored with provenance; non-finite values rejected"
+    "negative values floored with provenance; non-finite values rejected",
+    "one affected TIGER feature restored in full; finite features unchanged"
   ),
   stringsAsFactors = FALSE
 )

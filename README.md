@@ -108,7 +108,9 @@ Rscript analysis/evaluate_dataset_family.R --dataset=simulation --family=primary
 
 `analysis/config/competitor_reuse_audit.tsv` distinguishes the provenance of the released Euler results from this clean-checkout behavior. The released analysis reused only checksum-validated endpoint-free artifacts; the public workflow refits those methods because the large matrices themselves are not redistributed.
 
-Corrected matrices are required to remain on the nonnegative intensity scale. If a regression-based competitor extrapolates below zero, the shared wrapper floors those values at zero before training-QC scoring or evaluation and records the affected count and original minimum. Non-finite outputs are rejected.
+Corrected matrices are required to remain on the nonnegative intensity scale. If a regression-based competitor extrapolates below zero, the shared wrapper floors those values at zero before training-QC scoring or evaluation and records the affected count and original minimum. Non-finite outputs are rejected except for the documented TIGER feature-level fallback below.
+
+TIGER can occasionally return non-finite predictions when a training-QC split is degenerate for a feature. In that case the complete affected feature is conservatively left uncorrected, and the affected cell, feature, and sample counts are saved. Finite TIGER features are unchanged. This full-panel safeguard and the ordinary intensity-domain floor are reported separately in the final tables.
 
 ## Running on Euler
 
@@ -130,6 +132,8 @@ The full task matrix is compute-intensive because TIGER uses its native 4 x 4 en
 ## Outputs
 
 `results/final/tables/` contains the per-dataset and combined primary results, cumulative-stage impact tables, selective-versus-forced contrasts, ten-seed simulation summaries, ten-split reference summaries, runtime/retention data, and partial-confounding results. Training-QC candidate rankings are retained for every competitor selected by that procedure; the current selected settings and training-QC scores are saved for each WiNN automatic mode. Every figure in `results/final/figures/` has a numerical source table in `results/final/figures/source_data/`. When an exact competitor matrix was reused, cache-loading time is retained as execution provenance but is not reported as method runtime; unrepeated fit times are therefore `NA` rather than artificially near zero.
+
+`intensity_domain_safeguard.csv` records negative-value flooring for every primary, repeated-simulation, and reference-split matrix. `tiger_nonfinite_feature_fallback.csv` separately records any TIGER features that had to remain uncorrected because the native fit returned a non-finite value.
 
 The metric crosswalk in `analysis/config/metric_crosswalk.csv` states the dataset scope, analysis unit, feature panel, missing-value handling, direction, implementation, and whether a metric was available during selection. Batch weighted-PC R-squared is always calculated with batch treated as a categorical factor. True metabolite ICC(A,1) and the between/within feature repeatability ratio are kept as separate metrics rather than sharing one label.
 

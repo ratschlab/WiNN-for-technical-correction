@@ -183,6 +183,32 @@ add_check(
   paste(sum(floor_applied), "of", nrow(flooring), "correction runs used the intensity-domain floor")
 )
 
+tiger_fallback_path <- file.path(
+  result_root, "final", "tables", "tiger_nonfinite_feature_fallback.csv"
+)
+tiger_fallback <- if (file.exists(tiger_fallback_path)) {
+  read.csv(tiger_fallback_path, stringsAsFactors = FALSE, check.names = FALSE)
+} else data.frame()
+fallback_applied <- if ("fallback_applied" %in% names(tiger_fallback)) {
+  if (is.logical(tiger_fallback$fallback_applied)) tiger_fallback$fallback_applied else
+    tolower(as.character(tiger_fallback$fallback_applied)) == "true"
+} else logical()
+tiger_fallback_ok <-
+  nrow(tiger_fallback) == 76L && length(fallback_applied) == 76L &&
+  all(tiger_fallback$method_id == "tiger") &&
+  all(tiger_fallback$nonfinite_values_returned[!fallback_applied] == 0L) &&
+  all(tiger_fallback$features_restored_to_raw[!fallback_applied] == 0L) &&
+  all(tiger_fallback$samples_with_nonfinite_output[!fallback_applied] == 0L) &&
+  all(tiger_fallback$nonfinite_values_returned[fallback_applied] > 0L) &&
+  all(tiger_fallback$features_restored_to_raw[fallback_applied] > 0L) &&
+  all(tiger_fallback$samples_with_nonfinite_output[fallback_applied] > 0L) &&
+  all(nzchar(tiger_fallback$rule))
+add_check(
+  "tiger_nonfinite_feature_fallbacks_are_recorded",
+  tiger_fallback_ok,
+  paste(sum(fallback_applied), "of", nrow(tiger_fallback), "TIGER runs restored affected features")
+)
+
 selection <- read.csv(
   file.path(release_root, "analysis", "config", "endpoint_free_selection_manifest.csv"),
   stringsAsFactors = FALSE, check.names = FALSE

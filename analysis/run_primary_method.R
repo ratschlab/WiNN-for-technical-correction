@@ -76,6 +76,10 @@ floor_record <- attr(matrix, "intensity_floor", exact = TRUE)
 if (!is.null(floor_record)) {
   capture$value$details$intensity_floor <- floor_record
 }
+tiger_fallback <- attr(matrix, "tiger_nonfinite_fallback", exact = TRUE)
+if (!is.null(tiger_fallback)) {
+  capture$value$details$tiger_nonfinite_fallback <- tiger_fallback
+}
 matrix_path <- file.path(output_dir, "corrected_matrix.rds")
 details_path <- file.path(output_dir, "method_details.rds")
 release_atomic_save_rds(matrix, matrix_path)

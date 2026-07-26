@@ -602,6 +602,37 @@ run_qc_rfsc_with_controls <- function(x_mat, control_ids, meta_df, ntree = 500, 
   full
 }
 
+restore_tiger_nonfinite_features <- function(corrected, input) {
+  corrected <- as.matrix(corrected)
+  input <- as.matrix(input)
+  if (!identical(dim(corrected), dim(input)) ||
+      !identical(dimnames(corrected), dimnames(input))) {
+    stop("TIGER fallback matrices are not aligned.", call. = FALSE)
+  }
+
+  nonfinite <- !is.finite(corrected)
+  affected_features <- rownames(corrected)[rowSums(nonfinite) > 0L]
+  fallback_record <- list(
+    applied = length(affected_features) > 0L,
+    rule = paste(
+      "A TIGER feature with any non-finite corrected value was restored",
+      "to its complete uncorrected input profile."
+    ),
+    n_nonfinite_values = sum(nonfinite),
+    n_features = length(affected_features),
+    n_samples = sum(colSums(nonfinite) > 0L)
+  )
+  if (length(affected_features)) {
+    input_block <- input[affected_features, , drop = FALSE]
+    if (any(!is.finite(input_block))) {
+      stop("TIGER fallback cannot restore a non-finite canonical input.", call. = FALSE)
+    }
+    corrected[affected_features, ] <- input_block
+  }
+  attr(corrected, "tiger_nonfinite_fallback") <- fallback_record
+  corrected
+}
+
 run_tiger_with_holdout_qc <- function(
   x_mat,
   train_qc_ids,
@@ -703,7 +734,15 @@ run_tiger_with_holdout_qc <- function(
   }
 
   output_ids <- md$sample_id[md$sample_id %in% colnames(m)]
-  m[, output_ids, drop = FALSE]
+  output <- m[, output_ids, drop = FALSE]
+
+  # A particular training-QC split can be degenerate for a feature and make
+  # TIGER return non-finite predictions. Keep the complete feature panel and
+  # record the conservative feature-level fallback.
+  restore_tiger_nonfinite_features(
+    output,
+    x_mat[rownames(output), output_ids, drop = FALSE]
+  )
 }
 
 run_tiger_all_corrected <- function(

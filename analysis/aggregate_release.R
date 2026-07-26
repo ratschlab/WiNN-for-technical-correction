@@ -736,6 +736,32 @@ write.csv(
   row.names = FALSE, na = ""
 )
 
+tiger_task_table <- floor_task_table |>
+  filter(method_id == "tiger")
+tiger_fallback_rows <- lapply(seq_len(nrow(tiger_task_table)), function(index) {
+  task <- tiger_task_table[index, , drop = FALSE]
+  details <- readRDS(file.path(
+    release_root, as.character(task$output_dir), as.character(task$details_file)
+  ))
+  record <- details$tiger_nonfinite_fallback
+  applied <- !is.null(record) && isTRUE(record$applied)
+  data.frame(
+    task[, setdiff(names(task), "details_file"), drop = FALSE],
+    fallback_applied = applied,
+    nonfinite_values_returned = if (applied) as.integer(record$n_nonfinite_values) else 0L,
+    features_restored_to_raw = if (applied) as.integer(record$n_features) else 0L,
+    samples_with_nonfinite_output = if (applied) as.integer(record$n_samples) else 0L,
+    rule = if (applied) as.character(record$rule) else "TIGER output was finite.",
+    stringsAsFactors = FALSE
+  )
+})
+tiger_fallbacks <- bind_rows(tiger_fallback_rows)
+write.csv(
+  tiger_fallbacks,
+  file.path(table_dir, "tiger_nonfinite_feature_fallback.csv"),
+  row.names = FALSE, na = ""
+)
+
 partial_manifest <- read_required(file.path(
   release_root, "analysis", "config", "partial_confounding_task_manifest.csv"
 ))
