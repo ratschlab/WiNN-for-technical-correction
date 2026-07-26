@@ -208,7 +208,32 @@ if (inherits(capture$value, "error")) {
   stop(capture$error, call. = FALSE)
 }
 
-matrix <- release_validate_output(capture$value, prepared, method_id)
+output_capture <- release_capture(function() {
+  release_validate_output(capture$value, prepared, method_id)
+})
+if (inherits(output_capture$value, "error")) {
+  writeLines(
+    c(
+      "WARNINGS", capture$warnings, output_capture$warnings, "",
+      "MESSAGES", capture$messages, output_capture$messages, "",
+      "ERROR", output_capture$error
+    ),
+    file.path(output_dir, "conditions.log")
+  )
+  if (nrow(candidate_scores)) {
+    write.csv(
+      candidate_scores, file.path(output_dir, "candidate_scores.csv"),
+      row.names = FALSE, quote = TRUE
+    )
+  }
+  jsonlite::write_json(list(
+    task_id = task_id, dataset_key = dataset_key, split_id = split_id,
+    method_id = method_id, status = "failed", error = output_capture$error,
+    package = frozen_winn
+  ), file.path(output_dir, "failed.json"), auto_unbox = TRUE, pretty = TRUE)
+  stop(output_capture$error, call. = FALSE)
+}
+matrix <- output_capture$value
 floor_record <- attr(matrix, "intensity_floor", exact = TRUE)
 if (!is.null(floor_record)) {
   selected_details$intensity_floor <- floor_record
