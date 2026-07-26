@@ -1,0 +1,58 @@
+"dataset_key","method_id","method","candidate_id","params","default_distance","n_folds_attempted","n_folds_scored","qc_only_score","mean_training_qc_profile_correlation","mean_training_qc_cv_fraction","feature_coverage","eligible_for_selection","selection_reason","selected","selection_seed","hidden_qc_values_available","biological_labels_available","replicate_identities_available","preservation_endpoints_available"
+"mtbls79","combat","ComBat",1,"par_prior=TRUE",0,1,1,0.910831365228382,0.998972615736576,0.176282501016389,1,TRUE,"eligible_complete_frozen_fold_set",TRUE,2026072611,FALSE,FALSE,FALSE,FALSE
+"mtbls79","combat","ComBat",2,"par_prior=FALSE",1,1,1,0.910174684354877,0.998965086001513,0.177580803293273,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072611,FALSE,FALSE,FALSE,FALSE
+"mtbls79","qc_rlsc","QC-RLSC",1,"span=0.3",0.45,1,0,,,,,FALSE,"ineligible_missing_or_nonfinite_fold_score",FALSE,2026072612,FALSE,FALSE,FALSE,FALSE
+"mtbls79","qc_rlsc","QC-RLSC",2,"span=0.5",0.25,1,1,0.644692905836942,0.999970656677142,0.7105555016804,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072612,FALSE,FALSE,FALSE,FALSE
+"mtbls79","qc_rlsc","QC-RLSC",3,"span=0.7",0.05,1,1,0.850302257853353,0.999664460812344,0.298724405917981,1,TRUE,"eligible_complete_frozen_fold_set",TRUE,2026072612,FALSE,FALSE,FALSE,FALSE
+"mtbls79","qc_rlsc","QC-RLSC",4,"span=0.9",0.15,1,1,0.256836488018042,0.997227916131277,1.48078285622647,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072612,FALSE,FALSE,FALSE,FALSE
+"mtbls79","qc_rfsc","QC-RFSC",1,"ntree=200; coCV=20; Frule=0.8",2,1,1,0.924704586437892,0.977191722254301,0.104974271632816,1,TRUE,"eligible_complete_frozen_fold_set",TRUE,2026072613,FALSE,FALSE,FALSE,FALSE
+"mtbls79","qc_rfsc","QC-RFSC",2,"ntree=200; coCV=30; Frule=0.8",1,1,1,-0.0751090064862236,-0.0259298257796409,0.0983583614131653,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072613,FALSE,FALSE,FALSE,FALSE
+"mtbls79","qc_rfsc","QC-RFSC",3,"ntree=500; coCV=20; Frule=0.8",1,1,1,0.924587569215705,0.977191722227902,0.105208306024393,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072613,FALSE,FALSE,FALSE,FALSE
+"mtbls79","qc_rfsc","QC-RFSC",4,"ntree=500; coCV=30; Frule=0.8",0,1,1,-0.0746634555108427,-0.0253370528442921,0.0986528053331011,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072613,FALSE,FALSE,FALSE,FALSE
+"mtbls79","serrf","SERRF",1,"jitter_eps=0",0,1,1,0.902276334323754,0.999116567035098,0.193680465422689,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072615,FALSE,FALSE,FALSE,FALSE
+"mtbls79","serrf","SERRF",2,"jitter_eps=1e-06",1,1,1,0.90227633432648,0.999116567035098,0.193680465417236,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072615,FALSE,FALSE,FALSE,FALSE
+"mtbls79","serrf","SERRF",3,"jitter_eps=1e-05",2,1,1,0.902276334350252,0.999116567035099,0.193680465369692,1,TRUE,"eligible_complete_frozen_fold_set",TRUE,2026072615,FALSE,FALSE,FALSE,FALSE
+"clinical_fiams","combat","ComBat",1,"par_prior=TRUE",0,9,9,0.921456104541924,0.994720947011143,0.146529684938438,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072620,FALSE,FALSE,FALSE,FALSE
+"clinical_fiams","combat","ComBat",2,"par_prior=FALSE",1,9,9,0.92182343981115,0.994923647451646,0.146200415280991,1,TRUE,"eligible_complete_frozen_fold_set",TRUE,2026072620,FALSE,FALSE,FALSE,FALSE
+"clinical_fiams","qc_rlsc","QC-RLSC",1,"span=0.3",0.45,9,9,0.0297154357426515,0.997821585532063,1.93621229957882,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072621,FALSE,FALSE,FALSE,FALSE
+"clinical_fiams","qc_rlsc","QC-RLSC",2,"span=0.5",0.25,9,9,-0.181790825876718,0.988169102767598,2.33991985728863,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072621,FALSE,FALSE,FALSE,FALSE
+"clinical_fiams","qc_rlsc","QC-RLSC",3,"span=0.7",0.05,9,9,0.924199516132954,0.99449183270495,0.140584633143992,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072621,FALSE,FALSE,FALSE,FALSE
+"clinical_fiams","qc_rlsc","QC-RLSC",4,"span=0.9",0.15,9,9,0.92587315395788,0.994721608266206,0.137696908616651,1,TRUE,"eligible_complete_frozen_fold_set",TRUE,2026072621,FALSE,FALSE,FALSE,FALSE
+"clinical_fiams","qc_rfsc","QC-RFSC",1,"ntree=200; coCV=20; Frule=0.8",2,9,9,0.89475269306078,0.967640208206795,0.14577503029203,1,TRUE,"eligible_complete_frozen_fold_set",TRUE,2026072622,FALSE,FALSE,FALSE,FALSE
+"clinical_fiams","qc_rfsc","QC-RFSC",2,"ntree=200; coCV=30; Frule=0.8",1,9,9,-0.0529678828286158,0.0194138606863106,0.144763487029853,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072622,FALSE,FALSE,FALSE,FALSE
+"clinical_fiams","qc_rfsc","QC-RFSC",3,"ntree=500; coCV=20; Frule=0.8",1,9,9,0.894043280362594,0.967008335222879,0.145930109720571,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072622,FALSE,FALSE,FALSE,FALSE
+"clinical_fiams","qc_rfsc","QC-RFSC",4,"ntree=500; coCV=30; Frule=0.8",0,9,9,-0.0527401531550449,0.0195992775047091,0.144678861319508,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072622,FALSE,FALSE,FALSE,FALSE
+"clinical_fiams","serrf","SERRF",1,"jitter_eps=0",0,9,9,0.932868219077056,0.995644238897439,0.125552039640766,1,TRUE,"eligible_complete_frozen_fold_set",TRUE,2026072624,FALSE,FALSE,FALSE,FALSE
+"clinical_fiams","serrf","SERRF",2,"jitter_eps=1e-06",1,9,9,0.932855907520573,0.99563863662603,0.125565458210915,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072624,FALSE,FALSE,FALSE,FALSE
+"clinical_fiams","serrf","SERRF",3,"jitter_eps=1e-05",2,9,9,0.932862809291199,0.995641883989273,0.125558149396149,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072624,FALSE,FALSE,FALSE,FALSE
+"batchcorr_set1","combat","ComBat",1,"par_prior=TRUE",0,1,1,0.779652321060216,0.97980826299706,0.400311883873688,1,TRUE,"eligible_complete_frozen_fold_set",TRUE,2026072629,FALSE,FALSE,FALSE,FALSE
+"batchcorr_set1","combat","ComBat",2,"par_prior=FALSE",1,1,1,0.77341553236855,0.976702171786108,0.406573278835116,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072629,FALSE,FALSE,FALSE,FALSE
+"batchcorr_set1","qc_rfsc","QC-RFSC",1,"ntree=200; coCV=20; Frule=0.8",2,1,1,0.582039362687018,0.828909279183559,0.493739832993082,1,TRUE,"eligible_complete_frozen_fold_set",TRUE,2026072631,FALSE,FALSE,FALSE,FALSE
+"batchcorr_set1","qc_rfsc","QC-RFSC",2,"ntree=500; coCV=20; Frule=0.8",1,1,1,0.578904358625547,0.828723898906632,0.499639080562171,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072631,FALSE,FALSE,FALSE,FALSE
+"batchcorr_set1","qc_rfsc","QC-RFSC",3,"ntree=200; coCV=30; Frule=0.8",1,1,1,0.559071407608046,0.738485181533895,0.358827547851697,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072631,FALSE,FALSE,FALSE,FALSE
+"batchcorr_set1","qc_rfsc","QC-RFSC",4,"ntree=500; coCV=30; Frule=0.8",0,1,1,0.55886418096577,0.738485181534633,0.359242001137726,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072631,FALSE,FALSE,FALSE,FALSE
+"batchcorr_set1","serrf","SERRF",1,"jitter_eps=0",0,1,1,0.760243541169866,0.978422427185465,0.436357772031198,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072633,FALSE,FALSE,FALSE,FALSE
+"batchcorr_set1","serrf","SERRF",2,"jitter_eps=1e-06",1,1,1,0.760243541169879,0.978422427185465,0.436357772031173,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072633,FALSE,FALSE,FALSE,FALSE
+"batchcorr_set1","serrf","SERRF",3,"jitter_eps=1e-05",2,1,1,0.760243541169981,0.978422427185466,0.43635777203097,1,TRUE,"eligible_complete_frozen_fold_set",TRUE,2026072633,FALSE,FALSE,FALSE,FALSE
+"sacurine","qc_rlsc","QC-RLSC",1,"span=0.3",0.45,9,9,0.677032250663047,0.996493253546567,0.63892200576704,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072639,FALSE,FALSE,FALSE,FALSE
+"sacurine","qc_rlsc","QC-RLSC",2,"span=0.5",0.25,9,9,0.68480234534405,0.994729829486432,0.619854968284764,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072639,FALSE,FALSE,FALSE,FALSE
+"sacurine","qc_rlsc","QC-RLSC",3,"span=0.7",0.05,9,9,0.935530757982987,0.997514322947379,0.123967129928784,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072639,FALSE,FALSE,FALSE,FALSE
+"sacurine","qc_rlsc","QC-RLSC",4,"span=0.9",0.15,9,9,0.939388861191814,0.997700269623213,0.116622816862798,1,TRUE,"eligible_complete_frozen_fold_set",TRUE,2026072639,FALSE,FALSE,FALSE,FALSE
+"sacurine","qc_rfsc","QC-RFSC",1,"ntree=200; coCV=20; Frule=0.8",2,9,9,0.951536803640538,0.99222177145523,0.0813699356293845,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072640,FALSE,FALSE,FALSE,FALSE
+"sacurine","qc_rfsc","QC-RFSC",2,"ntree=500; coCV=20; Frule=0.8",1,9,9,0.849104494583151,0.888031312946433,0.0778536367265638,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072640,FALSE,FALSE,FALSE,FALSE
+"sacurine","qc_rfsc","QC-RFSC",3,"ntree=200; coCV=30; Frule=0.8",1,9,9,0.96013895564134,0.992742647040442,0.0652073827982033,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072640,FALSE,FALSE,FALSE,FALSE
+"sacurine","qc_rfsc","QC-RFSC",4,"ntree=500; coCV=30; Frule=0.8",0,9,9,0.960535816716618,0.992742647022411,0.0644136606115861,1,TRUE,"eligible_complete_frozen_fold_set",TRUE,2026072640,FALSE,FALSE,FALSE,FALSE
+"sacurine","serrf","SERRF",1,"jitter_eps=0",0,9,9,0.913825355949584,0.996197520798297,0.164744329697425,1,TRUE,"eligible_complete_frozen_fold_set",TRUE,2026072642,FALSE,FALSE,FALSE,FALSE
+"sacurine","serrf","SERRF",2,"jitter_eps=1e-06",1,9,9,0.913744234598243,0.996173221763412,0.164857974330337,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072642,FALSE,FALSE,FALSE,FALSE
+"sacurine","serrf","SERRF",3,"jitter_eps=1e-05",2,9,9,0.913786398455455,0.996193971317949,0.164815145724989,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072642,FALSE,FALSE,FALSE,FALSE
+"waveica","qc_rlsc","QC-RLSC",1,"span=0.3",0.45,9,9,0.276760025636853,0.563447383442642,0.573374715611579,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072648,FALSE,FALSE,FALSE,FALSE
+"waveica","qc_rlsc","QC-RLSC",2,"span=0.5",0.25,9,9,0.525042583616963,0.737216697149462,0.424348227064997,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072648,FALSE,FALSE,FALSE,FALSE
+"waveica","qc_rlsc","QC-RLSC",3,"span=0.7",0.05,9,9,0.536252505551683,0.743788064708865,0.415071118314364,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072648,FALSE,FALSE,FALSE,FALSE
+"waveica","qc_rlsc","QC-RLSC",4,"span=0.9",0.15,9,9,0.542944393749276,0.746982460068307,0.408076132638063,1,TRUE,"eligible_complete_frozen_fold_set",TRUE,2026072648,FALSE,FALSE,FALSE,FALSE
+"waveica","qc_rfsc","QC-RFSC",1,"ntree=200; coCV=20; Frule=0.8",2,9,9,0.468448948080167,0.598227984695538,0.259558073230743,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072649,FALSE,FALSE,FALSE,FALSE
+"waveica","qc_rfsc","QC-RFSC",2,"ntree=500; coCV=20; Frule=0.8",1,9,9,0.467070368130746,0.598221033717662,0.262301331173833,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072649,FALSE,FALSE,FALSE,FALSE
+"waveica","qc_rfsc","QC-RFSC",3,"ntree=200; coCV=30; Frule=0.8",1,9,9,0.538309852673906,0.633499794398769,0.190379883449727,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072649,FALSE,FALSE,FALSE,FALSE
+"waveica","qc_rfsc","QC-RFSC",4,"ntree=500; coCV=30; Frule=0.8",0,9,9,0.538498514391035,0.633499794384672,0.190002559987274,1,TRUE,"eligible_complete_frozen_fold_set",TRUE,2026072649,FALSE,FALSE,FALSE,FALSE
+"waveica","serrf","SERRF",1,"jitter_eps=0",0,9,9,0.529142188310687,0.711790791234713,0.365297205848052,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072651,FALSE,FALSE,FALSE,FALSE
+"waveica","serrf","SERRF",2,"jitter_eps=1e-06",1,9,9,0.528630134628679,0.710183738188526,0.363107207119694,1,TRUE,"eligible_complete_frozen_fold_set",FALSE,2026072651,FALSE,FALSE,FALSE,FALSE
+"waveica","serrf","SERRF",3,"jitter_eps=1e-05",2,9,9,0.529902712341263,0.71180243512006,0.363799445557592,1,TRUE,"eligible_complete_frozen_fold_set",TRUE,2026072651,FALSE,FALSE,FALSE,FALSE

@@ -1,0 +1,7 @@
+"dataset_key","dataset","table_id","metric","direction","Outlier_shrinkage","Selective_drift","Selective_batch","PQN","impact_definition"
+"simulation","Simulation","feature_repeatability_ratio",,"higher",,,,,"Positive values favor the newly added stage; negative values indicate deterioration."
+"mtbls79","MTBLS79","feature_repeatability_ratio","feature_repeatability_ratio_median","higher",,,,,"Positive values favor the newly added stage; negative values indicate deterioration."
+"clinical_fiams","Clinical FIA-MS","feature_repeatability_ratio","feature_repeatability_ratio_median","higher",-0.0570296222657061,0.650720975475751,-0.01309570261263,0.672367832473453,"Positive values favor the newly added stage; negative values indicate deterioration."
+"batchcorr_set1","BatchCorr Set 1","feature_repeatability_ratio","feature_repeatability_ratio_median","higher",-0.00321244398431808,0.514689648539073,0.16813935625643,0.527176184426726,"Positive values favor the newly added stage; negative values indicate deterioration."
+"sacurine","Sacurine","feature_repeatability_ratio","feature_repeatability_ratio_median","higher",,,,,"Positive values favor the newly added stage; negative values indicate deterioration."
+"waveica","WaveICA","feature_repeatability_ratio","feature_repeatability_ratio_median","higher",,,,,"Positive values favor the newly added stage; negative values indicate deterioration."

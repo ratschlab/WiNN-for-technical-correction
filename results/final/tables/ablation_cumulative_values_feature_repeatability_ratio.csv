@@ -1,0 +1,7 @@
+"dataset_key","dataset","table_id","metric","direction","Raw","Outlier_shrinkage","Selective_drift","Selective_batch","PQN"
+"simulation","Simulation","feature_repeatability_ratio",,"higher",,,,,
+"mtbls79","MTBLS79","feature_repeatability_ratio","feature_repeatability_ratio_median","higher",,,,,
+"clinical_fiams","Clinical FIA-MS","feature_repeatability_ratio","feature_repeatability_ratio_median","higher",0.648713511012684,0.591683888746978,0.593691353210045,0.637625272863121,0.659272129860823
+"batchcorr_set1","BatchCorr Set 1","feature_repeatability_ratio","feature_repeatability_ratio_median","higher",0.52175027169439,0.518537827710072,0.511477204554755,0.682829004795503,0.695315540683156
+"sacurine","Sacurine","feature_repeatability_ratio","feature_repeatability_ratio_median","higher",,,,,
+"waveica","WaveICA","feature_repeatability_ratio","feature_repeatability_ratio_median","higher",,,,,

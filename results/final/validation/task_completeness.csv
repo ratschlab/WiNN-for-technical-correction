@@ -1,0 +1,11 @@
+"family","path","expected","observed","complete"
+"primary_methods","primary",54,54,TRUE
+"dataset_ablation_bundles","ablations",6,6,TRUE
+"simulation_seed_methods","simulation_seeds",90,90,TRUE
+"simulation_seed_ablation_bundles","simulation_seed_ablations",10,10,TRUE
+"reference_split_methods","reference_splits",540,540,TRUE
+"partial_confounding","partial_confounding",160,160,TRUE
+"primary_evaluations","evaluation/primary",6,6,TRUE
+"ablation_evaluations","evaluation/ablations",6,6,TRUE
+"simulation_seed_evaluations","evaluation/simulation_seeds",10,10,TRUE
+"reference_split_evaluations","evaluation/reference_splits",60,60,TRUE

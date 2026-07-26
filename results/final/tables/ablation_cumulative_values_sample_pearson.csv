@@ -1,0 +1,7 @@
+"dataset_key","dataset","table_id","metric","direction","Raw","Outlier_shrinkage","Selective_drift","Selective_batch","PQN"
+"simulation","Simulation","sample_pearson","truth_sample_profile_pearson_mean","higher",0.521842186444926,0.545068216956092,0.556054220859967,0.925722979080725,0.925722367961271
+"mtbls79","MTBLS79","sample_pearson","sample_replicate_pearson_median","higher",0.952320686738354,0.959213383538247,0.959251739357713,0.975436813944675,0.975436813944675
+"clinical_fiams","Clinical FIA-MS","sample_pearson","sample_replicate_pearson_median","higher",0.983467072627652,0.98644599372949,0.985969739068927,0.990747863696587,0.990747863696587
+"batchcorr_set1","BatchCorr Set 1","sample_pearson","sample_replicate_pearson_median","higher",0.911453639180002,0.925076871110984,0.929158441184189,0.957541057766609,0.957541057965195
+"sacurine","Sacurine","sample_pearson","sample_replicate_pearson_median","higher",,,,,
+"waveica","WaveICA","sample_pearson","sample_replicate_pearson_median","higher",,,,,

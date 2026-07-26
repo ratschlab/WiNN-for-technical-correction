@@ -1,0 +1,7 @@
+"dataset_key","dataset","table_id","metric","direction","Outlier_shrinkage","Selective_drift","Selective_batch","PQN","impact_definition"
+"simulation","Simulation","heldout_qc_cv","heldout_qc_cv_mean","lower",2.9709103854638,-35.2947026185697,-44.060995403707,-52.8272881888443,"Positive values favor the newly added stage; negative values indicate deterioration."
+"mtbls79","MTBLS79","heldout_qc_cv","heldout_qc_cv_mean","lower",1.1707171687163,-26.3853828322579,-43.5439080635879,-60.2224456871475,"Positive values favor the newly added stage; negative values indicate deterioration."
+"clinical_fiams","Clinical FIA-MS","heldout_qc_cv","heldout_qc_cv_mean","lower",2.3726620506482,-12.362759456029,-25.3338196048314,-37.7382288149193,"Positive values favor the newly added stage; negative values indicate deterioration."
+"batchcorr_set1","BatchCorr Set 1","heldout_qc_cv","heldout_qc_cv_mean","lower",6.81205814443589,-51.9374160410669,-79.2694831390892,-105.93475922022,"Positive values favor the newly added stage; negative values indicate deterioration."
+"sacurine","Sacurine","heldout_qc_cv","heldout_qc_cv_mean","lower",0.790437528321402,-29.7853817344965,-52.9790097147743,-75.4009229495753,"Positive values favor the newly added stage; negative values indicate deterioration."
+"waveica","WaveICA","heldout_qc_cv","heldout_qc_cv_mean","lower",3.995305960693,-43.8017990846446,-82.1784242324932,-120.478768282375,"Positive values favor the newly added stage; negative values indicate deterioration."

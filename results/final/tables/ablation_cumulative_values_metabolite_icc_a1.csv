@@ -1,0 +1,7 @@
+"dataset_key","dataset","table_id","metric","direction","Raw","Outlier_shrinkage","Selective_drift","Selective_batch","PQN"
+"simulation","Simulation","metabolite_icc_a1","truth_metabolite_profile_icc_mean","higher",0.586183758689398,0.592393835101706,0.625731179450323,0.922210881985038,0.922101988056287
+"mtbls79","MTBLS79","metabolite_icc_a1","metabolite_icc_a1_median","higher",0.548997409303439,0.54081585592398,0.540871105246711,0.663483714430044,0.674414477673406
+"clinical_fiams","Clinical FIA-MS","metabolite_icc_a1","metabolite_icc_a1_median","higher",,,,,
+"batchcorr_set1","BatchCorr Set 1","metabolite_icc_a1","metabolite_icc_a1_median","higher",,,,,
+"sacurine","Sacurine","metabolite_icc_a1","metabolite_icc_a1_median","higher",,,,,
+"waveica","WaveICA","metabolite_icc_a1","metabolite_icc_a1_median","higher",,,,,

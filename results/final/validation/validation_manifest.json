@@ -1,0 +1,8 @@
+{
+  "schema": "endpoint_free_release_validation_v1",
+  "status": "passed",
+  "passed": 19,
+  "total": 19,
+  "frozen_package_sha256": "71a0964cee2778b2e5789d20621147e074c7945e813cf76af2ceeb696104aae1",
+  "completed_at": "2026-07-26T21:50:27+0200"
+}

@@ -78,12 +78,16 @@ add_audit(
 
 runner_text <- paste(deparse(body(release_run_method)), collapse = "\n")
 winn_runner_text <- paste(deparse(body(release_run_winn)), collapse = "\n")
+winn_runner_compact <- gsub("[[:space:]]+", " ", winn_runner_text)
 runner_role_ok <-
   grepl("prepared$training_ids", runner_text, fixed = TRUE) &&
   !grepl("prepared$hidden_ids", runner_text, fixed = TRUE) &&
   !grepl("prepared$external_ids", runner_text, fixed = TRUE) &&
   grepl("auto_batch = TRUE", runner_text, fixed = TRUE) &&
-  grepl("if (isTRUE(auto_batch)) NULL else prepared$meta$batch", winn_runner_text, fixed = TRUE)
+  grepl(
+    "batch = if (isTRUE(auto_batch)) NULL else prepared$meta$batch",
+    winn_runner_compact, fixed = TRUE
+  )
 add_audit(
   "implementation", "all", "release_run_method", "all",
   "method_runner_exposes_training_roles_only_and_omits_batch_in_auto_batch_mode",

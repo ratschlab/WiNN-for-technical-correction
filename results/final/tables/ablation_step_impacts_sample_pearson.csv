@@ -1,0 +1,7 @@
+"dataset_key","dataset","table_id","metric","direction","Outlier_shrinkage","Selective_drift","Selective_batch","PQN","impact_definition"
+"simulation","Simulation","sample_pearson","truth_sample_profile_pearson_mean","higher",0.023226030511166,0.532828190348801,0.392894788731924,0.532827579229347,"Positive values favor the newly added stage; negative values indicate deterioration."
+"mtbls79","MTBLS79","sample_pearson","sample_replicate_pearson_median","higher",0.00689269679989302,0.95235904255782,0.023077771386855,0.95235904255782,"Positive values favor the newly added stage; negative values indicate deterioration."
+"clinical_fiams","Clinical FIA-MS","sample_pearson","sample_replicate_pearson_median","higher",0.00297892110183806,0.982990817967089,0.00775704572949798,0.982990817967089,"Positive values favor the newly added stage; negative values indicate deterioration."
+"batchcorr_set1","BatchCorr Set 1","sample_pearson","sample_replicate_pearson_median","higher",0.013623231930982,0.915535209253207,0.0420058485134021,0.915535209451793,"Positive values favor the newly added stage; negative values indicate deterioration."
+"sacurine","Sacurine","sample_pearson","sample_replicate_pearson_median","higher",,,,,"Positive values favor the newly added stage; negative values indicate deterioration."
+"waveica","WaveICA","sample_pearson","sample_replicate_pearson_median","higher",,,,,"Positive values favor the newly added stage; negative values indicate deterioration."

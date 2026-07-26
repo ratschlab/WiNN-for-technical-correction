@@ -1,0 +1,45 @@
+{
+  "schema": "endpoint_free_winn_0.1.4_final_aggregate_v1",
+  "package_version": "0.1.4",
+  "package_sha256": "71a0964cee2778b2e5789d20621147e074c7945e813cf76af2ceeb696104aae1",
+  "datasets": ["simulation", "mtbls79", "clinical_fiams", "batchcorr_set1", "sacurine", "waveica"],
+  "methods": ["Raw", "ComBat", "QC-RLSC", "QC-RFSC", "TIGER", "SERRF", "WiNN auto (QC)", "WiNN auto-batch (QC)", "WiNN fixed default (no QC)"],
+  "task_completion": [
+    {
+      "analysis_family": "primary_evaluations",
+      "expected": 6,
+      "observed": 6,
+      "complete": true,
+      "_row": "primary_evaluations"
+    },
+    {
+      "analysis_family": "ablation_evaluations",
+      "expected": 6,
+      "observed": 6,
+      "complete": true,
+      "_row": "ablation_evaluations"
+    },
+    {
+      "analysis_family": "simulation_seed_evaluations",
+      "expected": 10,
+      "observed": 10,
+      "complete": true,
+      "_row": "simulation_seed_evaluations"
+    },
+    {
+      "analysis_family": "reference_split_evaluations",
+      "expected": 60,
+      "observed": 60,
+      "complete": true,
+      "_row": "reference_split_evaluations"
+    },
+    {
+      "analysis_family": "partial_confounding_tasks",
+      "expected": 160,
+      "observed": 160,
+      "complete": true,
+      "_row": "partial_confounding_tasks"
+    }
+  ],
+  "completed_at": "2026-07-26T21:48:54+0200"
+}

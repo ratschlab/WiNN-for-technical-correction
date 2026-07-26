@@ -1,0 +1,10 @@
+"family","check","passed","total"
+"reference_split","assignment_roles_and_blinding_manifest_match",540,540
+"selection","evaluation_fields_unavailable_during_selection",1,1
+"primary","frozen_primary_control_protocol_excludes_hidden_and_external_references",54,54
+"implementation","method_runner_exposes_training_roles_only_and_omits_batch_in_auto_batch_mode",1,1
+"primary","recorded_winn_controls_match_training_role",18,18
+"reference_split","recorded_winn_controls_match_training_role",180,180
+"simulation_seed","recorded_winn_controls_match_training_role",30,30
+"primary","training_and_hidden_reference_roles_are_disjoint",6,6
+"simulation_seed","training_and_hidden_reference_roles_are_disjoint",10,10

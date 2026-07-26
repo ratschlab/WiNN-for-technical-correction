@@ -1,0 +1,7 @@
+"dataset_key","dataset","table_id","metric","direction","Raw","Outlier_shrinkage","Selective_drift","Selective_batch","PQN"
+"simulation","Simulation","gam_deviance","residual_run_order_gam_mean_deviance","lower",0.12764961730634,0.127784583538385,0.020246546682198,0.0202464765939647,0.020259360410254
+"mtbls79","MTBLS79","gam_deviance","residual_run_order_gam_mean_deviance","lower",0.14171601494383,0.140717358977857,0.139589741711729,0.139589741711729,0.140078697278888
+"clinical_fiams","Clinical FIA-MS","gam_deviance","residual_run_order_gam_mean_deviance","lower",0.120300147162855,0.122123720027712,0.0720695799781095,0.0720695799781094,0.0727686471322973
+"batchcorr_set1","BatchCorr Set 1","gam_deviance","residual_run_order_gam_mean_deviance","lower",0.122438628105699,0.119881853906658,0.0463195481072315,0.0463195481072314,0.043772965202549
+"sacurine","Sacurine","gam_deviance","residual_run_order_gam_mean_deviance","lower",0.0684058304178776,0.0689385055060147,0.0317341115811118,0.0317341115811118,0.0520147926987853
+"waveica","WaveICA","gam_deviance","residual_run_order_gam_mean_deviance","lower",0.205768293336358,0.208336678872152,0.0141264798034463,0.0141656712326795,0.0141634445598343

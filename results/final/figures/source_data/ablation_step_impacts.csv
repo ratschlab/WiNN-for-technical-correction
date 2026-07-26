@@ -1,0 +1,145 @@
+"dataset_key","dataset","table_id","metric","direction","impact_definition","stage","favorable_impact"
+"simulation","Simulation","heldout_qc_cv","heldout_qc_cv_mean","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",2.9709103854638
+"simulation","Simulation","heldout_qc_cv","heldout_qc_cv_mean","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",-35.2947026185697
+"simulation","Simulation","heldout_qc_cv","heldout_qc_cv_mean","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",-44.060995403707
+"simulation","Simulation","heldout_qc_cv","heldout_qc_cv_mean","lower","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",-52.8272881888443
+"mtbls79","MTBLS79","heldout_qc_cv","heldout_qc_cv_mean","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",1.1707171687163
+"mtbls79","MTBLS79","heldout_qc_cv","heldout_qc_cv_mean","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",-26.3853828322579
+"mtbls79","MTBLS79","heldout_qc_cv","heldout_qc_cv_mean","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",-43.5439080635879
+"mtbls79","MTBLS79","heldout_qc_cv","heldout_qc_cv_mean","lower","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",-60.2224456871475
+"clinical_fiams","Clinical FIA-MS","heldout_qc_cv","heldout_qc_cv_mean","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",2.3726620506482
+"clinical_fiams","Clinical FIA-MS","heldout_qc_cv","heldout_qc_cv_mean","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",-12.362759456029
+"clinical_fiams","Clinical FIA-MS","heldout_qc_cv","heldout_qc_cv_mean","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",-25.3338196048314
+"clinical_fiams","Clinical FIA-MS","heldout_qc_cv","heldout_qc_cv_mean","lower","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",-37.7382288149193
+"batchcorr_set1","BatchCorr Set 1","heldout_qc_cv","heldout_qc_cv_mean","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",6.81205814443589
+"batchcorr_set1","BatchCorr Set 1","heldout_qc_cv","heldout_qc_cv_mean","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",-51.9374160410669
+"batchcorr_set1","BatchCorr Set 1","heldout_qc_cv","heldout_qc_cv_mean","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",-79.2694831390892
+"batchcorr_set1","BatchCorr Set 1","heldout_qc_cv","heldout_qc_cv_mean","lower","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",-105.93475922022
+"sacurine","Sacurine","heldout_qc_cv","heldout_qc_cv_mean","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",0.790437528321402
+"sacurine","Sacurine","heldout_qc_cv","heldout_qc_cv_mean","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",-29.7853817344965
+"sacurine","Sacurine","heldout_qc_cv","heldout_qc_cv_mean","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",-52.9790097147743
+"sacurine","Sacurine","heldout_qc_cv","heldout_qc_cv_mean","lower","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",-75.4009229495753
+"waveica","WaveICA","heldout_qc_cv","heldout_qc_cv_mean","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",3.995305960693
+"waveica","WaveICA","heldout_qc_cv","heldout_qc_cv_mean","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",-43.8017990846446
+"waveica","WaveICA","heldout_qc_cv","heldout_qc_cv_mean","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",-82.1784242324932
+"waveica","WaveICA","heldout_qc_cv","heldout_qc_cv_mean","lower","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",-120.478768282375
+"simulation","Simulation","gam_deviance","residual_run_order_gam_mean_deviance","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",-0.000134966232045008
+"simulation","Simulation","gam_deviance","residual_run_order_gam_mean_deviance","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",-0.020381512914243
+"simulation","Simulation","gam_deviance","residual_run_order_gam_mean_deviance","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",-0.0406279895082077
+"simulation","Simulation","gam_deviance","residual_run_order_gam_mean_deviance","lower","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",-0.0608873499184617
+"mtbls79","MTBLS79","gam_deviance","residual_run_order_gam_mean_deviance","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",0.000998655965972983
+"mtbls79","MTBLS79","gam_deviance","residual_run_order_gam_mean_deviance","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",-0.138591085745756
+"mtbls79","MTBLS79","gam_deviance","residual_run_order_gam_mean_deviance","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",-0.278180827457485
+"mtbls79","MTBLS79","gam_deviance","residual_run_order_gam_mean_deviance","lower","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",-0.418259524736373
+"clinical_fiams","Clinical FIA-MS","gam_deviance","residual_run_order_gam_mean_deviance","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",-0.001823572864857
+"clinical_fiams","Clinical FIA-MS","gam_deviance","residual_run_order_gam_mean_deviance","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",-0.0738931528429665
+"clinical_fiams","Clinical FIA-MS","gam_deviance","residual_run_order_gam_mean_deviance","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",-0.145962732821076
+"clinical_fiams","Clinical FIA-MS","gam_deviance","residual_run_order_gam_mean_deviance","lower","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",-0.218731379953373
+"batchcorr_set1","BatchCorr Set 1","gam_deviance","residual_run_order_gam_mean_deviance","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",0.002556774199041
+"batchcorr_set1","BatchCorr Set 1","gam_deviance","residual_run_order_gam_mean_deviance","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",-0.0437627739081905
+"batchcorr_set1","BatchCorr Set 1","gam_deviance","residual_run_order_gam_mean_deviance","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",-0.0900823220154219
+"batchcorr_set1","BatchCorr Set 1","gam_deviance","residual_run_order_gam_mean_deviance","lower","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",-0.133855287217971
+"sacurine","Sacurine","gam_deviance","residual_run_order_gam_mean_deviance","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",-0.000532675088137105
+"sacurine","Sacurine","gam_deviance","residual_run_order_gam_mean_deviance","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",-0.0322667866692489
+"sacurine","Sacurine","gam_deviance","residual_run_order_gam_mean_deviance","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",-0.0640008982503607
+"sacurine","Sacurine","gam_deviance","residual_run_order_gam_mean_deviance","lower","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",-0.116015690949146
+"waveica","WaveICA","gam_deviance","residual_run_order_gam_mean_deviance","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",-0.002568385535794
+"waveica","WaveICA","gam_deviance","residual_run_order_gam_mean_deviance","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",-0.0166948653392403
+"waveica","WaveICA","gam_deviance","residual_run_order_gam_mean_deviance","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",-0.0308605365719198
+"waveica","WaveICA","gam_deviance","residual_run_order_gam_mean_deviance","lower","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",-0.0450239811317541
+"simulation","Simulation","batch_r2","batch_weighted_pc_r2_categorical","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",-0.000894470577412987
+"simulation","Simulation","batch_r2","batch_weighted_pc_r2_categorical","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",-0.989634924336427
+"simulation","Simulation","batch_r2","batch_weighted_pc_r2_categorical","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",-0.99063495878503
+"simulation","Simulation","batch_r2","batch_weighted_pc_r2_categorical","lower","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",-0.991619536820684
+"mtbls79","MTBLS79","batch_r2","batch_weighted_pc_r2_categorical","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",0.00300055572340802
+"mtbls79","MTBLS79","batch_r2","batch_weighted_pc_r2_categorical","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",-0.355248984733687
+"mtbls79","MTBLS79","batch_r2","batch_weighted_pc_r2_categorical","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",-0.366106964445726
+"mtbls79","MTBLS79","batch_r2","batch_weighted_pc_r2_categorical","lower","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",-0.376954974882812
+"clinical_fiams","Clinical FIA-MS","batch_r2","batch_weighted_pc_r2_categorical","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",-0.00771058423011298
+"clinical_fiams","Clinical FIA-MS","batch_r2","batch_weighted_pc_r2_categorical","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",-0.184694083943866
+"clinical_fiams","Clinical FIA-MS","batch_r2","batch_weighted_pc_r2_categorical","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",-0.186441249672076
+"clinical_fiams","Clinical FIA-MS","batch_r2","batch_weighted_pc_r2_categorical","lower","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",-0.188495556841996
+"batchcorr_set1","BatchCorr Set 1","batch_r2","batch_weighted_pc_r2_categorical","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",-0.00700992870856698
+"batchcorr_set1","BatchCorr Set 1","batch_r2","batch_weighted_pc_r2_categorical","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",-0.626824783655946
+"batchcorr_set1","BatchCorr Set 1","batch_r2","batch_weighted_pc_r2_categorical","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",-0.627105919607607
+"batchcorr_set1","BatchCorr Set 1","batch_r2","batch_weighted_pc_r2_categorical","lower","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",-0.627673067576525
+"sacurine","Sacurine","batch_r2","batch_weighted_pc_r2_categorical","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",0.002016996436978
+"sacurine","Sacurine","batch_r2","batch_weighted_pc_r2_categorical","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",-0.138576698614688
+"sacurine","Sacurine","batch_r2","batch_weighted_pc_r2_categorical","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",-0.13908263880063
+"sacurine","Sacurine","batch_r2","batch_weighted_pc_r2_categorical","lower","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",-0.13982038641013
+"waveica","WaveICA","batch_r2","batch_weighted_pc_r2_categorical","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",-0.00215300528064599
+"waveica","WaveICA","batch_r2","batch_weighted_pc_r2_categorical","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",-0.817552586764001
+"waveica","WaveICA","batch_r2","batch_weighted_pc_r2_categorical","lower","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",-0.819946274707505
+"waveica","WaveICA","batch_r2","batch_weighted_pc_r2_categorical","lower","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",-0.822025282862554
+"simulation","Simulation","metabolite_icc_a1","truth_metabolite_profile_icc_mean","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",0.00621007641230797
+"simulation","Simulation","metabolite_icc_a1","truth_metabolite_profile_icc_mean","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",0.619521103038015
+"simulation","Simulation","metabolite_icc_a1","truth_metabolite_profile_icc_mean","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",0.302689778947023
+"simulation","Simulation","metabolite_icc_a1","truth_metabolite_profile_icc_mean","higher","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",0.619412209109264
+"mtbls79","MTBLS79","metabolite_icc_a1","metabolite_icc_a1_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",-0.00818155337945903
+"mtbls79","MTBLS79","metabolite_icc_a1","metabolite_icc_a1_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",0.54905265862617
+"mtbls79","MTBLS79","metabolite_icc_a1","metabolite_icc_a1_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",0.114431055803874
+"mtbls79","MTBLS79","metabolite_icc_a1","metabolite_icc_a1_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",0.559983421869532
+"clinical_fiams","Clinical FIA-MS","metabolite_icc_a1","metabolite_icc_a1_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",
+"clinical_fiams","Clinical FIA-MS","metabolite_icc_a1","metabolite_icc_a1_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",
+"clinical_fiams","Clinical FIA-MS","metabolite_icc_a1","metabolite_icc_a1_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",
+"clinical_fiams","Clinical FIA-MS","metabolite_icc_a1","metabolite_icc_a1_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",
+"batchcorr_set1","BatchCorr Set 1","metabolite_icc_a1","metabolite_icc_a1_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",
+"batchcorr_set1","BatchCorr Set 1","metabolite_icc_a1","metabolite_icc_a1_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",
+"batchcorr_set1","BatchCorr Set 1","metabolite_icc_a1","metabolite_icc_a1_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",
+"batchcorr_set1","BatchCorr Set 1","metabolite_icc_a1","metabolite_icc_a1_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",
+"sacurine","Sacurine","metabolite_icc_a1","metabolite_icc_a1_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",
+"sacurine","Sacurine","metabolite_icc_a1","metabolite_icc_a1_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",
+"sacurine","Sacurine","metabolite_icc_a1","metabolite_icc_a1_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",
+"sacurine","Sacurine","metabolite_icc_a1","metabolite_icc_a1_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",
+"waveica","WaveICA","metabolite_icc_a1","metabolite_icc_a1_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",
+"waveica","WaveICA","metabolite_icc_a1","metabolite_icc_a1_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",
+"waveica","WaveICA","metabolite_icc_a1","metabolite_icc_a1_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",
+"waveica","WaveICA","metabolite_icc_a1","metabolite_icc_a1_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",
+"simulation","Simulation","sample_pearson","truth_sample_profile_pearson_mean","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",0.023226030511166
+"simulation","Simulation","sample_pearson","truth_sample_profile_pearson_mean","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",0.532828190348801
+"simulation","Simulation","sample_pearson","truth_sample_profile_pearson_mean","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",0.392894788731924
+"simulation","Simulation","sample_pearson","truth_sample_profile_pearson_mean","higher","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",0.532827579229347
+"mtbls79","MTBLS79","sample_pearson","sample_replicate_pearson_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",0.00689269679989302
+"mtbls79","MTBLS79","sample_pearson","sample_replicate_pearson_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",0.95235904255782
+"mtbls79","MTBLS79","sample_pearson","sample_replicate_pearson_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",0.023077771386855
+"mtbls79","MTBLS79","sample_pearson","sample_replicate_pearson_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",0.95235904255782
+"clinical_fiams","Clinical FIA-MS","sample_pearson","sample_replicate_pearson_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",0.00297892110183806
+"clinical_fiams","Clinical FIA-MS","sample_pearson","sample_replicate_pearson_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",0.982990817967089
+"clinical_fiams","Clinical FIA-MS","sample_pearson","sample_replicate_pearson_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",0.00775704572949798
+"clinical_fiams","Clinical FIA-MS","sample_pearson","sample_replicate_pearson_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",0.982990817967089
+"batchcorr_set1","BatchCorr Set 1","sample_pearson","sample_replicate_pearson_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",0.013623231930982
+"batchcorr_set1","BatchCorr Set 1","sample_pearson","sample_replicate_pearson_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",0.915535209253207
+"batchcorr_set1","BatchCorr Set 1","sample_pearson","sample_replicate_pearson_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",0.0420058485134021
+"batchcorr_set1","BatchCorr Set 1","sample_pearson","sample_replicate_pearson_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",0.915535209451793
+"sacurine","Sacurine","sample_pearson","sample_replicate_pearson_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",
+"sacurine","Sacurine","sample_pearson","sample_replicate_pearson_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",
+"sacurine","Sacurine","sample_pearson","sample_replicate_pearson_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",
+"sacurine","Sacurine","sample_pearson","sample_replicate_pearson_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",
+"waveica","WaveICA","sample_pearson","sample_replicate_pearson_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",
+"waveica","WaveICA","sample_pearson","sample_replicate_pearson_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",
+"waveica","WaveICA","sample_pearson","sample_replicate_pearson_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",
+"waveica","WaveICA","sample_pearson","sample_replicate_pearson_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",
+"simulation","Simulation","feature_repeatability_ratio",,"higher","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",
+"simulation","Simulation","feature_repeatability_ratio",,"higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",
+"simulation","Simulation","feature_repeatability_ratio",,"higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",
+"simulation","Simulation","feature_repeatability_ratio",,"higher","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",
+"mtbls79","MTBLS79","feature_repeatability_ratio","feature_repeatability_ratio_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",
+"mtbls79","MTBLS79","feature_repeatability_ratio","feature_repeatability_ratio_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",
+"mtbls79","MTBLS79","feature_repeatability_ratio","feature_repeatability_ratio_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",
+"mtbls79","MTBLS79","feature_repeatability_ratio","feature_repeatability_ratio_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",
+"clinical_fiams","Clinical FIA-MS","feature_repeatability_ratio","feature_repeatability_ratio_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",-0.0570296222657061
+"clinical_fiams","Clinical FIA-MS","feature_repeatability_ratio","feature_repeatability_ratio_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",0.650720975475751
+"clinical_fiams","Clinical FIA-MS","feature_repeatability_ratio","feature_repeatability_ratio_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",-0.01309570261263
+"clinical_fiams","Clinical FIA-MS","feature_repeatability_ratio","feature_repeatability_ratio_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",0.672367832473453
+"batchcorr_set1","BatchCorr Set 1","feature_repeatability_ratio","feature_repeatability_ratio_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",-0.00321244398431808
+"batchcorr_set1","BatchCorr Set 1","feature_repeatability_ratio","feature_repeatability_ratio_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",0.514689648539073
+"batchcorr_set1","BatchCorr Set 1","feature_repeatability_ratio","feature_repeatability_ratio_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",0.16813935625643
+"batchcorr_set1","BatchCorr Set 1","feature_repeatability_ratio","feature_repeatability_ratio_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",0.527176184426726
+"sacurine","Sacurine","feature_repeatability_ratio","feature_repeatability_ratio_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",
+"sacurine","Sacurine","feature_repeatability_ratio","feature_repeatability_ratio_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",
+"sacurine","Sacurine","feature_repeatability_ratio","feature_repeatability_ratio_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",
+"sacurine","Sacurine","feature_repeatability_ratio","feature_repeatability_ratio_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",
+"waveica","WaveICA","feature_repeatability_ratio","feature_repeatability_ratio_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Outlier_shrinkage",
+"waveica","WaveICA","feature_repeatability_ratio","feature_repeatability_ratio_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_drift",
+"waveica","WaveICA","feature_repeatability_ratio","feature_repeatability_ratio_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","Selective_batch",
+"waveica","WaveICA","feature_repeatability_ratio","feature_repeatability_ratio_median","higher","Positive values favor the newly added stage; negative values indicate deterioration.","PQN",

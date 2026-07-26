@@ -348,7 +348,13 @@ add_check(
   }
 )
 
-all_evaluation_metrics <- do.call(rbind, metric_tables)
+metric_definition_fields <- c("metric", "dataset_key", "units")
+all_evaluation_metrics <- do.call(
+  rbind,
+  lapply(metric_tables, function(value) {
+    value[, metric_definition_fields, drop = FALSE]
+  })
+)
 icc_rows <- all_evaluation_metrics[
   all_evaluation_metrics$metric == "metabolite_icc_a1_median", , drop = FALSE
 ]

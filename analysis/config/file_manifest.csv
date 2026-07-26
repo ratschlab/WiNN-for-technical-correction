@@ -1,7 +1,7 @@
 "file","bytes","sha256"
 "analysis/config/ablation_task_manifest.csv",3260,"cf178722a772577c025c79b3a117b88ef043f57fa9a92e59fe6a939a19826988"
 "analysis/config/ablation_variants.csv",265,"01a340909d737834ab7936eeafef735398f00bef153e266e93ee1a134eeaab00"
-"analysis/config/competitor_reuse_audit.tsv",9992,"46a9a2dfebb2cfcd56c0c286371c15ca190fb690cc2da41ae34dd32896d7bf88"
+"analysis/config/competitor_reuse_audit.tsv",9956,"4c9eaa8a7474ae25a705cb0fa12db793c4bbe782964712aff319fef65742b4d4"
 "analysis/config/dataset_manifest.csv",1042,"af7b614000f0233c485c3caecfee5897cae20e4b2ca78c3796f63ebde066c9fa"
 "analysis/config/endpoint_free_selection_manifest.csv",20701,"8fe1f06980572238995d0d6174a41575c07715802a37ad5ca06ddd5c097044f1"
 "analysis/config/expected_task_counts.csv",456,"fb0869a457f5b11119a2d07838cde8185c7baceb2e3ce3f9880890973b3caab2"

@@ -1,0 +1,7 @@
+"dataset_key","dataset","table_id","metric","direction","Outlier_shrinkage","Selective_drift","Selective_batch","PQN","impact_definition"
+"simulation","Simulation","metabolite_icc_a1","truth_metabolite_profile_icc_mean","higher",0.00621007641230797,0.619521103038015,0.302689778947023,0.619412209109264,"Positive values favor the newly added stage; negative values indicate deterioration."
+"mtbls79","MTBLS79","metabolite_icc_a1","metabolite_icc_a1_median","higher",-0.00818155337945903,0.54905265862617,0.114431055803874,0.559983421869532,"Positive values favor the newly added stage; negative values indicate deterioration."
+"clinical_fiams","Clinical FIA-MS","metabolite_icc_a1","metabolite_icc_a1_median","higher",,,,,"Positive values favor the newly added stage; negative values indicate deterioration."
+"batchcorr_set1","BatchCorr Set 1","metabolite_icc_a1","metabolite_icc_a1_median","higher",,,,,"Positive values favor the newly added stage; negative values indicate deterioration."
+"sacurine","Sacurine","metabolite_icc_a1","metabolite_icc_a1_median","higher",,,,,"Positive values favor the newly added stage; negative values indicate deterioration."
+"waveica","WaveICA","metabolite_icc_a1","metabolite_icc_a1_median","higher",,,,,"Positive values favor the newly added stage; negative values indicate deterioration."

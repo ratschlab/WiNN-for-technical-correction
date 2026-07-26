@@ -1,0 +1,7 @@
+"dataset_key","dataset","table_id","metric","direction","Raw","Outlier_shrinkage","Selective_drift","Selective_batch","PQN"
+"simulation","Simulation","heldout_qc_cv","heldout_qc_cv_mean","lower",44.2100431097472,41.2391327242834,38.2656130040335,8.76629278513728,8.76629278513728
+"mtbls79","MTBLS79","heldout_qc_cv","heldout_qc_cv_mean","lower",28.75722275311,27.5865055843937,27.5561000009742,17.15852523133,16.6785376235596
+"clinical_fiams","Clinical FIA-MS","heldout_qc_cv","heldout_qc_cv_mean","lower",16.5943872074111,14.2217251567629,14.7354215066772,12.9710601488024,12.4044092100879
+"batchcorr_set1","BatchCorr Set 1","heldout_qc_cv","heldout_qc_cv_mean","lower",66.5698818959707,59.7578237515348,58.7494741855028,27.3320670980223,26.6652760811313
+"sacurine","Sacurine","heldout_qc_cv","heldout_qc_cv_mean","lower",32.5994242278841,31.8089866995627,30.5758192628179,23.1936279802778,22.421913234801
+"waveica","WaveICA","heldout_qc_cv","heldout_qc_cv_mean","lower",49.6615125014856,45.6662065407926,47.7971050453376,38.3766251478486,38.3003440498814

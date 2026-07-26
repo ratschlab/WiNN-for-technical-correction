@@ -1,0 +1,87 @@
+"dataset_key","dataset","method_id","method","selection_signature","splits_selected","total_splits","selection_proportion"
+"simulation","Simulation","raw","Raw","fixed; no selection",10,10,1
+"simulation","Simulation","combat","ComBat","fixed; no selection",10,10,1
+"simulation","Simulation","qc_rlsc","QC-RLSC","fixed; no selection",10,10,1
+"simulation","Simulation","qc_rfsc","QC-RFSC","fixed; no selection",10,10,1
+"simulation","Simulation","tiger","TIGER","native default with acquisition order",10,10,1
+"simulation","Simulation","serrf","SERRF","fixed; no selection",10,10,1
+"simulation","Simulation","winn_auto_qc","WiNN auto (QC)","{""parameters"":""auto"",""batch_option"":""provided"",""pelt_penalty"":null,""test"":""Ljung-Box"",""ljung_box_fitdf"":0,""lag"":""adaptive"",""spline_method"":""conservative"",""acorr_fdr"":0.1,""anova_fdr"":0.01,""normalization"":""shrink"",""scale_by_batch"":false}",10,10,1
+"simulation","Simulation","winn_auto_batch_qc","WiNN auto-batch (QC)","{""parameters"":""auto"",""batch_option"":""auto"",""pelt_penalty"":18.6438242952666,""test"":""Ljung-Box"",""ljung_box_fitdf"":0,""lag"":""adaptive"",""spline_method"":""conservative"",""acorr_fdr"":0.01,""anova_fdr"":0.1,""normalization"":""shrink"",""scale_by_batch"":false}",10,10,1
+"simulation","Simulation","winn_fixed_no_qc","WiNN fixed default (no QC)","{""parameters"":""fixed"",""pelt_penalty"":null,""test"":""Ljung-Box"",""ljung_box_fitdf"":0,""lag"":""adaptive"",""spline_method"":""conservative"",""scale_by_batch"":false}",10,10,1
+"mtbls79","MTBLS79","raw","Raw","fixed; no selection",10,10,1
+"mtbls79","MTBLS79","combat","ComBat","candidate=1; par_prior=TRUE",8,10,0.8
+"mtbls79","MTBLS79","combat","ComBat","candidate=2; par_prior=FALSE",2,10,0.2
+"mtbls79","MTBLS79","qc_rlsc","QC-RLSC","candidate=3; span=0.7",7,10,0.7
+"mtbls79","MTBLS79","qc_rlsc","QC-RLSC","candidate=2; span=0.5",3,10,0.3
+"mtbls79","MTBLS79","qc_rfsc","QC-RFSC","candidate=3; ntree=500; coCV=20; Frule=0.8",10,10,1
+"mtbls79","MTBLS79","tiger","TIGER","native default with acquisition order",10,10,1
+"mtbls79","MTBLS79","serrf","SERRF","candidate=3; jitter_eps=1e-05",10,10,1
+"mtbls79","MTBLS79","winn_auto_qc","WiNN auto (QC)","{""parameters"":""auto"",""batch_option"":""provided"",""pelt_penalty"":null,""test"":""Ljung-Box"",""ljung_box_fitdf"":0,""lag"":""adaptive"",""spline_method"":""conservative"",""acorr_fdr"":0.1,""anova_fdr"":0.1,""normalization"":""normalize"",""scale_by_batch"":false}",10,10,1
+"mtbls79","MTBLS79","winn_auto_batch_qc","WiNN auto-batch (QC)","{""parameters"":""auto"",""batch_option"":""auto"",""pelt_penalty"":15.4424834304404,""test"":""Ljung-Box"",""ljung_box_fitdf"":0,""lag"":""adaptive"",""spline_method"":""conservative"",""acorr_fdr"":0.01,""anova_fdr"":0.01,""normalization"":""normalize"",""scale_by_batch"":false}",7,10,0.7
+"mtbls79","MTBLS79","winn_auto_batch_qc","WiNN auto-batch (QC)","{""parameters"":""auto"",""batch_option"":""auto"",""pelt_penalty"":15.4424834304404,""test"":""Ljung-Box"",""ljung_box_fitdf"":0,""lag"":""adaptive"",""spline_method"":""standard"",""acorr_fdr"":0.1,""anova_fdr"":0.01,""normalization"":""normalize"",""scale_by_batch"":false}",3,10,0.3
+"mtbls79","MTBLS79","winn_fixed_no_qc","WiNN fixed default (no QC)","{""parameters"":""fixed"",""pelt_penalty"":null,""test"":""Ljung-Box"",""ljung_box_fitdf"":0,""lag"":""adaptive"",""spline_method"":""conservative"",""scale_by_batch"":false}",10,10,1
+"clinical_fiams","Clinical FIA-MS","raw","Raw","fixed; no selection",10,10,1
+"clinical_fiams","Clinical FIA-MS","combat","ComBat","candidate=2; par_prior=FALSE",9,10,0.9
+"clinical_fiams","Clinical FIA-MS","combat","ComBat","candidate=1; par_prior=TRUE",1,10,0.1
+"clinical_fiams","Clinical FIA-MS","qc_rlsc","QC-RLSC","candidate=3; span=0.7",9,10,0.9
+"clinical_fiams","Clinical FIA-MS","qc_rlsc","QC-RLSC","candidate=2; span=0.5",1,10,0.1
+"clinical_fiams","Clinical FIA-MS","qc_rfsc","QC-RFSC","candidate=4; ntree=500; coCV=30; Frule=0.8",5,10,0.5
+"clinical_fiams","Clinical FIA-MS","qc_rfsc","QC-RFSC","candidate=2; ntree=200; coCV=30; Frule=0.8",4,10,0.4
+"clinical_fiams","Clinical FIA-MS","qc_rfsc","QC-RFSC","candidate=1; ntree=200; coCV=20; Frule=0.8",1,10,0.1
+"clinical_fiams","Clinical FIA-MS","tiger","TIGER","native default with acquisition order",10,10,1
+"clinical_fiams","Clinical FIA-MS","serrf","SERRF","candidate=2; jitter_eps=1e-06",5,10,0.5
+"clinical_fiams","Clinical FIA-MS","serrf","SERRF","candidate=1; jitter_eps=0",3,10,0.3
+"clinical_fiams","Clinical FIA-MS","serrf","SERRF","candidate=3; jitter_eps=1e-05",2,10,0.2
+"clinical_fiams","Clinical FIA-MS","winn_auto_qc","WiNN auto (QC)","{""parameters"":""auto"",""batch_option"":""provided"",""pelt_penalty"":null,""test"":""Ljung-Box"",""ljung_box_fitdf"":0,""lag"":""adaptive"",""spline_method"":""conservative"",""acorr_fdr"":0.01,""anova_fdr"":0.1,""normalization"":""normalize"",""scale_by_batch"":false}",10,10,1
+"clinical_fiams","Clinical FIA-MS","winn_auto_batch_qc","WiNN auto-batch (QC)","{""parameters"":""auto"",""batch_option"":""auto"",""pelt_penalty"":19.4767195050614,""test"":""Ljung-Box"",""ljung_box_fitdf"":0,""lag"":""adaptive"",""spline_method"":""conservative"",""acorr_fdr"":0.01,""anova_fdr"":0.01,""normalization"":""normalize"",""scale_by_batch"":false}",5,10,0.5
+"clinical_fiams","Clinical FIA-MS","winn_auto_batch_qc","WiNN auto-batch (QC)","{""parameters"":""auto"",""batch_option"":""auto"",""pelt_penalty"":19.4767195050614,""test"":""Ljung-Box"",""ljung_box_fitdf"":0,""lag"":""adaptive"",""spline_method"":""conservative"",""acorr_fdr"":0.01,""anova_fdr"":0.05,""normalization"":""normalize"",""scale_by_batch"":false}",2,10,0.2
+"clinical_fiams","Clinical FIA-MS","winn_auto_batch_qc","WiNN auto-batch (QC)","{""parameters"":""auto"",""batch_option"":""auto"",""pelt_penalty"":19.4767195050614,""test"":""Ljung-Box"",""ljung_box_fitdf"":0,""lag"":""adaptive"",""spline_method"":""conservative"",""acorr_fdr"":0.05,""anova_fdr"":0.01,""normalization"":""normalize"",""scale_by_batch"":false}",2,10,0.2
+"clinical_fiams","Clinical FIA-MS","winn_auto_batch_qc","WiNN auto-batch (QC)","{""parameters"":""auto"",""batch_option"":""auto"",""pelt_penalty"":19.4767195050614,""test"":""Ljung-Box"",""ljung_box_fitdf"":0,""lag"":""adaptive"",""spline_method"":""conservative"",""acorr_fdr"":0.01,""anova_fdr"":0.1,""normalization"":""normalize"",""scale_by_batch"":false}",1,10,0.1
+"clinical_fiams","Clinical FIA-MS","winn_fixed_no_qc","WiNN fixed default (no QC)","{""parameters"":""fixed"",""pelt_penalty"":null,""test"":""Ljung-Box"",""ljung_box_fitdf"":0,""lag"":""adaptive"",""spline_method"":""conservative"",""scale_by_batch"":false}",10,10,1
+"batchcorr_set1","BatchCorr Set 1","raw","Raw","fixed; no selection",10,10,1
+"batchcorr_set1","BatchCorr Set 1","combat","ComBat","candidate=1; par_prior=TRUE",6,10,0.6
+"batchcorr_set1","BatchCorr Set 1","combat","ComBat","candidate=2; par_prior=FALSE",4,10,0.4
+"batchcorr_set1","BatchCorr Set 1","qc_rlsc","QC-RLSC","candidate=1; dataset_specific_fixed; log1p subtractive per-batch LOESS; span=1; degree=1; log-scale batch shift; ID-preserving",10,10,1
+"batchcorr_set1","BatchCorr Set 1","qc_rfsc","QC-RFSC","candidate=4; ntree=500; coCV=30; Frule=0.8",4,10,0.4
+"batchcorr_set1","BatchCorr Set 1","qc_rfsc","QC-RFSC","candidate=2; ntree=500; coCV=20; Frule=0.8",3,10,0.3
+"batchcorr_set1","BatchCorr Set 1","qc_rfsc","QC-RFSC","candidate=1; ntree=200; coCV=20; Frule=0.8",2,10,0.2
+"batchcorr_set1","BatchCorr Set 1","qc_rfsc","QC-RFSC","candidate=3; ntree=200; coCV=30; Frule=0.8",1,10,0.1
+"batchcorr_set1","BatchCorr Set 1","tiger","TIGER","native default with acquisition order",10,10,1
+"batchcorr_set1","BatchCorr Set 1","serrf","SERRF","candidate=3; jitter_eps=1e-05",10,10,1
+"batchcorr_set1","BatchCorr Set 1","winn_auto_qc","WiNN auto (QC)","{""parameters"":""auto"",""batch_option"":""provided"",""pelt_penalty"":null,""test"":""Ljung-Box"",""ljung_box_fitdf"":0,""lag"":""adaptive"",""spline_method"":""conservative"",""acorr_fdr"":0.01,""anova_fdr"":0.05,""normalization"":""normalize"",""scale_by_batch"":false}",6,10,0.6
+"batchcorr_set1","BatchCorr Set 1","winn_auto_qc","WiNN auto (QC)","{""parameters"":""auto"",""batch_option"":""provided"",""pelt_penalty"":null,""test"":""Ljung-Box"",""ljung_box_fitdf"":0,""lag"":""adaptive"",""spline_method"":""conservative"",""acorr_fdr"":0.01,""anova_fdr"":0.01,""normalization"":""normalize"",""scale_by_batch"":false}",2,10,0.2
+"batchcorr_set1","BatchCorr Set 1","winn_auto_qc","WiNN auto (QC)","{""parameters"":""auto"",""batch_option"":""provided"",""pelt_penalty"":null,""test"":""Ljung-Box"",""ljung_box_fitdf"":0,""lag"":""adaptive"",""spline_method"":""conservative"",""acorr_fdr"":0.01,""anova_fdr"":0.1,""normalization"":""normalize"",""scale_by_batch"":false}",1,10,0.1
+"batchcorr_set1","BatchCorr Set 1","winn_auto_qc","WiNN auto (QC)","{""parameters"":""auto"",""batch_option"":""provided"",""pelt_penalty"":null,""test"":""Ljung-Box"",""ljung_box_fitdf"":0,""lag"":""adaptive"",""spline_method"":""conservative"",""acorr_fdr"":0.05,""anova_fdr"":0.05,""normalization"":""normalize"",""scale_by_batch"":false}",1,10,0.1
+"batchcorr_set1","BatchCorr Set 1","winn_auto_batch_qc","WiNN auto-batch (QC)","{""parameters"":""auto"",""batch_option"":""auto"",""pelt_penalty"":19.9039000735851,""test"":""Ljung-Box"",""ljung_box_fitdf"":0,""lag"":""adaptive"",""spline_method"":""conservative"",""acorr_fdr"":0.1,""anova_fdr"":0.01,""normalization"":""normalize"",""scale_by_batch"":false}",5,10,0.5
+"batchcorr_set1","BatchCorr Set 1","winn_auto_batch_qc","WiNN auto-batch (QC)","{""parameters"":""auto"",""batch_option"":""auto"",""pelt_penalty"":19.9039000735851,""test"":""Ljung-Box"",""ljung_box_fitdf"":0,""lag"":""adaptive"",""spline_method"":""conservative"",""acorr_fdr"":0.1,""anova_fdr"":0.1,""normalization"":""normalize"",""scale_by_batch"":false}",5,10,0.5
+"batchcorr_set1","BatchCorr Set 1","winn_fixed_no_qc","WiNN fixed default (no QC)","{""parameters"":""fixed"",""pelt_penalty"":null,""test"":""Ljung-Box"",""ljung_box_fitdf"":0,""lag"":""adaptive"",""spline_method"":""conservative"",""scale_by_batch"":false}",10,10,1
+"sacurine","Sacurine","raw","Raw","fixed; no selection",10,10,1
+"sacurine","Sacurine","combat","ComBat","candidate=1; par_prior=TRUE (fixed published/default setting)",10,10,1
+"sacurine","Sacurine","qc_rlsc","QC-RLSC","candidate=2; span=0.5",10,10,1
+"sacurine","Sacurine","qc_rfsc","QC-RFSC","candidate=3; ntree=200; coCV=30; Frule=0.8",8,10,0.8
+"sacurine","Sacurine","qc_rfsc","QC-RFSC","candidate=4; ntree=500; coCV=30; Frule=0.8",2,10,0.2
+"sacurine","Sacurine","tiger","TIGER","native default with acquisition order",10,10,1
+"sacurine","Sacurine","serrf","SERRF","candidate=2; jitter_eps=1e-06",4,10,0.4
+"sacurine","Sacurine","serrf","SERRF","candidate=1; jitter_eps=0",3,10,0.3
+"sacurine","Sacurine","serrf","SERRF","candidate=3; jitter_eps=1e-05",3,10,0.3
+"sacurine","Sacurine","winn_auto_qc","WiNN auto (QC)","{""parameters"":""auto"",""batch_option"":""provided"",""pelt_penalty"":null,""test"":""Ljung-Box"",""ljung_box_fitdf"":0,""lag"":""adaptive"",""spline_method"":""standard"",""acorr_fdr"":0.1,""anova_fdr"":0.1,""normalization"":""normalize"",""scale_by_batch"":false}",10,10,1
+"sacurine","Sacurine","winn_auto_batch_qc","WiNN auto-batch (QC)","{""parameters"":""auto"",""batch_option"":""auto"",""pelt_penalty"":16.0413225921524,""test"":""Ljung-Box"",""ljung_box_fitdf"":0,""lag"":""adaptive"",""spline_method"":""conservative"",""acorr_fdr"":0.01,""anova_fdr"":0.1,""normalization"":""normalize"",""scale_by_batch"":false}",10,10,1
+"sacurine","Sacurine","winn_fixed_no_qc","WiNN fixed default (no QC)","{""parameters"":""fixed"",""pelt_penalty"":null,""test"":""Ljung-Box"",""ljung_box_fitdf"":0,""lag"":""adaptive"",""spline_method"":""conservative"",""scale_by_batch"":false}",10,10,1
+"waveica","WaveICA","raw","Raw","fixed; no selection",10,10,1
+"waveica","WaveICA","combat","ComBat","candidate=1; par_prior=TRUE (fixed published/default setting)",10,10,1
+"waveica","WaveICA","qc_rlsc","QC-RLSC","candidate=1; span=0.3",10,10,1
+"waveica","WaveICA","qc_rfsc","QC-RFSC","candidate=4; ntree=500; coCV=30; Frule=0.8",8,10,0.8
+"waveica","WaveICA","qc_rfsc","QC-RFSC","candidate=3; ntree=200; coCV=30; Frule=0.8",2,10,0.2
+"waveica","WaveICA","tiger","TIGER","native default with acquisition order",10,10,1
+"waveica","WaveICA","serrf","SERRF","candidate=1; jitter_eps=0",5,10,0.5
+"waveica","WaveICA","serrf","SERRF","candidate=3; jitter_eps=1e-05",3,10,0.3
+"waveica","WaveICA","serrf","SERRF","candidate=2; jitter_eps=1e-06",2,10,0.2
+"waveica","WaveICA","winn_auto_qc","WiNN auto (QC)","{""parameters"":""auto"",""batch_option"":""provided"",""pelt_penalty"":null,""test"":""Ljung-Box"",""ljung_box_fitdf"":0,""lag"":""adaptive"",""spline_method"":""standard"",""acorr_fdr"":0.01,""anova_fdr"":0.01,""normalization"":""normalize"",""scale_by_batch"":false}",3,10,0.3
+"waveica","WaveICA","winn_auto_qc","WiNN auto (QC)","{""parameters"":""auto"",""batch_option"":""provided"",""pelt_penalty"":null,""test"":""Ljung-Box"",""ljung_box_fitdf"":0,""lag"":""adaptive"",""spline_method"":""standard"",""acorr_fdr"":0.01,""anova_fdr"":0.01,""normalization"":""shrink"",""scale_by_batch"":false}",3,10,0.3
+"waveica","WaveICA","winn_auto_qc","WiNN auto (QC)","{""parameters"":""auto"",""batch_option"":""provided"",""pelt_penalty"":null,""test"":""Ljung-Box"",""ljung_box_fitdf"":0,""lag"":""adaptive"",""spline_method"":""conservative"",""acorr_fdr"":0.01,""anova_fdr"":0.05,""normalization"":""normalize"",""scale_by_batch"":false}",1,10,0.1
+"waveica","WaveICA","winn_auto_qc","WiNN auto (QC)","{""parameters"":""auto"",""batch_option"":""provided"",""pelt_penalty"":null,""test"":""Ljung-Box"",""ljung_box_fitdf"":0,""lag"":""adaptive"",""spline_method"":""standard"",""acorr_fdr"":0.1,""anova_fdr"":0.01,""normalization"":""normalize"",""scale_by_batch"":false}",1,10,0.1
+"waveica","WaveICA","winn_auto_qc","WiNN auto (QC)","{""parameters"":""auto"",""batch_option"":""provided"",""pelt_penalty"":null,""test"":""Ljung-Box"",""ljung_box_fitdf"":0,""lag"":""adaptive"",""spline_method"":""standard"",""acorr_fdr"":0.1,""anova_fdr"":0.01,""normalization"":""shrink"",""scale_by_batch"":false}",1,10,0.1
+"waveica","WaveICA","winn_auto_qc","WiNN auto (QC)","{""parameters"":""auto"",""batch_option"":""provided"",""pelt_penalty"":null,""test"":""Ljung-Box"",""ljung_box_fitdf"":0,""lag"":""adaptive"",""spline_method"":""standard"",""acorr_fdr"":0.1,""anova_fdr"":0.05,""normalization"":""shrink"",""scale_by_batch"":false}",1,10,0.1
+"waveica","WaveICA","winn_auto_batch_qc","WiNN auto-batch (QC)","{""parameters"":""auto"",""batch_option"":""auto"",""pelt_penalty"":19.3937649110699,""test"":""Ljung-Box"",""ljung_box_fitdf"":0,""lag"":""adaptive"",""spline_method"":""standard"",""acorr_fdr"":0.1,""anova_fdr"":0.1,""normalization"":""shrink"",""scale_by_batch"":false}",7,10,0.7
+"waveica","WaveICA","winn_auto_batch_qc","WiNN auto-batch (QC)","{""parameters"":""auto"",""batch_option"":""auto"",""pelt_penalty"":19.3937649110699,""test"":""Ljung-Box"",""ljung_box_fitdf"":0,""lag"":""adaptive"",""spline_method"":""standard"",""acorr_fdr"":0.1,""anova_fdr"":0.1,""normalization"":""normalize"",""scale_by_batch"":false}",3,10,0.3
+"waveica","WaveICA","winn_fixed_no_qc","WiNN fixed default (no QC)","{""parameters"":""fixed"",""pelt_penalty"":null,""test"":""Ljung-Box"",""ljung_box_fitdf"":0,""lag"":""adaptive"",""spline_method"":""conservative"",""scale_by_batch"":false}",10,10,1

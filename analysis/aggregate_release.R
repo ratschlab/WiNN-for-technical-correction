@@ -534,13 +534,16 @@ summarise_values <- function(data, groups) {
   data |>
     group_by(across(all_of(groups))) |>
     summarise(
-      n = sum(is.finite(value)), mean = mean(value, na.rm = TRUE),
-      sd = sd(value, na.rm = TRUE), median = median(value, na.rm = TRUE),
-      q1 = quantile(value, 0.25, na.rm = TRUE), q3 = quantile(value, 0.75, na.rm = TRUE),
-      minimum = min(value, na.rm = TRUE), maximum = max(value, na.rm = TRUE),
+      n = sum(is.finite(value)),
+      mean = if (n > 0L) mean(value[is.finite(value)]) else NA_real_,
+      sd = if (n > 1L) sd(value[is.finite(value)]) else NA_real_,
+      median = if (n > 0L) median(value[is.finite(value)]) else NA_real_,
+      q1 = if (n > 0L) quantile(value[is.finite(value)], 0.25) else NA_real_,
+      q3 = if (n > 0L) quantile(value[is.finite(value)], 0.75) else NA_real_,
+      minimum = if (n > 0L) min(value[is.finite(value)]) else NA_real_,
+      maximum = if (n > 0L) max(value[is.finite(value)]) else NA_real_,
       .groups = "drop"
-    ) |>
-    mutate(across(c(mean, sd, median, q1, q3, minimum, maximum), ~ifelse(is.nan(.x) | is.infinite(.x), NA_real_, .x)))
+    )
 }
 seed_summary <- summarise_values(
   seed_methods, c("method_id", "method", "metric", "direction", "units")
@@ -840,12 +843,12 @@ save_figure(technical_plot, "primary_technical_overview", 13, 8, technical_sourc
 biology_names <- c(
   truth_metabolite_profile_icc_mean = "Truth metabolite ICC",
   truth_sample_profile_pearson_mean = "Truth sample Pearson",
-  metabolite_icc_a1_median = "Metabolite ICC(A,1)",
-  feature_repeatability_ratio_median = "Feature repeatability ratio",
+  metabolite_icc_a1_median = "Metabolite ICC",
+  feature_repeatability_ratio_median = "Feature repeatability",
   sample_replicate_pearson_median = "Sample Pearson",
-  genuine_replicate_icc_median = "Replicate-profile ICC(A,1)",
-  biological_weighted_pc_r2 = "Biological weighted-PC R²",
-  cross_batch_effect_pearson_median = "Cross-batch effect Pearson"
+  genuine_replicate_icc_median = "Replicate-profile ICC",
+  biological_weighted_pc_r2 = "Biological PC R²",
+  cross_batch_effect_pearson_median = "Effect Pearson"
 )
 biology_source <- primary |>
   filter(metric %in% names(biology_names)) |>
@@ -856,12 +859,15 @@ biology_source <- primary |>
   )
 biology_plot <- ggplot(biology_source, aes(method, value, colour = method)) +
   geom_point(size = 1.6) +
-  facet_grid(metric_label ~ dataset, scales = "free_y", space = "free_y") +
+  facet_grid(metric_label ~ dataset, scales = "free_y") +
   scale_colour_manual(values = method_palette, drop = FALSE) +
   labs(title = "Truth recovery and biological preservation", x = NULL, y = NULL, colour = "Method") +
   theme_publication(8) +
-  theme(axis.text.x = element_blank(), axis.ticks.x = element_blank())
-save_figure(biology_plot, "primary_preservation_overview", 13, 9, biology_source)
+  theme(
+    axis.text.x = element_blank(), axis.ticks.x = element_blank(),
+    strip.text.y.right = element_text(size = 6.5)
+  )
+save_figure(biology_plot, "primary_preservation_overview", 13, 11, biology_source)
 
 impact_plot_source <- stage_source |>
   filter(table_id %in% c("heldout_qc_cv", "gam_deviance", "batch_r2")) |>
@@ -873,19 +879,24 @@ impact_plot_source <- stage_source |>
       levels = c("heldout_qc_cv", "gam_deviance", "batch_r2"),
       labels = c("Held-out QC CV", "Residual GAM deviance", "Batch weighted-PC R²")
     )
-  )
-impact_limit <- max(abs(impact_plot_source$favorable_impact), na.rm = TRUE)
-impact_plot <- ggplot(impact_plot_source, aes(stage, dataset, fill = favorable_impact)) +
+  ) |>
+  group_by(metric_label) |>
+  mutate(
+    within_metric_score = 100 * favorable_impact /
+      max(abs(favorable_impact), na.rm = TRUE)
+  ) |>
+  ungroup()
+impact_plot <- ggplot(impact_plot_source, aes(stage, dataset, fill = within_metric_score)) +
   geom_tile(colour = "white", linewidth = 0.4) +
   facet_wrap(~metric_label, scales = "free", ncol = 1) +
   scale_fill_gradient2(
     low = "#B2182B", mid = "#F7F7F7", high = "#2166AC", midpoint = 0,
-    limits = c(-impact_limit, impact_limit), oob = scales::squish
+    limits = c(-100, 100), oob = scales::squish
   ) +
   labs(
     title = "Incremental contribution of WiNN stages",
-    subtitle = "Positive values favor adding the stage", x = NULL, y = NULL,
-    fill = "Favorable\nchange"
+    subtitle = "Positive values favor adding the stage; colors are scaled within each metric",
+    x = NULL, y = NULL, fill = "Within-metric\nscore"
   ) +
   theme_publication(9) + theme(axis.text.x = element_text(angle = 25, hjust = 1))
 save_figure(impact_plot, "ablation_stage_impacts", 8, 8, impact_plot_source)
@@ -900,8 +911,8 @@ gate_metric_labels <- c(
   heldout_qc_cv_mean = "Held-out QC CV (%)",
   residual_run_order_gam_mean_deviance = "Residual GAM deviance",
   batch_weighted_pc_r2_categorical = "Batch weighted-PC R²",
-  metabolite_icc_a1_median = "Metabolite ICC(A,1)",
-  feature_repeatability_ratio_median = "Feature repeatability ratio",
+  metabolite_icc_a1_median = "Metabolite ICC",
+  feature_repeatability_ratio_median = "Feature repeatability",
   sample_replicate_pearson_median = "Sample Pearson",
   truth_metabolite_profile_icc_mean = "Truth metabolite ICC",
   truth_sample_profile_pearson_mean = "Truth sample Pearson"
