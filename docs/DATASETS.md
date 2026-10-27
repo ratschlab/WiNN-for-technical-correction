@@ -1,3 +1,7 @@
+# Current publication
+
+The internal clinical cohort data will be released with a forthcoming manuscript describing that study. This repository currently includes aggregate clinical results only. The WaveICA source label is retained in historical paths; the manuscript uses the neutral dataset name WaveICA. See the root README and manuscript supplement for the current estimands and revised analyses.
+
 # Benchmark datasets
 
 ## Truth-known simulation

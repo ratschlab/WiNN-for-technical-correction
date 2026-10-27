@@ -1,0 +1,31 @@
+span too small.   fewer data values than degrees of freedom.
+pseudoinverse used at 1
+neighborhood radius 17
+reciprocal condition number  0
+There are other near singularities as well. 25
+There are other near singularities as well. 256
+pseudoinverse used at 6
+neighborhood radius 6
+There are other near singularities as well. 36
+neighborhood radius 11
+There are other near singularities as well. 100
+at  9
+radius  9
+all data on boundary of neighborhood. make span bigger
+at  18
+radius  36
+neighborhood radius 12
+at  12
+at  21
+pseudoinverse used at 5
+neighborhood radius 5
+neighborhood radius 9
+There are other near singularities as well. 64
+at  15
+radius  25
+There are other near singularities as well. 49
+neighborhood radius 3
+There are other near singularities as well. 9
+There are other near singularities as well. 4
+at  7
+at  17

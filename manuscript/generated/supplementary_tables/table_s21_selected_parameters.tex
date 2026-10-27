@@ -1,0 +1,41 @@
+\begin{landscape}
+\scriptsize
+\begin{longtable}{p{2.8cm}p{1.6cm}p{8.0cm}rp{3.7cm}}
+\caption{Comparator settings by dataset. Training-QC selection uses the prespecified candidate grids; single candidates are fixed configurations.}\label{tab:supp_selected_parameters}\\
+\toprule
+Dataset & Method & Selected parameters & Candidates & Selection \\
+\midrule
+\endfirsthead
+\toprule
+Dataset & Method & Selected parameters & Candidates & Selection \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+Simulation & ComBat & par\_prior=TRUE & 1 & Prespecified or native \\
+Simulation & QC-RLSC & span=0.75; degree=1 & 1 & Prespecified or native \\
+Simulation & QC-RFSC & ntree=500; coCV=30; Frule=0.8 & 1 & Prespecified or native \\
+Simulation & SERRF & jitter\_eps=0; documented fallback only after numerical failure & 1 & Prespecified or native \\
+MTBLS79 & ComBat & par\_prior=TRUE & 2 & Training-QC score \\
+MTBLS79 & QC-RLSC & span=0.7; degree=1 & 4 & Training-QC score \\
+MTBLS79 & QC-RFSC & ntree=500; coCV=30; Frule=0.8 & 4 & Training-QC score \\
+MTBLS79 & SERRF & jitter\_eps=1e-5 & 3 & Training-QC score \\
+Clinical FIA-MS & ComBat & par\_prior=FALSE & 2 & Training-QC score \\
+Clinical FIA-MS & QC-RLSC & span=0.9; degree=1 & 4 & Training-QC score \\
+Clinical FIA-MS & QC-RFSC & ntree=500; coCV=30; Frule=0.8 & 4 & Training-QC score \\
+Clinical FIA-MS & SERRF & jitter\_eps=0 & 3 & Training-QC score \\
+BatchCorr Set 1 & ComBat & par\_prior=TRUE & 2 & Training-QC score \\
+BatchCorr Set 1 & QC-RLSC & span=1; degree=1; sparse-QC safeguard & 1 & Prespecified or native \\
+BatchCorr Set 1 & QC-RFSC & ntree=200; coCV=30; Frule=0.8 & 4 & Training-QC score \\
+BatchCorr Set 1 & SERRF & jitter\_eps=1e-5 & 3 & Training-QC score \\
+Sacurine & ComBat & par\_prior=TRUE & 1 & Prespecified or native \\
+Sacurine & QC-RLSC & span=0.9; degree=1 & 4 & Training-QC score \\
+Sacurine & QC-RFSC & ntree=500; coCV=30; Frule=0.8 & 4 & Training-QC score \\
+Sacurine & SERRF & jitter\_eps=0 & 3 & Training-QC score \\
+WaveICA & ComBat & par\_prior=TRUE & 1 & Prespecified or native \\
+WaveICA & QC-RLSC & span=0.9; degree=1 & 4 & Training-QC score \\
+WaveICA & QC-RFSC & ntree=500; coCV=30; Frule=0.8 & 4 & Training-QC score \\
+WaveICA & SERRF & jitter\_eps=1e-5 & 3 & Training-QC score \\
+\end{longtable}
+\noindent\footnotesize Raw is the identity operation. TIGER uses its native $4\times4$ ensemble with injection order and 500 trees in every dataset. WiNN uses the single prespecified configuration in Section~S1. Automatic WiNN parameters are in Table~\ref{tab:supp_winn_parameters}. A candidate count of one denotes a fixed setting.\par
+\end{landscape}

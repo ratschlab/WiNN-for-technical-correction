@@ -1,0 +1,385 @@
+"heldout_batch","endpoint","method_id","method","metric","bootstrap_mean","ci_lower","ci_upper","valid_bootstrap","dataset_key","dataset","method_label","y"
+"1","cow_vs_sheep","raw","Raw","Pearson effect
+correlation",0.96976065250165,0.949210844238099,0.981817230424149,2000,"mtbls79","MTBLS79","Raw",7.78125
+"1","cow_vs_sheep","raw","Raw","Spearman effect
+correlation",0.918415417617557,0.872081342899001,0.947275508621054,2000,"mtbls79","MTBLS79","Raw",7.78125
+"1","cow_vs_sheep","raw","Raw","Sign
+concordance",0.849863745980707,0.80224075562701,0.887459807073955,2000,"mtbls79","MTBLS79","Raw",7.78125
+"1","cow_vs_sheep","combat","ComBat","Pearson effect
+correlation",0.972554433368993,0.953771638462957,0.98370949826033,2000,"mtbls79","MTBLS79","ComBat",6.78125
+"1","cow_vs_sheep","combat","ComBat","Spearman effect
+correlation",0.922562825276725,0.878602665539614,0.949554777179454,2000,"mtbls79","MTBLS79","ComBat",6.78125
+"1","cow_vs_sheep","combat","ComBat","Sign
+concordance",0.848813906752412,0.80224075562701,0.887871784565916,2000,"mtbls79","MTBLS79","ComBat",6.78125
+"1","cow_vs_sheep","qc_rlsc","QC-RLSC","Pearson effect
+correlation",0.965458226026817,0.931354330263847,0.981142697110148,2000,"mtbls79","MTBLS79","QC-RLSC",5.78125
+"1","cow_vs_sheep","qc_rlsc","QC-RLSC","Spearman effect
+correlation",0.910202130893819,0.845473964930916,0.946156167748911,2000,"mtbls79","MTBLS79","QC-RLSC",5.78125
+"1","cow_vs_sheep","qc_rlsc","QC-RLSC","Sign
+concordance",0.701993569131833,0.481501205787781,0.876617765273312,2000,"mtbls79","MTBLS79","QC-RLSC",5.78125
+"1","cow_vs_sheep","tiger","TIGER","Pearson effect
+correlation",0.967458762399064,0.948254405678655,0.979025262844343,2000,"mtbls79","MTBLS79","TIGER",4.78125
+"1","cow_vs_sheep","tiger","TIGER","Spearman effect
+correlation",0.908731162830307,0.864915344273459,0.936646885582262,2000,"mtbls79","MTBLS79","TIGER",4.78125
+"1","cow_vs_sheep","tiger","TIGER","Sign
+concordance",0.838174638263666,0.792604501607717,0.87620578778135,2000,"mtbls79","MTBLS79","TIGER",4.78125
+"1","cow_vs_sheep","serrf","SERRF","Pearson effect
+correlation",0.971019435673281,0.952316937793696,0.982418844580113,2000,"mtbls79","MTBLS79","SERRF",3.78125
+"1","cow_vs_sheep","serrf","SERRF","Spearman effect
+correlation",0.921738113229454,0.87824630202469,0.948852876218013,2000,"mtbls79","MTBLS79","SERRF",3.78125
+"1","cow_vs_sheep","serrf","SERRF","Sign
+concordance",0.848329180064309,0.803858520900322,0.886665996784566,2000,"mtbls79","MTBLS79","SERRF",3.78125
+"1","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Pearson effect
+correlation",0.970701962614434,0.951803676533403,0.982058383703906,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.78125
+"1","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Spearman effect
+correlation",0.921532154778338,0.878163697223711,0.948875102035534,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.78125
+"1","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Sign
+concordance",0.85637479903537,0.809073553054662,0.897909967845659,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.78125
+"1","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Pearson effect
+correlation",0.969650911641276,0.948237956055472,0.98194978301917,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.78125
+"1","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Spearman effect
+correlation",0.917461704047933,0.865900296286731,0.948000939724484,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.78125
+"1","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Sign
+concordance",0.850113143086817,0.800231109324759,0.89591036977492,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.78125
+"1","cow_vs_sheep","winn_fixed_no_qc","WiNN","Pearson effect
+correlation",0.970689431845571,0.951707950271861,0.982083630397351,2000,"mtbls79","MTBLS79","WiNN",0.78125
+"1","cow_vs_sheep","winn_fixed_no_qc","WiNN","Spearman effect
+correlation",0.921437837089082,0.877555266966538,0.948766363800395,2000,"mtbls79","MTBLS79","WiNN",0.78125
+"1","cow_vs_sheep","winn_fixed_no_qc","WiNN","Sign
+concordance",0.847676245980707,0.80384847266881,0.885852090032154,2000,"mtbls79","MTBLS79","WiNN",0.78125
+"2","cow_vs_sheep","raw","Raw","Pearson effect
+correlation",0.972383055196831,0.950243458006461,0.983002019169311,2000,"mtbls79","MTBLS79","Raw",7.84375
+"2","cow_vs_sheep","raw","Raw","Spearman effect
+correlation",0.925461874108001,0.884001721421566,0.952991547392284,2000,"mtbls79","MTBLS79","Raw",7.84375
+"2","cow_vs_sheep","raw","Raw","Sign
+concordance",0.858091036977492,0.816308279742765,0.893086816720257,2000,"mtbls79","MTBLS79","Raw",7.84375
+"2","cow_vs_sheep","combat","ComBat","Pearson effect
+correlation",0.974501941390637,0.954141331351214,0.984385733534225,2000,"mtbls79","MTBLS79","ComBat",6.84375
+"2","cow_vs_sheep","combat","ComBat","Spearman effect
+correlation",0.927403026515618,0.887781609633043,0.953363808764178,2000,"mtbls79","MTBLS79","ComBat",6.84375
+"2","cow_vs_sheep","combat","ComBat","Sign
+concordance",0.859733922829582,0.818729903536977,0.892694935691318,2000,"mtbls79","MTBLS79","ComBat",6.84375
+"2","cow_vs_sheep","qc_rlsc","QC-RLSC","Pearson effect
+correlation",0.960776335641064,0.923435382396014,0.979826590396531,2000,"mtbls79","MTBLS79","QC-RLSC",5.84375
+"2","cow_vs_sheep","qc_rlsc","QC-RLSC","Spearman effect
+correlation",0.906364212260148,0.846501389204514,0.947146282284666,2000,"mtbls79","MTBLS79","QC-RLSC",5.84375
+"2","cow_vs_sheep","qc_rlsc","QC-RLSC","Sign
+concordance",0.721671824758842,0.371372588424437,0.9164288585209,2000,"mtbls79","MTBLS79","QC-RLSC",5.84375
+"2","cow_vs_sheep","tiger","TIGER","Pearson effect
+correlation",0.970327624728525,0.951386930227937,0.98009399078176,2000,"mtbls79","MTBLS79","TIGER",4.84375
+"2","cow_vs_sheep","tiger","TIGER","Spearman effect
+correlation",0.915618142313272,0.876458156859622,0.943789440455882,2000,"mtbls79","MTBLS79","TIGER",4.84375
+"2","cow_vs_sheep","tiger","TIGER","Sign
+concordance",0.851494372990354,0.815112540192926,0.883440514469453,2000,"mtbls79","MTBLS79","TIGER",4.84375
+"2","cow_vs_sheep","serrf","SERRF","Pearson effect
+correlation",0.972739610604352,0.950875120539739,0.983168052884198,2000,"mtbls79","MTBLS79","SERRF",3.84375
+"2","cow_vs_sheep","serrf","SERRF","Spearman effect
+correlation",0.925860442123125,0.884958385333012,0.952211522966167,2000,"mtbls79","MTBLS79","SERRF",3.84375
+"2","cow_vs_sheep","serrf","SERRF","Sign
+concordance",0.858506631832797,0.818307877813505,0.891087218649518,2000,"mtbls79","MTBLS79","SERRF",3.84375
+"2","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Pearson effect
+correlation",0.972524348532712,0.950184548110928,0.983100328266187,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.84375
+"2","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Spearman effect
+correlation",0.925201325829149,0.883978489486017,0.95172824361579,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.84375
+"2","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Sign
+concordance",0.861314710610932,0.818729903536977,0.895900321543408,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.84375
+"2","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Pearson effect
+correlation",0.97234798697443,0.949662324600502,0.983004625147599,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.84375
+"2","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Spearman effect
+correlation",0.924789423679262,0.882915790423332,0.952314881505683,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.84375
+"2","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Sign
+concordance",0.860514469453376,0.816720257234727,0.895498392282958,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.84375
+"2","cow_vs_sheep","winn_fixed_no_qc","WiNN","Pearson effect
+correlation",0.972529978965372,0.950159154615085,0.983114414481485,2000,"mtbls79","MTBLS79","WiNN",0.84375
+"2","cow_vs_sheep","winn_fixed_no_qc","WiNN","Spearman effect
+correlation",0.925209622072982,0.884135201714036,0.951689198265424,2000,"mtbls79","MTBLS79","WiNN",0.84375
+"2","cow_vs_sheep","winn_fixed_no_qc","WiNN","Sign
+concordance",0.858616961414791,0.818327974276527,0.891077170418006,2000,"mtbls79","MTBLS79","WiNN",0.84375
+"3","cow_vs_sheep","raw","Raw","Pearson effect
+correlation",0.965745434670385,0.949811563751274,0.976762054978165,2000,"mtbls79","MTBLS79","Raw",7.90625
+"3","cow_vs_sheep","raw","Raw","Spearman effect
+correlation",0.914033073688562,0.877777540491323,0.93896058931957,2000,"mtbls79","MTBLS79","Raw",7.90625
+"3","cow_vs_sheep","raw","Raw","Sign
+concordance",0.855533159163987,0.818729903536977,0.885450160771704,2000,"mtbls79","MTBLS79","Raw",7.90625
+"3","cow_vs_sheep","combat","ComBat","Pearson effect
+correlation",0.967730746380485,0.952019174107673,0.978448870311761,2000,"mtbls79","MTBLS79","ComBat",6.90625
+"3","cow_vs_sheep","combat","ComBat","Spearman effect
+correlation",0.91603907812405,0.880248574140774,0.940572798742356,2000,"mtbls79","MTBLS79","ComBat",6.90625
+"3","cow_vs_sheep","combat","ComBat","Sign
+concordance",0.855172025723473,0.815916398713826,0.886254019292605,2000,"mtbls79","MTBLS79","ComBat",6.90625
+"3","cow_vs_sheep","qc_rlsc","QC-RLSC","Pearson effect
+correlation",0.94464847178427,0.882985770282269,0.97130092001974,2000,"mtbls79","MTBLS79","QC-RLSC",5.90625
+"3","cow_vs_sheep","qc_rlsc","QC-RLSC","Spearman effect
+correlation",0.87071951932056,0.746202589213881,0.929705447938597,2000,"mtbls79","MTBLS79","QC-RLSC",5.90625
+"3","cow_vs_sheep","qc_rlsc","QC-RLSC","Sign
+concordance",0.535925844051447,0.137851688102894,0.875411977491961,2000,"mtbls79","MTBLS79","QC-RLSC",5.90625
+"3","cow_vs_sheep","tiger","TIGER","Pearson effect
+correlation",0.964908299073029,0.949739270091391,0.975206050109629,2000,"mtbls79","MTBLS79","TIGER",4.90625
+"3","cow_vs_sheep","tiger","TIGER","Spearman effect
+correlation",0.910341473889081,0.872807212887356,0.934937966246423,2000,"mtbls79","MTBLS79","TIGER",4.90625
+"3","cow_vs_sheep","tiger","TIGER","Sign
+concordance",0.851873794212219,0.811073151125402,0.881430868167203,2000,"mtbls79","MTBLS79","TIGER",4.90625
+"3","cow_vs_sheep","serrf","SERRF","Pearson effect
+correlation",0.966620925154973,0.951713769826024,0.977172655626672,2000,"mtbls79","MTBLS79","SERRF",3.90625
+"3","cow_vs_sheep","serrf","SERRF","Spearman effect
+correlation",0.916671877753549,0.88096931047476,0.940959104334474,2000,"mtbls79","MTBLS79","SERRF",3.90625
+"3","cow_vs_sheep","serrf","SERRF","Sign
+concordance",0.854759646302251,0.815102491961415,0.885460209003215,2000,"mtbls79","MTBLS79","SERRF",3.90625
+"3","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Pearson effect
+correlation",0.966605606185808,0.951494566185581,0.97698468745341,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.90625
+"3","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Spearman effect
+correlation",0.916468457454738,0.881459479486709,0.940350161639072,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.90625
+"3","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Sign
+concordance",0.859600683279743,0.818327974276527,0.892282958199357,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.90625
+"3","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Pearson effect
+correlation",0.966421449404139,0.950923230259243,0.977171576328373,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.90625
+"3","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Spearman effect
+correlation",0.915924850854042,0.878677294754879,0.940986666701282,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.90625
+"3","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Sign
+concordance",0.858759847266881,0.815514469453376,0.893498794212219,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.90625
+"3","cow_vs_sheep","winn_fixed_no_qc","WiNN","Pearson effect
+correlation",0.966633104611533,0.951534038625372,0.976990445461777,2000,"mtbls79","MTBLS79","WiNN",0.90625
+"3","cow_vs_sheep","winn_fixed_no_qc","WiNN","Spearman effect
+correlation",0.916548851130827,0.881615327872475,0.940372789116846,2000,"mtbls79","MTBLS79","WiNN",0.90625
+"3","cow_vs_sheep","winn_fixed_no_qc","WiNN","Sign
+concordance",0.854400321543408,0.814308681672026,0.885058279742765,2000,"mtbls79","MTBLS79","WiNN",0.90625
+"4","cow_vs_sheep","raw","Raw","Pearson effect
+correlation",0.965103354043279,0.940887988803225,0.978430395728335,2000,"mtbls79","MTBLS79","Raw",7.96875
+"4","cow_vs_sheep","raw","Raw","Spearman effect
+correlation",0.911975979170599,0.858031941413373,0.94298673971774,2000,"mtbls79","MTBLS79","Raw",7.96875
+"4","cow_vs_sheep","raw","Raw","Sign
+concordance",0.837904742765273,0.784967845659164,0.880225080385852,2000,"mtbls79","MTBLS79","Raw",7.96875
+"4","cow_vs_sheep","combat","ComBat","Pearson effect
+correlation",0.968717162513088,0.946228512431813,0.980755506224663,2000,"mtbls79","MTBLS79","ComBat",6.96875
+"4","cow_vs_sheep","combat","ComBat","Spearman effect
+correlation",0.919160660863481,0.866425285931182,0.946394579717757,2000,"mtbls79","MTBLS79","ComBat",6.96875
+"4","cow_vs_sheep","combat","ComBat","Sign
+concordance",0.85008058681672,0.788575160771704,0.886254019292605,2000,"mtbls79","MTBLS79","ComBat",6.96875
+"4","cow_vs_sheep","qc_rlsc","QC-RLSC","Pearson effect
+correlation",0.939251304714606,0.832450305443403,0.975023076344253,2000,"mtbls79","MTBLS79","QC-RLSC",5.96875
+"4","cow_vs_sheep","qc_rlsc","QC-RLSC","Spearman effect
+correlation",0.868071468641505,0.720875383233553,0.934587237136603,2000,"mtbls79","MTBLS79","QC-RLSC",5.96875
+"4","cow_vs_sheep","qc_rlsc","QC-RLSC","Sign
+concordance",0.553782757234727,0.110922427652733,0.876225884244373,2000,"mtbls79","MTBLS79","QC-RLSC",5.96875
+"4","cow_vs_sheep","tiger","TIGER","Pearson effect
+correlation",0.962927126388435,0.939348661333043,0.976333639911622,2000,"mtbls79","MTBLS79","TIGER",4.96875
+"4","cow_vs_sheep","tiger","TIGER","Spearman effect
+correlation",0.905551128807821,0.852196259389564,0.935344500789063,2000,"mtbls79","MTBLS79","TIGER",4.96875
+"4","cow_vs_sheep","tiger","TIGER","Sign
+concordance",0.839934887459807,0.78173231511254,0.87620578778135,2000,"mtbls79","MTBLS79","TIGER",4.96875
+"4","cow_vs_sheep","serrf","SERRF","Pearson effect
+correlation",0.9673167067325,0.945398973641364,0.979091056909963,2000,"mtbls79","MTBLS79","SERRF",3.96875
+"4","cow_vs_sheep","serrf","SERRF","Spearman effect
+correlation",0.919397653294867,0.868043324355867,0.94608222336243,2000,"mtbls79","MTBLS79","SERRF",3.96875
+"4","cow_vs_sheep","serrf","SERRF","Sign
+concordance",0.85066057073955,0.789790996784566,0.887067926045016,2000,"mtbls79","MTBLS79","SERRF",3.96875
+"4","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Pearson effect
+correlation",0.96709058970126,0.94543741822856,0.978847923998736,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.96875
+"4","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Spearman effect
+correlation",0.918446562625524,0.867934603593533,0.945563244304596,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.96875
+"4","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Sign
+concordance",0.856007234726688,0.803456591639871,0.891479099678457,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.96875
+"4","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Pearson effect
+correlation",0.964759854447555,0.940979509789551,0.978043250365057,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.96875
+"4","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Spearman effect
+correlation",0.914605611339286,0.859944705314619,0.944223863504885,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.96875
+"4","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Sign
+concordance",0.852244172025723,0.797427652733119,0.888665594855305,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.96875
+"4","cow_vs_sheep","winn_fixed_no_qc","WiNN","Pearson effect
+correlation",0.967096400441018,0.945404054095523,0.97885173056984,2000,"mtbls79","MTBLS79","WiNN",0.96875
+"4","cow_vs_sheep","winn_fixed_no_qc","WiNN","Spearman effect
+correlation",0.918391932301396,0.86809077034667,0.945566191248085,2000,"mtbls79","MTBLS79","WiNN",0.96875
+"4","cow_vs_sheep","winn_fixed_no_qc","WiNN","Sign
+concordance",0.852998995176849,0.809475482315112,0.886665996784566,2000,"mtbls79","MTBLS79","WiNN",0.96875
+"5","cow_vs_sheep","raw","Raw","Pearson effect
+correlation",0.95218797808596,0.913371029553378,0.972691120485126,2000,"mtbls79","MTBLS79","Raw",8.03125
+"5","cow_vs_sheep","raw","Raw","Spearman effect
+correlation",0.895690187267115,0.834328478154056,0.933105355323924,2000,"mtbls79","MTBLS79","Raw",8.03125
+"5","cow_vs_sheep","raw","Raw","Sign
+concordance",0.83009827170418,0.772106109324759,0.87379421221865,2000,"mtbls79","MTBLS79","Raw",8.03125
+"5","cow_vs_sheep","combat","ComBat","Pearson effect
+correlation",0.960574944352524,0.928527732977385,0.977415693625145,2000,"mtbls79","MTBLS79","ComBat",7.03125
+"5","cow_vs_sheep","combat","ComBat","Spearman effect
+correlation",0.905553074776948,0.855980041971852,0.937913810748637,2000,"mtbls79","MTBLS79","ComBat",7.03125
+"5","cow_vs_sheep","combat","ComBat","Sign
+concordance",0.842872789389068,0.803436495176849,0.874206189710611,2000,"mtbls79","MTBLS79","ComBat",7.03125
+"5","cow_vs_sheep","qc_rlsc","QC-RLSC","Pearson effect
+correlation",0.948499309606652,0.906702556751901,0.970902599675924,2000,"mtbls79","MTBLS79","QC-RLSC",6.03125
+"5","cow_vs_sheep","qc_rlsc","QC-RLSC","Spearman effect
+correlation",0.890340997509502,0.832428117275992,0.928131231894209,2000,"mtbls79","MTBLS79","QC-RLSC",6.03125
+"5","cow_vs_sheep","qc_rlsc","QC-RLSC","Sign
+concordance",0.767737138263666,0.616127411575563,0.858129019292604,2000,"mtbls79","MTBLS79","QC-RLSC",6.03125
+"5","cow_vs_sheep","tiger","TIGER","Pearson effect
+correlation",0.952728878434276,0.916774237307755,0.971622802780151,2000,"mtbls79","MTBLS79","TIGER",5.03125
+"5","cow_vs_sheep","tiger","TIGER","Spearman effect
+correlation",0.894852612027638,0.844772881724039,0.928315584814734,2000,"mtbls79","MTBLS79","TIGER",5.03125
+"5","cow_vs_sheep","tiger","TIGER","Sign
+concordance",0.836199356913183,0.797829581993569,0.866559485530547,2000,"mtbls79","MTBLS79","TIGER",5.03125
+"5","cow_vs_sheep","serrf","SERRF","Pearson effect
+correlation",0.953820438948714,0.916116008202964,0.973511660568602,2000,"mtbls79","MTBLS79","SERRF",4.03125
+"5","cow_vs_sheep","serrf","SERRF","Spearman effect
+correlation",0.900623645734668,0.849653772328973,0.934728336565661,2000,"mtbls79","MTBLS79","SERRF",4.03125
+"5","cow_vs_sheep","serrf","SERRF","Sign
+concordance",0.84306209807074,0.80425040192926,0.874206189710611,2000,"mtbls79","MTBLS79","SERRF",4.03125
+"5","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Pearson effect
+correlation",0.953789289027616,0.916483087205976,0.973187706951875,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.03125
+"5","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Spearman effect
+correlation",0.901032059856787,0.850442971185629,0.935451142813492,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.03125
+"5","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Sign
+concordance",0.847630627009646,0.808671623794212,0.882234726688103,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.03125
+"5","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Pearson effect
+correlation",0.953562876500107,0.916221305326431,0.973046019668502,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.03125
+"5","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Spearman effect
+correlation",0.89971367610277,0.847063586087474,0.934155306134295,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.03125
+"5","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Sign
+concordance",0.846403536977492,0.807867765273312,0.881028938906752,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.03125
+"5","cow_vs_sheep","winn_fixed_no_qc","WiNN","Pearson effect
+correlation",0.953658972234359,0.916311064149559,0.97308775472075,2000,"mtbls79","MTBLS79","WiNN",1.03125
+"5","cow_vs_sheep","winn_fixed_no_qc","WiNN","Spearman effect
+correlation",0.900769050625431,0.8498535046297,0.935258821300272,2000,"mtbls79","MTBLS79","WiNN",1.03125
+"5","cow_vs_sheep","winn_fixed_no_qc","WiNN","Sign
+concordance",0.843926045016077,0.805054260450161,0.875411977491961,2000,"mtbls79","MTBLS79","WiNN",1.03125
+"6","cow_vs_sheep","raw","Raw","Pearson effect
+correlation",0.950695960365394,0.89845185253374,0.973447560135951,2000,"mtbls79","MTBLS79","Raw",8.09375
+"6","cow_vs_sheep","raw","Raw","Spearman effect
+correlation",0.89521122229834,0.830670409465209,0.935745016408004,2000,"mtbls79","MTBLS79","Raw",8.09375
+"6","cow_vs_sheep","raw","Raw","Sign
+concordance",0.834666197749196,0.784565916398714,0.879431270096463,2000,"mtbls79","MTBLS79","Raw",8.09375
+"6","cow_vs_sheep","combat","ComBat","Pearson effect
+correlation",0.960599617577875,0.921525080178004,0.97742025307727,2000,"mtbls79","MTBLS79","ComBat",7.09375
+"6","cow_vs_sheep","combat","ComBat","Spearman effect
+correlation",0.905945634986299,0.848840558533025,0.940174357225278,2000,"mtbls79","MTBLS79","ComBat",7.09375
+"6","cow_vs_sheep","combat","ComBat","Sign
+concordance",0.845622789389068,0.80183882636656,0.883440514469453,2000,"mtbls79","MTBLS79","ComBat",7.09375
+"6","cow_vs_sheep","qc_rlsc","QC-RLSC","Pearson effect
+correlation",0.938244638702528,0.883143655047126,0.968450633214771,2000,"mtbls79","MTBLS79","QC-RLSC",6.09375
+"6","cow_vs_sheep","qc_rlsc","QC-RLSC","Spearman effect
+correlation",0.885227876491306,0.819871375635846,0.928723749957751,2000,"mtbls79","MTBLS79","QC-RLSC",6.09375
+"6","cow_vs_sheep","qc_rlsc","QC-RLSC","Sign
+concordance",0.744627411575563,0.340765675241158,0.947347266881029,2000,"mtbls79","MTBLS79","QC-RLSC",6.09375
+"6","cow_vs_sheep","tiger","TIGER","Pearson effect
+correlation",0.945179190660875,0.893489891674498,0.967536373592104,2000,"mtbls79","MTBLS79","TIGER",5.09375
+"6","cow_vs_sheep","tiger","TIGER","Spearman effect
+correlation",0.88110816394201,0.816714103865876,0.921166818446454,2000,"mtbls79","MTBLS79","TIGER",5.09375
+"6","cow_vs_sheep","tiger","TIGER","Sign
+concordance",0.83038404340836,0.788173231511254,0.866559485530547,2000,"mtbls79","MTBLS79","TIGER",5.09375
+"6","cow_vs_sheep","serrf","SERRF","Pearson effect
+correlation",0.952142164025388,0.901472748175776,0.97369579508084,2000,"mtbls79","MTBLS79","SERRF",4.09375
+"6","cow_vs_sheep","serrf","SERRF","Spearman effect
+correlation",0.90037351389271,0.838026021845072,0.93732646235643,2000,"mtbls79","MTBLS79","SERRF",4.09375
+"6","cow_vs_sheep","serrf","SERRF","Sign
+concordance",0.846386053054662,0.804652331189711,0.883038585209003,2000,"mtbls79","MTBLS79","SERRF",4.09375
+"6","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Pearson effect
+correlation",0.952861758102638,0.904545374491917,0.974056515937834,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.09375
+"6","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Spearman effect
+correlation",0.901460147870408,0.838083646650797,0.937907994680899,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.09375
+"6","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Sign
+concordance",0.846744975884244,0.802250803858521,0.887057877813505,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.09375
+"6","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Pearson effect
+correlation",0.953129220445341,0.905822510951083,0.974133565855482,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.09375
+"6","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Spearman effect
+correlation",0.902019457377147,0.838555238992907,0.938313811922997,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.09375
+"6","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Sign
+concordance",0.845453175241158,0.80104501607717,0.885852090032154,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.09375
+"6","cow_vs_sheep","winn_fixed_no_qc","WiNN","Pearson effect
+correlation",0.952863869317875,0.904618757629024,0.974070172856342,2000,"mtbls79","MTBLS79","WiNN",1.09375
+"6","cow_vs_sheep","winn_fixed_no_qc","WiNN","Spearman effect
+correlation",0.901424444405811,0.83794066956719,0.937832090963757,2000,"mtbls79","MTBLS79","WiNN",1.09375
+"6","cow_vs_sheep","winn_fixed_no_qc","WiNN","Sign
+concordance",0.846787982315113,0.80344654340836,0.883450562700965,2000,"mtbls79","MTBLS79","WiNN",1.09375
+"7","cow_vs_sheep","raw","Raw","Pearson effect
+correlation",0.956136953393113,0.930900855479054,0.971176322972488,2000,"mtbls79","MTBLS79","Raw",8.15625
+"7","cow_vs_sheep","raw","Raw","Spearman effect
+correlation",0.896483125614623,0.846668559753903,0.930478769761503,2000,"mtbls79","MTBLS79","Raw",8.15625
+"7","cow_vs_sheep","raw","Raw","Sign
+concordance",0.834297226688103,0.785771704180064,0.868981109324759,2000,"mtbls79","MTBLS79","Raw",8.15625
+"7","cow_vs_sheep","combat","ComBat","Pearson effect
+correlation",0.959695606746595,0.931178709428556,0.975602028303235,2000,"mtbls79","MTBLS79","ComBat",7.15625
+"7","cow_vs_sheep","combat","ComBat","Spearman effect
+correlation",0.898422676890322,0.848403617120984,0.933064216996388,2000,"mtbls79","MTBLS79","ComBat",7.15625
+"7","cow_vs_sheep","combat","ComBat","Sign
+concordance",0.833718448553055,0.784153938906752,0.867775321543408,2000,"mtbls79","MTBLS79","ComBat",7.15625
+"7","cow_vs_sheep","qc_rlsc","QC-RLSC","Pearson effect
+correlation",0.952575949237254,0.924640949622675,0.969917656831,2000,"mtbls79","MTBLS79","QC-RLSC",6.15625
+"7","cow_vs_sheep","qc_rlsc","QC-RLSC","Spearman effect
+correlation",0.889705857494922,0.838683130325151,0.926411598456167,2000,"mtbls79","MTBLS79","QC-RLSC",6.15625
+"7","cow_vs_sheep","qc_rlsc","QC-RLSC","Sign
+concordance",0.726609726688103,0.547025723472669,0.851306270096463,2000,"mtbls79","MTBLS79","QC-RLSC",6.15625
+"7","cow_vs_sheep","tiger","TIGER","Pearson effect
+correlation",0.953789885547583,0.930176107627562,0.968055488453748,2000,"mtbls79","MTBLS79","TIGER",5.15625
+"7","cow_vs_sheep","tiger","TIGER","Spearman effect
+correlation",0.884196637630025,0.834072253332144,0.917267443575356,2000,"mtbls79","MTBLS79","TIGER",5.15625
+"7","cow_vs_sheep","tiger","TIGER","Sign
+concordance",0.823500602893891,0.772086012861736,0.858520900321543,2000,"mtbls79","MTBLS79","TIGER",5.15625
+"7","cow_vs_sheep","serrf","SERRF","Pearson effect
+correlation",0.956110938457986,0.93016074456313,0.971383962794169,2000,"mtbls79","MTBLS79","SERRF",4.15625
+"7","cow_vs_sheep","serrf","SERRF","Spearman effect
+correlation",0.895353853150418,0.846120869487437,0.929328307271188,2000,"mtbls79","MTBLS79","SERRF",4.15625
+"7","cow_vs_sheep","serrf","SERRF","Sign
+concordance",0.83190172829582,0.783762057877814,0.865755627009646,2000,"mtbls79","MTBLS79","SERRF",4.15625
+"7","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Pearson effect
+correlation",0.954703589530809,0.927754660694453,0.969951458621189,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.15625
+"7","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Spearman effect
+correlation",0.891589611065964,0.840912290111227,0.925784450480566,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.15625
+"7","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Sign
+concordance",0.835031350482315,0.794594051446945,0.870578778135048,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.15625
+"7","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Pearson effect
+correlation",0.951369944149578,0.923771146514164,0.96845362973432,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.15625
+"7","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Spearman effect
+correlation",0.886136616915435,0.827342754604031,0.924065241240163,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.15625
+"7","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Sign
+concordance",0.833558279742765,0.786153536977492,0.870186897106109,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.15625
+"7","cow_vs_sheep","winn_fixed_no_qc","WiNN","Pearson effect
+correlation",0.954684327460545,0.92779433069878,0.96990975524234,2000,"mtbls79","MTBLS79","WiNN",1.15625
+"7","cow_vs_sheep","winn_fixed_no_qc","WiNN","Spearman effect
+correlation",0.891646722188741,0.840892562476336,0.92573474535537,2000,"mtbls79","MTBLS79","WiNN",1.15625
+"7","cow_vs_sheep","winn_fixed_no_qc","WiNN","Sign
+concordance",0.833429059485531,0.792604501607717,0.865755627009646,2000,"mtbls79","MTBLS79","WiNN",1.15625
+"8","cow_vs_sheep","raw","Raw","Pearson effect
+correlation",0.964549420377426,0.945469060106016,0.975981752512917,2000,"mtbls79","MTBLS79","Raw",8.21875
+"8","cow_vs_sheep","raw","Raw","Spearman effect
+correlation",0.917058473416054,0.879010228387043,0.941663936675555,2000,"mtbls79","MTBLS79","Raw",8.21875
+"8","cow_vs_sheep","raw","Raw","Sign
+concordance",0.855331591639871,0.815514469453376,0.886665996784566,2000,"mtbls79","MTBLS79","Raw",8.21875
+"8","cow_vs_sheep","combat","ComBat","Pearson effect
+correlation",0.967520963182566,0.948365237935168,0.978682253032694,2000,"mtbls79","MTBLS79","ComBat",7.21875
+"8","cow_vs_sheep","combat","ComBat","Spearman effect
+correlation",0.919092648510403,0.882413709594145,0.943227735324284,2000,"mtbls79","MTBLS79","ComBat",7.21875
+"8","cow_vs_sheep","combat","ComBat","Sign
+concordance",0.855201567524116,0.817926045016077,0.885460209003215,2000,"mtbls79","MTBLS79","ComBat",7.21875
+"8","cow_vs_sheep","qc_rlsc","QC-RLSC","Pearson effect
+correlation",0.938720262001522,0.871742028447817,0.970198360743335,2000,"mtbls79","MTBLS79","QC-RLSC",6.21875
+"8","cow_vs_sheep","qc_rlsc","QC-RLSC","Spearman effect
+correlation",0.880580134864298,0.792162566888645,0.930029565751535,2000,"mtbls79","MTBLS79","QC-RLSC",6.21875
+"8","cow_vs_sheep","qc_rlsc","QC-RLSC","Sign
+concordance",0.62915152733119,0.276105305466238,0.8758038585209,2000,"mtbls79","MTBLS79","QC-RLSC",6.21875
+"8","cow_vs_sheep","tiger","TIGER","Pearson effect
+correlation",0.962431119587975,0.943107020631494,0.973775613918216,2000,"mtbls79","MTBLS79","TIGER",5.21875
+"8","cow_vs_sheep","tiger","TIGER","Spearman effect
+correlation",0.906538650671054,0.865976830096221,0.933187613688064,2000,"mtbls79","MTBLS79","TIGER",5.21875
+"8","cow_vs_sheep","tiger","TIGER","Sign
+concordance",0.846815916398714,0.807073954983923,0.877431672025723,2000,"mtbls79","MTBLS79","TIGER",5.21875
+"8","cow_vs_sheep","serrf","SERRF","Pearson effect
+correlation",0.964183159089035,0.944585825375123,0.975697528032236,2000,"mtbls79","MTBLS79","SERRF",4.21875
+"8","cow_vs_sheep","serrf","SERRF","Spearman effect
+correlation",0.916160862548743,0.877780393447871,0.940899124264708,2000,"mtbls79","MTBLS79","SERRF",4.21875
+"8","cow_vs_sheep","serrf","SERRF","Sign
+concordance",0.85434786977492,0.817112138263666,0.885450160771704,2000,"mtbls79","MTBLS79","SERRF",4.21875
+"8","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Pearson effect
+correlation",0.963805709083325,0.945167342795127,0.974868301925914,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.21875
+"8","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Spearman effect
+correlation",0.913241346707083,0.875747278577251,0.937538025070989,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.21875
+"8","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Sign
+concordance",0.856471262057878,0.815514469453376,0.888665594855305,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.21875
+"8","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Pearson effect
+correlation",0.963362589651292,0.945057578249941,0.974511563726881,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.21875
+"8","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Spearman effect
+correlation",0.912265568487381,0.873506227329658,0.937537105089801,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.21875
+"8","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Sign
+concordance",0.855262861736334,0.809485530546624,0.890675241157556,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.21875
+"8","cow_vs_sheep","winn_fixed_no_qc","WiNN","Pearson effect
+correlation",0.963817618606972,0.945120048244176,0.97484803678351,2000,"mtbls79","MTBLS79","WiNN",1.21875
+"8","cow_vs_sheep","winn_fixed_no_qc","WiNN","Spearman effect
+correlation",0.913263318527282,0.875791243915094,0.937623046222652,2000,"mtbls79","MTBLS79","WiNN",1.21875
+"8","cow_vs_sheep","winn_fixed_no_qc","WiNN","Sign
+concordance",0.854659163987138,0.817524115755627,0.884646302250804,2000,"mtbls79","MTBLS79","WiNN",1.21875

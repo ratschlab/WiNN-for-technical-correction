@@ -1,0 +1,6 @@
+dataset,job_id,status,scope,statTarget,input_identity,snapshot_utc
+mtbls79,18541987_1,COMPLETED,full candidate selection and corrected matrix; held-out reference CV integrated in Table S26,1.38.0,exact frozen public SHA256,2026-10-27T13:45:53Z
+clinical_fiams,18541987_2,COMPLETED,full candidate selection and corrected matrix; held-out reference CV integrated in Table S26,1.38.0,clinical reconstruction; exact frozen SHA256 differs,2026-10-27T13:45:53Z
+batchcorr_set1,18541987_3,COMPLETED,full candidate selection and corrected matrix; held-out reference CV integrated in Table S26,1.38.0,exact frozen public SHA256,2026-10-27T13:45:53Z
+sacurine,18541987_4,COMPLETED,full candidate selection and corrected matrix; held-out reference CV integrated in Table S26,1.38.0,exact frozen public SHA256,2026-10-27T13:45:53Z
+waveica,18541987_5,COMPLETED,full candidate selection and corrected matrix; held-out reference CV integrated in Table S26,1.38.0,exact frozen public SHA256,2026-10-27T13:45:53Z

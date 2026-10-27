@@ -1,0 +1,4 @@
+"dataset","method","training_cv_percent","heldout_cv_percent","median_intensity","nonfinite","uncorrected_features","uncorrected_samples"
+"mtbls79","raw",28.9066773550987,28.75722275311,27384.17,0,0,0
+"mtbls79","legacy",11.6039855028282,10.4280805137948,1.00865635,0,105,0
+"mtbls79","corrected",10.3211214583988,15.6881195296124,26500.489481408,0,14,0

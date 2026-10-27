@@ -1,0 +1,145 @@
+"heldout_batch","endpoint","method_id","method","metric","bootstrap_mean","ci_lower","ci_upper","valid_bootstrap","dataset_key","dataset","method_label","y"
+"1","biological_group","raw","Raw","Pearson effect
+correlation",0.205120733807923,0.0452276776525751,0.35292538018744,2000,"waveica","WaveICA","Raw",7.925
+"1","biological_group","raw","Raw","Spearman effect
+correlation",0.203031107969914,0.0907901424970143,0.310589100332261,2000,"waveica","WaveICA","Raw",7.925
+"1","biological_group","raw","Raw","Sign
+concordance",0.563870453490172,0.5215872156013,0.60363720786256,2000,"waveica","WaveICA","Raw",7.925
+"1","biological_group","combat","ComBat","Pearson effect
+correlation",0.276663657708265,0.093856429300982,0.436496849181366,2000,"waveica","WaveICA","ComBat",6.925
+"1","biological_group","combat","ComBat","Spearman effect
+correlation",0.213545621560222,0.0884739307723471,0.330102950945693,2000,"waveica","WaveICA","ComBat",6.925
+"1","biological_group","combat","ComBat","Sign
+concordance",0.564925243770314,0.519265593561368,0.605947221792292,2000,"waveica","WaveICA","ComBat",6.925
+"1","biological_group","qc_rlsc","QC-RLSC","Pearson effect
+correlation",0.220488700068194,0.0568872262866436,0.36427109580768,2000,"waveica","WaveICA","QC-RLSC",5.925
+"1","biological_group","qc_rlsc","QC-RLSC","Spearman effect
+correlation",0.213055004768095,0.105633067900093,0.312265596122773,2000,"waveica","WaveICA","QC-RLSC",5.925
+"1","biological_group","qc_rlsc","QC-RLSC","Sign
+concordance",0.567230150131559,0.529945054945055,0.603157405974307,2000,"waveica","WaveICA","QC-RLSC",5.925
+"1","biological_group","tiger","TIGER","Pearson effect
+correlation",0.170237645211918,0.029814628811185,0.299830626218556,2000,"waveica","WaveICA","TIGER",4.925
+"1","biological_group","tiger","TIGER","Spearman effect
+correlation",0.181842058987462,0.0791345639824392,0.276335307493681,2000,"waveica","WaveICA","TIGER",4.925
+"1","biological_group","tiger","TIGER","Sign
+concordance",0.559893901872775,0.525770004643244,0.592791363566011,2000,"waveica","WaveICA","TIGER",4.925
+"1","biological_group","serrf","SERRF","Pearson effect
+correlation",0.156987341775797,0.0325650211381883,0.274236104066984,2000,"waveica","WaveICA","SERRF",3.925
+"1","biological_group","serrf","SERRF","Spearman effect
+correlation",0.182032013565039,0.0809682042034209,0.275574823755878,2000,"waveica","WaveICA","SERRF",3.925
+"1","biological_group","serrf","SERRF","Sign
+concordance",0.559934220708869,0.525305680235258,0.592946138368673,2000,"waveica","WaveICA","SERRF",3.925
+"1","biological_group","winn_auto_qc","WiNN (QC-tuned)","Pearson effect
+correlation",0.23257581490055,0.057639151565651,0.380191817811308,2000,"waveica","WaveICA","WiNN (QC-tuned)",2.925
+"1","biological_group","winn_auto_qc","WiNN (QC-tuned)","Spearman effect
+correlation",0.22842489754966,0.115245072786663,0.325533672470037,2000,"waveica","WaveICA","WiNN (QC-tuned)",2.925
+"1","biological_group","winn_auto_qc","WiNN (QC-tuned)","Sign
+concordance",0.573798715369138,0.534123974616932,0.610907754217613,2000,"waveica","WaveICA","WiNN (QC-tuned)",2.925
+"1","biological_group","winn_auto_batch_qc","WiNN (inferred segments)","Pearson effect
+correlation",0.204000858928075,0.037911195025308,0.350055804375543,2000,"waveica","WaveICA","WiNN (inferred segments)",1.925
+"1","biological_group","winn_auto_batch_qc","WiNN (inferred segments)","Spearman effect
+correlation",0.206914424235289,0.091759696088618,0.315225621271099,2000,"waveica","WaveICA","WiNN (inferred segments)",1.925
+"1","biological_group","winn_auto_batch_qc","WiNN (inferred segments)","Sign
+concordance",0.564136356601145,0.525924779445906,0.603316050147036,2000,"waveica","WaveICA","WiNN (inferred segments)",1.925
+"1","biological_group","winn_fixed_no_qc","WiNN","Pearson effect
+correlation",0.233496790097893,0.0587179335985525,0.380662215871734,2000,"waveica","WaveICA","WiNN",0.925
+"1","biological_group","winn_fixed_no_qc","WiNN","Spearman effect
+correlation",0.22927139987902,0.115834313684758,0.326194077929975,2000,"waveica","WaveICA","WiNN",0.925
+"1","biological_group","winn_fixed_no_qc","WiNN","Sign
+concordance",0.571182943816747,0.532576226590311,0.60625290202755,2000,"waveica","WaveICA","WiNN",0.925
+"2","biological_group","raw","Raw","Pearson effect
+correlation",0.174162933010697,-0.00458502485927067,0.342318090370266,2000,"waveica","WaveICA","Raw",8
+"2","biological_group","raw","Raw","Spearman effect
+correlation",0.170270948006591,0.0258554914547441,0.299599126876501,2000,"waveica","WaveICA","Raw",8
+"2","biological_group","raw","Raw","Sign
+concordance",0.554578238662746,0.504565856678533,0.603621730382294,2000,"waveica","WaveICA","Raw",8
+"2","biological_group","combat","ComBat","Pearson effect
+correlation",0.216082914227679,0.00345217335682986,0.400296757950044,2000,"waveica","WaveICA","ComBat",7
+"2","biological_group","combat","ComBat","Spearman effect
+correlation",0.175913618329898,0.0267101497354106,0.3108102044552,2000,"waveica","WaveICA","ComBat",7
+"2","biological_group","combat","ComBat","Sign
+concordance",0.556436310168705,0.506113604705154,0.604859928803591,2000,"waveica","WaveICA","ComBat",7
+"2","biological_group","qc_rlsc","QC-RLSC","Pearson effect
+correlation",0.189365589907115,0.0106967072121125,0.348509613948116,2000,"waveica","WaveICA","QC-RLSC",6
+"2","biological_group","qc_rlsc","QC-RLSC","Spearman effect
+correlation",0.177821387076867,0.0481104995156264,0.290688675742511,2000,"waveica","WaveICA","QC-RLSC",6
+"2","biological_group","qc_rlsc","QC-RLSC","Sign
+concordance",0.556579786410772,0.51431279987618,0.596192539854512,2000,"waveica","WaveICA","QC-RLSC",6
+"2","biological_group","tiger","TIGER","Pearson effect
+correlation",0.13794432790257,0.000653436488263051,0.277541805388873,2000,"waveica","WaveICA","TIGER",5
+"2","biological_group","tiger","TIGER","Spearman effect
+correlation",0.145150205882197,0.0368234585157477,0.245371366857317,2000,"waveica","WaveICA","TIGER",5
+"2","biological_group","tiger","TIGER","Sign
+concordance",0.548594799566631,0.512923696022288,0.583044420368364,2000,"waveica","WaveICA","TIGER",5
+"2","biological_group","serrf","SERRF","Pearson effect
+correlation",0.137513062785088,0.00742845967058694,0.269537346766507,2000,"waveica","WaveICA","SERRF",4
+"2","biological_group","serrf","SERRF","Spearman effect
+correlation",0.14901639495765,0.0412793779740248,0.246939696840275,2000,"waveica","WaveICA","SERRF",4
+"2","biological_group","serrf","SERRF","Sign
+concordance",0.549019579012537,0.511066398390342,0.58319532580096,2000,"waveica","WaveICA","SERRF",4
+"2","biological_group","winn_auto_qc","WiNN (QC-tuned)","Pearson effect
+correlation",0.204018402012963,0.0136188636363019,0.369592210057238,2000,"waveica","WaveICA","WiNN (QC-tuned)",3
+"2","biological_group","winn_auto_qc","WiNN (QC-tuned)","Spearman effect
+correlation",0.192099549663391,0.0571212815787013,0.308098977162665,2000,"waveica","WaveICA","WiNN (QC-tuned)",3
+"2","biological_group","winn_auto_qc","WiNN (QC-tuned)","Sign
+concordance",0.562510369911778,0.516324872310788,0.604863798173657,2000,"waveica","WaveICA","WiNN (QC-tuned)",3
+"2","biological_group","winn_auto_batch_qc","WiNN (inferred segments)","Pearson effect
+correlation",0.179044635171236,0.00230340575002707,0.345896684377665,2000,"waveica","WaveICA","WiNN (inferred segments)",2
+"2","biological_group","winn_auto_batch_qc","WiNN (inferred segments)","Spearman effect
+correlation",0.175648391810355,0.0301958282906144,0.301621763863422,2000,"waveica","WaveICA","WiNN (inferred segments)",2
+"2","biological_group","winn_auto_batch_qc","WiNN (inferred segments)","Sign
+concordance",0.556059046587216,0.509514780993654,0.601327193932828,2000,"waveica","WaveICA","WiNN (inferred segments)",2
+"2","biological_group","winn_fixed_no_qc","WiNN","Pearson effect
+correlation",0.205214137653328,0.0147905098068856,0.371114998315458,2000,"waveica","WaveICA","WiNN",1
+"2","biological_group","winn_fixed_no_qc","WiNN","Spearman effect
+correlation",0.192880019355124,0.0567615551027518,0.309568929069885,2000,"waveica","WaveICA","WiNN",1
+"2","biological_group","winn_fixed_no_qc","WiNN","Sign
+concordance",0.560358845379972,0.517868750967342,0.600220554093794,2000,"waveica","WaveICA","WiNN",1
+"3","biological_group","raw","Raw","Pearson effect
+correlation",0.185543523637973,0.0246999178008364,0.32174089488069,2000,"waveica","WaveICA","Raw",8.075
+"3","biological_group","raw","Raw","Spearman effect
+correlation",0.19145373045522,0.0530456555455553,0.313683740559431,2000,"waveica","WaveICA","Raw",8.075
+"3","biological_group","raw","Raw","Sign
+concordance",0.560972991796935,0.509982974771707,0.608884073672806,2000,"waveica","WaveICA","Raw",8.075
+"3","biological_group","combat","ComBat","Pearson effect
+correlation",0.233069348959409,0.0507713547270463,0.385036870572977,2000,"waveica","WaveICA","ComBat",7.075
+"3","biological_group","combat","ComBat","Spearman effect
+correlation",0.19775864020482,0.0566921962780839,0.323362222993637,2000,"waveica","WaveICA","ComBat",7.075
+"3","biological_group","combat","ComBat","Sign
+concordance",0.562416963318372,0.511979569726049,0.609038848475468,2000,"waveica","WaveICA","ComBat",7.075
+"3","biological_group","qc_rlsc","QC-RLSC","Pearson effect
+correlation",0.200221121173249,0.0464213844289021,0.3356027240665,2000,"waveica","WaveICA","QC-RLSC",6.075
+"3","biological_group","qc_rlsc","QC-RLSC","Spearman effect
+correlation",0.202193034181262,0.0885367094377398,0.300976103174857,2000,"waveica","WaveICA","QC-RLSC",6.075
+"3","biological_group","qc_rlsc","QC-RLSC","Sign
+concordance",0.564991177836248,0.526230459681164,0.601303977712428,2000,"waveica","WaveICA","QC-RLSC",6.075
+"3","biological_group","tiger","TIGER","Pearson effect
+correlation",0.151365460726144,0.0204788566118027,0.268454752538633,2000,"waveica","WaveICA","TIGER",5.075
+"3","biological_group","tiger","TIGER","Spearman effect
+correlation",0.1683044697934,0.0636425791483206,0.257848726204478,2000,"waveica","WaveICA","TIGER",5.075
+"3","biological_group","tiger","TIGER","Sign
+concordance",0.55717149048135,0.521436310168705,0.589386317907445,2000,"waveica","WaveICA","TIGER",5.075
+"3","biological_group","serrf","SERRF","Pearson effect
+correlation",0.139972657399038,0.0252473609633033,0.246788774016317,2000,"waveica","WaveICA","SERRF",4.075
+"3","biological_group","serrf","SERRF","Spearman effect
+correlation",0.166380239395746,0.0665203139858503,0.254929062903561,2000,"waveica","WaveICA","SERRF",4.075
+"3","biological_group","serrf","SERRF","Sign
+concordance",0.555491642160656,0.5215872156013,0.587374245472837,2000,"waveica","WaveICA","SERRF",4.075
+"3","biological_group","winn_auto_qc","WiNN (QC-tuned)","Pearson effect
+correlation",0.216945930891852,0.0552472071800658,0.358338473320385,2000,"waveica","WaveICA","WiNN (QC-tuned)",3.075
+"3","biological_group","winn_auto_qc","WiNN (QC-tuned)","Spearman effect
+correlation",0.218639250322682,0.0990845251527265,0.319974507748524,2000,"waveica","WaveICA","WiNN (QC-tuned)",3.075
+"3","biological_group","winn_auto_qc","WiNN (QC-tuned)","Sign
+concordance",0.573020894598359,0.530250735180313,0.612289119331373,2000,"waveica","WaveICA","WiNN (QC-tuned)",3.075
+"3","biological_group","winn_auto_batch_qc","WiNN (inferred segments)","Pearson effect
+correlation",0.1920139982997,0.0346925304064964,0.324436674055581,2000,"waveica","WaveICA","WiNN (inferred segments)",2.075
+"3","biological_group","winn_auto_batch_qc","WiNN (inferred segments)","Spearman effect
+correlation",0.198494318199936,0.0654250892584593,0.31040928861381,2000,"waveica","WaveICA","WiNN (inferred segments)",2.075
+"3","biological_group","winn_auto_batch_qc","WiNN (inferred segments)","Sign
+concordance",0.562512459371614,0.516638291286179,0.603474694319765,2000,"waveica","WaveICA","WiNN (inferred segments)",2.075
+"3","biological_group","winn_fixed_no_qc","WiNN","Pearson effect
+correlation",0.218042401312241,0.0535709791711778,0.359821191948656,2000,"waveica","WaveICA","WiNN",1.075
+"3","biological_group","winn_fixed_no_qc","WiNN","Spearman effect
+correlation",0.219602775202428,0.0991292156590054,0.321857181497787,2000,"waveica","WaveICA","WiNN",1.075
+"3","biological_group","winn_fixed_no_qc","WiNN","Sign
+concordance",0.569600139297322,0.528702987153691,0.606098127224888,2000,"waveica","WaveICA","WiNN",1.075

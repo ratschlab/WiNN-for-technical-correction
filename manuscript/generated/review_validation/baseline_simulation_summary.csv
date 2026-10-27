@@ -1,0 +1,17 @@
+"method_id","metric","n","mean","se"
+"mean_batch_all","heldout_qc_cv_mean",10,15.6234591898031,0.192606739091374
+"mean_batch_all","truth_log1p_rmse",10,0.116397338103364,0.00039622200755598
+"mean_batch_all","truth_metabolite_profile_icc_mean",10,0.84866774035386,0.000814157889563039
+"mean_batch_all","truth_sample_profile_pearson_mean",10,0.845361261698337,0.000820872023987561
+"raw","heldout_qc_cv_mean",10,44.5499522758485,0.284693174565547
+"raw","truth_log1p_rmse",10,0.292733754336733,0.00152705262473217
+"raw","truth_metabolite_profile_icc_mean",10,0.587902038463974,0.0020289323608363
+"raw","truth_sample_profile_pearson_mean",10,0.518855728315954,0.00206656546099178
+"wehrens_ancova_all","heldout_qc_cv_mean",10,12.694880484437,0.133720473035597
+"wehrens_ancova_all","truth_log1p_rmse",10,0.0980856432699754,0.00036794307768749
+"wehrens_ancova_all","truth_metabolite_profile_icc_mean",10,0.887048087291476,0.000574489963167504
+"wehrens_ancova_all","truth_sample_profile_pearson_mean",10,0.884157458226728,0.000763429022564777
+"winn_fixed_no_qc","heldout_qc_cv_mean",10,8.69362142903758,0.0626271615848795
+"winn_fixed_no_qc","truth_log1p_rmse",10,0.0727421036601077,0.000416196845642688
+"winn_fixed_no_qc","truth_metabolite_profile_icc_mean",10,0.921146188241821,0.00048202649104971
+"winn_fixed_no_qc","truth_sample_profile_pearson_mean",10,0.922982164600671,0.0009911969056288

@@ -1,0 +1,10 @@
+method_id,method,metric,direction,point_estimate,bootstrap_mean,ci_lower,ci_upper,valid_bootstrap,dataset_key,dataset,method_label
+raw,Raw,sample_replicate_pearson_median,higher,0.983467072627652,0.983418544995062,0.981328449179864,0.984698428653594,2000,clinical_fiams,Clinical FIA-MS,Raw
+combat,ComBat,sample_replicate_pearson_median,higher,0.987725723815802,0.98754254439924,0.986485599036148,0.988511639198531,2000,clinical_fiams,Clinical FIA-MS,ComBat
+qc_rlsc,QC-RLSC,sample_replicate_pearson_median,higher,0.987998934131833,0.987758167272891,0.986285061239577,0.988767373512411,2000,clinical_fiams,Clinical FIA-MS,QC-RLSC
+qc_rfsc,QC-RFSC,sample_replicate_pearson_median,higher,0.991938486181746,0.991920082123479,0.991151877440826,0.992740261761403,2000,clinical_fiams,Clinical FIA-MS,QC-RFSC
+tiger,TIGER,sample_replicate_pearson_median,higher,0.990178129786106,0.990073953186524,0.989403458926881,0.99058349920202,2000,clinical_fiams,Clinical FIA-MS,TIGER
+serrf,SERRF,sample_replicate_pearson_median,higher,0.989048658011504,0.988968231604527,0.988372254048607,0.989597652460619,2000,clinical_fiams,Clinical FIA-MS,SERRF
+winn_auto_qc,WiNN auto (QC),sample_replicate_pearson_median,higher,0.990847998063998,0.990807613621426,0.989965693067045,0.991479292132119,2000,clinical_fiams,Clinical FIA-MS,WiNN auto
+winn_auto_batch_qc,WiNN auto-batch (QC),sample_replicate_pearson_median,higher,0.990988516405755,0.990828354685998,0.98970936428441,0.99169969882614,2000,clinical_fiams,Clinical FIA-MS,WiNN auto-batch
+winn_fixed_no_qc,WiNN fixed default (no QC),sample_replicate_pearson_median,higher,0.990747863696586,0.990693378472905,0.990073179762867,0.991224665767455,2000,clinical_fiams,Clinical FIA-MS,WiNN fixed

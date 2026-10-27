@@ -1,0 +1,4 @@
+"dataset","method","training_cv_percent","heldout_cv_percent","median_intensity","nonfinite","uncorrected_features","uncorrected_samples"
+"sacurine","raw",42.3587384472617,32.5994242278841,673549.5,0,0,0
+"sacurine","legacy",16.3108168862279,7.32552583839107,0.8592028195,0,2,0
+"sacurine","corrected",17.4672769680604,13.6442943562489,628763.53909035,0,2,0

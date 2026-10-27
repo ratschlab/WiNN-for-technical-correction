@@ -1,0 +1,28 @@
+job_id,scope,status,elapsed,snapshot_utc
+18541777,pinned statTarget 1.38.0 smoke,COMPLETED,00:00:18,2026-10-27T13:45:53Z
+18543328,adversarial-ID and abundance-restoration integration test,COMPLETED,00:00:19,2026-10-27T13:45:53Z
+18543837_1,exact frozen SIM01 raw/clean input; corrected QC-RFSC and three truth endpoints,COMPLETED,00:01:29,2026-10-27T13:51:04Z
+18543837_2,exact frozen SIM02 raw/clean input; corrected QC-RFSC and three truth endpoints,COMPLETED,00:01:32,2026-10-27T13:51:04Z
+18543837_3,exact frozen SIM03 raw/clean input; corrected QC-RFSC and three truth endpoints,COMPLETED,00:01:27,2026-10-27T13:51:04Z
+18543837_4,exact frozen SIM04 raw/clean input; corrected QC-RFSC and three truth endpoints,COMPLETED,00:01:37,2026-10-27T13:51:04Z
+18543837_5,exact frozen SIM05 raw/clean input; corrected QC-RFSC and three truth endpoints,COMPLETED,00:01:27,2026-10-27T13:51:04Z
+18543837_6,exact frozen SIM06 raw/clean input; corrected QC-RFSC and three truth endpoints,COMPLETED,00:01:33,2026-10-27T13:51:04Z
+18543837_7,exact frozen SIM07 raw/clean input; corrected QC-RFSC and three truth endpoints,COMPLETED,00:01:33,2026-10-27T13:51:04Z
+18543837_8,exact frozen SIM08 raw/clean input; corrected QC-RFSC and three truth endpoints,COMPLETED,00:01:33,2026-10-27T13:51:04Z
+18543837_9,exact frozen SIM09 raw/clean input; corrected QC-RFSC and three truth endpoints,COMPLETED,00:01:36,2026-10-27T13:51:04Z
+18543837_10,exact frozen SIM10 raw/clean input; corrected QC-RFSC and three truth endpoints,COMPLETED,00:01:33,2026-10-27T13:51:04Z
+18544176_1,mtbls79: full empirical technical and biological point endpoints,COMPLETED,00:16:57,2026-10-27T15:15:46Z
+18544176_2,clinical_fiams: full empirical technical and biological point endpoints,COMPLETED,00:10:07,2026-10-27T15:15:46Z
+18544176_3,batchcorr_set1: full empirical technical and biological point endpoints,COMPLETED,00:01:35,2026-10-27T15:15:46Z
+18544176_4,sacurine: full empirical technical and biological point endpoints,COMPLETED,00:00:25,2026-10-27T15:15:46Z
+18544176_5,waveica: full empirical technical and biological point endpoints,COMPLETED,00:23:51,2026-10-27T15:15:46Z
+18547170_1,SIM01: full corrected simulation endpoints,COMPLETED,00:01:44,2026-10-27T13:51:04Z
+18547170_2,SIM02: full corrected simulation endpoints,COMPLETED,00:02:03,2026-10-27T13:51:04Z
+18547170_3,SIM03: full corrected simulation endpoints,COMPLETED,00:01:46,2026-10-27T13:51:04Z
+18547170_4,SIM04: full corrected simulation endpoints,COMPLETED,00:01:48,2026-10-27T13:51:04Z
+18547170_5,SIM05: full corrected simulation endpoints,COMPLETED,00:01:46,2026-10-27T13:51:04Z
+18547170_6,SIM06: full corrected simulation endpoints,COMPLETED,00:01:46,2026-10-27T13:51:04Z
+18547170_7,SIM07: full corrected simulation endpoints,COMPLETED,00:01:46,2026-10-27T13:51:04Z
+18547170_8,SIM08: full corrected simulation endpoints,COMPLETED,00:01:46,2026-10-27T13:51:04Z
+18547170_9,SIM09: full corrected simulation endpoints,COMPLETED,00:01:46,2026-10-27T13:51:04Z
+18547170_10,SIM10: full corrected simulation endpoints,COMPLETED,00:02:06,2026-10-27T13:51:04Z

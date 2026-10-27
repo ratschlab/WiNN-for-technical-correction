@@ -1,0 +1,232 @@
+%% WiNN manuscript for Bioinformatics
+%% Comprehensive revision based on the frozen WiNN 0.1.4 analysis release.
+
+\documentclass[namedate,webpdf,modern,large,nocrop]{oup-authoring-template}
+
+\graphicspath{{figures/}{figures/main_panels/}}
+\newcommand{\societylogo}{}
+
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage{multirow}
+
+\ifdefined\WiNNReviewCopy
+  \usepackage[mathlines,switch]{lineno}
+  \usepackage{setspace}
+\fi
+
+\begin{document}
+
+\journaltitle{Bioinformatics}
+\copyrightyear{2026}
+\pubyear{2026}
+\appnotes{Original Paper}
+\firstpage{1}
+
+\title[WiNN for selective technical correction]{WiNN: selective run-order detrending and batch correction for randomized metabolomics experiments}
+
+\author[1,2,6]{Tanmay Tanna}
+\author[2]{Yirui Zhang}
+\author[2]{Anja Sjöström}
+\author[4]{Franco Giulianini}
+\author[2,6]{Malte Londschien}
+\author[2]{Antoine Jeanrenaud}
+\author[3]{Heike Luttmann-Gibson}
+\author[2,5,8]{André Kahles}
+\author[7]{Mitchell P. Levesque}
+\author[2,5,6,8,$\ast$]{Gunnar Rätsch}
+\author[2,3,4,$\ast$]{Olga Demler}
+
+\address[1]{\orgdiv{Department of Biosystems Science and Engineering}, \orgname{ETH Zürich}, \orgaddress{\country{Switzerland}}}
+\address[2]{\orgdiv{Department of Computer Science}, \orgname{ETH Zürich}, \orgaddress{\country{Switzerland}}}
+\address[3]{\orgdiv{Harvard T.H. Chan School of Public Health}, \orgaddress{\state{MA}, \country{USA}}}
+\address[4]{\orgdiv{Brigham and Women's Hospital, Harvard Medical School}, \orgaddress{\state{MA}, \country{USA}}}
+\address[5]{\orgdiv{Medical Informatics}, \orgname{University Hospital Zürich}, \orgaddress{Zürich, \country{Switzerland}}}
+\address[6]{\orgname{AI Center, ETH Zürich}, \orgaddress{Zürich, \country{Switzerland}}}
+\address[7]{\orgdiv{Department of Dermatology}, \orgname{University Hospital Zürich and Medical Faculty, University of Zürich}, \orgaddress{\country{Switzerland}}}
+\address[8]{\orgname{Swiss Institute for Bioinformatics}, \orgaddress{\state{Lausanne}, \country{Switzerland}}}
+
+\corresp[$\ast$]{Corresponding authors. \href{mailto:raetsch@inf.ethz.ch}{raetsch@inf.ethz.ch}; \href{mailto:odemler@bwh.harvard.edu}{odemler@bwh.harvard.edu}}
+
+\abstract{
+\textbf{Motivation:} Run-order drift and analytical batch effects obscure biological variation in metabolomics.\\
+\textbf{Results:} White Noise Normalization (WiNN) combines selective detrending and batch adjustment with robust preparation and optional dilution normalization, without requiring quality-control identities. Across ten simulation seeds, WiNN reduced clean-profile root mean squared error from 0.293 to 0.073 and outperformed five comparator methods on three truth-recovery endpoints. Across five empirical datasets, it reduced technical variation; cross-batch identity retrieval increased from 46.3\% to 71.0\% in \emph{Arabidopsis} and from 75.2\% to 86.2\% in a clinical cohort. Stress tests identified inflated gate false discoveries and attenuation of rare or coordinated responses.\\
+\textbf{Availability and Implementation:} The GPL-3 R package \texttt{winn} is available at \url{https://CRAN.R-project.org/package=winn}.\\
+\textbf{Contact:} \href{mailto:raetsch@inf.ethz.ch}{raetsch@inf.ethz.ch}; \href{mailto:odemler@bwh.harvard.edu}{odemler@bwh.harvard.edu}\\
+\textbf{Supplementary Information:} Supplementary methods, results and figures accompany the article.
+}
+
+\keywords{metabolomics; mass spectrometry; batch correction; run-order drift; normalization; biological signal preservation}
+
+\maketitle
+
+\ifdefined\WiNNReviewCopy
+  \onecolumn
+  \fontsize{12pt}{18pt}\selectfont
+  \doublespacing
+  \linenumbers
+\fi
+
+\section{Introduction}
+\label{sec:introduction}
+
+Sequential acquisition in mass-spectrometry (MS) metabolomics introduces feature-specific run-order drift through instrument equilibration, contamination and carryover. Sample preparation and instrument state also shift abundances between analytical batches \citep{Dunn2011,Brunius2016ClusterDrift,Wehrens2016BatchCorr}. These effects can exceed the biological differences of interest.
+
+Established methods include empirical-Bayes batch adjustment and quality-control (QC)-based smoothing or machine-learning models \citep{Johnson2007ComBat,Luan2018StatTarget,Fan2019SERRF,Han2022TIGER}. Applying correction to every feature can alter biological variation, motivating feature-specific selection \citep{Kim2021hRUV}. Randomized acquisition and group balance across batches separate biological from technical effects \citep{Dunn2011,Jonsson2015}; confounded effects cannot be identified from intensities alone. Evaluation therefore combines technical precision with biological identities, feature effects and simulation truth.
+
+Study-sample regression methods estimate drift without QC identities \citep{Wehrens2016BatchCorr,Rusilowicz2016Background}. WiNN extends the white-noise testing and selective spline correction introduced in WiNNbeta \citep{Demler2024WiNNbeta}, adding batch handling and expanded evaluation. It screens each feature for serial dependence within acquisition segments, detrends selected profiles and adjusts residual batch effects. We evaluate clean-truth recovery, confounding sensitivity, identity discrimination and feature-effect preservation.
+
+\section{Materials and methods}
+\label{sec:methods}
+
+\subsection{Design principle and WiNN workflow}
+
+A feature denotes a measured ion signal, peak or quantified metabolite; an injection is one instrument analysis. Analytical batches are recorded groups of injections, whereas inferred segments are contiguous intervals estimated from intensity profiles. WiNN accepts a finite, non-negative feature-by-injection matrix, acquisition order and optional batch labels and QC identities. Its primary design assumes biological variables are independent of study-sample acquisition order and batch assignment.
+
+WiNN shrinks extreme intensities using median absolute deviation (MAD) thresholds, then applies $\log(1+x)$. Within each batch or segment, approximate Ljung--Box tests with Benjamini--Hochberg (BH) adjustment select serially dependent profiles \citep{LjungBox1978,BenjaminiHochberg1995}. This gate is a selection heuristic; its calibration is measured below. Selected profiles are detrended using penalized spline generalized additive models (GAMs), with spline, LOESS and linear-model fallbacks \citep{Cleveland1979LOESS,Wood2017GAM}. WiNN then uses analysis of variance (ANOVA) to select residual batch shifts for adjustment. Centered corrections preserve segment or global feature means on the transformed scale before positivity safeguards. Optional probabilistic quotient normalization (PQN) adjusts samples outside the specified dilution-factor range \citep{Dieterle2006PQN}. Supplementary Methods S1 gives equations, thresholds, alternatives and safeguards.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/F1_winn_overview.pdf}
+\caption{\textbf{Selective correction in WiNN.} Biological groups are balanced across batches and randomized along acquisition order. Within each batch or inferred segment, WiNN tests and detrends serially dependent feature profiles, then adjusts selected residual batch shifts. MAD preparation and optional PQN are omitted.}
+\par\smallskip{\footnotesize\textbf{Alt text:} A workflow routes randomized feature profiles through selective detrending and batch adjustment; only profiles with detected technical structure are corrected.\par}
+\label{fig:winn-workflow}
+\end{figure*}
+
+\subsection{WiNN implementation and configurations}
+
+Unless qualified, \emph{WiNN} denotes the prespecified primary configuration: recorded batches, no QC identities, adaptive-lag Ljung--Box testing with \texttt{fitdf=0}, BH-adjusted selection thresholds of 0.05 for drift and batch adjustment, and thresholded PQN. Supplementary comparisons include \emph{WiNN (QC-tuned)}, which selects parameters using training QCs, and \emph{WiNN (inferred segments)}, which also infers acquisition segments when batch labels are unavailable. Both fit drift to all injections. Recorded batch labels are preferred; inferred segments need not reproduce analytical batches.
+
+\subsection{Simulation studies}
+
+Each of ten paired simulation seeds contained 1,000 features and 500 injections across five plates: 450 study injections, 40 training QCs and ten label-blinded evaluation QCs. Clean study log intensities followed $N(0,0.35^2)$; QCs shared a common profile. Independent plate offsets and linear, nonlinear, autoregressive or mixed drift trajectories were added on the log scale before exponentiation. Every method received the same corrupted input; clean truth was reserved for evaluation. The full generator, activity probabilities and amplitude distributions are specified in Supplementary Methods S2.
+
+A partial-confounding experiment added a balanced binary phenotype to the study injections. One hundred features received log effects of $+0.35$ or $-0.35$; 900 remained null. Labels were progressively aligned with batch, within-plate acquisition order or both, over six strengths from zero to the maximum allocation feasible under the balanced design. Correction received neither phenotype labels nor response truth. Feature-wise models used $\log(1+x)$ responses with phenotype, plate and within-plate position. Effect recovery was the median signed corrected-to-clean phenotype-coefficient ratio across responsive features. Detection sensitivity and empirical false-discovery rate (FDR) were calculated against the known responsive and null sets after BH adjustment of all 1,000 phenotype tests.
+
+\subsection{Empirical datasets}
+
+Five datasets supplied complementary biological assessments (Table~\ref{tab:designs}): repeated cow and sheep extracts in MTBLS79 \citep{Kirwan2014DIMSBenchmark}; repeated \emph{Arabidopsis} accessions in BatchCorr \citep{Wehrens2016BatchCorr}; deposited plasma groups in WaveICA \citep{Deng2021WaveICA}; age, BMI and gender in Sacurine urine profiles \citep{Thevenot2015Sacurine,Thevenot2018W4M00001}; and repeated identities in an internal flow-injection analysis mass-spectrometry (FIA-MS) serum cohort \citep{Fuhrer2011FIATOF}. Adjacent clinical technical injections were averaged after $\log(1+x)$ transformation into 660 pair units; learned corrections were applied identically to both injections. Clinical analyses use 536 study pairs and 38 held-out NIST1950 reference pairs. Preprocessing, imputation, osmolality scaling and acquisition-design summaries are detailed in the Supplement.
+
+\begin{table*}[t]
+\centering
+\small
+\caption{\textbf{Benchmark designs and biological anchors.} Held-out references remained in the input matrix, with their reference identities withheld from correction and parameter selection.}
+\label{tab:designs}
+\begin{tabular}{lrrrrrrp{3.6cm}}
+\toprule
+Dataset & Features & Biological units & Study units & References & Batches & Hidden refs. & Biological assessment \\
+\midrule
+Simulation & 1,000 & 450 per seed & 450 injections & 50 QCs & 5 & 10 & Clean profiles; 10 seeds \\
+MTBLS79 & 2,488 & 20 extracts & 134 injections & 38 pooled refs. & 8 & 12 & Cow-sheep contrast; repeated identity \\
+BatchCorr Set 1 & 199 & 357 accessions & 710 injections & 51 pooled refs. & 10 & 10 & Cross-batch accession replicates \\
+WaveICA & 6,461 & 568 samples & 568 injections & 74 QCs & 3 & 15 & Deposited group 0/1 contrast \\
+Sacurine & 113 & 184 samples & 184 injections & 26 QCs & 2 & 8 & Age, BMI and gender effects \\
+Clinical FIA-MS & 1,594 & 267 identities & 536 log-pair means & 124 control pairs & 8 & 38 & Cross-plate biological replicates \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{Comparator methods}
+
+We compared WiNN with ComBat \citep{Johnson2007ComBat}, QC-RLSC \citep{Dunn2011}, QC-RFSC \citep{Luan2018StatTarget}, TIGER \citep{Han2022TIGER} and SERRF \citep{Fan2019SERRF}. QC-RLSC used per-batch LOESS; the QC-RFSC adapter masked reference identities and restored output abundance units. Main empirical figures use the methods with matched paired uncertainty analyses; corrected QC-RFSC empirical point estimates are reported separately because those resampling analyses were not repeated for its revised fit. Study-sample ANCOVA \citep{Wehrens2016BatchCorr} and mean-only batch centering provide simpler baselines using the same intensity, order and batch inputs. All parameter selection used training references only.
+
+\subsection{Performance measures and uncertainty}
+
+\paragraph{Technical correction.} Held-out reference CV is $100\times\mathrm{SD}/\mathrm{mean}$ within each feature, averaged over finite feature CVs. References remained in the input matrix with their identities hidden from fitting and tuning. Residual acquisition-order deviance is $1-D_{\mathrm{res}}/D_{\mathrm{null}}$ from a Gaussian cubic-spline GAM of $\log(1+x)$ against within-segment order; the deviances are residual sums of squares for the fitted and intercept-only models. We report the mean over eligible profiles. Batch weighted-PC $R^2$ averages regressions of principal component (PC) scores on factor-coded batch, weighting PCs 1--5 by their eigenvalues. Principal component analysis uses standardized study-sample $\log(1+x)$ profiles. Group association uses the same construction with biological group labels.
+
+\paragraph{Biological structure and recovery.} Simulation endpoints are root mean squared error (RMSE) across the study-sample $\log(1+x)$ matrix, mean feature-profile ICC(A,1) and mean sample-profile Pearson correlation against clean truth. ICC(A,1) measures absolute agreement \citep{McGrawWong1996}: study samples are targets and clean/corrected values are measurement columns in simulation; features are targets and repeated acquisitions are columns in empirical replicate analyses. Cross-batch identity retrieval ranks other-batch study profiles by Pearson similarity across features after $\log(1+x)$ transformation. Each eligible query contributes equally to top-1 accuracy. Eligibility, candidate sets, tie handling and query counts are specified in Supplementary Methods S4.
+
+\paragraph{Uncertainty.} Simulation standard errors use ten independent seeds. Empirical estimates use 2,000 paired bootstrap draws with shared indices across methods: accessions for BatchCorr, identities for clinical data, class-stratified extract identities for MTBLS79, batch-by-group strata for WaveICA and batch strata for Sacurine. Retrieval retains query-count weighting within identity resampling. Correction and tuning remain fixed. Association counts are evaluated against 5,000 design-constrained permutations, including within-batch Freedman--Lane residual permutation for Sacurine \citep{EfronTibshirani1993,FreedmanLane1983}.
+
+\section{Results}
+\label{sec:results}
+
+\subsection{WiNN recovers clean simulated profiles when the design is randomized}
+
+Across ten simulation seeds, WiNN reduced mean held-out QC CV from 44.55\% to 8.69\% and residual run-order deviance from 12.51\% to 2.11\%. Clean-truth RMSE fell from 0.293 to 0.073, feature-profile ICC(A,1) increased from 0.588 to 0.921 and sample-profile correlation increased from 0.519 to 0.923 (Figure~\ref{fig:simulation}). WiNN outperformed ComBat, QC-RLSC, QC-RFSC, TIGER and SERRF on all three truth endpoints in every seed. QC-RFSC achieved a mean RMSE of 0.129, ICC(A,1) of 0.851 and sample-profile correlation of 0.823. QC-guided parameter tuning produced nearly identical truth recovery to the primary configuration (Supplementary Figure S3). Mean-only batch adjustment and study-sample ANCOVA yielded RMSEs of 0.116 and 0.098, respectively; WiNN improved all three truth endpoints over both baselines in every seed (Supplementary Table S27).
+
+Random phenotype allocation yielded clean-reference effect recovery of 0.948 and detection of all 100 responsive features. Batch alignment had little effect on recovery because within-plate overlap permitted plate-adjusted estimation, although detection sensitivity fell to 0.884 at maximum alignment. Alignment with acquisition order caused progressive attenuation. Under maximal joint batch/order alignment, recovery fell to 0.226, sensitivity to 0.133 and empirical FDR rose to 0.257 (Figure~\ref{fig:simulation}E,F). Held-out QC CV remained 8.83--9.75\% and residual run-order deviance 2.08--2.45\% across the grid (Supplementary Table S13; Figure S5): low technical variation coexisted with severe biological attenuation.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=175mm]{figures/F2_simulation.pdf}
+\caption{\textbf{Simulation truth recovery and sensitivity to confounding.} (A) Selective versus forced drift and batch gates. (B--D) Seven primary outputs; diamonds and bars are means and standard errors across ten seeds. RMSE uses the complete study-sample $\log(1+x)$ matrix. Lower RMSE and higher ICC/correlation are favorable. (E,F) WiNN effect recovery and empirical biological FDR, defined in Methods, versus phenotype--acquisition alignment; points and bars are means and standard errors across ten seeds. Alignment 100\% is the maximum feasible allocation. The dashed line marks nominal FDR 0.05; detection sensitivity is in Supplementary Table S13.}
+\par\smallskip{\footnotesize\textbf{Alt text:} WiNN has the lowest simulation error and highest truth agreement. Increasing phenotype alignment with acquisition order reduces biological recovery despite low technical variation.\par}
+\label{fig:simulation}
+\end{figure*}
+
+\subsection{Technical correction, replicate-profile agreement and identity discrimination}
+
+BatchCorr permits assessment of both replicate-profile agreement and identity discrimination because the same \emph{Arabidopsis} accessions were measured across batches. WiNN reduced held-out reference CV from 66.57\% to 26.67\%, residual run-order deviance from 12.24\% to 4.38\% and batch weighted-PC $R^2$ from 56.11\% to 0.057\%, while replicate ICC(A,1) increased from 0.885 to 0.954 (Figure~\ref{fig:replicates}A,C). Query-weighted retrieval accuracy increased from 46.3\% to 71.0\% with WiNN, compared with 71.6\% for ComBat and 71.3\% for QC-RLSC (Supplementary Results).
+
+The clinical FIA-MS cohort provided the corresponding repeated-identity test across plates. WiNN reduced held-out NIST1950 CV from 16.59\% to 12.40\%, residual run-order deviance from 12.03\% to 7.28\% and plate weighted-PC $R^2$ from 15.05\% to 0.205\%, while replicate ICC(A,1) increased from 0.9810 to 0.9898 (Figure~\ref{fig:replicates}B,D). WiNN had the lowest held-out NIST1950 CV and residual acquisition-order deviance among the primary empirical comparators. Clinical cross-batch identity retrieval increased from 75.2\% to 86.2\%; TIGER reached 88.1\%, providing the highest retrieval accuracy among these methods.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=175mm]{figures/F3_replicates.pdf}
+\caption{\textbf{Technical-effect removal and replicate-profile agreement.} (A,B) Held-out reference CV versus residual run-order GAM deviance (percentages). Bars are standard errors across features for CV and feature-segment profiles for deviance. (C,D) Batch or plate weighted-PC $R^2$ versus replicate ICC(A,1); bars are standard errors from 2,000 accession- or identity-cluster resamples. Lower x and higher y are favorable in C,D. Points have equal size; narrow intervals are obscured by symbols.}
+\par\smallskip{\footnotesize\textbf{Alt text:} WiNN reduces reference variability and batch structure and increases replicate agreement in the plant and clinical datasets; comparator rankings vary by endpoint.\par}
+\label{fig:replicates}
+\end{figure*}
+
+\subsection{Relative group structure and paired biological effects}
+
+WiNN reduced batch weighted-PC $R^2$ from 69.44\% to 0.208\%, while deposited-group weighted-PC $R^2$ increased from 0.277\% to 1.423\% (Figure~\ref{fig:public-biology}A). TIGER retained approximately three quarters of the raw batch association. ComBat, QC-RLSC and SERRF removed most batch separation, with lower relative group association than WiNN.
+
+WiNN reduced batch weighted-PC $R^2$ from 36.10\% to 1.085\%, while cow--sheep weighted-PC $R^2$ remained similar, at 43.54\% before and 44.26\% after correction (Figure~\ref{fig:public-biology}B; paired change +0.715 percentage points, 95\% percentile interval $-0.200$ to 1.571). ComBat and SERRF produced similar combinations of low batch association and retained group structure; QC-RLSC reduced the cow--sheep endpoint to 12.48\%. WiNN retained 96.9\% sign agreement between corrected and raw feature-level cow--sheep effects, with a through-origin slope of 0.980. Cross-batch effect agreement for WaveICA was modest and changed little; Sacurine responses differed across covariates. Mean-only batch adjustment and study-sample ANCOVA retained raw empirical effect magnitudes more closely for several contrasts, and their retrieval differences from WiNN had intervals spanning zero (Supplementary Tables S23 and S28).
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=175mm]{figures/F4_biological_structure.pdf}
+\caption{\textbf{Relative batch and biological group association.} (A) WaveICA deposited groups 0/1. (B) MTBLS79 batch association from 134 injections and cow--sheep association from 20 identity-collapsed extracts. Axes show variance-weighted mean $R^2$ across PCs 1--5 as percentages. Bars are standard errors from 2,000 batch-by-group-stratified study-sample resamples in A and class-stratified identity-cluster resamples in B. Lower x indicates less batch association; y measures relative group association. Points have equal size.}
+\par\smallskip{\footnotesize\textbf{Alt text:} WiNN reduces batch association in WaveICA and MTBLS79 while retaining relative biological group association.\par}
+\label{fig:public-biology}
+\end{figure*}
+
+\subsection{Ablations separate drift gating from batch adjustment}
+
+Ordered ablations and a $2\times2$ selective-versus-forced experiment separated stage contributions from selection rules. Batch adjustment produced the largest reductions in reference CV and batch structure; detrending reduced run-order deviance (Supplementary Tables S15--S16). Forcing detrending on all testable profiles further reduced serial structure but increased reference CV by 0.67--3.15 percentage points across six datasets and worsened simulation truth recovery (Figure~\ref{fig:simulation}A). WiNN selected 72.5--98.0\% of batch-eligible features; forcing batch adjustment had smaller, dataset-dependent effects. WiNN lowered reference CV in all ten prespecified reference partitions per dataset (Supplementary Figure S4).
+
+\subsection{Gate calibration and response-pattern stress tests}
+
+Targeted artifact-free checks quantified gate calibration and the effects of preparation and PQN (Supplementary Results). With 100 independent null features and 1,000 simulated experiments per segment size, MAD preparation followed by the adaptive Ljung--Box gate at nominal BH level 0.05 selected at least one feature in 13.5\%, 34.9\%, 19.8\% and 12.3\% of experiments at segment sizes 20, 50, 100 and 200, respectively. Under the global null, these probabilities equal the gate FDR and exceed the nominal level. A periodic reference--study abundance contrast also triggered the all-injection gate in the absence of technical drift. In separate artifact-free simulations, MAD preparation plus PQN retained a mean clean-reference effect ratio of 1.000 for balanced sparse responses, 0.310 for a rare responding subgroup and 0.534 for broad coordinated responses; each ratio averages the seed-level median across responsive features.
+
+\section{Discussion}
+\label{sec:discussion}
+
+WiNN combines feature-specific detrending and batch adjustment without requiring QC identities. Selective detrending improved simulation truth recovery over correction of every profile, while empirical correction reduced acquisition effects and increased cross-batch identity retrieval. Batch adjustment contributed substantially; its selection gate had smaller, dataset-dependent benefits. Comparator performance differed by endpoint: ComBat and QC-RLSC had similar BatchCorr retrieval accuracy, and TIGER had the highest clinical retrieval accuracy. Clean truth, reference precision and biological endpoints therefore provide complementary assessments.
+
+The primary gate is a heuristic screen for serial structure. Its finite-segment false-discovery rates exceeded nominal levels, and scheduled QC--study differences triggered selection without drift. Before correction, inspect biological-group placement, reference schedules and repeated identities across batch and run order. Where sample-type scheduling creates serial structure, acquisition randomization alone is insufficient; correction should use a design-aware reference model or a validated batch-only alternative.
+
+Preparation and dilution adjustment impose separate restrictions. MAD shrinkage attenuated rare-subgroup responses, while MAD and PQN both attenuated broad coordinated responses. The primary pipeline is therefore unsuitable when such effects are the intended biological signal. In prespecified mode, \texttt{median\_adjustment="none"} omits PQN, but the \texttt{winn()} entry point still applies MAD preparation; omitting PQN does not remove that restriction. Stage-specific results and practical configuration guidance are provided in the Supplement. WiNN's useful operating setting is randomized acquisition with biological responses compatible with its preparation and scaling assumptions.
+
+\section*{Supplementary data}
+Supplementary Methods and Results provide algorithms, comparator results, dataset analyses, ablations, robustness tests and numerical safeguards.
+
+% AUTHOR ACTION REQUIRED: insert the reviewing committee or institution,
+% approval identifier, and consent or waiver language for the internal cohort.
+
+\section*{Data availability}
+The \texttt{winn} R package is available under GPL-3 from CRAN (version 0.1.5, released 27 September 2026; \url{https://CRAN.R-project.org/package=winn}, DOI: \nolinkurl{10.32614/CRAN.package.winn}) and at \url{https://github.com/ratschlab/winn}. It can be installed with \texttt{install.packages("winn")}. Benchmarks used WiNN 0.1.4; source and configuration details are provided in the Supplement. Simulation, preprocessing and benchmark code, selected configurations and figure data are in the \href{https://github.com/ratschlab/WiNN-for-technical-correction}{analysis repository}. Public data are identified by accession, DOI or pinned commit. The internal clinical metabolomics data will be released with a forthcoming manuscript describing the cohort. Aggregate results supporting the present analyses accompany the reproducibility package.
+
+\section*{Funding}
+This work was supported in part by institutional funding and grants from the Swiss Cancer League (Krebsliga; KLS-5463-08-2021 to G.R.) and the Swiss National Science Foundation (SNSF; grant 213236 to A.K.).
+
+\section*{Acknowledgements}
+We thank the Zamboni group at ETH Zürich for the FIA-MS measurements and preprocessing that generated the clinical intensity matrix.
+
+\section*{Author contributions}
+T.T. led conceptualization, formal analysis, methodology, software and original drafting, and supported funding acquisition. Y.Z. supported formal analysis, methodology and software; A.S. and A.J. supported methodology and software; F.G. and H.L.G. supported conceptualization; M.L. supported conceptualization and methodology. A.K. contributed equally to funding acquisition, M.P.L. supported it, and G.R. led it and contributed equally to supervision. O.D. contributed equally to conceptualization and methodology and led supervision.
+
+\section*{Conflict of interest}
+The authors declare no conflicts of interest.
+
+\begingroup
+\footnotesize
+\setlength{\bibsep}{0pt}
+\bibliographystyle{oup-abbrvnat}
+\bibliography{references}
+\endgroup
+
+\end{document}

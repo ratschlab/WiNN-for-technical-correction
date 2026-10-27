@@ -1,0 +1,3 @@
+status=complete
+dataset=waveica
+scope=frozen endpoint definitions; refitted QC-RFSC only; uncertainty and other-method matrix re-evaluation remain

@@ -1,0 +1,81 @@
+"metric","value","direction","denominator","units","notes","dataset_key","method_id","method","split_id","dataset","metric_label","method_label","method_mean"
+"heldout_qc_cv_mean",71.8545947087541,"lower",199,"percent",NA,"batchcorr_set1","raw","Raw","SPLIT01","BatchCorr Set 1","Held-out QC CV (%)","Raw",67.9044579118164
+"heldout_qc_cv_mean",43.0509518688516,"lower",199,"percent",NA,"batchcorr_set1","combat","ComBat","SPLIT01","BatchCorr Set 1","Held-out QC CV (%)","ComBat",40.0353544264081
+"heldout_qc_cv_mean",41.7880170388972,"lower",199,"percent",NA,"batchcorr_set1","qc_rlsc","QC-RLSC","SPLIT01","BatchCorr Set 1","Held-out QC CV (%)","QC-RLSC",39.3772089259529
+"heldout_qc_cv_mean",44.4414909849769,"lower",199,"percent",NA,"batchcorr_set1","tiger","TIGER","SPLIT01","BatchCorr Set 1","Held-out QC CV (%)","TIGER",39.1143947635249
+"heldout_qc_cv_mean",47.9008511556349,"lower",199,"percent",NA,"batchcorr_set1","serrf","SERRF","SPLIT01","BatchCorr Set 1","Held-out QC CV (%)","SERRF",43.1226753240834
+"heldout_qc_cv_mean",31.6533983146267,"lower",199,"percent",NA,"batchcorr_set1","winn_auto_qc","WiNN (QC-tuned)","SPLIT01","BatchCorr Set 1","Held-out QC CV (%)","WiNN (QC-tuned)",29.8657510218841
+"heldout_qc_cv_mean",34.1965784887349,"lower",199,"percent",NA,"batchcorr_set1","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT01","BatchCorr Set 1","Held-out QC CV (%)","WiNN (inferred segments)",31.4683486917862
+"heldout_qc_cv_mean",33.3251606047264,"lower",199,"percent",NA,"batchcorr_set1","winn_fixed_no_qc","WiNN","SPLIT01","BatchCorr Set 1","Held-out QC CV (%)","WiNN",32.0254781754332
+"heldout_qc_cv_mean",66.3757444454754,"lower",199,"percent",NA,"batchcorr_set1","raw","Raw","SPLIT02","BatchCorr Set 1","Held-out QC CV (%)","Raw",67.9044579118164
+"heldout_qc_cv_mean",29.6826535304583,"lower",199,"percent",NA,"batchcorr_set1","combat","ComBat","SPLIT02","BatchCorr Set 1","Held-out QC CV (%)","ComBat",40.0353544264081
+"heldout_qc_cv_mean",33.4948905654762,"lower",199,"percent",NA,"batchcorr_set1","qc_rlsc","QC-RLSC","SPLIT02","BatchCorr Set 1","Held-out QC CV (%)","QC-RLSC",39.3772089259529
+"heldout_qc_cv_mean",24.4968107230599,"lower",199,"percent",NA,"batchcorr_set1","tiger","TIGER","SPLIT02","BatchCorr Set 1","Held-out QC CV (%)","TIGER",39.1143947635249
+"heldout_qc_cv_mean",29.5822078493796,"lower",199,"percent",NA,"batchcorr_set1","serrf","SERRF","SPLIT02","BatchCorr Set 1","Held-out QC CV (%)","SERRF",43.1226753240834
+"heldout_qc_cv_mean",23.4708592751694,"lower",199,"percent",NA,"batchcorr_set1","winn_auto_qc","WiNN (QC-tuned)","SPLIT02","BatchCorr Set 1","Held-out QC CV (%)","WiNN (QC-tuned)",29.8657510218841
+"heldout_qc_cv_mean",24.2755076724335,"lower",199,"percent",NA,"batchcorr_set1","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT02","BatchCorr Set 1","Held-out QC CV (%)","WiNN (inferred segments)",31.4683486917862
+"heldout_qc_cv_mean",26.0506732201358,"lower",199,"percent",NA,"batchcorr_set1","winn_fixed_no_qc","WiNN","SPLIT02","BatchCorr Set 1","Held-out QC CV (%)","WiNN",32.0254781754332
+"heldout_qc_cv_mean",65.0212017021549,"lower",199,"percent",NA,"batchcorr_set1","raw","Raw","SPLIT03","BatchCorr Set 1","Held-out QC CV (%)","Raw",67.9044579118164
+"heldout_qc_cv_mean",43.9847166994292,"lower",199,"percent",NA,"batchcorr_set1","combat","ComBat","SPLIT03","BatchCorr Set 1","Held-out QC CV (%)","ComBat",40.0353544264081
+"heldout_qc_cv_mean",43.489455326466,"lower",199,"percent",NA,"batchcorr_set1","qc_rlsc","QC-RLSC","SPLIT03","BatchCorr Set 1","Held-out QC CV (%)","QC-RLSC",39.3772089259529
+"heldout_qc_cv_mean",47.02342486234,"lower",199,"percent",NA,"batchcorr_set1","tiger","TIGER","SPLIT03","BatchCorr Set 1","Held-out QC CV (%)","TIGER",39.1143947635249
+"heldout_qc_cv_mean",49.5610555810315,"lower",199,"percent",NA,"batchcorr_set1","serrf","SERRF","SPLIT03","BatchCorr Set 1","Held-out QC CV (%)","SERRF",43.1226753240834
+"heldout_qc_cv_mean",30.9666144963743,"lower",199,"percent",NA,"batchcorr_set1","winn_auto_qc","WiNN (QC-tuned)","SPLIT03","BatchCorr Set 1","Held-out QC CV (%)","WiNN (QC-tuned)",29.8657510218841
+"heldout_qc_cv_mean",30.9062297214486,"lower",199,"percent",NA,"batchcorr_set1","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT03","BatchCorr Set 1","Held-out QC CV (%)","WiNN (inferred segments)",31.4683486917862
+"heldout_qc_cv_mean",33.8370303319487,"lower",199,"percent",NA,"batchcorr_set1","winn_fixed_no_qc","WiNN","SPLIT03","BatchCorr Set 1","Held-out QC CV (%)","WiNN",32.0254781754332
+"heldout_qc_cv_mean",68.631876727035,"lower",199,"percent",NA,"batchcorr_set1","raw","Raw","SPLIT04","BatchCorr Set 1","Held-out QC CV (%)","Raw",67.9044579118164
+"heldout_qc_cv_mean",37.5241778189325,"lower",199,"percent",NA,"batchcorr_set1","combat","ComBat","SPLIT04","BatchCorr Set 1","Held-out QC CV (%)","ComBat",40.0353544264081
+"heldout_qc_cv_mean",39.3039343889408,"lower",199,"percent",NA,"batchcorr_set1","qc_rlsc","QC-RLSC","SPLIT04","BatchCorr Set 1","Held-out QC CV (%)","QC-RLSC",39.3772089259529
+"heldout_qc_cv_mean",41.7881091290249,"lower",199,"percent",NA,"batchcorr_set1","tiger","TIGER","SPLIT04","BatchCorr Set 1","Held-out QC CV (%)","TIGER",39.1143947635249
+"heldout_qc_cv_mean",42.0150526853123,"lower",199,"percent",NA,"batchcorr_set1","serrf","SERRF","SPLIT04","BatchCorr Set 1","Held-out QC CV (%)","SERRF",43.1226753240834
+"heldout_qc_cv_mean",24.782893491004,"lower",199,"percent",NA,"batchcorr_set1","winn_auto_qc","WiNN (QC-tuned)","SPLIT04","BatchCorr Set 1","Held-out QC CV (%)","WiNN (QC-tuned)",29.8657510218841
+"heldout_qc_cv_mean",25.1637611704863,"lower",199,"percent",NA,"batchcorr_set1","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT04","BatchCorr Set 1","Held-out QC CV (%)","WiNN (inferred segments)",31.4683486917862
+"heldout_qc_cv_mean",27.6670414450314,"lower",199,"percent",NA,"batchcorr_set1","winn_fixed_no_qc","WiNN","SPLIT04","BatchCorr Set 1","Held-out QC CV (%)","WiNN",32.0254781754332
+"heldout_qc_cv_mean",66.4030375448346,"lower",199,"percent",NA,"batchcorr_set1","raw","Raw","SPLIT05","BatchCorr Set 1","Held-out QC CV (%)","Raw",67.9044579118164
+"heldout_qc_cv_mean",41.4750747565919,"lower",199,"percent",NA,"batchcorr_set1","combat","ComBat","SPLIT05","BatchCorr Set 1","Held-out QC CV (%)","ComBat",40.0353544264081
+"heldout_qc_cv_mean",40.9388485502557,"lower",199,"percent",NA,"batchcorr_set1","qc_rlsc","QC-RLSC","SPLIT05","BatchCorr Set 1","Held-out QC CV (%)","QC-RLSC",39.3772089259529
+"heldout_qc_cv_mean",46.0132375679147,"lower",199,"percent",NA,"batchcorr_set1","tiger","TIGER","SPLIT05","BatchCorr Set 1","Held-out QC CV (%)","TIGER",39.1143947635249
+"heldout_qc_cv_mean",46.1341580346642,"lower",199,"percent",NA,"batchcorr_set1","serrf","SERRF","SPLIT05","BatchCorr Set 1","Held-out QC CV (%)","SERRF",43.1226753240834
+"heldout_qc_cv_mean",29.3859772031398,"lower",199,"percent",NA,"batchcorr_set1","winn_auto_qc","WiNN (QC-tuned)","SPLIT05","BatchCorr Set 1","Held-out QC CV (%)","WiNN (QC-tuned)",29.8657510218841
+"heldout_qc_cv_mean",29.5896471243293,"lower",199,"percent",NA,"batchcorr_set1","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT05","BatchCorr Set 1","Held-out QC CV (%)","WiNN (inferred segments)",31.4683486917862
+"heldout_qc_cv_mean",32.0801893173233,"lower",199,"percent",NA,"batchcorr_set1","winn_fixed_no_qc","WiNN","SPLIT05","BatchCorr Set 1","Held-out QC CV (%)","WiNN",32.0254781754332
+"heldout_qc_cv_mean",67.8402260601066,"lower",199,"percent",NA,"batchcorr_set1","raw","Raw","SPLIT06","BatchCorr Set 1","Held-out QC CV (%)","Raw",67.9044579118164
+"heldout_qc_cv_mean",35.9916496364465,"lower",199,"percent",NA,"batchcorr_set1","combat","ComBat","SPLIT06","BatchCorr Set 1","Held-out QC CV (%)","ComBat",40.0353544264081
+"heldout_qc_cv_mean",34.2804758522518,"lower",199,"percent",NA,"batchcorr_set1","qc_rlsc","QC-RLSC","SPLIT06","BatchCorr Set 1","Held-out QC CV (%)","QC-RLSC",39.3772089259529
+"heldout_qc_cv_mean",29.4208521119432,"lower",199,"percent",NA,"batchcorr_set1","tiger","TIGER","SPLIT06","BatchCorr Set 1","Held-out QC CV (%)","TIGER",39.1143947635249
+"heldout_qc_cv_mean",35.5303981360944,"lower",199,"percent",NA,"batchcorr_set1","serrf","SERRF","SPLIT06","BatchCorr Set 1","Held-out QC CV (%)","SERRF",43.1226753240834
+"heldout_qc_cv_mean",30.7399828035854,"lower",199,"percent",NA,"batchcorr_set1","winn_auto_qc","WiNN (QC-tuned)","SPLIT06","BatchCorr Set 1","Held-out QC CV (%)","WiNN (QC-tuned)",29.8657510218841
+"heldout_qc_cv_mean",34.0056862986946,"lower",199,"percent",NA,"batchcorr_set1","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT06","BatchCorr Set 1","Held-out QC CV (%)","WiNN (inferred segments)",31.4683486917862
+"heldout_qc_cv_mean",31.0387959850517,"lower",199,"percent",NA,"batchcorr_set1","winn_fixed_no_qc","WiNN","SPLIT06","BatchCorr Set 1","Held-out QC CV (%)","WiNN",32.0254781754332
+"heldout_qc_cv_mean",71.4636599030414,"lower",199,"percent",NA,"batchcorr_set1","raw","Raw","SPLIT07","BatchCorr Set 1","Held-out QC CV (%)","Raw",67.9044579118164
+"heldout_qc_cv_mean",50.1834000158205,"lower",199,"percent",NA,"batchcorr_set1","combat","ComBat","SPLIT07","BatchCorr Set 1","Held-out QC CV (%)","ComBat",40.0353544264081
+"heldout_qc_cv_mean",49.3235586032174,"lower",199,"percent",NA,"batchcorr_set1","qc_rlsc","QC-RLSC","SPLIT07","BatchCorr Set 1","Held-out QC CV (%)","QC-RLSC",39.3772089259529
+"heldout_qc_cv_mean",53.3797222757081,"lower",199,"percent",NA,"batchcorr_set1","tiger","TIGER","SPLIT07","BatchCorr Set 1","Held-out QC CV (%)","TIGER",39.1143947635249
+"heldout_qc_cv_mean",55.4350928442513,"lower",199,"percent",NA,"batchcorr_set1","serrf","SERRF","SPLIT07","BatchCorr Set 1","Held-out QC CV (%)","SERRF",43.1226753240834
+"heldout_qc_cv_mean",36.52244387879,"lower",199,"percent",NA,"batchcorr_set1","winn_auto_qc","WiNN (QC-tuned)","SPLIT07","BatchCorr Set 1","Held-out QC CV (%)","WiNN (QC-tuned)",29.8657510218841
+"heldout_qc_cv_mean",36.7858018243471,"lower",199,"percent",NA,"batchcorr_set1","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT07","BatchCorr Set 1","Held-out QC CV (%)","WiNN (inferred segments)",31.4683486917862
+"heldout_qc_cv_mean",39.4650537591323,"lower",199,"percent",NA,"batchcorr_set1","winn_fixed_no_qc","WiNN","SPLIT07","BatchCorr Set 1","Held-out QC CV (%)","WiNN",32.0254781754332
+"heldout_qc_cv_mean",62.4297317186145,"lower",199,"percent",NA,"batchcorr_set1","raw","Raw","SPLIT08","BatchCorr Set 1","Held-out QC CV (%)","Raw",67.9044579118164
+"heldout_qc_cv_mean",29.9982595501364,"lower",199,"percent",NA,"batchcorr_set1","combat","ComBat","SPLIT08","BatchCorr Set 1","Held-out QC CV (%)","ComBat",40.0353544264081
+"heldout_qc_cv_mean",28.9838773681281,"lower",199,"percent",NA,"batchcorr_set1","qc_rlsc","QC-RLSC","SPLIT08","BatchCorr Set 1","Held-out QC CV (%)","QC-RLSC",39.3772089259529
+"heldout_qc_cv_mean",21.9023788351058,"lower",199,"percent",NA,"batchcorr_set1","tiger","TIGER","SPLIT08","BatchCorr Set 1","Held-out QC CV (%)","TIGER",39.1143947635249
+"heldout_qc_cv_mean",29.7509169035163,"lower",199,"percent",NA,"batchcorr_set1","serrf","SERRF","SPLIT08","BatchCorr Set 1","Held-out QC CV (%)","SERRF",43.1226753240834
+"heldout_qc_cv_mean",23.6740402510958,"lower",199,"percent",NA,"batchcorr_set1","winn_auto_qc","WiNN (QC-tuned)","SPLIT08","BatchCorr Set 1","Held-out QC CV (%)","WiNN (QC-tuned)",29.8657510218841
+"heldout_qc_cv_mean",27.4984834973481,"lower",199,"percent",NA,"batchcorr_set1","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT08","BatchCorr Set 1","Held-out QC CV (%)","WiNN (inferred segments)",31.4683486917862
+"heldout_qc_cv_mean",25.9982148190841,"lower",199,"percent",NA,"batchcorr_set1","winn_fixed_no_qc","WiNN","SPLIT08","BatchCorr Set 1","Held-out QC CV (%)","WiNN",32.0254781754332
+"heldout_qc_cv_mean",73.0038489604142,"lower",199,"percent",NA,"batchcorr_set1","raw","Raw","SPLIT09","BatchCorr Set 1","Held-out QC CV (%)","Raw",67.9044579118164
+"heldout_qc_cv_mean",44.1555341477645,"lower",199,"percent",NA,"batchcorr_set1","combat","ComBat","SPLIT09","BatchCorr Set 1","Held-out QC CV (%)","ComBat",40.0353544264081
+"heldout_qc_cv_mean",42.756385970683,"lower",199,"percent",NA,"batchcorr_set1","qc_rlsc","QC-RLSC","SPLIT09","BatchCorr Set 1","Held-out QC CV (%)","QC-RLSC",39.3772089259529
+"heldout_qc_cv_mean",45.8683158407968,"lower",199,"percent",NA,"batchcorr_set1","tiger","TIGER","SPLIT09","BatchCorr Set 1","Held-out QC CV (%)","TIGER",39.1143947635249
+"heldout_qc_cv_mean",49.0748659436653,"lower",199,"percent",NA,"batchcorr_set1","serrf","SERRF","SPLIT09","BatchCorr Set 1","Held-out QC CV (%)","SERRF",43.1226753240834
+"heldout_qc_cv_mean",32.2341015137208,"lower",199,"percent",NA,"batchcorr_set1","winn_auto_qc","WiNN (QC-tuned)","SPLIT09","BatchCorr Set 1","Held-out QC CV (%)","WiNN (QC-tuned)",29.8657510218841
+"heldout_qc_cv_mean",35.0704211411783,"lower",199,"percent",NA,"batchcorr_set1","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT09","BatchCorr Set 1","Held-out QC CV (%)","WiNN (inferred segments)",31.4683486917862
+"heldout_qc_cv_mean",33.9059385292906,"lower",199,"percent",NA,"batchcorr_set1","winn_fixed_no_qc","WiNN","SPLIT09","BatchCorr Set 1","Held-out QC CV (%)","WiNN",32.0254781754332
+"heldout_qc_cv_mean",66.0206573477335,"lower",199,"percent",NA,"batchcorr_set1","raw","Raw","SPLIT10","BatchCorr Set 1","Held-out QC CV (%)","Raw",67.9044579118164
+"heldout_qc_cv_mean",44.3071262396493,"lower",199,"percent",NA,"batchcorr_set1","combat","ComBat","SPLIT10","BatchCorr Set 1","Held-out QC CV (%)","ComBat",40.0353544264081
+"heldout_qc_cv_mean",39.4126455952125,"lower",199,"percent",NA,"batchcorr_set1","qc_rlsc","QC-RLSC","SPLIT10","BatchCorr Set 1","Held-out QC CV (%)","QC-RLSC",39.3772089259529
+"heldout_qc_cv_mean",36.8096053043785,"lower",199,"percent",NA,"batchcorr_set1","tiger","TIGER","SPLIT10","BatchCorr Set 1","Held-out QC CV (%)","TIGER",39.1143947635249
+"heldout_qc_cv_mean",46.2421541072846,"lower",199,"percent",NA,"batchcorr_set1","serrf","SERRF","SPLIT10","BatchCorr Set 1","Held-out QC CV (%)","SERRF",43.1226753240834
+"heldout_qc_cv_mean",35.2271989913348,"lower",199,"percent",NA,"batchcorr_set1","winn_auto_qc","WiNN (QC-tuned)","SPLIT10","BatchCorr Set 1","Held-out QC CV (%)","WiNN (QC-tuned)",29.8657510218841
+"heldout_qc_cv_mean",37.1913699788611,"lower",199,"percent",NA,"batchcorr_set1","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT10","BatchCorr Set 1","Held-out QC CV (%)","WiNN (inferred segments)",31.4683486917862
+"heldout_qc_cv_mean",36.8866837426072,"lower",199,"percent",NA,"batchcorr_set1","winn_fixed_no_qc","WiNN","SPLIT10","BatchCorr Set 1","Held-out QC CV (%)","WiNN",32.0254781754332

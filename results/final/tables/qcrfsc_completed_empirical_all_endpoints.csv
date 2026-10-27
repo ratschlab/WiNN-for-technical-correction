@@ -1,0 +1,85 @@
+metric,value,direction,denominator,units,notes,dataset_key,method_id,method
+heldout_qc_cv_mean,15.6881195296124,lower,2488,percent,,mtbls79,qc_rfsc_corrected,QC-RFSC corrected
+heldout_qc_cv_sd,10.8517753315507,lower,2488,percent,,mtbls79,qc_rfsc_corrected,QC-RFSC corrected
+heldout_qc_cv_median,12.8199377215522,lower,2488,percent,,mtbls79,qc_rfsc_corrected,QC-RFSC corrected
+residual_run_order_gam_mean_deviance,0.157727609966725,lower,19904,proportion,,mtbls79,qc_rfsc_corrected,QC-RFSC corrected
+residual_run_order_gam_sd_deviance,0.179630664830115,lower,19904,proportion,,mtbls79,qc_rfsc_corrected,QC-RFSC corrected
+residual_ljung_box_proportion_significant,0.00130627009646302,lower,19904,proportion,,mtbls79,qc_rfsc_corrected,QC-RFSC corrected
+batch_weighted_pc_r2_categorical,0.18928817833772,lower,134,weighted R-squared,Batch is explicitly categorical.,mtbls79,qc_rfsc_corrected,QC-RFSC corrected
+retained_features,2488,higher,2488,features,,mtbls79,qc_rfsc_corrected,QC-RFSC corrected
+retained_samples,172,higher,172,samples,,mtbls79,qc_rfsc_corrected,QC-RFSC corrected
+runtime_sec,NA,lower,1,seconds,,mtbls79,qc_rfsc_corrected,QC-RFSC corrected
+drift_profiles_corrected,NA,descriptive,19904,profiles,,mtbls79,qc_rfsc_corrected,QC-RFSC corrected
+drift_features_corrected,NA,descriptive,2488,features,,mtbls79,qc_rfsc_corrected,QC-RFSC corrected
+batch_features_corrected,NA,descriptive,2488,features,,mtbls79,qc_rfsc_corrected,QC-RFSC corrected
+biological_weighted_pc_r2,0.431781317139511,higher,134,weighted R-squared,,mtbls79,qc_rfsc_corrected,QC-RFSC corrected
+metabolite_icc_a1_median,0.604173326440372,higher,2488,"ICC(A,1)",,mtbls79,qc_rfsc_corrected,QC-RFSC corrected
+sample_replicate_pearson_median,0.959605002000313,higher,20,correlation,,mtbls79,qc_rfsc_corrected,QC-RFSC corrected
+biological_associated_features,1003,context,2488,features,,mtbls79,qc_rfsc_corrected,QC-RFSC corrected
+heldout_qc_cv_mean,42.9229903313747,lower,199,percent,,batchcorr_set1,qc_rfsc_corrected,QC-RFSC corrected
+heldout_qc_cv_sd,36.4107441389749,lower,199,percent,,batchcorr_set1,qc_rfsc_corrected,QC-RFSC corrected
+heldout_qc_cv_median,28.3223796996679,lower,199,percent,,batchcorr_set1,qc_rfsc_corrected,QC-RFSC corrected
+residual_run_order_gam_mean_deviance,0.121140209234102,lower,1990,proportion,,batchcorr_set1,qc_rfsc_corrected,QC-RFSC corrected
+residual_run_order_gam_sd_deviance,0.153717850305358,lower,1990,proportion,,batchcorr_set1,qc_rfsc_corrected,QC-RFSC corrected
+residual_ljung_box_proportion_significant,0.171859296482412,lower,1990,proportion,,batchcorr_set1,qc_rfsc_corrected,QC-RFSC corrected
+batch_weighted_pc_r2_categorical,0.168624993045559,lower,710,weighted R-squared,Batch is explicitly categorical.,batchcorr_set1,qc_rfsc_corrected,QC-RFSC corrected
+retained_features,199,higher,199,features,,batchcorr_set1,qc_rfsc_corrected,QC-RFSC corrected
+retained_samples,761,higher,761,samples,,batchcorr_set1,qc_rfsc_corrected,QC-RFSC corrected
+runtime_sec,NA,lower,1,seconds,,batchcorr_set1,qc_rfsc_corrected,QC-RFSC corrected
+drift_profiles_corrected,NA,descriptive,1990,profiles,,batchcorr_set1,qc_rfsc_corrected,QC-RFSC corrected
+drift_features_corrected,NA,descriptive,199,features,,batchcorr_set1,qc_rfsc_corrected,QC-RFSC corrected
+batch_features_corrected,NA,descriptive,199,features,,batchcorr_set1,qc_rfsc_corrected,QC-RFSC corrected
+biological_weighted_pc_r2,0.71387495450533,higher,710,weighted R-squared,,batchcorr_set1,qc_rfsc_corrected,QC-RFSC corrected
+feature_repeatability_ratio_median,0.647267764056943,higher,199,repeatability ratio,,batchcorr_set1,qc_rfsc_corrected,QC-RFSC corrected
+sample_replicate_pearson_median,0.918190726603839,higher,352,correlation,,batchcorr_set1,qc_rfsc_corrected,QC-RFSC corrected
+genuine_replicate_icc_median,0.910106106378003,higher,352,"ICC(A,1)",,batchcorr_set1,qc_rfsc_corrected,QC-RFSC corrected
+biological_associated_features,180,context,199,features,,batchcorr_set1,qc_rfsc_corrected,QC-RFSC corrected
+heldout_qc_cv_mean,16.8798209814971,lower,1594,percent,,clinical_fiams,qc_rfsc_corrected,QC-RFSC corrected
+heldout_qc_cv_sd,10.8878829093119,lower,1594,percent,,clinical_fiams,qc_rfsc_corrected,QC-RFSC corrected
+heldout_qc_cv_median,14.5081281323722,lower,1594,percent,,clinical_fiams,qc_rfsc_corrected,QC-RFSC corrected
+residual_run_order_gam_mean_deviance,0.116660513809606,lower,12752,proportion,,clinical_fiams,qc_rfsc_corrected,QC-RFSC corrected
+residual_run_order_gam_sd_deviance,0.118858682067517,lower,12752,proportion,,clinical_fiams,qc_rfsc_corrected,QC-RFSC corrected
+residual_ljung_box_proportion_significant,0.16060225846926,lower,12752,proportion,,clinical_fiams,qc_rfsc_corrected,QC-RFSC corrected
+batch_weighted_pc_r2_categorical,0.020605458448264,lower,536,weighted R-squared,Batch is explicitly categorical.,clinical_fiams,qc_rfsc_corrected,QC-RFSC corrected
+retained_features,1594,higher,1594,features,,clinical_fiams,qc_rfsc_corrected,QC-RFSC corrected
+retained_samples,660,higher,660,samples,,clinical_fiams,qc_rfsc_corrected,QC-RFSC corrected
+runtime_sec,NA,lower,1,seconds,,clinical_fiams,qc_rfsc_corrected,QC-RFSC corrected
+drift_profiles_corrected,NA,descriptive,12752,profiles,,clinical_fiams,qc_rfsc_corrected,QC-RFSC corrected
+drift_features_corrected,NA,descriptive,1594,features,,clinical_fiams,qc_rfsc_corrected,QC-RFSC corrected
+batch_features_corrected,NA,descriptive,1594,features,,clinical_fiams,qc_rfsc_corrected,QC-RFSC corrected
+biological_weighted_pc_r2,0.779551753170374,higher,536,weighted R-squared,,clinical_fiams,qc_rfsc_corrected,QC-RFSC corrected
+feature_repeatability_ratio_median,0.679542527727394,higher,1594,repeatability ratio,,clinical_fiams,qc_rfsc_corrected,QC-RFSC corrected
+sample_replicate_pearson_median,0.986180780658088,higher,267,correlation,,clinical_fiams,qc_rfsc_corrected,QC-RFSC corrected
+genuine_replicate_icc_median,0.983627909601192,higher,267,"ICC(A,1)",,clinical_fiams,qc_rfsc_corrected,QC-RFSC corrected
+heldout_qc_cv_mean,13.6442943562489,lower,113,percent,,sacurine,qc_rfsc_corrected,QC-RFSC corrected
+heldout_qc_cv_sd,15.1361886250297,lower,113,percent,,sacurine,qc_rfsc_corrected,QC-RFSC corrected
+heldout_qc_cv_median,9.58896702304396,lower,113,percent,,sacurine,qc_rfsc_corrected,QC-RFSC corrected
+residual_run_order_gam_mean_deviance,0.0335616155302128,lower,226,proportion,,sacurine,qc_rfsc_corrected,QC-RFSC corrected
+residual_run_order_gam_sd_deviance,0.0455855560366368,lower,226,proportion,,sacurine,qc_rfsc_corrected,QC-RFSC corrected
+residual_ljung_box_proportion_significant,0.00442477876106195,lower,226,proportion,,sacurine,qc_rfsc_corrected,QC-RFSC corrected
+batch_weighted_pc_r2_categorical,0.00245413004657619,lower,184,weighted R-squared,Batch is explicitly categorical.,sacurine,qc_rfsc_corrected,QC-RFSC corrected
+retained_features,113,higher,113,features,,sacurine,qc_rfsc_corrected,QC-RFSC corrected
+retained_samples,210,higher,210,samples,,sacurine,qc_rfsc_corrected,QC-RFSC corrected
+runtime_sec,NA,lower,1,seconds,,sacurine,qc_rfsc_corrected,QC-RFSC corrected
+drift_profiles_corrected,NA,descriptive,226,profiles,,sacurine,qc_rfsc_corrected,QC-RFSC corrected
+drift_features_corrected,NA,descriptive,113,features,,sacurine,qc_rfsc_corrected,QC-RFSC corrected
+batch_features_corrected,NA,descriptive,113,features,,sacurine,qc_rfsc_corrected,QC-RFSC corrected
+biological_weighted_pc_r2,0.0375758664082763,higher,3,weighted R-squared,,sacurine,qc_rfsc_corrected,QC-RFSC corrected
+biological_associated_features,35,context,339,feature-variable tests,,sacurine,qc_rfsc_corrected,QC-RFSC corrected
+cross_batch_effect_pearson_median,0.528331490500083,higher,3,correlation,,sacurine,qc_rfsc_corrected,QC-RFSC corrected
+heldout_qc_cv_mean,28.8917940135068,lower,6461,percent,,waveica,qc_rfsc_corrected,QC-RFSC corrected
+heldout_qc_cv_sd,26.8148590857639,lower,6461,percent,,waveica,qc_rfsc_corrected,QC-RFSC corrected
+heldout_qc_cv_median,22.1412950722839,lower,6461,percent,,waveica,qc_rfsc_corrected,QC-RFSC corrected
+residual_run_order_gam_mean_deviance,0.127555288287791,lower,19383,proportion,,waveica,qc_rfsc_corrected,QC-RFSC corrected
+residual_run_order_gam_sd_deviance,0.137531615069949,lower,19383,proportion,,waveica,qc_rfsc_corrected,QC-RFSC corrected
+residual_ljung_box_proportion_significant,0.582108032812258,lower,19383,proportion,,waveica,qc_rfsc_corrected,QC-RFSC corrected
+batch_weighted_pc_r2_categorical,0.515953725788584,lower,568,weighted R-squared,Batch is explicitly categorical.,waveica,qc_rfsc_corrected,QC-RFSC corrected
+retained_features,6461,higher,6461,features,,waveica,qc_rfsc_corrected,QC-RFSC corrected
+retained_samples,642,higher,642,samples,,waveica,qc_rfsc_corrected,QC-RFSC corrected
+runtime_sec,NA,lower,1,seconds,,waveica,qc_rfsc_corrected,QC-RFSC corrected
+drift_profiles_corrected,NA,descriptive,19383,profiles,,waveica,qc_rfsc_corrected,QC-RFSC corrected
+drift_features_corrected,NA,descriptive,6461,features,,waveica,qc_rfsc_corrected,QC-RFSC corrected
+batch_features_corrected,NA,descriptive,6461,features,,waveica,qc_rfsc_corrected,QC-RFSC corrected
+biological_weighted_pc_r2,0.00859524436407075,higher,568,weighted R-squared,,waveica,qc_rfsc_corrected,QC-RFSC corrected
+biological_associated_features,391,context,6461,features,,waveica,qc_rfsc_corrected,QC-RFSC corrected
+cross_batch_effect_pearson_median,0.312359098900102,higher,3,correlation,,waveica,qc_rfsc_corrected,QC-RFSC corrected

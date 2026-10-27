@@ -1,0 +1,45 @@
+"dataset","batch","group","count"
+"mtbls79","1","C",8
+"mtbls79","1","S",8
+"mtbls79","2","C",10
+"mtbls79","2","S",10
+"mtbls79","3","C",10
+"mtbls79","3","S",10
+"mtbls79","4","C",7
+"mtbls79","4","S",9
+"mtbls79","5","C",7
+"mtbls79","5","S",5
+"mtbls79","6","C",8
+"mtbls79","6","S",7
+"mtbls79","7","C",8
+"mtbls79","7","S",9
+"mtbls79","8","C",8
+"mtbls79","8","S",10
+"batchcorr_set1","B1","study (no phenotype contrast)",74
+"batchcorr_set1","B2","study (no phenotype contrast)",72
+"batchcorr_set1","B9","study (no phenotype contrast)",74
+"batchcorr_set1","B10","study (no phenotype contrast)",43
+"batchcorr_set1","B7","study (no phenotype contrast)",74
+"batchcorr_set1","B8","study (no phenotype contrast)",75
+"batchcorr_set1","B3","study (no phenotype contrast)",74
+"batchcorr_set1","B4","study (no phenotype contrast)",74
+"batchcorr_set1","B5","study (no phenotype contrast)",75
+"batchcorr_set1","B6","study (no phenotype contrast)",75
+"sacurine","ne1","Female",46
+"sacurine","ne1","Male",44
+"sacurine","ne2","Female",37
+"sacurine","ne2","Male",57
+"waveica","1","group_0",24
+"waveica","1","group_1",168
+"waveica","2","group_0",24
+"waveica","2","group_1",168
+"waveica","3","group_0",23
+"waveica","3","group_1",161
+"clinical_fiams","1","clinical (phenotypes unavailable)",80
+"clinical_fiams","2","clinical (phenotypes unavailable)",78
+"clinical_fiams","3","clinical (phenotypes unavailable)",55
+"clinical_fiams","4","clinical (phenotypes unavailable)",55
+"clinical_fiams","5","clinical (phenotypes unavailable)",80
+"clinical_fiams","6","clinical (phenotypes unavailable)",79
+"clinical_fiams","7","clinical (phenotypes unavailable)",55
+"clinical_fiams","8","clinical (phenotypes unavailable)",54

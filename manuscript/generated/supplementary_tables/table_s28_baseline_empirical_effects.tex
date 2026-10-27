@@ -1,0 +1,36 @@
+\begin{landscape}
+\footnotesize
+\begin{longtable}{p{3cm}p{3.4cm}rrrrr}
+\caption{Same-information baseline comparisons of empirical feature effects. Effects are matched by feature against raw input; slope is the through-origin slope, sign agreement is the fraction with the same sign, and Pearson correlation compares effect vectors. MTBLS79 models use 20 independent extracts after averaging repeated injections. Sacurine models use log1p intensity after osmolality division and simultaneous age, BMI, sex and sampling covariates. LOBO reports median train--held-out batch effect correlation, with correction fitted jointly across batches. FDR counts use Benjamini--Hochberg at 0.05 within each method and endpoint. WiNN coefficients and LOBO results come from the frozen derivative export. Raw effects are a descriptive reference, not known biological truth.}\label{tab:supp_baseline_effects}\\
+\toprule
+Dataset / endpoint & Method & Slope & Sign agreement & Pearson & LOBO Pearson & FDR count \\
+\midrule
+\endfirsthead
+\toprule
+Dataset / endpoint & Method & Slope & Sign agreement & Pearson & LOBO Pearson & FDR count \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+MTBLS79 cow--sheep & Raw & 1.000 & 1.000 & 1.000 & 0.977 & 1075 \\
+MTBLS79 cow--sheep & Mean-only batch & 0.992 & 0.972 & 1.000 & 0.977 & 1093 \\
+MTBLS79 cow--sheep & Study-sample ANCOVA & 0.981 & 0.971 & 1.000 & 0.977 & 1111 \\
+MTBLS79 cow--sheep & WiNN & 0.980 & 0.969 & 0.999 & 0.977 & 1100 \\
+WaveICA groups & Raw & 1.000 & 1.000 & 1.000 & 0.305 & 206 \\
+WaveICA groups & Mean-only batch & 0.994 & 1.000 & 1.000 & 0.306 & 368 \\
+WaveICA groups & Study-sample ANCOVA & 0.994 & 0.994 & 1.000 & 0.304 & 445 \\
+WaveICA groups & WiNN & 0.968 & 0.955 & 0.993 & 0.315 & 516 \\
+Sacurine age & Raw & 1.000 & 1.000 & 1.000 & 0.556 & 16 \\
+Sacurine bmi & Raw & 1.000 & 1.000 & 1.000 & 0.298 & 0 \\
+Sacurine gender & Raw & 1.000 & 1.000 & 1.000 & 0.637 & 14 \\
+Sacurine age & Mean-only batch & 0.999 & 0.991 & 1.000 & 0.559 & 18 \\
+Sacurine bmi & Mean-only batch & 0.988 & 0.991 & 0.999 & 0.295 & 1 \\
+Sacurine gender & Mean-only batch & 1.006 & 0.973 & 1.000 & 0.641 & 15 \\
+Sacurine age & Study-sample ANCOVA & 1.007 & 0.956 & 0.999 & 0.566 & 23 \\
+Sacurine bmi & Study-sample ANCOVA & 0.984 & 0.982 & 0.999 & 0.289 & 1 \\
+Sacurine gender & Study-sample ANCOVA & 0.970 & 0.947 & 0.992 & 0.623 & 13 \\
+Sacurine age & WiNN & 0.937 & 0.973 & 0.994 & 0.587 & 23 \\
+Sacurine bmi & WiNN & 0.959 & 0.938 & 0.982 & 0.375 & 4 \\
+Sacurine gender & WiNN & 0.870 & 0.929 & 0.973 & 0.573 & 22 \\
+\end{longtable}
+\end{landscape}

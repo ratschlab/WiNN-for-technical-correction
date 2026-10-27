@@ -1,0 +1,4 @@
+"dataset","method","training_cv_percent","heldout_cv_percent","median_intensity","nonfinite","uncorrected_features","uncorrected_samples"
+"clinical_fiams","raw",17.1925004595842,16.5943872074111,9485.93043086118,0,0,0
+"clinical_fiams","legacy",7.88429548917983,16.8529043310112,0.98814505,0,18,0
+"clinical_fiams","corrected",6.77834250610068,16.8798209814971,9375.43366652252,0,1,0

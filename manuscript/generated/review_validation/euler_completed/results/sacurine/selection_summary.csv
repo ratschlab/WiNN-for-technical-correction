@@ -1,0 +1,5 @@
+"candidate_id","mean_qc_only_score","completed_folds","total_folds","selected"
+4,0.899647708192672,9,9,TRUE
+3,0.898352469852916,9,9,FALSE
+2,0.787748996394601,9,9,FALSE
+1,0.786014344635921,9,9,FALSE

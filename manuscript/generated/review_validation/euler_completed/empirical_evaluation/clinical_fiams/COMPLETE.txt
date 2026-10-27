@@ -1,0 +1,3 @@
+status=complete
+dataset=clinical_fiams
+scope=frozen endpoint definitions; refitted QC-RFSC only; uncertainty and other-method matrix re-evaluation remain

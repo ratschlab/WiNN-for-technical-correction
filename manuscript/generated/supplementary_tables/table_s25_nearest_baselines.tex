@@ -1,0 +1,34 @@
+\scriptsize
+\begin{longtable}{llrrr}
+\caption{Reference precision and batch association after study-sample regression. Wehrens ANCOVA and mean-only fits use all injections, acquisition order and batch labels. Study-only ANCOVA additionally uses reference identities. Batch $R^2$ is categorical weighted-PC $R^2$ on study injections.}\label{tab:supp_nearest_baselines}\\
+\toprule
+Dataset & Fit & Held-out QC CV (\%) & Batch $R^2$ & Floored cells \\
+\midrule
+\endfirsthead
+\toprule
+Dataset & Fit & Held-out QC CV (\%) & Batch $R^2$ & Floored cells \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+MTBLS79 & Raw & 28.757 & 0.36099 & 0 \\
+MTBLS79 & Mean-only, all & 16.619 & 0.01035 & 0 \\
+MTBLS79 & ANCOVA, all & 17.054 & 0.00968 & 0 \\
+MTBLS79 & ANCOVA, study only & 21.078 & 0.00000 & 0 \\
+Clinical FIA-MS & Raw & 16.594 & 0.15051 & 0 \\
+Clinical FIA-MS & Mean-only, all & 14.549 & 0.00168 & 0 \\
+Clinical FIA-MS & ANCOVA, all & 15.582 & 0.00108 & 0 \\
+Clinical FIA-MS & ANCOVA, study only & 16.693 & 0.00000 & 0 \\
+BatchCorr Set 1 & Raw & 66.570 & 0.56111 & 0 \\
+BatchCorr Set 1 & Mean-only, all & 30.611 & 0.00018 & 0 \\
+BatchCorr Set 1 & ANCOVA, all & 29.023 & 0.00021 & 0 \\
+BatchCorr Set 1 & ANCOVA, study only & 30.226 & 0.00000 & 0 \\
+Sacurine & Raw & 32.599 & 0.13166 & 0 \\
+Sacurine & Mean-only, all & 24.934 & 0.00012 & 0 \\
+Sacurine & ANCOVA, all & 18.072 & 0.00013 & 0 \\
+Sacurine & ANCOVA, study only & 19.697 & 0.00000 & 0 \\
+WaveICA & Raw & 49.662 & 0.69437 & 0 \\
+WaveICA & Mean-only, all & 42.823 & 0.00027 & 6722 \\
+WaveICA & ANCOVA, all & 40.652 & 0.00232 & 4601 \\
+WaveICA & ANCOVA, study only & 42.240 & 0.00000 & 4646 \\
+\end{longtable}

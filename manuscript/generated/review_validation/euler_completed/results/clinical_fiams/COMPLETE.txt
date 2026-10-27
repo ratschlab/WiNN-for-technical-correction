@@ -1,0 +1,6 @@
+status=complete
+dataset=clinical_fiams
+statTarget=1.38.0
+mode=full
+input_sha256=9f2c95945381fb827c06574e5bcaca82824d324951043333e298759717bee6f3
+output_sha256=0e7a5a2e11252d340ba6b7c2072bda745085b8ddc94a9e066dc4a04aad717d1a

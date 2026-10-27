@@ -4,7 +4,7 @@ export R_LIBS_USER := $(PROJECT_LIB)
 export WINN_RELEASE_ROOT := $(CURDIR)
 export WINN_CANONICAL_SOURCE_ROOT := $(CURDIR)
 
-.PHONY: restore install-winn download preprocess simulations smoke aggregate validate-results report config-manifest
+.PHONY: restore install-winn download preprocess simulations smoke aggregate-historical validate-results report tables config-manifest
 
 restore:
 	$(R) -e 'renv::restore(prompt = FALSE)'
@@ -31,7 +31,7 @@ simulations:
 smoke:
 	$(R) analysis/smoke_public_workflow.R
 
-aggregate:
+aggregate-historical:
 	$(R) analysis/finalize_reuse_audit.R
 	$(R) analysis/aggregate_release.R
 	$(R) analysis/build_execution_ledger.R
@@ -39,12 +39,19 @@ aggregate:
 	$(R) analysis/validate_release.R
 
 validate-results:
-	$(R) analysis/write_config_manifest.R --check
-	$(R) analysis/validate_committed_results.R
+	python3 analysis/validate_publication_bundle.py
 
 config-manifest:
 	$(R) analysis/write_config_manifest.R
 
 report:
-	mkdir -p notebooks/rendered
-	$(R) -e 'rmarkdown::render("notebooks/benchmark_summary.Rmd", output_dir="notebooks/rendered", clean=TRUE, envir=new.env(parent=globalenv()))'
+	$(R) manuscript/scripts/generate_revision_main_panels.R
+	$(R) manuscript/scripts/generate_revision_supplementary_uncertainty_panels.R
+	$(R) manuscript/scripts/generate_revision_s6_panels.R
+	python3 manuscript/scripts/assemble_main_figures.py
+	python3 manuscript/scripts/assemble_supplementary_figures.py
+
+tables:
+	$(R) manuscript/scripts/generate_supplementary_tables.R --final-root=results/final/revision_inputs/supplement_20260727
+	$(R) manuscript/scripts/nearest_baseline/generate_validation_tables.R
+	python3 manuscript/scripts/generate_review2_support_tables.py

@@ -1,0 +1,191 @@
+"workstream","seed_id","display_realization","component","seed","prespecified_before_pilot"
+"canonical_repeated_simulation","SIM01",TRUE,"clean_truth",202608241,TRUE
+"canonical_repeated_simulation","SIM01",TRUE,"batch_assignment",202608251,TRUE
+"canonical_repeated_simulation","SIM01",TRUE,"batch_magnitude",202608252,TRUE
+"canonical_repeated_simulation","SIM01",TRUE,"drift_assignment",202608261,TRUE
+"canonical_repeated_simulation","SIM01",TRUE,"drift_morphology",202608262,TRUE
+"canonical_repeated_simulation","SIM01",TRUE,"drift_shape",202608263,TRUE
+"canonical_repeated_simulation","SIM01",TRUE,"hidden_reference",202608271,TRUE
+"canonical_repeated_simulation","SIM01",TRUE,"phenotype_features",202608281,TRUE
+"canonical_repeated_simulation","SIM01",TRUE,"phenotype_allocation",202608282,TRUE
+"canonical_repeated_simulation","SIM01",TRUE,"bootstrap",202608291,TRUE
+"canonical_repeated_simulation","SIM01",TRUE,"method_rng::Raw",202608331,TRUE
+"canonical_repeated_simulation","SIM01",TRUE,"method_rng::ComBat",202608332,TRUE
+"canonical_repeated_simulation","SIM01",TRUE,"method_rng::QC-RLSC",202608333,TRUE
+"canonical_repeated_simulation","SIM01",TRUE,"method_rng::QC-RFSC",202608334,TRUE
+"canonical_repeated_simulation","SIM01",TRUE,"method_rng::TIGER",202608335,TRUE
+"canonical_repeated_simulation","SIM01",TRUE,"method_rng::SERRF",202608336,TRUE
+"canonical_repeated_simulation","SIM01",TRUE,"method_rng::WINN auto (QC)",202608337,TRUE
+"canonical_repeated_simulation","SIM01",TRUE,"method_rng::WINN auto-batch (QC)",202608338,TRUE
+"canonical_repeated_simulation","SIM01",TRUE,"method_rng::WINN fixed (QC identities withheld)",202608339,TRUE
+"canonical_repeated_simulation","SIM02",FALSE,"clean_truth",202609241,TRUE
+"canonical_repeated_simulation","SIM02",FALSE,"batch_assignment",202609251,TRUE
+"canonical_repeated_simulation","SIM02",FALSE,"batch_magnitude",202609252,TRUE
+"canonical_repeated_simulation","SIM02",FALSE,"drift_assignment",202609261,TRUE
+"canonical_repeated_simulation","SIM02",FALSE,"drift_morphology",202609262,TRUE
+"canonical_repeated_simulation","SIM02",FALSE,"drift_shape",202609263,TRUE
+"canonical_repeated_simulation","SIM02",FALSE,"hidden_reference",202609271,TRUE
+"canonical_repeated_simulation","SIM02",FALSE,"phenotype_features",202609281,TRUE
+"canonical_repeated_simulation","SIM02",FALSE,"phenotype_allocation",202609282,TRUE
+"canonical_repeated_simulation","SIM02",FALSE,"bootstrap",202609291,TRUE
+"canonical_repeated_simulation","SIM02",FALSE,"method_rng::Raw",202609331,TRUE
+"canonical_repeated_simulation","SIM02",FALSE,"method_rng::ComBat",202609332,TRUE
+"canonical_repeated_simulation","SIM02",FALSE,"method_rng::QC-RLSC",202609333,TRUE
+"canonical_repeated_simulation","SIM02",FALSE,"method_rng::QC-RFSC",202609334,TRUE
+"canonical_repeated_simulation","SIM02",FALSE,"method_rng::TIGER",202609335,TRUE
+"canonical_repeated_simulation","SIM02",FALSE,"method_rng::SERRF",202609336,TRUE
+"canonical_repeated_simulation","SIM02",FALSE,"method_rng::WINN auto (QC)",202609337,TRUE
+"canonical_repeated_simulation","SIM02",FALSE,"method_rng::WINN auto-batch (QC)",202609338,TRUE
+"canonical_repeated_simulation","SIM02",FALSE,"method_rng::WINN fixed (QC identities withheld)",202609339,TRUE
+"canonical_repeated_simulation","SIM03",FALSE,"clean_truth",202610241,TRUE
+"canonical_repeated_simulation","SIM03",FALSE,"batch_assignment",202610251,TRUE
+"canonical_repeated_simulation","SIM03",FALSE,"batch_magnitude",202610252,TRUE
+"canonical_repeated_simulation","SIM03",FALSE,"drift_assignment",202610261,TRUE
+"canonical_repeated_simulation","SIM03",FALSE,"drift_morphology",202610262,TRUE
+"canonical_repeated_simulation","SIM03",FALSE,"drift_shape",202610263,TRUE
+"canonical_repeated_simulation","SIM03",FALSE,"hidden_reference",202610271,TRUE
+"canonical_repeated_simulation","SIM03",FALSE,"phenotype_features",202610281,TRUE
+"canonical_repeated_simulation","SIM03",FALSE,"phenotype_allocation",202610282,TRUE
+"canonical_repeated_simulation","SIM03",FALSE,"bootstrap",202610291,TRUE
+"canonical_repeated_simulation","SIM03",FALSE,"method_rng::Raw",202610331,TRUE
+"canonical_repeated_simulation","SIM03",FALSE,"method_rng::ComBat",202610332,TRUE
+"canonical_repeated_simulation","SIM03",FALSE,"method_rng::QC-RLSC",202610333,TRUE
+"canonical_repeated_simulation","SIM03",FALSE,"method_rng::QC-RFSC",202610334,TRUE
+"canonical_repeated_simulation","SIM03",FALSE,"method_rng::TIGER",202610335,TRUE
+"canonical_repeated_simulation","SIM03",FALSE,"method_rng::SERRF",202610336,TRUE
+"canonical_repeated_simulation","SIM03",FALSE,"method_rng::WINN auto (QC)",202610337,TRUE
+"canonical_repeated_simulation","SIM03",FALSE,"method_rng::WINN auto-batch (QC)",202610338,TRUE
+"canonical_repeated_simulation","SIM03",FALSE,"method_rng::WINN fixed (QC identities withheld)",202610339,TRUE
+"canonical_repeated_simulation","SIM04",FALSE,"clean_truth",202611241,TRUE
+"canonical_repeated_simulation","SIM04",FALSE,"batch_assignment",202611251,TRUE
+"canonical_repeated_simulation","SIM04",FALSE,"batch_magnitude",202611252,TRUE
+"canonical_repeated_simulation","SIM04",FALSE,"drift_assignment",202611261,TRUE
+"canonical_repeated_simulation","SIM04",FALSE,"drift_morphology",202611262,TRUE
+"canonical_repeated_simulation","SIM04",FALSE,"drift_shape",202611263,TRUE
+"canonical_repeated_simulation","SIM04",FALSE,"hidden_reference",202611271,TRUE
+"canonical_repeated_simulation","SIM04",FALSE,"phenotype_features",202611281,TRUE
+"canonical_repeated_simulation","SIM04",FALSE,"phenotype_allocation",202611282,TRUE
+"canonical_repeated_simulation","SIM04",FALSE,"bootstrap",202611291,TRUE
+"canonical_repeated_simulation","SIM04",FALSE,"method_rng::Raw",202611331,TRUE
+"canonical_repeated_simulation","SIM04",FALSE,"method_rng::ComBat",202611332,TRUE
+"canonical_repeated_simulation","SIM04",FALSE,"method_rng::QC-RLSC",202611333,TRUE
+"canonical_repeated_simulation","SIM04",FALSE,"method_rng::QC-RFSC",202611334,TRUE
+"canonical_repeated_simulation","SIM04",FALSE,"method_rng::TIGER",202611335,TRUE
+"canonical_repeated_simulation","SIM04",FALSE,"method_rng::SERRF",202611336,TRUE
+"canonical_repeated_simulation","SIM04",FALSE,"method_rng::WINN auto (QC)",202611337,TRUE
+"canonical_repeated_simulation","SIM04",FALSE,"method_rng::WINN auto-batch (QC)",202611338,TRUE
+"canonical_repeated_simulation","SIM04",FALSE,"method_rng::WINN fixed (QC identities withheld)",202611339,TRUE
+"canonical_repeated_simulation","SIM05",FALSE,"clean_truth",202612241,TRUE
+"canonical_repeated_simulation","SIM05",FALSE,"batch_assignment",202612251,TRUE
+"canonical_repeated_simulation","SIM05",FALSE,"batch_magnitude",202612252,TRUE
+"canonical_repeated_simulation","SIM05",FALSE,"drift_assignment",202612261,TRUE
+"canonical_repeated_simulation","SIM05",FALSE,"drift_morphology",202612262,TRUE
+"canonical_repeated_simulation","SIM05",FALSE,"drift_shape",202612263,TRUE
+"canonical_repeated_simulation","SIM05",FALSE,"hidden_reference",202612271,TRUE
+"canonical_repeated_simulation","SIM05",FALSE,"phenotype_features",202612281,TRUE
+"canonical_repeated_simulation","SIM05",FALSE,"phenotype_allocation",202612282,TRUE
+"canonical_repeated_simulation","SIM05",FALSE,"bootstrap",202612291,TRUE
+"canonical_repeated_simulation","SIM05",FALSE,"method_rng::Raw",202612331,TRUE
+"canonical_repeated_simulation","SIM05",FALSE,"method_rng::ComBat",202612332,TRUE
+"canonical_repeated_simulation","SIM05",FALSE,"method_rng::QC-RLSC",202612333,TRUE
+"canonical_repeated_simulation","SIM05",FALSE,"method_rng::QC-RFSC",202612334,TRUE
+"canonical_repeated_simulation","SIM05",FALSE,"method_rng::TIGER",202612335,TRUE
+"canonical_repeated_simulation","SIM05",FALSE,"method_rng::SERRF",202612336,TRUE
+"canonical_repeated_simulation","SIM05",FALSE,"method_rng::WINN auto (QC)",202612337,TRUE
+"canonical_repeated_simulation","SIM05",FALSE,"method_rng::WINN auto-batch (QC)",202612338,TRUE
+"canonical_repeated_simulation","SIM05",FALSE,"method_rng::WINN fixed (QC identities withheld)",202612339,TRUE
+"canonical_repeated_simulation","SIM06",FALSE,"clean_truth",202613241,TRUE
+"canonical_repeated_simulation","SIM06",FALSE,"batch_assignment",202613251,TRUE
+"canonical_repeated_simulation","SIM06",FALSE,"batch_magnitude",202613252,TRUE
+"canonical_repeated_simulation","SIM06",FALSE,"drift_assignment",202613261,TRUE
+"canonical_repeated_simulation","SIM06",FALSE,"drift_morphology",202613262,TRUE
+"canonical_repeated_simulation","SIM06",FALSE,"drift_shape",202613263,TRUE
+"canonical_repeated_simulation","SIM06",FALSE,"hidden_reference",202613271,TRUE
+"canonical_repeated_simulation","SIM06",FALSE,"phenotype_features",202613281,TRUE
+"canonical_repeated_simulation","SIM06",FALSE,"phenotype_allocation",202613282,TRUE
+"canonical_repeated_simulation","SIM06",FALSE,"bootstrap",202613291,TRUE
+"canonical_repeated_simulation","SIM06",FALSE,"method_rng::Raw",202613331,TRUE
+"canonical_repeated_simulation","SIM06",FALSE,"method_rng::ComBat",202613332,TRUE
+"canonical_repeated_simulation","SIM06",FALSE,"method_rng::QC-RLSC",202613333,TRUE
+"canonical_repeated_simulation","SIM06",FALSE,"method_rng::QC-RFSC",202613334,TRUE
+"canonical_repeated_simulation","SIM06",FALSE,"method_rng::TIGER",202613335,TRUE
+"canonical_repeated_simulation","SIM06",FALSE,"method_rng::SERRF",202613336,TRUE
+"canonical_repeated_simulation","SIM06",FALSE,"method_rng::WINN auto (QC)",202613337,TRUE
+"canonical_repeated_simulation","SIM06",FALSE,"method_rng::WINN auto-batch (QC)",202613338,TRUE
+"canonical_repeated_simulation","SIM06",FALSE,"method_rng::WINN fixed (QC identities withheld)",202613339,TRUE
+"canonical_repeated_simulation","SIM07",FALSE,"clean_truth",202614241,TRUE
+"canonical_repeated_simulation","SIM07",FALSE,"batch_assignment",202614251,TRUE
+"canonical_repeated_simulation","SIM07",FALSE,"batch_magnitude",202614252,TRUE
+"canonical_repeated_simulation","SIM07",FALSE,"drift_assignment",202614261,TRUE
+"canonical_repeated_simulation","SIM07",FALSE,"drift_morphology",202614262,TRUE
+"canonical_repeated_simulation","SIM07",FALSE,"drift_shape",202614263,TRUE
+"canonical_repeated_simulation","SIM07",FALSE,"hidden_reference",202614271,TRUE
+"canonical_repeated_simulation","SIM07",FALSE,"phenotype_features",202614281,TRUE
+"canonical_repeated_simulation","SIM07",FALSE,"phenotype_allocation",202614282,TRUE
+"canonical_repeated_simulation","SIM07",FALSE,"bootstrap",202614291,TRUE
+"canonical_repeated_simulation","SIM07",FALSE,"method_rng::Raw",202614331,TRUE
+"canonical_repeated_simulation","SIM07",FALSE,"method_rng::ComBat",202614332,TRUE
+"canonical_repeated_simulation","SIM07",FALSE,"method_rng::QC-RLSC",202614333,TRUE
+"canonical_repeated_simulation","SIM07",FALSE,"method_rng::QC-RFSC",202614334,TRUE
+"canonical_repeated_simulation","SIM07",FALSE,"method_rng::TIGER",202614335,TRUE
+"canonical_repeated_simulation","SIM07",FALSE,"method_rng::SERRF",202614336,TRUE
+"canonical_repeated_simulation","SIM07",FALSE,"method_rng::WINN auto (QC)",202614337,TRUE
+"canonical_repeated_simulation","SIM07",FALSE,"method_rng::WINN auto-batch (QC)",202614338,TRUE
+"canonical_repeated_simulation","SIM07",FALSE,"method_rng::WINN fixed (QC identities withheld)",202614339,TRUE
+"canonical_repeated_simulation","SIM08",FALSE,"clean_truth",202615241,TRUE
+"canonical_repeated_simulation","SIM08",FALSE,"batch_assignment",202615251,TRUE
+"canonical_repeated_simulation","SIM08",FALSE,"batch_magnitude",202615252,TRUE
+"canonical_repeated_simulation","SIM08",FALSE,"drift_assignment",202615261,TRUE
+"canonical_repeated_simulation","SIM08",FALSE,"drift_morphology",202615262,TRUE
+"canonical_repeated_simulation","SIM08",FALSE,"drift_shape",202615263,TRUE
+"canonical_repeated_simulation","SIM08",FALSE,"hidden_reference",202615271,TRUE
+"canonical_repeated_simulation","SIM08",FALSE,"phenotype_features",202615281,TRUE
+"canonical_repeated_simulation","SIM08",FALSE,"phenotype_allocation",202615282,TRUE
+"canonical_repeated_simulation","SIM08",FALSE,"bootstrap",202615291,TRUE
+"canonical_repeated_simulation","SIM08",FALSE,"method_rng::Raw",202615331,TRUE
+"canonical_repeated_simulation","SIM08",FALSE,"method_rng::ComBat",202615332,TRUE
+"canonical_repeated_simulation","SIM08",FALSE,"method_rng::QC-RLSC",202615333,TRUE
+"canonical_repeated_simulation","SIM08",FALSE,"method_rng::QC-RFSC",202615334,TRUE
+"canonical_repeated_simulation","SIM08",FALSE,"method_rng::TIGER",202615335,TRUE
+"canonical_repeated_simulation","SIM08",FALSE,"method_rng::SERRF",202615336,TRUE
+"canonical_repeated_simulation","SIM08",FALSE,"method_rng::WINN auto (QC)",202615337,TRUE
+"canonical_repeated_simulation","SIM08",FALSE,"method_rng::WINN auto-batch (QC)",202615338,TRUE
+"canonical_repeated_simulation","SIM08",FALSE,"method_rng::WINN fixed (QC identities withheld)",202615339,TRUE
+"canonical_repeated_simulation","SIM09",FALSE,"clean_truth",202616241,TRUE
+"canonical_repeated_simulation","SIM09",FALSE,"batch_assignment",202616251,TRUE
+"canonical_repeated_simulation","SIM09",FALSE,"batch_magnitude",202616252,TRUE
+"canonical_repeated_simulation","SIM09",FALSE,"drift_assignment",202616261,TRUE
+"canonical_repeated_simulation","SIM09",FALSE,"drift_morphology",202616262,TRUE
+"canonical_repeated_simulation","SIM09",FALSE,"drift_shape",202616263,TRUE
+"canonical_repeated_simulation","SIM09",FALSE,"hidden_reference",202616271,TRUE
+"canonical_repeated_simulation","SIM09",FALSE,"phenotype_features",202616281,TRUE
+"canonical_repeated_simulation","SIM09",FALSE,"phenotype_allocation",202616282,TRUE
+"canonical_repeated_simulation","SIM09",FALSE,"bootstrap",202616291,TRUE
+"canonical_repeated_simulation","SIM09",FALSE,"method_rng::Raw",202616331,TRUE
+"canonical_repeated_simulation","SIM09",FALSE,"method_rng::ComBat",202616332,TRUE
+"canonical_repeated_simulation","SIM09",FALSE,"method_rng::QC-RLSC",202616333,TRUE
+"canonical_repeated_simulation","SIM09",FALSE,"method_rng::QC-RFSC",202616334,TRUE
+"canonical_repeated_simulation","SIM09",FALSE,"method_rng::TIGER",202616335,TRUE
+"canonical_repeated_simulation","SIM09",FALSE,"method_rng::SERRF",202616336,TRUE
+"canonical_repeated_simulation","SIM09",FALSE,"method_rng::WINN auto (QC)",202616337,TRUE
+"canonical_repeated_simulation","SIM09",FALSE,"method_rng::WINN auto-batch (QC)",202616338,TRUE
+"canonical_repeated_simulation","SIM09",FALSE,"method_rng::WINN fixed (QC identities withheld)",202616339,TRUE
+"canonical_repeated_simulation","SIM10",FALSE,"clean_truth",202617241,TRUE
+"canonical_repeated_simulation","SIM10",FALSE,"batch_assignment",202617251,TRUE
+"canonical_repeated_simulation","SIM10",FALSE,"batch_magnitude",202617252,TRUE
+"canonical_repeated_simulation","SIM10",FALSE,"drift_assignment",202617261,TRUE
+"canonical_repeated_simulation","SIM10",FALSE,"drift_morphology",202617262,TRUE
+"canonical_repeated_simulation","SIM10",FALSE,"drift_shape",202617263,TRUE
+"canonical_repeated_simulation","SIM10",FALSE,"hidden_reference",202617271,TRUE
+"canonical_repeated_simulation","SIM10",FALSE,"phenotype_features",202617281,TRUE
+"canonical_repeated_simulation","SIM10",FALSE,"phenotype_allocation",202617282,TRUE
+"canonical_repeated_simulation","SIM10",FALSE,"bootstrap",202617291,TRUE
+"canonical_repeated_simulation","SIM10",FALSE,"method_rng::Raw",202617331,TRUE
+"canonical_repeated_simulation","SIM10",FALSE,"method_rng::ComBat",202617332,TRUE
+"canonical_repeated_simulation","SIM10",FALSE,"method_rng::QC-RLSC",202617333,TRUE
+"canonical_repeated_simulation","SIM10",FALSE,"method_rng::QC-RFSC",202617334,TRUE
+"canonical_repeated_simulation","SIM10",FALSE,"method_rng::TIGER",202617335,TRUE
+"canonical_repeated_simulation","SIM10",FALSE,"method_rng::SERRF",202617336,TRUE
+"canonical_repeated_simulation","SIM10",FALSE,"method_rng::WINN auto (QC)",202617337,TRUE
+"canonical_repeated_simulation","SIM10",FALSE,"method_rng::WINN auto-batch (QC)",202617338,TRUE
+"canonical_repeated_simulation","SIM10",FALSE,"method_rng::WINN fixed (QC identities withheld)",202617339,TRUE

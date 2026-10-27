@@ -1,0 +1,56 @@
+\begin{landscape}
+\tiny
+\begin{longtable}{llrrrrr}
+\caption{Complete cumulative WiNN ablation values. Columns describe the matrix after each ordered stage. Adjacent differences are order-dependent and are not a factorial decomposition. The simulation row uses one prespecified representative realization.}\label{tab:supp_cumulative}\\
+\toprule
+Dataset & Metric & Raw & MAD & Drift & Batch & PQN \\
+\midrule
+\endfirsthead
+\multicolumn{7}{l}{\textit{Table \thetable{} continued}}\\
+\toprule
+Dataset & Metric & Raw & MAD & Drift & Batch & PQN \\
+\midrule
+\endhead
+\midrule
+\multicolumn{7}{r}{\textit{Continued on next page}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+Simulation & categorical batch R2 & 0.9656 & 0.9665 & 0.9887 & 0.0010 & 0.0010 \\
+Simulation & feature repeatability ratio & -- & -- & -- & -- & -- \\
+Simulation & held-out QC CV & 44.21 & 41.24 & 38.27 & 8.77 & 8.77 \\
+Simulation & residual GAM deviance & 0.1276 & 0.1278 & 0.0202 & 0.0202 & 0.0203 \\
+Simulation & truth feature ICC(A,1) & 0.5862 & 0.5924 & 0.6257 & 0.9222 & 0.9221 \\
+Simulation & truth sample Pearson & 0.5218 & 0.5451 & 0.5561 & 0.9257 & 0.9257 \\
+MTBLS79 & categorical batch R2 & 0.3610 & 0.3580 & 0.3582 & 0.0109 & 0.0108 \\
+MTBLS79 & cross-batch feature ICC(A,1) & 0.5490 & 0.5408 & 0.5409 & 0.6635 & 0.6744 \\
+MTBLS79 & feature repeatability ratio & -- & -- & -- & -- & -- \\
+MTBLS79 & held-out QC CV & 28.76 & 27.59 & 27.56 & 17.16 & 16.68 \\
+MTBLS79 & replicate-profile Pearson & 0.9523 & 0.9592 & 0.9593 & 0.9754 & 0.9754 \\
+MTBLS79 & residual GAM deviance & 0.1417 & 0.1407 & 0.1396 & 0.1396 & 0.1401 \\
+BatchCorr Set 1 & categorical batch R2 & 0.5611 & 0.5681 & 0.6198 & 0.0003 & 0.0006 \\
+BatchCorr Set 1 & cross-batch feature ICC(A,1) & -- & -- & -- & -- & -- \\
+BatchCorr Set 1 & feature repeatability ratio & 0.5218 & 0.5185 & 0.5115 & 0.6828 & 0.6953 \\
+BatchCorr Set 1 & held-out QC CV & 66.57 & 59.76 & 58.75 & 27.33 & 26.67 \\
+BatchCorr Set 1 & replicate-profile Pearson & 0.9115 & 0.9251 & 0.9292 & 0.9575 & 0.9575 \\
+BatchCorr Set 1 & residual GAM deviance & 0.1224 & 0.1199 & 0.0463 & 0.0463 & 0.0438 \\
+Clinical FIA-MS & categorical batch R2 & 0.1505 & 0.1582 & 0.1770 & 0.0017 & 0.0021 \\
+Clinical FIA-MS & cross-batch feature ICC(A,1) & -- & -- & -- & -- & -- \\
+Clinical FIA-MS & feature repeatability ratio & 0.6487 & 0.5917 & 0.5937 & 0.6376 & 0.6593 \\
+Clinical FIA-MS & held-out QC CV & 16.59 & 14.22 & 14.74 & 12.97 & 12.40 \\
+Clinical FIA-MS & replicate-profile Pearson & 0.9835 & 0.9864 & 0.9860 & 0.9907 & 0.9907 \\
+Clinical FIA-MS & residual GAM deviance & 0.1203 & 0.1221 & 0.0721 & 0.0721 & 0.0728 \\
+Sacurine & categorical batch R2 & 0.1317 & 0.1296 & 0.1406 & 0.0005 & 0.0007 \\
+Sacurine & cross-batch feature ICC(A,1) & -- & -- & -- & -- & -- \\
+Sacurine & feature repeatability ratio & -- & -- & -- & -- & -- \\
+Sacurine & held-out QC CV & 32.60 & 31.81 & 30.58 & 23.19 & 22.42 \\
+Sacurine & replicate-profile Pearson & -- & -- & -- & -- & -- \\
+Sacurine & residual GAM deviance & 0.0684 & 0.0689 & 0.0317 & 0.0317 & 0.0520 \\
+WaveICA & categorical batch R2 & 0.6944 & 0.6965 & 0.8154 & 0.0024 & 0.0021 \\
+WaveICA & cross-batch feature ICC(A,1) & -- & -- & -- & -- & -- \\
+WaveICA & feature repeatability ratio & -- & -- & -- & -- & -- \\
+WaveICA & held-out QC CV & 49.66 & 45.67 & 47.80 & 38.38 & 38.30 \\
+WaveICA & replicate-profile Pearson & -- & -- & -- & -- & -- \\
+WaveICA & residual GAM deviance & 0.2058 & 0.2083 & 0.0141 & 0.0142 & 0.0142 \\
+\end{longtable}
+\end{landscape}

@@ -12,7 +12,7 @@ if (!requireNamespace("digest", quietly = TRUE)) {
 }
 
 config_files <- c(
-  list.files(config_root, full.names = TRUE, recursive = FALSE),
+  list.files(config_root, full.names = TRUE, recursive = TRUE),
   list.files(holdout_root, full.names = TRUE, recursive = TRUE)
 )
 config_files <- config_files[

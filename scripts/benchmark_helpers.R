@@ -514,7 +514,8 @@ run_qc_rlsc_with_controls <- function(x_mat, control_ids, meta_df, span = 0.75) 
   corrected[, meta_df$sample_id, drop = FALSE]
 }
 
-run_qc_rfsc_with_controls <- function(x_mat, control_ids, meta_df, ntree = 500, coCV = 30, Frule = 0.8) {
+run_qc_rfsc_with_controls <- function(x_mat, control_ids, meta_df, ntree = 500, coCV = 30, Frule = 0.8, output_scale = c("training_qc_abundance", "relative_ratio")) {
+  output_scale <- match.arg(output_scale)
   md <- align_meta_to_mat(x_mat, meta_df) |>
     dplyr::arrange(run_order)
   x_ord <- x_mat[, md$sample_id, drop = FALSE]
@@ -535,7 +536,16 @@ run_qc_rfsc_with_controls <- function(x_mat, control_ids, meta_df, ntree = 500, 
   }
 
   qc_flag <- md$sample_id %in% control_ids
-  stat_names <- ifelse(qc_flag, paste0(md$sample_id, "_QC"), md$sample_id)
+  neutral_ids <- sprintf("Injection%07d", seq_len(nrow(md)))
+  stat_names <- ifelse(qc_flag, paste0(neutral_ids, "_QC"), neutral_ids)
+  sample_map <- stats::setNames(md$sample_id, stat_names)
+  if (!identical(grepl("QC|qc|Qc", stat_names), qc_flag)) {
+    stop("statTarget name-based training indices differ from the authorized controls.")
+  }
+  abundance_reference <- apply(x_ord[, qc_flag, drop = FALSE], 1L, stats::median)
+  if (any(!is.finite(abundance_reference) | abundance_reference <= 0)) {
+    stop("Training-QC abundance reference must be finite and positive for every feature.")
+  }
   safe_feature_ids <- paste0("Feature_", seq_len(nrow(x_ord)))
   feature_map <- stats::setNames(rownames(x_ord), safe_feature_ids)
 
@@ -563,6 +573,8 @@ run_qc_rfsc_with_controls <- function(x_mat, control_ids, meta_df, ntree = 500, 
   write.csv(samPeno, "samPeno.csv", row.names = FALSE, quote = FALSE)
   write.csv(samFile, "samFile.csv", row.names = FALSE, quote = FALSE)
 
+  previous_options <- options(qcrfsc_authorized_names = stat_names[qc_flag])
+  on.exit(options(previous_options), add = TRUE)
   run_silently(
     statTarget::shiftCor(
       samPeno = "samPeno.csv",
@@ -583,12 +595,21 @@ run_qc_rfsc_with_controls <- function(x_mat, control_ids, meta_df, ntree = 500, 
     corrected_df <- corrected_df[rownames(corrected_df) != "class", , drop = FALSE]
   }
 
-  corrected <- apply(corrected_df, 2, as.numeric)
+  corrected <- matrix(as.numeric(as.matrix(corrected_df)), nrow = nrow(corrected_df), ncol = ncol(corrected_df), dimnames = dimnames(corrected_df))
   rownames(corrected) <- unname(feature_map[rownames(corrected_df)])
-  colnames(corrected) <- sub("_QC$", "", colnames(corrected_df))
+  colnames(corrected) <- unname(sample_map[colnames(corrected_df)])
+  if (anyNA(rownames(corrected)) || anyNA(colnames(corrected))) {
+    stop("statTarget returned unknown feature or sample identifiers.")
+  }
   corrected <- corrected / 1000
+  if (identical(output_scale, "training_qc_abundance")) {
+    corrected <- corrected * abundance_reference[rownames(corrected)]
+  }
   missing_features <- setdiff(rownames(x_mat), rownames(corrected))
   missing_samples <- setdiff(colnames(x_mat), colnames(corrected))
+  if (identical(output_scale, "relative_ratio") && (length(missing_features) || length(missing_samples))) {
+    stop("Relative-ratio output cannot contain raw-abundance fallback entries.")
+  }
   full <- x_mat
   common_features <- intersect(rownames(x_mat), rownames(corrected))
   common_samples <- intersect(colnames(x_mat), colnames(corrected))
@@ -599,6 +620,10 @@ run_qc_rfsc_with_controls <- function(x_mat, control_ids, meta_df, ntree = 500, 
   attr(full, "qcrfsc_uncorrected_sample_ids") <- missing_samples
   attr(full, "qcrfsc_uncorrected_feature_count") <- length(missing_features)
   attr(full, "qcrfsc_uncorrected_sample_count") <- length(missing_samples)
+  attr(full, "qcrfsc_output_scale") <- output_scale
+  attr(full, "qcrfsc_sample_id_map") <- data.frame(original_id = md$sample_id, internal_id = stat_names, training_reference = qc_flag)
+  attr(full, "qcrfsc_training_ids") <- md$sample_id[qc_flag]
+  attr(full, "qcrfsc_abundance_reference") <- abundance_reference
   full
 }
 

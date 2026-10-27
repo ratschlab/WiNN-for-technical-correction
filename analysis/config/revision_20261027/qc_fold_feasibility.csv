@@ -1,0 +1,6 @@
+dataset,training_qc_unit,n_batches,training_qc_counts_by_batch,minimum_training_qc_per_batch,common_minimum_required_after_internal_holdout,oof_feasible_for_shared_candidate_policy,tuning_mode,endpoint_qcs_protected_in_every_fold,reason
+MTBLS79,injection,8,"3,3,3,3,3,4,4,3",3,4,FALSE,in_sample_training_qc_sensitivity,,Several batches retain only three training QCs; removing one cannot preserve the four-QC QC-RLSC minimum.
+BatchCorr Set 1,injection,10,"4,5,4,4,4,4,4,4,4,4",4,4,FALSE,in_sample_training_qc_sensitivity,,Nine batches retain only four training QCs; preserve the audited fixed QC-RLSC sparse-QC safeguard and use an explicitly labelled in-sample score.
+Clinical FIA-MS (pair-aware),dip-pair,8,"8,8,19,8,8,8,19,8",8,4,TRUE,3_repeats_x_3_batch_stratified_folds,TRUE,Each plate retains at least eight independent control-QC pairs; NIST1950 pairs remain external and are never candidates for training/validation folds.
+Sacurine,injection,2,"10,8",8,4,TRUE,3_repeats_x_3_batch_stratified_folds,TRUE,Both batches retain at least eight training QCs.
+WaveICA adenocarcinoma,injection,3,"20,20,19",19,4,TRUE,3_repeats_x_3_batch_stratified_folds,TRUE,All batches retain at least nineteen training QCs.

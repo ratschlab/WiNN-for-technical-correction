@@ -1,0 +1,161 @@
+metric,value,direction,denominator,units,notes,dataset_key,method_id,method,seed_id
+heldout_qc_cv_mean,14.7280131359941,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM01
+heldout_qc_cv_sd,9.97640419493849,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM01
+heldout_qc_cv_median,13.6739926774638,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM01
+residual_run_order_gam_mean_deviance,0.131085396618962,lower,5000,proportion,,simulation,qc_rfsc,QC-RFSC,SIM01
+residual_run_order_gam_sd_deviance,0.152511823326062,lower,5000,proportion,,simulation,qc_rfsc,QC-RFSC,SIM01
+residual_ljung_box_proportion_significant,0.2126,lower,5000,proportion,,simulation,qc_rfsc,QC-RFSC,SIM01
+batch_weighted_pc_r2_categorical,0.144040149745443,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,qc_rfsc,QC-RFSC,SIM01
+retained_features,1000,higher,1000,features,,simulation,qc_rfsc,QC-RFSC,SIM01
+retained_samples,500,higher,500,samples,,simulation,qc_rfsc,QC-RFSC,SIM01
+runtime_sec,,lower,1,seconds,not remeasured; cache retrieval time excluded,simulation,qc_rfsc,QC-RFSC,SIM01
+drift_profiles_corrected,,descriptive,5000,profiles,,simulation,qc_rfsc,QC-RFSC,SIM01
+drift_features_corrected,,descriptive,1000,features,,simulation,qc_rfsc,QC-RFSC,SIM01
+batch_features_corrected,,descriptive,1000,features,,simulation,qc_rfsc,QC-RFSC,SIM01
+truth_metabolite_profile_icc_mean,0.697701425617728,higher,1000,"ICC(A,1)",,simulation,qc_rfsc,QC-RFSC,SIM01
+truth_sample_profile_pearson_mean,0.682481784426063,higher,450,correlation,,simulation,qc_rfsc,QC-RFSC,SIM01
+truth_log1p_rmse,0.194483540578911,lower,450000,log1p intensity,,simulation,qc_rfsc,QC-RFSC,SIM01
+heldout_qc_cv_mean,32.0168289753813,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM02
+heldout_qc_cv_sd,27.9376451981716,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM02
+heldout_qc_cv_median,25.7857994006264,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM02
+residual_run_order_gam_mean_deviance,0.11906457193557,lower,5000,proportion,,simulation,qc_rfsc,QC-RFSC,SIM02
+residual_run_order_gam_sd_deviance,0.138184327355045,lower,5000,proportion,,simulation,qc_rfsc,QC-RFSC,SIM02
+residual_ljung_box_proportion_significant,0.179,lower,5000,proportion,,simulation,qc_rfsc,QC-RFSC,SIM02
+batch_weighted_pc_r2_categorical,0.117154334724755,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,qc_rfsc,QC-RFSC,SIM02
+retained_features,1000,higher,1000,features,,simulation,qc_rfsc,QC-RFSC,SIM02
+retained_samples,500,higher,500,samples,,simulation,qc_rfsc,QC-RFSC,SIM02
+runtime_sec,,lower,1,seconds,not remeasured; cache retrieval time excluded,simulation,qc_rfsc,QC-RFSC,SIM02
+drift_profiles_corrected,,descriptive,5000,profiles,,simulation,qc_rfsc,QC-RFSC,SIM02
+drift_features_corrected,,descriptive,1000,features,,simulation,qc_rfsc,QC-RFSC,SIM02
+batch_features_corrected,,descriptive,1000,features,,simulation,qc_rfsc,QC-RFSC,SIM02
+truth_metabolite_profile_icc_mean,0.690082110890424,higher,1000,"ICC(A,1)",,simulation,qc_rfsc,QC-RFSC,SIM02
+truth_sample_profile_pearson_mean,0.665091411489081,higher,450,correlation,,simulation,qc_rfsc,QC-RFSC,SIM02
+truth_log1p_rmse,0.19843260213262,lower,450000,log1p intensity,,simulation,qc_rfsc,QC-RFSC,SIM02
+heldout_qc_cv_mean,19.0850132446883,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM03
+heldout_qc_cv_sd,14.985613906324,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM03
+heldout_qc_cv_median,18.6526574231165,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM03
+residual_run_order_gam_mean_deviance,0.104724087368954,lower,5000,proportion,,simulation,qc_rfsc,QC-RFSC,SIM03
+residual_run_order_gam_sd_deviance,0.125480733218435,lower,5000,proportion,,simulation,qc_rfsc,QC-RFSC,SIM03
+residual_ljung_box_proportion_significant,0.1422,lower,5000,proportion,,simulation,qc_rfsc,QC-RFSC,SIM03
+batch_weighted_pc_r2_categorical,0.13164922833928,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,qc_rfsc,QC-RFSC,SIM03
+retained_features,1000,higher,1000,features,,simulation,qc_rfsc,QC-RFSC,SIM03
+retained_samples,500,higher,500,samples,,simulation,qc_rfsc,QC-RFSC,SIM03
+runtime_sec,,lower,1,seconds,not remeasured; cache retrieval time excluded,simulation,qc_rfsc,QC-RFSC,SIM03
+drift_profiles_corrected,,descriptive,5000,profiles,,simulation,qc_rfsc,QC-RFSC,SIM03
+drift_features_corrected,,descriptive,1000,features,,simulation,qc_rfsc,QC-RFSC,SIM03
+batch_features_corrected,,descriptive,1000,features,,simulation,qc_rfsc,QC-RFSC,SIM03
+truth_metabolite_profile_icc_mean,0.706850122462393,higher,1000,"ICC(A,1)",,simulation,qc_rfsc,QC-RFSC,SIM03
+truth_sample_profile_pearson_mean,0.660496559115649,higher,450,correlation,,simulation,qc_rfsc,QC-RFSC,SIM03
+truth_log1p_rmse,0.201587598124551,lower,450000,log1p intensity,,simulation,qc_rfsc,QC-RFSC,SIM03
+heldout_qc_cv_mean,13.2173359565027,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM04
+heldout_qc_cv_sd,12.5203002645748,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM04
+heldout_qc_cv_median,11.6064251805185,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM04
+residual_run_order_gam_mean_deviance,0.121979154492797,lower,5000,proportion,,simulation,qc_rfsc,QC-RFSC,SIM04
+residual_run_order_gam_sd_deviance,0.138894590372012,lower,5000,proportion,,simulation,qc_rfsc,QC-RFSC,SIM04
+residual_ljung_box_proportion_significant,0.1888,lower,5000,proportion,,simulation,qc_rfsc,QC-RFSC,SIM04
+batch_weighted_pc_r2_categorical,0.173127057682881,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,qc_rfsc,QC-RFSC,SIM04
+retained_features,1000,higher,1000,features,,simulation,qc_rfsc,QC-RFSC,SIM04
+retained_samples,500,higher,500,samples,,simulation,qc_rfsc,QC-RFSC,SIM04
+runtime_sec,,lower,1,seconds,not remeasured; cache retrieval time excluded,simulation,qc_rfsc,QC-RFSC,SIM04
+drift_profiles_corrected,,descriptive,5000,profiles,,simulation,qc_rfsc,QC-RFSC,SIM04
+drift_features_corrected,,descriptive,1000,features,,simulation,qc_rfsc,QC-RFSC,SIM04
+batch_features_corrected,,descriptive,1000,features,,simulation,qc_rfsc,QC-RFSC,SIM04
+truth_metabolite_profile_icc_mean,0.695467307117741,higher,1000,"ICC(A,1)",,simulation,qc_rfsc,QC-RFSC,SIM04
+truth_sample_profile_pearson_mean,0.657669653065991,higher,450,correlation,,simulation,qc_rfsc,QC-RFSC,SIM04
+truth_log1p_rmse,0.202347615436554,lower,450000,log1p intensity,,simulation,qc_rfsc,QC-RFSC,SIM04
+heldout_qc_cv_mean,10.2234590360892,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM05
+heldout_qc_cv_sd,13.9800778294288,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM05
+heldout_qc_cv_median,7.86025268456171,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM05
+residual_run_order_gam_mean_deviance,0.115136275892583,lower,5000,proportion,,simulation,qc_rfsc,QC-RFSC,SIM05
+residual_run_order_gam_sd_deviance,0.133975527507109,lower,5000,proportion,,simulation,qc_rfsc,QC-RFSC,SIM05
+residual_ljung_box_proportion_significant,0.1708,lower,5000,proportion,,simulation,qc_rfsc,QC-RFSC,SIM05
+batch_weighted_pc_r2_categorical,0.155429071237549,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,qc_rfsc,QC-RFSC,SIM05
+retained_features,1000,higher,1000,features,,simulation,qc_rfsc,QC-RFSC,SIM05
+retained_samples,500,higher,500,samples,,simulation,qc_rfsc,QC-RFSC,SIM05
+runtime_sec,,lower,1,seconds,not remeasured; cache retrieval time excluded,simulation,qc_rfsc,QC-RFSC,SIM05
+drift_profiles_corrected,,descriptive,5000,profiles,,simulation,qc_rfsc,QC-RFSC,SIM05
+drift_features_corrected,,descriptive,1000,features,,simulation,qc_rfsc,QC-RFSC,SIM05
+batch_features_corrected,,descriptive,1000,features,,simulation,qc_rfsc,QC-RFSC,SIM05
+truth_metabolite_profile_icc_mean,0.696713902302012,higher,1000,"ICC(A,1)",,simulation,qc_rfsc,QC-RFSC,SIM05
+truth_sample_profile_pearson_mean,0.65034566742373,higher,450,correlation,,simulation,qc_rfsc,QC-RFSC,SIM05
+truth_log1p_rmse,0.207486449579094,lower,450000,log1p intensity,,simulation,qc_rfsc,QC-RFSC,SIM05
+heldout_qc_cv_mean,13.2096444309348,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM06
+heldout_qc_cv_sd,8.89517432800423,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM06
+heldout_qc_cv_median,12.4931773084152,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM06
+residual_run_order_gam_mean_deviance,0.13208767932442,lower,5000,proportion,,simulation,qc_rfsc,QC-RFSC,SIM06
+residual_run_order_gam_sd_deviance,0.155681868412352,lower,5000,proportion,,simulation,qc_rfsc,QC-RFSC,SIM06
+residual_ljung_box_proportion_significant,0.2184,lower,5000,proportion,,simulation,qc_rfsc,QC-RFSC,SIM06
+batch_weighted_pc_r2_categorical,0.152345252240769,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,qc_rfsc,QC-RFSC,SIM06
+retained_features,1000,higher,1000,features,,simulation,qc_rfsc,QC-RFSC,SIM06
+retained_samples,500,higher,500,samples,,simulation,qc_rfsc,QC-RFSC,SIM06
+runtime_sec,,lower,1,seconds,not remeasured; cache retrieval time excluded,simulation,qc_rfsc,QC-RFSC,SIM06
+drift_profiles_corrected,,descriptive,5000,profiles,,simulation,qc_rfsc,QC-RFSC,SIM06
+drift_features_corrected,,descriptive,1000,features,,simulation,qc_rfsc,QC-RFSC,SIM06
+batch_features_corrected,,descriptive,1000,features,,simulation,qc_rfsc,QC-RFSC,SIM06
+truth_metabolite_profile_icc_mean,0.689351034717308,higher,1000,"ICC(A,1)",,simulation,qc_rfsc,QC-RFSC,SIM06
+truth_sample_profile_pearson_mean,0.674771068934823,higher,450,correlation,,simulation,qc_rfsc,QC-RFSC,SIM06
+truth_log1p_rmse,0.198064310607219,lower,450000,log1p intensity,,simulation,qc_rfsc,QC-RFSC,SIM06
+heldout_qc_cv_mean,17.6021780056693,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM07
+heldout_qc_cv_sd,15.2694089965348,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM07
+heldout_qc_cv_median,15.9382165344268,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM07
+residual_run_order_gam_mean_deviance,0.10484306001721,lower,5000,proportion,,simulation,qc_rfsc,QC-RFSC,SIM07
+residual_run_order_gam_sd_deviance,0.128332254461884,lower,5000,proportion,,simulation,qc_rfsc,QC-RFSC,SIM07
+residual_ljung_box_proportion_significant,0.1496,lower,5000,proportion,,simulation,qc_rfsc,QC-RFSC,SIM07
+batch_weighted_pc_r2_categorical,0.13347840482396,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,qc_rfsc,QC-RFSC,SIM07
+retained_features,1000,higher,1000,features,,simulation,qc_rfsc,QC-RFSC,SIM07
+retained_samples,500,higher,500,samples,,simulation,qc_rfsc,QC-RFSC,SIM07
+runtime_sec,,lower,1,seconds,not remeasured; cache retrieval time excluded,simulation,qc_rfsc,QC-RFSC,SIM07
+drift_profiles_corrected,,descriptive,5000,profiles,,simulation,qc_rfsc,QC-RFSC,SIM07
+drift_features_corrected,,descriptive,1000,features,,simulation,qc_rfsc,QC-RFSC,SIM07
+batch_features_corrected,,descriptive,1000,features,,simulation,qc_rfsc,QC-RFSC,SIM07
+truth_metabolite_profile_icc_mean,0.703716953755978,higher,1000,"ICC(A,1)",,simulation,qc_rfsc,QC-RFSC,SIM07
+truth_sample_profile_pearson_mean,0.658360622710135,higher,450,correlation,,simulation,qc_rfsc,QC-RFSC,SIM07
+truth_log1p_rmse,0.202531914416231,lower,450000,log1p intensity,,simulation,qc_rfsc,QC-RFSC,SIM07
+heldout_qc_cv_mean,10.9401985050664,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM08
+heldout_qc_cv_sd,12.1682159344467,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM08
+heldout_qc_cv_median,9.11136904809059,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM08
+residual_run_order_gam_mean_deviance,0.116782400325852,lower,5000,proportion,,simulation,qc_rfsc,QC-RFSC,SIM08
+residual_run_order_gam_sd_deviance,0.136059003485631,lower,5000,proportion,,simulation,qc_rfsc,QC-RFSC,SIM08
+residual_ljung_box_proportion_significant,0.1696,lower,5000,proportion,,simulation,qc_rfsc,QC-RFSC,SIM08
+batch_weighted_pc_r2_categorical,0.142300292919002,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,qc_rfsc,QC-RFSC,SIM08
+retained_features,1000,higher,1000,features,,simulation,qc_rfsc,QC-RFSC,SIM08
+retained_samples,500,higher,500,samples,,simulation,qc_rfsc,QC-RFSC,SIM08
+runtime_sec,,lower,1,seconds,not remeasured; cache retrieval time excluded,simulation,qc_rfsc,QC-RFSC,SIM08
+drift_profiles_corrected,,descriptive,5000,profiles,,simulation,qc_rfsc,QC-RFSC,SIM08
+drift_features_corrected,,descriptive,1000,features,,simulation,qc_rfsc,QC-RFSC,SIM08
+batch_features_corrected,,descriptive,1000,features,,simulation,qc_rfsc,QC-RFSC,SIM08
+truth_metabolite_profile_icc_mean,0.694782525079178,higher,1000,"ICC(A,1)",,simulation,qc_rfsc,QC-RFSC,SIM08
+truth_sample_profile_pearson_mean,0.643051864418511,higher,450,correlation,,simulation,qc_rfsc,QC-RFSC,SIM08
+truth_log1p_rmse,0.212593356473589,lower,450000,log1p intensity,,simulation,qc_rfsc,QC-RFSC,SIM08
+heldout_qc_cv_mean,13.7477848350727,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM09
+heldout_qc_cv_sd,11.7538464868227,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM09
+heldout_qc_cv_median,12.7390822730703,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM09
+residual_run_order_gam_mean_deviance,0.116846235550947,lower,5000,proportion,,simulation,qc_rfsc,QC-RFSC,SIM09
+residual_run_order_gam_sd_deviance,0.136512467746479,lower,5000,proportion,,simulation,qc_rfsc,QC-RFSC,SIM09
+residual_ljung_box_proportion_significant,0.168,lower,5000,proportion,,simulation,qc_rfsc,QC-RFSC,SIM09
+batch_weighted_pc_r2_categorical,0.154638709439848,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,qc_rfsc,QC-RFSC,SIM09
+retained_features,1000,higher,1000,features,,simulation,qc_rfsc,QC-RFSC,SIM09
+retained_samples,500,higher,500,samples,,simulation,qc_rfsc,QC-RFSC,SIM09
+runtime_sec,,lower,1,seconds,not remeasured; cache retrieval time excluded,simulation,qc_rfsc,QC-RFSC,SIM09
+drift_profiles_corrected,,descriptive,5000,profiles,,simulation,qc_rfsc,QC-RFSC,SIM09
+drift_features_corrected,,descriptive,1000,features,,simulation,qc_rfsc,QC-RFSC,SIM09
+batch_features_corrected,,descriptive,1000,features,,simulation,qc_rfsc,QC-RFSC,SIM09
+truth_metabolite_profile_icc_mean,0.697053028476662,higher,1000,"ICC(A,1)",,simulation,qc_rfsc,QC-RFSC,SIM09
+truth_sample_profile_pearson_mean,0.658086244650495,higher,450,correlation,,simulation,qc_rfsc,QC-RFSC,SIM09
+truth_log1p_rmse,0.203252375990086,lower,450000,log1p intensity,,simulation,qc_rfsc,QC-RFSC,SIM09
+heldout_qc_cv_mean,14.3914721086863,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM10
+heldout_qc_cv_sd,11.4966594533255,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM10
+heldout_qc_cv_median,13.4622485008722,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM10
+residual_run_order_gam_mean_deviance,0.126466638376322,lower,5000,proportion,,simulation,qc_rfsc,QC-RFSC,SIM10
+residual_run_order_gam_sd_deviance,0.148537804336764,lower,5000,proportion,,simulation,qc_rfsc,QC-RFSC,SIM10
+residual_ljung_box_proportion_significant,0.1914,lower,5000,proportion,,simulation,qc_rfsc,QC-RFSC,SIM10
+batch_weighted_pc_r2_categorical,0.141897383555201,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,qc_rfsc,QC-RFSC,SIM10
+retained_features,1000,higher,1000,features,,simulation,qc_rfsc,QC-RFSC,SIM10
+retained_samples,500,higher,500,samples,,simulation,qc_rfsc,QC-RFSC,SIM10
+runtime_sec,,lower,1,seconds,not remeasured; cache retrieval time excluded,simulation,qc_rfsc,QC-RFSC,SIM10
+drift_profiles_corrected,,descriptive,5000,profiles,,simulation,qc_rfsc,QC-RFSC,SIM10
+drift_features_corrected,,descriptive,1000,features,,simulation,qc_rfsc,QC-RFSC,SIM10
+batch_features_corrected,,descriptive,1000,features,,simulation,qc_rfsc,QC-RFSC,SIM10
+truth_metabolite_profile_icc_mean,0.683710451851543,higher,1000,"ICC(A,1)",,simulation,qc_rfsc,QC-RFSC,SIM10
+truth_sample_profile_pearson_mean,0.655220644525526,higher,450,correlation,,simulation,qc_rfsc,QC-RFSC,SIM10
+truth_log1p_rmse,0.204888951439997,lower,450000,log1p intensity,,simulation,qc_rfsc,QC-RFSC,SIM10

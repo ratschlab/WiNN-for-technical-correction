@@ -1,0 +1,640 @@
+%% WiNN supplementary material for Bioinformatics
+%% WiNN 0.1.4 benchmark analyses
+
+\documentclass[namedate,webpdf,modern,large,nocrop]{oup-authoring-template}
+\graphicspath{{figures/supplementary_panels/}}
+\newcommand{\societylogo}{}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{pdflscape}
+\newcommand{\supppanel}[2]{\begin{minipage}[t]{#1}\centering\includegraphics[width=\linewidth]{#2}\end{minipage}}
+
+\begin{document}
+\journaltitle{Bioinformatics}
+\copyrightyear{2026}
+\pubyear{2026}
+\access{Supplementary material}
+\appnotes{Original Paper}
+\firstpage{1}
+\title[WiNN supplementary material]{Supplementary material for: WiNN: selective run-order detrending and batch correction for randomized metabolomics experiments}
+\author[1,2,6]{Tanmay Tanna}
+\author[2]{Yirui Zhang}
+\author[2]{Anja Sjöström}
+\author[4]{Franco Giulianini}
+\author[2,6]{Malte Londschien}
+\author[2]{Antoine Jeanrenaud}
+\author[3]{Heike Luttmann-Gibson}
+\author[2,5,8]{André Kahles}
+\author[7]{Mitchell P. Levesque}
+\author[2,5,6,8,$\ast$]{Gunnar Rätsch}
+\author[2,3,4,$\ast$]{Olga Demler}
+\address[1]{\orgdiv{Department of Biosystems Science and Engineering}, \orgname{ETH Zürich}, \orgaddress{\country{Switzerland}}}
+\address[2]{\orgdiv{Department of Computer Science}, \orgname{ETH Zürich}, \orgaddress{\country{Switzerland}}}
+\address[3]{\orgdiv{Harvard T.H. Chan School of Public Health}, \orgaddress{\state{MA}, \country{USA}}}
+\address[4]{\orgdiv{Brigham and Women's Hospital, Harvard Medical School}, \orgaddress{\state{MA}, \country{USA}}}
+\address[5]{\orgdiv{Medical Informatics}, \orgname{University Hospital Zürich}, \orgaddress{Zürich, \country{Switzerland}}}
+\address[6]{\orgname{AI Center, ETH Zürich}, \orgaddress{Zürich, \country{Switzerland}}}
+\address[7]{\orgdiv{Department of Dermatology}, \orgname{University Hospital Zürich and Medical Faculty, University of Zürich}, \orgaddress{\country{Switzerland}}}
+\address[8]{\orgname{Swiss Institute for Bioinformatics}, \orgaddress{\state{Lausanne}, \country{Switzerland}}}
+\corresp[$\ast$]{Corresponding authors. \href{mailto:raetsch@inf.ethz.ch}{raetsch@inf.ethz.ch}; \href{mailto:odemler@bwh.harvard.edu}{odemler@bwh.harvard.edu}}
+\abstract{Detailed algorithms, benchmark designs, complete benchmark results, uncertainty analyses, ablations and numerical validation supporting the main manuscript.}
+\keywords{metabolomics; mass spectrometry; run-order drift; batch effects; normalization; supplementary methods}
+\onecolumn
+\maketitle
+
+\setcounter{section}{0}
+\setcounter{figure}{0}
+\setcounter{table}{0}
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\thetable}{S\arabic{table}}
+
+\section*{Supplementary Methods}
+
+\section{WiNN algorithm}
+\label{sec:supp_algorithm}
+
+\subsection{Input, robust preparation and analysis scale}
+
+Let \(X=(x_{ij})\in\mathbb{R}_{\geq0}^{p\times n}\) contain \(p\) features and \(n\) sequential injections. Injection \(j\) has run order \(t_j\) and a supplied or inferred acquisition segment \(b(j)\). Quality-control (QC) reference samples are repeated injections of reference material used for tuning or evaluating analytical precision. For feature \(i\), WiNN calculates
+\[
+m_i=\operatorname{median}_{j}(x_{ij}),\qquad d_i=\operatorname{MAD}_{j}(x_{ij}).
+\]
+Here \(d_i\) is R's scaled MAD, using the default consistency constant 1.4826. The primary \texttt{winn()} entry point requires finite, non-negative intensities. The standalone \texttt{adjust\_outliers\_mad()} helper permits nonfinite values; these are excluded from threshold estimation and returned unchanged, while later nonfinite test or fit results are handled conservatively as described below. For finite observations, values at or beyond \(m_i\pm4d_i\) are flagged. The median, MAD, both thresholds and both masks are calculated once from the original finite observations, after which upper and lower flags are mapped independently into their respective 3--4 MAD bands in one non-iterative pass. Features with zero or undefined MAD and all unflagged observations remain unchanged. Tests and correction models use \(z_{ij}=\log(1+\widetilde x_{ij})\), where \(\widetilde x_{ij}\) is the prepared intensity. MAD shrinkage limits extreme observations, including rare biological responses that fall beyond the thresholds.
+
+\subsection{Feature-segment run-order gate}
+
+Within segment \(s\), containing \(n_s\) injections, the default gate uses the Ljung-Box statistic \citep{LjungBox1978}
+\[
+Q_i^{(s)}(h_s)=n_s(n_s+2)\sum_{\ell=1}^{h_s}\frac{\widehat\rho_{i\ell}^{(s)2}}{n_s-\ell}.
+\]
+Here \(\widehat\rho_{i\ell}^{(s)}\) is lag-\(\ell\) autocorrelation. Let \(d_{\mathrm{fit}}\) denote the Ljung-Box fitted-model degrees of freedom and define \(h_{\min}=d_{\mathrm{fit}}+3\). If \(n_s-1<h_{\min}\), the profile is not tested and remains unchanged. Otherwise, when no lag is supplied,
+\[
+h_s=\min\!\left\{n_s-1,\max\!\left[h_{\min},\min\!\left(10,\left\lfloor n_s/5\right\rfloor\right)\right]\right\}.
+\]
+A user-supplied lag is likewise raised to at least \(h_{\min}\) and capped at \(n_s-1\). The primary configuration uses \texttt{fitdf=0}, because no ARMA model is fitted before testing, so \(h_{\min}=3\) and the approximate reference chi-square distribution has \(h_s\) degrees of freedom. The gate is a heuristic screen for serial dependence across all injections; its nominal BH threshold does not establish finite-sample FDR control. Its interpretation depends on the acquisition design: scheduled reference types and repeated identities can produce serial dependence independently of instrumental drift. Finite-sample calibration is evaluated in Section~\ref{sec:supp_targeted_revision}. Profiles producing a nonfinite test result are retained without detrending. Durbin-Watson testing is available as an alternative \citep{DurbinWatson1951}. Benjamini-Hochberg adjustment is performed across features within each segment, giving one testing family per segment \citep{BenjaminiHochberg1995}.
+
+Only selected feature-segment profiles are detrended. The primary configuration uses the conservative smoother hierarchy. For \(n_s<5\), WiNN fits a linear model. For \(n_s\geq5\), it sets \(k_s=\max\{4,\min(10,\lfloor n_s/5\rfloor)\}\) and attempts, in order, a P-spline generalized additive model (GAM) with \(k=k_s\), REML estimation and \(\gamma=1.4\); a thin-plate GAM with \(k=k_s\), REML estimation and \(\gamma=1.2\); a fixed cubic-regression spline with \(k=\min(6,k_s)\) and \texttt{fx=TRUE}; LOESS with span 0.3 and degree 1; and linear regression \citep{Cleveland1979LOESS,Wood2017GAM}. The separate standard option fits \(z\sim s(t,\mathrm{bs}=\texttt{"cr"})\) and falls back to a linear model. A profile remains unchanged if no fit returns finite fitted values. For fitted curve \(\widehat f_i^{(s)}\),
+\[
+z_{ij}^{\mathrm{drift}}=z_{ij}-\left\{\widehat f_i^{(s)}(t_j)-\overline{\widehat f_i^{(s)}}\right\},\qquad
+\overline{\widehat f_i^{(s)}}=n_s^{-1}\sum_{j\in s}\widehat f_i^{(s)}(t_j).
+\]
+Centering preserves the segment mean on the transformed scale. The forced-drift ablation fits the same correction to every testable profile and bypasses only the gate.
+
+\subsection{Residual batch gate}
+
+After detrending, WiNN fits \(z_{ij}^{\mathrm{drift}}=\mu_i+\beta_{i,b(j)}+\varepsilon_{ij}\) feature by feature. ANOVA \(P\)-values are BH-adjusted across features. A selected feature receives
+\[
+z_{ij}^{\mathrm{batch}}=z_{ij}^{\mathrm{drift}}-\overline z_{i,b(j)}^{\mathrm{drift}}+\overline z_i^{\mathrm{drift}}.
+\]
+This mean-only residualization removes segment-level location shifts while retaining the global feature mean. An eligible feature is a retained row whose \(\log(1+x)\) values are finite across all injections, and the stage is skipped when fewer than two batch levels are present. ANOVA is attempted for every eligible feature, but selective correction requires a finite BH-adjusted \(P\)-value below the nominal false-discovery rate (FDR) threshold; a non-estimable result is not selected. The forced-batch ablation applies the same location-shift correction to every eligible feature. An empirical-Bayes ComBat branch is available, but the primary configuration uses the ANOVA branch \citep{Johnson2007ComBat}.
+
+\subsection{Conservative probabilistic quotient normalization}
+
+All PQN calculations are performed after inverse transformation to the non-negative intensity scale. For reference set \(C\), WiNN calculates \(r_i=\operatorname{median}_{j\in C}x_{ij}^{\mathrm{batch}}\). The primary configuration sets \texttt{control\_samples=NULL}, so \(C\) contains all injections; QC-tuned configurations use labelled training controls. Only features with \(r_i>0\) contribute to quotient estimation:
+\[
+q_{ij}=x_{ij}^{\mathrm{batch}}/r_i,\qquad d_j=\operatorname{median}_{i:r_i>0}(q_{ij}).
+\]
+Features with zero reference medians are omitted from dilution-factor estimation but remain in the returned matrix. Let \(\bar d\) and \(s_d\) be the arithmetic mean and standard deviation of the positive dilution factors. Conservative PQN leaves sample \(j\) unchanged when \(d_j\in[\bar d-s_d,\bar d+s_d]\); otherwise all intensities in that sample are multiplied by \(b_j/d_j\), where \(b_j\) is the nearest boundary of that interval. Full PQN instead divides every sample by \(d_j\) \citep{Dieterle2006PQN}. PQN estimates dilution from median feature quotients and therefore assumes that most features are unaffected by a coordinated biological response. Within-segment standardization is optional and was disabled in the benchmarks. WiNN returns the full feature panel together with gate decisions and diagnostics.
+
+\subsection{Benchmarked configurations and automatic segmentation}
+
+Throughout the manuscript, tables and figures, \emph{WiNN} denotes the prespecified primary configuration with supplied batch labels and no QC-guided tuning. It uses \texttt{parameters="fixed"}, supplied segments, \texttt{control\_samples=NULL}, MAD preparation, adaptive-lag Ljung-Box testing with \texttt{fitdf=0} at a BH-adjusted threshold of 0.05, conservative smoothing, residual-batch ANOVA at a BH-adjusted threshold of 0.05 and conservative PQN. It receives no QC identities and performs no parameter search.
+
+When configurations are compared directly, \emph{WiNN (QC-tuned)} denotes the option that retains supplied batch labels and uses labelled training controls to select from prespecified nominal drift thresholds \(\{0.10,0.05,0.01\}\), nominal batch thresholds \(\{0.10,0.05,0.01\}\), supported serial-dependence tests, standard or conservative smoothers and conservative or full PQN (Table~S17 records these last two as the parameter values \texttt{shrink} and \texttt{normalize}). Candidate pipelines are scored using training-control CV and profile agreement. Controls therefore guide configuration selection but do not serve as spline knots: run-order smooths are fitted to the complete within-segment profile, in which control injections appear as ordinary observations.
+
+\emph{WiNN (inferred segments)} combines the same QC-guided tuning with inferred acquisition segments. It first infers contiguous acquisition segments by functional-pruning changepoint detection applied to \(a_j=\operatorname{median}_{i}(\widetilde x_{ij})\). It minimizes
+\[
+\sum_{k=0}^{K}\mathcal C\!\left(a_{(\tau_k+1):\tau_{k+1}}\right)+\beta K
+\]
+over boundaries \(0=\tau_0<\tau_1<\cdots<\tau_{K+1}=n\). Long segments use sparse natural-spline means; short segments use constant means. The default modified-BIC penalty is \(3\log n\) \citep{Killick2012PELT,Maidstone2017FPOP}. Inferred versus supplied segment counts were 2 versus 5 in simulation, 3 versus 8 in MTBLS79, 2 versus 8 in the clinical dataset, 6 versus 10 in BatchCorr, 3 versus 2 in Sacurine and 1 versus 3 in WaveICA. Supplied segments remain the recommended input. The API also permits fixed parameters with omitted batch labels, which invokes automatic segmentation before the fixed correction sequence; this combination was not reported as a separate benchmark output.
+
+\section{Benchmark designs}
+\label{sec:supp_designs}
+
+\subsection{Canonical truth-known simulation}
+
+Each seed contains 1,000 features and 500 injections in five plates of 100. Ninety study samples and ten pooled QCs occur per plate; QCs are interleaved every ten acquisitions. Ten QCs are selected before fitting as label-blinded references, leaving 40 labelled training QCs. Clean study log intensities are independent draws from \(N(0,0.35^2)\). QCs share one clean reference profile.
+
+Plate-effect susceptibility is drawn independently with probability 0.70. Conditional on assignment, feature-plate offsets are Gaussian draws with standard deviation 0.60, except for a further Bernoulli 0.10 subset drawn with standard deviation 1.35; offsets are then centered across plates. Run-order susceptibility is drawn with probability 0.60. For each susceptible feature, plate-specific activity is sampled with probability 0.55, with at least one active plate. Active profiles use linear, nonlinear, autoregressive or mixed trajectories. Each trajectory is centered and scaled to a maximum log-amplitude drawn uniformly from 0.20 to 0.85. If \(G\), \(B\) and \(D\) denote clean, plate-offset and drift matrices on the log scale, observed intensities are \(X=\exp(G+B+D)\). Ten independent component-seed sets were completed for every method.
+
+\subsection{Partial-confounding simulation}
+
+The confounding experiment reuses the canonical technical artifacts and adds a balanced binary phenotype to the 450 study injections. One hundred features are selected once per master seed; 50 receive a case-control log effect of (+0.35), 50 receive (-0.35), and all remaining features receive zero. Centered phenotype coding gives 225 cases and 225 controls without changing the study grand mean. Pooled QCs receive no biological effect. Phenotype labels and response truth are excluded from correction metadata.
+
+The zero-strength allocation places 45 cases in each plate using fixed random priorities. Batch alignment moves plate case counts toward the maximum feasible pattern \((90,90,45,0,0)\). Run-order alignment swaps late cases with the earliest controls within each plate while retaining 45 cases per plate. Joint alignment applies both rules. Strengths are 0.25, 0.50, 0.75, 0.90 and 1.00; zero is represented once, giving 16 scenarios per seed and 160 scenario-seed tasks. Strength 1 is the most aligned arrangement allowed by this balanced five-plate design, not complete separation of phenotype from all technical variables.
+
+\subsection{Empirical datasets and independent units}
+
+MTBLS79 is a repeated-sample direct-infusion mass-spectrometry benchmark with 2,488 features, 172 injections and eight batches \citep{Kirwan2014DIMSBenchmark}. It contains 134 study injections from 20 extracts, ten cow and ten sheep, plus 38 pooled references. Twelve references are label-blinded.
+
+BatchCorr Set 1 contains 710 \emph{Arabidopsis} study injections and 51 pooled references across ten batches \citep{Wehrens2016BatchCorr}. The study injections represent 357 accessions, including 346 observed in multiple batches. Ten references are label-blinded. Variables observed in fewer than 80\% of samples are removed. This leaves 199 features and 3.11\% missing values, imputed with \texttt{missForest} using seed 42 \citep{Stekhoven2012missForest}.
+
+The internal clinical FIA-MS dataset contains 1,594 features and 1,320 injections across eight plates \citep{Fuhrer2011FIATOF}. Injections form 660 adjacent, within-plate technical pairs: 536 clinical pairs, 86 training-control pairs and 38 label-blinded NIST1950 pairs. Each method is fitted to pair-level \(\log(1+x)\) means. The learned log correction is applied identically to both original injections in a pair. The 536 study pair means represent 267 biological identities observed across plates. Plate \(R^2\) and biological identity metrics use only these study pairs; held-out CV uses the 38 masked NIST pairs. No phenotype or disease endpoint is used.
+
+Sacurine contains 184 human urine study injections, 26 pooled QCs, 113 metabolites and two batches \citep{Thevenot2015Sacurine,Thevenot2018W4M00001}. Files were pinned from the \texttt{phenomis} mirror at commit \texttt{1e83ce6}; eight QCs are label-blinded. Age, BMI, gender, sampling factor and osmolality are withheld from correction. Correction and technical endpoints use the unscaled deposited matrix. For biological endpoints only, each corrected study profile is divided by its sample osmolality before $\log(1+x)$ transformation, which keeps osmolality outside the correction procedure.
+
+WaveICA contains an XCMS-derived human plasma peak table with 6,461 peaks, 568 study injections, 74 pooled QCs and three batches \citep{Smith2006XCMS,Deng2021WaveICA}. Fifteen QCs are label-blinded. The study labels are retained as \texttt{group\_0} and \texttt{group\_1}, containing 71 and 497 samples. The labels are not mapped to a diagnosis.
+
+\begin{table*}[tbp]
+\centering
+\small
+\caption{Benchmark structure and independent evaluation units. Hidden references remain in the intensity matrix with their identities masked, giving label-blinded, transductive evaluation.}
+\label{tab:supp_design}
+\begin{tabular}{lrrrrrrp{4.3cm}}
+\toprule
+Dataset & Features & Injections & Study units & References & Batches & Hidden refs. & Independent biological unit or anchor \\
+\midrule
+Simulation & 1,000 & 500 & 450 & 50 & 5 & 10 & Study injection; clean matrix; ten seeds \\
+MTBLS79 & 2,488 & 172 & 134 & 38 & 8 & 12 & Twenty cow or sheep extracts with repeats \\
+BatchCorr Set 1 & 199 & 761 & 710 & 51 & 10 & 10 & 357 accessions, 346 repeated across batches \\
+Clinical FIA-MS & 1,594 & 1,320 & 536 log-pair means & 124 control pairs & 8 & 38 & 267 biological identities across plates \\
+Sacurine & 113 & 210 & 184 & 26 & 2 & 8 & Study sample; age, BMI and gender \\
+WaveICA & 6,461 & 642 & 568 & 74 & 3 & 15 & Study sample; deposited group 0 or 1 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\section{Correction methods and selection protocol}
+\label{sec:supp_methods}
+
+Reference panels were selected once before fitting. Their metadata QC identities were replaced by ordinary study labels; their intensity columns remained in each matrix as unlabeled observations. This is a transductive design: a masked column can affect a correction fitted to all injections even when its QC identity is withheld. Biological labels, replicate identities, batch-separation results and final evaluation ranks are absent from every selection record.
+
+Raw data, ComBat, QC-RLSC, QC-RFSC, TIGER, SERRF and three WiNN modes are evaluated. Candidate sets and seeds are frozen before evaluation. Training-QC selection uses only labelled training-QC intensities, identities, run order and supplied batches. Endpoint comparisons use the same ordered sample and feature identifiers across methods. All outputs retain the declared feature and sample panel. Raw-value fallbacks are counted separately in Table~\ref{tab:supp_primary_safeguards}.
+
+ComBat uses \texttt{sva} 3.56.0 \citep{Johnson2007ComBat}. The selection manifest records a two-candidate training-QC search over \texttt{par.prior} for MTBLS79, BatchCorr and the clinical cohort: the selected setting is parametric (\texttt{TRUE}) in MTBLS79 and BatchCorr and nonparametric (\texttt{FALSE}) in the clinical cohort. Simulation, Sacurine and WaveICA use the prespecified parametric setting without search. The correction model itself uses supplied batches; the training QCs in those three datasets inform configuration selection. QC-RLSC uses an identifier-safe per-batch LOESS fit trained only on labelled controls, followed by interpolation to study injections \citep{Dunn2011,Cleveland1979LOESS}; this direct implementation was used because the \texttt{qcrlscR::qc.rlsc.wrap()} wrapper did not reliably propagate the intended span and order settings. QC-RFSC uses \texttt{statTarget} 1.38.0 \citep{Luan2018StatTarget}. TIGER uses \texttt{TIGERr} 1.0.2 with its native \(4\times4\) ensemble and 500 trees \citep{Han2022TIGER}. SERRF uses \texttt{malbacR} 0.1.0 \citep{Fan2019SERRF,Leach2023malbacR}. Package defaults or training-QC-selected candidates are recorded for every dataset-method pair in Table~\ref{tab:supp_selected_parameters} and the accompanying exact manifest. The external training-QC candidate score is mean pairwise QC-profile Pearson correlation minus one half of mean feature QC CV expressed as a fraction; higher is preferred. WiNN automatic modes use the package-native QC score and grids specified in Section~S1 and Table~\ref{tab:supp_winn_parameters}.
+
+\paragraph{QC-RFSC implementation.} The adapter assigns neutral identifiers to every injection, then marks training QCs for \texttt{statTarget}. The detected training indices are checked against the prespecified reference set before each fit. Feature-wise relative outputs are multiplied by the corresponding training-QC median to restore abundance units. Missing or nonfinite feature outputs revert to raw values, with fallback counts recorded. This preserves the input abundance scale for log1p RMSE and multifeature profile comparisons. QC-RFSC simulation results and empirical point estimates use this implementation. Reference-partition, biological-association and empirical bootstrap comparisons include the other eight outputs.
+
+\begin{table*}[tbp]
+\centering
+\small
+\caption{Compared outputs and information available during fitting or selection. All configurations were frozen before final endpoint evaluation.}
+\label{tab:supp_methods}
+\begin{tabular}{p{2.0cm}p{2.9cm}p{1.0cm}p{1.1cm}p{1.7cm}p{4.8cm}}
+\toprule
+Output & Implementation & Supplied batches & Training QCs & Search & Selection rule \\
+\midrule
+Raw & Identity & no & no & no & No correction \\
+ComBat & \texttt{sva} 3.56.0 & yes & dataset-specific & 1 or 2 candidates & Prespecified setting or training-QC score; see Table~\ref{tab:supp_selected_parameters} \\
+QC-RLSC & Direct LOESS; \texttt{qcrlscR} wrapper not used & yes & yes & dataset-specific & Fixed safeguard or training-QC score \\
+QC-RFSC & \texttt{statTarget} 1.38.0 & yes & yes & dataset-specific & Prespecified default or training-QC score \\
+TIGER & \texttt{TIGERr} 1.0.2 & yes & yes & native ensemble & Native setting with reliable run order \\
+SERRF & \texttt{malbacR} 0.1.0 & yes & yes & dataset-specific & Native setting or training-QC score \\
+WiNN (QC-tuned) & \texttt{winn} 0.1.4 & yes & yes & 36 or 72 candidates & Package score using training QCs only \\
+WiNN (inferred segments) & \texttt{winn} 0.1.4 & no & yes & 36 or 72 candidates & Segment inference, then training-QC score \\
+WiNN & \texttt{winn} 0.1.4 & yes & no & no & One prespecified configuration \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\section{Evaluation endpoints and uncertainty}
+\label{sec:supp_endpoints}
+
+For hidden reference set \(C\), feature CV is
+\[
+\operatorname{CV}_i=100\frac{\operatorname{sd}_{j\in C}(x_{ij})}{\left|\operatorname{mean}_{j\in C}(x_{ij})\right|}.
+\]
+Mean and median feature CV are retained. Hidden reference identities were withheld during fitting. Reference-profile correlation is also recorded to identify outputs with low marginal CV but distorted multifeature profiles.
+
+Residual run-order deviance is a post-correction diagnostic distinct from the WiNN selection test. For this diagnostic, an eligible feature-segment profile has at least six finite observations and at least four distinct run-order values. A cubic-spline GAM is fitted to \(\log(1+x)\) against within-segment run order. Deviance explained is
+\[
+\operatorname{DevExp}_{i,s}=1-D_{i,s}^{\mathrm{res}}/D_{i,s}^{\mathrm{null}}.
+\]
+Here \(x\) is the non-negative intensity returned by the method. The diagnostic uses a Gaussian identity-link GAM, so \(D^{\mathrm{null}}\) is the residual sum of squares for an intercept-only fit to the same transformed profile and \(D^{\mathrm{res}}\) is the residual sum of squares for the fitted spline model. The reported value is the mean over eligible profiles. Constant profiles contribute zero; profiles with failed fits are omitted. Lower values indicate less remaining ordered structure. Supplementary tables report this endpoint as a proportion, while percentage-labelled plots and main-text values multiply it by 100. This diagnostic quantifies remaining ordered structure; the biological endpoints assess the accompanying changes in study-sample variation. Residual Ljung-Box positivity is calculated separately. Profiles require at least eight finite, nonconstant observations; lag is \(\min\{10,\lfloor n_s/3\rfloor,n_s-1\}\), and BH adjustment is applied across all feature-segment profiles within each method.
+
+Principal component analysis (PCA) is performed on standardized \(\log(1+x)\) profiles. For the first \(K=\min(5,\text{available PCs})\) components,
+\[
+R_{\mathrm{wPC}}^2=\sum_{k=1}^{K}w_kR_k^2,\qquad w_k=\frac{\lambda_k}{\sum_{\ell=1}^{K}\lambda_\ell}.
+\]
+Each \(R_k^2\) is the ordinary multiple coefficient of determination from a linear model of PC score on an intercept and the target; for a batch factor, this is \(\mathrm{PC}_k\sim1+\operatorname{factor}(\mathrm{batch})\). Batch and plate are always encoded as factors. The same construction measures cow-sheep, WaveICA group, Sacurine gender, age and BMI structure; continuous targets enter as numeric covariates. Sacurine covariate PCA uses osmolality-scaled study profiles, while its technical batch PCA uses the pre-osmolality correction output. PCA, weights and regression are recomputed in each bootstrap draw. This relative structural endpoint uses method-specific PC axes, eigenvalues and variance denominators. Matched-feature effects provide a separate measure of biological effect magnitude and direction.
+
+Simulation root mean squared error (RMSE) is calculated between corrected and clean complete \(\log(1+x)\) matrices over 450 study samples. Sample-profile Pearson correlation is calculated across features for each sample and averaged. Feature-profile ICC(A,1) is calculated across study samples for each feature and averaged.
+
+For confounding simulations, each feature is fitted as \(\log(1+x)\sim\text{phenotype}+\text{plate}+\text{scaled within-plate position}\). Clean-reference effect recovery is the median, over 100 responsive features, of the signed corrected phenotype coefficient divided by its coefficient in the clean matrix. The injected-effect ratio divides this log1p-scale coefficient by the corresponding generating log-intensity coefficient, \(+0.35\) or \(-0.35\). The two coefficients use different scales. If \(G=\log x\), then \(\log(1+x)=\log(1+\exp G)\) has derivative \(\exp G/(1+\exp G)\), approximately one half near the simulation baseline \(G=0\). For the centered symmetric design, even the clean log1p contrast is therefore about half the injected log-intensity contrast, in addition to sampling variation. We report recovery using the corrected-to-clean ratio on the common log1p scale; the cross-scale injected ratio is included for reference. Feature-wise \(P\)-values are BH-adjusted jointly across all 1,000 features. Detection sensitivity is the fraction of responsive features called significant at FDR 5\%; empirical FDR is the fraction of all discoveries arising from the 900 null features.
+
+ICC(A,1) is the two-way mixed, absolute-agreement, single-measure intraclass correlation \citep{McGrawWong1996}. With \(n\) targets and \(k\) measurement columns,
+\[
+\operatorname{ICC(A,1)}=\frac{MS_R-MS_E}{MS_R+(k-1)MS_E+k(MS_C-MS_E)/n},
+\]
+where \(MS_R\), \(MS_C\) and \(MS_E\) are target, measurement-column and residual mean squares. Pearson correlation measures linear association and is invariant to positive affine changes; Spearman correlation is the rank-based measure. ICC(A,1) also penalizes systematic disagreement between measurement columns. It accounts for target heterogeneity, residual error and a systematic measurement-column shift. Batch weighted-PC \(R^2\) and the study design characterize the accompanying batch structure. In simulation, study samples are targets and the clean and corrected profiles are measurement columns, calculated feature by feature. In BatchCorr and the clinical dataset, features are targets and repeated acquisitions are measurement columns within each biological identity; ICC is then summarized across identities. For MTBLS79, identities shared by a batch pair are targets and the two batches are measurement columns; ICC is summarized across batch pairs per feature and then across features. Replicate-profile Pearson correlation is computed across features within repeated identity pairs and summarized by the median. Within-identity profile agreement reflects shared feature abundance differences. Cross-batch identity retrieval measures discrimination between identities: each study profile queries profiles acquired in other batches using across-feature Pearson similarity, and a correct top-ranked match must share its biological identity. Mean reciprocal rank records the reciprocal rank of the first correct match. The same candidate sets and identities are used across correction methods. Similarity is Pearson correlation across retained features after $\log(1+x)$ transformation. Candidates are all other-batch study profiles with finite similarity; reference injections are excluded. A query is eligible only if at least one candidate has the same identity. Ties are resolved by original input-column order. BatchCorr has 693 eligible queries from 346 accessions among 710 study injections (357 accessions); the clinical data have 536 eligible pair-mean queries from 267 identities. Top-1 accuracy and mean reciprocal rank average over queries with equal weight. For uncertainty, 2,000 paired identity resamples retain each identity's query count: the bootstrap statistic is the sum of sampled query scores divided by the corresponding sampled query count. Candidate sets and per-query ranks stay fixed; uncertainty concerns the represented query identities. Table~\ref{tab:supp_identity_retrieval} includes both estimates and paired differences.
+
+A separate feature-repeatability ratio was calculated for BatchCorr and the clinical dataset. For feature \(i\) and biological identity \(g\), let \(\bar z_{ig}\), \(s^2_{ig}\) and \(n_g\) be the mean, variance and number of repeated \(\log(1+x)\) observations, retaining identities with \(n_g\geq2\). We define
+\[
+B_i=\operatorname{Var}_g(\bar z_{ig}),\qquad
+W_i=\frac{\sum_g(n_g-1)s^2_{ig}}{\sum_g(n_g-1)},\qquad
+Q_i=\frac{B_i}{B_i+W_i}.
+\]
+The reported value is the median finite \(Q_i\) across features. Higher values indicate that between-identity variance dominates pooled within-identity variance. This variance ratio is distinct from ICC(A,1) and contains no measurement-column shift term. Because identity means contain measurement noise, \(Q_i\) is a descriptive repeatability ratio rather than a variance-component ICC.
+
+MTBLS79 and WaveICA use feature-wise two-group contrasts on identity-collapsed or study-only \(\log(1+x)\) values. Sacurine uses osmolality-scaled study profiles transformed as \(\log(1+x)\), then fits
+\[
+\text{feature}\sim\text{age}_{z}+\text{BMI}_{z}+\text{gender}+\text{sampling factor}.
+\]
+Feature-level \(P\)-values are BH-adjusted. Counts are paired with median absolute effect, median absolute standardized effect and median within-group or residual variance. MTBLS79 class labels were permuted among the 20 identity-collapsed extracts as one global block, preserving ten cow and ten sheep labels. WaveICA labels were permuted within each of the three deposited batches, preserving group counts within batch. Sacurine used Freedman--Lane residual permutation within batches \texttt{ne1} and \texttt{ne2}. For each focal covariate, the reduced model retained the other two covariates and sampling factor; its residual vectors were permuted within batch and the full model was refitted \citep{FreedmanLane1983}. Each of 5,000 permutations repeated feature testing and BH adjustment.
+
+For effects represented in more than one batch, feature-level coefficients are estimated separately in all but one batch and in the held-out batch, using matrices corrected jointly before these regressions. The correction, gates and parameter selection are held fixed across folds, so the endpoint measures cross-batch effect agreement after joint correction. Pearson correlation, Spearman correlation and sign concordance compare training and held-out effects. A fold lacking covariate variation remains non-estimable. Within each leave-one-batch-out fold, WaveICA resampled training samples within batch-by-group strata and held-out samples within group. MTBLS79 resampled identities present on both sides within cow or sheep class and applied each selected identity to both training and held-out profiles. Sacurine resampled the training and held-out samples separately within gender.
+
+Displayed simulation uncertainty is the standard error across ten independent seeds, without bootstrap resampling; paired baseline differences in Table~\ref{tab:supp_baseline_truth} use $t_9$ intervals across those seeds. Empirical biological analyses used 2,000 paired bootstrap draws, with identical indices applied to every method \citep{EfronTibshirani1993}. MTBLS79 resampled extract identities within cow or sheep class and carried all repeated injections together. WaveICA resampled study samples within batch-by-group strata. Sacurine resampled study samples within batch. BatchCorr resampled accessions, and the clinical analysis resampled biological identities while carrying pair-collapsed repeats. PCA, variance weights, regressions and summary metrics were recomputed in every draw. Values labelled as bootstrap standard errors are the standard deviations of the bootstrap estimates. Empirical bootstrap 95\% intervals are unstudentized percentile intervals defined by the 2.5th and 97.5th percentiles. Paired differences were calculated within each shared draw before taking percentiles. Bootstrap intervals are conditional on the fitted correction, gate decisions and selected parameters. Resampling indices are shared across methods within each dataset. Technical-plot standard errors summarize dispersion across features or feature-segments.
+
+The ordered ablation stores immutable matrices after raw input, MAD preparation, selective drift correction, residual batch correction and conservative PQN. Adjacent differences depend on stage order. A \(2\times2\) gate experiment crosses selective or forced drift with selective or forced batch correction. Preparation and PQN remain active. Ten prespecified hidden-reference partitions per dataset test split sensitivity; these overlapping partitions are not independent cohorts.
+
+The benchmark uses WiNN 0.1.4 at package commit \texttt{a6130a123a5a56a089a0e3a0465e55bbf31e0cc6}. The source archive SHA-256 is \texttt{71a0964cee2778b2e5789d20621147e074c7945e813cf76af2ceeb696104aae1}; the original benchmark base is analysis commit \texttt{21de7c448bfa5545d27c5a930161fb0bd8e40d85}. The derivative inventory records the source and SHA-256 identity of each matrix. The currently distributed R package is \texttt{winn} 0.1.5 on CRAN (\url{https://CRAN.R-project.org/package=winn}; package DOI \href{https://doi.org/10.32614/CRAN.package.winn}{10.32614/CRAN.package.winn}). All benchmark results use version 0.1.4. WiNN extends the earlier WiNNbeta white-noise testing and selective spline-correction framework \citep{Demler2024WiNNbeta}, with the implementation, normalization stages and expanded evaluation described here. Current table CSVs, fold-level summaries and revision generators are supplied in \path{generated/supplementary_table_data/}, \path{generated/review_validation/} and \path{scripts/}. Historical aggregate inputs for Tables S4--S20 are bundled in the current analysis repository at \path{results/final/revision_inputs/supplement_20260727/}. The table assembler accepts that directory through \texttt{--final-root} and then applies the corrected QC-RFSC results. Separate generators create the baseline and acquisition-design tables. The source-data README records exact commands and distinguishes original analyses from revision results.
+
+\section*{Supplementary Results}
+
+\section{Technical structure and complete benchmark results}
+\label{sec:supp_complete_benchmark}
+
+The inputs represent different technical regimes (Table~\ref{tab:supp_raw}). WaveICA and BatchCorr have the strongest empirical batch separation. WaveICA also has the largest residual run-order deviance and Ljung-Box-positive fraction. MTBLS79 is dominated by discrete batch structure, with a raw Ljung-Box-positive fraction of 0.003. These datasets therefore span distinct combinations of drift and batch effects.
+
+\begin{table*}[tbp]
+\centering
+\small
+\caption{Uncorrected technical structure. Simulation values are means across ten seeds; empirical values are point estimates. Clinical plate \(R^2\) uses 536 study pair means. Lower values indicate less technical structure.}
+\label{tab:supp_raw}
+\begin{tabular}{lrrrrr}
+\toprule
+Dataset & Features & Held-out CV (\%) & GAM deviance & Ljung-Box positive & Batch or plate \(R^2\) \\
+\midrule
+Simulation & 1,000 & 44.550 & 0.1251 & 0.2444 & 0.9637 \\
+MTBLS79 & 2,488 & 28.757 & 0.1417 & 0.0030 & 0.3610 \\
+BatchCorr Set 1 & 199 & 66.570 & 0.1224 & 0.1754 & 0.5611 \\
+Clinical FIA-MS & 1,594 & 16.594 & 0.1203 & 0.1547 & 0.1505 \\
+Sacurine & 113 & 32.599 & 0.0684 & 0.1283 & 0.1317 \\
+WaveICA & 6,461 & 49.662 & 0.2058 & 0.5986 & 0.6944 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begingroup
+\input{generated/supplementary_tables/table_s4_simulation.tex}
+\endgroup
+
+Across ten seeds, WiNN achieved mean held-out CV of 8.69\%, residual GAM deviance of 0.0211, clean-truth RMSE of 0.0727, feature ICC(A,1) of 0.9211 and sample-profile Pearson correlation of 0.9230 (Table~\ref{tab:supp_simulation_all}; Figure~\ref{fig:supp_simulation}). Under the evaluated simulation design, it outperformed ComBat, QC-RLSC, QC-RFSC, TIGER and SERRF on all three truth endpoints in every paired seed. QC-RFSC yielded mean held-out CV of 15.92\%, RMSE of 0.1290, feature ICC(A,1) of 0.8509 and sample-profile correlation of 0.8229. QC-guided tuning changed the WiNN estimates by less than 0.0002 on the truth endpoints. Inferring acquisition segments reduced consistency because the inferred segments did not reproduce the five simulated plates.
+
+\begingroup
+\input{generated/supplementary_tables/table_s5_mtbls79.tex}
+\endgroup
+\begingroup
+\input{generated/supplementary_tables/table_s6_batchcorr.tex}
+\endgroup
+\begingroup
+\input{generated/supplementary_tables/table_s7_clinical.tex}
+\endgroup
+\begingroup
+\input{generated/supplementary_tables/table_s8_sacurine.tex}
+\endgroup
+\begingroup
+\input{generated/supplementary_tables/table_s9_waveica.tex}
+\endgroup
+\begingroup
+\input{generated/supplementary_tables/table_s10_runtime_retention.tex}
+\endgroup
+\begingroup
+\input{generated/supplementary_tables/table_s11_association_permutation.tex}
+\endgroup
+\begingroup
+\input{generated/supplementary_tables/table_s12_lobo_summary.tex}
+\endgroup
+
+The empirical comparisons distinguished technical correction from replicate-profile agreement. QC-RLSC produced severe reference imprecision and low feature ICC in MTBLS79 despite low measured batch structure (Table~\ref{tab:supp_mtbls79_all}). WiNN combined batch \(R^2=0.00057\) with replicate-profile ICC of 0.954 (Table~\ref{tab:supp_batchcorr_all}). Several methods retained high ICC in the clinical cohort; WiNN combined plate \(R^2=0.00205\) and replicate ICC of 0.9898 with the lowest residual GAM deviance among the primary methods (Table~\ref{tab:supp_clinical_all}).
+
+QC-RFSC reduced held-out reference CV from 28.76\% to 15.69\% in MTBLS79, 66.57\% to 42.92\% in BatchCorr, 32.60\% to 13.64\% in Sacurine and 49.66\% to 28.89\% in WaveICA. Clinical reference CV was 16.88\%, compared with 16.59\% in raw input. Table~\ref{tab:supp_qcrfsc_empirical} reports these point estimates together with feature-level fallback counts. The clinical fit uses the reconstructed pair-level input described in Section~\ref{sec:supp_targeted_revision}.
+
+The selected MTBLS79 QC-RLSC configuration (per-batch LOESS, span 0.7, degree one) yielded mean held-out CV of 182.84\%, compared with 28.76\% for raw input. Six of eight batches contained only three training QCs. Batches 2, 3, 4 and 8 required left extrapolation for five, five, four and five injections, respectively; no batch required right extrapolation. The fit generated 266,216 numerical warnings in 31 categories, including insufficient span, pseudoinverse and near-singularity warnings. The poor precision is therefore associated with unstable LOESS fits under sparse reference coverage. Reference layouts, per-feature CVs, representative profiles and warning records are supplied in \path{generated/review_validation/mtbls79_qcrlsc_*}, with a reproduction script in \path{scripts/benchmark_revision/}.
+
+\section{Ordered stages, selection gates and reference sensitivity}
+\label{sec:supp_ablation_results}
+
+The ordered ablation recorded the consecutive change contributed by preparation, drift correction, residual batch correction and conservative PQN in that fixed order. Residual batch correction produced the largest reductions in held-out CV and categorical batch structure in most datasets, whereas selective drift correction produced the largest reduction in residual GAM deviance (Figure~\ref{fig:supp_stage}). Drift correction increased held-out CV in the clinical and WaveICA datasets even as it reduced ordered structure. PQN produced smaller additional changes than the principal drift and batch stages. Complete cumulative values and gate-policy results are reported in Tables~\ref{tab:supp_cumulative} and \ref{tab:supp_selective_forced}.
+
+Forcing drift correction reduced the fitted residual GAM diagnostic but increased held-out reference CV by 0.67 to 3.15 percentage points across the six datasets (Figure~\ref{fig:supp_gates}). This comparison evaluated the complete correction policy because forcing drift also changed the matrix entering subsequent batch testing and PQN. Across repeated simulations, selective drift correction recovered clean truth better than forced drift correction. Forcing batch correction had different effects: it improved some endpoints in MTBLS79 and Sacurine and was nearly neutral in the clinical and WaveICA datasets. WiNN selected 72.5--98.0\% of batch-eligible features, which comprised all finite retained features in these benchmarks. Selective drift correction improved recovery; the additional effect of gating batch adjustment varied across datasets.
+
+All simulation outputs were completed for all ten seeds (Figure~\ref{fig:supp_simulation}). WiNN reduced mean held-out reference CV relative to raw data in every one of the ten prespecified reference partitions for every dataset (Figure~\ref{fig:supp_reference}). Method rankings changed across partitions, particularly among QC-dependent methods. The spread across these overlapping partitions quantifies sensitivity to reference selection (Table~\ref{tab:supp_reference_splits}).
+
+\begin{figure*}[p]
+\centering
+\supppanel{0.49\textwidth}{S1A_stage_heldout_qc_cv_mean.pdf}\hfill
+\supppanel{0.49\textwidth}{S1B_stage_residual_run_order_gam_mean_deviance.pdf}\\[1mm]
+\supppanel{0.49\textwidth}{S1C_stage_batch_weighted_pc_r2_categorical.pdf}
+\caption{Ordered WiNN stage impacts. (A) Held-out QC CV, (B) residual run-order GAM deviance and (C) categorical batch weighted-PC \(R^2\). Cells show direction-adjusted consecutive change from the preceding immutable matrix in native percentage-point units. Blue favors adding the stage and red indicates deterioration. The simulation row uses one prespecified representative seed.}
+\label{fig:supp_stage}
+\end{figure*}
+
+\begin{figure*}[p]
+\centering
+\supppanel{\textwidth}{S2A_heldout_qc_cv_mean.pdf}\\[1mm]
+\supppanel{\textwidth}{S2B_residual_run_order_gam_mean_deviance.pdf}\\[1mm]
+\supppanel{\textwidth}{S2C_batch_weighted_pc_r2_categorical.pdf}
+\caption{Selective and forced correction policies. (A-C) Four drift-by-batch gate policies are compared across all datasets for held-out QC CV, residual run-order deviance and categorical batch structure. The simulation row uses one prespecified representative seed. Dataset facets have independent vertical scales.}
+\label{fig:supp_gates}
+\end{figure*}
+
+\begin{figure*}[p]
+\centering
+\supppanel{0.49\textwidth}{S2D_truth_log1p_rmse.pdf}\hfill
+\supppanel{0.49\textwidth}{S2E_truth_metabolite_profile_icc_mean.pdf}\\[1mm]
+\supppanel{0.49\textwidth}{S2F_truth_sample_profile_pearson_mean.pdf}
+\addtocounter{figure}{-1}
+\caption{Selective and forced correction policies (continued). (D-F) Clean-truth RMSE, feature ICC(A,1) and sample-profile Pearson correlation across ten simulation seeds. Small points are seeds; diamonds and bars are means and seed-level standard errors.}
+\end{figure*}
+
+\begin{figure*}[p]
+\centering
+\supppanel{0.49\textwidth}{S3A_simulation_heldout_qc_cv_mean.pdf}\hfill
+\supppanel{0.49\textwidth}{S3B_simulation_residual_run_order_gam_mean_deviance.pdf}\\[1mm]
+\supppanel{0.49\textwidth}{S3C_simulation_batch_weighted_pc_r2_categorical.pdf}\hfill
+\supppanel{0.49\textwidth}{S3D_simulation_truth_log1p_rmse.pdf}\\[1mm]
+\supppanel{0.49\textwidth}{S3E_simulation_truth_metabolite_profile_icc_mean.pdf}\hfill
+\supppanel{0.49\textwidth}{S3F_simulation_truth_sample_profile_pearson_mean.pdf}
+\caption{Complete simulation benchmark. (A) Held-out QC CV, (B) residual run-order deviance, (C) categorical batch structure, (D) clean-truth RMSE, (E) clean-truth feature ICC(A,1) and (F) clean-truth sample-profile Pearson correlation. Small points are ten paired seeds; diamonds and bars are means and seed-level standard errors.}
+\label{fig:supp_simulation}
+\end{figure*}
+
+\begin{figure*}[p]
+\centering
+\supppanel{0.49\textwidth}{S4A_reference_simulation.pdf}\hfill
+\supppanel{0.49\textwidth}{S4B_reference_mtbls79.pdf}\\[1mm]
+\supppanel{0.49\textwidth}{S4C_reference_clinical_fiams.pdf}\hfill
+\supppanel{0.49\textwidth}{S4D_reference_batchcorr_set1.pdf}\\[1mm]
+\supppanel{0.49\textwidth}{S4E_reference_sacurine.pdf}\hfill
+\supppanel{0.49\textwidth}{S4F_reference_waveica.pdf}
+\caption{Label-blinded reference-split stability. Panels show held-out reference CV for the eight reference-sensitivity outputs across ten prespecified partitions in (A) simulation, (B) MTBLS79, (C) clinical FIA-MS, (D) BatchCorr Set 1, (E) Sacurine and (F) WaveICA. Diamonds are split means. Overlapping partitions are descriptive sensitivity units.}
+\label{fig:supp_reference}
+\end{figure*}
+
+\begingroup
+\input{generated/supplementary_tables/table_s13_partial_confounding.tex}
+\endgroup
+\begingroup
+\input{generated/supplementary_tables/table_s14_reference_splits.tex}
+\endgroup
+\begingroup
+\input{generated/supplementary_tables/table_s15_selective_forced.tex}
+\endgroup
+\begingroup
+\input{generated/supplementary_tables/table_s16_cumulative_stages.tex}
+\endgroup
+
+\section{Partial confounding defines an identifiability boundary}
+\label{sec:supp_confounding_results}
+
+Across the partial-confounding grid, WiNN's mean held-out CV ranged from 8.83\% to 9.75\%, categorical batch \(R^2\) from 0.00055 to 0.00477 and residual GAM deviance from 0.0208 to 0.0245 (Table~\ref{tab:supp_partial_confounding}; Figure~\ref{fig:supp_confounding}). Its clean sample-profile correlation declined from 0.923 with randomized labels to 0.913 at maximal joint alignment. Thus the technical summaries and overall sample-profile agreement changed little as phenotype became increasingly aligned with acquisition structure.
+
+Case-control effect recovery was more sensitive to this alignment. At zero alignment strength, with cases and controls mixed within each plate, clean-reference effect recovery was 0.948. This same-scale ratio fell to 0.509 at maximum run-order alignment and 0.226 at maximum joint alignment, where detection sensitivity was 0.133 and empirical FDR was 0.257. Batch alignment had a smaller effect on coefficient recovery because residual within-plate overlap permitted plate-adjusted estimation, although detection sensitivity fell to 0.884 at maximum batch alignment. Phenotype alignment with run order thus attenuated biological effects while leaving technical summaries stable.
+
+\begin{figure*}[p]
+\centering
+\supppanel{0.49\textwidth}{S5A_partial_heldout_qc_cv_mean.pdf}\hfill
+\supppanel{0.49\textwidth}{S5B_partial_residual_run_order_gam_mean_deviance.pdf}\\[1mm]
+\supppanel{0.49\textwidth}{S5C_partial_batch_weighted_pc_r2_categorical.pdf}\hfill
+\supppanel{0.49\textwidth}{S5D_partial_clean_sample_profile_pearson_mean.pdf}\\[1mm]
+\supppanel{0.49\textwidth}{S5E_partial_median_attenuation_ratio_clean_responsive.pdf}\hfill
+\supppanel{0.49\textwidth}{S5F_partial_empirical_fdr.pdf}
+\caption{Partial-confounding stress test. Raw and WiNN are followed as phenotype aligns with batch, within-plate run order or both. Panels show (A) held-out QC CV, (B) residual run-order deviance, (C) categorical batch structure, (D) clean sample-profile recovery, (E) clean-reference case-control effect recovery and (F) empirical FDR. Points and bars are means and seed-level standard errors over ten seeds. The ratio in E is the median signed corrected-to-clean phenotype-coefficient ratio from models adjusted for plate and within-plate position.}
+\label{fig:supp_confounding}
+\end{figure*}
+
+\section{Biological associations and repeated-identity endpoints}
+\label{sec:supp_biology_results}
+
+\subsection{Known and deposited biological effects}
+
+In MTBLS79, WiNN reduced batch \(R^2\) from 0.3610 to 0.01085 while cow-sheep \(R^2\) changed from 0.4354 to 0.4426. The raw-to-WiNN difference was +0.00715, with a paired 95\% percentile-bootstrap interval of \(-0.00200\) to \(0.01571\). Batch-pair feature ICC increased from 0.549 to 0.674 and replicate-profile Pearson correlation increased from 0.952 to 0.975. ComBat had slightly higher repeatability point estimates, whereas QC-RLSC strongly attenuated cow-sheep structure. All 2,488 features were retained (Table~\ref{tab:supp_mtbls79_all}).
+
+For the deposited groups in WaveICA, WiNN reduced batch \(R^2\) from 0.6944 to 0.00208 and increased deposited-group \(R^2\) from 0.00277 to 0.01423. Associated peaks increased from 206 to 516, a net increase of 310. Median absolute effect changed from 0.0541 to 0.0522, median absolute standardized effect increased from 0.0823 to 0.1239 and within-group variance decreased from 0.420 to 0.195 (Tables~\ref{tab:supp_waveica_all} and \ref{tab:supp_association}). The increased association count accompanied lower within-group variation and stronger standardized effects rather than a larger median absolute effect. Matched-feature effect changes are reported in Table~\ref{tab:supp_paired_effects}.
+
+Association counts for MTBLS79, WaveICA and the three Sacurine covariates generally exceeded their corresponding constrained-permutation null counts (Figure~\ref{fig:supp_permutation}; Table~\ref{tab:supp_association}). The accompanying panels show absolute effects and within-group or residual variance separately for each method. Together with matched-feature slopes and sign agreement, these panels describe changes in effect magnitude and residual variation.
+
+\subsection{Sacurine covariates}
+
+On the pre-osmolality matrices, WiNN reduced Sacurine held-out QC CV from 32.60\% to 22.42\%, residual GAM deviance from 0.0684 to 0.0520 and batch \(R^2\) from 0.1317 to 0.00074. After study-profile osmolality scaling, age, BMI and gender weighted-PC \(R^2\) increased from 0.03897, 0.01302 and 0.02036 to 0.05660, 0.02903 and 0.05172 respectively (Table~\ref{tab:supp_sacurine_all}; Figure~\ref{fig:supp_sacurine}). Across the two reciprocal batch folds, WiNN had the highest median held-out-batch Pearson and Spearman agreement for age and BMI among the primary methods, while gender Pearson agreement decreased from 0.462 in raw data to 0.410. The fold-specific intervals were broad (Table~\ref{tab:supp_lobo}; Figure~\ref{fig:supp_lobo}C--E). The response to correction differed by covariate.
+
+\subsection{Cross-batch effect agreement after joint correction}
+
+Leave-one-batch-out comparisons summarized fold-specific effect agreement and retained the number of estimable folds for each endpoint (Figure~\ref{fig:supp_lobo}; Table~\ref{tab:supp_lobo}). In WaveICA, WiNN increased median Spearman effect correlation from 0.191 to 0.220 and sign concordance from 0.561 to 0.570. ComBat had the highest median Pearson correlation, 0.233 compared with 0.218 for WiNN. The strong cow-sheep contrast in MTBLS79 was reproducible across batches for most methods, with ComBat achieving the highest median Pearson and Spearman estimates. Table~\ref{tab:supp_lobo} reports median fold estimates and median lower and upper percentile bounds. Figure~\ref{fig:supp_lobo} presents the interval for each fold. Sacurine contributes two reciprocal batch comparisons; MTBLS79 compares repeated measurements of the same identities across batches.
+
+\subsection{Repeated biological identities}
+
+Repeated identities in BatchCorr and the clinical cohort support cross-batch identity retrieval (Table~\ref{tab:supp_identity_retrieval}). BatchCorr top-1 accuracy rose from 0.4632 to 0.7100 with WiNN; the paired increase was 0.2468 (95\% interval 0.2043--0.2917). Clinical top-1 accuracy rose from 0.7519 to 0.8619; the paired increase was 0.1101 (0.0693--0.1530). ComBat and QC-RLSC had similar BatchCorr retrieval accuracy to WiNN, while TIGER had the highest clinical retrieval accuracy. Mean-only batch adjustment and study-sample ANCOVA had top-1 differences from WiNN whose paired intervals included zero in both datasets.
+
+\begin{figure*}[p]
+\centering
+\supppanel{\textwidth}{S6A_permutation_mtbls79_cow_vs_sheep.pdf}\\[1mm]
+\supppanel{\textwidth}{S6B_effect_variance_mtbls79_cow_vs_sheep.pdf}
+\caption{Association-count null tails and absolute effect--variance summaries for eight outputs. (A,B) MTBLS79 cow versus sheep. The first panel for each endpoint shows the 99th percentile of 5,000 permutation counts (open circles), null maximum (triangles) and observed BH-significant count (diamonds), on a log1p count axis. Annotations give $p=(1+\#\{N_{\rm null}\geq N_{\rm observed}\})/5001$. The companion panel shows median absolute effects and within-group or residual variances on separate logarithmic axes.}
+\label{fig:supp_permutation}
+\end{figure*}
+
+\begin{figure*}[p]
+\centering
+\supppanel{\textwidth}{S6C_permutation_waveica_biological_group.pdf}\\[1mm]
+\supppanel{\textwidth}{S6D_effect_variance_waveica_biological_group.pdf}
+\addtocounter{figure}{-1}
+\caption{Association-count null tails and absolute effect--variance summaries (continued). (C,D) WaveICA deposited groups. Symbols and definitions match panels A and B.}
+\end{figure*}
+
+\begin{figure*}[p]
+\centering
+\supppanel{\textwidth}{S6E_permutation_sacurine_age.pdf}\\[1mm]
+\supppanel{\textwidth}{S6F_effect_variance_sacurine_age.pdf}
+\addtocounter{figure}{-1}
+\caption{Association-count null tails and absolute effect--variance summaries (continued). (E,F) Sacurine age, using osmolality-scaled study profiles before log1p transformation.}
+\end{figure*}
+
+\begin{figure*}[p]
+\centering
+\supppanel{\textwidth}{S6G_permutation_sacurine_bmi.pdf}\\[1mm]
+\supppanel{\textwidth}{S6H_effect_variance_sacurine_bmi.pdf}
+\addtocounter{figure}{-1}
+\caption{Association-count null tails and absolute effect--variance summaries (continued). (G,H) Sacurine BMI, using the same osmolality-scaled analysis.}
+\end{figure*}
+
+\begin{figure*}[p]
+\centering
+\supppanel{\textwidth}{S6I_permutation_sacurine_gender.pdf}\\[1mm]
+\supppanel{\textwidth}{S6J_effect_variance_sacurine_gender.pdf}
+\addtocounter{figure}{-1}
+\caption{Association-count null tails and absolute effect--variance summaries (continued). (I,J) Sacurine gender, using the same osmolality-scaled analysis.}
+\end{figure*}
+
+\begin{figure*}[p]
+\centering
+\includegraphics[width=\textwidth]{S7A_lobo_mtbls79_cow_vs_sheep.pdf}
+\caption{Cross-batch effect agreement after joint correction for eight outputs. (A) MTBLS79 cow versus sheep. Fold bootstrap means and fold-specific percentile intervals are shown for Pearson effect correlation, Spearman effect correlation and sign concordance. Symbols identify the held-out batch and are displaced vertically only for readability. Every fold uses 2,000 biological-unit resamples conditional on the jointly fitted correction; non-estimable folds remain in the source table.}
+\label{fig:supp_lobo}
+\end{figure*}
+
+\begin{figure*}[p]
+\centering
+\includegraphics[width=\textwidth]{S7B_lobo_waveica_biological_group.pdf}
+\addtocounter{figure}{-1}
+\caption{Cross-batch effect agreement after joint correction (continued). (B) WaveICA deposited groups. Points and intervals represent individual batch folds as in panel A.}
+\end{figure*}
+
+\begin{figure*}[p]
+\centering
+\includegraphics[width=\textwidth]{S7C_lobo_sacurine_age.pdf}
+\addtocounter{figure}{-1}
+\caption{Cross-batch effect agreement after joint correction (continued). (C) Sacurine age. Only two reciprocal batch comparisons are available. Points and intervals represent individual folds as in panel A.}
+\end{figure*}
+
+\begin{figure*}[p]
+\centering
+\includegraphics[width=\textwidth]{S7D_lobo_sacurine_bmi.pdf}
+\addtocounter{figure}{-1}
+\caption{Cross-batch effect agreement after joint correction (continued). (D) Sacurine BMI. Only two reciprocal batch comparisons are available. Points and intervals represent individual folds as in panel A.}
+\end{figure*}
+
+\begin{figure*}[p]
+\centering
+\includegraphics[width=\textwidth]{S7E_lobo_sacurine_gender.pdf}
+\addtocounter{figure}{-1}
+\caption{Cross-batch effect agreement after joint correction (continued). (E) Sacurine gender. Only two reciprocal batch comparisons are available. Points and intervals represent individual folds as in panel A.}
+\end{figure*}
+
+\begin{figure*}[p]
+\centering
+\supppanel{0.49\textwidth}{S8A_batchcorr_set1_batch_weighted_pc_r2_categorical.pdf}\hfill
+\supppanel{0.49\textwidth}{S8B_batchcorr_set1_sample_replicate_pearson_median.pdf}\\[1mm]
+\supppanel{0.49\textwidth}{S8C_batchcorr_set1_genuine_replicate_icc_median.pdf}\hfill
+\supppanel{0.49\textwidth}{S8D_clinical_fiams_batch_weighted_pc_r2_categorical.pdf}\\[1mm]
+\supppanel{0.49\textwidth}{S8E_clinical_fiams_sample_replicate_pearson_median.pdf}\hfill
+\supppanel{0.49\textwidth}{S8F_clinical_fiams_genuine_replicate_icc_median.pdf}
+\caption{Replicate-profile agreement and technical structure for eight outputs. BatchCorr Set 1 panels show (A) categorical batch \(R^2\), (B) replicate-profile Pearson correlation and (C) within-accession feature-profile ICC(A,1). Clinical FIA-MS panels show (D) categorical plate \(R^2\), (E) replicate-profile Pearson correlation and (F) within-identity feature-profile ICC(A,1). Features are ICC targets and repeated acquisitions are measurement columns within each identity. Points and 95\% intervals use the same 2,000 accession- or identity-cluster bootstrap resamples for every method, conditional on the corrected matrices. The clinical WiNN plate \(R^2\) point is 0.002054, whereas its bootstrap mean is 0.01412 and percentile interval is 0.007313--0.02326. This upward displacement is consistent with resampling bias of in-sample \(R^2\) near zero; the reported intervals are uncorrected percentile intervals.}
+\label{fig:supp_replicates}
+\end{figure*}
+
+\section{Cumulative technical trajectory and numerical validation}
+\label{sec:supp_audit_results}
+
+The cumulative categorical batch trajectory showed that residual batch correction accounted for most of the reduction in discrete technical separation, whereas preparation and drift correction could transiently increase categorical separation (Figure~\ref{fig:supp_trajectory}). Batch was explicitly encoded as a factor at every stage. The clinical trajectory used the 536 study pair means, matching the main-manuscript endpoint.
+
+Dataset-specific automatic-mode parameters were reported in Table~\ref{tab:supp_winn_parameters}. All declared feature and sample panels were complete, and runtime was reported only for fits rerun under the benchmark timing policy (Table~\ref{tab:supp_runtime}). Twenty-two of 684 correction runs required negative extrapolated intensities to be floored at zero. Eleven of 76 TIGER runs returned nonfinite values for one or more features; the affected features were restored to their raw values and every event was recorded (Table~\ref{tab:supp_safeguards}). Dataset--method safeguard counts are provided in Table~\ref{tab:supp_primary_safeguards}.
+
+All batch $R^2$ computations use categorical coding, and the validation manifest verifies the declared sample and feature panels (Table~\ref{tab:supp_validation}). Dataset-specific estimability constraints are listed in Table~\ref{tab:supp_nonestimable}.
+
+\begin{figure*}[p]
+\centering
+\supppanel{0.49\textwidth}{S9A_batch_r2_simulation.pdf}\hfill
+\supppanel{0.49\textwidth}{S9B_batch_r2_mtbls79.pdf}\\[1mm]
+\supppanel{0.49\textwidth}{S9C_batch_r2_clinical_fiams.pdf}\hfill
+\supppanel{0.49\textwidth}{S9D_batch_r2_batchcorr_set1.pdf}\\[1mm]
+\supppanel{0.49\textwidth}{S9E_batch_r2_sacurine.pdf}\hfill
+\supppanel{0.49\textwidth}{S9F_batch_r2_waveica.pdf}
+\caption{Categorical batch weighted-PC \(R^2\) through the WiNN cumulative workflow in (A) simulation, (B) MTBLS79, (C) clinical FIA-MS, (D) BatchCorr Set 1, (E) Sacurine and (F) WaveICA. Values are computed from raw input and immutable matrices after MAD preparation, selective drift correction, residual batch correction and conservative PQN. Panel A uses the prespecified representative simulation seed, not the ten-seed main-text average.}
+\label{fig:supp_trajectory}
+\end{figure*}
+
+\begin{figure*}[p]
+\centering
+\supppanel{\textwidth}{S10A_sacurine_age_weighted_pc_r2.pdf}\\[1mm]
+\supppanel{\textwidth}{S10B_sacurine_bmi_weighted_pc_r2.pdf}\\[1mm]
+\supppanel{\textwidth}{S10C_sacurine_gender_weighted_pc_r2.pdf}
+\caption{Sacurine technical-biological trade-offs for eight outputs: (A) age, (B) BMI and (C) gender. The horizontal axis is categorical batch weighted-PC \(R^2\) from the pre-osmolality correction output; the vertical axis is covariate weighted-PC \(R^2\) after each corrected study profile is divided by sample osmolality and transformed as \(\log(1+x)\). Points are full-sample estimates and bars are bootstrap standard errors from 2,000 batch-stratified study-sample resamples. Axes are scaled separately by covariate.}
+\label{fig:supp_sacurine}
+\end{figure*}
+
+\begingroup
+\input{generated/supplementary_tables/table_s17_winn_parameters.tex}
+\endgroup
+\begingroup
+\input{generated/supplementary_tables/table_s18_safeguards.tex}
+\endgroup
+\begingroup
+\input{generated/supplementary_tables/table_s19_release_validation.tex}
+\endgroup
+\begingroup
+\input{generated/supplementary_tables/table_s20_nonestimable.tex}
+\endgroup
+\begingroup
+\input{generated/supplementary_tables/table_s21_selected_parameters.tex}
+\endgroup
+\begingroup
+\input{generated/supplementary_tables/table_s22_primary_safeguards.tex}
+\endgroup
+\begingroup
+\input{generated/supplementary_tables/table_s23_identity_retrieval.tex}
+\endgroup
+\begingroup
+\input{generated/supplementary_tables/table_s24_paired_feature_effects.tex}
+\endgroup
+\begingroup
+\input{generated/supplementary_tables/table_s25_nearest_baselines.tex}
+\endgroup
+\begingroup
+\input{generated/supplementary_tables/table_s26_qcrfsc_empirical.tex}
+\endgroup
+
+
+\section{Gate calibration, biological stress tests and additional baselines}
+\label{sec:supp_targeted_revision}
+
+\subsection{Technical-gate calibration}
+
+We evaluated technical-gate calibration using WiNN 0.1.4. Scripts and seed-level results are supplied in \path{scripts/targeted_validation/} and \path{generated/review_validation/}. A deterministic sequence with study log1p values one and every tenth QC value zero has zero MAD, unchanged preparation, lag-10 autocorrelation 0.9 and a lag-10 contribution of 91.8 to the Ljung--Box statistic. Scheduled sample-type differences therefore trigger the gate even in the absence of instrumental drift.
+
+An independent null experiment generated 100 Gaussian log1p feature profiles per segment, with mean three and standard deviation 0.15, at segment lengths 20, 50, 100 and 200, using 1,000 seeds at each length. The adaptive lag is four at length 20 and ten at the other lengths. Each seed applies the Ljung--Box gate and BH adjustment at nominal 0.05 across all 100 null features. Before MAD preparation, the probabilities of any false rejection were 0.131, 0.350, 0.197 and 0.122, respectively; exact binomial 95\% Monte Carlo intervals were [0.111, 0.154], [0.320, 0.380], [0.173, 0.223] and [0.102, 0.144]. Under this global null, the probability of any rejection equals the empirical FDR. The corresponding mean numbers of rejected features were 0.161, 0.498, 0.241 and 0.142 out of 100. After MAD preparation, empirical FDR was 0.135, 0.349, 0.198 and 0.123. The vectorized implementation agreed with R's \texttt{Box.test} to $10^{-12}$ for every feature of the first ten seeds at each length. The approximate Ljung--Box reference was therefore anticonservative at these segment lengths; MAD preparation had little effect on the result.
+
+Additional 100-seed experiments varied feature correlation (zero or 0.6), regularly interleaved QC mean shifts and drift in 20 of 100 features. A batch-gate experiment used four balanced batches of 25 injections, with or without repeated identities and with or without batch offsets in 20 features, before and after selective detrending. Seed-level sensitivity, false-discovery proportions and null-tail summaries are supplied for each design.
+
+\subsection{Biological stress tests for ungated preparation and PQN}
+
+Artifact-free simulations used 200 features and 200 samples, random subgroup allocation, feature baseline log intensities spanning two to five, independent log noise of standard deviation 0.12 and a shared random sample component of standard deviation 0.08. Each of 100 seeds compared raw input, MAD alone, conservative PQN alone and MAD followed by PQN. A balanced sparse response affected 40 features in half of samples, with 20 effects of $+0.7$ and 20 of $-0.7$ on the generating log scale. A rare subgroup affected 5\% of samples and 40 features, all with $+1.4$ effects. A broad coordinated response affected 20\% of samples and 160 features, all with $+0.7$ effects. Recovery was evaluated as the feature-median signed corrected-to-clean effect ratio on the same log1p scale, then averaged over seeds.
+
+Table~\ref{tab:supp_stage_response_patterns} separates the preparation and dilution stages. MAD followed by PQN retained a mean recovery ratio of 1.000 in the balanced sparse design, 0.310 in the rare subgroup design and 0.534 in the broad coordinated design. For rare subgroups, MAD alone gave 0.319 and PQN alone 0.991; for broad coordinated responses they gave 0.778 and 0.711. MAD shrinkage thus attenuated rare responses, while both preparation and PQN attenuated broad coordinated responses. These artifact-free experiments identify the biological patterns affected by each stage independently of technical correction.
+
+\subsection{Study-sample regression baselines}
+
+We ran the Wehrens study-sample ANCOVA implementation \citep{Wehrens2016BatchCorr} from \texttt{BatchCorrMetabolomics} 0.1.14 at commit \texttt{e0c7668}. Feature-wise \texttt{doBC} fits used \texttt{method="lm"}, log1p intensity, supplied batch factors and acquisition-order slopes with batch interactions ($X\sim S*B$). The primary baseline uses all injections and the same intensity, acquisition-order and batch information as WiNN. Mean-only batch adjustment omits acquisition order. A study-only ANCOVA sensitivity analysis additionally uses reference/study identities to select the fitting observations. Outputs were inverse-transformed with expm1, and negative extrapolations were floored at zero.
+
+All-injection ANCOVA reduced held-out mean CV from 28.757\% to 17.054\% in MTBLS79, 66.570\% to 29.023\% in BatchCorr, 16.594\% to 15.582\% in the clinical data, 32.599\% to 18.072\% in Sacurine and 49.662\% to 40.652\% in WaveICA (Table~\ref{tab:supp_nearest_baselines}). WaveICA all-injection ANCOVA required flooring 4,601 cells, and mean-only adjustment required flooring 6,722 cells. Public inputs match the benchmark input hashes. The clinical input was reconstructed from pair-level data; its raw plate $R^2$ agrees with the original estimate to approximately $10^{-12}$ (0.1505094553797 versus 0.1505094553801). Clinical baseline results use this reconstruction rather than a byte-identical copy of the original matrix.
+
+On the ten canonical simulation inputs, mean-only batch adjustment gave mean clean-truth RMSE 0.1164, feature-profile ICC 0.8487 and sample-profile correlation 0.8454; study-sample ANCOVA gave 0.0981, 0.8870 and 0.8842. WiNN gave 0.0727, 0.9211 and 0.9230 and improved all three endpoints in every paired seed (Table~\ref{tab:supp_baseline_truth}). The simulation input and clean-truth hashes match the original ten-seed benchmark.
+
+Empirical comparisons use the same independent biological units and covariate models as the primary analyses (Table~\ref{tab:supp_baseline_effects}). Mean-only batch adjustment and ANCOVA retained raw feature-effect magnitudes more closely for several contrasts: their WaveICA slopes were both 0.994 versus 0.968 for WiNN, and Sacurine gender slopes were 1.006 and 0.970 versus 0.870. Raw effects provide an observed reference, not biological ground truth. Paired top-1 retrieval differences between WiNN and each baseline included zero in both repeated-identity datasets (Table~\ref{tab:supp_identity_retrieval}). The simulation advantage therefore did not imply uniform superiority on empirical biological endpoints.
+
+\subsection{Paired empirical feature effects and acquisition design}
+
+Table~\ref{tab:supp_paired_effects} reports matched-feature slopes and sign agreement for the eight empirical outputs relative to raw input. WiNN slopes were 0.980 for MTBLS79, 0.968 for WaveICA and 0.937, 0.959 and 0.870 for Sacurine age, BMI and gender. Corresponding sign-agreement fractions were 0.969, 0.955, 0.973, 0.938 and 0.929. These paired summaries quantify changes relative to the observed uncorrected effects.
+
+Tables~\ref{tab:supp_acquisition_balance} and \ref{tab:supp_reference_placement} report group-by-batch counts and reference placement. Additional summaries provide repeated-identity placement and covariate balance with run order in \path{generated/review_validation/prepared_design_*.csv}. The WaveICA batch counts are 24/168, 24/168 and 23/161 for deposited groups 0/1, showing similar group proportions in each batch despite the overall imbalance. MTBLS79 cow/sheep counts vary across batches, and Sacurine female/male counts are 46/44 and 37/57 in its two batches. The clinical analysis has 80, 78, 55, 55, 80, 79, 55 and 54 study pair units across eight plates, with cross-plate identity matches available. The clinical dataset provides repeated identities without phenotype labels.
+
+\subsection{Practical operating guidance}
+
+Before fitting WiNN, examine group allocation and continuous covariates across analytical batches and acquisition order, and distinguish study injections from scheduled reference types. The all-injection serial-dependence screen can select a profile because of a periodic reference--study difference, even when study-sample order is randomized. In that setting, compare an explicitly reference-trained or batch-only correction using independent biological assessments. Treat the Ljung--Box threshold as a heuristic selection parameter, not a calibrated guarantee of technical-effect FDR.
+
+The primary preparation and PQN configuration is inappropriate when rare-subgroup abundance changes or widespread coordinated shifts are the biological target. The stage experiment attributes most rare-subgroup attenuation to MAD shrinkage; both MAD and PQN attenuate the broad coordinated response. The public \texttt{winn()} entry point always applies MAD preparation. In prespecified mode, \texttt{median\_adjustment="none"} disables PQN, but leaves MAD preparation active. Rare-subgroup attenuation therefore remains active. Select an alternative preparation/correction workflow and validate it against known biological contrasts when these response patterns are expected.
+
+Acquisition-quartile group counts are supplied in \path{generated/review_validation/design_group_acquisition_quartiles.csv}. Sacurine covariate medians and interquartile ranges by batch and acquisition quartile are in \path{generated/review_validation/design_covariate_acquisition_quartiles.csv}. Within-batch age--order Spearman correlations were $-0.110$ and $-0.065$, and BMI--order correlations were $-0.117$ and $0.045$. The clinical metadata contain repeated identities and reference roles but no phenotype variables; phenotype--acquisition balance cannot be assessed for that cohort.
+
+\begingroup
+\input{generated/supplementary_tables/table_s27_baseline_simulation.tex}
+\endgroup
+\begingroup
+\input{generated/supplementary_tables/table_s28_baseline_empirical_effects.tex}
+\endgroup
+\begingroup
+\input{generated/supplementary_tables/table_s29_preparation_response_patterns.tex}
+\endgroup
+\begingroup
+\input{generated/supplementary_tables/table_s30_acquisition_group_balance.tex}
+\endgroup
+\begingroup
+\input{generated/supplementary_tables/table_s31_reference_acquisition_placement.tex}
+\endgroup
+
+\section{Application to experimental design}
+\label{sec:supp_scope}
+
+The benchmarks support selective detrending and residual batch adjustment for randomized acquisition designs. Recorded batch labels are preferred to automatic segmentation. All benchmark datasets contain reference injections; their identities are withheld from WiNN. Replicate-profile agreement, cross-batch identity retrieval and matched-feature effects capture distinct aspects of biological structure. Their use alongside technical endpoints is especially important when biological groups are unevenly distributed across acquisition order or when rare and coordinated responses interact with MAD preparation or PQN.
+
+\bibliographystyle{oup-abbrvnat}
+\bibliography{references}
+\end{document}

@@ -1,0 +1,29 @@
+\begin{landscape}
+\scriptsize
+\begin{longtable}{lrrrrrr}
+\caption{Complete simulation benchmark across all nine outputs. Cells are mean $\pm$ seed-level standard error over ten paired simulation seeds. QC CV is in percent; GAM is residual run-order deviance explained; batch $R^2$ is categorical weighted-PC $R^2$; truth endpoints compare the corrected matrix with the clean matrix.}\label{tab:supp_simulation_all}\\
+\toprule
+Method & QC CV & GAM & Batch $R^2$ & RMSE & ICC(A,1) & Pearson \\
+\midrule
+\endfirsthead
+\multicolumn{7}{l}{\textit{Table \thetable{} continued}}\\
+\toprule
+Method & QC CV & GAM & Batch $R^2$ & RMSE & ICC(A,1) & Pearson \\
+\midrule
+\endhead
+\midrule
+\multicolumn{7}{r}{\textit{Continued on next page}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+Raw & 44.55 $\pm$ 0.28 & 0.1251 $\pm$ 0.0010 & 0.9637 $\pm$ 0.0004 & 0.2927 $\pm$ 0.0015 & 0.5879 $\pm$ 0.0020 & 0.5189 $\pm$ 0.0021 \\
+ComBat & 12.55 $\pm$ 0.16 & 0.1251 $\pm$ 0.0010 & 0.0001 $\pm$ 0.0000 & 0.1031 $\pm$ 0.0004 & 0.8803 $\pm$ 0.0007 & 0.8806 $\pm$ 0.0007 \\
+QC-RLSC & 11.25 $\pm$ 0.20 & 0.0526 $\pm$ 0.0007 & 0.0001 $\pm$ 0.0000 & 0.0896 $\pm$ 0.0004 & 0.9060 $\pm$ 0.0008 & 0.9053 $\pm$ 0.0008 \\
+QC-RFSC & 15.92 $\pm$ 1.98 & 0.1189 $\pm$ 0.0030 & 0.1449 $\pm$ 0.0049 & 0.1290 $\pm$ 0.0025 & 0.8509 $\pm$ 0.0030 & 0.8229 $\pm$ 0.0059 \\
+TIGER & 9.53 $\pm$ 0.18 & 0.0830 $\pm$ 0.0006 & 0.0634 $\pm$ 0.0059 & 0.1143 $\pm$ 0.0012 & 0.8715 $\pm$ 0.0006 & 0.8492 $\pm$ 0.0025 \\
+SERRF & 12.61 $\pm$ 0.17 & 0.0966 $\pm$ 0.0007 & 0.0010 $\pm$ 0.0001 & 0.0965 $\pm$ 0.0007 & 0.8881 $\pm$ 0.0009 & 0.8765 $\pm$ 0.0016 \\
+WiNN (QC-tuned) & 8.70 $\pm$ 0.07 & 0.0201 $\pm$ 0.0003 & 0.0009 $\pm$ 0.0001 & 0.0727 $\pm$ 0.0004 & 0.9213 $\pm$ 0.0005 & 0.9231 $\pm$ 0.0010 \\
+WiNN (inferred segments) & 14.84 $\pm$ 0.70 & 0.1210 $\pm$ 0.0086 & 0.2045 $\pm$ 0.0191 & 0.1016 $\pm$ 0.0025 & 0.8614 $\pm$ 0.0052 & 0.8703 $\pm$ 0.0047 \\
+WiNN & 8.69 $\pm$ 0.06 & 0.0211 $\pm$ 0.0002 & 0.0009 $\pm$ 0.0001 & 0.0727 $\pm$ 0.0004 & 0.9211 $\pm$ 0.0005 & 0.9230 $\pm$ 0.0010 \\
+\end{longtable}
+\end{landscape}

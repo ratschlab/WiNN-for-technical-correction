@@ -1,0 +1,3 @@
+Safeguard,Runs,Triggered,Affected features,Affected values
+Negative corrected intensities floored at zero,684,22,8072,54852
+TIGER nonfinite features restored to raw,76,11,60,141

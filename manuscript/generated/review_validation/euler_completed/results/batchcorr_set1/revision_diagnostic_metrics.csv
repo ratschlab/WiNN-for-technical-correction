@@ -1,0 +1,4 @@
+"dataset","method","training_cv_percent","heldout_cv_percent","median_intensity","nonfinite","uncorrected_features","uncorrected_samples"
+"batchcorr_set1","raw",66.8990021910004,66.5698818959707,17594621.1254334,0,0,0
+"batchcorr_set1","legacy",48.9401798491565,53.2325962192054,4.05607929,0,98,0
+"batchcorr_set1","corrected",34.7862463433302,42.9229903313747,17266856.5504769,0,37,0

@@ -1,0 +1,91 @@
+metric,value,direction,denominator,units,notes,dataset_key,method_id,method,seed_id,method_label,method_mean,method_se
+truth_metabolite_profile_icc_mean,0.586183758689398,higher,1000,"ICC(A,1)",,simulation,raw,Raw,SIM01,Raw,0.5879020384639743,0.0020289323608362864
+truth_metabolite_profile_icc_mean,0.879386831580911,higher,1000,"ICC(A,1)",,simulation,combat,ComBat,SIM01,ComBat,0.8803466060491547,7.065775306572332e-4
+truth_metabolite_profile_icc_mean,0.905483269655236,higher,1000,"ICC(A,1)",,simulation,qc_rlsc,QC-RLSC,SIM01,QC-RLSC,0.9059976590635247,7.861150945744071e-4
+truth_metabolite_profile_icc_mean,0.873270482820115,higher,1000,"ICC(A,1)",,simulation,tiger,TIGER,SIM01,TIGER,0.8715113086926579,6.166519107983569e-4
+truth_metabolite_profile_icc_mean,0.887607914457796,higher,1000,"ICC(A,1)",,simulation,serrf,SERRF,SIM01,SERRF,0.8881468400639368,8.79181397631398e-4
+truth_metabolite_profile_icc_mean,0.922321659529502,higher,1000,"ICC(A,1)",,simulation,winn_auto_qc,WiNN (QC-tuned),SIM01,WiNN (QC-tuned),0.9212535285413249,4.837831698748268e-4
+truth_metabolite_profile_icc_mean,0.858213013478024,higher,1000,"ICC(A,1)",,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM01,WiNN (inferred segments),0.8614128211289777,0.00518645118791808
+truth_metabolite_profile_icc_mean,0.922101988056287,higher,1000,"ICC(A,1)",,simulation,winn_fixed_no_qc,WiNN,SIM01,WiNN,0.921146188241821,4.8202649104971005e-4
+truth_metabolite_profile_icc_mean,0.577019055009956,higher,1000,"ICC(A,1)",,simulation,raw,Raw,SIM02,Raw,0.5879020384639743,0.0020289323608362864
+truth_metabolite_profile_icc_mean,0.877058464265466,higher,1000,"ICC(A,1)",,simulation,combat,ComBat,SIM02,ComBat,0.8803466060491547,7.065775306572332e-4
+truth_metabolite_profile_icc_mean,0.903059192263792,higher,1000,"ICC(A,1)",,simulation,qc_rlsc,QC-RLSC,SIM02,QC-RLSC,0.9059976590635247,7.861150945744071e-4
+truth_metabolite_profile_icc_mean,0.869391193728504,higher,1000,"ICC(A,1)",,simulation,tiger,TIGER,SIM02,TIGER,0.8715113086926579,6.166519107983569e-4
+truth_metabolite_profile_icc_mean,0.883285843419585,higher,1000,"ICC(A,1)",,simulation,serrf,SERRF,SIM02,SERRF,0.8881468400639368,8.79181397631398e-4
+truth_metabolite_profile_icc_mean,0.91818842884011,higher,1000,"ICC(A,1)",,simulation,winn_auto_qc,WiNN (QC-tuned),SIM02,WiNN (QC-tuned),0.9212535285413249,4.837831698748268e-4
+truth_metabolite_profile_icc_mean,0.858949022841333,higher,1000,"ICC(A,1)",,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM02,WiNN (inferred segments),0.8614128211289777,0.00518645118791808
+truth_metabolite_profile_icc_mean,0.91822667604616,higher,1000,"ICC(A,1)",,simulation,winn_fixed_no_qc,WiNN,SIM02,WiNN,0.921146188241821,4.8202649104971005e-4
+truth_metabolite_profile_icc_mean,0.589126836225825,higher,1000,"ICC(A,1)",,simulation,raw,Raw,SIM03,Raw,0.5879020384639743,0.0020289323608362864
+truth_metabolite_profile_icc_mean,0.878934543844973,higher,1000,"ICC(A,1)",,simulation,combat,ComBat,SIM03,ComBat,0.8803466060491547,7.065775306572332e-4
+truth_metabolite_profile_icc_mean,0.907704470695441,higher,1000,"ICC(A,1)",,simulation,qc_rlsc,QC-RLSC,SIM03,QC-RLSC,0.9059976590635247,7.861150945744071e-4
+truth_metabolite_profile_icc_mean,0.872344618229197,higher,1000,"ICC(A,1)",,simulation,tiger,TIGER,SIM03,TIGER,0.8715113086926579,6.166519107983569e-4
+truth_metabolite_profile_icc_mean,0.888996141256717,higher,1000,"ICC(A,1)",,simulation,serrf,SERRF,SIM03,SERRF,0.8881468400639368,8.79181397631398e-4
+truth_metabolite_profile_icc_mean,0.922199812074577,higher,1000,"ICC(A,1)",,simulation,winn_auto_qc,WiNN (QC-tuned),SIM03,WiNN (QC-tuned),0.9212535285413249,4.837831698748268e-4
+truth_metabolite_profile_icc_mean,0.867146871122525,higher,1000,"ICC(A,1)",,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM03,WiNN (inferred segments),0.8614128211289777,0.00518645118791808
+truth_metabolite_profile_icc_mean,0.92196663424219,higher,1000,"ICC(A,1)",,simulation,winn_fixed_no_qc,WiNN,SIM03,WiNN,0.921146188241821,4.8202649104971005e-4
+truth_metabolite_profile_icc_mean,0.583460354029746,higher,1000,"ICC(A,1)",,simulation,raw,Raw,SIM04,Raw,0.5879020384639743,0.0020289323608362864
+truth_metabolite_profile_icc_mean,0.879023797490488,higher,1000,"ICC(A,1)",,simulation,combat,ComBat,SIM04,ComBat,0.8803466060491547,7.065775306572332e-4
+truth_metabolite_profile_icc_mean,0.90162453868772,higher,1000,"ICC(A,1)",,simulation,qc_rlsc,QC-RLSC,SIM04,QC-RLSC,0.9059976590635247,7.861150945744071e-4
+truth_metabolite_profile_icc_mean,0.869664552415098,higher,1000,"ICC(A,1)",,simulation,tiger,TIGER,SIM04,TIGER,0.8715113086926579,6.166519107983569e-4
+truth_metabolite_profile_icc_mean,0.885195106629632,higher,1000,"ICC(A,1)",,simulation,serrf,SERRF,SIM04,SERRF,0.8881468400639368,8.79181397631398e-4
+truth_metabolite_profile_icc_mean,0.922316152245494,higher,1000,"ICC(A,1)",,simulation,winn_auto_qc,WiNN (QC-tuned),SIM04,WiNN (QC-tuned),0.9212535285413249,4.837831698748268e-4
+truth_metabolite_profile_icc_mean,0.857737831912597,higher,1000,"ICC(A,1)",,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM04,WiNN (inferred segments),0.8614128211289777,0.00518645118791808
+truth_metabolite_profile_icc_mean,0.922349683552122,higher,1000,"ICC(A,1)",,simulation,winn_fixed_no_qc,WiNN,SIM04,WiNN,0.921146188241821,4.8202649104971005e-4
+truth_metabolite_profile_icc_mean,0.591238414674297,higher,1000,"ICC(A,1)",,simulation,raw,Raw,SIM05,Raw,0.5879020384639743,0.0020289323608362864
+truth_metabolite_profile_icc_mean,0.880095264232266,higher,1000,"ICC(A,1)",,simulation,combat,ComBat,SIM05,ComBat,0.8803466060491547,7.065775306572332e-4
+truth_metabolite_profile_icc_mean,0.906612360710656,higher,1000,"ICC(A,1)",,simulation,qc_rlsc,QC-RLSC,SIM05,QC-RLSC,0.9059976590635247,7.861150945744071e-4
+truth_metabolite_profile_icc_mean,0.872007876515218,higher,1000,"ICC(A,1)",,simulation,tiger,TIGER,SIM05,TIGER,0.8715113086926579,6.166519107983569e-4
+truth_metabolite_profile_icc_mean,0.886915587861869,higher,1000,"ICC(A,1)",,simulation,serrf,SERRF,SIM05,SERRF,0.8881468400639368,8.79181397631398e-4
+truth_metabolite_profile_icc_mean,0.921370095234413,higher,1000,"ICC(A,1)",,simulation,winn_auto_qc,WiNN (QC-tuned),SIM05,WiNN (QC-tuned),0.9212535285413249,4.837831698748268e-4
+truth_metabolite_profile_icc_mean,0.882292442908406,higher,1000,"ICC(A,1)",,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM05,WiNN (inferred segments),0.8614128211289777,0.00518645118791808
+truth_metabolite_profile_icc_mean,0.921185897206306,higher,1000,"ICC(A,1)",,simulation,winn_fixed_no_qc,WiNN,SIM05,WiNN,0.921146188241821,4.8202649104971005e-4
+truth_metabolite_profile_icc_mean,0.58757778276978,higher,1000,"ICC(A,1)",,simulation,raw,Raw,SIM06,Raw,0.5879020384639743,0.0020289323608362864
+truth_metabolite_profile_icc_mean,0.880668905070386,higher,1000,"ICC(A,1)",,simulation,combat,ComBat,SIM06,ComBat,0.8803466060491547,7.065775306572332e-4
+truth_metabolite_profile_icc_mean,0.904378345355295,higher,1000,"ICC(A,1)",,simulation,qc_rlsc,QC-RLSC,SIM06,QC-RLSC,0.9059976590635247,7.861150945744071e-4
+truth_metabolite_profile_icc_mean,0.870567009116608,higher,1000,"ICC(A,1)",,simulation,tiger,TIGER,SIM06,TIGER,0.8715113086926579,6.166519107983569e-4
+truth_metabolite_profile_icc_mean,0.888353359988811,higher,1000,"ICC(A,1)",,simulation,serrf,SERRF,SIM06,SERRF,0.8881468400639368,8.79181397631398e-4
+truth_metabolite_profile_icc_mean,0.92112518666074,higher,1000,"ICC(A,1)",,simulation,winn_auto_qc,WiNN (QC-tuned),SIM06,WiNN (QC-tuned),0.9212535285413249,4.837831698748268e-4
+truth_metabolite_profile_icc_mean,0.843635907342313,higher,1000,"ICC(A,1)",,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM06,WiNN (inferred segments),0.8614128211289777,0.00518645118791808
+truth_metabolite_profile_icc_mean,0.920949468357364,higher,1000,"ICC(A,1)",,simulation,winn_fixed_no_qc,WiNN,SIM06,WiNN,0.921146188241821,4.8202649104971005e-4
+truth_metabolite_profile_icc_mean,0.594809903197333,higher,1000,"ICC(A,1)",,simulation,raw,Raw,SIM07,Raw,0.5879020384639743,0.0020289323608362864
+truth_metabolite_profile_icc_mean,0.879095622469906,higher,1000,"ICC(A,1)",,simulation,combat,ComBat,SIM07,ComBat,0.8803466060491547,7.065775306572332e-4
+truth_metabolite_profile_icc_mean,0.909181014014572,higher,1000,"ICC(A,1)",,simulation,qc_rlsc,QC-RLSC,SIM07,QC-RLSC,0.9059976590635247,7.861150945744071e-4
+truth_metabolite_profile_icc_mean,0.873146281000175,higher,1000,"ICC(A,1)",,simulation,tiger,TIGER,SIM07,TIGER,0.8715113086926579,6.166519107983569e-4
+truth_metabolite_profile_icc_mean,0.891311847720648,higher,1000,"ICC(A,1)",,simulation,serrf,SERRF,SIM07,SERRF,0.8881468400639368,8.79181397631398e-4
+truth_metabolite_profile_icc_mean,0.921430009715198,higher,1000,"ICC(A,1)",,simulation,winn_auto_qc,WiNN (QC-tuned),SIM07,WiNN (QC-tuned),0.9212535285413249,4.837831698748268e-4
+truth_metabolite_profile_icc_mean,0.883657789605854,higher,1000,"ICC(A,1)",,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM07,WiNN (inferred segments),0.8614128211289777,0.00518645118791808
+truth_metabolite_profile_icc_mean,0.921389682845685,higher,1000,"ICC(A,1)",,simulation,winn_fixed_no_qc,WiNN,SIM07,WiNN,0.921146188241821,4.8202649104971005e-4
+truth_metabolite_profile_icc_mean,0.582327788968522,higher,1000,"ICC(A,1)",,simulation,raw,Raw,SIM08,Raw,0.5879020384639743,0.0020289323608362864
+truth_metabolite_profile_icc_mean,0.881217595578923,higher,1000,"ICC(A,1)",,simulation,combat,ComBat,SIM08,ComBat,0.8803466060491547,7.065775306572332e-4
+truth_metabolite_profile_icc_mean,0.907738386098248,higher,1000,"ICC(A,1)",,simulation,qc_rlsc,QC-RLSC,SIM08,QC-RLSC,0.9059976590635247,7.861150945744071e-4
+truth_metabolite_profile_icc_mean,0.868670992138546,higher,1000,"ICC(A,1)",,simulation,tiger,TIGER,SIM08,TIGER,0.8715113086926579,6.166519107983569e-4
+truth_metabolite_profile_icc_mean,0.889242879756884,higher,1000,"ICC(A,1)",,simulation,serrf,SERRF,SIM08,SERRF,0.8881468400639368,8.79181397631398e-4
+truth_metabolite_profile_icc_mean,0.918979359467449,higher,1000,"ICC(A,1)",,simulation,winn_auto_qc,WiNN (QC-tuned),SIM08,WiNN (QC-tuned),0.9212535285413249,4.837831698748268e-4
+truth_metabolite_profile_icc_mean,0.833830028893692,higher,1000,"ICC(A,1)",,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM08,WiNN (inferred segments),0.8614128211289777,0.00518645118791808
+truth_metabolite_profile_icc_mean,0.918748087221842,higher,1000,"ICC(A,1)",,simulation,winn_fixed_no_qc,WiNN,SIM08,WiNN,0.921146188241821,4.8202649104971005e-4
+truth_metabolite_profile_icc_mean,0.587636789919922,higher,1000,"ICC(A,1)",,simulation,raw,Raw,SIM09,Raw,0.5879020384639743,0.0020289323608362864
+truth_metabolite_profile_icc_mean,0.883556686935463,higher,1000,"ICC(A,1)",,simulation,combat,ComBat,SIM09,ComBat,0.8803466060491547,7.065775306572332e-4
+truth_metabolite_profile_icc_mean,0.908843660915559,higher,1000,"ICC(A,1)",,simulation,qc_rlsc,QC-RLSC,SIM09,QC-RLSC,0.9059976590635247,7.861150945744071e-4
+truth_metabolite_profile_icc_mean,0.874766776080147,higher,1000,"ICC(A,1)",,simulation,tiger,TIGER,SIM09,TIGER,0.8715113086926579,6.166519107983569e-4
+truth_metabolite_profile_icc_mean,0.892957159404076,higher,1000,"ICC(A,1)",,simulation,serrf,SERRF,SIM09,SERRF,0.8881468400639368,8.79181397631398e-4
+truth_metabolite_profile_icc_mean,0.923034048187937,higher,1000,"ICC(A,1)",,simulation,winn_auto_qc,WiNN (QC-tuned),SIM09,WiNN (QC-tuned),0.9212535285413249,4.837831698748268e-4
+truth_metabolite_profile_icc_mean,0.851418245918802,higher,1000,"ICC(A,1)",,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM09,WiNN (inferred segments),0.8614128211289777,0.00518645118791808
+truth_metabolite_profile_icc_mean,0.922967580857371,higher,1000,"ICC(A,1)",,simulation,winn_fixed_no_qc,WiNN,SIM09,WiNN,0.921146188241821,4.8202649104971005e-4
+truth_metabolite_profile_icc_mean,0.599639701154964,higher,1000,"ICC(A,1)",,simulation,raw,Raw,SIM10,Raw,0.5879020384639743,0.0020289323608362864
+truth_metabolite_profile_icc_mean,0.884428349022765,higher,1000,"ICC(A,1)",,simulation,combat,ComBat,SIM10,ComBat,0.8803466060491547,7.065775306572332e-4
+truth_metabolite_profile_icc_mean,0.905351352238728,higher,1000,"ICC(A,1)",,simulation,qc_rlsc,QC-RLSC,SIM10,QC-RLSC,0.9059976590635247,7.861150945744071e-4
+truth_metabolite_profile_icc_mean,0.871283304882971,higher,1000,"ICC(A,1)",,simulation,tiger,TIGER,SIM10,TIGER,0.8715113086926579,6.166519107983569e-4
+truth_metabolite_profile_icc_mean,0.88760256014335,higher,1000,"ICC(A,1)",,simulation,serrf,SERRF,SIM10,SERRF,0.8881468400639368,8.79181397631398e-4
+truth_metabolite_profile_icc_mean,0.921570533457829,higher,1000,"ICC(A,1)",,simulation,winn_auto_qc,WiNN (QC-tuned),SIM10,WiNN (QC-tuned),0.9212535285413249,4.837831698748268e-4
+truth_metabolite_profile_icc_mean,0.877247057266231,higher,1000,"ICC(A,1)",,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM10,WiNN (inferred segments),0.8614128211289777,0.00518645118791808
+truth_metabolite_profile_icc_mean,0.921576184032884,higher,1000,"ICC(A,1)",,simulation,winn_fixed_no_qc,WiNN,SIM10,WiNN,0.921146188241821,4.8202649104971005e-4
+truth_metabolite_profile_icc_mean,0.842405298784181,higher,1000,"ICC(A,1)",,simulation,qc_rfsc,QC-RFSC,SIM01,QC-RFSC,0.8509151619611572,0.0029563188987960253
+truth_metabolite_profile_icc_mean,0.849844908384176,higher,1000,"ICC(A,1)",,simulation,qc_rfsc,QC-RFSC,SIM02,QC-RFSC,0.8509151619611572,0.0029563188987960253
+truth_metabolite_profile_icc_mean,0.866579073711253,higher,1000,"ICC(A,1)",,simulation,qc_rfsc,QC-RFSC,SIM03,QC-RFSC,0.8509151619611572,0.0029563188987960253
+truth_metabolite_profile_icc_mean,0.847111332692756,higher,1000,"ICC(A,1)",,simulation,qc_rfsc,QC-RFSC,SIM04,QC-RFSC,0.8509151619611572,0.0029563188987960253
+truth_metabolite_profile_icc_mean,0.851344582891173,higher,1000,"ICC(A,1)",,simulation,qc_rfsc,QC-RFSC,SIM05,QC-RFSC,0.8509151619611572,0.0029563188987960253
+truth_metabolite_profile_icc_mean,0.836055953111459,higher,1000,"ICC(A,1)",,simulation,qc_rfsc,QC-RFSC,SIM06,QC-RFSC,0.8509151619611572,0.0029563188987960253
+truth_metabolite_profile_icc_mean,0.864461723478705,higher,1000,"ICC(A,1)",,simulation,qc_rfsc,QC-RFSC,SIM07,QC-RFSC,0.8509151619611572,0.0029563188987960253
+truth_metabolite_profile_icc_mean,0.851051346689237,higher,1000,"ICC(A,1)",,simulation,qc_rfsc,QC-RFSC,SIM08,QC-RFSC,0.8509151619611572,0.0029563188987960253
+truth_metabolite_profile_icc_mean,0.855022618948626,higher,1000,"ICC(A,1)",,simulation,qc_rfsc,QC-RFSC,SIM09,QC-RFSC,0.8509151619611572,0.0029563188987960253
+truth_metabolite_profile_icc_mean,0.845274780920006,higher,1000,"ICC(A,1)",,simulation,qc_rfsc,QC-RFSC,SIM10,QC-RFSC,0.8509151619611572,0.0029563188987960253

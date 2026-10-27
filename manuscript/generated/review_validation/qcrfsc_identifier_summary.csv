@@ -1,0 +1,6 @@
+"dataset","samples","training","held_out","old_unauthorized_training","new_unauthorized_training"
+"batchcorr_set1",761,41,10,0,0
+"clinical_fiams",660,86,38,0,0
+"mtbls79",172,26,12,12,0
+"sacurine",210,18,8,8,0
+"waveica",642,59,15,15,0

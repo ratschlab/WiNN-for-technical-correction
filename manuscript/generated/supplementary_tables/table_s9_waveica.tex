@@ -1,0 +1,28 @@
+\begin{landscape}
+\scriptsize
+\begin{longtable}{lrrrrrrr}
+\caption{Complete WaveICA results across eight outputs. The biological endpoint uses the neutral deposited group 0 and group 1 labels. Group $R^2$ has 2,000-resample stratified bootstrap intervals. Association counts are BH-FDR-significant peaks and are interpreted with standardized effect size and within-group variance.}\label{tab:supp_waveica_all}\\
+\toprule
+Method & QC CV & GAM & Batch $R^2$ & Group $R^2$ [95\% CI] & BH peaks & Std. effect & Within-group var. \\
+\midrule
+\endfirsthead
+\multicolumn{8}{l}{\textit{Table \thetable{} continued}}\\
+\toprule
+Method & QC CV & GAM & Batch $R^2$ & Group $R^2$ [95\% CI] & BH peaks & Std. effect & Within-group var. \\
+\midrule
+\endhead
+\midrule
+\multicolumn{8}{r}{\textit{Continued on next page}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+Raw & 49.66 & 0.206 & 0.6944 & 0.0028 [0.0010, 0.0058] & 206 & 0.082 & 0.420 \\
+ComBat & 40.24 & 0.207 & 0.0005 & 0.0074 [0.0045, 0.0157] & 371 & 0.106 & 0.271 \\
+QC-RLSC & 39.33 & 0.109 & 0.0016 & 0.0115 [0.0065, 0.0220] & 432 & 0.111 & 0.253 \\
+TIGER & 26.14 & 0.113 & 0.5006 & 0.0067 [0.0033, 0.0126] & 262 & 0.099 & 0.270 \\
+SERRF & 34.04 & 0.117 & 0.0416 & 0.0094 [0.0054, 0.0186] & 329 & 0.104 & 0.247 \\
+WiNN (QC-tuned) & 38.12 & 0.018 & 0.0019 & 0.0150 [0.0088, 0.0278] & 511 & 0.125 & 0.196 \\
+WiNN (inferred segments) & 40.91 & 0.212 & 0.4814 & 0.0046 [0.0025, 0.0093] & 277 & 0.094 & 0.291 \\
+WiNN & 38.30 & 0.014 & 0.0021 & 0.0142 [0.0086, 0.0270] & 516 & 0.124 & 0.195 \\
+\end{longtable}
+\end{landscape}

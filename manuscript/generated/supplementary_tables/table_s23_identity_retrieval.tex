@@ -1,0 +1,36 @@
+\begin{landscape}
+\footnotesize
+\begin{longtable}{p{2.7cm}p{3.4cm}p{4.3cm}p{4.3cm}p{4.8cm}}
+\caption{Cross-batch identity discrimination. Estimates and paired biological-identity bootstrap percentile intervals retain eligible-query counts within every resampled identity (2,000 draws). The correlation candidate set and fitted corrections remain fixed. BatchCorr uses 693 eligible queries from 346 identities; clinical FIA-MS uses 536 correction-unit queries from 267 identities. Top-1 accuracy and mean reciprocal rank (MRR) use Pearson similarity of log1p profiles in other batches. The final column is WiNN minus comparator.}\label{tab:supp_identity_retrieval}\\
+\toprule
+Dataset & Method & Top-1 accuracy [95\% interval] & MRR [95\% interval] & Paired top-1 difference [95\% interval] \\
+\midrule
+\endfirsthead
+\toprule
+Dataset & Method & Top-1 accuracy [95\% interval] & MRR [95\% interval] & Paired top-1 difference [95\% interval] \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+BatchCorr Set 1 & Raw & 0.463 [0.413, 0.513] & 0.528 [0.481, 0.574] & 0.247 [0.204, 0.292] \\
+BatchCorr Set 1 & ComBat & 0.716 [0.672, 0.761] & 0.772 [0.734, 0.809] & -0.006 [-0.028, 0.016] \\
+BatchCorr Set 1 & QC-RLSC & 0.713 [0.669, 0.757] & 0.768 [0.729, 0.805] & -0.003 [-0.025, 0.018] \\
+BatchCorr Set 1 & TIGER & 0.694 [0.648, 0.741] & 0.754 [0.716, 0.795] & 0.016 [-0.013, 0.044] \\
+BatchCorr Set 1 & SERRF & 0.693 [0.647, 0.737] & 0.753 [0.714, 0.792] & 0.017 [-0.006, 0.041] \\
+BatchCorr Set 1 & WiNN (QC-tuned) & 0.707 [0.662, 0.751] & 0.763 [0.724, 0.802] & 0.003 [-0.006, 0.012] \\
+BatchCorr Set 1 & WiNN (inferred segments) & 0.703 [0.658, 0.746] & 0.758 [0.719, 0.795] & 0.007 [-0.009, 0.025] \\
+BatchCorr Set 1 & WiNN & 0.710 [0.665, 0.755] & 0.765 [0.726, 0.804] & Reference \\
+BatchCorr Set 1 & Mean-only batch & 0.703 [0.656, 0.749] & 0.762 [0.723, 0.800] & 0.007 [-0.014, 0.030] \\
+BatchCorr Set 1 & Study-sample ANCOVA & 0.726 [0.682, 0.770] & 0.779 [0.741, 0.816] & -0.016 [-0.037, 0.004] \\
+Clinical FIA-MS & Raw & 0.752 [0.706, 0.795] & 0.794 [0.751, 0.832] & 0.110 [0.069, 0.153] \\
+Clinical FIA-MS & ComBat & 0.847 [0.807, 0.884] & 0.874 [0.840, 0.906] & 0.015 [-0.007, 0.039] \\
+Clinical FIA-MS & QC-RLSC & 0.854 [0.813, 0.891] & 0.878 [0.842, 0.910] & 0.007 [-0.017, 0.032] \\
+Clinical FIA-MS & TIGER & 0.881 [0.845, 0.914] & 0.913 [0.885, 0.937] & -0.019 [-0.049, 0.007] \\
+Clinical FIA-MS & SERRF & 0.877 [0.843, 0.909] & 0.902 [0.874, 0.928] & -0.015 [-0.043, 0.015] \\
+Clinical FIA-MS & WiNN (QC-tuned) & 0.862 [0.824, 0.899] & 0.881 [0.846, 0.913] & 0.000 [-0.006, 0.006] \\
+Clinical FIA-MS & WiNN (inferred segments) & 0.858 [0.819, 0.895] & 0.880 [0.843, 0.912] & 0.004 [-0.007, 0.017] \\
+Clinical FIA-MS & WiNN & 0.862 [0.824, 0.897] & 0.881 [0.847, 0.913] & Reference \\
+Clinical FIA-MS & Mean-only batch & 0.854 [0.816, 0.889] & 0.877 [0.843, 0.908] & 0.007 [-0.019, 0.035] \\
+Clinical FIA-MS & Study-sample ANCOVA & 0.851 [0.809, 0.888] & 0.876 [0.840, 0.908] & 0.011 [-0.013, 0.037] \\
+\end{longtable}
+\end{landscape}

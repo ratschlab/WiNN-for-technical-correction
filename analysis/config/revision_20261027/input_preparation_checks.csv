@@ -1,0 +1,6 @@
+"dataset","exact_matrix_match","roles_features_candidates_folds_match","matrix_sha256"
+"SIM01",TRUE,TRUE,"c26a82004d6084e7f28595edacd63ad688e7ff3f8735569e69149e228a3bd295"
+"mtbls79",TRUE,TRUE,"534b8cb02685f04aeff548208d3127967d756e0203c4c56ee056b445c6b4a408"
+"batchcorr_set1",TRUE,TRUE,"0ce473b2f1b9db0345f2e9235ac86e028235fc01d52506d2fe159616fbb8b09d"
+"sacurine",TRUE,TRUE,"f93bc72dbe6c9c9db9855b98e3422db52e54e294a4a89622f644b5176263a58c"
+"waveica",TRUE,TRUE,"fd78ee44fe9e3844589bd2586133bc2685432b135026875a98cf8b621909a47f"

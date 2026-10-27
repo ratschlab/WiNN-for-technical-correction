@@ -1,0 +1,7 @@
+analysis_family,task_id,dataset_key,seed_id,split_id,method_id,method,output_dir,fallback_applied,nonfinite_values_returned,features_restored_to_raw,samples_with_nonfinite_output,rule
+primary,PRIMARY_005,simulation,,,tiger,TIGER,results/primary/simulation/tiger,FALSE,0,0,0,TIGER output was finite.
+primary,PRIMARY_014,mtbls79,,,tiger,TIGER,results/primary/mtbls79/tiger,FALSE,0,0,0,TIGER output was finite.
+primary,PRIMARY_023,clinical_fiams,,,tiger,TIGER,results/primary/clinical_fiams/tiger,FALSE,0,0,0,TIGER output was finite.
+primary,PRIMARY_032,batchcorr_set1,,,tiger,TIGER,results/primary/batchcorr_set1/tiger,FALSE,0,0,0,TIGER output was finite.
+primary,PRIMARY_041,sacurine,,,tiger,TIGER,results/primary/sacurine/tiger,FALSE,0,0,0,TIGER output was finite.
+primary,PRIMARY_050,waveica,,,tiger,TIGER,results/primary/waveica/tiger,TRUE,16,4,16,A TIGER feature with any non-finite corrected value was restored to its complete uncorrected input profile.

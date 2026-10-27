@@ -1,0 +1,38 @@
+\begin{landscape}
+\tiny
+\begin{longtable}{lllrlrrrr}
+\caption{WiNN parameters for every dataset and operating mode. WiNN uses the same prespecified settings in every dataset and receives no QC identities. Automatic-mode settings were selected from the prespecified grid using labelled training QCs only.}\label{tab:supp_winn_parameters}\\
+\toprule
+Dataset & Mode & Batch source & Segments & Test & Smoother & Drift FDR & Batch FDR & PQN \\
+\midrule
+\endfirsthead
+\multicolumn{9}{l}{\textit{Table \thetable{} continued}}\\
+\toprule
+Dataset & Mode & Batch source & Segments & Test & Smoother & Drift FDR & Batch FDR & PQN \\
+\midrule
+\endhead
+\midrule
+\multicolumn{9}{r}{\textit{Continued on next page}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+Simulation & WiNN (QC-tuned) & supplied & 5 & Ljung-Box & conservative & 0.10 & 0.01 & shrink \\
+Simulation & WiNN (inferred segments) & auto\_detected & 2 & Ljung-Box & conservative & 0.01 & 0.10 & shrink \\
+Simulation & WiNN & supplied & 5 & Ljung-Box & conservative & 0.05 & 0.05 & shrink \\
+MTBLS79 & WiNN (QC-tuned) & supplied & 8 & Ljung-Box & conservative & 0.10 & 0.10 & normalize \\
+MTBLS79 & WiNN (inferred segments) & auto\_detected & 3 & Ljung-Box & conservative & 0.01 & 0.01 & normalize \\
+MTBLS79 & WiNN & supplied & 8 & Ljung-Box & conservative & 0.05 & 0.05 & shrink \\
+BatchCorr Set 1 & WiNN (QC-tuned) & supplied & 10 & Ljung-Box & conservative & 0.01 & 0.01 & normalize \\
+BatchCorr Set 1 & WiNN (inferred segments) & auto\_detected & 6 & Ljung-Box & conservative & 0.10 & 0.01 & normalize \\
+BatchCorr Set 1 & WiNN & supplied & 10 & Ljung-Box & conservative & 0.05 & 0.05 & shrink \\
+Clinical FIA-MS & WiNN (QC-tuned) & supplied & 8 & Ljung-Box & conservative & 0.01 & 0.10 & normalize \\
+Clinical FIA-MS & WiNN (inferred segments) & auto\_detected & 2 & Ljung-Box & conservative & 0.01 & 0.01 & normalize \\
+Clinical FIA-MS & WiNN & supplied & 8 & Ljung-Box & conservative & 0.05 & 0.05 & shrink \\
+Sacurine & WiNN (QC-tuned) & supplied & 2 & Ljung-Box & standard & 0.10 & 0.10 & normalize \\
+Sacurine & WiNN (inferred segments) & auto\_detected & 3 & Ljung-Box & conservative & 0.01 & 0.10 & normalize \\
+Sacurine & WiNN & supplied & 2 & Ljung-Box & conservative & 0.05 & 0.05 & shrink \\
+WaveICA & WiNN (QC-tuned) & supplied & 3 & Ljung-Box & conservative & 0.01 & 0.05 & normalize \\
+WaveICA & WiNN (inferred segments) & auto\_detected & 1 & Ljung-Box & standard & 0.10 & 0.10 & shrink \\
+WaveICA & WiNN & supplied & 3 & Ljung-Box & conservative & 0.05 & 0.05 & shrink \\
+\end{longtable}
+\end{landscape}

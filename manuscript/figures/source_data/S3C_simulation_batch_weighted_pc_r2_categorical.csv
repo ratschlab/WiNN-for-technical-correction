@@ -1,0 +1,91 @@
+metric,value,direction,denominator,units,notes,dataset_key,method_id,method,seed_id,method_label,method_mean,method_se
+batch_weighted_pc_r2_categorical,0.965647338615417,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,raw,Raw,SIM01,Raw,0.9636929449924934,3.5348837562117295e-4
+batch_weighted_pc_r2_categorical,1.0351914748848e-4,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,combat,ComBat,SIM01,ComBat,1.0052129605566561e-4,7.6364507637433e-6
+batch_weighted_pc_r2_categorical,9.55201604490419e-5,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,qc_rlsc,QC-RLSC,SIM01,QC-RLSC,1.2772588589259065e-4,1.8528092115247968e-5
+batch_weighted_pc_r2_categorical,0.0860395046780319,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,tiger,TIGER,SIM01,TIGER,0.06336365349025065,0.005900387666264961
+batch_weighted_pc_r2_categorical,6.8630113124735e-4,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,serrf,SERRF,SIM01,SERRF,9.98344467768055e-4,1.4106788243047194e-4
+batch_weighted_pc_r2_categorical,0.00100135976133962,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_qc,WiNN (QC-tuned),SIM01,WiNN (QC-tuned),9.4352869724573e-4,8.261782229759663e-5
+batch_weighted_pc_r2_categorical,0.190350299562417,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM01,WiNN (inferred segments),0.2045079288400511,0.01909553371663714
+batch_weighted_pc_r2_categorical,9.8457803565371e-4,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_fixed_no_qc,WiNN,SIM01,WiNN,8.50842100839283e-4,6.346239374256818e-5
+batch_weighted_pc_r2_categorical,0.963599564642599,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,raw,Raw,SIM02,Raw,0.9636929449924934,3.5348837562117295e-4
+batch_weighted_pc_r2_categorical,1.1406305321214e-4,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,combat,ComBat,SIM02,ComBat,1.0052129605566561e-4,7.6364507637433e-6
+batch_weighted_pc_r2_categorical,2.7219798648418e-4,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,qc_rlsc,QC-RLSC,SIM02,QC-RLSC,1.2772588589259065e-4,1.8528092115247968e-5
+batch_weighted_pc_r2_categorical,0.0320282374516539,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,tiger,TIGER,SIM02,TIGER,0.06336365349025065,0.005900387666264961
+batch_weighted_pc_r2_categorical,5.7901948033771e-4,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,serrf,SERRF,SIM02,SERRF,9.98344467768055e-4,1.4106788243047194e-4
+batch_weighted_pc_r2_categorical,0.00140103151190936,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_qc,WiNN (QC-tuned),SIM02,WiNN (QC-tuned),9.4352869724573e-4,8.261782229759663e-5
+batch_weighted_pc_r2_categorical,0.188450217275425,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM02,WiNN (inferred segments),0.2045079288400511,0.01909553371663714
+batch_weighted_pc_r2_categorical,0.00120378704130995,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_fixed_no_qc,WiNN,SIM02,WiNN,8.50842100839283e-4,6.346239374256818e-5
+batch_weighted_pc_r2_categorical,0.962280227771194,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,raw,Raw,SIM03,Raw,0.9636929449924934,3.5348837562117295e-4
+batch_weighted_pc_r2_categorical,1.2249548536149e-4,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,combat,ComBat,SIM03,ComBat,1.0052129605566561e-4,7.6364507637433e-6
+batch_weighted_pc_r2_categorical,1.1978543097158e-4,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,qc_rlsc,QC-RLSC,SIM03,QC-RLSC,1.2772588589259065e-4,1.8528092115247968e-5
+batch_weighted_pc_r2_categorical,0.0530585566018515,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,tiger,TIGER,SIM03,TIGER,0.06336365349025065,0.005900387666264961
+batch_weighted_pc_r2_categorical,0.00110050071585592,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,serrf,SERRF,SIM03,SERRF,9.98344467768055e-4,1.4106788243047194e-4
+batch_weighted_pc_r2_categorical,9.2975515619998e-4,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_qc,WiNN (QC-tuned),SIM03,WiNN (QC-tuned),9.4352869724573e-4,8.261782229759663e-5
+batch_weighted_pc_r2_categorical,0.194995976319088,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM03,WiNN (inferred segments),0.2045079288400511,0.01909553371663714
+batch_weighted_pc_r2_categorical,6.8104865188373e-4,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_fixed_no_qc,WiNN,SIM03,WiNN,8.50842100839283e-4,6.346239374256818e-5
+batch_weighted_pc_r2_categorical,0.963672277422109,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,raw,Raw,SIM04,Raw,0.9636929449924934,3.5348837562117295e-4
+batch_weighted_pc_r2_categorical,1.1380034122641e-4,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,combat,ComBat,SIM04,ComBat,1.0052129605566561e-4,7.6364507637433e-6
+batch_weighted_pc_r2_categorical,9.3504666372733e-5,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,qc_rlsc,QC-RLSC,SIM04,QC-RLSC,1.2772588589259065e-4,1.8528092115247968e-5
+batch_weighted_pc_r2_categorical,0.0905309788961231,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,tiger,TIGER,SIM04,TIGER,0.06336365349025065,0.005900387666264961
+batch_weighted_pc_r2_categorical,0.00124248111273319,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,serrf,SERRF,SIM04,SERRF,9.98344467768055e-4,1.4106788243047194e-4
+batch_weighted_pc_r2_categorical,0.00122085510077192,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_qc,WiNN (QC-tuned),SIM04,WiNN (QC-tuned),9.4352869724573e-4,8.261782229759663e-5
+batch_weighted_pc_r2_categorical,0.189764427527771,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM04,WiNN (inferred segments),0.2045079288400511,0.01909553371663714
+batch_weighted_pc_r2_categorical,9.1902389552832e-4,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_fixed_no_qc,WiNN,SIM04,WiNN,8.50842100839283e-4,6.346239374256818e-5
+batch_weighted_pc_r2_categorical,0.962076478387943,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,raw,Raw,SIM05,Raw,0.9636929449924934,3.5348837562117295e-4
+batch_weighted_pc_r2_categorical,1.1802903761972e-4,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,combat,ComBat,SIM05,ComBat,1.0052129605566561e-4,7.6364507637433e-6
+batch_weighted_pc_r2_categorical,8.43365224038597e-5,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,qc_rlsc,QC-RLSC,SIM05,QC-RLSC,1.2772588589259065e-4,1.8528092115247968e-5
+batch_weighted_pc_r2_categorical,0.0732520809687819,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,tiger,TIGER,SIM05,TIGER,0.06336365349025065,0.005900387666264961
+batch_weighted_pc_r2_categorical,6.1371337540241e-4,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,serrf,SERRF,SIM05,SERRF,9.98344467768055e-4,1.4106788243047194e-4
+batch_weighted_pc_r2_categorical,7.1259489389165e-4,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_qc,WiNN (QC-tuned),SIM05,WiNN (QC-tuned),9.4352869724573e-4,8.261782229759663e-5
+batch_weighted_pc_r2_categorical,0.114588952709036,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM05,WiNN (inferred segments),0.2045079288400511,0.01909553371663714
+batch_weighted_pc_r2_categorical,7.397593761161e-4,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_fixed_no_qc,WiNN,SIM05,WiNN,8.50842100839283e-4,6.346239374256818e-5
+batch_weighted_pc_r2_categorical,0.963598199950116,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,raw,Raw,SIM06,Raw,0.9636929449924934,3.5348837562117295e-4
+batch_weighted_pc_r2_categorical,6.1496482718574e-5,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,combat,ComBat,SIM06,ComBat,1.0052129605566561e-4,7.6364507637433e-6
+batch_weighted_pc_r2_categorical,1.484640564381e-4,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,qc_rlsc,QC-RLSC,SIM06,QC-RLSC,1.2772588589259065e-4,1.8528092115247968e-5
+batch_weighted_pc_r2_categorical,0.0556315294552679,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,tiger,TIGER,SIM06,TIGER,0.06336365349025065,0.005900387666264961
+batch_weighted_pc_r2_categorical,0.0016272780666388,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,serrf,SERRF,SIM06,SERRF,9.98344467768055e-4,1.4106788243047194e-4
+batch_weighted_pc_r2_categorical,7.9282450203214e-4,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_qc,WiNN (QC-tuned),SIM06,WiNN (QC-tuned),9.4352869724573e-4,8.261782229759663e-5
+batch_weighted_pc_r2_categorical,0.302506088513641,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM06,WiNN (inferred segments),0.2045079288400511,0.01909553371663714
+batch_weighted_pc_r2_categorical,8.2258981894367e-4,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_fixed_no_qc,WiNN,SIM06,WiNN,8.50842100839283e-4,6.346239374256818e-5
+batch_weighted_pc_r2_categorical,0.963286281377159,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,raw,Raw,SIM07,Raw,0.9636929449924934,3.5348837562117295e-4
+batch_weighted_pc_r2_categorical,9.22906124156833e-5,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,combat,ComBat,SIM07,ComBat,1.0052129605566561e-4,7.6364507637433e-6
+batch_weighted_pc_r2_categorical,1.1110825079947e-4,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,qc_rlsc,QC-RLSC,SIM07,QC-RLSC,1.2772588589259065e-4,1.8528092115247968e-5
+batch_weighted_pc_r2_categorical,0.0574833236929965,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,tiger,TIGER,SIM07,TIGER,0.06336365349025065,0.005900387666264961
+batch_weighted_pc_r2_categorical,4.2111242279978e-4,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,serrf,SERRF,SIM07,SERRF,9.98344467768055e-4,1.4106788243047194e-4
+batch_weighted_pc_r2_categorical,9.1329280226907e-4,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_qc,WiNN (QC-tuned),SIM07,WiNN (QC-tuned),9.4352869724573e-4,8.261782229759663e-5
+batch_weighted_pc_r2_categorical,0.1391796799333,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM07,WiNN (inferred segments),0.2045079288400511,0.01909553371663714
+batch_weighted_pc_r2_categorical,9.618722974936e-4,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_fixed_no_qc,WiNN,SIM07,WiNN,8.50842100839283e-4,6.346239374256818e-5
+batch_weighted_pc_r2_categorical,0.965288807097901,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,raw,Raw,SIM08,Raw,0.9636929449924934,3.5348837562117295e-4
+batch_weighted_pc_r2_categorical,1.2109225487758e-4,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,combat,ComBat,SIM08,ComBat,1.0052129605566561e-4,7.6364507637433e-6
+batch_weighted_pc_r2_categorical,7.49716785129518e-5,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,qc_rlsc,QC-RLSC,SIM08,QC-RLSC,1.2772588589259065e-4,1.8528092115247968e-5
+batch_weighted_pc_r2_categorical,0.0430497724260917,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,tiger,TIGER,SIM08,TIGER,0.06336365349025065,0.005900387666264961
+batch_weighted_pc_r2_categorical,0.0015747619783158,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,serrf,SERRF,SIM08,SERRF,9.98344467768055e-4,1.4106788243047194e-4
+batch_weighted_pc_r2_categorical,4.5373553736314e-4,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_qc,WiNN (QC-tuned),SIM08,WiNN (QC-tuned),9.4352869724573e-4,8.261782229759663e-5
+batch_weighted_pc_r2_categorical,0.297280363037024,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM08,WiNN (inferred segments),0.2045079288400511,0.01909553371663714
+batch_weighted_pc_r2_categorical,4.5296616394181e-4,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_fixed_no_qc,WiNN,SIM08,WiNN,8.50842100839283e-4,6.346239374256818e-5
+batch_weighted_pc_r2_categorical,0.963943539811015,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,raw,Raw,SIM09,Raw,0.9636929449924934,3.5348837562117295e-4
+batch_weighted_pc_r2_categorical,5.50431403365288e-5,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,combat,ComBat,SIM09,ComBat,1.0052129605566561e-4,7.6364507637433e-6
+batch_weighted_pc_r2_categorical,1.0597029353328e-4,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,qc_rlsc,QC-RLSC,SIM09,QC-RLSC,1.2772588589259065e-4,1.8528092115247968e-5
+batch_weighted_pc_r2_categorical,0.0656788498520708,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,tiger,TIGER,SIM09,TIGER,0.06336365349025065,0.005900387666264961
+batch_weighted_pc_r2_categorical,7.3091183217269e-4,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,serrf,SERRF,SIM09,SERRF,9.98344467768055e-4,1.4106788243047194e-4
+batch_weighted_pc_r2_categorical,0.00101411888738062,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_qc,WiNN (QC-tuned),SIM09,WiNN (QC-tuned),9.4352869724573e-4,8.261782229759663e-5
+batch_weighted_pc_r2_categorical,0.239558402511951,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM09,WiNN (inferred segments),0.2045079288400511,0.01909553371663714
+batch_weighted_pc_r2_categorical,9.0240734928216e-4,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_fixed_no_qc,WiNN,SIM09,WiNN,8.50842100839283e-4,6.346239374256818e-5
+batch_weighted_pc_r2_categorical,0.963536734849481,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,raw,Raw,SIM10,Raw,0.9636929449924934,3.5348837562117295e-4
+batch_weighted_pc_r2_categorical,1.0338340530005e-4,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,combat,ComBat,SIM10,ComBat,1.0052129605566561e-4,7.6364507637433e-6
+batch_weighted_pc_r2_categorical,1.7139981296071e-4,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,qc_rlsc,QC-RLSC,SIM10,QC-RLSC,1.2772588589259065e-4,1.8528092115247968e-5
+batch_weighted_pc_r2_categorical,0.0768837008796373,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,tiger,TIGER,SIM10,TIGER,0.06336365349025065,0.005900387666264961
+batch_weighted_pc_r2_categorical,0.0014073645621769,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,serrf,SERRF,SIM10,SERRF,9.98344467768055e-4,1.4106788243047194e-4
+batch_weighted_pc_r2_categorical,9.957188192998e-4,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_qc,WiNN (QC-tuned),SIM10,WiNN (QC-tuned),9.4352869724573e-4,8.261782229759663e-5
+batch_weighted_pc_r2_categorical,0.188404881010858,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM10,WiNN (inferred segments),0.2045079288400511,0.01909553371663714
+batch_weighted_pc_r2_categorical,8.4038837823978e-4,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_fixed_no_qc,WiNN,SIM10,WiNN,8.50842100839283e-4,6.346239374256818e-5
+batch_weighted_pc_r2_categorical,0.144065264620379,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,qc_rfsc,QC-RFSC,SIM01,QC-RFSC,0.1449382129646241,0.004880237905999757
+batch_weighted_pc_r2_categorical,0.117368992093829,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,qc_rfsc,QC-RFSC,SIM02,QC-RFSC,0.1449382129646241,0.004880237905999757
+batch_weighted_pc_r2_categorical,0.132268816869873,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,qc_rfsc,QC-RFSC,SIM03,QC-RFSC,0.1449382129646241,0.004880237905999757
+batch_weighted_pc_r2_categorical,0.173320345609352,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,qc_rfsc,QC-RFSC,SIM04,QC-RFSC,0.1449382129646241,0.004880237905999757
+batch_weighted_pc_r2_categorical,0.15598998059965,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,qc_rfsc,QC-RFSC,SIM05,QC-RFSC,0.1449382129646241,0.004880237905999757
+batch_weighted_pc_r2_categorical,0.152662374656992,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,qc_rfsc,QC-RFSC,SIM06,QC-RFSC,0.1449382129646241,0.004880237905999757
+batch_weighted_pc_r2_categorical,0.133841442251549,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,qc_rfsc,QC-RFSC,SIM07,QC-RFSC,0.1449382129646241,0.004880237905999757
+batch_weighted_pc_r2_categorical,0.142763217341606,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,qc_rfsc,QC-RFSC,SIM08,QC-RFSC,0.1449382129646241,0.004880237905999757
+batch_weighted_pc_r2_categorical,0.154908776857599,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,qc_rfsc,QC-RFSC,SIM09,QC-RFSC,0.1449382129646241,0.004880237905999757
+batch_weighted_pc_r2_categorical,0.142192918745412,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,qc_rfsc,QC-RFSC,SIM10,QC-RFSC,0.1449382129646241,0.004880237905999757

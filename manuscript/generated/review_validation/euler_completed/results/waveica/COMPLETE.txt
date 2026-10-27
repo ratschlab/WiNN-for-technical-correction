@@ -1,0 +1,6 @@
+status=complete
+dataset=waveica
+statTarget=1.38.0
+mode=full
+input_sha256=fd78ee44fe9e3844589bd2586133bc2685432b135026875a98cf8b621909a47f
+output_sha256=02439c261a4a39224ff86b6bb100afbf7404f7eb6f0e5ece433bc23a82014ebb

@@ -1,0 +1,25 @@
+figure,panel,title,pdf,png,source_csv,width_mm,height_mm
+F2,B,Clean-truth RMSE,main_panels/F2B_truth_log1p_rmse.pdf,NA,source_data/F2B_truth_log1p_rmse.csv,85,55
+F2,C,"Feature ICC(A,1)",main_panels/F2C_truth_metabolite_profile_icc_mean.pdf,NA,source_data/F2C_truth_metabolite_profile_icc_mean.csv,85,55
+F2,D,Sample correlation,main_panels/F2D_truth_sample_profile_pearson_mean.pdf,NA,source_data/F2D_truth_sample_profile_pearson_mean.csv,85,55
+S3,A,Held-out QC CV,supplementary_panels/S3A_simulation_heldout_qc_cv_mean.pdf,NA,source_data/S3A_simulation_heldout_qc_cv_mean.csv,85,65
+S3,B,Run-order structure,supplementary_panels/S3B_simulation_residual_run_order_gam_mean_deviance.pdf,NA,source_data/S3B_simulation_residual_run_order_gam_mean_deviance.csv,85,65
+S3,C,Residual batch structure,supplementary_panels/S3C_simulation_batch_weighted_pc_r2_categorical.pdf,NA,source_data/S3C_simulation_batch_weighted_pc_r2_categorical.csv,85,65
+S3,D,Clean-truth RMSE,supplementary_panels/S3D_simulation_truth_log1p_rmse.pdf,NA,source_data/S3D_simulation_truth_log1p_rmse.csv,85,65
+S3,E,"Feature ICC(A,1)",supplementary_panels/S3E_simulation_truth_metabolite_profile_icc_mean.pdf,NA,source_data/S3E_simulation_truth_metabolite_profile_icc_mean.csv,85,65
+S3,F,Sample correlation,supplementary_panels/S3F_simulation_truth_sample_profile_pearson_mean.pdf,NA,source_data/S3F_simulation_truth_sample_profile_pearson_mean.csv,85,65
+F2,A,Selective versus forced gates,main_panels/F2A_selective_forced_truth_rmse.pdf,NA,source_data/F2A_selective_forced_truth_rmse.csv,85,55
+F3,A,BatchCorr: reference precision,main_panels/F3A_batchcorr_qc_cv_vs_run_order_deviance.pdf,NA,source_data/F3A_batchcorr_qc_cv_vs_run_order_deviance.csv,85,55
+F3,B,Clinical: reference precision,main_panels/F3B_clinical_qc_cv_vs_run_order_deviance.pdf,NA,source_data/F3B_clinical_qc_cv_vs_run_order_deviance.csv,85,55
+F3,C,BatchCorr: batch vs ICC,main_panels/F3C_batchcorr_batch_variance_vs_replicate_icc.pdf,NA,source_data/F3C_batchcorr_batch_variance_vs_replicate_icc.csv,85,55
+F3,D,Clinical: plate vs ICC,main_panels/F3D_clinical_plate_variance_vs_replicate_icc.pdf,NA,source_data/F3D_clinical_plate_variance_vs_replicate_icc.csv,85,55
+F2,E,WiNN: effect recovery,main_panels/F2E_median_attenuation_ratio_clean_responsive.pdf,NA,source_data/F2E_median_attenuation_ratio_clean_responsive.csv,85,55
+F2,F,WiNN: empirical FDR,main_panels/F2F_empirical_fdr.pdf,NA,source_data/F2F_empirical_fdr.csv,85,55
+F4,A,WaveICA group 0 vs 1,main_panels/F4A_waveica_batch_vs_group.pdf,NA,source_data/F4A_waveica_batch_vs_group.csv,85,55
+F4,B,MTBLS79 cow vs sheep,main_panels/F4B_mtbls79_batch_vs_group.pdf,NA,source_data/F4B_mtbls79_batch_vs_group.csv,85,55
+S5,A,Held-out QC CV,supplementary_panels/S5A_partial_heldout_qc_cv_mean.pdf,NA,source_data/S5A_partial_heldout_qc_cv_mean.csv,85,65
+S5,B,Run-order structure,supplementary_panels/S5B_partial_residual_run_order_gam_mean_deviance.pdf,NA,source_data/S5B_partial_residual_run_order_gam_mean_deviance.csv,85,65
+S5,C,Residual batch structure,supplementary_panels/S5C_partial_batch_weighted_pc_r2_categorical.pdf,NA,source_data/S5C_partial_batch_weighted_pc_r2_categorical.csv,85,65
+S5,D,Clean sample-profile recovery,supplementary_panels/S5D_partial_clean_sample_profile_pearson_mean.pdf,NA,source_data/S5D_partial_clean_sample_profile_pearson_mean.csv,85,65
+S5,E,Clean-reference effect recovery,supplementary_panels/S5E_partial_median_attenuation_ratio_clean_responsive.pdf,NA,source_data/S5E_partial_median_attenuation_ratio_clean_responsive.csv,85,65
+S5,F,Empirical false-discovery rate,supplementary_panels/S5F_partial_empirical_fdr.pdf,NA,source_data/S5F_partial_empirical_fdr.csv,85,65

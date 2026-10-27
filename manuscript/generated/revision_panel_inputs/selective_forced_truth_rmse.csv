@@ -1,0 +1,41 @@
+metric,value,direction,denominator,units,notes,dataset_key,method_id,method,seed_id,gate_label,method_mean,method_se
+truth_log1p_rmse,0.0717656363030658,lower,450000,log1p intensity,,simulation,G_SS,selective/selective,SIM01,Selective / selective,0.07274210366010775,4.161968456426885e-4
+truth_log1p_rmse,0.0755212043596487,lower,450000,log1p intensity,,simulation,G_AS,all/selective,SIM01,Forced drift,0.07663458751788253,4.063356218052537e-4
+truth_log1p_rmse,0.0721145524012737,lower,450000,log1p intensity,,simulation,G_SA,selective/all,SIM01,Forced batch,0.0731220300303108,4.164909881082743e-4
+truth_log1p_rmse,0.075859055149693,lower,450000,log1p intensity,,simulation,G_AA,all/all,SIM01,Forced drift + batch,0.0769881133879572,4.0559549283775804e-4
+truth_log1p_rmse,0.0742868926228712,lower,450000,log1p intensity,,simulation,G_SS,selective/selective,SIM02,Selective / selective,0.07274210366010775,4.161968456426885e-4
+truth_log1p_rmse,0.0780582246323974,lower,450000,log1p intensity,,simulation,G_AS,all/selective,SIM02,Forced drift,0.07663458751788253,4.063356218052537e-4
+truth_log1p_rmse,0.0746723272808705,lower,450000,log1p intensity,,simulation,G_SA,selective/all,SIM02,Forced batch,0.0731220300303108,4.164909881082743e-4
+truth_log1p_rmse,0.0784032483228111,lower,450000,log1p intensity,,simulation,G_AA,all/all,SIM02,Forced drift + batch,0.0769881133879572,4.0559549283775804e-4
+truth_log1p_rmse,0.0731452104192044,lower,450000,log1p intensity,,simulation,G_SS,selective/selective,SIM03,Selective / selective,0.07274210366010775,4.161968456426885e-4
+truth_log1p_rmse,0.0771751126475367,lower,450000,log1p intensity,,simulation,G_AS,all/selective,SIM03,Forced drift,0.07663458751788253,4.063356218052537e-4
+truth_log1p_rmse,0.073521168496006,lower,450000,log1p intensity,,simulation,G_SA,selective/all,SIM03,Forced batch,0.0731220300303108,4.164909881082743e-4
+truth_log1p_rmse,0.0775192833097724,lower,450000,log1p intensity,,simulation,G_AA,all/all,SIM03,Forced drift + batch,0.0769881133879572,4.0559549283775804e-4
+truth_log1p_rmse,0.0709686009455053,lower,450000,log1p intensity,,simulation,G_SS,selective/selective,SIM04,Selective / selective,0.07274210366010775,4.161968456426885e-4
+truth_log1p_rmse,0.0748886351528768,lower,450000,log1p intensity,,simulation,G_AS,all/selective,SIM04,Forced drift,0.07663458751788253,4.063356218052537e-4
+truth_log1p_rmse,0.0713521544711866,lower,450000,log1p intensity,,simulation,G_SA,selective/all,SIM04,Forced batch,0.0731220300303108,4.164909881082743e-4
+truth_log1p_rmse,0.0752437839130377,lower,450000,log1p intensity,,simulation,G_AA,all/all,SIM04,Forced drift + batch,0.0769881133879572,4.0559549283775804e-4
+truth_log1p_rmse,0.0733976076017738,lower,450000,log1p intensity,,simulation,G_SS,selective/selective,SIM05,Selective / selective,0.07274210366010775,4.161968456426885e-4
+truth_log1p_rmse,0.0771289241487446,lower,450000,log1p intensity,,simulation,G_AS,all/selective,SIM05,Forced drift,0.07663458751788253,4.063356218052537e-4
+truth_log1p_rmse,0.0737577944600939,lower,450000,log1p intensity,,simulation,G_SA,selective/all,SIM05,Forced batch,0.0731220300303108,4.164909881082743e-4
+truth_log1p_rmse,0.0774700741497001,lower,450000,log1p intensity,,simulation,G_AA,all/all,SIM05,Forced drift + batch,0.0769881133879572,4.0559549283775804e-4
+truth_log1p_rmse,0.0717165867720228,lower,450000,log1p intensity,,simulation,G_SS,selective/selective,SIM06,Selective / selective,0.07274210366010775,4.161968456426885e-4
+truth_log1p_rmse,0.0757466154199508,lower,450000,log1p intensity,,simulation,G_AS,all/selective,SIM06,Forced drift,0.07663458751788253,4.063356218052537e-4
+truth_log1p_rmse,0.0721322661460432,lower,450000,log1p intensity,,simulation,G_SA,selective/all,SIM06,Forced batch,0.0731220300303108,4.164909881082743e-4
+truth_log1p_rmse,0.0761592851977541,lower,450000,log1p intensity,,simulation,G_AA,all/all,SIM06,Forced drift + batch,0.0769881133879572,4.0559549283775804e-4
+truth_log1p_rmse,0.072438982008187,lower,450000,log1p intensity,,simulation,G_SS,selective/selective,SIM07,Selective / selective,0.07274210366010775,4.161968456426885e-4
+truth_log1p_rmse,0.0762736682889894,lower,450000,log1p intensity,,simulation,G_AS,all/selective,SIM07,Forced drift,0.07663458751788253,4.063356218052537e-4
+truth_log1p_rmse,0.0728436061495395,lower,450000,log1p intensity,,simulation,G_SA,selective/all,SIM07,Forced batch,0.0731220300303108,4.164909881082743e-4
+truth_log1p_rmse,0.0766417319995369,lower,450000,log1p intensity,,simulation,G_AA,all/all,SIM07,Forced drift + batch,0.0769881133879572,4.0559549283775804e-4
+truth_log1p_rmse,0.0751852130525579,lower,450000,log1p intensity,,simulation,G_SS,selective/selective,SIM08,Selective / selective,0.07274210366010775,4.161968456426885e-4
+truth_log1p_rmse,0.0789752193591707,lower,450000,log1p intensity,,simulation,G_AS,all/selective,SIM08,Forced drift,0.07663458751788253,4.063356218052537e-4
+truth_log1p_rmse,0.0755542223941886,lower,450000,log1p intensity,,simulation,G_SA,selective/all,SIM08,Forced batch,0.0731220300303108,4.164909881082743e-4
+truth_log1p_rmse,0.0793171050592308,lower,450000,log1p intensity,,simulation,G_AA,all/all,SIM08,Forced drift + batch,0.0769881133879572,4.0559549283775804e-4
+truth_log1p_rmse,0.0715756350379746,lower,450000,log1p intensity,,simulation,G_SS,selective/selective,SIM09,Selective / selective,0.07274210366010775,4.161968456426885e-4
+truth_log1p_rmse,0.0754607219567797,lower,450000,log1p intensity,,simulation,G_AS,all/selective,SIM09,Forced drift,0.07663458751788253,4.063356218052537e-4
+truth_log1p_rmse,0.071910684750944,lower,450000,log1p intensity,,simulation,G_SA,selective/all,SIM09,Forced batch,0.0731220300303108,4.164909881082743e-4
+truth_log1p_rmse,0.0757709499640049,lower,450000,log1p intensity,,simulation,G_AA,all/all,SIM09,Forced drift + batch,0.0769881133879572,4.0559549283775804e-4
+truth_log1p_rmse,0.0729406718379146,lower,450000,log1p intensity,,simulation,G_SS,selective/selective,SIM10,Selective / selective,0.07274210366010775,4.161968456426885e-4
+truth_log1p_rmse,0.0771175492127305,lower,450000,log1p intensity,,simulation,G_AS,all/selective,SIM10,Forced drift,0.07663458751788253,4.063356218052537e-4
+truth_log1p_rmse,0.073361523752962,lower,450000,log1p intensity,,simulation,G_SA,selective/all,SIM10,Forced batch,0.0731220300303108,4.164909881082743e-4
+truth_log1p_rmse,0.077496616814031,lower,450000,log1p intensity,,simulation,G_AA,all/all,SIM10,Forced drift + batch,0.0769881133879572,4.0559549283775804e-4

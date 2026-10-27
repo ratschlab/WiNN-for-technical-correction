@@ -1,0 +1,3 @@
+"seed_id","object","observed_sha256","expected_sha256","passed"
+"SIM04","raw_intensity","e6d7dd219e17dc71f78ef7f5e2c0532755c4fd944d3c1e0d7df2485b259569b0","e6d7dd219e17dc71f78ef7f5e2c0532755c4fd944d3c1e0d7df2485b259569b0",TRUE
+"SIM04","clean_ground_truth","f5263c08b61df917dd552b8ace2e54d8558121891d3aca0d4f1f3a738b44406f","f5263c08b61df917dd552b8ace2e54d8558121891d3aca0d4f1f3a738b44406f",TRUE

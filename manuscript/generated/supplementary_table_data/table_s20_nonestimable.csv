@@ -1,0 +1,10 @@
+Dataset,Analysis,Status,Reason
+Simulation,phenotype-label permutation,not applicable by design,Clean simulation truth is observed directly; there is no empirical phenotype-label null to permute.
+Simulation,leave-one-batch-out biological effects,not applicable by design,Simulation uncertainty is paired by completed seed and evaluated against clean truth rather than empirical batch-held-out effects.
+MTBLS79,continuous phenotype association,not applicable by design,The deposited biological endpoint used here is cow versus sheep; no additional continuous phenotype was prespecified.
+BatchCorr Set 1,phenotype association,not applicable by design,"This dataset supports repeated accession identity, not a deposited phenotype-group endpoint."
+BatchCorr Set 1,leave-one-batch-out phenotype effects,not applicable by design,Cross-batch replicate agreement is the design-supported validation endpoint.
+Clinical FIA-MS,phenotype association,not applicable by design,No clinical phenotype is included in the privacy-audited benchmark output.
+Clinical FIA-MS,leave-one-batch-out phenotype effects,not applicable by design,Cross-plate replicate agreement is the permitted design-supported endpoint.
+Sacurine,replicate/sample-identity agreement,not applicable by design,There are no repeated participants in the deposited study design.
+WaveICA,replicate/sample-identity agreement,not applicable by design,There are no repeated biological identities in the deposited study design.
