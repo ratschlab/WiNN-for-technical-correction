@@ -34,5 +34,7 @@ maps them to the detailed generator outputs, which remain available as source da
 Every numerical claim in the text was audited against these source files
 before release.
 
-Code and results: https://github.com/ratschlab/WiNN-for-technical-correction
-(pin the analysis revision once the WiNN 0.1.6 release branch is committed).
+Code and results snapshot (WiNN 0.1.6 analysis release):
+https://github.com/ratschlab/WiNN-for-technical-correction/tree/491a6f9027f4a7ad7d6d17fc11d3b986bd5b0b13
+The later documentation commit records this citation in the manuscript sources
+without changing the numerical results.
