@@ -1,30 +1,34 @@
 Package: winn
-Title: White Noise Normalization for Metabolomics LC-MS Data
-Version: 0.1.4
-Authors@R: person(given = "Tanmay", family = "Tanna", email = "ttanna@ethz.ch", role = c("aut", "cre"))
-Author: Tanmay Tanna [aut, cre]
-Maintainer: Tanmay Tanna <ttanna@ethz.ch>
+Title: White Noise Normalization for Mass Spectrometry Profiling Data
+Version: 0.1.6
+Authors@R: c(
+    person(given = "Tanmay", family = "Tanna", email = "tanmay@tanmaytanna.com",
+           role = c("aut", "cre", "cph"))
+    )
 Description: Provides a decision-guided workflow for correcting technical
-    variability in metabolomics data while preserving metabolites that already
-    satisfy a white-noise gatekeeper. The package combines robust outlier
-    adjustment, adaptive drift detection, fkPELT-based batch segmentation,
-    batch correction, and probabilistic quotient normalization in a single
-    pipeline or as modular steps. It supports QC-informed parameter tuning as
-    well as QC-agnostic operation for studies without pooled controls. The
-    underlying white-noise normalization strategy is described by Demler,
-    Giulianini, Liu, Londschien, Sjöström, Tanna, Luttmann-Gibson and Jeanrenaud
-    (2024) <doi:10.48550/arXiv.2404.07906>.
+    variability in chemical profiling data. Tests for white noise identify
+    measured features that need correction while preserving those that
+    already pass. The workflow combines robust outlier adjustment, adaptive
+    drift detection, change-point segmentation, batch correction, and
+    probabilistic quotient normalization in a single pipeline or as modular
+    steps. It supports parameter tuning using pooled quality-control samples
+    as well as operation for studies without pooled controls.
 Depends: R (>= 3.5.0)
-Imports: stats, lmtest, mgcv, splines, sva
-Suggests: ggplot2, rmarkdown, knitr, roxygen2, testthat (>= 3.0.0)
-License: GPL-3 + file LICENSE
+Imports:
+    stats,
+    lmtest,
+    mgcv,
+    splines
+Suggests:
+    knitr,
+    rmarkdown,
+    sva,
+    testthat (>= 3.0.0)
+License: GPL-3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 VignetteBuilder: knitr
 Config/testthat/edition: 3
-Additional_repositories: https://bioconductor.org/packages/release/bioc
 URL: https://github.com/ratschlab/winn
 BugReports: https://github.com/ratschlab/winn/issues
 Config/roxygen2/version: 8.0.0
-NeedsCompilation: no
-Packaged: 2026-07-25 22:56:07 UTC; ttanna

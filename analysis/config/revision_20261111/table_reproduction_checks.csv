@@ -1,0 +1,57 @@
+file,passed,scope
+generated/supplementary_tables/condensed_baselines.tex,True,exact TeX bytes after table pipeline
+generated/supplementary_tables/condensed_complete_benchmark.tex,True,exact TeX bytes after table pipeline
+generated/supplementary_tables/condensed_selected_settings.tex,True,exact TeX bytes after table pipeline
+generated/supplementary_tables/condensed_selective_forced.tex,True,exact TeX bytes after table pipeline
+generated/supplementary_tables/table_s10_runtime_retention.tex,True,exact TeX bytes after table pipeline
+generated/supplementary_tables/table_s11_association_permutation.tex,True,exact TeX bytes after table pipeline
+generated/supplementary_tables/table_s12_lobo_summary.tex,True,exact TeX bytes after table pipeline
+generated/supplementary_tables/table_s13_partial_confounding.tex,True,exact TeX bytes after table pipeline
+generated/supplementary_tables/table_s14_reference_splits.tex,True,exact TeX bytes after table pipeline
+generated/supplementary_tables/table_s15_selective_forced.tex,True,exact TeX bytes after table pipeline
+generated/supplementary_tables/table_s16_cumulative_stages.tex,True,exact TeX bytes after table pipeline
+generated/supplementary_tables/table_s17_winn_parameters.tex,True,exact TeX bytes after table pipeline
+generated/supplementary_tables/table_s18_safeguards.tex,True,exact TeX bytes after table pipeline
+generated/supplementary_tables/table_s19_release_validation.tex,True,exact TeX bytes after table pipeline
+generated/supplementary_tables/table_s20_nonestimable.tex,True,exact TeX bytes after table pipeline
+generated/supplementary_tables/table_s21_selected_parameters.tex,True,exact TeX bytes after table pipeline
+generated/supplementary_tables/table_s22_primary_safeguards.tex,True,exact TeX bytes after table pipeline
+generated/supplementary_tables/table_s23_identity_retrieval.tex,True,exact TeX bytes after table pipeline
+generated/supplementary_tables/table_s24_paired_feature_effects.tex,True,exact TeX bytes after table pipeline
+generated/supplementary_tables/table_s25_nearest_baselines.tex,True,exact TeX bytes after table pipeline
+generated/supplementary_tables/table_s26_qcrfsc_empirical.tex,True,exact TeX bytes after table pipeline
+generated/supplementary_tables/table_s27_baseline_simulation.tex,True,exact TeX bytes after table pipeline
+generated/supplementary_tables/table_s28_baseline_empirical_effects.tex,True,exact TeX bytes after table pipeline
+generated/supplementary_tables/table_s29_preparation_response_patterns.tex,True,exact TeX bytes after table pipeline
+generated/supplementary_tables/table_s30_acquisition_group_balance.tex,True,exact TeX bytes after table pipeline
+generated/supplementary_tables/table_s31_reference_acquisition_placement.tex,True,exact TeX bytes after table pipeline
+generated/supplementary_tables/table_s4_simulation.tex,True,exact TeX bytes after table pipeline
+generated/supplementary_tables/table_s5_mtbls79.tex,True,exact TeX bytes after table pipeline
+generated/supplementary_tables/table_s6_batchcorr.tex,True,exact TeX bytes after table pipeline
+generated/supplementary_tables/table_s7_clinical.tex,True,exact TeX bytes after table pipeline
+generated/supplementary_tables/table_s8_sacurine.tex,True,exact TeX bytes after table pipeline
+generated/supplementary_tables/table_s9_waveica.tex,True,exact TeX bytes after table pipeline
+generated/supplementary_table_data/endpoint_free_selection_manifest.csv,True,parsed CSV rows
+generated/supplementary_table_data/intensity_domain_safeguard.csv,True,parsed CSV rows
+generated/supplementary_table_data/leave_one_batch_out_bootstrap_summary.csv,True,parsed CSV rows
+generated/supplementary_table_data/supplementary_table_manifest.csv,True,parsed CSV rows
+generated/supplementary_table_data/table_s10_runtime_retention.csv,True,parsed CSV rows
+generated/supplementary_table_data/table_s11_association_permutation.csv,True,parsed CSV rows
+generated/supplementary_table_data/table_s12_lobo_fold_level.csv,True,parsed CSV rows
+generated/supplementary_table_data/table_s12_lobo_summary.csv,True,parsed CSV rows
+generated/supplementary_table_data/table_s13_partial_confounding.csv,True,parsed CSV rows
+generated/supplementary_table_data/table_s14_reference_splits.csv,True,parsed CSV rows
+generated/supplementary_table_data/table_s15_selective_forced.csv,True,parsed CSV rows
+generated/supplementary_table_data/table_s16_cumulative_stages.csv,True,parsed CSV rows
+generated/supplementary_table_data/table_s17_winn_parameters.csv,True,parsed CSV rows
+generated/supplementary_table_data/table_s18_safeguards.csv,True,parsed CSV rows
+generated/supplementary_table_data/table_s19_release_validation.csv,True,parsed CSV rows
+generated/supplementary_table_data/table_s20_nonestimable.csv,True,parsed CSV rows
+generated/supplementary_table_data/table_s26_qcrfsc_empirical.csv,True,parsed CSV rows
+generated/supplementary_table_data/table_s4_simulation.csv,True,parsed CSV rows
+generated/supplementary_table_data/table_s5_mtbls79.csv,True,parsed CSV rows
+generated/supplementary_table_data/table_s6_batchcorr.csv,True,parsed CSV rows
+generated/supplementary_table_data/table_s7_clinical.csv,True,parsed CSV rows
+generated/supplementary_table_data/table_s8_sacurine.csv,True,parsed CSV rows
+generated/supplementary_table_data/table_s9_waveica.csv,True,parsed CSV rows
+generated/supplementary_table_data/tiger_nonfinite_feature_fallback.csv,True,parsed CSV rows

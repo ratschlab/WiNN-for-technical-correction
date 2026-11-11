@@ -2,7 +2,9 @@
 
 ## Frozen software and inputs
 
-All final WiNN runs use the bundled 0.1.4 source archive. Each production task checks the installed package version, installation path, and source-archive SHA-256 before loading a dataset. Run manifests retain the package record, input and output hashes, seed, runtime, warnings, and session information.
+All final WiNN runs use the bundled 0.1.6 source archive. Each production task checks the installed package version, installation path, and source-archive SHA-256 before loading a dataset. Run manifests retain the package record, input and output hashes, seed, runtime, warnings, and session information.
+
+WiNN 0.1.6 replaced 0.1.4 because the earlier versions silently fell back from the documented spline smoothers to LOESS or linear fits. Only WiNN outputs depend on that change, so the 0.1.6 release re-ran the three WiNN configurations, with Raw as a reproduction check, and reused every comparator output from the validated 0.1.4 release (`analysis/euler/submit_winn_rerun.sh`, `analysis/splice_winn_rerun.R`). The re-run used the same input matrices, seeds, reference partitions and resampling indices, so comparator and WiNN results remain paired. The Raw rows reproduced the previous release to within 5e-14, and `analysis/combine_winn_rerun_validation.R` combines the validation of the re-run with that of the reused comparator outputs.
 
 Public downloads are pinned to a source commit or file checksum. Download scripts reuse a file only after validation and record its URL, size, checksum, and download date.
 

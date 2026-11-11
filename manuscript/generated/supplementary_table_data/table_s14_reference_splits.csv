@@ -4,46 +4,46 @@ Simulation,ComBat,12.96 $\pm$ 0.15,0.128 $\pm$ 0.000
 Simulation,QC-RLSC,10.95 $\pm$ 0.14,0.051 $\pm$ 0.001
 Simulation,TIGER,9.54 $\pm$ 0.16,0.084 $\pm$ 0.000
 Simulation,SERRF,12.84 $\pm$ 0.15,0.099 $\pm$ 0.000
-Simulation,WiNN (QC-tuned),8.73 $\pm$ 0.04,0.019 $\pm$ 0.000
-Simulation,WiNN (inferred segments),15.33 $\pm$ 0.77,0.139 $\pm$ 0.000
-Simulation,WiNN,8.74 $\pm$ 0.04,0.020 $\pm$ 0.000
+Simulation,WiNN (QC-tuned),8.49 $\pm$ 0.04,0.019 $\pm$ 0.000
+Simulation,WiNN (inferred segments),14.18 $\pm$ 0.82,0.111 $\pm$ 0.000
+Simulation,WiNN,8.48 $\pm$ 0.04,0.021 $\pm$ 0.000
 MTBLS79,Raw,29.43 $\pm$ 0.17,0.142 $\pm$ 0.000
 MTBLS79,ComBat,16.74 $\pm$ 0.08,0.142 $\pm$ 0.000
 MTBLS79,QC-RLSC,154.71 $\pm$ 26.41,0.107 $\pm$ 0.009
 MTBLS79,TIGER,14.40 $\pm$ 0.17,0.141 $\pm$ 0.000
 MTBLS79,SERRF,17.87 $\pm$ 0.08,0.142 $\pm$ 0.000
-MTBLS79,WiNN (QC-tuned),16.81 $\pm$ 0.09,0.140 $\pm$ 0.000
-MTBLS79,WiNN (inferred segments),17.55 $\pm$ 0.11,0.140 $\pm$ 0.001
-MTBLS79,WiNN,17.36 $\pm$ 0.08,0.140 $\pm$ 0.000
+MTBLS79,WiNN (QC-tuned),16.82 $\pm$ 0.09,0.140 $\pm$ 0.000
+MTBLS79,WiNN (inferred segments),17.19 $\pm$ 0.12,0.138 $\pm$ 0.001
+MTBLS79,WiNN,17.37 $\pm$ 0.08,0.140 $\pm$ 0.000
 BatchCorr Set 1,Raw,67.90 $\pm$ 1.06,0.122 $\pm$ 0.000
 BatchCorr Set 1,ComBat,40.04 $\pm$ 2.10,0.122 $\pm$ 0.000
 BatchCorr Set 1,QC-RLSC,39.38 $\pm$ 1.84,0.095 $\pm$ 0.002
 BatchCorr Set 1,TIGER,39.11 $\pm$ 3.34,0.088 $\pm$ 0.002
 BatchCorr Set 1,SERRF,43.12 $\pm$ 2.77,0.122 $\pm$ 0.000
-BatchCorr Set 1,WiNN (QC-tuned),29.87 $\pm$ 1.45,0.046 $\pm$ 0.000
-BatchCorr Set 1,WiNN (inferred segments),31.47 $\pm$ 1.49,0.046 $\pm$ 0.000
-BatchCorr Set 1,WiNN,32.03 $\pm$ 1.41,0.044 $\pm$ 0.000
+BatchCorr Set 1,WiNN (QC-tuned),29.92 $\pm$ 1.42,0.048 $\pm$ 0.000
+BatchCorr Set 1,WiNN (inferred segments),30.75 $\pm$ 1.42,0.043 $\pm$ 0.000
+BatchCorr Set 1,WiNN,31.97 $\pm$ 1.37,0.044 $\pm$ 0.000
 Clinical FIA-MS,Raw,13.14 $\pm$ 0.54,0.120 $\pm$ 0.000
 Clinical FIA-MS,ComBat,11.59 $\pm$ 0.49,0.120 $\pm$ 0.000
 Clinical FIA-MS,QC-RLSC,11.71 $\pm$ 0.35,0.131 $\pm$ 0.005
 Clinical FIA-MS,TIGER,8.22 $\pm$ 0.28,0.091 $\pm$ 0.000
 Clinical FIA-MS,SERRF,9.89 $\pm$ 0.31,0.108 $\pm$ 0.000
-Clinical FIA-MS,WiNN (QC-tuned),9.17 $\pm$ 0.29,0.083 $\pm$ 0.000
-Clinical FIA-MS,WiNN (inferred segments),9.20 $\pm$ 0.29,0.075 $\pm$ 0.000
-Clinical FIA-MS,WiNN,10.03 $\pm$ 0.35,0.073 $\pm$ 0.000
+Clinical FIA-MS,WiNN (QC-tuned),9.11 $\pm$ 0.30,0.085 $\pm$ 0.000
+Clinical FIA-MS,WiNN (inferred segments),9.24 $\pm$ 0.31,0.087 $\pm$ 0.000
+Clinical FIA-MS,WiNN,10.04 $\pm$ 0.37,0.076 $\pm$ 0.000
 Sacurine,Raw,36.15 $\pm$ 0.99,0.068 $\pm$ 0.000
 Sacurine,ComBat,27.11 $\pm$ 1.49,0.068 $\pm$ 0.000
 Sacurine,QC-RLSC,14.36 $\pm$ 0.88,0.035 $\pm$ 0.000
 Sacurine,TIGER,10.37 $\pm$ 0.24,0.039 $\pm$ 0.000
 Sacurine,SERRF,17.78 $\pm$ 0.65,0.058 $\pm$ 0.001
-Sacurine,WiNN (QC-tuned),15.80 $\pm$ 0.33,0.044 $\pm$ 0.000
-Sacurine,WiNN (inferred segments),17.23 $\pm$ 0.40,0.040 $\pm$ 0.000
-Sacurine,WiNN,23.26 $\pm$ 0.85,0.052 $\pm$ 0.000
+Sacurine,WiNN (QC-tuned),16.08 $\pm$ 0.37,0.039 $\pm$ 0.000
+Sacurine,WiNN (inferred segments),17.13 $\pm$ 0.39,0.039 $\pm$ 0.000
+Sacurine,WiNN,22.57 $\pm$ 0.92,0.051 $\pm$ 0.000
 WaveICA,Raw,50.06 $\pm$ 0.46,0.206 $\pm$ 0.000
 WaveICA,ComBat,40.98 $\pm$ 0.52,0.207 $\pm$ 0.000
 WaveICA,QC-RLSC,42.05 $\pm$ 0.49,0.126 $\pm$ 0.000
 WaveICA,TIGER,25.69 $\pm$ 0.23,0.115 $\pm$ 0.000
 WaveICA,SERRF,34.16 $\pm$ 0.19,0.118 $\pm$ 0.000
-WaveICA,WiNN (QC-tuned),39.96 $\pm$ 0.39,0.088 $\pm$ 0.008
-WaveICA,WiNN (inferred segments),42.66 $\pm$ 0.41,0.212 $\pm$ 0.000
-WaveICA,WiNN,39.32 $\pm$ 0.38,0.014 $\pm$ 0.000
+WaveICA,WiNN (QC-tuned),38.80 $\pm$ 0.38,0.019 $\pm$ 0.001
+WaveICA,WiNN (inferred segments),41.93 $\pm$ 0.39,0.138 $\pm$ 0.000
+WaveICA,WiNN,38.81 $\pm$ 0.39,0.016 $\pm$ 0.000

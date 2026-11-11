@@ -79,54 +79,54 @@ batch_features_corrected,,descriptive,1000,features,,simulation,serrf,SERRF,SIM0
 truth_metabolite_profile_icc_mean,0.887607914457796,higher,1000,"ICC(A,1)",,simulation,serrf,SERRF,SIM01
 truth_sample_profile_pearson_mean,0.879622363348465,higher,450,correlation,,simulation,serrf,SERRF,SIM01
 truth_log1p_rmse,0.0953567821019156,lower,450000,log1p intensity,,simulation,serrf,SERRF,SIM01
-heldout_qc_cv_mean,8.78288536211856,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM01
-heldout_qc_cv_sd,6.25266545924884,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM01
-heldout_qc_cv_median,7.73686643153703,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM01
-residual_run_order_gam_mean_deviance,0.0190598805330619,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM01
-residual_run_order_gam_sd_deviance,0.0319713597474127,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM01
-residual_ljung_box_proportion_significant,0.0086,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM01
-batch_weighted_pc_r2_categorical,0.00100135976133962,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_qc,WiNN auto (QC),SIM01
+heldout_qc_cv_mean,8.45986081858991,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM01
+heldout_qc_cv_sd,6.18050710808866,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM01
+heldout_qc_cv_median,7.36639691090317,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM01
+residual_run_order_gam_mean_deviance,0.0189764816566916,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM01
+residual_run_order_gam_sd_deviance,0.031948739211802,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM01
+residual_ljung_box_proportion_significant,0.0036,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM01
+batch_weighted_pc_r2_categorical,0.00101728859044417,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_qc,WiNN auto (QC),SIM01
 retained_features,1000,higher,1000,features,,simulation,winn_auto_qc,WiNN auto (QC),SIM01
 retained_samples,500,higher,500,samples,,simulation,winn_auto_qc,WiNN auto (QC),SIM01
-runtime_sec,18.746,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_qc,WiNN auto (QC),SIM01
+runtime_sec,60.69,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_qc,WiNN auto (QC),SIM01
 drift_profiles_corrected,1566,descriptive,5000,profiles,,simulation,winn_auto_qc,WiNN auto (QC),SIM01
 drift_features_corrected,696,descriptive,1000,features,,simulation,winn_auto_qc,WiNN auto (QC),SIM01
 batch_features_corrected,721,descriptive,1000,features,,simulation,winn_auto_qc,WiNN auto (QC),SIM01
-truth_metabolite_profile_icc_mean,0.922321659529502,higher,1000,"ICC(A,1)",,simulation,winn_auto_qc,WiNN auto (QC),SIM01
-truth_sample_profile_pearson_mean,0.925989767122605,higher,450,correlation,,simulation,winn_auto_qc,WiNN auto (QC),SIM01
-truth_log1p_rmse,0.071593517780699,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN auto (QC),SIM01
-heldout_qc_cv_mean,16.3142944058656,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM01
-heldout_qc_cv_sd,10.6230798483238,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM01
-heldout_qc_cv_median,15.1128846355237,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM01
-residual_run_order_gam_mean_deviance,0.138876443356538,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM01
-residual_run_order_gam_sd_deviance,0.17987673081442,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM01
-residual_ljung_box_proportion_significant,0.231,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM01
-batch_weighted_pc_r2_categorical,0.190350299562417,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM01
+truth_metabolite_profile_icc_mean,0.924193453411651,higher,1000,"ICC(A,1)",,simulation,winn_auto_qc,WiNN auto (QC),SIM01
+truth_sample_profile_pearson_mean,0.927802205089574,higher,450,correlation,,simulation,winn_auto_qc,WiNN auto (QC),SIM01
+truth_log1p_rmse,0.0708648353924626,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN auto (QC),SIM01
+heldout_qc_cv_mean,15.7359616350191,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM01
+heldout_qc_cv_sd,10.1488745420024,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM01
+heldout_qc_cv_median,14.5639825327387,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM01
+residual_run_order_gam_mean_deviance,0.111003199452436,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM01
+residual_run_order_gam_sd_deviance,0.168105489401714,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM01
+residual_ljung_box_proportion_significant,0.141,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM01
+batch_weighted_pc_r2_categorical,0.0765840400327868,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM01
 retained_features,1000,higher,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM01
 retained_samples,500,higher,500,samples,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM01
-runtime_sec,21.22,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM01
-drift_profiles_corrected,1647,descriptive,5000,profiles,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM01
-drift_features_corrected,884,descriptive,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM01
-batch_features_corrected,703,descriptive,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM01
-truth_metabolite_profile_icc_mean,0.858213013478024,higher,1000,"ICC(A,1)",,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM01
-truth_sample_profile_pearson_mean,0.868555221284607,higher,450,correlation,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM01
-truth_log1p_rmse,0.102737640679052,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM01
-heldout_qc_cv_mean,8.76629278513728,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM01
-heldout_qc_cv_sd,6.24541161559367,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM01
-heldout_qc_cv_median,7.76573226958891,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM01
-residual_run_order_gam_mean_deviance,0.020259360410254,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM01
-residual_run_order_gam_sd_deviance,0.033790592433155,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM01
-residual_ljung_box_proportion_significant,0.0078,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM01
-batch_weighted_pc_r2_categorical,0.000984578035653711,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM01
+runtime_sec,70.071,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM01
+drift_profiles_corrected,1699,descriptive,5000,profiles,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM01
+drift_features_corrected,912,descriptive,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM01
+batch_features_corrected,704,descriptive,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM01
+truth_metabolite_profile_icc_mean,0.872321384790639,higher,1000,"ICC(A,1)",,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM01
+truth_sample_profile_pearson_mean,0.881859743341853,higher,450,correlation,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM01
+truth_log1p_rmse,0.0954181862551183,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM01
+heldout_qc_cv_mean,8.43198165168273,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM01
+heldout_qc_cv_sd,6.22828633591719,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM01
+heldout_qc_cv_median,7.47251320435438,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM01
+residual_run_order_gam_mean_deviance,0.0209534837670856,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM01
+residual_run_order_gam_sd_deviance,0.0343139423672068,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM01
+residual_ljung_box_proportion_significant,0.0036,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM01
+batch_weighted_pc_r2_categorical,0.00104441467773887,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM01
 retained_features,1000,higher,1000,features,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM01
 retained_samples,500,higher,500,samples,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM01
-runtime_sec,7.013,lower,1,seconds,measured method execution in frozen release,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM01
+runtime_sec,33.892,lower,1,seconds,measured method execution in frozen release,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM01
 drift_profiles_corrected,1440,descriptive,5000,profiles,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM01
 drift_features_corrected,655,descriptive,1000,features,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM01
 batch_features_corrected,725,descriptive,1000,features,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM01
-truth_metabolite_profile_icc_mean,0.922101988056287,higher,1000,"ICC(A,1)",,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM01
-truth_sample_profile_pearson_mean,0.925722367961271,higher,450,correlation,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM01
-truth_log1p_rmse,0.0717656363030658,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM01
+truth_metabolite_profile_icc_mean,0.924082662854262,higher,1000,"ICC(A,1)",,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM01
+truth_sample_profile_pearson_mean,0.927581128819737,higher,450,correlation,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM01
+truth_log1p_rmse,0.071143307219603,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM01
 heldout_qc_cv_mean,46.0458554803273,lower,1000,percent,,simulation,raw,Raw,SIM02
 heldout_qc_cv_sd,32.1132176274835,lower,1000,percent,,simulation,raw,Raw,SIM02
 heldout_qc_cv_median,43.7952787488203,lower,1000,percent,,simulation,raw,Raw,SIM02
@@ -207,54 +207,54 @@ batch_features_corrected,,descriptive,1000,features,,simulation,serrf,SERRF,SIM0
 truth_metabolite_profile_icc_mean,0.883285843419585,higher,1000,"ICC(A,1)",,simulation,serrf,SERRF,SIM02
 truth_sample_profile_pearson_mean,0.872192101154371,higher,450,correlation,,simulation,serrf,SERRF,SIM02
 truth_log1p_rmse,0.0983462447772914,lower,450000,log1p intensity,,simulation,serrf,SERRF,SIM02
-heldout_qc_cv_mean,9.14086434833699,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM02
-heldout_qc_cv_sd,6.37230685625792,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM02
-heldout_qc_cv_median,7.94668704330416,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM02
-residual_run_order_gam_mean_deviance,0.0198100624082451,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM02
-residual_run_order_gam_sd_deviance,0.03381268651305,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM02
-residual_ljung_box_proportion_significant,0.0064,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM02
-batch_weighted_pc_r2_categorical,0.00140103151190936,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_qc,WiNN auto (QC),SIM02
+heldout_qc_cv_mean,8.8130339588927,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM02
+heldout_qc_cv_sd,6.37125670283879,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM02
+heldout_qc_cv_median,7.74990189769124,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM02
+residual_run_order_gam_mean_deviance,0.019730140926366,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM02
+residual_run_order_gam_sd_deviance,0.0338167100786631,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM02
+residual_ljung_box_proportion_significant,0.0032,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM02
+batch_weighted_pc_r2_categorical,0.00143642972129209,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_qc,WiNN auto (QC),SIM02
 retained_features,1000,higher,1000,features,,simulation,winn_auto_qc,WiNN auto (QC),SIM02
 retained_samples,500,higher,500,samples,,simulation,winn_auto_qc,WiNN auto (QC),SIM02
-runtime_sec,16.488,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_qc,WiNN auto (QC),SIM02
+runtime_sec,65.564,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_qc,WiNN auto (QC),SIM02
 drift_profiles_corrected,1603,descriptive,5000,profiles,,simulation,winn_auto_qc,WiNN auto (QC),SIM02
 drift_features_corrected,691,descriptive,1000,features,,simulation,winn_auto_qc,WiNN auto (QC),SIM02
 batch_features_corrected,695,descriptive,1000,features,,simulation,winn_auto_qc,WiNN auto (QC),SIM02
-truth_metabolite_profile_icc_mean,0.91818842884011,higher,1000,"ICC(A,1)",,simulation,winn_auto_qc,WiNN auto (QC),SIM02
-truth_sample_profile_pearson_mean,0.919486482099721,higher,450,correlation,,simulation,winn_auto_qc,WiNN auto (QC),SIM02
-truth_log1p_rmse,0.0742443314002486,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN auto (QC),SIM02
-heldout_qc_cv_mean,15.1748981974371,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM02
-heldout_qc_cv_sd,10.0272573507667,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM02
-heldout_qc_cv_median,13.740370134354,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM02
-residual_run_order_gam_mean_deviance,0.120738536884556,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM02
-residual_run_order_gam_sd_deviance,0.169606379729767,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM02
-residual_ljung_box_proportion_significant,0.1932,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM02
-batch_weighted_pc_r2_categorical,0.188450217275425,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM02
+truth_metabolite_profile_icc_mean,0.920080503257071,higher,1000,"ICC(A,1)",,simulation,winn_auto_qc,WiNN auto (QC),SIM02
+truth_sample_profile_pearson_mean,0.921385816403391,higher,450,correlation,,simulation,winn_auto_qc,WiNN auto (QC),SIM02
+truth_log1p_rmse,0.0735381726970156,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN auto (QC),SIM02
+heldout_qc_cv_mean,15.4082223955084,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM02
+heldout_qc_cv_sd,9.9860082236892,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM02
+heldout_qc_cv_median,14.0220977986221,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM02
+residual_run_order_gam_mean_deviance,0.10780346791991,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM02
+residual_run_order_gam_sd_deviance,0.16581695255617,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM02
+residual_ljung_box_proportion_significant,0.1574,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM02
+batch_weighted_pc_r2_categorical,0.0925411215615461,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM02
 retained_features,1000,higher,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM02
 retained_samples,500,higher,500,samples,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM02
-runtime_sec,18.788,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM02
-drift_profiles_corrected,1662,descriptive,5000,profiles,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM02
-drift_features_corrected,910,descriptive,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM02
-batch_features_corrected,655,descriptive,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM02
-truth_metabolite_profile_icc_mean,0.858949022841333,higher,1000,"ICC(A,1)",,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM02
-truth_sample_profile_pearson_mean,0.869243775025059,higher,450,correlation,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM02
-truth_log1p_rmse,0.102672901031266,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM02
-heldout_qc_cv_mean,9.07845073787309,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM02
-heldout_qc_cv_sd,6.4793982504466,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM02
-heldout_qc_cv_median,7.89900176445446,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM02
-residual_run_order_gam_mean_deviance,0.021266909450256,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM02
-residual_run_order_gam_sd_deviance,0.0357473049258887,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM02
-residual_ljung_box_proportion_significant,0.0044,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM02
-batch_weighted_pc_r2_categorical,0.00120378704130995,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM02
+runtime_sec,75.219,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM02
+drift_profiles_corrected,1703,descriptive,5000,profiles,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM02
+drift_features_corrected,923,descriptive,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM02
+batch_features_corrected,638,descriptive,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM02
+truth_metabolite_profile_icc_mean,0.865279515059533,higher,1000,"ICC(A,1)",,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM02
+truth_sample_profile_pearson_mean,0.874063221312324,higher,450,correlation,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM02
+truth_log1p_rmse,0.0992618681969144,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM02
+heldout_qc_cv_mean,8.76123025874983,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM02
+heldout_qc_cv_sd,6.50595513186402,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM02
+heldout_qc_cv_median,7.64669061920352,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM02
+residual_run_order_gam_mean_deviance,0.022033780551094,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM02
+residual_run_order_gam_sd_deviance,0.0363754203424463,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM02
+residual_ljung_box_proportion_significant,0.0042,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM02
+batch_weighted_pc_r2_categorical,0.00117025064942383,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM02
 retained_features,1000,higher,1000,features,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM02
 retained_samples,500,higher,500,samples,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM02
-runtime_sec,6.798,lower,1,seconds,measured method execution in frozen release,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM02
+runtime_sec,70.743,lower,1,seconds,measured method execution in frozen release,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM02
 drift_profiles_corrected,1459,descriptive,5000,profiles,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM02
 drift_features_corrected,649,descriptive,1000,features,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM02
 batch_features_corrected,705,descriptive,1000,features,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM02
-truth_metabolite_profile_icc_mean,0.91822667604616,higher,1000,"ICC(A,1)",,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM02
-truth_sample_profile_pearson_mean,0.919320721321823,higher,450,correlation,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM02
-truth_log1p_rmse,0.0742868926228712,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM02
+truth_metabolite_profile_icc_mean,0.919983482750274,higher,1000,"ICC(A,1)",,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM02
+truth_sample_profile_pearson_mean,0.920959760448699,higher,450,correlation,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM02
+truth_log1p_rmse,0.0738143976596201,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM02
 heldout_qc_cv_mean,45.3978250493888,lower,1000,percent,,simulation,raw,Raw,SIM03
 heldout_qc_cv_sd,32.4350416307392,lower,1000,percent,,simulation,raw,Raw,SIM03
 heldout_qc_cv_median,43.8324936074846,lower,1000,percent,,simulation,raw,Raw,SIM03
@@ -335,54 +335,54 @@ batch_features_corrected,,descriptive,1000,features,,simulation,serrf,SERRF,SIM0
 truth_metabolite_profile_icc_mean,0.888996141256717,higher,1000,"ICC(A,1)",,simulation,serrf,SERRF,SIM03
 truth_sample_profile_pearson_mean,0.873326781093461,higher,450,correlation,,simulation,serrf,SERRF,SIM03
 truth_log1p_rmse,0.0973782389760755,lower,450000,log1p intensity,,simulation,serrf,SERRF,SIM03
-heldout_qc_cv_mean,8.74885537311953,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM03
-heldout_qc_cv_sd,6.35289206856529,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM03
-heldout_qc_cv_median,8.14119970771157,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM03
-residual_run_order_gam_mean_deviance,0.019537301278022,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM03
-residual_run_order_gam_sd_deviance,0.0318943490801681,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM03
-residual_ljung_box_proportion_significant,0.0064,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM03
-batch_weighted_pc_r2_categorical,0.000929755156199981,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_qc,WiNN auto (QC),SIM03
+heldout_qc_cv_mean,8.34542031043527,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM03
+heldout_qc_cv_sd,6.24907889574813,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM03
+heldout_qc_cv_median,7.61197452388022,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM03
+residual_run_order_gam_mean_deviance,0.0195206497227795,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM03
+residual_run_order_gam_sd_deviance,0.0319314353932405,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM03
+residual_ljung_box_proportion_significant,0.0046,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM03
+batch_weighted_pc_r2_categorical,0.00103625010965328,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_qc,WiNN auto (QC),SIM03
 retained_features,1000,higher,1000,features,,simulation,winn_auto_qc,WiNN auto (QC),SIM03
 retained_samples,500,higher,500,samples,,simulation,winn_auto_qc,WiNN auto (QC),SIM03
-runtime_sec,17.523,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_qc,WiNN auto (QC),SIM03
+runtime_sec,88.916,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_qc,WiNN auto (QC),SIM03
 drift_profiles_corrected,1564,descriptive,5000,profiles,,simulation,winn_auto_qc,WiNN auto (QC),SIM03
 drift_features_corrected,684,descriptive,1000,features,,simulation,winn_auto_qc,WiNN auto (QC),SIM03
-batch_features_corrected,685,descriptive,1000,features,,simulation,winn_auto_qc,WiNN auto (QC),SIM03
-truth_metabolite_profile_icc_mean,0.922199812074577,higher,1000,"ICC(A,1)",,simulation,winn_auto_qc,WiNN auto (QC),SIM03
-truth_sample_profile_pearson_mean,0.921192414346395,higher,450,correlation,,simulation,winn_auto_qc,WiNN auto (QC),SIM03
-truth_log1p_rmse,0.0729669458287764,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN auto (QC),SIM03
-heldout_qc_cv_mean,15.6281047197911,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM03
-heldout_qc_cv_sd,11.0314290811942,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM03
-heldout_qc_cv_median,14.2197157454944,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM03
-residual_run_order_gam_mean_deviance,0.115783534285059,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM03
-residual_run_order_gam_sd_deviance,0.16895962153724,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM03
-residual_ljung_box_proportion_significant,0.1828,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM03
-batch_weighted_pc_r2_categorical,0.194995976319088,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM03
+batch_features_corrected,686,descriptive,1000,features,,simulation,winn_auto_qc,WiNN auto (QC),SIM03
+truth_metabolite_profile_icc_mean,0.924201288215771,higher,1000,"ICC(A,1)",,simulation,winn_auto_qc,WiNN auto (QC),SIM03
+truth_sample_profile_pearson_mean,0.923155827461434,higher,450,correlation,,simulation,winn_auto_qc,WiNN auto (QC),SIM03
+truth_log1p_rmse,0.0722148206060154,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN auto (QC),SIM03
+heldout_qc_cv_mean,15.6434416683636,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM03
+heldout_qc_cv_sd,10.9037079888325,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM03
+heldout_qc_cv_median,14.2566404465246,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM03
+residual_run_order_gam_mean_deviance,0.103212768071078,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM03
+residual_run_order_gam_sd_deviance,0.166219805795853,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM03
+residual_ljung_box_proportion_significant,0.1488,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM03
+batch_weighted_pc_r2_categorical,0.0944155912215381,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM03
 retained_features,1000,higher,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM03
 retained_samples,500,higher,500,samples,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM03
-runtime_sec,19.4,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM03
-drift_profiles_corrected,1627,descriptive,5000,profiles,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM03
-drift_features_corrected,891,descriptive,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM03
-batch_features_corrected,629,descriptive,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM03
-truth_metabolite_profile_icc_mean,0.867146871122525,higher,1000,"ICC(A,1)",,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM03
-truth_sample_profile_pearson_mean,0.874002310303774,higher,450,correlation,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM03
-truth_log1p_rmse,0.099640557720622,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM03
-heldout_qc_cv_mean,8.74467176482345,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM03
-heldout_qc_cv_sd,6.39877497520399,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM03
-heldout_qc_cv_median,8.03418621153419,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM03
-residual_run_order_gam_mean_deviance,0.0213438612364564,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM03
-residual_run_order_gam_sd_deviance,0.0346228532488215,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM03
-residual_ljung_box_proportion_significant,0.007,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM03
-batch_weighted_pc_r2_categorical,0.00068104865188373,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM03
+runtime_sec,99.621,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM03
+drift_profiles_corrected,1667,descriptive,5000,profiles,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM03
+drift_features_corrected,906,descriptive,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM03
+batch_features_corrected,632,descriptive,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM03
+truth_metabolite_profile_icc_mean,0.872932741638874,higher,1000,"ICC(A,1)",,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM03
+truth_sample_profile_pearson_mean,0.878475284503308,higher,450,correlation,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM03
+truth_log1p_rmse,0.0966659217238068,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM03
+heldout_qc_cv_mean,8.39628618177895,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM03
+heldout_qc_cv_sd,6.33435253711735,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM03
+heldout_qc_cv_median,7.62460765957103,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM03
+residual_run_order_gam_mean_deviance,0.0220056119450814,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM03
+residual_run_order_gam_sd_deviance,0.034927683539644,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM03
+residual_ljung_box_proportion_significant,0.004,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM03
+batch_weighted_pc_r2_categorical,0.000770204209641969,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM03
 retained_features,1000,higher,1000,features,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM03
 retained_samples,500,higher,500,samples,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM03
-runtime_sec,6.542,lower,1,seconds,measured method execution in frozen release,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM03
+runtime_sec,42.049,lower,1,seconds,measured method execution in frozen release,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM03
 drift_profiles_corrected,1406,descriptive,5000,profiles,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM03
 drift_features_corrected,641,descriptive,1000,features,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM03
 batch_features_corrected,692,descriptive,1000,features,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM03
-truth_metabolite_profile_icc_mean,0.92196663424219,higher,1000,"ICC(A,1)",,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM03
-truth_sample_profile_pearson_mean,0.920878251094504,higher,450,correlation,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM03
-truth_log1p_rmse,0.0731452104192044,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM03
+truth_metabolite_profile_icc_mean,0.924031165240754,higher,1000,"ICC(A,1)",,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM03
+truth_sample_profile_pearson_mean,0.922735508047416,higher,450,correlation,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM03
+truth_log1p_rmse,0.0725502829694544,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM03
 heldout_qc_cv_mean,44.4829301439678,lower,1000,percent,,simulation,raw,Raw,SIM04
 heldout_qc_cv_sd,30.1981686175231,lower,1000,percent,,simulation,raw,Raw,SIM04
 heldout_qc_cv_median,43.0178459736734,lower,1000,percent,,simulation,raw,Raw,SIM04
@@ -463,54 +463,54 @@ batch_features_corrected,,descriptive,1000,features,,simulation,serrf,SERRF,SIM0
 truth_metabolite_profile_icc_mean,0.885195106629632,higher,1000,"ICC(A,1)",,simulation,serrf,SERRF,SIM04
 truth_sample_profile_pearson_mean,0.87946756871461,higher,450,correlation,,simulation,serrf,SERRF,SIM04
 truth_log1p_rmse,0.0955984547039546,lower,450000,log1p intensity,,simulation,serrf,SERRF,SIM04
-heldout_qc_cv_mean,8.65609893620397,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM04
-heldout_qc_cv_sd,6.02054478111165,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM04
-heldout_qc_cv_median,7.72996534720562,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM04
-residual_run_order_gam_mean_deviance,0.0187366631649198,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM04
-residual_run_order_gam_sd_deviance,0.0317345147202895,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM04
-residual_ljung_box_proportion_significant,0.008,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM04
-batch_weighted_pc_r2_categorical,0.00122085510077192,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_qc,WiNN auto (QC),SIM04
+heldout_qc_cv_mean,8.42109143000472,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM04
+heldout_qc_cv_sd,6.03358544297705,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM04
+heldout_qc_cv_median,7.43715996137165,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM04
+residual_run_order_gam_mean_deviance,0.0187577614670799,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM04
+residual_run_order_gam_sd_deviance,0.0318676441489693,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM04
+residual_ljung_box_proportion_significant,0.0034,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM04
+batch_weighted_pc_r2_categorical,0.000998680708690122,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_qc,WiNN auto (QC),SIM04
 retained_features,1000,higher,1000,features,,simulation,winn_auto_qc,WiNN auto (QC),SIM04
 retained_samples,500,higher,500,samples,,simulation,winn_auto_qc,WiNN auto (QC),SIM04
-runtime_sec,19.278,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_qc,WiNN auto (QC),SIM04
+runtime_sec,58.241,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_qc,WiNN auto (QC),SIM04
 drift_profiles_corrected,1607,descriptive,5000,profiles,,simulation,winn_auto_qc,WiNN auto (QC),SIM04
 drift_features_corrected,708,descriptive,1000,features,,simulation,winn_auto_qc,WiNN auto (QC),SIM04
 batch_features_corrected,703,descriptive,1000,features,,simulation,winn_auto_qc,WiNN auto (QC),SIM04
-truth_metabolite_profile_icc_mean,0.922316152245494,higher,1000,"ICC(A,1)",,simulation,winn_auto_qc,WiNN auto (QC),SIM04
-truth_sample_profile_pearson_mean,0.927522225420304,higher,450,correlation,,simulation,winn_auto_qc,WiNN auto (QC),SIM04
-truth_log1p_rmse,0.07093144153758,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN auto (QC),SIM04
-heldout_qc_cv_mean,13.0206805665538,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM04
-heldout_qc_cv_sd,7.42446374173251,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM04
-heldout_qc_cv_median,12.5827661744348,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM04
-residual_run_order_gam_mean_deviance,0.137751735762044,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM04
-residual_run_order_gam_sd_deviance,0.176825679569941,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM04
-residual_ljung_box_proportion_significant,0.2308,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM04
-batch_weighted_pc_r2_categorical,0.189764427527771,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM04
+truth_metabolite_profile_icc_mean,0.924478237775278,higher,1000,"ICC(A,1)",,simulation,winn_auto_qc,WiNN auto (QC),SIM04
+truth_sample_profile_pearson_mean,0.929640268742229,higher,450,correlation,,simulation,winn_auto_qc,WiNN auto (QC),SIM04
+truth_log1p_rmse,0.0700449366749125,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN auto (QC),SIM04
+heldout_qc_cv_mean,11.1606288506553,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM04
+heldout_qc_cv_sd,6.42368757949586,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM04
+heldout_qc_cv_median,10.4515549436262,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM04
+residual_run_order_gam_mean_deviance,0.11006413039903,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM04
+residual_run_order_gam_sd_deviance,0.165435078247322,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM04
+residual_ljung_box_proportion_significant,0.1402,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM04
+batch_weighted_pc_r2_categorical,0.0750405216759641,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM04
 retained_features,1000,higher,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM04
 retained_samples,500,higher,500,samples,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM04
-runtime_sec,19.764,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM04
-drift_profiles_corrected,1677,descriptive,5000,profiles,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM04
-drift_features_corrected,899,descriptive,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM04
-batch_features_corrected,702,descriptive,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM04
-truth_metabolite_profile_icc_mean,0.857737831912597,higher,1000,"ICC(A,1)",,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM04
-truth_sample_profile_pearson_mean,0.86946584052613,higher,450,correlation,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM04
-truth_log1p_rmse,0.102455441202128,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM04
-heldout_qc_cv_mean,8.66243326850821,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM04
-heldout_qc_cv_sd,6.0423678631643,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM04
-heldout_qc_cv_median,7.71947677044646,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM04
-residual_run_order_gam_mean_deviance,0.0204872060459964,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM04
-residual_run_order_gam_sd_deviance,0.0344602154295272,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM04
-residual_ljung_box_proportion_significant,0.008,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM04
-batch_weighted_pc_r2_categorical,0.000919023895528327,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM04
+runtime_sec,98.074,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM04
+drift_profiles_corrected,1743,descriptive,5000,profiles,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM04
+drift_features_corrected,924,descriptive,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM04
+batch_features_corrected,708,descriptive,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM04
+truth_metabolite_profile_icc_mean,0.871897321734066,higher,1000,"ICC(A,1)",,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM04
+truth_sample_profile_pearson_mean,0.882622570445126,higher,450,correlation,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM04
+truth_log1p_rmse,0.0951138824202788,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM04
+heldout_qc_cv_mean,8.51133237921787,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM04
+heldout_qc_cv_sd,6.16108507669299,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM04
+heldout_qc_cv_median,7.47717651198429,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM04
+residual_run_order_gam_mean_deviance,0.021194748196574,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM04
+residual_run_order_gam_sd_deviance,0.0349694144529577,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM04
+residual_ljung_box_proportion_significant,0.0036,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM04
+batch_weighted_pc_r2_categorical,0.000537259401661906,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM04
 retained_features,1000,higher,1000,features,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM04
 retained_samples,500,higher,500,samples,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM04
-runtime_sec,7.293,lower,1,seconds,measured method execution in frozen release,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM04
+runtime_sec,36.794,lower,1,seconds,measured method execution in frozen release,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM04
 drift_profiles_corrected,1472,descriptive,5000,profiles,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM04
 drift_features_corrected,665,descriptive,1000,features,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM04
 batch_features_corrected,716,descriptive,1000,features,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM04
-truth_metabolite_profile_icc_mean,0.922349683552122,higher,1000,"ICC(A,1)",,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM04
-truth_sample_profile_pearson_mean,0.927334726044255,higher,450,correlation,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM04
-truth_log1p_rmse,0.0709686009455053,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM04
+truth_metabolite_profile_icc_mean,0.924222102031436,higher,1000,"ICC(A,1)",,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM04
+truth_sample_profile_pearson_mean,0.928968844053239,higher,450,correlation,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM04
+truth_log1p_rmse,0.0704315979820671,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM04
 heldout_qc_cv_mean,43.6862535911735,lower,1000,percent,,simulation,raw,Raw,SIM05
 heldout_qc_cv_sd,31.4713401878222,lower,1000,percent,,simulation,raw,Raw,SIM05
 heldout_qc_cv_median,40.5278650392218,lower,1000,percent,,simulation,raw,Raw,SIM05
@@ -591,54 +591,54 @@ batch_features_corrected,,descriptive,1000,features,,simulation,serrf,SERRF,SIM0
 truth_metabolite_profile_icc_mean,0.886915587861869,higher,1000,"ICC(A,1)",,simulation,serrf,SERRF,SIM05
 truth_sample_profile_pearson_mean,0.873797100727145,higher,450,correlation,,simulation,serrf,SERRF,SIM05
 truth_log1p_rmse,0.0974893139381562,lower,450000,log1p intensity,,simulation,serrf,SERRF,SIM05
-heldout_qc_cv_mean,8.43746935826601,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM05
-heldout_qc_cv_sd,5.73421148471736,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM05
-heldout_qc_cv_median,7.60028199449162,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM05
-residual_run_order_gam_mean_deviance,0.0198448314689079,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM05
-residual_run_order_gam_sd_deviance,0.0325601352537922,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM05
-residual_ljung_box_proportion_significant,0.0086,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM05
-batch_weighted_pc_r2_categorical,0.000712594893891655,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_qc,WiNN auto (QC),SIM05
+heldout_qc_cv_mean,8.14355647649173,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM05
+heldout_qc_cv_sd,5.77761228122653,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM05
+heldout_qc_cv_median,7.16817962455545,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM05
+residual_run_order_gam_mean_deviance,0.0198000784235097,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM05
+residual_run_order_gam_sd_deviance,0.0326218379475325,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM05
+residual_ljung_box_proportion_significant,0.0026,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM05
+batch_weighted_pc_r2_categorical,0.00073920014000365,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_qc,WiNN auto (QC),SIM05
 retained_features,1000,higher,1000,features,,simulation,winn_auto_qc,WiNN auto (QC),SIM05
 retained_samples,500,higher,500,samples,,simulation,winn_auto_qc,WiNN auto (QC),SIM05
-runtime_sec,17.542,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_qc,WiNN auto (QC),SIM05
+runtime_sec,68.268,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_qc,WiNN auto (QC),SIM05
 drift_profiles_corrected,1564,descriptive,5000,profiles,,simulation,winn_auto_qc,WiNN auto (QC),SIM05
 drift_features_corrected,686,descriptive,1000,features,,simulation,winn_auto_qc,WiNN auto (QC),SIM05
 batch_features_corrected,688,descriptive,1000,features,,simulation,winn_auto_qc,WiNN auto (QC),SIM05
-truth_metabolite_profile_icc_mean,0.921370095234413,higher,1000,"ICC(A,1)",,simulation,winn_auto_qc,WiNN auto (QC),SIM05
-truth_sample_profile_pearson_mean,0.920859090416902,higher,450,correlation,,simulation,winn_auto_qc,WiNN auto (QC),SIM05
-truth_log1p_rmse,0.0732706220371966,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN auto (QC),SIM05
-heldout_qc_cv_mean,10.5219993591051,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM05
-heldout_qc_cv_sd,5.76481621181103,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM05
-heldout_qc_cv_median,10.0037623597111,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM05
-residual_run_order_gam_mean_deviance,0.0750793863837347,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM05
-residual_run_order_gam_sd_deviance,0.12974128297221,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM05
-residual_ljung_box_proportion_significant,0.0728,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM05
-batch_weighted_pc_r2_categorical,0.114588952709036,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM05
+truth_metabolite_profile_icc_mean,0.92317135976455,higher,1000,"ICC(A,1)",,simulation,winn_auto_qc,WiNN auto (QC),SIM05
+truth_sample_profile_pearson_mean,0.922632231679421,higher,450,correlation,,simulation,winn_auto_qc,WiNN auto (QC),SIM05
+truth_log1p_rmse,0.0726099005091295,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN auto (QC),SIM05
+heldout_qc_cv_mean,10.3679288098029,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM05
+heldout_qc_cv_sd,5.73127039859137,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM05
+heldout_qc_cv_median,10.008395566664,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM05
+residual_run_order_gam_mean_deviance,0.0582398491202359,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM05
+residual_run_order_gam_sd_deviance,0.105041822441017,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM05
+residual_ljung_box_proportion_significant,0.041,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM05
+batch_weighted_pc_r2_categorical,0.0611428378245914,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM05
 retained_features,1000,higher,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM05
 retained_samples,500,higher,500,samples,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM05
-runtime_sec,25.677,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM05
+runtime_sec,97.438,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM05
 drift_profiles_corrected,2753,descriptive,5000,profiles,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM05
 drift_features_corrected,922,descriptive,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM05
 batch_features_corrected,801,descriptive,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM05
-truth_metabolite_profile_icc_mean,0.882292442908406,higher,1000,"ICC(A,1)",,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM05
-truth_sample_profile_pearson_mean,0.886809585223004,higher,450,correlation,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM05
-truth_log1p_rmse,0.0908059767371582,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM05
-heldout_qc_cv_mean,8.42898920927422,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM05
-heldout_qc_cv_sd,5.83850402782076,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM05
-heldout_qc_cv_median,7.71111413043609,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM05
-residual_run_order_gam_mean_deviance,0.0216195779295135,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM05
-residual_run_order_gam_sd_deviance,0.0353376507537231,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM05
-residual_ljung_box_proportion_significant,0.0068,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM05
-batch_weighted_pc_r2_categorical,0.000739759376116102,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM05
+truth_metabolite_profile_icc_mean,0.88618884868308,higher,1000,"ICC(A,1)",,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM05
+truth_sample_profile_pearson_mean,0.889709743736956,higher,450,correlation,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM05
+truth_log1p_rmse,0.0885865295728501,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM05
+heldout_qc_cv_mean,8.2004454654158,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM05
+heldout_qc_cv_sd,5.94360061349763,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM05
+heldout_qc_cv_median,7.31751487777461,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM05
+residual_run_order_gam_mean_deviance,0.0223462822460397,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM05
+residual_run_order_gam_sd_deviance,0.0360718084605737,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM05
+residual_ljung_box_proportion_significant,0.0032,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM05
+batch_weighted_pc_r2_categorical,0.000669575278482095,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM05
 retained_features,1000,higher,1000,features,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM05
 retained_samples,500,higher,500,samples,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM05
-runtime_sec,7.437,lower,1,seconds,measured method execution in frozen release,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM05
+runtime_sec,33.905,lower,1,seconds,measured method execution in frozen release,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM05
 drift_profiles_corrected,1427,descriptive,5000,profiles,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM05
 drift_features_corrected,638,descriptive,1000,features,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM05
 batch_features_corrected,698,descriptive,1000,features,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM05
-truth_metabolite_profile_icc_mean,0.921185897206306,higher,1000,"ICC(A,1)",,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM05
-truth_sample_profile_pearson_mean,0.920629899455086,higher,450,correlation,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM05
-truth_log1p_rmse,0.0733976076017738,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM05
+truth_metabolite_profile_icc_mean,0.92283653680755,higher,1000,"ICC(A,1)",,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM05
+truth_sample_profile_pearson_mean,0.92213037713444,higher,450,correlation,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM05
+truth_log1p_rmse,0.0729585926966025,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM05
 heldout_qc_cv_mean,45.4455913430314,lower,1000,percent,,simulation,raw,Raw,SIM06
 heldout_qc_cv_sd,32.0025593716647,lower,1000,percent,,simulation,raw,Raw,SIM06
 heldout_qc_cv_median,43.557189396155,lower,1000,percent,,simulation,raw,Raw,SIM06
@@ -719,54 +719,54 @@ batch_features_corrected,,descriptive,1000,features,,simulation,serrf,SERRF,SIM0
 truth_metabolite_profile_icc_mean,0.888353359988811,higher,1000,"ICC(A,1)",,simulation,serrf,SERRF,SIM06
 truth_sample_profile_pearson_mean,0.874974367074674,higher,450,correlation,,simulation,serrf,SERRF,SIM06
 truth_log1p_rmse,0.0967878235868101,lower,450000,log1p intensity,,simulation,serrf,SERRF,SIM06
-heldout_qc_cv_mean,8.61620851250192,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM06
-heldout_qc_cv_sd,6.21831220608042,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM06
-heldout_qc_cv_median,7.83156161293093,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM06
-residual_run_order_gam_mean_deviance,0.0215438905538847,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM06
-residual_run_order_gam_sd_deviance,0.0347719255939188,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM06
-residual_ljung_box_proportion_significant,0.0066,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM06
-batch_weighted_pc_r2_categorical,0.000792824502032142,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_qc,WiNN auto (QC),SIM06
+heldout_qc_cv_mean,8.43885762992211,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM06
+heldout_qc_cv_sd,6.22781928525918,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM06
+heldout_qc_cv_median,7.60361327176316,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM06
+residual_run_order_gam_mean_deviance,0.0215271559148715,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM06
+residual_run_order_gam_sd_deviance,0.0348296745081294,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM06
+residual_ljung_box_proportion_significant,0.0028,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM06
+batch_weighted_pc_r2_categorical,0.000833427219156864,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_qc,WiNN auto (QC),SIM06
 retained_features,1000,higher,1000,features,,simulation,winn_auto_qc,WiNN auto (QC),SIM06
 retained_samples,500,higher,500,samples,,simulation,winn_auto_qc,WiNN auto (QC),SIM06
-runtime_sec,18.448,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_qc,WiNN auto (QC),SIM06
+runtime_sec,51.722,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_qc,WiNN auto (QC),SIM06
 drift_profiles_corrected,1387,descriptive,5000,profiles,,simulation,winn_auto_qc,WiNN auto (QC),SIM06
 drift_features_corrected,655,descriptive,1000,features,,simulation,winn_auto_qc,WiNN auto (QC),SIM06
 batch_features_corrected,689,descriptive,1000,features,,simulation,winn_auto_qc,WiNN auto (QC),SIM06
-truth_metabolite_profile_icc_mean,0.92112518666074,higher,1000,"ICC(A,1)",,simulation,winn_auto_qc,WiNN auto (QC),SIM06
-truth_sample_profile_pearson_mean,0.924906539158782,higher,450,correlation,,simulation,winn_auto_qc,WiNN auto (QC),SIM06
-truth_log1p_rmse,0.0716271596510863,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN auto (QC),SIM06
-heldout_qc_cv_mean,18.4475738781864,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM06
-heldout_qc_cv_sd,10.9268376189252,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM06
-heldout_qc_cv_median,18.1703163418628,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM06
-residual_run_order_gam_mean_deviance,0.144731443345892,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM06
-residual_run_order_gam_sd_deviance,0.190695802021327,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM06
-residual_ljung_box_proportion_significant,0.2744,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM06
-batch_weighted_pc_r2_categorical,0.302506088513641,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM06
+truth_metabolite_profile_icc_mean,0.922715640749613,higher,1000,"ICC(A,1)",,simulation,winn_auto_qc,WiNN auto (QC),SIM06
+truth_sample_profile_pearson_mean,0.926479463188264,higher,450,correlation,,simulation,winn_auto_qc,WiNN auto (QC),SIM06
+truth_log1p_rmse,0.0710044977921859,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN auto (QC),SIM06
+heldout_qc_cv_mean,16.5314649218742,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM06
+heldout_qc_cv_sd,9.87808334346353,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM06
+heldout_qc_cv_median,16.2499178594397,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM06
+residual_run_order_gam_mean_deviance,0.134165487496038,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM06
+residual_run_order_gam_sd_deviance,0.188160128994274,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM06
+residual_ljung_box_proportion_significant,0.23,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM06
+batch_weighted_pc_r2_categorical,0.112577607359775,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM06
 retained_features,1000,higher,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM06
 retained_samples,500,higher,500,samples,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM06
-runtime_sec,18.291,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM06
+runtime_sec,57.373,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM06
 drift_profiles_corrected,1153,descriptive,5000,profiles,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM06
 drift_features_corrected,898,descriptive,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM06
-batch_features_corrected,636,descriptive,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM06
-truth_metabolite_profile_icc_mean,0.843635907342313,higher,1000,"ICC(A,1)",,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM06
-truth_sample_profile_pearson_mean,0.853341027048573,higher,450,correlation,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM06
-truth_log1p_rmse,0.109209822607132,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM06
-heldout_qc_cv_mean,8.61903085584063,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM06
-heldout_qc_cv_sd,6.21678563226836,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM06
-heldout_qc_cv_median,7.82615094732433,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM06
-residual_run_order_gam_mean_deviance,0.0215326561677557,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM06
-residual_run_order_gam_sd_deviance,0.0348073112670957,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM06
-residual_ljung_box_proportion_significant,0.0068,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM06
-batch_weighted_pc_r2_categorical,0.000822589818943679,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM06
+batch_features_corrected,653,descriptive,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM06
+truth_metabolite_profile_icc_mean,0.859925765044288,higher,1000,"ICC(A,1)",,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM06
+truth_sample_profile_pearson_mean,0.868810657177537,higher,450,correlation,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM06
+truth_log1p_rmse,0.101479764137807,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM06
+heldout_qc_cv_mean,8.40228644471579,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM06
+heldout_qc_cv_sd,6.23055728213539,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM06
+heldout_qc_cv_median,7.51163078972133,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM06
+residual_run_order_gam_mean_deviance,0.0221782845837095,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM06
+residual_run_order_gam_sd_deviance,0.035230094923757,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM06
+residual_ljung_box_proportion_significant,0.003,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM06
+batch_weighted_pc_r2_categorical,0.000776016170080782,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM06
 retained_features,1000,higher,1000,features,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM06
 retained_samples,500,higher,500,samples,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM06
-runtime_sec,7.502,lower,1,seconds,measured method execution in frozen release,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM06
+runtime_sec,43.788,lower,1,seconds,measured method execution in frozen release,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM06
 drift_profiles_corrected,1387,descriptive,5000,profiles,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM06
 drift_features_corrected,655,descriptive,1000,features,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM06
-batch_features_corrected,695,descriptive,1000,features,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM06
-truth_metabolite_profile_icc_mean,0.920949468357364,higher,1000,"ICC(A,1)",,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM06
-truth_sample_profile_pearson_mean,0.924847149755594,higher,450,correlation,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM06
-truth_log1p_rmse,0.0717165867720228,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM06
+batch_features_corrected,696,descriptive,1000,features,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM06
+truth_metabolite_profile_icc_mean,0.92267186486143,higher,1000,"ICC(A,1)",,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM06
+truth_sample_profile_pearson_mean,0.926426539853729,higher,450,correlation,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM06
+truth_log1p_rmse,0.0712105678386005,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM06
 heldout_qc_cv_mean,43.3237040927998,lower,1000,percent,,simulation,raw,Raw,SIM07
 heldout_qc_cv_sd,31.5697347481255,lower,1000,percent,,simulation,raw,Raw,SIM07
 heldout_qc_cv_median,41.2345903690775,lower,1000,percent,,simulation,raw,Raw,SIM07
@@ -847,54 +847,54 @@ batch_features_corrected,,descriptive,1000,features,,simulation,serrf,SERRF,SIM0
 truth_metabolite_profile_icc_mean,0.891311847720648,higher,1000,"ICC(A,1)",,simulation,serrf,SERRF,SIM07
 truth_sample_profile_pearson_mean,0.884754600162773,higher,450,correlation,,simulation,serrf,SERRF,SIM07
 truth_log1p_rmse,0.0930059089482615,lower,450000,log1p intensity,,simulation,serrf,SERRF,SIM07
-heldout_qc_cv_mean,8.63544421594716,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM07
-heldout_qc_cv_sd,6.33458895232579,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM07
-heldout_qc_cv_median,7.87824104977669,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM07
-residual_run_order_gam_mean_deviance,0.019845027997588,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM07
-residual_run_order_gam_sd_deviance,0.0329083205172328,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM07
-residual_ljung_box_proportion_significant,0.008,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM07
-batch_weighted_pc_r2_categorical,0.000913292802269072,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_qc,WiNN auto (QC),SIM07
+heldout_qc_cv_mean,8.34709723583897,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM07
+heldout_qc_cv_sd,6.29417211509314,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM07
+heldout_qc_cv_median,7.46714883854433,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM07
+residual_run_order_gam_mean_deviance,0.0186058586155936,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM07
+residual_run_order_gam_sd_deviance,0.0313015341872979,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM07
+residual_ljung_box_proportion_significant,0.0052,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM07
+batch_weighted_pc_r2_categorical,0.000953283316193719,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_qc,WiNN auto (QC),SIM07
 retained_features,1000,higher,1000,features,,simulation,winn_auto_qc,WiNN auto (QC),SIM07
 retained_samples,500,higher,500,samples,,simulation,winn_auto_qc,WiNN auto (QC),SIM07
-runtime_sec,30.044,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_qc,WiNN auto (QC),SIM07
-drift_profiles_corrected,1505,descriptive,5000,profiles,,simulation,winn_auto_qc,WiNN auto (QC),SIM07
-drift_features_corrected,671,descriptive,1000,features,,simulation,winn_auto_qc,WiNN auto (QC),SIM07
+runtime_sec,66.931,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_qc,WiNN auto (QC),SIM07
+drift_profiles_corrected,1652,descriptive,5000,profiles,,simulation,winn_auto_qc,WiNN auto (QC),SIM07
+drift_features_corrected,720,descriptive,1000,features,,simulation,winn_auto_qc,WiNN auto (QC),SIM07
 batch_features_corrected,685,descriptive,1000,features,,simulation,winn_auto_qc,WiNN auto (QC),SIM07
-truth_metabolite_profile_icc_mean,0.921430009715198,higher,1000,"ICC(A,1)",,simulation,winn_auto_qc,WiNN auto (QC),SIM07
-truth_sample_profile_pearson_mean,0.924146738481641,higher,450,correlation,,simulation,winn_auto_qc,WiNN auto (QC),SIM07
-truth_log1p_rmse,0.0724257571990961,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN auto (QC),SIM07
-heldout_qc_cv_mean,13.2153131993845,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM07
-heldout_qc_cv_sd,9.11973328785956,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM07
-heldout_qc_cv_median,11.9056262332256,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM07
-residual_run_order_gam_mean_deviance,0.0875166528881137,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM07
-residual_run_order_gam_sd_deviance,0.148223706962189,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM07
-residual_ljung_box_proportion_significant,0.1192,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM07
-batch_weighted_pc_r2_categorical,0.1391796799333,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM07
+truth_metabolite_profile_icc_mean,0.923290562265635,higher,1000,"ICC(A,1)",,simulation,winn_auto_qc,WiNN auto (QC),SIM07
+truth_sample_profile_pearson_mean,0.926077272312756,higher,450,correlation,,simulation,winn_auto_qc,WiNN auto (QC),SIM07
+truth_log1p_rmse,0.0716608129593994,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN auto (QC),SIM07
+heldout_qc_cv_mean,13.8845361551276,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM07
+heldout_qc_cv_sd,10.1021878886709,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM07
+heldout_qc_cv_median,12.2899150640654,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM07
+residual_run_order_gam_mean_deviance,0.0663354922628203,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM07
+residual_run_order_gam_sd_deviance,0.126002441053167,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM07
+residual_ljung_box_proportion_significant,0.064,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM07
+batch_weighted_pc_r2_categorical,0.0579625667166193,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM07
 retained_features,1000,higher,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM07
 retained_samples,500,higher,500,samples,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM07
-runtime_sec,19.633,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM07
+runtime_sec,69.145,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM07
 drift_profiles_corrected,1964,descriptive,5000,profiles,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM07
 drift_features_corrected,907,descriptive,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM07
 batch_features_corrected,681,descriptive,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM07
-truth_metabolite_profile_icc_mean,0.883657789605854,higher,1000,"ICC(A,1)",,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM07
-truth_sample_profile_pearson_mean,0.891871048095595,higher,450,correlation,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM07
-truth_log1p_rmse,0.0912860770670152,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM07
-heldout_qc_cv_mean,8.66664255416764,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM07
-heldout_qc_cv_sd,6.32390202792341,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM07
-heldout_qc_cv_median,7.87824104977669,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM07
-residual_run_order_gam_mean_deviance,0.0198640127223974,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM07
-residual_run_order_gam_sd_deviance,0.0329242646153165,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM07
-residual_ljung_box_proportion_significant,0.008,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM07
-batch_weighted_pc_r2_categorical,0.000961872297493601,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM07
+truth_metabolite_profile_icc_mean,0.893239680755332,higher,1000,"ICC(A,1)",,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM07
+truth_sample_profile_pearson_mean,0.899878982145442,higher,450,correlation,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM07
+truth_log1p_rmse,0.0861231904980138,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM07
+heldout_qc_cv_mean,8.34469650694875,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM07
+heldout_qc_cv_sd,6.36193562165674,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM07
+heldout_qc_cv_median,7.3929524624198,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM07
+residual_run_order_gam_mean_deviance,0.0207266585856592,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM07
+residual_run_order_gam_sd_deviance,0.0336060449579645,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM07
+residual_ljung_box_proportion_significant,0.003,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM07
+batch_weighted_pc_r2_categorical,0.000974960016703822,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM07
 retained_features,1000,higher,1000,features,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM07
 retained_samples,500,higher,500,samples,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM07
-runtime_sec,6.663,lower,1,seconds,measured method execution in frozen release,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM07
+runtime_sec,26.002,lower,1,seconds,measured method execution in frozen release,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM07
 drift_profiles_corrected,1505,descriptive,5000,profiles,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM07
 drift_features_corrected,671,descriptive,1000,features,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM07
 batch_features_corrected,694,descriptive,1000,features,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM07
-truth_metabolite_profile_icc_mean,0.921389682845685,higher,1000,"ICC(A,1)",,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM07
-truth_sample_profile_pearson_mean,0.924055672932798,higher,450,correlation,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM07
-truth_log1p_rmse,0.072438982008187,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM07
+truth_metabolite_profile_icc_mean,0.923460408693878,higher,1000,"ICC(A,1)",,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM07
+truth_sample_profile_pearson_mean,0.925959722805548,higher,450,correlation,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM07
+truth_log1p_rmse,0.0718066379907322,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM07
 heldout_qc_cv_mean,44.7497650511745,lower,1000,percent,,simulation,raw,Raw,SIM08
 heldout_qc_cv_sd,31.4745696330304,lower,1000,percent,,simulation,raw,Raw,SIM08
 heldout_qc_cv_median,43.4600970686433,lower,1000,percent,,simulation,raw,Raw,SIM08
@@ -975,54 +975,54 @@ batch_features_corrected,,descriptive,1000,features,,simulation,serrf,SERRF,SIM0
 truth_metabolite_profile_icc_mean,0.889242879756884,higher,1000,"ICC(A,1)",,simulation,serrf,SERRF,SIM08
 truth_sample_profile_pearson_mean,0.870958829380632,higher,450,correlation,,simulation,serrf,SERRF,SIM08
 truth_log1p_rmse,0.0993038121640298,lower,450000,log1p intensity,,simulation,serrf,SERRF,SIM08
-heldout_qc_cv_mean,8.44113294756831,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM08
-heldout_qc_cv_sd,6.16615929279049,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM08
-heldout_qc_cv_median,7.67087988847492,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM08
-residual_run_order_gam_mean_deviance,0.0214892892019901,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM08
-residual_run_order_gam_sd_deviance,0.0349558688354728,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM08
-residual_ljung_box_proportion_significant,0.0104,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM08
-batch_weighted_pc_r2_categorical,0.000453735537363147,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_qc,WiNN auto (QC),SIM08
+heldout_qc_cv_mean,8.2227611767821,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM08
+heldout_qc_cv_sd,6.19819456731539,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM08
+heldout_qc_cv_median,7.35563485220013,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM08
+residual_run_order_gam_mean_deviance,0.0214695734556991,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM08
+residual_run_order_gam_sd_deviance,0.0350071915839423,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM08
+residual_ljung_box_proportion_significant,0.0042,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM08
+batch_weighted_pc_r2_categorical,0.000643925229296723,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_qc,WiNN auto (QC),SIM08
 retained_features,1000,higher,1000,features,,simulation,winn_auto_qc,WiNN auto (QC),SIM08
 retained_samples,500,higher,500,samples,,simulation,winn_auto_qc,WiNN auto (QC),SIM08
-runtime_sec,17.77,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_qc,WiNN auto (QC),SIM08
+runtime_sec,46.34,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_qc,WiNN auto (QC),SIM08
 drift_profiles_corrected,1432,descriptive,5000,profiles,,simulation,winn_auto_qc,WiNN auto (QC),SIM08
 drift_features_corrected,665,descriptive,1000,features,,simulation,winn_auto_qc,WiNN auto (QC),SIM08
 batch_features_corrected,704,descriptive,1000,features,,simulation,winn_auto_qc,WiNN auto (QC),SIM08
-truth_metabolite_profile_icc_mean,0.918979359467449,higher,1000,"ICC(A,1)",,simulation,winn_auto_qc,WiNN auto (QC),SIM08
-truth_sample_profile_pearson_mean,0.918015120426214,higher,450,correlation,,simulation,winn_auto_qc,WiNN auto (QC),SIM08
-truth_log1p_rmse,0.0750559472841526,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN auto (QC),SIM08
-heldout_qc_cv_mean,14.3383469483331,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM08
-heldout_qc_cv_sd,9.67832311397042,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM08
-heldout_qc_cv_median,13.4489360451169,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM08
-residual_run_order_gam_mean_deviance,0.153985313916287,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM08
-residual_run_order_gam_sd_deviance,0.193001634586252,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM08
-residual_ljung_box_proportion_significant,0.2802,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM08
-batch_weighted_pc_r2_categorical,0.297280363037024,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM08
+truth_metabolite_profile_icc_mean,0.920774640591852,higher,1000,"ICC(A,1)",,simulation,winn_auto_qc,WiNN auto (QC),SIM08
+truth_sample_profile_pearson_mean,0.919796443675173,higher,450,correlation,,simulation,winn_auto_qc,WiNN auto (QC),SIM08
+truth_log1p_rmse,0.0743989332066518,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN auto (QC),SIM08
+heldout_qc_cv_mean,12.6313973853372,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM08
+heldout_qc_cv_sd,8.46656051740585,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM08
+heldout_qc_cv_median,11.6829671611926,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM08
+residual_run_order_gam_mean_deviance,0.146909352036922,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM08
+residual_run_order_gam_sd_deviance,0.194821296140568,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM08
+residual_ljung_box_proportion_significant,0.2412,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM08
+batch_weighted_pc_r2_categorical,0.114699323762158,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM08
 retained_features,1000,higher,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM08
 retained_samples,500,higher,500,samples,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM08
-runtime_sec,17.655,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM08
-drift_profiles_corrected,1097,descriptive,5000,profiles,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM08
-drift_features_corrected,883,descriptive,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM08
-batch_features_corrected,648,descriptive,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM08
-truth_metabolite_profile_icc_mean,0.833830028893692,higher,1000,"ICC(A,1)",,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM08
-truth_sample_profile_pearson_mean,0.843807290418934,higher,450,correlation,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM08
-truth_log1p_rmse,0.116367915602853,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM08
-heldout_qc_cv_mean,8.45071792633157,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM08
-heldout_qc_cv_sd,6.15623094535839,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM08
-heldout_qc_cv_median,7.67818563752334,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM08
-residual_run_order_gam_mean_deviance,0.0215088394148954,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM08
-residual_run_order_gam_sd_deviance,0.0349641297883921,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM08
-residual_ljung_box_proportion_significant,0.0106,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM08
-batch_weighted_pc_r2_categorical,0.000452966163941812,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM08
+runtime_sec,58.234,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM08
+drift_profiles_corrected,1155,descriptive,5000,profiles,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM08
+drift_features_corrected,899,descriptive,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM08
+batch_features_corrected,650,descriptive,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM08
+truth_metabolite_profile_icc_mean,0.850274448857206,higher,1000,"ICC(A,1)",,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM08
+truth_sample_profile_pearson_mean,0.858220904161825,higher,450,correlation,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM08
+truth_log1p_rmse,0.108604004996959,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM08
+heldout_qc_cv_mean,8.18216532065597,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM08
+heldout_qc_cv_sd,6.25485147645336,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM08
+heldout_qc_cv_median,7.21612421950553,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM08
+residual_run_order_gam_mean_deviance,0.0225135376610542,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM08
+residual_run_order_gam_sd_deviance,0.0356163521368513,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM08
+residual_ljung_box_proportion_significant,0.0036,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM08
+batch_weighted_pc_r2_categorical,0.000556471255246732,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM08
 retained_features,1000,higher,1000,features,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM08
 retained_samples,500,higher,500,samples,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM08
-runtime_sec,7.16,lower,1,seconds,measured method execution in frozen release,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM08
+runtime_sec,44.9,lower,1,seconds,measured method execution in frozen release,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM08
 drift_profiles_corrected,1432,descriptive,5000,profiles,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM08
 drift_features_corrected,665,descriptive,1000,features,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM08
 batch_features_corrected,713,descriptive,1000,features,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM08
-truth_metabolite_profile_icc_mean,0.918748087221842,higher,1000,"ICC(A,1)",,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM08
-truth_sample_profile_pearson_mean,0.917921592834698,higher,450,correlation,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM08
-truth_log1p_rmse,0.0751852130525579,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM08
+truth_metabolite_profile_icc_mean,0.920873371405843,higher,1000,"ICC(A,1)",,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM08
+truth_sample_profile_pearson_mean,0.919910937493686,higher,450,correlation,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM08
+truth_log1p_rmse,0.0745846103233532,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM08
 heldout_qc_cv_mean,44.6627755388353,lower,1000,percent,,simulation,raw,Raw,SIM09
 heldout_qc_cv_sd,30.239873925063,lower,1000,percent,,simulation,raw,Raw,SIM09
 heldout_qc_cv_median,42.9286190974532,lower,1000,percent,,simulation,raw,Raw,SIM09
@@ -1103,54 +1103,54 @@ batch_features_corrected,,descriptive,1000,features,,simulation,serrf,SERRF,SIM0
 truth_metabolite_profile_icc_mean,0.892957159404076,higher,1000,"ICC(A,1)",,simulation,serrf,SERRF,SIM09
 truth_sample_profile_pearson_mean,0.883839958239146,higher,450,correlation,,simulation,serrf,SERRF,SIM09
 truth_log1p_rmse,0.0932453035439334,lower,450000,log1p intensity,,simulation,serrf,SERRF,SIM09
-heldout_qc_cv_mean,8.92798835945485,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM09
-heldout_qc_cv_sd,6.32320719684989,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM09
-heldout_qc_cv_median,8.0284157308182,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM09
-residual_run_order_gam_mean_deviance,0.0203113998884968,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM09
-residual_run_order_gam_sd_deviance,0.0333124478170454,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM09
-residual_ljung_box_proportion_significant,0.005,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM09
-batch_weighted_pc_r2_categorical,0.00101411888738062,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_qc,WiNN auto (QC),SIM09
+heldout_qc_cv_mean,8.58524193509833,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM09
+heldout_qc_cv_sd,6.28522732756269,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM09
+heldout_qc_cv_median,7.70829545030087,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM09
+residual_run_order_gam_mean_deviance,0.0202626011108182,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM09
+residual_run_order_gam_sd_deviance,0.0333650380444456,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM09
+residual_ljung_box_proportion_significant,0.002,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM09
+batch_weighted_pc_r2_categorical,0.00109180932778754,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_qc,WiNN auto (QC),SIM09
 retained_features,1000,higher,1000,features,,simulation,winn_auto_qc,WiNN auto (QC),SIM09
 retained_samples,500,higher,500,samples,,simulation,winn_auto_qc,WiNN auto (QC),SIM09
-runtime_sec,20.815,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_qc,WiNN auto (QC),SIM09
+runtime_sec,59.202,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_qc,WiNN auto (QC),SIM09
 drift_profiles_corrected,1509,descriptive,5000,profiles,,simulation,winn_auto_qc,WiNN auto (QC),SIM09
 drift_features_corrected,689,descriptive,1000,features,,simulation,winn_auto_qc,WiNN auto (QC),SIM09
 batch_features_corrected,714,descriptive,1000,features,,simulation,winn_auto_qc,WiNN auto (QC),SIM09
-truth_metabolite_profile_icc_mean,0.923034048187937,higher,1000,"ICC(A,1)",,simulation,winn_auto_qc,WiNN auto (QC),SIM09
-truth_sample_profile_pearson_mean,0.926032456275927,higher,450,correlation,,simulation,winn_auto_qc,WiNN auto (QC),SIM09
-truth_log1p_rmse,0.0714839197628033,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN auto (QC),SIM09
-heldout_qc_cv_mean,16.6086388897525,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM09
-heldout_qc_cv_sd,11.2311765365546,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM09
-heldout_qc_cv_median,15.2700144217018,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM09
-residual_run_order_gam_mean_deviance,0.141350014305478,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM09
-residual_run_order_gam_sd_deviance,0.182024537030284,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM09
-residual_ljung_box_proportion_significant,0.2378,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM09
-batch_weighted_pc_r2_categorical,0.239558402511951,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM09
+truth_metabolite_profile_icc_mean,0.925015212862352,higher,1000,"ICC(A,1)",,simulation,winn_auto_qc,WiNN auto (QC),SIM09
+truth_sample_profile_pearson_mean,0.927964817294757,higher,450,correlation,,simulation,winn_auto_qc,WiNN auto (QC),SIM09
+truth_log1p_rmse,0.0707051886132699,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN auto (QC),SIM09
+heldout_qc_cv_mean,15.3830335981864,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM09
+heldout_qc_cv_sd,9.98433590353331,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM09
+heldout_qc_cv_median,13.8786402897102,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM09
+residual_run_order_gam_mean_deviance,0.122997028579035,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM09
+residual_run_order_gam_sd_deviance,0.17259251777799,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM09
+residual_ljung_box_proportion_significant,0.1768,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM09
+batch_weighted_pc_r2_categorical,0.0973348045419444,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM09
 retained_features,1000,higher,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM09
 retained_samples,500,higher,500,samples,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM09
-runtime_sec,19.447,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM09
+runtime_sec,95.724,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM09
 drift_profiles_corrected,1627,descriptive,5000,profiles,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM09
 drift_features_corrected,904,descriptive,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM09
-batch_features_corrected,703,descriptive,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM09
-truth_metabolite_profile_icc_mean,0.851418245918802,higher,1000,"ICC(A,1)",,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM09
-truth_sample_profile_pearson_mean,0.861635792310892,higher,450,correlation,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM09
-truth_log1p_rmse,0.106283846556372,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM09
-heldout_qc_cv_mean,8.92079821189521,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM09
-heldout_qc_cv_sd,6.36297917971756,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM09
-heldout_qc_cv_median,8.06330676685007,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM09
-residual_run_order_gam_mean_deviance,0.021732341523898,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM09
-residual_run_order_gam_sd_deviance,0.0354527867222733,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM09
-residual_ljung_box_proportion_significant,0.0044,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM09
-batch_weighted_pc_r2_categorical,0.000902407349282164,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM09
+batch_features_corrected,706,descriptive,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM09
+truth_metabolite_profile_icc_mean,0.864560914656092,higher,1000,"ICC(A,1)",,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM09
+truth_sample_profile_pearson_mean,0.873710090982847,higher,450,correlation,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM09
+truth_log1p_rmse,0.0997235699012865,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM09
+heldout_qc_cv_mean,8.61773957050885,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM09
+heldout_qc_cv_sd,6.37389981521198,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM09
+heldout_qc_cv_median,7.78293388290159,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM09
+residual_run_order_gam_mean_deviance,0.0223350756943202,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM09
+residual_run_order_gam_sd_deviance,0.0359162140965218,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM09
+residual_ljung_box_proportion_significant,0.002,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM09
+batch_weighted_pc_r2_categorical,0.000955916494537033,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM09
 retained_features,1000,higher,1000,features,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM09
 retained_samples,500,higher,500,samples,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM09
-runtime_sec,6.837,lower,1,seconds,measured method execution in frozen release,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM09
+runtime_sec,27.501,lower,1,seconds,measured method execution in frozen release,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM09
 drift_profiles_corrected,1370,descriptive,5000,profiles,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM09
 drift_features_corrected,640,descriptive,1000,features,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM09
 batch_features_corrected,723,descriptive,1000,features,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM09
-truth_metabolite_profile_icc_mean,0.922967580857371,higher,1000,"ICC(A,1)",,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM09
-truth_sample_profile_pearson_mean,0.925861688218806,higher,450,correlation,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM09
-truth_log1p_rmse,0.0715756350379746,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM09
+truth_metabolite_profile_icc_mean,0.924958632010037,higher,1000,"ICC(A,1)",,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM09
+truth_sample_profile_pearson_mean,0.927705240831072,higher,450,correlation,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM09
+truth_log1p_rmse,0.0709480472144716,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM09
 heldout_qc_cv_mean,43.4947793580392,lower,1000,percent,,simulation,raw,Raw,SIM10
 heldout_qc_cv_sd,31.0499954750703,lower,1000,percent,,simulation,raw,Raw,SIM10
 heldout_qc_cv_median,41.9909299172558,lower,1000,percent,,simulation,raw,Raw,SIM10
@@ -1231,54 +1231,54 @@ batch_features_corrected,,descriptive,1000,features,,simulation,serrf,SERRF,SIM1
 truth_metabolite_profile_icc_mean,0.88760256014335,higher,1000,"ICC(A,1)",,simulation,serrf,SERRF,SIM10
 truth_sample_profile_pearson_mean,0.871615854957594,higher,450,correlation,,simulation,serrf,SERRF,SIM10
 truth_log1p_rmse,0.0988855053593208,lower,450000,log1p intensity,,simulation,serrf,SERRF,SIM10
-heldout_qc_cv_mean,8.58690999549585,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM10
-heldout_qc_cv_sd,6.65768183886876,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM10
-heldout_qc_cv_median,7.72828070707247,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM10
-residual_run_order_gam_mean_deviance,0.0211965920544952,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM10
-residual_run_order_gam_sd_deviance,0.0338421959196364,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM10
-residual_ljung_box_proportion_significant,0.0056,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM10
-batch_weighted_pc_r2_categorical,0.000995718819299806,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_qc,WiNN auto (QC),SIM10
+heldout_qc_cv_mean,8.3676832540341,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM10
+heldout_qc_cv_sd,6.5904986252429,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM10
+heldout_qc_cv_median,7.38255873453633,lower,1000,percent,,simulation,winn_auto_qc,WiNN auto (QC),SIM10
+residual_run_order_gam_mean_deviance,0.0202567145265226,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM10
+residual_run_order_gam_sd_deviance,0.03291587847088,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM10
+residual_ljung_box_proportion_significant,0.0026,lower,5000,proportion,,simulation,winn_auto_qc,WiNN auto (QC),SIM10
+batch_weighted_pc_r2_categorical,0.000779415851325484,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_qc,WiNN auto (QC),SIM10
 retained_features,1000,higher,1000,features,,simulation,winn_auto_qc,WiNN auto (QC),SIM10
 retained_samples,500,higher,500,samples,,simulation,winn_auto_qc,WiNN auto (QC),SIM10
-runtime_sec,16.945,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_qc,WiNN auto (QC),SIM10
-drift_profiles_corrected,1394,descriptive,5000,profiles,,simulation,winn_auto_qc,WiNN auto (QC),SIM10
-drift_features_corrected,629,descriptive,1000,features,,simulation,winn_auto_qc,WiNN auto (QC),SIM10
+runtime_sec,71.199,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_qc,WiNN auto (QC),SIM10
+drift_profiles_corrected,1515,descriptive,5000,profiles,,simulation,winn_auto_qc,WiNN auto (QC),SIM10
+drift_features_corrected,664,descriptive,1000,features,,simulation,winn_auto_qc,WiNN auto (QC),SIM10
 batch_features_corrected,667,descriptive,1000,features,,simulation,winn_auto_qc,WiNN auto (QC),SIM10
-truth_metabolite_profile_icc_mean,0.921570533457829,higher,1000,"ICC(A,1)",,simulation,winn_auto_qc,WiNN auto (QC),SIM10
-truth_sample_profile_pearson_mean,0.923333019175545,higher,450,correlation,,simulation,winn_auto_qc,WiNN auto (QC),SIM10
-truth_log1p_rmse,0.0729508947934744,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN auto (QC),SIM10
-heldout_qc_cv_mean,15.0992005568606,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM10
-heldout_qc_cv_sd,9.23477891860536,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM10
-heldout_qc_cv_median,14.6672548915242,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM10
-residual_run_order_gam_mean_deviance,0.0945585532284454,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM10
-residual_run_order_gam_sd_deviance,0.152698675916034,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM10
-residual_ljung_box_proportion_significant,0.1474,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM10
-batch_weighted_pc_r2_categorical,0.188404881010858,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM10
+truth_metabolite_profile_icc_mean,0.923188352293364,higher,1000,"ICC(A,1)",,simulation,winn_auto_qc,WiNN auto (QC),SIM10
+truth_sample_profile_pearson_mean,0.925027624622739,higher,450,correlation,,simulation,winn_auto_qc,WiNN auto (QC),SIM10
+truth_log1p_rmse,0.0722869663488607,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN auto (QC),SIM10
+heldout_qc_cv_mean,14.064056328151,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM10
+heldout_qc_cv_sd,8.73935972956345,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM10
+heldout_qc_cv_median,13.9087904473768,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM10
+residual_run_order_gam_mean_deviance,0.0889331329585522,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM10
+residual_run_order_gam_sd_deviance,0.148259083144175,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM10
+residual_ljung_box_proportion_significant,0.1168,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM10
+batch_weighted_pc_r2_categorical,0.0862585235413391,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM10
 retained_features,1000,higher,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM10
 retained_samples,500,higher,500,samples,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM10
-runtime_sec,18.357,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM10
+runtime_sec,61.059,lower,1,seconds,measured method execution in frozen release,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM10
 drift_profiles_corrected,1754,descriptive,5000,profiles,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM10
 drift_features_corrected,897,descriptive,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM10
-batch_features_corrected,685,descriptive,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM10
-truth_metabolite_profile_icc_mean,0.877247057266231,higher,1000,"ICC(A,1)",,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM10
-truth_sample_profile_pearson_mean,0.884509406614691,higher,450,correlation,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM10
-truth_log1p_rmse,0.0945927531652413,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM10
-heldout_qc_cv_mean,8.59818697652455,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM10
-heldout_qc_cv_sd,6.65742880018917,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM10
-heldout_qc_cv_median,7.72828070707247,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM10
-residual_run_order_gam_mean_deviance,0.0211804258097233,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM10
-residual_run_order_gam_sd_deviance,0.0338345612588828,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM10
-residual_ljung_box_proportion_significant,0.006,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM10
-batch_weighted_pc_r2_categorical,0.000840388378239783,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM10
+batch_features_corrected,650,descriptive,1000,features,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM10
+truth_metabolite_profile_icc_mean,0.883003639736909,higher,1000,"ICC(A,1)",,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM10
+truth_sample_profile_pearson_mean,0.889611864131123,higher,450,correlation,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM10
+truth_log1p_rmse,0.0916875121202511,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN auto-batch (QC),SIM10
+heldout_qc_cv_mean,8.30129862556567,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM10
+heldout_qc_cv_sd,6.7007356146418,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM10
+heldout_qc_cv_median,7.29731138690494,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM10
+residual_run_order_gam_mean_deviance,0.0219825153777159,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM10
+residual_run_order_gam_sd_deviance,0.0343647259265592,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM10
+residual_ljung_box_proportion_significant,0.0028,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM10
+batch_weighted_pc_r2_categorical,0.000617263237859927,lower,450,weighted R-squared,Batch is explicitly categorical.,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM10
 retained_features,1000,higher,1000,features,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM10
 retained_samples,500,higher,500,samples,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM10
-runtime_sec,6.45,lower,1,seconds,measured method execution in frozen release,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM10
+runtime_sec,33.721,lower,1,seconds,measured method execution in frozen release,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM10
 drift_profiles_corrected,1394,descriptive,5000,profiles,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM10
 drift_features_corrected,629,descriptive,1000,features,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM10
 batch_features_corrected,676,descriptive,1000,features,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM10
-truth_metabolite_profile_icc_mean,0.921576184032884,higher,1000,"ICC(A,1)",,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM10
-truth_sample_profile_pearson_mean,0.923249576387873,higher,450,correlation,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM10
-truth_log1p_rmse,0.0729406718379146,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM10
+truth_metabolite_profile_icc_mean,0.923510952924916,higher,1000,"ICC(A,1)",,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM10
+truth_sample_profile_pearson_mean,0.925074514653524,higher,450,correlation,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM10
+truth_log1p_rmse,0.0723500494706276,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN fixed default (no QC),SIM10
 heldout_qc_cv_mean,14.7280131359941,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM01
 heldout_qc_cv_sd,9.97640419493849,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM01
 heldout_qc_cv_median,13.6739926774638,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM01

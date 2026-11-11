@@ -21,8 +21,10 @@ datasets <- read.csv(
   file.path(release_root, "analysis", "config", "dataset_manifest.csv"),
   stringsAsFactors = FALSE, check.names = FALSE
 )
-expected_package_sha <-
-  "71a0964cee2778b2e5789d20621147e074c7945e813cf76af2ceeb696104aae1"
+frozen_spec <- jsonlite::read_json(
+  file.path(release_root, "package", "frozen_package.json"), simplifyVector = TRUE
+)
+expected_package_sha <- frozen_spec$source_archive_sha256
 
 checks <- lapply(seq_len(nrow(audit)), function(index) {
   row <- audit[index, , drop = FALSE]
@@ -68,7 +70,7 @@ checks <- lapply(seq_len(nrow(audit)), function(index) {
       digest::digest(file = matrix_path, algo = "sha256"),
       as.character(manifest$matrix_file_sha256)
     ) &&
-    identical(as.character(package$version), "0.1.4") &&
+    identical(as.character(package$version), frozen_spec$version) &&
     identical(as.character(package$source_archive_sha256), expected_package_sha)
   data.frame(
     dataset_key = as.character(row$dataset_key),

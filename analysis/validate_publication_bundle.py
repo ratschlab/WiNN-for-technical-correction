@@ -62,15 +62,20 @@ def validate():
             clinical = 'clinical_fiams' in row.values() or any('Clinical FIA' in str(v) for v in row.values())
             if clinical:
                 require(not any(row.get(k) for k in identity_columns), 'Clinical identifiers in ' + str(f.relative_to(ROOT)))
-    for name, count in [('input_preparation_checks.csv', 5), ('table_reproduction_checks.csv', 46)]:
-        rows = read(ROOT / 'analysis/config/revision_20261027' / name)
+    # Input preparation is unchanged since the 27 October revision. Table regeneration was
+    # repeated for the WiNN 0.1.6 release from the bundled supplement_20261111 inputs.
+    for folder, name, count in [('revision_20261027', 'input_preparation_checks.csv', 5),
+                                ('revision_20261111', 'table_reproduction_checks.csv', 56)]:
+        rows = read(ROOT / 'analysis/config' / folder / name)
         require(len(rows) == count, 'Incomplete recorded validation: ' + name)
         if name == 'table_reproduction_checks.csv':
             require(all(row['passed'].lower() == 'true' for row in rows), 'Table regeneration failed')
         else:
             require(all(row['exact_matrix_match'] == 'TRUE' and row['roles_features_candidates_folds_match'] == 'TRUE' for row in rows), 'Input preparation differs')
     baseline_checks = read(MANUSCRIPT / 'generated/review_validation/baseline_biology_validation_checks.csv')
-    require(len(baseline_checks) == 132 and all(row['passed'] == 'TRUE' for row in baseline_checks), 'Baseline/identity validation failed')
+    # The WiNN 0.1.6 refresh reuses the unchanged baseline fits and bootstrap draws, so it
+    # records the 91 checks that apply to recomputed WiNN rows and reused baseline rows.
+    require(len(baseline_checks) == 91 and all(row['passed'] == 'TRUE' for row in baseline_checks), 'Baseline/identity validation failed')
     require(not list(MANUSCRIPT.rglob('*.rds')), 'Matrix file unexpectedly included in manuscript bundle')
     for name in ['F1_winn_overview.pdf', 'F2_simulation.pdf', 'F3_replicates.pdf', 'F4_biological_structure.pdf', 'Main_figures.pdf', 'WiNN_figures.pdf']:
         require((MANUSCRIPT / 'figures' / name).is_file(), 'Missing main figure ' + name)
@@ -95,5 +100,5 @@ require({r['path'] for r in rows} == set(tracked_files()), 'Manifest does not co
 for row in rows:
     data = (ROOT / row['path']).read_bytes()
     require(len(data) == int(row['size_bytes']) and hashlib.sha256(data).hexdigest() == row['sha256'], 'Manifest mismatch: ' + row['path'])
-print('PASS: current RFSC results, selection settings, publication assets, privacy checks and', len(rows), 'file hashes')
+print('PASS: WiNN 0.1.6 results, corrected RFSC results, selection settings, table regeneration, publication assets, privacy checks and', len(rows), 'file hashes')
 print('Document source:', 'included' if (MANUSCRIPT / 'main.tex').exists() else 'separate citation/documentation commit; supporting assets included')

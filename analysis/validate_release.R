@@ -29,6 +29,20 @@ add_check <- local({
   }
 })
 
+# Optional WiNN-only re-run (WINN_RERUN_METHODS): only the listed methods were
+# executed in this release root; competitor outputs are reused unchanged from the
+# previous validated release and spliced into the final tables. Expected task and
+# matrix counts are then derived from the task manifests for the re-run methods.
+rerun_methods <- strsplit(Sys.getenv("WINN_RERUN_METHODS", unset = ""), ",", fixed = TRUE)[[1]]
+rerun_methods <- trimws(rerun_methods[nzchar(trimws(rerun_methods))])
+rerun_mode <- length(rerun_methods) > 0L
+competitor_ids <- c("combat", "qc_rlsc", "qc_rfsc", "tiger", "serrf")
+config_root <- file.path(release_root, "analysis", "config")
+rerun_count <- function(manifest) {
+  value <- read.csv(file.path(config_root, manifest), stringsAsFactors = FALSE, check.names = FALSE)
+  sum(value$method_id %in% rerun_methods)
+}
+
 families <- data.frame(
   family = c(
     "primary_methods", "dataset_ablation_bundles", "simulation_seed_methods",
@@ -45,6 +59,11 @@ families <- data.frame(
   expected = c(54L, 6L, 90L, 10L, 540L, 160L, 6L, 6L, 10L, 60L),
   stringsAsFactors = FALSE
 )
+if (rerun_mode) {
+  families$expected[families$family == "primary_methods"] <- rerun_count("primary_run_matrix.csv")
+  families$expected[families$family == "simulation_seed_methods"] <- rerun_count("simulation_task_manifest.csv")
+  families$expected[families$family == "reference_split_methods"] <- rerun_count("reference_split_task_manifest.csv")
+}
 families$observed <- vapply(families$path, function(path) {
   count_files(file.path(result_root, path), "^complete[.]json$")
 }, integer(1))
@@ -52,7 +71,10 @@ families$complete <- families$observed == families$expected
 write.csv(families, file.path(validation_root, "task_completeness.csv"), row.names = FALSE)
 add_check(
   "all_prespecified_tasks_complete", all(families$complete),
-  paste(paste0(families$family, "=", families$observed, "/", families$expected), collapse = "; ")
+  paste0(
+    if (rerun_mode) paste0("re-run methods (", paste(rerun_methods, collapse = ", "), "): ") else "",
+    paste(paste0(families$family, "=", families$observed, "/", families$expected), collapse = "; ")
+  )
 )
 
 logical_ledger_path <- file.path(validation_root, "logical_task_ledger.csv")
@@ -63,10 +85,15 @@ logical_ledger <- if (file.exists(logical_ledger_path)) {
 execution_ledger <- if (file.exists(execution_ledger_path)) {
   read.csv(execution_ledger_path, stringsAsFactors = FALSE, check.names = FALSE)
 } else data.frame()
+ledger_complete <- if (rerun_mode && nrow(logical_ledger)) {
+  # Competitor tasks are reused, not executed here; every other task must be complete.
+  logical_ledger$complete_marker_present |
+    (logical_ledger$method_id %in% competitor_ids & !logical_ledger$method_id %in% rerun_methods)
+} else logical_ledger$complete_marker_present
 ledger_ok <-
   nrow(logical_ledger) == 942L &&
   !anyDuplicated(logical_ledger$task_id) &&
-  all(logical_ledger$complete_marker_present) &&
+  all(ledger_complete) &&
   !any(logical_ledger$family == "unclassified") &&
   nrow(execution_ledger) > 0L &&
   !any(execution_ledger$family == "unclassified") &&
@@ -74,7 +101,11 @@ ledger_ok <-
 add_check(
   "execution_ledgers_cover_prespecified_tasks_and_attempts",
   ledger_ok,
-  paste(nrow(logical_ledger), "logical tasks and", nrow(execution_ledger), "scheduler attempts audited")
+  paste0(
+    nrow(logical_ledger), " logical tasks and ", nrow(execution_ledger), " scheduler attempts audited",
+    if (rerun_mode) paste0("; ", sum(!logical_ledger$complete_marker_present),
+                           " competitor tasks reused from the previous validated release") else ""
+  )
 )
 
 failure_paths <- list.files(result_root, pattern = "^failed[.]json$", recursive = TRUE, full.names = TRUE)
@@ -92,7 +123,10 @@ add_check(
   paste0(sum(!unresolved_failure), " resolved attempt artifact(s); ", sum(unresolved_failure), " unresolved")
 )
 
-expected_sha <- "71a0964cee2778b2e5789d20621147e074c7945e813cf76af2ceeb696104aae1"
+frozen_spec <- jsonlite::read_json(
+  file.path(release_root, "package", "frozen_package.json"), simplifyVector = TRUE
+)
+expected_sha <- frozen_spec$source_archive_sha256
 manifest_paths <- list.files(
   result_root, pattern = "^run_manifest[.]json$", recursive = TRUE, full.names = TRUE
 )
@@ -115,7 +149,7 @@ analytical <- grepl(
 )
 package_table$is_frozen_build <- !analytical |
   (!is.na(package_table$version) & !is.na(package_table$source_archive_sha256) &
-     package_table$version == "0.1.4" & package_table$source_archive_sha256 == expected_sha)
+     package_table$version == frozen_spec$version & package_table$source_archive_sha256 == expected_sha)
 write.csv(package_table, file.path(validation_root, "package_provenance_audit.csv"), row.names = FALSE, na = "")
 add_check(
   "all_analytical_runs_use_frozen_winn", all(package_table$is_frozen_build),
@@ -148,8 +182,11 @@ write.csv(
   file.path(validation_root, "corrected_matrix_domain_audit.csv"),
   row.names = FALSE
 )
+expected_matrices <- if (rerun_mode) {
+  sum(families$expected[families$family %in% c("primary_methods", "reference_split_methods", "simulation_seed_methods")])
+} else 684L
 matrix_domain_ok <-
-  nrow(matrix_domain_audit) == 684L &&
+  nrow(matrix_domain_audit) == expected_matrices &&
   all(matrix_domain_audit$negative_values == 0L) &&
   all(matrix_domain_audit$nonfinite_values == 0L)
 add_check(

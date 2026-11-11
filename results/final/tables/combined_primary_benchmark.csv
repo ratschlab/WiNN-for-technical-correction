@@ -49,36 +49,36 @@ simulation,Truth-known simulation,serrf,SERRF,runtime_sec,,lower,1,seconds,not r
 simulation,Truth-known simulation,serrf,SERRF,truth_log1p_rmse,0.0953567821019156,lower,450000,log1p intensity,
 simulation,Truth-known simulation,serrf,SERRF,truth_metabolite_profile_icc_mean,0.887607914457796,higher,1000,"ICC(A,1)",
 simulation,Truth-known simulation,serrf,SERRF,truth_sample_profile_pearson_mean,0.879622363348465,higher,450,correlation,
-simulation,Truth-known simulation,winn_auto_qc,WiNN (QC-tuned),batch_weighted_pc_r2_categorical,0.00100135976133962,lower,450,weighted R-squared,Batch is explicitly categorical.
-simulation,Truth-known simulation,winn_auto_qc,WiNN (QC-tuned),heldout_qc_cv_mean,8.78288536211856,lower,1000,percent,
-simulation,Truth-known simulation,winn_auto_qc,WiNN (QC-tuned),residual_ljung_box_proportion_significant,0.0086,lower,5000,proportion,
-simulation,Truth-known simulation,winn_auto_qc,WiNN (QC-tuned),residual_run_order_gam_mean_deviance,0.0190598805330619,lower,5000,proportion,
+simulation,Truth-known simulation,winn_auto_qc,WiNN (QC-tuned),batch_weighted_pc_r2_categorical,0.00101728859044417,lower,450,weighted R-squared,Batch is explicitly categorical.
+simulation,Truth-known simulation,winn_auto_qc,WiNN (QC-tuned),heldout_qc_cv_mean,8.45986081858991,lower,1000,percent,
+simulation,Truth-known simulation,winn_auto_qc,WiNN (QC-tuned),residual_ljung_box_proportion_significant,0.0036,lower,5000,proportion,
+simulation,Truth-known simulation,winn_auto_qc,WiNN (QC-tuned),residual_run_order_gam_mean_deviance,0.0189764816566916,lower,5000,proportion,
 simulation,Truth-known simulation,winn_auto_qc,WiNN (QC-tuned),retained_features,1000,higher,1000,features,
 simulation,Truth-known simulation,winn_auto_qc,WiNN (QC-tuned),retained_samples,500,higher,500,samples,
-simulation,Truth-known simulation,winn_auto_qc,WiNN (QC-tuned),runtime_sec,17.563,lower,1,seconds,measured method execution in frozen release
-simulation,Truth-known simulation,winn_auto_qc,WiNN (QC-tuned),truth_log1p_rmse,0.071593517780699,lower,450000,log1p intensity,
-simulation,Truth-known simulation,winn_auto_qc,WiNN (QC-tuned),truth_metabolite_profile_icc_mean,0.922321659529502,higher,1000,"ICC(A,1)",
-simulation,Truth-known simulation,winn_auto_qc,WiNN (QC-tuned),truth_sample_profile_pearson_mean,0.925989767122605,higher,450,correlation,
-simulation,Truth-known simulation,winn_auto_batch_qc,WiNN (inferred segments),batch_weighted_pc_r2_categorical,0.190350299562417,lower,450,weighted R-squared,Batch is explicitly categorical.
-simulation,Truth-known simulation,winn_auto_batch_qc,WiNN (inferred segments),heldout_qc_cv_mean,16.3142944058656,lower,1000,percent,
-simulation,Truth-known simulation,winn_auto_batch_qc,WiNN (inferred segments),residual_ljung_box_proportion_significant,0.231,lower,5000,proportion,
-simulation,Truth-known simulation,winn_auto_batch_qc,WiNN (inferred segments),residual_run_order_gam_mean_deviance,0.138876443356538,lower,5000,proportion,
+simulation,Truth-known simulation,winn_auto_qc,WiNN (QC-tuned),runtime_sec,49.731,lower,1,seconds,measured method execution in frozen release
+simulation,Truth-known simulation,winn_auto_qc,WiNN (QC-tuned),truth_log1p_rmse,0.0708648353924626,lower,450000,log1p intensity,
+simulation,Truth-known simulation,winn_auto_qc,WiNN (QC-tuned),truth_metabolite_profile_icc_mean,0.924193453411651,higher,1000,"ICC(A,1)",
+simulation,Truth-known simulation,winn_auto_qc,WiNN (QC-tuned),truth_sample_profile_pearson_mean,0.927802205089574,higher,450,correlation,
+simulation,Truth-known simulation,winn_auto_batch_qc,WiNN (inferred segments),batch_weighted_pc_r2_categorical,0.0765840400327868,lower,450,weighted R-squared,Batch is explicitly categorical.
+simulation,Truth-known simulation,winn_auto_batch_qc,WiNN (inferred segments),heldout_qc_cv_mean,15.7359616350191,lower,1000,percent,
+simulation,Truth-known simulation,winn_auto_batch_qc,WiNN (inferred segments),residual_ljung_box_proportion_significant,0.141,lower,5000,proportion,
+simulation,Truth-known simulation,winn_auto_batch_qc,WiNN (inferred segments),residual_run_order_gam_mean_deviance,0.111003199452436,lower,5000,proportion,
 simulation,Truth-known simulation,winn_auto_batch_qc,WiNN (inferred segments),retained_features,1000,higher,1000,features,
 simulation,Truth-known simulation,winn_auto_batch_qc,WiNN (inferred segments),retained_samples,500,higher,500,samples,
-simulation,Truth-known simulation,winn_auto_batch_qc,WiNN (inferred segments),runtime_sec,21.503,lower,1,seconds,measured method execution in frozen release
-simulation,Truth-known simulation,winn_auto_batch_qc,WiNN (inferred segments),truth_log1p_rmse,0.102737640679052,lower,450000,log1p intensity,
-simulation,Truth-known simulation,winn_auto_batch_qc,WiNN (inferred segments),truth_metabolite_profile_icc_mean,0.858213013478024,higher,1000,"ICC(A,1)",
-simulation,Truth-known simulation,winn_auto_batch_qc,WiNN (inferred segments),truth_sample_profile_pearson_mean,0.868555221284607,higher,450,correlation,
-simulation,Truth-known simulation,winn_fixed_no_qc,WiNN,batch_weighted_pc_r2_categorical,0.000984578035653711,lower,450,weighted R-squared,Batch is explicitly categorical.
-simulation,Truth-known simulation,winn_fixed_no_qc,WiNN,heldout_qc_cv_mean,8.76629278513728,lower,1000,percent,
-simulation,Truth-known simulation,winn_fixed_no_qc,WiNN,residual_ljung_box_proportion_significant,0.0078,lower,5000,proportion,
-simulation,Truth-known simulation,winn_fixed_no_qc,WiNN,residual_run_order_gam_mean_deviance,0.020259360410254,lower,5000,proportion,
+simulation,Truth-known simulation,winn_auto_batch_qc,WiNN (inferred segments),runtime_sec,53.997,lower,1,seconds,measured method execution in frozen release
+simulation,Truth-known simulation,winn_auto_batch_qc,WiNN (inferred segments),truth_log1p_rmse,0.0954181862551183,lower,450000,log1p intensity,
+simulation,Truth-known simulation,winn_auto_batch_qc,WiNN (inferred segments),truth_metabolite_profile_icc_mean,0.872321384790639,higher,1000,"ICC(A,1)",
+simulation,Truth-known simulation,winn_auto_batch_qc,WiNN (inferred segments),truth_sample_profile_pearson_mean,0.881859743341853,higher,450,correlation,
+simulation,Truth-known simulation,winn_fixed_no_qc,WiNN,batch_weighted_pc_r2_categorical,0.00104441467773887,lower,450,weighted R-squared,Batch is explicitly categorical.
+simulation,Truth-known simulation,winn_fixed_no_qc,WiNN,heldout_qc_cv_mean,8.43198165168273,lower,1000,percent,
+simulation,Truth-known simulation,winn_fixed_no_qc,WiNN,residual_ljung_box_proportion_significant,0.0036,lower,5000,proportion,
+simulation,Truth-known simulation,winn_fixed_no_qc,WiNN,residual_run_order_gam_mean_deviance,0.0209534837670856,lower,5000,proportion,
 simulation,Truth-known simulation,winn_fixed_no_qc,WiNN,retained_features,1000,higher,1000,features,
 simulation,Truth-known simulation,winn_fixed_no_qc,WiNN,retained_samples,500,higher,500,samples,
-simulation,Truth-known simulation,winn_fixed_no_qc,WiNN,runtime_sec,7.758,lower,1,seconds,measured method execution in frozen release
-simulation,Truth-known simulation,winn_fixed_no_qc,WiNN,truth_log1p_rmse,0.0717656363030658,lower,450000,log1p intensity,
-simulation,Truth-known simulation,winn_fixed_no_qc,WiNN,truth_metabolite_profile_icc_mean,0.922101988056287,higher,1000,"ICC(A,1)",
-simulation,Truth-known simulation,winn_fixed_no_qc,WiNN,truth_sample_profile_pearson_mean,0.925722367961271,higher,450,correlation,
+simulation,Truth-known simulation,winn_fixed_no_qc,WiNN,runtime_sec,33.485,lower,1,seconds,measured method execution in frozen release
+simulation,Truth-known simulation,winn_fixed_no_qc,WiNN,truth_log1p_rmse,0.071143307219603,lower,450000,log1p intensity,
+simulation,Truth-known simulation,winn_fixed_no_qc,WiNN,truth_metabolite_profile_icc_mean,0.924082662854262,higher,1000,"ICC(A,1)",
+simulation,Truth-known simulation,winn_fixed_no_qc,WiNN,truth_sample_profile_pearson_mean,0.927581128819737,higher,450,correlation,
 mtbls79,MTBLS79,raw,Raw,batch_weighted_pc_r2_categorical,0.36098533296055,lower,134,weighted R-squared,Batch is explicitly categorical.
 mtbls79,MTBLS79,raw,Raw,biological_associated_features,990,context,2488,features,
 mtbls79,MTBLS79,raw,Raw,biological_weighted_pc_r2,0.342783223437302,higher,134,weighted R-squared,
@@ -134,39 +134,39 @@ mtbls79,MTBLS79,serrf,SERRF,retained_features,2488,higher,2488,features,
 mtbls79,MTBLS79,serrf,SERRF,retained_samples,172,higher,172,samples,
 mtbls79,MTBLS79,serrf,SERRF,runtime_sec,1713.737,lower,1,seconds,measured method execution in frozen release
 mtbls79,MTBLS79,serrf,SERRF,sample_replicate_pearson_median,0.975109082132595,higher,20,correlation,
-mtbls79,MTBLS79,winn_auto_qc,WiNN (QC-tuned),batch_weighted_pc_r2_categorical,0.0112766397992278,lower,134,weighted R-squared,Batch is explicitly categorical.
+mtbls79,MTBLS79,winn_auto_qc,WiNN (QC-tuned),batch_weighted_pc_r2_categorical,0.011263100606717,lower,134,weighted R-squared,Batch is explicitly categorical.
 mtbls79,MTBLS79,winn_auto_qc,WiNN (QC-tuned),biological_associated_features,1005,context,2488,features,
-mtbls79,MTBLS79,winn_auto_qc,WiNN (QC-tuned),biological_weighted_pc_r2,0.466642276944317,higher,134,weighted R-squared,
-mtbls79,MTBLS79,winn_auto_qc,WiNN (QC-tuned),heldout_qc_cv_mean,15.9914877921284,lower,2488,percent,
-mtbls79,MTBLS79,winn_auto_qc,WiNN (QC-tuned),metabolite_icc_a1_median,0.679806955877126,higher,2488,"ICC(A,1)",
+mtbls79,MTBLS79,winn_auto_qc,WiNN (QC-tuned),biological_weighted_pc_r2,0.466630221918238,higher,134,weighted R-squared,
+mtbls79,MTBLS79,winn_auto_qc,WiNN (QC-tuned),heldout_qc_cv_mean,15.9909979253905,lower,2488,percent,
+mtbls79,MTBLS79,winn_auto_qc,WiNN (QC-tuned),metabolite_icc_a1_median,0.679746150773717,higher,2488,"ICC(A,1)",
 mtbls79,MTBLS79,winn_auto_qc,WiNN (QC-tuned),residual_ljung_box_proportion_significant,0.000904340836012862,lower,19904,proportion,
-mtbls79,MTBLS79,winn_auto_qc,WiNN (QC-tuned),residual_run_order_gam_mean_deviance,0.139680203207515,lower,19904,proportion,
+mtbls79,MTBLS79,winn_auto_qc,WiNN (QC-tuned),residual_run_order_gam_mean_deviance,0.139648492341862,lower,19904,proportion,
 mtbls79,MTBLS79,winn_auto_qc,WiNN (QC-tuned),retained_features,2488,higher,2488,features,
 mtbls79,MTBLS79,winn_auto_qc,WiNN (QC-tuned),retained_samples,172,higher,172,samples,
-mtbls79,MTBLS79,winn_auto_qc,WiNN (QC-tuned),runtime_sec,16.819,lower,1,seconds,measured method execution in frozen release
-mtbls79,MTBLS79,winn_auto_qc,WiNN (QC-tuned),sample_replicate_pearson_median,0.976073321117563,higher,20,correlation,
-mtbls79,MTBLS79,winn_auto_batch_qc,WiNN (inferred segments),batch_weighted_pc_r2_categorical,0.0244132144404738,lower,134,weighted R-squared,Batch is explicitly categorical.
-mtbls79,MTBLS79,winn_auto_batch_qc,WiNN (inferred segments),biological_associated_features,988,context,2488,features,
-mtbls79,MTBLS79,winn_auto_batch_qc,WiNN (inferred segments),biological_weighted_pc_r2,0.46596793443404,higher,134,weighted R-squared,
-mtbls79,MTBLS79,winn_auto_batch_qc,WiNN (inferred segments),heldout_qc_cv_mean,17.2970798365999,lower,2488,percent,
-mtbls79,MTBLS79,winn_auto_batch_qc,WiNN (inferred segments),metabolite_icc_a1_median,0.660705737960497,higher,2488,"ICC(A,1)",
-mtbls79,MTBLS79,winn_auto_batch_qc,WiNN (inferred segments),residual_ljung_box_proportion_significant,0.0010048231511254,lower,19904,proportion,
-mtbls79,MTBLS79,winn_auto_batch_qc,WiNN (inferred segments),residual_run_order_gam_mean_deviance,0.137855571136823,lower,19904,proportion,
+mtbls79,MTBLS79,winn_auto_qc,WiNN (QC-tuned),runtime_sec,17.133,lower,1,seconds,measured method execution in frozen release
+mtbls79,MTBLS79,winn_auto_qc,WiNN (QC-tuned),sample_replicate_pearson_median,0.976049426816119,higher,20,correlation,
+mtbls79,MTBLS79,winn_auto_batch_qc,WiNN (inferred segments),batch_weighted_pc_r2_categorical,0.0254051707677827,lower,134,weighted R-squared,Batch is explicitly categorical.
+mtbls79,MTBLS79,winn_auto_batch_qc,WiNN (inferred segments),biological_associated_features,985,context,2488,features,
+mtbls79,MTBLS79,winn_auto_batch_qc,WiNN (inferred segments),biological_weighted_pc_r2,0.463906039656906,higher,134,weighted R-squared,
+mtbls79,MTBLS79,winn_auto_batch_qc,WiNN (inferred segments),heldout_qc_cv_mean,16.6614836351897,lower,2488,percent,
+mtbls79,MTBLS79,winn_auto_batch_qc,WiNN (inferred segments),metabolite_icc_a1_median,0.668678362773226,higher,2488,"ICC(A,1)",
+mtbls79,MTBLS79,winn_auto_batch_qc,WiNN (inferred segments),residual_ljung_box_proportion_significant,0.00105506430868167,lower,19904,proportion,
+mtbls79,MTBLS79,winn_auto_batch_qc,WiNN (inferred segments),residual_run_order_gam_mean_deviance,0.140722418265912,lower,19904,proportion,
 mtbls79,MTBLS79,winn_auto_batch_qc,WiNN (inferred segments),retained_features,2488,higher,2488,features,
 mtbls79,MTBLS79,winn_auto_batch_qc,WiNN (inferred segments),retained_samples,172,higher,172,samples,
-mtbls79,MTBLS79,winn_auto_batch_qc,WiNN (inferred segments),runtime_sec,20.851,lower,1,seconds,measured method execution in frozen release
-mtbls79,MTBLS79,winn_auto_batch_qc,WiNN (inferred segments),sample_replicate_pearson_median,0.973559682269081,higher,20,correlation,
-mtbls79,MTBLS79,winn_fixed_no_qc,WiNN,batch_weighted_pc_r2_categorical,0.0108480104370861,lower,134,weighted R-squared,Batch is explicitly categorical.
-mtbls79,MTBLS79,winn_fixed_no_qc,WiNN,biological_associated_features,1013,context,2488,features,
-mtbls79,MTBLS79,winn_fixed_no_qc,WiNN,biological_weighted_pc_r2,0.471479113913378,higher,134,weighted R-squared,
-mtbls79,MTBLS79,winn_fixed_no_qc,WiNN,heldout_qc_cv_mean,16.6785376235596,lower,2488,percent,
-mtbls79,MTBLS79,winn_fixed_no_qc,WiNN,metabolite_icc_a1_median,0.674414477673406,higher,2488,"ICC(A,1)",
+mtbls79,MTBLS79,winn_auto_batch_qc,WiNN (inferred segments),runtime_sec,74.889,lower,1,seconds,measured method execution in frozen release
+mtbls79,MTBLS79,winn_auto_batch_qc,WiNN (inferred segments),sample_replicate_pearson_median,0.973957158182552,higher,20,correlation,
+mtbls79,MTBLS79,winn_fixed_no_qc,WiNN,batch_weighted_pc_r2_categorical,0.0108837435440364,lower,134,weighted R-squared,Batch is explicitly categorical.
+mtbls79,MTBLS79,winn_fixed_no_qc,WiNN,biological_associated_features,1012,context,2488,features,
+mtbls79,MTBLS79,winn_fixed_no_qc,WiNN,biological_weighted_pc_r2,0.471316213864791,higher,134,weighted R-squared,
+mtbls79,MTBLS79,winn_fixed_no_qc,WiNN,heldout_qc_cv_mean,16.6823176927842,lower,2488,percent,
+mtbls79,MTBLS79,winn_fixed_no_qc,WiNN,metabolite_icc_a1_median,0.674459431192788,higher,2488,"ICC(A,1)",
 mtbls79,MTBLS79,winn_fixed_no_qc,WiNN,residual_ljung_box_proportion_significant,0.00221061093247588,lower,19904,proportion,
-mtbls79,MTBLS79,winn_fixed_no_qc,WiNN,residual_run_order_gam_mean_deviance,0.140078697278888,lower,19904,proportion,
+mtbls79,MTBLS79,winn_fixed_no_qc,WiNN,residual_run_order_gam_mean_deviance,0.140339001542225,lower,19904,proportion,
 mtbls79,MTBLS79,winn_fixed_no_qc,WiNN,retained_features,2488,higher,2488,features,
 mtbls79,MTBLS79,winn_fixed_no_qc,WiNN,retained_samples,172,higher,172,samples,
-mtbls79,MTBLS79,winn_fixed_no_qc,WiNN,runtime_sec,9.034,lower,1,seconds,measured method execution in frozen release
-mtbls79,MTBLS79,winn_fixed_no_qc,WiNN,sample_replicate_pearson_median,0.975436813944675,higher,20,correlation,
+mtbls79,MTBLS79,winn_fixed_no_qc,WiNN,runtime_sec,9.807,lower,1,seconds,measured method execution in frozen release
+mtbls79,MTBLS79,winn_fixed_no_qc,WiNN,sample_replicate_pearson_median,0.975353138931333,higher,20,correlation,
 clinical_fiams,Clinical FIA-MS,raw,Raw,batch_weighted_pc_r2_categorical,0.150509455379697,lower,536,weighted R-squared,Batch is explicitly categorical.
 clinical_fiams,Clinical FIA-MS,raw,Raw,biological_weighted_pc_r2,0.698982296703889,higher,536,weighted R-squared,
 clinical_fiams,Clinical FIA-MS,raw,Raw,feature_repeatability_ratio_median,0.648713511012684,higher,1594,repeatability ratio,
@@ -222,39 +222,39 @@ clinical_fiams,Clinical FIA-MS,serrf,SERRF,retained_features,1594,higher,1594,fe
 clinical_fiams,Clinical FIA-MS,serrf,SERRF,retained_samples,660,higher,660,samples,
 clinical_fiams,Clinical FIA-MS,serrf,SERRF,runtime_sec,953.103,lower,1,seconds,measured method execution in frozen release
 clinical_fiams,Clinical FIA-MS,serrf,SERRF,sample_replicate_pearson_median,0.989048658011503,higher,267,correlation,
-clinical_fiams,Clinical FIA-MS,winn_auto_qc,WiNN (QC-tuned),batch_weighted_pc_r2_categorical,0.00218809939109416,lower,536,weighted R-squared,Batch is explicitly categorical.
-clinical_fiams,Clinical FIA-MS,winn_auto_qc,WiNN (QC-tuned),biological_weighted_pc_r2,0.820814794712933,higher,536,weighted R-squared,
-clinical_fiams,Clinical FIA-MS,winn_auto_qc,WiNN (QC-tuned),feature_repeatability_ratio_median,0.676814503051903,higher,1594,repeatability ratio,
-clinical_fiams,Clinical FIA-MS,winn_auto_qc,WiNN (QC-tuned),genuine_replicate_icc_median,0.990720060604579,higher,267,"ICC(A,1)",
-clinical_fiams,Clinical FIA-MS,winn_auto_qc,WiNN (QC-tuned),heldout_qc_cv_mean,10.9567695269855,lower,1594,percent,
-clinical_fiams,Clinical FIA-MS,winn_auto_qc,WiNN (QC-tuned),residual_ljung_box_proportion_significant,0.123902132998745,lower,12752,proportion,
-clinical_fiams,Clinical FIA-MS,winn_auto_qc,WiNN (QC-tuned),residual_run_order_gam_mean_deviance,0.082932682096861,lower,12752,proportion,
+clinical_fiams,Clinical FIA-MS,winn_auto_qc,WiNN (QC-tuned),batch_weighted_pc_r2_categorical,0.00217047664873643,lower,536,weighted R-squared,Batch is explicitly categorical.
+clinical_fiams,Clinical FIA-MS,winn_auto_qc,WiNN (QC-tuned),biological_weighted_pc_r2,0.820801064882724,higher,536,weighted R-squared,
+clinical_fiams,Clinical FIA-MS,winn_auto_qc,WiNN (QC-tuned),feature_repeatability_ratio_median,0.678189258604576,higher,1594,repeatability ratio,
+clinical_fiams,Clinical FIA-MS,winn_auto_qc,WiNN (QC-tuned),genuine_replicate_icc_median,0.990695125362182,higher,267,"ICC(A,1)",
+clinical_fiams,Clinical FIA-MS,winn_auto_qc,WiNN (QC-tuned),heldout_qc_cv_mean,10.9325486558187,lower,1594,percent,
+clinical_fiams,Clinical FIA-MS,winn_auto_qc,WiNN (QC-tuned),residual_ljung_box_proportion_significant,0.127979924717691,lower,12752,proportion,
+clinical_fiams,Clinical FIA-MS,winn_auto_qc,WiNN (QC-tuned),residual_run_order_gam_mean_deviance,0.0845343844550217,lower,12752,proportion,
 clinical_fiams,Clinical FIA-MS,winn_auto_qc,WiNN (QC-tuned),retained_features,1594,higher,1594,features,
 clinical_fiams,Clinical FIA-MS,winn_auto_qc,WiNN (QC-tuned),retained_samples,660,higher,660,samples,
-clinical_fiams,Clinical FIA-MS,winn_auto_qc,WiNN (QC-tuned),runtime_sec,28.834,lower,1,seconds,measured method execution in frozen release
-clinical_fiams,Clinical FIA-MS,winn_auto_qc,WiNN (QC-tuned),sample_replicate_pearson_median,0.990847998063996,higher,267,correlation,
-clinical_fiams,Clinical FIA-MS,winn_auto_batch_qc,WiNN (inferred segments),batch_weighted_pc_r2_categorical,0.00698232019049261,lower,536,weighted R-squared,Batch is explicitly categorical.
-clinical_fiams,Clinical FIA-MS,winn_auto_batch_qc,WiNN (inferred segments),biological_weighted_pc_r2,0.808935545781455,higher,536,weighted R-squared,
-clinical_fiams,Clinical FIA-MS,winn_auto_batch_qc,WiNN (inferred segments),feature_repeatability_ratio_median,0.67265435278078,higher,1594,repeatability ratio,
-clinical_fiams,Clinical FIA-MS,winn_auto_batch_qc,WiNN (inferred segments),genuine_replicate_icc_median,0.990850928299843,higher,267,"ICC(A,1)",
-clinical_fiams,Clinical FIA-MS,winn_auto_batch_qc,WiNN (inferred segments),heldout_qc_cv_mean,11.0300999455018,lower,1594,percent,
-clinical_fiams,Clinical FIA-MS,winn_auto_batch_qc,WiNN (inferred segments),residual_ljung_box_proportion_significant,0.109002509410289,lower,12752,proportion,
-clinical_fiams,Clinical FIA-MS,winn_auto_batch_qc,WiNN (inferred segments),residual_run_order_gam_mean_deviance,0.0752175087682554,lower,12752,proportion,
+clinical_fiams,Clinical FIA-MS,winn_auto_qc,WiNN (QC-tuned),runtime_sec,126.677,lower,1,seconds,measured method execution in frozen release
+clinical_fiams,Clinical FIA-MS,winn_auto_qc,WiNN (QC-tuned),sample_replicate_pearson_median,0.990838388157716,higher,267,correlation,
+clinical_fiams,Clinical FIA-MS,winn_auto_batch_qc,WiNN (inferred segments),batch_weighted_pc_r2_categorical,0.0113683590801682,lower,536,weighted R-squared,Batch is explicitly categorical.
+clinical_fiams,Clinical FIA-MS,winn_auto_batch_qc,WiNN (inferred segments),biological_weighted_pc_r2,0.808120990042306,higher,536,weighted R-squared,
+clinical_fiams,Clinical FIA-MS,winn_auto_batch_qc,WiNN (inferred segments),feature_repeatability_ratio_median,0.672549917384448,higher,1594,repeatability ratio,
+clinical_fiams,Clinical FIA-MS,winn_auto_batch_qc,WiNN (inferred segments),genuine_replicate_icc_median,0.990627243487714,higher,267,"ICC(A,1)",
+clinical_fiams,Clinical FIA-MS,winn_auto_batch_qc,WiNN (inferred segments),heldout_qc_cv_mean,10.9559629326732,lower,1594,percent,
+clinical_fiams,Clinical FIA-MS,winn_auto_batch_qc,WiNN (inferred segments),residual_ljung_box_proportion_significant,0.128999372647428,lower,12752,proportion,
+clinical_fiams,Clinical FIA-MS,winn_auto_batch_qc,WiNN (inferred segments),residual_run_order_gam_mean_deviance,0.0874359818432378,lower,12752,proportion,
 clinical_fiams,Clinical FIA-MS,winn_auto_batch_qc,WiNN (inferred segments),retained_features,1594,higher,1594,features,
 clinical_fiams,Clinical FIA-MS,winn_auto_batch_qc,WiNN (inferred segments),retained_samples,660,higher,660,samples,
-clinical_fiams,Clinical FIA-MS,winn_auto_batch_qc,WiNN (inferred segments),runtime_sec,32.663,lower,1,seconds,measured method execution in frozen release
-clinical_fiams,Clinical FIA-MS,winn_auto_batch_qc,WiNN (inferred segments),sample_replicate_pearson_median,0.990988516405754,higher,267,correlation,
-clinical_fiams,Clinical FIA-MS,winn_fixed_no_qc,WiNN,batch_weighted_pc_r2_categorical,0.00205430716992057,lower,536,weighted R-squared,Batch is explicitly categorical.
-clinical_fiams,Clinical FIA-MS,winn_fixed_no_qc,WiNN,biological_weighted_pc_r2,0.799363081954994,higher,536,weighted R-squared,
-clinical_fiams,Clinical FIA-MS,winn_fixed_no_qc,WiNN,feature_repeatability_ratio_median,0.659272129860823,higher,1594,repeatability ratio,
-clinical_fiams,Clinical FIA-MS,winn_fixed_no_qc,WiNN,genuine_replicate_icc_median,0.989834812702034,higher,267,"ICC(A,1)",
-clinical_fiams,Clinical FIA-MS,winn_fixed_no_qc,WiNN,heldout_qc_cv_mean,12.4044092100879,lower,1594,percent,
-clinical_fiams,Clinical FIA-MS,winn_fixed_no_qc,WiNN,residual_ljung_box_proportion_significant,0.0997490589711418,lower,12752,proportion,
-clinical_fiams,Clinical FIA-MS,winn_fixed_no_qc,WiNN,residual_run_order_gam_mean_deviance,0.0727686471322973,lower,12752,proportion,
+clinical_fiams,Clinical FIA-MS,winn_auto_batch_qc,WiNN (inferred segments),runtime_sec,153.025,lower,1,seconds,measured method execution in frozen release
+clinical_fiams,Clinical FIA-MS,winn_auto_batch_qc,WiNN (inferred segments),sample_replicate_pearson_median,0.990771227160817,higher,267,correlation,
+clinical_fiams,Clinical FIA-MS,winn_fixed_no_qc,WiNN,batch_weighted_pc_r2_categorical,0.00209422396564622,lower,536,weighted R-squared,Batch is explicitly categorical.
+clinical_fiams,Clinical FIA-MS,winn_fixed_no_qc,WiNN,biological_weighted_pc_r2,0.799359955820346,higher,536,weighted R-squared,
+clinical_fiams,Clinical FIA-MS,winn_fixed_no_qc,WiNN,feature_repeatability_ratio_median,0.663344034886438,higher,1594,repeatability ratio,
+clinical_fiams,Clinical FIA-MS,winn_fixed_no_qc,WiNN,genuine_replicate_icc_median,0.98986978429495,higher,267,"ICC(A,1)",
+clinical_fiams,Clinical FIA-MS,winn_fixed_no_qc,WiNN,heldout_qc_cv_mean,12.2947039890664,lower,1594,percent,
+clinical_fiams,Clinical FIA-MS,winn_fixed_no_qc,WiNN,residual_ljung_box_proportion_significant,0.0940244667503137,lower,12752,proportion,
+clinical_fiams,Clinical FIA-MS,winn_fixed_no_qc,WiNN,residual_run_order_gam_mean_deviance,0.0757278401912235,lower,12752,proportion,
 clinical_fiams,Clinical FIA-MS,winn_fixed_no_qc,WiNN,retained_features,1594,higher,1594,features,
 clinical_fiams,Clinical FIA-MS,winn_fixed_no_qc,WiNN,retained_samples,660,higher,660,samples,
-clinical_fiams,Clinical FIA-MS,winn_fixed_no_qc,WiNN,runtime_sec,10.922,lower,1,seconds,measured method execution in frozen release
-clinical_fiams,Clinical FIA-MS,winn_fixed_no_qc,WiNN,sample_replicate_pearson_median,0.990747863696587,higher,267,correlation,
+clinical_fiams,Clinical FIA-MS,winn_fixed_no_qc,WiNN,runtime_sec,49.639,lower,1,seconds,measured method execution in frozen release
+clinical_fiams,Clinical FIA-MS,winn_fixed_no_qc,WiNN,sample_replicate_pearson_median,0.99077811450428,higher,267,correlation,
 batchcorr_set1,BatchCorr Set 1,raw,Raw,batch_weighted_pc_r2_categorical,0.561111591272931,lower,710,weighted R-squared,Batch is explicitly categorical.
 batchcorr_set1,BatchCorr Set 1,raw,Raw,biological_associated_features,172,context,199,features,
 batchcorr_set1,BatchCorr Set 1,raw,Raw,biological_weighted_pc_r2,0.589667357711897,higher,710,weighted R-squared,
@@ -315,42 +315,42 @@ batchcorr_set1,BatchCorr Set 1,serrf,SERRF,retained_features,199,higher,199,feat
 batchcorr_set1,BatchCorr Set 1,serrf,SERRF,retained_samples,761,higher,761,samples,
 batchcorr_set1,BatchCorr Set 1,serrf,SERRF,runtime_sec,117.93,lower,1,seconds,measured method execution in frozen release
 batchcorr_set1,BatchCorr Set 1,serrf,SERRF,sample_replicate_pearson_median,0.948209823659858,higher,352,correlation,
-batchcorr_set1,BatchCorr Set 1,winn_auto_qc,WiNN (QC-tuned),batch_weighted_pc_r2_categorical,0.000566990241618206,lower,710,weighted R-squared,Batch is explicitly categorical.
-batchcorr_set1,BatchCorr Set 1,winn_auto_qc,WiNN (QC-tuned),biological_associated_features,197,context,199,features,
-batchcorr_set1,BatchCorr Set 1,winn_auto_qc,WiNN (QC-tuned),biological_weighted_pc_r2,0.843276697598098,higher,710,weighted R-squared,
-batchcorr_set1,BatchCorr Set 1,winn_auto_qc,WiNN (QC-tuned),feature_repeatability_ratio_median,0.701627398908381,higher,199,repeatability ratio,
-batchcorr_set1,BatchCorr Set 1,winn_auto_qc,WiNN (QC-tuned),genuine_replicate_icc_median,0.956281228043333,higher,352,"ICC(A,1)",
-batchcorr_set1,BatchCorr Set 1,winn_auto_qc,WiNN (QC-tuned),heldout_qc_cv_mean,23.9030303379891,lower,199,percent,
-batchcorr_set1,BatchCorr Set 1,winn_auto_qc,WiNN (QC-tuned),residual_ljung_box_proportion_significant,0.00603015075376884,lower,1990,proportion,
-batchcorr_set1,BatchCorr Set 1,winn_auto_qc,WiNN (QC-tuned),residual_run_order_gam_mean_deviance,0.0464906510990335,lower,1990,proportion,
+batchcorr_set1,BatchCorr Set 1,winn_auto_qc,WiNN (QC-tuned),batch_weighted_pc_r2_categorical,0.000576071222172701,lower,710,weighted R-squared,Batch is explicitly categorical.
+batchcorr_set1,BatchCorr Set 1,winn_auto_qc,WiNN (QC-tuned),biological_associated_features,198,context,199,features,
+batchcorr_set1,BatchCorr Set 1,winn_auto_qc,WiNN (QC-tuned),biological_weighted_pc_r2,0.843595079634981,higher,710,weighted R-squared,
+batchcorr_set1,BatchCorr Set 1,winn_auto_qc,WiNN (QC-tuned),feature_repeatability_ratio_median,0.69920224559821,higher,199,repeatability ratio,
+batchcorr_set1,BatchCorr Set 1,winn_auto_qc,WiNN (QC-tuned),genuine_replicate_icc_median,0.956358523036691,higher,352,"ICC(A,1)",
+batchcorr_set1,BatchCorr Set 1,winn_auto_qc,WiNN (QC-tuned),heldout_qc_cv_mean,23.9789694230996,lower,199,percent,
+batchcorr_set1,BatchCorr Set 1,winn_auto_qc,WiNN (QC-tuned),residual_ljung_box_proportion_significant,0.00402010050251256,lower,1990,proportion,
+batchcorr_set1,BatchCorr Set 1,winn_auto_qc,WiNN (QC-tuned),residual_run_order_gam_mean_deviance,0.0479966172977605,lower,1990,proportion,
 batchcorr_set1,BatchCorr Set 1,winn_auto_qc,WiNN (QC-tuned),retained_features,199,higher,199,features,
 batchcorr_set1,BatchCorr Set 1,winn_auto_qc,WiNN (QC-tuned),retained_samples,761,higher,761,samples,
-batchcorr_set1,BatchCorr Set 1,winn_auto_qc,WiNN (QC-tuned),runtime_sec,5.721,lower,1,seconds,measured method execution in frozen release
-batchcorr_set1,BatchCorr Set 1,winn_auto_qc,WiNN (QC-tuned),sample_replicate_pearson_median,0.956455981699553,higher,352,correlation,
-batchcorr_set1,BatchCorr Set 1,winn_auto_batch_qc,WiNN (inferred segments),batch_weighted_pc_r2_categorical,0.0125324272970689,lower,710,weighted R-squared,Batch is explicitly categorical.
+batchcorr_set1,BatchCorr Set 1,winn_auto_qc,WiNN (QC-tuned),runtime_sec,16.907,lower,1,seconds,measured method execution in frozen release
+batchcorr_set1,BatchCorr Set 1,winn_auto_qc,WiNN (QC-tuned),sample_replicate_pearson_median,0.956923389772809,higher,352,correlation,
+batchcorr_set1,BatchCorr Set 1,winn_auto_batch_qc,WiNN (inferred segments),batch_weighted_pc_r2_categorical,0.00684362608957494,lower,710,weighted R-squared,Batch is explicitly categorical.
 batchcorr_set1,BatchCorr Set 1,winn_auto_batch_qc,WiNN (inferred segments),biological_associated_features,198,context,199,features,
-batchcorr_set1,BatchCorr Set 1,winn_auto_batch_qc,WiNN (inferred segments),biological_weighted_pc_r2,0.832337531674397,higher,710,weighted R-squared,
-batchcorr_set1,BatchCorr Set 1,winn_auto_batch_qc,WiNN (inferred segments),feature_repeatability_ratio_median,0.697962844257478,higher,199,repeatability ratio,
-batchcorr_set1,BatchCorr Set 1,winn_auto_batch_qc,WiNN (inferred segments),genuine_replicate_icc_median,0.955033829071577,higher,352,"ICC(A,1)",
-batchcorr_set1,BatchCorr Set 1,winn_auto_batch_qc,WiNN (inferred segments),heldout_qc_cv_mean,24.8748188818013,lower,199,percent,
-batchcorr_set1,BatchCorr Set 1,winn_auto_batch_qc,WiNN (inferred segments),residual_ljung_box_proportion_significant,0.0170854271356784,lower,1990,proportion,
-batchcorr_set1,BatchCorr Set 1,winn_auto_batch_qc,WiNN (inferred segments),residual_run_order_gam_mean_deviance,0.0465432932186145,lower,1990,proportion,
+batchcorr_set1,BatchCorr Set 1,winn_auto_batch_qc,WiNN (inferred segments),biological_weighted_pc_r2,0.842206378319827,higher,710,weighted R-squared,
+batchcorr_set1,BatchCorr Set 1,winn_auto_batch_qc,WiNN (inferred segments),feature_repeatability_ratio_median,0.699853072090941,higher,199,repeatability ratio,
+batchcorr_set1,BatchCorr Set 1,winn_auto_batch_qc,WiNN (inferred segments),genuine_replicate_icc_median,0.955486347920345,higher,352,"ICC(A,1)",
+batchcorr_set1,BatchCorr Set 1,winn_auto_batch_qc,WiNN (inferred segments),heldout_qc_cv_mean,24.5107518385077,lower,199,percent,
+batchcorr_set1,BatchCorr Set 1,winn_auto_batch_qc,WiNN (inferred segments),residual_ljung_box_proportion_significant,0.0110552763819095,lower,1990,proportion,
+batchcorr_set1,BatchCorr Set 1,winn_auto_batch_qc,WiNN (inferred segments),residual_run_order_gam_mean_deviance,0.0432658551186248,lower,1990,proportion,
 batchcorr_set1,BatchCorr Set 1,winn_auto_batch_qc,WiNN (inferred segments),retained_features,199,higher,199,features,
 batchcorr_set1,BatchCorr Set 1,winn_auto_batch_qc,WiNN (inferred segments),retained_samples,761,higher,761,samples,
-batchcorr_set1,BatchCorr Set 1,winn_auto_batch_qc,WiNN (inferred segments),runtime_sec,6.761,lower,1,seconds,measured method execution in frozen release
-batchcorr_set1,BatchCorr Set 1,winn_auto_batch_qc,WiNN (inferred segments),sample_replicate_pearson_median,0.955530543368313,higher,352,correlation,
-batchcorr_set1,BatchCorr Set 1,winn_fixed_no_qc,WiNN,batch_weighted_pc_r2_categorical,0.000567147968917397,lower,710,weighted R-squared,Batch is explicitly categorical.
+batchcorr_set1,BatchCorr Set 1,winn_auto_batch_qc,WiNN (inferred segments),runtime_sec,19.272,lower,1,seconds,measured method execution in frozen release
+batchcorr_set1,BatchCorr Set 1,winn_auto_batch_qc,WiNN (inferred segments),sample_replicate_pearson_median,0.956049879417414,higher,352,correlation,
+batchcorr_set1,BatchCorr Set 1,winn_fixed_no_qc,WiNN,batch_weighted_pc_r2_categorical,0.00056347557327368,lower,710,weighted R-squared,Batch is explicitly categorical.
 batchcorr_set1,BatchCorr Set 1,winn_fixed_no_qc,WiNN,biological_associated_features,197,context,199,features,
-batchcorr_set1,BatchCorr Set 1,winn_fixed_no_qc,WiNN,biological_weighted_pc_r2,0.829484175037435,higher,710,weighted R-squared,
-batchcorr_set1,BatchCorr Set 1,winn_fixed_no_qc,WiNN,feature_repeatability_ratio_median,0.695315540683156,higher,199,repeatability ratio,
-batchcorr_set1,BatchCorr Set 1,winn_fixed_no_qc,WiNN,genuine_replicate_icc_median,0.953917516280415,higher,352,"ICC(A,1)",
-batchcorr_set1,BatchCorr Set 1,winn_fixed_no_qc,WiNN,heldout_qc_cv_mean,26.6652760811313,lower,199,percent,
-batchcorr_set1,BatchCorr Set 1,winn_fixed_no_qc,WiNN,residual_ljung_box_proportion_significant,0.0085427135678392,lower,1990,proportion,
-batchcorr_set1,BatchCorr Set 1,winn_fixed_no_qc,WiNN,residual_run_order_gam_mean_deviance,0.043772965202549,lower,1990,proportion,
+batchcorr_set1,BatchCorr Set 1,winn_fixed_no_qc,WiNN,biological_weighted_pc_r2,0.829218103060398,higher,710,weighted R-squared,
+batchcorr_set1,BatchCorr Set 1,winn_fixed_no_qc,WiNN,feature_repeatability_ratio_median,0.694332680397063,higher,199,repeatability ratio,
+batchcorr_set1,BatchCorr Set 1,winn_fixed_no_qc,WiNN,genuine_replicate_icc_median,0.953122814573985,higher,352,"ICC(A,1)",
+batchcorr_set1,BatchCorr Set 1,winn_fixed_no_qc,WiNN,heldout_qc_cv_mean,26.868779963016,lower,199,percent,
+batchcorr_set1,BatchCorr Set 1,winn_fixed_no_qc,WiNN,residual_ljung_box_proportion_significant,0.00301507537688442,lower,1990,proportion,
+batchcorr_set1,BatchCorr Set 1,winn_fixed_no_qc,WiNN,residual_run_order_gam_mean_deviance,0.044295687835247,lower,1990,proportion,
 batchcorr_set1,BatchCorr Set 1,winn_fixed_no_qc,WiNN,retained_features,199,higher,199,features,
 batchcorr_set1,BatchCorr Set 1,winn_fixed_no_qc,WiNN,retained_samples,761,higher,761,samples,
-batchcorr_set1,BatchCorr Set 1,winn_fixed_no_qc,WiNN,runtime_sec,2.324,lower,1,seconds,measured method execution in frozen release
-batchcorr_set1,BatchCorr Set 1,winn_fixed_no_qc,WiNN,sample_replicate_pearson_median,0.957541057965195,higher,352,correlation,
+batchcorr_set1,BatchCorr Set 1,winn_fixed_no_qc,WiNN,runtime_sec,8.351,lower,1,seconds,measured method execution in frozen release
+batchcorr_set1,BatchCorr Set 1,winn_fixed_no_qc,WiNN,sample_replicate_pearson_median,0.95776394316577,higher,352,correlation,
 sacurine,Sacurine,raw,Raw,batch_weighted_pc_r2_categorical,0.131658082609212,lower,184,weighted R-squared,Batch is explicitly categorical.
 sacurine,Sacurine,raw,Raw,biological_associated_features,30,context,339,feature-variable tests,
 sacurine,Sacurine,raw,Raw,biological_weighted_pc_r2,0.0241181676205405,higher,3,weighted R-squared,
@@ -401,36 +401,36 @@ sacurine,Sacurine,serrf,SERRF,residual_run_order_gam_mean_deviance,0.05558207754
 sacurine,Sacurine,serrf,SERRF,retained_features,113,higher,113,features,
 sacurine,Sacurine,serrf,SERRF,retained_samples,210,higher,210,samples,
 sacurine,Sacurine,serrf,SERRF,runtime_sec,,lower,1,seconds,not remeasured; cache retrieval time excluded
-sacurine,Sacurine,winn_auto_qc,WiNN (QC-tuned),batch_weighted_pc_r2_categorical,0.000415820234223158,lower,184,weighted R-squared,Batch is explicitly categorical.
+sacurine,Sacurine,winn_auto_qc,WiNN (QC-tuned),batch_weighted_pc_r2_categorical,0.0004032639001363,lower,184,weighted R-squared,Batch is explicitly categorical.
 sacurine,Sacurine,winn_auto_qc,WiNN (QC-tuned),biological_associated_features,47,context,339,feature-variable tests,
-sacurine,Sacurine,winn_auto_qc,WiNN (QC-tuned),biological_weighted_pc_r2,0.0488286682263038,higher,3,weighted R-squared,
-sacurine,Sacurine,winn_auto_qc,WiNN (QC-tuned),cross_batch_effect_pearson_median,0.566958884057713,higher,3,correlation,
-sacurine,Sacurine,winn_auto_qc,WiNN (QC-tuned),heldout_qc_cv_mean,16.0063160088905,lower,113,percent,
-sacurine,Sacurine,winn_auto_qc,WiNN (QC-tuned),residual_ljung_box_proportion_significant,0.0265486725663717,lower,226,proportion,
-sacurine,Sacurine,winn_auto_qc,WiNN (QC-tuned),residual_run_order_gam_mean_deviance,0.0435650355720423,lower,226,proportion,
+sacurine,Sacurine,winn_auto_qc,WiNN (QC-tuned),biological_weighted_pc_r2,0.0482561577860921,higher,3,weighted R-squared,
+sacurine,Sacurine,winn_auto_qc,WiNN (QC-tuned),cross_batch_effect_pearson_median,0.566359075310789,higher,3,correlation,
+sacurine,Sacurine,winn_auto_qc,WiNN (QC-tuned),heldout_qc_cv_mean,16.2386019069017,lower,113,percent,
+sacurine,Sacurine,winn_auto_qc,WiNN (QC-tuned),residual_ljung_box_proportion_significant,0.0221238938053097,lower,226,proportion,
+sacurine,Sacurine,winn_auto_qc,WiNN (QC-tuned),residual_run_order_gam_mean_deviance,0.0391366425544275,lower,226,proportion,
 sacurine,Sacurine,winn_auto_qc,WiNN (QC-tuned),retained_features,113,higher,113,features,
 sacurine,Sacurine,winn_auto_qc,WiNN (QC-tuned),retained_samples,210,higher,210,samples,
-sacurine,Sacurine,winn_auto_qc,WiNN (QC-tuned),runtime_sec,0.938,lower,1,seconds,measured method execution in frozen release
-sacurine,Sacurine,winn_auto_batch_qc,WiNN (inferred segments),batch_weighted_pc_r2_categorical,0.000489308961332933,lower,184,weighted R-squared,Batch is explicitly categorical.
-sacurine,Sacurine,winn_auto_batch_qc,WiNN (inferred segments),biological_associated_features,50,context,339,feature-variable tests,
-sacurine,Sacurine,winn_auto_batch_qc,WiNN (inferred segments),biological_weighted_pc_r2,0.0479565940051655,higher,3,weighted R-squared,
-sacurine,Sacurine,winn_auto_batch_qc,WiNN (inferred segments),cross_batch_effect_pearson_median,0.565550550372571,higher,3,correlation,
-sacurine,Sacurine,winn_auto_batch_qc,WiNN (inferred segments),heldout_qc_cv_mean,17.673468020507,lower,113,percent,
-sacurine,Sacurine,winn_auto_batch_qc,WiNN (inferred segments),residual_ljung_box_proportion_significant,0.0309734513274336,lower,226,proportion,
-sacurine,Sacurine,winn_auto_batch_qc,WiNN (inferred segments),residual_run_order_gam_mean_deviance,0.0397114522391577,lower,226,proportion,
+sacurine,Sacurine,winn_auto_qc,WiNN (QC-tuned),runtime_sec,4.945,lower,1,seconds,measured method execution in frozen release
+sacurine,Sacurine,winn_auto_batch_qc,WiNN (inferred segments),batch_weighted_pc_r2_categorical,0.000523323959401521,lower,184,weighted R-squared,Batch is explicitly categorical.
+sacurine,Sacurine,winn_auto_batch_qc,WiNN (inferred segments),biological_associated_features,47,context,339,feature-variable tests,
+sacurine,Sacurine,winn_auto_batch_qc,WiNN (inferred segments),biological_weighted_pc_r2,0.0478189626224523,higher,3,weighted R-squared,
+sacurine,Sacurine,winn_auto_batch_qc,WiNN (inferred segments),cross_batch_effect_pearson_median,0.567711051962308,higher,3,correlation,
+sacurine,Sacurine,winn_auto_batch_qc,WiNN (inferred segments),heldout_qc_cv_mean,17.702557119423,lower,113,percent,
+sacurine,Sacurine,winn_auto_batch_qc,WiNN (inferred segments),residual_ljung_box_proportion_significant,0.0353982300884956,lower,226,proportion,
+sacurine,Sacurine,winn_auto_batch_qc,WiNN (inferred segments),residual_run_order_gam_mean_deviance,0.039337787806004,lower,226,proportion,
 sacurine,Sacurine,winn_auto_batch_qc,WiNN (inferred segments),retained_features,113,higher,113,features,
 sacurine,Sacurine,winn_auto_batch_qc,WiNN (inferred segments),retained_samples,210,higher,210,samples,
-sacurine,Sacurine,winn_auto_batch_qc,WiNN (inferred segments),runtime_sec,1.243,lower,1,seconds,measured method execution in frozen release
-sacurine,Sacurine,winn_fixed_no_qc,WiNN,batch_weighted_pc_r2_categorical,0.000737747609499402,lower,184,weighted R-squared,Batch is explicitly categorical.
-sacurine,Sacurine,winn_fixed_no_qc,WiNN,biological_associated_features,48,context,339,feature-variable tests,
-sacurine,Sacurine,winn_fixed_no_qc,WiNN,biological_weighted_pc_r2,0.0457852706905809,higher,3,weighted R-squared,
-sacurine,Sacurine,winn_fixed_no_qc,WiNN,cross_batch_effect_pearson_median,0.537221386297552,higher,3,correlation,
-sacurine,Sacurine,winn_fixed_no_qc,WiNN,heldout_qc_cv_mean,22.421913234801,lower,113,percent,
+sacurine,Sacurine,winn_auto_batch_qc,WiNN (inferred segments),runtime_sec,2.542,lower,1,seconds,measured method execution in frozen release
+sacurine,Sacurine,winn_fixed_no_qc,WiNN,batch_weighted_pc_r2_categorical,0.000616942132061635,lower,184,weighted R-squared,Batch is explicitly categorical.
+sacurine,Sacurine,winn_fixed_no_qc,WiNN,biological_associated_features,53,context,339,feature-variable tests,
+sacurine,Sacurine,winn_fixed_no_qc,WiNN,biological_weighted_pc_r2,0.0465095988170269,higher,3,weighted R-squared,
+sacurine,Sacurine,winn_fixed_no_qc,WiNN,cross_batch_effect_pearson_median,0.536883850812268,higher,3,correlation,
+sacurine,Sacurine,winn_fixed_no_qc,WiNN,heldout_qc_cv_mean,22.2809713800768,lower,113,percent,
 sacurine,Sacurine,winn_fixed_no_qc,WiNN,residual_ljung_box_proportion_significant,0.0309734513274336,lower,226,proportion,
-sacurine,Sacurine,winn_fixed_no_qc,WiNN,residual_run_order_gam_mean_deviance,0.0520147926987853,lower,226,proportion,
+sacurine,Sacurine,winn_fixed_no_qc,WiNN,residual_run_order_gam_mean_deviance,0.051160470193612,lower,226,proportion,
 sacurine,Sacurine,winn_fixed_no_qc,WiNN,retained_features,113,higher,113,features,
 sacurine,Sacurine,winn_fixed_no_qc,WiNN,retained_samples,210,higher,210,samples,
-sacurine,Sacurine,winn_fixed_no_qc,WiNN,runtime_sec,3.296,lower,1,seconds,measured method execution in frozen release
+sacurine,Sacurine,winn_fixed_no_qc,WiNN,runtime_sec,1.359,lower,1,seconds,measured method execution in frozen release
 waveica,WaveICA,raw,Raw,batch_weighted_pc_r2_categorical,0.69436740649987,lower,568,weighted R-squared,Batch is explicitly categorical.
 waveica,WaveICA,raw,Raw,biological_associated_features,206,context,6461,features,
 waveica,WaveICA,raw,Raw,biological_weighted_pc_r2,0.00276573078388549,higher,568,weighted R-squared,
@@ -481,36 +481,36 @@ waveica,WaveICA,serrf,SERRF,residual_run_order_gam_mean_deviance,0.1172290395345
 waveica,WaveICA,serrf,SERRF,retained_features,6461,higher,6461,features,
 waveica,WaveICA,serrf,SERRF,retained_samples,642,higher,642,samples,
 waveica,WaveICA,serrf,SERRF,runtime_sec,2081.708,lower,1,seconds,measured method execution in frozen release
-waveica,WaveICA,winn_auto_qc,WiNN (QC-tuned),batch_weighted_pc_r2_categorical,0.00185791740415135,lower,568,weighted R-squared,Batch is explicitly categorical.
-waveica,WaveICA,winn_auto_qc,WiNN (QC-tuned),biological_associated_features,508,context,6461,features,
-waveica,WaveICA,winn_auto_qc,WiNN (QC-tuned),biological_weighted_pc_r2,0.0150023981703196,higher,568,weighted R-squared,
-waveica,WaveICA,winn_auto_qc,WiNN (QC-tuned),cross_batch_effect_pearson_median,0.283237072253612,higher,3,correlation,
-waveica,WaveICA,winn_auto_qc,WiNN (QC-tuned),heldout_qc_cv_mean,38.1178028673346,lower,6461,percent,
-waveica,WaveICA,winn_auto_qc,WiNN (QC-tuned),residual_ljung_box_proportion_significant,0.13780116597018,lower,19383,proportion,
-waveica,WaveICA,winn_auto_qc,WiNN (QC-tuned),residual_run_order_gam_mean_deviance,0.018349334505791,lower,19383,proportion,
+waveica,WaveICA,winn_auto_qc,WiNN (QC-tuned),batch_weighted_pc_r2_categorical,0.00218376777977605,lower,568,weighted R-squared,Batch is explicitly categorical.
+waveica,WaveICA,winn_auto_qc,WiNN (QC-tuned),biological_associated_features,482,context,6461,features,
+waveica,WaveICA,winn_auto_qc,WiNN (QC-tuned),biological_weighted_pc_r2,0.0145117768386976,higher,568,weighted R-squared,
+waveica,WaveICA,winn_auto_qc,WiNN (QC-tuned),cross_batch_effect_pearson_median,0.280263018542781,higher,3,correlation,
+waveica,WaveICA,winn_auto_qc,WiNN (QC-tuned),heldout_qc_cv_mean,37.6207146094369,lower,6461,percent,
+waveica,WaveICA,winn_auto_qc,WiNN (QC-tuned),residual_ljung_box_proportion_significant,0.137543207965743,lower,19383,proportion,
+waveica,WaveICA,winn_auto_qc,WiNN (QC-tuned),residual_run_order_gam_mean_deviance,0.0197768947062561,lower,19383,proportion,
 waveica,WaveICA,winn_auto_qc,WiNN (QC-tuned),retained_features,6461,higher,6461,features,
 waveica,WaveICA,winn_auto_qc,WiNN (QC-tuned),retained_samples,642,higher,642,samples,
-waveica,WaveICA,winn_auto_qc,WiNN (QC-tuned),runtime_sec,131.779,lower,1,seconds,measured method execution in frozen release
-waveica,WaveICA,winn_auto_batch_qc,WiNN (inferred segments),batch_weighted_pc_r2_categorical,0.481365148138614,lower,568,weighted R-squared,Batch is explicitly categorical.
-waveica,WaveICA,winn_auto_batch_qc,WiNN (inferred segments),biological_associated_features,276,context,6461,features,
-waveica,WaveICA,winn_auto_batch_qc,WiNN (inferred segments),biological_weighted_pc_r2,0.004566263614326,higher,568,weighted R-squared,
-waveica,WaveICA,winn_auto_batch_qc,WiNN (inferred segments),cross_batch_effect_pearson_median,0.268435255972362,higher,3,correlation,
-waveica,WaveICA,winn_auto_batch_qc,WiNN (inferred segments),heldout_qc_cv_mean,40.9082423195738,lower,6461,percent,
-waveica,WaveICA,winn_auto_batch_qc,WiNN (inferred segments),residual_ljung_box_proportion_significant,0.601558066346799,lower,19383,proportion,
-waveica,WaveICA,winn_auto_batch_qc,WiNN (inferred segments),residual_run_order_gam_mean_deviance,0.211998247026591,lower,19383,proportion,
+waveica,WaveICA,winn_auto_qc,WiNN (QC-tuned),runtime_sec,621.47,lower,1,seconds,measured method execution in frozen release
+waveica,WaveICA,winn_auto_batch_qc,WiNN (inferred segments),batch_weighted_pc_r2_categorical,0.0567629392259858,lower,568,weighted R-squared,Batch is explicitly categorical.
+waveica,WaveICA,winn_auto_batch_qc,WiNN (inferred segments),biological_associated_features,419,context,6461,features,
+waveica,WaveICA,winn_auto_batch_qc,WiNN (inferred segments),biological_weighted_pc_r2,0.00985951911960374,higher,568,weighted R-squared,
+waveica,WaveICA,winn_auto_batch_qc,WiNN (inferred segments),cross_batch_effect_pearson_median,0.281123806536697,higher,3,correlation,
+waveica,WaveICA,winn_auto_batch_qc,WiNN (inferred segments),heldout_qc_cv_mean,38.5404900930411,lower,6461,percent,
+waveica,WaveICA,winn_auto_batch_qc,WiNN (inferred segments),residual_ljung_box_proportion_significant,0.46117732033225,lower,19383,proportion,
+waveica,WaveICA,winn_auto_batch_qc,WiNN (inferred segments),residual_run_order_gam_mean_deviance,0.13824111701109,lower,19383,proportion,
 waveica,WaveICA,winn_auto_batch_qc,WiNN (inferred segments),retained_features,6461,higher,6461,features,
 waveica,WaveICA,winn_auto_batch_qc,WiNN (inferred segments),retained_samples,642,higher,642,samples,
-waveica,WaveICA,winn_auto_batch_qc,WiNN (inferred segments),runtime_sec,65.558,lower,1,seconds,measured method execution in frozen release
-waveica,WaveICA,winn_fixed_no_qc,WiNN,batch_weighted_pc_r2_categorical,0.00207900815504909,lower,568,weighted R-squared,Batch is explicitly categorical.
-waveica,WaveICA,winn_fixed_no_qc,WiNN,biological_associated_features,515,context,6461,features,
-waveica,WaveICA,winn_fixed_no_qc,WiNN,biological_weighted_pc_r2,0.0142279960061751,higher,568,weighted R-squared,
-waveica,WaveICA,winn_fixed_no_qc,WiNN,cross_batch_effect_pearson_median,0.266637781078006,higher,3,correlation,
-waveica,WaveICA,winn_fixed_no_qc,WiNN,heldout_qc_cv_mean,38.3003440498814,lower,6461,percent,
-waveica,WaveICA,winn_fixed_no_qc,WiNN,residual_ljung_box_proportion_significant,0.135118402724037,lower,19383,proportion,
-waveica,WaveICA,winn_fixed_no_qc,WiNN,residual_run_order_gam_mean_deviance,0.0141634445598343,lower,19383,proportion,
+waveica,WaveICA,winn_auto_batch_qc,WiNN (inferred segments),runtime_sec,508.11,lower,1,seconds,measured method execution in frozen release
+waveica,WaveICA,winn_fixed_no_qc,WiNN,batch_weighted_pc_r2_categorical,0.00256077164587594,lower,568,weighted R-squared,Batch is explicitly categorical.
+waveica,WaveICA,winn_fixed_no_qc,WiNN,biological_associated_features,494,context,6461,features,
+waveica,WaveICA,winn_fixed_no_qc,WiNN,biological_weighted_pc_r2,0.0137046516960974,higher,568,weighted R-squared,
+waveica,WaveICA,winn_fixed_no_qc,WiNN,cross_batch_effect_pearson_median,0.265366844270448,higher,3,correlation,
+waveica,WaveICA,winn_fixed_no_qc,WiNN,heldout_qc_cv_mean,37.6486290456886,lower,6461,percent,
+waveica,WaveICA,winn_fixed_no_qc,WiNN,residual_ljung_box_proportion_significant,0.130371975442398,lower,19383,proportion,
+waveica,WaveICA,winn_fixed_no_qc,WiNN,residual_run_order_gam_mean_deviance,0.0157259577250271,lower,19383,proportion,
 waveica,WaveICA,winn_fixed_no_qc,WiNN,retained_features,6461,higher,6461,features,
 waveica,WaveICA,winn_fixed_no_qc,WiNN,retained_samples,642,higher,642,samples,
-waveica,WaveICA,winn_fixed_no_qc,WiNN,runtime_sec,49.106,lower,1,seconds,measured method execution in frozen release
+waveica,WaveICA,winn_fixed_no_qc,WiNN,runtime_sec,386.266,lower,1,seconds,measured method execution in frozen release
 simulation,Truth-known simulation,qc_rfsc,QC-RFSC,heldout_qc_cv_mean,14.7280131359941,lower,1000,percent,
 simulation,Truth-known simulation,qc_rfsc,QC-RFSC,heldout_qc_cv_sd,9.97640419493849,lower,1000,percent,
 simulation,Truth-known simulation,qc_rfsc,QC-RFSC,heldout_qc_cv_median,13.6739926774638,lower,1000,percent,

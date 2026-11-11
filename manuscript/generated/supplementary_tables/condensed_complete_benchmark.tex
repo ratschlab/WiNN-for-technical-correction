@@ -1,0 +1,91 @@
+\begin{landscape}
+\scriptsize
+\begin{longtable}{lrrrrrr}
+\caption{Complete benchmark results for all outputs. QC CV is mean held-out reference CV (\%); GAM is residual run-order deviance explained (proportion); batch $R^2$ is categorical weighted-PC $R^2$ among study injections. Simulation cells are mean $\pm$ seed-level standard error and include clean-truth endpoints. Empirical cells are point estimates; brackets are 95\% percentile intervals from 2,000 paired bootstrap resamples of the independent biological unit, conditional on the fitted corrections. Replicate $r$ and ICC are replicate-profile Pearson correlation and within-identity feature-profile ICC(A,1); BH features counts group-associated features after Benjamini--Hochberg adjustment. $^{a}$QC-RFSC empirical rows are point estimates from the corrected adapter, whose resampling analyses were not repeated; 14, 37, 1, 2 and 459 features in MTBLS79, BatchCorr, the clinical cohort, Sacurine and WaveICA kept their input values after nonfinite fits.}\label{tab:supp_complete_benchmark}\\
+\toprule
+Method & QC CV (\%) & GAM & Batch $R^2$ & \multicolumn{3}{c}{Preservation endpoints} \\
+\midrule
+\endfirsthead
+\multicolumn{7}{l}{\textit{Table \thetable{} continued}}\\
+\toprule
+Method & QC CV (\%) & GAM & Batch $R^2$ & \multicolumn{3}{c}{Preservation endpoints} \\
+\midrule
+\endhead
+\midrule
+\multicolumn{7}{r}{\textit{Continued on next page}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+\multicolumn{4}{l}{\textbf{Simulation} (mean $\pm$ SE, ten seeds)} & \textit{RMSE} & \textit{ICC(A,1)} & \textit{Sample $r$} \\
+\midrule
+Raw & 44.55 $\pm$ 0.28 & 0.1251 $\pm$ 0.0010 & 0.9637 $\pm$ 0.0004 & 0.2927 $\pm$ 0.0015 & 0.5879 $\pm$ 0.0020 & 0.5189 $\pm$ 0.0021 \\
+ComBat & 12.55 $\pm$ 0.16 & 0.1251 $\pm$ 0.0010 & 0.0001 $\pm$ 0.0000 & 0.1031 $\pm$ 0.0004 & 0.8803 $\pm$ 0.0007 & 0.8806 $\pm$ 0.0007 \\
+QC-RLSC & 11.25 $\pm$ 0.20 & 0.0526 $\pm$ 0.0007 & 0.0001 $\pm$ 0.0000 & 0.0896 $\pm$ 0.0004 & 0.9060 $\pm$ 0.0008 & 0.9053 $\pm$ 0.0008 \\
+QC-RFSC & 15.92 $\pm$ 1.98 & 0.1189 $\pm$ 0.0030 & 0.1449 $\pm$ 0.0049 & 0.1290 $\pm$ 0.0025 & 0.8509 $\pm$ 0.0030 & 0.8229 $\pm$ 0.0059 \\
+TIGER & 9.53 $\pm$ 0.18 & 0.0830 $\pm$ 0.0006 & 0.0634 $\pm$ 0.0059 & 0.1143 $\pm$ 0.0012 & 0.8715 $\pm$ 0.0006 & 0.8492 $\pm$ 0.0025 \\
+SERRF & 12.61 $\pm$ 0.17 & 0.0966 $\pm$ 0.0007 & 0.0010 $\pm$ 0.0001 & 0.0965 $\pm$ 0.0007 & 0.8881 $\pm$ 0.0009 & 0.8765 $\pm$ 0.0016 \\
+WiNN (QC-tuned) & 8.41 $\pm$ 0.06 & 0.0199 $\pm$ 0.0003 & 0.0010 $\pm$ 0.0001 & 0.0719 $\pm$ 0.0004 & 0.9231 $\pm$ 0.0005 & 0.9250 $\pm$ 0.0010 \\
+WiNN (inferred segments) & 14.08 $\pm$ 0.66 & 0.1050 $\pm$ 0.0088 & 0.0869 $\pm$ 0.0061 & 0.0963 $\pm$ 0.0021 & 0.8720 $\pm$ 0.0041 & 0.8797 $\pm$ 0.0038 \\
+WiNN & 8.41 $\pm$ 0.06 & 0.0218 $\pm$ 0.0002 & 0.0008 $\pm$ 0.0001 & 0.0722 $\pm$ 0.0004 & 0.9231 $\pm$ 0.0005 & 0.9247 $\pm$ 0.0010 \\
+\midrule
+\multicolumn{4}{l}{\textbf{MTBLS79}} & \textit{Cow-sheep $R^2$ [95\% CI]} & \textit{Replicate $r$} & \textit{Batch-pair ICC} \\
+\midrule
+Raw & 28.76 & 0.142 & 0.361 & 0.435 [0.373, 0.470] & 0.952 & 0.549 \\
+ComBat & 16.09 & 0.142 & 0.006 & 0.439 [0.378, 0.475] & 0.978 & 0.696 \\
+QC-RLSC & 182.84 & 0.097 & 0.029 & 0.125 [0.102, 0.361] & 0.988 & 0.092 \\
+QC-RFSC$^{a}$ & 15.69 & 0.158 & 0.189 & -- & 0.960 & -- \\
+TIGER & 13.81 & 0.142 & 0.216 & 0.428 [0.364, 0.463] & 0.961 & 0.579 \\
+SERRF & 17.11 & 0.142 & 0.008 & 0.438 [0.378, 0.473] & 0.975 & 0.668 \\
+WiNN (QC-tuned) & 15.99 & 0.140 & 0.011 & 0.443 [0.379, 0.473] & 0.976 & 0.680 \\
+WiNN (inferred segments) & 16.66 & 0.141 & 0.025 & 0.441 [0.377, 0.474] & 0.974 & 0.669 \\
+WiNN & 16.68 & 0.140 & 0.011 & 0.442 [0.381, 0.474] & 0.975 & 0.674 \\
+\midrule
+\multicolumn{4}{l}{\textbf{BatchCorr Set 1}} & \textit{Replicate $r$ [95\% CI]} & \textit{Replicate ICC [95\% CI]} &  \\
+\midrule
+Raw & 66.57 & 0.122 & 0.56111 & 0.9115 [0.9046, 0.9237] & 0.8854 [0.8755, 0.8928] &  \\
+ComBat & 30.30 & 0.122 & 0.00045 & 0.9494 [0.9462, 0.9512] & 0.9403 [0.9370, 0.9441] &  \\
+QC-RLSC & 31.30 & 0.090 & 0.00019 & 0.9498 [0.9464, 0.9523] & 0.9423 [0.9386, 0.9460] &  \\
+QC-RFSC$^{a}$ & 42.92 & 0.121 & 0.16862 & 0.9182 & 0.9101 &  \\
+TIGER & 23.48 & 0.083 & 0.05269 & 0.9462 [0.9421, 0.9495] & 0.9392 [0.9362, 0.9428] &  \\
+SERRF & 30.28 & 0.122 & 0.00436 & 0.9482 [0.9444, 0.9507] & 0.9377 [0.9328, 0.9416] &  \\
+WiNN (QC-tuned) & 23.98 & 0.048 & 0.00058 & 0.9569 [0.9536, 0.9597] & 0.9564 [0.9532, 0.9593] &  \\
+WiNN (inferred segments) & 24.51 & 0.043 & 0.00684 & 0.9560 [0.9534, 0.9591] & 0.9555 [0.9525, 0.9588] &  \\
+WiNN & 26.87 & 0.044 & 0.00056 & 0.9578 [0.9545, 0.9607] & 0.9531 [0.9496, 0.9558] &  \\
+\midrule
+\multicolumn{4}{l}{\textbf{Clinical FIA-MS} (plate $R^2$)} & \textit{Replicate $r$ [95\% CI]} & \textit{Replicate ICC [95\% CI]} &  \\
+\midrule
+Raw & 16.59 & 0.120 & 0.15051 & 0.9835 [0.9813, 0.9847] & 0.9810 [0.9785, 0.9826] &  \\
+ComBat & 14.55 & 0.120 & 0.00326 & 0.9877 [0.9865, 0.9885] & 0.9859 [0.9844, 0.9869] &  \\
+QC-RLSC & 16.07 & 0.124 & 0.00150 & 0.9880 [0.9863, 0.9888] & 0.9856 [0.9839, 0.9872] &  \\
+QC-RFSC$^{a}$ & 16.88 & 0.117 & 0.02061 & 0.9862 & 0.9836 &  \\
+TIGER & 14.07 & 0.090 & 0.03028 & 0.9902 [0.9894, 0.9906] & 0.9892 [0.9884, 0.9901] &  \\
+SERRF & 14.12 & 0.108 & 0.00559 & 0.9890 [0.9884, 0.9896] & 0.9878 [0.9866, 0.9888] &  \\
+WiNN (QC-tuned) & 10.93 & 0.085 & 0.00217 & 0.9908 [0.9901, 0.9917] & 0.9907 [0.9899, 0.9916] &  \\
+WiNN (inferred segments) & 10.96 & 0.087 & 0.01137 & 0.9908 [0.9898, 0.9916] & 0.9906 [0.9897, 0.9915] &  \\
+WiNN & 12.29 & 0.076 & 0.00209 & 0.9908 [0.9901, 0.9915] & 0.9899 [0.9888, 0.9907] &  \\
+\midrule
+\multicolumn{4}{l}{\textbf{Sacurine}} & \textit{Age $R^2$ [95\% CI]} & \textit{BMI $R^2$ [95\% CI]} & \textit{Gender $R^2$ [95\% CI]} \\
+\midrule
+Raw & 32.60 & 0.068 & 0.1317 & 0.039 [0.024, 0.077] & 0.013 [0.005, 0.040] & 0.020 [0.009, 0.053] \\
+ComBat & 26.82 & 0.068 & 0.0005 & 0.039 [0.024, 0.078] & 0.013 [0.006, 0.041] & 0.028 [0.014, 0.065] \\
+QC-RLSC & 14.50 & 0.037 & 0.0001 & 0.052 [0.033, 0.108] & 0.017 [0.009, 0.050] & 0.048 [0.026, 0.091] \\
+QC-RFSC$^{a}$ & 13.64 & 0.034 & 0.0025 & -- & -- & -- \\
+TIGER & 10.19 & 0.039 & 0.0018 & 0.039 [0.024, 0.084] & 0.020 [0.008, 0.054] & 0.052 [0.027, 0.097] \\
+SERRF & 17.01 & 0.056 & 0.0019 & 0.043 [0.027, 0.088] & 0.018 [0.008, 0.052] & 0.038 [0.023, 0.087] \\
+WiNN (QC-tuned) & 16.24 & 0.039 & 0.0004 & 0.040 [0.028, 0.071] & 0.030 [0.011, 0.065] & 0.075 [0.033, 0.135] \\
+WiNN (inferred segments) & 17.70 & 0.039 & 0.0005 & 0.040 [0.028, 0.071] & 0.030 [0.011, 0.064] & 0.074 [0.032, 0.133] \\
+WiNN & 22.28 & 0.051 & 0.0006 & 0.058 [0.038, 0.092] & 0.031 [0.016, 0.066] & 0.051 [0.026, 0.105] \\
+\midrule
+\multicolumn{4}{l}{\textbf{WaveICA}} & \textit{Group $R^2$ [95\% CI]} & \textit{BH features} & \textit{Std.\ effect} \\
+\midrule
+Raw & 49.66 & 0.206 & 0.6944 & 0.0028 [0.0010, 0.0058] & 206 & 0.082 \\
+ComBat & 40.24 & 0.207 & 0.0005 & 0.0074 [0.0045, 0.0157] & 371 & 0.106 \\
+QC-RLSC & 39.33 & 0.109 & 0.0016 & 0.0115 [0.0065, 0.0220] & 432 & 0.111 \\
+QC-RFSC$^{a}$ & 28.89 & 0.128 & 0.5160 & -- & -- & -- \\
+TIGER & 26.14 & 0.113 & 0.5006 & 0.0067 [0.0033, 0.0126] & 262 & 0.099 \\
+SERRF & 34.04 & 0.117 & 0.0416 & 0.0094 [0.0054, 0.0186] & 329 & 0.104 \\
+WiNN (QC-tuned) & 37.62 & 0.020 & 0.0022 & 0.0145 [0.0086, 0.0269] & 485 & 0.123 \\
+WiNN (inferred segments) & 38.54 & 0.138 & 0.0568 & 0.0099 [0.0056, 0.0189] & 417 & 0.114 \\
+WiNN & 37.65 & 0.016 & 0.0026 & 0.0137 [0.0083, 0.0261] & 494 & 0.122 \\
+\end{longtable}
+\end{landscape}

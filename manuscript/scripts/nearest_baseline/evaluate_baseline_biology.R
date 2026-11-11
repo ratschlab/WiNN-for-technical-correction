@@ -15,6 +15,20 @@ read_input_csv<-function(path,...)read.csv(if(file.exists(path))path else paste0
 labels<-c(raw='Raw',combat='ComBat',qc_rlsc='QC-RLSC',tiger='TIGER',serrf='SERRF',
  winn_auto_qc='WiNN (QC-tuned)',winn_auto_batch_qc='WiNN (inferred segments)',winn_fixed_no_qc='WiNN',
  mean_batch_all='Mean-only batch',wehrens_ancova_all='Study-sample ANCOVA')
+# --reuse-baselines-from=<dir>: the two baseline fits do not depend on WiNN. Reuse
+# their retrieval draws, protocol counts, feature effects, LOBO effects and input
+# manifest from a previous run of this script in <dir> (same matrices, seeds and
+# draws), and recompute only Raw (as a check) and the frozen-method rows.
+reuse<-opt('--reuse-baselines-from');baseline_methods<-c('mean_batch_all','wehrens_ancova_all')
+if(!is.null(reuse)) {
+ reuse<-normalizePath(reuse,mustWork=TRUE)
+ prev<-list(est=read_input_csv(file.path(reuse,'frozen_identity_retrieval_estimates.csv'),stringsAsFactors=FALSE),
+  boot=read_input_csv(file.path(reuse,'retrieval_query_weighted_bootstrap_replicates.csv'),stringsAsFactors=FALSE),
+  protocol=read_input_csv(file.path(reuse,'baseline_identity_protocol_counts.csv'),stringsAsFactors=FALSE),
+  effects=read_input_csv(file.path(reuse,'baseline_empirical_feature_effects.csv'),stringsAsFactors=FALSE),
+  lobo=read_input_csv(file.path(reuse,'baseline_empirical_lobo_effects.csv'),stringsAsFactors=FALSE),
+  manifest=read_input_csv(file.path(reuse,'baseline_empirical_input_manifest.csv'),stringsAsFactors=FALSE))
+}
 old_path<-file.path(root,'generated/review_validation/frozen_identity_retrieval_estimates_before_query_weighting.csv')
 old_est<-read_input_csv(if(file.exists(old_path))old_path else file.path(root,'generated/review_validation/frozen_identity_retrieval_estimates.csv'))
 for(filename in c('frozen_identity_retrieval_estimates.csv','frozen_identity_retrieval_paired_differences.csv')) {
@@ -25,7 +39,8 @@ input_manifest<-list();estimates<-list();differences<-list();bootstrap_rows<-lis
 for(dataset in datasets) {
  p<-readRDS(file.path(input,paste0('input_',dataset,'.rds')));md<-p$meta;check(paste(dataset,'metadata alignment'),identical(colnames(p$x),as.character(md$sample_id)))
  values<-list(raw=p$x)
- for(method in c('mean_batch_all','wehrens_ancova_all')) {
+ if(!is.null(reuse)) input_manifest[[length(input_manifest)+1L]]<-prev$manifest[prev$manifest$dataset==dataset & prev$manifest$object%in%baseline_methods,,drop=FALSE]
+ for(method in if(is.null(reuse))baseline_methods else character()) {
   path<-file.path(matrices_root,dataset,paste0(method,'.rds'));x<-readRDS(path)
   check(paste(dataset,method,'dimensions and identifiers'),identical(dimnames(x),dimnames(p$x)) && all(is.finite(x)))
   values[[method]]<-x
@@ -92,7 +107,17 @@ for(dataset in datasets) {
    metric<-c('cross_batch_top1_accuracy','cross_batch_mean_reciprocal_rank')[j]
    bs<-sapply(identity_values,function(z)as.vector(weighted_counts %*% z[,j])/denominator)
    point<-vapply(identity_values,function(z)sum(unit_weights*z[,j])/sum(unit_weights),numeric(1))
-   for(method in names(identity_values)) {
+   if(!is.null(reuse)) for(method in baseline_methods) {
+    # Same seeds and draws: reuse the baseline's saved per-draw values and point.
+    v<-prev$boot[prev$boot$dataset==dataset & prev$boot$method_id==method & prev$boot$metric==metric,]
+    v<-v$value[match(seq_len(nrow(bs)),v$bootstrap)]
+    check(paste(dataset,method,metric,'reused baseline draws complete'),length(v)==nrow(bs) && all(is.finite(v)))
+    raw_prev<-prev$boot[prev$boot$dataset==dataset & prev$boot$method_id=='raw' & prev$boot$metric==metric,]
+    check(paste(dataset,metric,'reused draws share the recomputed raw series'),max(abs(raw_prev$value[match(seq_len(nrow(bs)),raw_prev$bootstrap)]-bs[,'raw']))<1e-12)
+    bs<-cbind(bs,v);colnames(bs)[ncol(bs)]<-method
+    point[[method]]<-prev$est$point_estimate[prev$est$dataset==dataset & prev$est$method_id==method & prev$est$metric==metric]
+   }
+   for(method in colnames(bs)) {
     v<-bs[,method];ci<-quantile(v,c(.025,.975));estimates[[length(estimates)+1L]]<-data.frame(method_id=method,method=labels[[method]],metric=metric,direction='higher',point_estimate=point[[method]],bootstrap_mean=mean(v),ci_lower=ci[1],ci_upper=ci[2],valid_bootstrap=length(v),dataset=dataset,uncertainty_scope='paired 2000-draw identity-cluster bootstrap retaining query-count weights; fitted correction and candidate set fixed')
     bootstrap_rows[[length(bootstrap_rows)+1L]]<-data.frame(dataset=dataset,bootstrap=seq_along(v),method_id=method,metric=metric,value=v)
     if(method!='winn_fixed_no_qc') {
@@ -113,6 +138,7 @@ for(dataset in datasets) {
    ties<-vapply(qi,function(i){eligible<-which(study_md$batch!=study_md$batch[i] & is.finite(sim[i,]));sum(sim[i,eligible]==max(sim[i,eligible]))>1},logical(1))
    protocol[[length(protocol)+1L]]<-data.frame(dataset=dataset,method_id=method,study_injections=nrow(study_md),eligible_queries=length(qi),eligible_identities=length(query_counts),all_identities=length(units),candidate_min=min(candidate_n),candidate_median=median(candidate_n),candidate_max=max(candidate_n),exact_top_ties=sum(ties),similarity='Pearson across features on log1p intensity',candidates='all finite-similarity study profiles in other batches; query requires same identity among candidates',tie_rule='stable decreasing similarity sort; first in original input-column order wins',bootstrap_replicates=2000)
   }
+  if(!is.null(reuse)) protocol[[length(protocol)+1L]]<-prev$protocol[prev$protocol$dataset==dataset & prev$protocol$method_id%in%baseline_methods,,drop=FALSE]
  } else {
   z<-lapply(values,function(x)log1p(x[,study,drop=FALSE]));md<-study_md
   if(dataset=='mtbls79'){
@@ -160,6 +186,19 @@ for(dataset in datasets) {
   historical_lobo<-historical_lobo[historical_lobo$method_id=='winn_fixed_no_qc' & historical_lobo$feature_panel=='all_common_features',]
   if(!'endpoint'%in%names(historical_lobo))historical_lobo$endpoint<-names(fits$raw)[1]
   historical_lobo$dataset<-dataset
+  if(!is.null(reuse)) {
+   # Reused baseline rows, then restore the original row order (dataset blocks;
+   # effects by method then endpoint; LOBO by held-out batch then method).
+   method_rank<-function(m)match(m,c('raw',baseline_methods,'winn_fixed_no_qc'))
+   start<-match(dataset,vapply(effect_rows,function(r)r$dataset[1],character(1)))
+   block<-rbind(do.call(rbind,effect_rows[start:length(effect_rows)]),prev$effects[prev$effects$dataset==dataset & prev$effects$method_id%in%baseline_methods,names(effect_rows[[start]]),drop=FALSE])
+   block<-block[order(method_rank(block$method_id),match(block$endpoint,unique(block$endpoint))),,drop=FALSE]
+   effect_rows<-c(effect_rows[seq_len(start-1L)],list(block))
+   lstart<-match(dataset,c(vapply(lobo_rows,function(r)r$dataset[1],character(1)),dataset))
+   lblock<-rbind(if(lstart<=length(lobo_rows))do.call(rbind,lobo_rows[lstart:length(lobo_rows)]),prev$lobo[prev$lobo$dataset==dataset & prev$lobo$method_id%in%baseline_methods,,drop=FALSE])
+   lblock<-lblock[order(match(lblock$heldout_batch,unique(md$batch)),method_rank(lblock$method_id)),,drop=FALSE]
+   lobo_rows<-c(lobo_rows[seq_len(lstart-1L)],list(lblock))
+  }
   lobo_rows[[length(lobo_rows)+1L]]<-historical_lobo[,c('dataset','method_id','endpoint','heldout_batch','pearson','spearman','sign_concordance','n_features')]
  }
 }
@@ -169,6 +208,7 @@ if(length(bootstrap_rows))write.csv(do.call(rbind,bootstrap_rows),gzfile(file.pa
 if(length(protocol))write.csv(do.call(rbind,protocol),file.path(out,'baseline_identity_protocol_counts.csv'),row.names=FALSE)
 if(length(effect_rows))write.csv(do.call(rbind,effect_rows),file.path(out,'baseline_empirical_feature_effects.csv'),row.names=FALSE)
 if(length(lobo_rows))write.csv(do.call(rbind,lobo_rows),file.path(out,'baseline_empirical_lobo_effects.csv'),row.names=FALSE)
+if(!is.null(reuse)) checks[[length(checks)+1L]]<-data.frame(check='baseline rows reused from previous run (not re-evaluated)',passed=TRUE,detail=paste(basename(reuse),'sha256',digest::digest(file.path(reuse,'baseline_empirical_feature_effects.csv'),file=TRUE,algo='sha256')))
 write.csv(do.call(rbind,checks),file.path(out,'baseline_biology_validation_checks.csv'),row.names=FALSE)
 write.csv(do.call(rbind,input_manifest),file.path(out,'baseline_empirical_input_manifest.csv'),row.names=FALSE)
 capture.output(sessionInfo(),file=file.path(out,'baseline_biology_sessionInfo.txt'))

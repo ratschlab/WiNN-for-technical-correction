@@ -11,7 +11,7 @@ restore:
 
 install-winn:
 	mkdir -p "$(PROJECT_LIB)"
-	R CMD INSTALL --library="$(PROJECT_LIB)" package/winn_0.1.4.tar.gz
+	R CMD INSTALL --library="$(PROJECT_LIB)" package/winn_0.1.6.tar.gz
 
 download:
 	python3 scripts/download_mtbls79.py
@@ -52,6 +52,8 @@ report:
 	python3 manuscript/scripts/assemble_supplementary_figures.py
 
 tables:
-	$(R) manuscript/scripts/generate_supplementary_tables.R --final-root=results/final/revision_inputs/supplement_20260727
+	$(R) manuscript/scripts/generate_supplementary_tables.R --final-root=results/final/revision_inputs/supplement_20261111
 	$(R) manuscript/scripts/nearest_baseline/generate_validation_tables.R
 	python3 manuscript/scripts/generate_review2_support_tables.py
+	$(R) manuscript/scripts/generate_s24_paired_effects_table.R
+	python3 manuscript/scripts/condense_supplementary_tables.py

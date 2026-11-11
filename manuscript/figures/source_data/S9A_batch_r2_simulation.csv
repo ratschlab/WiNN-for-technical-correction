@@ -1,0 +1,6 @@
+dataset_key,dataset,stage,value,id
+simulation,Simulation,Raw,0.965647338615417,1
+simulation,Simulation,Outlier shrinkage,0.96654180919283,1
+simulation,Simulation,Selective drift,0.988644543399555,1
+simulation,Simulation,Selective batch,0.00105305722086291,1
+simulation,Simulation,PQN,0.00104441467773887,1

@@ -19,6 +19,18 @@ suppressPackageStartupMessages({
   library(ggplot2)
 })
 
+# Optional method filter for WiNN-only re-runs. When WINN_RERUN_METHODS is set
+# (comma-separated method_id values), only those methods are read; competitor
+# results are reused from the previous frozen release and spliced in afterwards
+# (analysis/splice_winn_rerun.R). Unset means all methods, as before.
+rerun_methods <- strsplit(Sys.getenv("WINN_RERUN_METHODS", unset = ""), ",", fixed = TRUE)[[1]]
+rerun_methods <- trimws(rerun_methods[nzchar(trimws(rerun_methods))])
+filter_rerun_methods <- function(table) {
+  if (!length(rerun_methods)) return(table)
+  table[as.character(table$method_id) %in% rerun_methods, , drop = FALSE]
+}
+
+
 dataset_order <- c(
   "simulation", "mtbls79", "clinical_fiams", "batchcorr_set1",
   "sacurine", "waveica"
@@ -125,9 +137,9 @@ primary$dataset <- factor(primary$dataset, levels = unname(dataset_labels))
 primary$method <- factor(primary$method, levels = method_order)
 primary <- primary[order(primary$dataset, primary$method, primary$metric), ]
 
-primary_tasks <- read_required(file.path(
+primary_tasks <- filter_rerun_methods(read_required(file.path(
   release_root, "analysis", "config", "primary_run_matrix.csv"
-))
+)))
 primary_runtime_policy <- bind_rows(lapply(seq_len(nrow(primary_tasks)), function(index) {
   task <- primary_tasks[index, , drop = FALSE]
   manifest <- jsonlite::read_json(
@@ -470,12 +482,12 @@ read_seed_metrics <- function(family) {
 seed_methods <- read_seed_metrics("methods")
 seed_ablations <- read_seed_metrics("ablations")
 
-runtime_methods <- read_required(file.path(
+runtime_methods <- filter_rerun_methods(read_required(file.path(
   release_root, "analysis", "config", "method_manifest.csv"
-))
-simulation_runtime_tasks <- read_required(file.path(
+)))
+simulation_runtime_tasks <- filter_rerun_methods(read_required(file.path(
   release_root, "analysis", "config", "simulation_task_manifest.csv"
-))
+)))
 seed_runtime_policy <- bind_rows(lapply(sprintf("SIM%02d", 1:10), function(seed_id) {
   bind_rows(lapply(seq_len(nrow(runtime_methods)), function(index) {
     method_id <- as.character(runtime_methods$method_id[index])
@@ -567,9 +579,9 @@ reference_summary <- summarise_values(
 )
 write.csv(reference_summary, file.path(table_dir, "reference_split_summary.csv"), row.names = FALSE, na = "")
 
-reference_tasks <- read_required(file.path(
+reference_tasks <- filter_rerun_methods(read_required(file.path(
   release_root, "analysis", "config", "reference_split_task_manifest.csv"
-))
+)))
 selection_rows <- vector("list", nrow(reference_tasks))
 candidate_rows <- list()
 candidate_row_index <- 0L
@@ -1021,11 +1033,14 @@ figure_manifest$png <- ifelse(
 write.csv(figure_manifest, file.path(figure_dir, "figure_manifest.csv"), row.names = FALSE)
 
 utils::capture.output(sessionInfo(), file = file.path(final_dir, "sessionInfo.txt"))
+frozen_aggregate_spec <- jsonlite::read_json(
+  file.path(release_root, "package", "frozen_package.json"), simplifyVector = TRUE
+)
 jsonlite::write_json(
   list(
-    schema = "endpoint_free_winn_0.1.4_final_aggregate_v1",
-    package_version = "0.1.4",
-    package_sha256 = "71a0964cee2778b2e5789d20621147e074c7945e813cf76af2ceeb696104aae1",
+    schema = paste0("endpoint_free_winn_", frozen_aggregate_spec$version, "_final_aggregate_v1"),
+    package_version = frozen_aggregate_spec$version,
+    package_sha256 = frozen_aggregate_spec$source_archive_sha256,
     datasets = dataset_order, methods = method_order,
     task_completion = completion,
     completed_at = format(Sys.time(), "%Y-%m-%dT%H:%M:%S%z")

@@ -1,10 +1,10 @@
 method_id,method,metric,direction,point_estimate,bootstrap_mean,ci_lower,ci_upper,valid_bootstrap,dataset_key,dataset,method_label
-raw,Raw,sample_replicate_pearson_median,higher,0.911453639180002,0.912723079580538,0.904608504723684,0.923686632425548,2000,batchcorr_set1,BatchCorr Set 1,Raw
-combat,ComBat,sample_replicate_pearson_median,higher,0.949355926423882,0.949023486525064,0.94618530306462,0.951160983011952,2000,batchcorr_set1,BatchCorr Set 1,ComBat
+raw,Raw,sample_replicate_pearson_median,higher,0.911453639180002,0.912723079580538,0.904608504723685,0.923686632425548,2000,batchcorr_set1,BatchCorr Set 1,Raw
+combat,ComBat,sample_replicate_pearson_median,higher,0.949355926423882,0.949023486525063,0.94618530306462,0.951160983011952,2000,batchcorr_set1,BatchCorr Set 1,ComBat
 qc_rlsc,QC-RLSC,sample_replicate_pearson_median,higher,0.949840425728828,0.949698403863937,0.946374818607103,0.952340687470841,2000,batchcorr_set1,BatchCorr Set 1,QC-RLSC
 qc_rfsc,QC-RFSC,sample_replicate_pearson_median,higher,0.994723502030228,0.99472381431164,0.99413174668838,0.995284862844877,2000,batchcorr_set1,BatchCorr Set 1,QC-RFSC
 tiger,TIGER,sample_replicate_pearson_median,higher,0.946168373317856,0.94622773276262,0.942107379734783,0.949494550350147,2000,batchcorr_set1,BatchCorr Set 1,TIGER
-serrf,SERRF,sample_replicate_pearson_median,higher,0.948209823659858,0.94801044254199,0.944407376039178,0.950652801064203,2000,batchcorr_set1,BatchCorr Set 1,SERRF
-winn_auto_qc,WiNN auto (QC),sample_replicate_pearson_median,higher,0.956455981699553,0.956753725925189,0.954219455251126,0.959442858945003,2000,batchcorr_set1,BatchCorr Set 1,WiNN auto
-winn_auto_batch_qc,WiNN auto-batch (QC),sample_replicate_pearson_median,higher,0.955530543368313,0.955607509162859,0.952537925326145,0.958915013093217,2000,batchcorr_set1,BatchCorr Set 1,WiNN auto-batch
-winn_fixed_no_qc,WiNN fixed default (no QC),sample_replicate_pearson_median,higher,0.957541057965195,0.957397514453025,0.954723094158962,0.96007659661818,2000,batchcorr_set1,BatchCorr Set 1,WiNN fixed
+serrf,SERRF,sample_replicate_pearson_median,higher,0.948209823659858,0.94801044254199,0.944407376039179,0.950652801064203,2000,batchcorr_set1,BatchCorr Set 1,SERRF
+winn_auto_qc,WiNN auto (QC),sample_replicate_pearson_median,higher,0.95692338977281,0.956931830163867,0.953592657427508,0.959721469234693,2000,batchcorr_set1,BatchCorr Set 1,WiNN auto
+winn_auto_batch_qc,WiNN auto-batch (QC),sample_replicate_pearson_median,higher,0.956049879417414,0.956004978520917,0.95343137721081,0.95908355111396,2000,batchcorr_set1,BatchCorr Set 1,WiNN auto-batch
+winn_fixed_no_qc,WiNN fixed default (no QC),sample_replicate_pearson_median,higher,0.95776394316577,0.957507538999391,0.954455569699175,0.960675199074637,2000,batchcorr_set1,BatchCorr Set 1,WiNN fixed

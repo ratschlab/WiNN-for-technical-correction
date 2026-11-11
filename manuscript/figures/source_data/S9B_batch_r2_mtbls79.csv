@@ -1,0 +1,6 @@
+dataset_key,dataset,stage,value,id
+mtbls79,MTBLS79,Raw,0.36098533296055,2
+mtbls79,MTBLS79,Outlier shrinkage,0.357984777237142,2
+mtbls79,MTBLS79,Selective drift,0.358112733471753,2
+mtbls79,MTBLS79,Selective batch,0.0108828350455865,2
+mtbls79,MTBLS79,PQN,0.0108837435440364,2

@@ -1,0 +1,67 @@
+\begin{landscape}
+\scriptsize
+\begin{longtable}{p{2.6cm}p{3.4cm}p{9.6cm}rp{3.6cm}}
+\caption{Selected correction settings for every dataset and method. Comparator candidates were prespecified or scored on labelled training QCs only. WiNN (QC-tuned) and WiNN (inferred segments) selected settings from the package grid (36 or 72 candidates; Section~S1) using training QCs only; segment counts are shown in parentheses. WiNN uses one prespecified configuration in every dataset and receives no QC identities. Raw is the identity operation, and TIGER uses its native $4\times4$ ensemble with injection order and 500 trees in every dataset.}\label{tab:supp_selected_parameters}\\
+\toprule
+Dataset & Method & Selected settings & Candidates & Selection \\
+\midrule
+\endfirsthead
+\multicolumn{5}{l}{\textit{Table \thetable{} continued}}\\
+\toprule
+Dataset & Method & Selected settings & Candidates & Selection \\
+\midrule
+\endhead
+\midrule
+\multicolumn{5}{r}{\textit{Continued on next page}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+Simulation & ComBat & par\_prior=TRUE & 1 & Prespecified or native \\
+Simulation & QC-RLSC & span=0.75; degree=1 & 1 & Prespecified or native \\
+Simulation & QC-RFSC & ntree=500; coCV=30; Frule=0.8 & 1 & Prespecified or native \\
+Simulation & SERRF & jitter\_eps=0; documented fallback only after numerical failure & 1 & Prespecified or native \\
+Simulation & WiNN (QC-tuned) & batches supplied (5); Ljung-Box; standard smoother; drift FDR 0.10; batch FDR 0.01; PQN conservative & grid & Package training-QC score \\
+Simulation & WiNN (inferred segments) & batches inferred (2); Ljung-Box; standard smoother; drift FDR 0.05; batch FDR 0.10; PQN conservative & grid & Package training-QC score \\
+Simulation & WiNN & batches supplied (5); Ljung-Box; conservative smoother; drift FDR 0.05; batch FDR 0.05; PQN conservative & 1 & Prespecified \\
+\midrule
+MTBLS79 & ComBat & par\_prior=TRUE & 2 & Training-QC score \\
+MTBLS79 & QC-RLSC & span=0.7; degree=1 & 4 & Training-QC score \\
+MTBLS79 & QC-RFSC & ntree=500; coCV=30; Frule=0.8 & 4 & Training-QC score \\
+MTBLS79 & SERRF & jitter\_eps=1e-5 & 3 & Training-QC score \\
+MTBLS79 & WiNN (QC-tuned) & batches supplied (8); Ljung-Box; standard smoother; drift FDR 0.10; batch FDR 0.10; PQN full & grid & Package training-QC score \\
+MTBLS79 & WiNN (inferred segments) & batches inferred (3); Ljung-Box; conservative smoother; drift FDR 0.10; batch FDR 0.01; PQN full & grid & Package training-QC score \\
+MTBLS79 & WiNN & batches supplied (8); Ljung-Box; conservative smoother; drift FDR 0.05; batch FDR 0.05; PQN conservative & 1 & Prespecified \\
+\midrule
+Clinical FIA-MS & ComBat & par\_prior=FALSE & 2 & Training-QC score \\
+Clinical FIA-MS & QC-RLSC & span=0.9; degree=1 & 4 & Training-QC score \\
+Clinical FIA-MS & QC-RFSC & ntree=500; coCV=30; Frule=0.8 & 4 & Training-QC score \\
+Clinical FIA-MS & SERRF & jitter\_eps=0 & 3 & Training-QC score \\
+Clinical FIA-MS & WiNN (QC-tuned) & batches supplied (8); Ljung-Box; conservative smoother; drift FDR 0.01; batch FDR 0.10; PQN full & grid & Package training-QC score \\
+Clinical FIA-MS & WiNN (inferred segments) & batches inferred (2); Ljung-Box; conservative smoother; drift FDR 0.10; batch FDR 0.01; PQN full & grid & Package training-QC score \\
+Clinical FIA-MS & WiNN & batches supplied (8); Ljung-Box; conservative smoother; drift FDR 0.05; batch FDR 0.05; PQN conservative & 1 & Prespecified \\
+\midrule
+BatchCorr Set 1 & ComBat & par\_prior=TRUE & 2 & Training-QC score \\
+BatchCorr Set 1 & QC-RLSC & span=1; degree=1; sparse-QC safeguard & 1 & Prespecified or native \\
+BatchCorr Set 1 & QC-RFSC & ntree=200; coCV=30; Frule=0.8 & 4 & Training-QC score \\
+BatchCorr Set 1 & SERRF & jitter\_eps=1e-5 & 3 & Training-QC score \\
+BatchCorr Set 1 & WiNN (QC-tuned) & batches supplied (10); Ljung-Box; conservative smoother; drift FDR 0.01; batch FDR 0.01; PQN full & grid & Package training-QC score \\
+BatchCorr Set 1 & WiNN (inferred segments) & batches inferred (6); Ljung-Box; standard smoother; drift FDR 0.10; batch FDR 0.10; PQN full & grid & Package training-QC score \\
+BatchCorr Set 1 & WiNN & batches supplied (10); Ljung-Box; conservative smoother; drift FDR 0.05; batch FDR 0.05; PQN conservative & 1 & Prespecified \\
+\midrule
+Sacurine & ComBat & par\_prior=TRUE & 1 & Prespecified or native \\
+Sacurine & QC-RLSC & span=0.9; degree=1 & 4 & Training-QC score \\
+Sacurine & QC-RFSC & ntree=500; coCV=30; Frule=0.8 & 4 & Training-QC score \\
+Sacurine & SERRF & jitter\_eps=0 & 3 & Training-QC score \\
+Sacurine & WiNN (QC-tuned) & batches supplied (2); Ljung-Box; conservative smoother; drift FDR 0.10; batch FDR 0.10; PQN full & grid & Package training-QC score \\
+Sacurine & WiNN (inferred segments) & batches inferred (3); Ljung-Box; standard smoother; drift FDR 0.01; batch FDR 0.10; PQN full & grid & Package training-QC score \\
+Sacurine & WiNN & batches supplied (2); Ljung-Box; conservative smoother; drift FDR 0.05; batch FDR 0.05; PQN conservative & 1 & Prespecified \\
+\midrule
+WaveICA & ComBat & par\_prior=TRUE & 1 & Prespecified or native \\
+WaveICA & QC-RLSC & span=0.9; degree=1 & 4 & Training-QC score \\
+WaveICA & QC-RFSC & ntree=500; coCV=30; Frule=0.8 & 4 & Training-QC score \\
+WaveICA & SERRF & jitter\_eps=1e-5 & 3 & Training-QC score \\
+WaveICA & WiNN (QC-tuned) & batches supplied (3); Ljung-Box; conservative smoother; drift FDR 0.01; batch FDR 0.05; PQN full & grid & Package training-QC score \\
+WaveICA & WiNN (inferred segments) & batches inferred (1); Ljung-Box; conservative smoother; drift FDR 0.10; batch FDR 0.10; PQN full & grid & Package training-QC score \\
+WaveICA & WiNN & batches supplied (3); Ljung-Box; conservative smoother; drift FDR 0.05; batch FDR 0.05; PQN conservative & 1 & Prespecified \\
+\end{longtable}
+\end{landscape}

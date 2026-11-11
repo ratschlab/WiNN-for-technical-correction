@@ -1,0 +1,8 @@
+Generated 17 supplementary TeX tables in /tmp/winn_table_reproduction/manuscript/generated/supplementary_tables
+Validated 225 checks; integrated 160 simulation metrics.
+Generated stage-response, group-balance and reference-placement tables.
+wrote /tmp/winn_table_reproduction/manuscript/generated/supplementary_tables/table_s24_paired_feature_effects.tex with 35 rows
+wrote generated/supplementary_tables/condensed_selected_settings.tex
+wrote generated/supplementary_tables/condensed_complete_benchmark.tex
+wrote generated/supplementary_tables/condensed_selective_forced.tex
+wrote generated/supplementary_tables/condensed_baselines.tex

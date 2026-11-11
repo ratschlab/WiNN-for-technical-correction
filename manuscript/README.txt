@@ -23,10 +23,16 @@ Analysis identifiers and API values retain their original names.
 
 Reproducible figure and table generators are in scripts/. Supporting tables,
 validation results and provenance are in generated/. Private clinical matrices
-and identity maps are excluded. The numerical benchmark uses WiNN 0.1.4; the
-current package distribution is available on CRAN.
+and identity maps are excluded. All benchmark results use WiNN 0.1.6 (package
+commit 50b72a4, frozen 11 November 2026), which corrects the mgcv smoother calls
+of earlier versions; only WiNN outputs were recomputed, and raw and comparator
+outputs are reused from the validated 0.1.4 release.
 
-Current code/results snapshot:
-https://github.com/ratschlab/WiNN-for-technical-correction/tree/97e5ea3cadb44fe74ee914528ff19a2940fe95d7
-The later documentation commit links these sources to that immutable analysis
-revision; the benchmark source remains WiNN 0.1.4.
+The supplement prints 13 condensed tables assembled by
+scripts/condense_supplementary_tables.py; generated/supplementary_table_data/README.md
+maps them to the detailed generator outputs, which remain available as source data.
+Every numerical claim in the text was audited against these source files
+before release.
+
+Code and results: https://github.com/ratschlab/WiNN-for-technical-correction
+(pin the analysis revision once the WiNN 0.1.6 release branch is committed).

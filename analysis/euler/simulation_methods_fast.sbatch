@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=winn014_sim
+#SBATCH --job-name=winn016_sim
 #SBATCH --output=slurm-%x-%A_%a.out
 #SBATCH --error=slurm-%x-%A_%a.err
 #SBATCH --time=12:00:00
@@ -8,9 +8,14 @@
 #SBATCH --array=1-4,6-13,15-22,24-31,33-40,42-49,51-58,60-67,69-76,78-85,87-90%30
 
 set -euo pipefail
-source ~/.bashrc >/tmp/winn_bashrc_${SLURM_JOB_ID}.log 2>&1
-source ~/.bash_profile >/tmp/winn_profile_${SLURM_JOB_ID}.log 2>&1
-module load r/4.5.1
+# Clean Lmod initialisation; personal shell profiles are not sourced so that no
+# user LD_LIBRARY_PATH or module defaults leak into the frozen environment.
+set +u
+source /cluster/apps/local/env2lmod.sh >/dev/null 2>&1 || true
+module purge >/dev/null 2>&1 || true
+module load stack/2024-06 gcc/12.2.0 r/4.5.1
+set -u
+export LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
 : "${WINN_RELEASE_ROOT:?Set WINN_RELEASE_ROOT before submitting the job}"
 export WINN_CANONICAL_SOURCE_ROOT="${WINN_CANONICAL_SOURCE_ROOT:-${WINN_RELEASE_ROOT}}"
 export R_LIBS_USER="${WINN_R_LIBS_USER:-${WINN_RELEASE_ROOT}/Rlib}"

@@ -5,18 +5,18 @@
 "mtbls79","MTBLS79","qc_rfsc","QC-RFSC","cow_vs_sheep",2488,1085,0.113680716615738,0.952100958512684,0.0135332186259791
 "mtbls79","MTBLS79","tiger","TIGER","cow_vs_sheep",2488,1038,0.202376381078116,0.909641084506214,0.049991904165747
 "mtbls79","MTBLS79","serrf","SERRF","cow_vs_sheep",2488,1090,0.216869162137714,0.945961064208937,0.0513967759865574
-"mtbls79","MTBLS79","winn_auto_qc","WiNN auto (QC)","cow_vs_sheep",2488,1100,0.205455675250304,0.960058932589999,0.0487761627991253
-"mtbls79","MTBLS79","winn_auto_batch_qc","WiNN auto-batch (QC)","cow_vs_sheep",2488,1088,0.20600285918397,0.982317105459816,0.0490588915849323
-"mtbls79","MTBLS79","winn_fixed_no_qc","WiNN fixed default (no QC)","cow_vs_sheep",2488,1100,0.213493229814878,0.96502876026588,0.0494167039667892
+"mtbls79","MTBLS79","winn_auto_qc","WiNN auto (QC)","cow_vs_sheep",2488,1102,0.205516781383118,0.959555268497325,0.0487652072351399
+"mtbls79","MTBLS79","winn_auto_batch_qc","WiNN auto-batch (QC)","cow_vs_sheep",2488,1085,0.205974311711707,0.975395164725154,0.049619939163489
+"mtbls79","MTBLS79","winn_fixed_no_qc","WiNN fixed default (no QC)","cow_vs_sheep",2488,1097,0.213497325846827,0.958465745826627,0.0494845610909809
 "waveica","WaveICA","raw","Raw","biological_group",6461,206,0.0541405422517265,0.0823361700796896,0.420172370954563
 "waveica","WaveICA","combat","ComBat","biological_group",6461,371,0.0557701513698863,0.105906266482528,0.270505568731812
 "waveica","WaveICA","qc_rlsc","QC-RLSC","biological_group",6461,432,0.0539590472090374,0.111448418335858,0.252643944822068
 "waveica","WaveICA","qc_rfsc","QC-RFSC","biological_group",6461,403,0.0224716875296688,0.100065077278681,0.050967815306853
 "waveica","WaveICA","tiger","TIGER","biological_group",6461,262,0.0532729544340924,0.0993162745222783,0.269927287797491
 "waveica","WaveICA","serrf","SERRF","biological_group",6461,329,0.0531880108764291,0.104498473604411,0.246781341050058
-"waveica","WaveICA","winn_auto_qc","WiNN auto (QC)","biological_group",6461,511,0.0528975020832121,0.124663927385724,0.196369560595998
-"waveica","WaveICA","winn_auto_batch_qc","WiNN auto-batch (QC)","biological_group",6461,277,0.0519745355317394,0.0939806619314346,0.291340324211739
-"waveica","WaveICA","winn_fixed_no_qc","WiNN fixed default (no QC)","biological_group",6461,516,0.0521660311149166,0.123944015294534,0.194891999568232
+"waveica","WaveICA","winn_auto_qc","WiNN auto (QC)","biological_group",6461,485,0.0525012790218611,0.122983611080914,0.198835087568361
+"waveica","WaveICA","winn_auto_batch_qc","WiNN auto-batch (QC)","biological_group",6461,417,0.0531373964809472,0.114336342862546,0.215772751652632
+"waveica","WaveICA","winn_fixed_no_qc","WiNN fixed default (no QC)","biological_group",6461,494,0.0520986328182342,0.121968861439667,0.19896467372442
 "sacurine","Sacurine","raw","Raw","age",113,16,0.0977062156424283,0.0982202864404306,0.881405449058044
 "sacurine","Sacurine","raw","Raw","bmi",113,0,0.0571680204125793,0.0610323899184006,0.881405449058044
 "sacurine","Sacurine","raw","Raw","gender",113,14,0.229640187535481,0.225663115073118,0.881405449058044
@@ -35,12 +35,12 @@
 "sacurine","Sacurine","serrf","SERRF","age",113,17,0.0955936108292296,0.0936894249479017,0.780392610950937
 "sacurine","Sacurine","serrf","SERRF","bmi",113,1,0.0557221924922759,0.0623274864579409,0.780392610950937
 "sacurine","Sacurine","serrf","SERRF","gender",113,23,0.229879106994996,0.258231553260942,0.780392610950937
-"sacurine","Sacurine","winn_auto_qc","WiNN auto (QC)","age",113,20,0.0683951050542262,0.0818138039983975,0.67941441952676
-"sacurine","Sacurine","winn_auto_qc","WiNN auto (QC)","bmi",113,1,0.0762527500352599,0.0917821843328855,0.67941441952676
-"sacurine","Sacurine","winn_auto_qc","WiNN auto (QC)","gender",113,29,0.237733597779503,0.298141537511528,0.67941441952676
-"sacurine","Sacurine","winn_auto_batch_qc","WiNN auto-batch (QC)","age",113,18,0.0679109853687264,0.0791714588483556,0.671950562937578
-"sacurine","Sacurine","winn_auto_batch_qc","WiNN auto-batch (QC)","bmi",113,5,0.0778150349498914,0.0923884774650991,0.671950562937578
-"sacurine","Sacurine","winn_auto_batch_qc","WiNN auto-batch (QC)","gender",113,27,0.239350862269162,0.281413654384813,0.671950562937578
-"sacurine","Sacurine","winn_fixed_no_qc","WiNN fixed default (no QC)","age",113,23,0.0929201896242506,0.11254951399163,0.587536038582416
-"sacurine","Sacurine","winn_fixed_no_qc","WiNN fixed default (no QC)","bmi",113,4,0.0651938248814475,0.0820188286406308,0.587536038582416
-"sacurine","Sacurine","winn_fixed_no_qc","WiNN fixed default (no QC)","gender",113,22,0.220766089681412,0.272519597639509,0.587536038582416
+"sacurine","Sacurine","winn_auto_qc","WiNN auto (QC)","age",113,19,0.0678752005873994,0.0808325580670643,0.67602000567463
+"sacurine","Sacurine","winn_auto_qc","WiNN auto (QC)","bmi",113,1,0.0761010556379247,0.0909915015508109,0.67602000567463
+"sacurine","Sacurine","winn_auto_qc","WiNN auto (QC)","gender",113,29,0.238901722505169,0.299991599809819,0.67602000567463
+"sacurine","Sacurine","winn_auto_batch_qc","WiNN auto-batch (QC)","age",113,18,0.0679444373108175,0.0803849449563924,0.668819236654062
+"sacurine","Sacurine","winn_auto_batch_qc","WiNN auto-batch (QC)","bmi",113,3,0.0790932051482695,0.0916360354508948,0.668819236654062
+"sacurine","Sacurine","winn_auto_batch_qc","WiNN auto-batch (QC)","gender",113,27,0.240694457552805,0.286646643656133,0.668819236654062
+"sacurine","Sacurine","winn_fixed_no_qc","WiNN fixed default (no QC)","age",113,23,0.0905825645483593,0.111019028511654,0.591760197007984
+"sacurine","Sacurine","winn_fixed_no_qc","WiNN fixed default (no QC)","bmi",113,5,0.0705153271780129,0.0814204894318038,0.591760197007984
+"sacurine","Sacurine","winn_fixed_no_qc","WiNN fixed default (no QC)","gender",113,24,0.221825321241232,0.279996470340775,0.591760197007984

@@ -11,6 +11,16 @@ split_id <- arg_value("--split-id")
 
 release_root <- Sys.getenv("WINN_RELEASE_ROOT", unset = "")
 if (!nzchar(release_root)) stop("WINN_RELEASE_ROOT is not set.", call. = FALSE)
+# Optional method filter for WiNN-only re-runs. When WINN_RERUN_METHODS is set
+# (comma-separated method_id values), only those methods are read; competitor
+# results are reused from the previous frozen release and spliced in afterwards
+# (analysis/splice_winn_rerun.R). Unset means all methods, as before.
+rerun_methods <- strsplit(Sys.getenv("WINN_RERUN_METHODS", unset = ""), ",", fixed = TRUE)[[1]]
+rerun_methods <- trimws(rerun_methods[nzchar(trimws(rerun_methods))])
+filter_rerun_methods <- function(table) {
+  if (!length(rerun_methods)) return(table)
+  table[as.character(table$method_id) %in% rerun_methods, , drop = FALSE]
+}
 source(file.path(release_root, "analysis", "release_helpers.R"), local = FALSE)
 source(file.path(release_root, "analysis", "evaluation_helpers.R"), local = FALSE)
 prepared <- release_load_dataset(dataset_key)
@@ -25,10 +35,10 @@ prepared$hidden_ids <- as.character(assignment$sample_id[assignment$assignment =
 # stability. Fixed external clinical references remain excluded here.
 prepared$external_ids <- character()
 
-methods <- read.csv(
+methods <- filter_rerun_methods(read.csv(
   file.path(release_root, "analysis", "config", "method_manifest.csv"),
   stringsAsFactors = FALSE
-)
+))
 output_dir <- file.path(release_root, "results", "evaluation", "reference_splits", dataset_key, split_id)
 dir.create(output_dir, recursive = TRUE, showWarnings = FALSE)
 completion_path <- file.path(output_dir, "complete.json")

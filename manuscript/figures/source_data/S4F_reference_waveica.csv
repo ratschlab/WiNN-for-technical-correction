@@ -4,78 +4,78 @@
 "heldout_qc_cv_mean",41.6995653089239,"lower",6461,"percent",NA,"waveica","qc_rlsc","QC-RLSC","SPLIT01","WaveICA","Held-out QC CV (%)","QC-RLSC",42.0519068549754
 "heldout_qc_cv_mean",25.564261985711,"lower",6461,"percent",NA,"waveica","tiger","TIGER","SPLIT01","WaveICA","Held-out QC CV (%)","TIGER",25.6866922011282
 "heldout_qc_cv_mean",34.2520184037082,"lower",6461,"percent",NA,"waveica","serrf","SERRF","SPLIT01","WaveICA","Held-out QC CV (%)","SERRF",34.1585382017811
-"heldout_qc_cv_mean",38.9352870626393,"lower",6461,"percent",NA,"waveica","winn_auto_qc","WiNN (QC-tuned)","SPLIT01","WaveICA","Held-out QC CV (%)","WiNN (QC-tuned)",39.9576477565506
-"heldout_qc_cv_mean",41.4731890739093,"lower",6461,"percent",NA,"waveica","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT01","WaveICA","Held-out QC CV (%)","WiNN (inferred segments)",42.6572499183477
-"heldout_qc_cv_mean",39.1213407199101,"lower",6461,"percent",NA,"waveica","winn_fixed_no_qc","WiNN","SPLIT01","WaveICA","Held-out QC CV (%)","WiNN",39.3194308145146
+"heldout_qc_cv_mean",38.3780508569381,"lower",6461,"percent",NA,"waveica","winn_auto_qc","WiNN (QC-tuned)","SPLIT01","WaveICA","Held-out QC CV (%)","WiNN (QC-tuned)",38.796017400654
+"heldout_qc_cv_mean",40.7401590056742,"lower",6461,"percent",NA,"waveica","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT01","WaveICA","Held-out QC CV (%)","WiNN (inferred segments)",41.928193382787
+"heldout_qc_cv_mean",38.4233837774731,"lower",6461,"percent",NA,"waveica","winn_fixed_no_qc","WiNN","SPLIT01","WaveICA","Held-out QC CV (%)","WiNN",38.8139104049945
 "heldout_qc_cv_mean",51.9068528852617,"lower",6461,"percent",NA,"waveica","raw","Raw","SPLIT02","WaveICA","Held-out QC CV (%)","Raw",50.0605277110386
 "heldout_qc_cv_mean",42.4842572015363,"lower",6461,"percent",NA,"waveica","combat","ComBat","SPLIT02","WaveICA","Held-out QC CV (%)","ComBat",40.977815851764
 "heldout_qc_cv_mean",42.238741571233,"lower",6461,"percent",NA,"waveica","qc_rlsc","QC-RLSC","SPLIT02","WaveICA","Held-out QC CV (%)","QC-RLSC",42.0519068549754
 "heldout_qc_cv_mean",26.2038841679234,"lower",6461,"percent",NA,"waveica","tiger","TIGER","SPLIT02","WaveICA","Held-out QC CV (%)","TIGER",25.6866922011282
 "heldout_qc_cv_mean",34.4700061124981,"lower",6461,"percent",NA,"waveica","serrf","SERRF","SPLIT02","WaveICA","Held-out QC CV (%)","SERRF",34.1585382017811
-"heldout_qc_cv_mean",40.2637475751824,"lower",6461,"percent",NA,"waveica","winn_auto_qc","WiNN (QC-tuned)","SPLIT02","WaveICA","Held-out QC CV (%)","WiNN (QC-tuned)",39.9576477565506
-"heldout_qc_cv_mean",44.1375171257227,"lower",6461,"percent",NA,"waveica","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT02","WaveICA","Held-out QC CV (%)","WiNN (inferred segments)",42.6572499183477
-"heldout_qc_cv_mean",39.901540358371,"lower",6461,"percent",NA,"waveica","winn_fixed_no_qc","WiNN","SPLIT02","WaveICA","Held-out QC CV (%)","WiNN",39.3194308145146
+"heldout_qc_cv_mean",39.2556880197296,"lower",6461,"percent",NA,"waveica","winn_auto_qc","WiNN (QC-tuned)","SPLIT02","WaveICA","Held-out QC CV (%)","WiNN (QC-tuned)",38.796017400654
+"heldout_qc_cv_mean",43.4363080512116,"lower",6461,"percent",NA,"waveica","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT02","WaveICA","Held-out QC CV (%)","WiNN (inferred segments)",41.928193382787
+"heldout_qc_cv_mean",39.2840265648185,"lower",6461,"percent",NA,"waveica","winn_fixed_no_qc","WiNN","SPLIT02","WaveICA","Held-out QC CV (%)","WiNN",38.8139104049945
 "heldout_qc_cv_mean",49.122555207139,"lower",6461,"percent",NA,"waveica","raw","Raw","SPLIT03","WaveICA","Held-out QC CV (%)","Raw",50.0605277110386
 "heldout_qc_cv_mean",42.023633057022,"lower",6461,"percent",NA,"waveica","combat","ComBat","SPLIT03","WaveICA","Held-out QC CV (%)","ComBat",40.977815851764
 "heldout_qc_cv_mean",43.4063486450603,"lower",6461,"percent",NA,"waveica","qc_rlsc","QC-RLSC","SPLIT03","WaveICA","Held-out QC CV (%)","QC-RLSC",42.0519068549754
 "heldout_qc_cv_mean",26.6065327354618,"lower",6461,"percent",NA,"waveica","tiger","TIGER","SPLIT03","WaveICA","Held-out QC CV (%)","TIGER",25.6866922011282
 "heldout_qc_cv_mean",34.741727378664,"lower",6461,"percent",NA,"waveica","serrf","SERRF","SPLIT03","WaveICA","Held-out QC CV (%)","SERRF",34.1585382017811
-"heldout_qc_cv_mean",40.4512940987779,"lower",6461,"percent",NA,"waveica","winn_auto_qc","WiNN (QC-tuned)","SPLIT03","WaveICA","Held-out QC CV (%)","WiNN (QC-tuned)",39.9576477565506
-"heldout_qc_cv_mean",42.5390850370179,"lower",6461,"percent",NA,"waveica","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT03","WaveICA","Held-out QC CV (%)","WiNN (inferred segments)",42.6572499183477
-"heldout_qc_cv_mean",39.6288211089439,"lower",6461,"percent",NA,"waveica","winn_fixed_no_qc","WiNN","SPLIT03","WaveICA","Held-out QC CV (%)","WiNN",39.3194308145146
+"heldout_qc_cv_mean",39.1245592526793,"lower",6461,"percent",NA,"waveica","winn_auto_qc","WiNN (QC-tuned)","SPLIT03","WaveICA","Held-out QC CV (%)","WiNN (QC-tuned)",38.796017400654
+"heldout_qc_cv_mean",41.5015415907511,"lower",6461,"percent",NA,"waveica","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT03","WaveICA","Held-out QC CV (%)","WiNN (inferred segments)",41.928193382787
+"heldout_qc_cv_mean",39.1110928378247,"lower",6461,"percent",NA,"waveica","winn_fixed_no_qc","WiNN","SPLIT03","WaveICA","Held-out QC CV (%)","WiNN",38.8139104049945
 "heldout_qc_cv_mean",50.5339068590698,"lower",6461,"percent",NA,"waveica","raw","Raw","SPLIT04","WaveICA","Held-out QC CV (%)","Raw",50.0605277110386
 "heldout_qc_cv_mean",39.948990684096,"lower",6461,"percent",NA,"waveica","combat","ComBat","SPLIT04","WaveICA","Held-out QC CV (%)","ComBat",40.977815851764
 "heldout_qc_cv_mean",43.0770562251366,"lower",6461,"percent",NA,"waveica","qc_rlsc","QC-RLSC","SPLIT04","WaveICA","Held-out QC CV (%)","QC-RLSC",42.0519068549754
 "heldout_qc_cv_mean",25.2272096620226,"lower",6461,"percent",NA,"waveica","tiger","TIGER","SPLIT04","WaveICA","Held-out QC CV (%)","TIGER",25.6866922011282
 "heldout_qc_cv_mean",33.943902391579,"lower",6461,"percent",NA,"waveica","serrf","SERRF","SPLIT04","WaveICA","Held-out QC CV (%)","SERRF",34.1585382017811
-"heldout_qc_cv_mean",39.5468018234515,"lower",6461,"percent",NA,"waveica","winn_auto_qc","WiNN (QC-tuned)","SPLIT04","WaveICA","Held-out QC CV (%)","WiNN (QC-tuned)",39.9576477565506
-"heldout_qc_cv_mean",43.009643388891,"lower",6461,"percent",NA,"waveica","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT04","WaveICA","Held-out QC CV (%)","WiNN (inferred segments)",42.6572499183477
-"heldout_qc_cv_mean",38.8625731675437,"lower",6461,"percent",NA,"waveica","winn_fixed_no_qc","WiNN","SPLIT04","WaveICA","Held-out QC CV (%)","WiNN",39.3194308145146
+"heldout_qc_cv_mean",38.3679781881974,"lower",6461,"percent",NA,"waveica","winn_auto_qc","WiNN (QC-tuned)","SPLIT04","WaveICA","Held-out QC CV (%)","WiNN (QC-tuned)",38.796017400654
+"heldout_qc_cv_mean",42.172661518194,"lower",6461,"percent",NA,"waveica","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT04","WaveICA","Held-out QC CV (%)","WiNN (inferred segments)",41.928193382787
+"heldout_qc_cv_mean",38.4125040238197,"lower",6461,"percent",NA,"waveica","winn_fixed_no_qc","WiNN","SPLIT04","WaveICA","Held-out QC CV (%)","WiNN",38.8139104049945
 "heldout_qc_cv_mean",49.1930266636205,"lower",6461,"percent",NA,"waveica","raw","Raw","SPLIT05","WaveICA","Held-out QC CV (%)","Raw",50.0605277110386
 "heldout_qc_cv_mean",39.7687057831819,"lower",6461,"percent",NA,"waveica","combat","ComBat","SPLIT05","WaveICA","Held-out QC CV (%)","ComBat",40.977815851764
 "heldout_qc_cv_mean",40.9254323462496,"lower",6461,"percent",NA,"waveica","qc_rlsc","QC-RLSC","SPLIT05","WaveICA","Held-out QC CV (%)","QC-RLSC",42.0519068549754
 "heldout_qc_cv_mean",25.6407706982382,"lower",6461,"percent",NA,"waveica","tiger","TIGER","SPLIT05","WaveICA","Held-out QC CV (%)","TIGER",25.6866922011282
 "heldout_qc_cv_mean",33.9544302825771,"lower",6461,"percent",NA,"waveica","serrf","SERRF","SPLIT05","WaveICA","Held-out QC CV (%)","SERRF",34.1585382017811
-"heldout_qc_cv_mean",39.5392298157996,"lower",6461,"percent",NA,"waveica","winn_auto_qc","WiNN (QC-tuned)","SPLIT05","WaveICA","Held-out QC CV (%)","WiNN (QC-tuned)",39.9576477565506
-"heldout_qc_cv_mean",41.8031125211462,"lower",6461,"percent",NA,"waveica","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT05","WaveICA","Held-out QC CV (%)","WiNN (inferred segments)",42.6572499183477
-"heldout_qc_cv_mean",39.0160264162903,"lower",6461,"percent",NA,"waveica","winn_fixed_no_qc","WiNN","SPLIT05","WaveICA","Held-out QC CV (%)","WiNN",39.3194308145146
+"heldout_qc_cv_mean",38.5198786797498,"lower",6461,"percent",NA,"waveica","winn_auto_qc","WiNN (QC-tuned)","SPLIT05","WaveICA","Held-out QC CV (%)","WiNN (QC-tuned)",38.796017400654
+"heldout_qc_cv_mean",40.5415494980564,"lower",6461,"percent",NA,"waveica","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT05","WaveICA","Held-out QC CV (%)","WiNN (inferred segments)",41.928193382787
+"heldout_qc_cv_mean",38.4798242667812,"lower",6461,"percent",NA,"waveica","winn_fixed_no_qc","WiNN","SPLIT05","WaveICA","Held-out QC CV (%)","WiNN",38.8139104049945
 "heldout_qc_cv_mean",49.227588589972,"lower",6461,"percent",NA,"waveica","raw","Raw","SPLIT06","WaveICA","Held-out QC CV (%)","Raw",50.0605277110386
 "heldout_qc_cv_mean",41.0796529916698,"lower",6461,"percent",NA,"waveica","combat","ComBat","SPLIT06","WaveICA","Held-out QC CV (%)","ComBat",40.977815851764
 "heldout_qc_cv_mean",43.1415145821068,"lower",6461,"percent",NA,"waveica","qc_rlsc","QC-RLSC","SPLIT06","WaveICA","Held-out QC CV (%)","QC-RLSC",42.0519068549754
 "heldout_qc_cv_mean",26.3960882183357,"lower",6461,"percent",NA,"waveica","tiger","TIGER","SPLIT06","WaveICA","Held-out QC CV (%)","TIGER",25.6866922011282
 "heldout_qc_cv_mean",34.5822059152346,"lower",6461,"percent",NA,"waveica","serrf","SERRF","SPLIT06","WaveICA","Held-out QC CV (%)","SERRF",34.1585382017811
-"heldout_qc_cv_mean",41.9047415621245,"lower",6461,"percent",NA,"waveica","winn_auto_qc","WiNN (QC-tuned)","SPLIT06","WaveICA","Held-out QC CV (%)","WiNN (QC-tuned)",39.9576477565506
-"heldout_qc_cv_mean",42.7256671954106,"lower",6461,"percent",NA,"waveica","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT06","WaveICA","Held-out QC CV (%)","WiNN (inferred segments)",42.6572499183477
-"heldout_qc_cv_mean",39.9434363451706,"lower",6461,"percent",NA,"waveica","winn_fixed_no_qc","WiNN","SPLIT06","WaveICA","Held-out QC CV (%)","WiNN",39.3194308145146
+"heldout_qc_cv_mean",39.7127164686712,"lower",6461,"percent",NA,"waveica","winn_auto_qc","WiNN (QC-tuned)","SPLIT06","WaveICA","Held-out QC CV (%)","WiNN (QC-tuned)",38.796017400654
+"heldout_qc_cv_mean",43.1661262618057,"lower",6461,"percent",NA,"waveica","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT06","WaveICA","Held-out QC CV (%)","WiNN (inferred segments)",41.928193382787
+"heldout_qc_cv_mean",39.7332726126627,"lower",6461,"percent",NA,"waveica","winn_fixed_no_qc","WiNN","SPLIT06","WaveICA","Held-out QC CV (%)","WiNN",38.8139104049945
 "heldout_qc_cv_mean",47.3345193090441,"lower",6461,"percent",NA,"waveica","raw","Raw","SPLIT07","WaveICA","Held-out QC CV (%)","Raw",50.0605277110386
 "heldout_qc_cv_mean",38.4919766651504,"lower",6461,"percent",NA,"waveica","combat","ComBat","SPLIT07","WaveICA","Held-out QC CV (%)","ComBat",40.977815851764
 "heldout_qc_cv_mean",38.1787959536601,"lower",6461,"percent",NA,"waveica","qc_rlsc","QC-RLSC","SPLIT07","WaveICA","Held-out QC CV (%)","QC-RLSC",42.0519068549754
 "heldout_qc_cv_mean",24.1770210794309,"lower",6461,"percent",NA,"waveica","tiger","TIGER","SPLIT07","WaveICA","Held-out QC CV (%)","TIGER",25.6866922011282
 "heldout_qc_cv_mean",32.7453793438783,"lower",6461,"percent",NA,"waveica","serrf","SERRF","SPLIT07","WaveICA","Held-out QC CV (%)","SERRF",34.1585382017811
-"heldout_qc_cv_mean",37.4244651497356,"lower",6461,"percent",NA,"waveica","winn_auto_qc","WiNN (QC-tuned)","SPLIT07","WaveICA","Held-out QC CV (%)","WiNN (QC-tuned)",39.9576477565506
-"heldout_qc_cv_mean",40.1150722230751,"lower",6461,"percent",NA,"waveica","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT07","WaveICA","Held-out QC CV (%)","WiNN (inferred segments)",42.6572499183477
-"heldout_qc_cv_mean",36.3782117251536,"lower",6461,"percent",NA,"waveica","winn_fixed_no_qc","WiNN","SPLIT07","WaveICA","Held-out QC CV (%)","WiNN",39.3194308145146
+"heldout_qc_cv_mean",35.8800503350576,"lower",6461,"percent",NA,"waveica","winn_auto_qc","WiNN (QC-tuned)","SPLIT07","WaveICA","Held-out QC CV (%)","WiNN (QC-tuned)",38.796017400654
+"heldout_qc_cv_mean",40.3535400527476,"lower",6461,"percent",NA,"waveica","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT07","WaveICA","Held-out QC CV (%)","WiNN (inferred segments)",41.928193382787
+"heldout_qc_cv_mean",35.8429564861911,"lower",6461,"percent",NA,"waveica","winn_fixed_no_qc","WiNN","SPLIT07","WaveICA","Held-out QC CV (%)","WiNN",38.8139104049945
 "heldout_qc_cv_mean",52.1773611197173,"lower",6461,"percent",NA,"waveica","raw","Raw","SPLIT08","WaveICA","Held-out QC CV (%)","Raw",50.0605277110386
 "heldout_qc_cv_mean",43.1326717926442,"lower",6461,"percent",NA,"waveica","combat","ComBat","SPLIT08","WaveICA","Held-out QC CV (%)","ComBat",40.977815851764
 "heldout_qc_cv_mean",42.7870267393888,"lower",6461,"percent",NA,"waveica","qc_rlsc","QC-RLSC","SPLIT08","WaveICA","Held-out QC CV (%)","QC-RLSC",42.0519068549754
 "heldout_qc_cv_mean",26.022871555182,"lower",6461,"percent",NA,"waveica","tiger","TIGER","SPLIT08","WaveICA","Held-out QC CV (%)","TIGER",25.6866922011282
 "heldout_qc_cv_mean",34.6026330660121,"lower",6461,"percent",NA,"waveica","serrf","SERRF","SPLIT08","WaveICA","Held-out QC CV (%)","SERRF",34.1585382017811
-"heldout_qc_cv_mean",40.7786487617556,"lower",6461,"percent",NA,"waveica","winn_auto_qc","WiNN (QC-tuned)","SPLIT08","WaveICA","Held-out QC CV (%)","WiNN (QC-tuned)",39.9576477565506
-"heldout_qc_cv_mean",43.8928761693292,"lower",6461,"percent",NA,"waveica","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT08","WaveICA","Held-out QC CV (%)","WiNN (inferred segments)",42.6572499183477
-"heldout_qc_cv_mean",40.326964795574,"lower",6461,"percent",NA,"waveica","winn_fixed_no_qc","WiNN","SPLIT08","WaveICA","Held-out QC CV (%)","WiNN",39.3194308145146
+"heldout_qc_cv_mean",39.819046014779,"lower",6461,"percent",NA,"waveica","winn_auto_qc","WiNN (QC-tuned)","SPLIT08","WaveICA","Held-out QC CV (%)","WiNN (QC-tuned)",38.796017400654
+"heldout_qc_cv_mean",43.1495242646896,"lower",6461,"percent",NA,"waveica","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT08","WaveICA","Held-out QC CV (%)","WiNN (inferred segments)",41.928193382787
+"heldout_qc_cv_mean",39.9106447053277,"lower",6461,"percent",NA,"waveica","winn_fixed_no_qc","WiNN","SPLIT08","WaveICA","Held-out QC CV (%)","WiNN",38.8139104049945
 "heldout_qc_cv_mean",51.2093468915116,"lower",6461,"percent",NA,"waveica","raw","Raw","SPLIT09","WaveICA","Held-out QC CV (%)","Raw",50.0605277110386
 "heldout_qc_cv_mean",43.1244178523339,"lower",6461,"percent",NA,"waveica","combat","ComBat","SPLIT09","WaveICA","Held-out QC CV (%)","ComBat",40.977815851764
 "heldout_qc_cv_mean",42.7975477189439,"lower",6461,"percent",NA,"waveica","qc_rlsc","QC-RLSC","SPLIT09","WaveICA","Held-out QC CV (%)","QC-RLSC",42.0519068549754
 "heldout_qc_cv_mean",25.9356332894506,"lower",6461,"percent",NA,"waveica","tiger","TIGER","SPLIT09","WaveICA","Held-out QC CV (%)","TIGER",25.6866922011282
 "heldout_qc_cv_mean",34.5219019097713,"lower",6461,"percent",NA,"waveica","serrf","SERRF","SPLIT09","WaveICA","Held-out QC CV (%)","SERRF",34.1585382017811
-"heldout_qc_cv_mean",40.8522598807197,"lower",6461,"percent",NA,"waveica","winn_auto_qc","WiNN (QC-tuned)","SPLIT09","WaveICA","Held-out QC CV (%)","WiNN (QC-tuned)",39.9576477565506
-"heldout_qc_cv_mean",44.2461282505019,"lower",6461,"percent",NA,"waveica","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT09","WaveICA","Held-out QC CV (%)","WiNN (inferred segments)",42.6572499183477
-"heldout_qc_cv_mean",40.6870947243656,"lower",6461,"percent",NA,"waveica","winn_fixed_no_qc","WiNN","SPLIT09","WaveICA","Held-out QC CV (%)","WiNN",39.3194308145146
+"heldout_qc_cv_mean",40.2018037707888,"lower",6461,"percent",NA,"waveica","winn_auto_qc","WiNN (QC-tuned)","SPLIT09","WaveICA","Held-out QC CV (%)","WiNN (QC-tuned)",38.796017400654
+"heldout_qc_cv_mean",43.1370781219808,"lower",6461,"percent",NA,"waveica","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT09","WaveICA","Held-out QC CV (%)","WiNN (inferred segments)",41.928193382787
+"heldout_qc_cv_mean",40.22369024774,"lower",6461,"percent",NA,"waveica","winn_fixed_no_qc","WiNN","SPLIT09","WaveICA","Held-out QC CV (%)","WiNN",38.8139104049945
 "heldout_qc_cv_mean",49.6379430997798,"lower",6461,"percent",NA,"waveica","raw","Raw","SPLIT10","WaveICA","Held-out QC CV (%)","Raw",50.0605277110386
 "heldout_qc_cv_mean",40.5219758814271,"lower",6461,"percent",NA,"waveica","combat","ComBat","SPLIT10","WaveICA","Held-out QC CV (%)","ComBat",40.977815851764
 "heldout_qc_cv_mean",42.2670394590515,"lower",6461,"percent",NA,"waveica","qc_rlsc","QC-RLSC","SPLIT10","WaveICA","Held-out QC CV (%)","QC-RLSC",42.0519068549754
 "heldout_qc_cv_mean",25.0926486195259,"lower",6461,"percent",NA,"waveica","tiger","TIGER","SPLIT10","WaveICA","Held-out QC CV (%)","TIGER",25.6866922011282
 "heldout_qc_cv_mean",33.7711772138881,"lower",6461,"percent",NA,"waveica","serrf","SERRF","SPLIT10","WaveICA","Held-out QC CV (%)","SERRF",34.1585382017811
-"heldout_qc_cv_mean",39.88000183532,"lower",6461,"percent",NA,"waveica","winn_auto_qc","WiNN (QC-tuned)","SPLIT10","WaveICA","Held-out QC CV (%)","WiNN (QC-tuned)",39.9576477565506
-"heldout_qc_cv_mean",42.6302081984726,"lower",6461,"percent",NA,"waveica","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT10","WaveICA","Held-out QC CV (%)","WiNN (inferred segments)",42.6572499183477
-"heldout_qc_cv_mean",39.3282987838234,"lower",6461,"percent",NA,"waveica","winn_fixed_no_qc","WiNN","SPLIT10","WaveICA","Held-out QC CV (%)","WiNN",39.3194308145146
+"heldout_qc_cv_mean",38.7004024199488,"lower",6461,"percent",NA,"waveica","winn_auto_qc","WiNN (QC-tuned)","SPLIT10","WaveICA","Held-out QC CV (%)","WiNN (QC-tuned)",38.796017400654
+"heldout_qc_cv_mean",41.0834454627594,"lower",6461,"percent",NA,"waveica","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT10","WaveICA","Held-out QC CV (%)","WiNN (inferred segments)",41.928193382787
+"heldout_qc_cv_mean",38.7177085273058,"lower",6461,"percent",NA,"waveica","winn_fixed_no_qc","WiNN","SPLIT10","WaveICA","Held-out QC CV (%)","WiNN",38.8139104049945

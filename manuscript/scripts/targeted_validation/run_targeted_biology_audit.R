@@ -10,8 +10,8 @@ dir.create(out, recursive = TRUE, showWarnings = FALSE)
 src <- file.path(script_dir, "source_snapshot", "winn")
 source(file.path(src, "R", "winn.R"))
 source(file.path(src, "R", "winn-ablation.R"))
-stopifnot(read.dcf(file.path(src, "DESCRIPTION"))[1, "Version"] == "0.1.4")
-write.csv(data.frame(path = c(file.path(src, "R", "winn.R"), file.path(src, "R", "winn-ablation.R")),
+stopifnot(read.dcf(file.path(src, "DESCRIPTION"))[1, "Version"] == "0.1.6")
+write.csv(data.frame(path = file.path("scripts", "targeted_validation", "source_snapshot", "winn", "R", c("winn.R", "winn-ablation.R")),
   md5 = tools::md5sum(c(file.path(src, "R", "winn.R"), file.path(src, "R", "winn-ablation.R")))),
   file.path(out, "biology_source_manifest.csv"), row.names = FALSE)
 capture.output(sessionInfo(), file = file.path(out, "biology_sessionInfo.txt"))

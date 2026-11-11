@@ -9,8 +9,11 @@ required <- c("digest", "jsonlite", "winn")
 missing <- required[!vapply(required, requireNamespace, logical(1), quietly = TRUE)]
 if (length(missing)) stop("Missing package(s): ", paste(missing, collapse = ", "), call. = FALSE)
 
-tarball <- file.path(repo_root, "package", "winn_0.1.4.tar.gz")
-expected_sha <- "71a0964cee2778b2e5789d20621147e074c7945e813cf76af2ceeb696104aae1"
+frozen_spec <- jsonlite::read_json(
+  file.path(repo_root, "package", "frozen_package.json"), simplifyVector = TRUE
+)
+tarball <- file.path(repo_root, frozen_spec$source_archive)
+expected_sha <- frozen_spec$source_archive_sha256
 observed_sha <- digest::digest(file = tarball, algo = "sha256")
 if (!identical(observed_sha, expected_sha)) stop("Frozen WiNN archive checksum mismatch.", call. = FALSE)
 source(file.path(repo_root, "package", "assert_frozen_winn.R"), local = TRUE)
@@ -183,7 +186,7 @@ checks <- data.frame(
     "repository_competitor_wrapper_loader"
   ),
   passed = c(
-    observed_sha == expected_sha, as.character(utils::packageVersion("winn")) == "0.1.4",
+    observed_sha == expected_sha, as.character(utils::packageVersion("winn")) == frozen_spec$version,
     startsWith(
       frozen_winn$package_path,
       paste0(normalizePath(file.path(repo_root, "Rlib")), .Platform$file.sep)

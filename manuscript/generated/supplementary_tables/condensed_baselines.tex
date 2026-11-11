@@ -1,0 +1,73 @@
+\begin{landscape}
+\footnotesize
+\begin{longtable}{p{3.0cm}p{3.6cm}rrrrr}
+\caption{Same-information baselines. Mean-only batch centering and the Wehrens study-sample ANCOVA use all injections with the same intensity, acquisition-order and batch information as WiNN; the study-only ANCOVA additionally uses reference identities to choose fitting observations. (A) Ten-seed clean-truth endpoints; WiNN advantages are comparator minus WiNN for RMSE and WiNN minus comparator otherwise, with 95\% $t_9$ intervals, and WiNN improved every endpoint in every seed. (B) Held-out reference CV, categorical batch weighted-PC $R^2$ among study injections and negative extrapolations floored at zero. (C) Through-origin slope, sign agreement and Pearson correlation of corrected against raw feature effects, median leave-one-batch-out effect correlation and BH-significant feature counts. Raw effects are an observed reference, not biological truth.}\label{tab:supp_baselines}\\
+\toprule
+\endfirsthead
+\multicolumn{7}{l}{\textit{Table \thetable{} continued}}\\
+\toprule
+\endhead
+\midrule
+\multicolumn{7}{r}{\textit{Continued on next page}}\\
+\endfoot
+\bottomrule
+\endlastfoot
+\multicolumn{7}{l}{\textbf{A. Simulation truth (ten seeds; mean $\pm$ SE)}} \\
+ & \textit{Method} & \textit{Hidden-ref.\ CV (\%)} & \textit{RMSE} & \textit{Feature ICC} & \textit{Sample $r$} &  \\
+\midrule
+Simulation & Raw & $44.550 \pm 0.285$ & $0.2927 \pm 0.0015$ & $0.5879 \pm 0.0020$ & $0.5189 \pm 0.0021$ &  \\
+Simulation & Mean-only batch & $15.623 \pm 0.193$ & $0.1164 \pm 0.0004$ & $0.8487 \pm 0.0008$ & $0.8454 \pm 0.0008$ &  \\
+Simulation & Study-sample ANCOVA & $12.695 \pm 0.134$ & $0.0981 \pm 0.0004$ & $0.8870 \pm 0.0006$ & $0.8842 \pm 0.0008$ &  \\
+Simulation & WiNN & $8.415 \pm 0.057$ & $0.0722 \pm 0.0004$ & $0.9231 \pm 0.0005$ & $0.9247 \pm 0.0010$ &  \\
+WiNN advantage & over Mean-only batch & --- & 0.044 [0.043, 0.045] & 0.074 [0.073, 0.076] & 0.079 [0.078, 0.081] &  \\
+WiNN advantage & over Study-sample ANCOVA & --- & 0.026 [0.025, 0.026] & 0.036 [0.035, 0.037] & 0.041 [0.039, 0.042] &  \\
+\midrule
+\multicolumn{7}{l}{\textbf{B. Empirical reference precision and batch association}} \\
+\textit{Dataset} & \textit{Fit} & \textit{Held-out QC CV (\%)} & \textit{Batch $R^2$} & \textit{Floored cells} &  &  \\
+\midrule
+MTBLS79 & Raw & 28.757 & 0.36099 & 0 &  &  \\
+MTBLS79 & Mean-only, all & 16.619 & 0.01035 & 0 &  &  \\
+MTBLS79 & ANCOVA, all & 17.054 & 0.00968 & 0 &  &  \\
+MTBLS79 & ANCOVA, study only & 21.078 & 0.00000 & 0 &  &  \\
+Clinical FIA-MS & Raw & 16.594 & 0.15051 & 0 &  &  \\
+Clinical FIA-MS & Mean-only, all & 14.549 & 0.00168 & 0 &  &  \\
+Clinical FIA-MS & ANCOVA, all & 15.582 & 0.00108 & 0 &  &  \\
+Clinical FIA-MS & ANCOVA, study only & 16.693 & 0.00000 & 0 &  &  \\
+BatchCorr Set 1 & Raw & 66.570 & 0.56111 & 0 &  &  \\
+BatchCorr Set 1 & Mean-only, all & 30.611 & 0.00018 & 0 &  &  \\
+BatchCorr Set 1 & ANCOVA, all & 29.023 & 0.00021 & 0 &  &  \\
+BatchCorr Set 1 & ANCOVA, study only & 30.226 & 0.00000 & 0 &  &  \\
+Sacurine & Raw & 32.599 & 0.13166 & 0 &  &  \\
+Sacurine & Mean-only, all & 24.934 & 0.00012 & 0 &  &  \\
+Sacurine & ANCOVA, all & 18.072 & 0.00013 & 0 &  &  \\
+Sacurine & ANCOVA, study only & 19.697 & 0.00000 & 0 &  &  \\
+WaveICA & Raw & 49.662 & 0.69437 & 0 &  &  \\
+WaveICA & Mean-only, all & 42.823 & 0.00027 & 6722 &  &  \\
+WaveICA & ANCOVA, all & 40.652 & 0.00232 & 4601 &  &  \\
+WaveICA & ANCOVA, study only & 42.240 & 0.00000 & 4646 &  &  \\
+\midrule
+\multicolumn{7}{l}{\textbf{C. Matched-feature effects relative to raw input}} \\
+\textit{Dataset / endpoint} & \textit{Method} & \textit{Slope} & \textit{Sign agreement} & \textit{Pearson} & \textit{LOBO Pearson} & \textit{BH count} \\
+\midrule
+MTBLS79 cow--sheep & Raw & 1.000 & 1.000 & 1.000 & 0.977 & 1075 \\
+MTBLS79 cow--sheep & Mean-only batch & 0.992 & 0.972 & 1.000 & 0.977 & 1093 \\
+MTBLS79 cow--sheep & Study-sample ANCOVA & 0.981 & 0.971 & 1.000 & 0.977 & 1111 \\
+MTBLS79 cow--sheep & WiNN & 0.980 & 0.969 & 0.999 & 0.977 & 1097 \\
+WaveICA groups & Raw & 1.000 & 1.000 & 1.000 & 0.305 & 206 \\
+WaveICA groups & Mean-only batch & 0.994 & 1.000 & 1.000 & 0.306 & 368 \\
+WaveICA groups & Study-sample ANCOVA & 0.994 & 0.994 & 1.000 & 0.304 & 445 \\
+WaveICA groups & WiNN & 0.968 & 0.951 & 0.993 & 0.311 & 494 \\
+Sacurine age & Raw & 1.000 & 1.000 & 1.000 & 0.556 & 16 \\
+Sacurine bmi & Raw & 1.000 & 1.000 & 1.000 & 0.298 & 0 \\
+Sacurine gender & Raw & 1.000 & 1.000 & 1.000 & 0.637 & 14 \\
+Sacurine age & Mean-only batch & 0.999 & 0.991 & 1.000 & 0.559 & 18 \\
+Sacurine bmi & Mean-only batch & 0.988 & 0.991 & 0.999 & 0.295 & 1 \\
+Sacurine gender & Mean-only batch & 1.006 & 0.973 & 1.000 & 0.641 & 15 \\
+Sacurine age & Study-sample ANCOVA & 1.007 & 0.956 & 0.999 & 0.566 & 23 \\
+Sacurine bmi & Study-sample ANCOVA & 0.984 & 0.982 & 0.999 & 0.289 & 1 \\
+Sacurine gender & Study-sample ANCOVA & 0.970 & 0.947 & 0.992 & 0.623 & 13 \\
+Sacurine age & WiNN & 0.936 & 0.973 & 0.995 & 0.588 & 23 \\
+Sacurine bmi & WiNN & 0.969 & 0.947 & 0.985 & 0.379 & 5 \\
+Sacurine gender & WiNN & 0.871 & 0.929 & 0.975 & 0.581 & 24 \\
+\end{longtable}
+\end{landscape}

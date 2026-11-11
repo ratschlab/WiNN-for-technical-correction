@@ -4,46 +4,46 @@ Simulation,ComBat,--,1000,500,--,--,--
 Simulation,QC-RLSC,--,1000,500,--,--,--
 Simulation,TIGER,1617,1000,500,--,--,--
 Simulation,SERRF,--,1000,500,--,--,--
-Simulation,WiNN (QC-tuned),17.6,1000,500,696,1566,721
-Simulation,WiNN (inferred segments),21.5,1000,500,884,1647,703
-Simulation,WiNN,7.76,1000,500,655,1440,725
+Simulation,WiNN (QC-tuned),49.7,1000,500,696,1566,721
+Simulation,WiNN (inferred segments),54.0,1000,500,912,1699,704
+Simulation,WiNN,33.5,1000,500,655,1440,725
 MTBLS79,Raw,0.00,2488,172,--,--,--
 MTBLS79,ComBat,--,2488,172,--,--,--
 MTBLS79,QC-RLSC,258.7,2488,172,--,--,--
 MTBLS79,TIGER,2969,2488,172,--,--,--
 MTBLS79,SERRF,1714,2488,172,--,--,--
-MTBLS79,WiNN (QC-tuned),16.8,2488,172,48,61,1943
-MTBLS79,WiNN (inferred segments),20.9,2488,172,730,788,1905
-MTBLS79,WiNN,9.03,2488,172,40,52,1860
+MTBLS79,WiNN (QC-tuned),17.1,2488,172,48,61,1943
+MTBLS79,WiNN (inferred segments),74.9,2488,172,1244,1360,1903
+MTBLS79,WiNN,9.81,2488,172,40,52,1860
 BatchCorr Set 1,Raw,0.00,199,761,--,--,--
 BatchCorr Set 1,ComBat,--,199,761,--,--,--
 BatchCorr Set 1,QC-RLSC,--,199,761,--,--,--
 BatchCorr Set 1,TIGER,399.0,199,761,--,--,--
 BatchCorr Set 1,SERRF,117.9,199,761,--,--,--
-BatchCorr Set 1,WiNN (QC-tuned),5.72,199,761,133,323,194
-BatchCorr Set 1,WiNN (inferred segments),6.76,199,761,176,424,191
-BatchCorr Set 1,WiNN,2.32,199,761,150,373,195
+BatchCorr Set 1,WiNN (QC-tuned),16.9,199,761,133,323,194
+BatchCorr Set 1,WiNN (inferred segments),19.3,199,761,176,424,196
+BatchCorr Set 1,WiNN,8.35,199,761,150,373,195
 Clinical FIA-MS,Raw,0.00,1594,660,--,--,--
 Clinical FIA-MS,ComBat,--,1594,660,--,--,--
 Clinical FIA-MS,QC-RLSC,11.5,1594,660,--,--,--
 Clinical FIA-MS,TIGER,6003,1594,660,--,--,--
 Clinical FIA-MS,SERRF,953.1,1594,660,--,--,--
-Clinical FIA-MS,WiNN (QC-tuned),28.8,1594,660,1076,1531,1526
-Clinical FIA-MS,WiNN (inferred segments),32.7,1594,660,1526,2664,841
-Clinical FIA-MS,WiNN,10.9,1594,660,1300,2297,1506
+Clinical FIA-MS,WiNN (QC-tuned),126.7,1594,660,1076,1531,1525
+Clinical FIA-MS,WiNN (inferred segments),153.0,1594,660,1574,2952,837
+Clinical FIA-MS,WiNN,49.6,1594,660,1300,2297,1504
 Sacurine,Raw,0.00,113,210,--,--,--
 Sacurine,ComBat,--,113,210,--,--,--
 Sacurine,QC-RLSC,0.28,113,210,--,--,--
 Sacurine,TIGER,87.9,113,210,--,--,--
 Sacurine,SERRF,--,113,210,--,--,--
-Sacurine,WiNN (QC-tuned),0.94,113,210,42,52,85
-Sacurine,WiNN (inferred segments),1.24,113,210,14,15,84
-Sacurine,WiNN,3.30,113,210,37,44,82
+Sacurine,WiNN (QC-tuned),4.95,113,210,42,52,85
+Sacurine,WiNN (inferred segments),2.54,113,210,14,15,84
+Sacurine,WiNN,1.36,113,210,37,44,82
 WaveICA,Raw,0.00,6461,642,--,--,--
 WaveICA,ComBat,--,6461,642,--,--,--
 WaveICA,QC-RLSC,22.0,6461,642,--,--,--
 WaveICA,TIGER,14426,6461,642,--,--,--
 WaveICA,SERRF,2082,6461,642,--,--,--
-WaveICA,WiNN (QC-tuned),131.8,6461,642,5374,11370,6298
-WaveICA,WiNN (inferred segments),65.6,6461,642,6335,6335,0
-WaveICA,WiNN,49.1,6461,642,5675,12480,6298
+WaveICA,WiNN (QC-tuned),621.5,6461,642,5374,11370,6295
+WaveICA,WiNN (inferred segments),508.1,6461,642,6335,6335,0
+WaveICA,WiNN,386.3,6461,642,5675,12480,6297

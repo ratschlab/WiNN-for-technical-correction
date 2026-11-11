@@ -191,6 +191,13 @@ reference_tasks <- read.csv(
   file.path(release_root, "analysis", "config", "reference_split_task_manifest.csv"),
   stringsAsFactors = FALSE, check.names = FALSE
 )
+# Optional WiNN-only re-run: audit only the re-run methods' reference-split outputs
+# (competitor outputs are reused from the previous release and audited there).
+rerun_methods <- strsplit(Sys.getenv("WINN_RERUN_METHODS", unset = ""), ",", fixed = TRUE)[[1]]
+rerun_methods <- trimws(rerun_methods[nzchar(trimws(rerun_methods))])
+if (length(rerun_methods)) {
+  reference_tasks <- reference_tasks[reference_tasks$method_id %in% rerun_methods, , drop = FALSE]
+}
 metadata_cache <- new.env(parent = emptyenv())
 for (index in seq_len(nrow(reference_tasks))) {
   task <- reference_tasks[index, , drop = FALSE]
