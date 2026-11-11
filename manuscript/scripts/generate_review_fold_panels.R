@@ -5,6 +5,7 @@ script <- normalizePath(sub("^--file=", "", grep("^--file=", args_all, value = T
 root <- dirname(dirname(script))
 stopifnot(requireNamespace("ggplot2", quietly = TRUE))
 library(ggplot2)
+source(file.path(dirname(script), "method_palette.R"))
 d <- read.csv(file.path(root, "generated", "supplementary_table_data",
                         "leave_one_batch_out_bootstrap_summary.csv"), check.names = FALSE)
 method_ids <- c("raw", "combat", "qc_rlsc", "tiger", "serrf",
@@ -23,8 +24,9 @@ panels <- list(
   list("sacurine", "bmi", "S7D_lobo_sacurine_bmi", "D  Sacurine BMI"),
   list("sacurine", "gender", "S7E_lobo_sacurine_gender", "E  Sacurine gender")
 )
+# Colour identifies the method; shape identifies the held-out batch.
 shapes <- c(16, 17, 15, 18, 0, 1, 2, 5)
-colors <- c("#0072B2", "#D55E00", "#009E73", "#CC79A7", "#56B4E9", "#E69F00", "#333333", "#882255")
+colors <- palette_colours_by_id[method_ids]
 out <- file.path(root, "figures", "supplementary_panels")
 for (spec in panels) {
   x <- d[d$dataset_key == spec[[1]] & d$endpoint == spec[[2]], ]
@@ -33,14 +35,15 @@ for (spec in panels) {
   x$y <- as.integer(x$method_label) +
     (as.integer(x$heldout_batch) - (nlevels(x$heldout_batch) + 1) / 2) *
     min(0.075, 0.5 / nlevels(x$heldout_batch))
-  p <- ggplot(x, aes(x = bootstrap_mean, y = y, color = heldout_batch, shape = heldout_batch)) +
+  p <- ggplot(x, aes(x = bootstrap_mean, y = y, color = method_id, shape = heldout_batch)) +
     geom_vline(xintercept = 0, color = "grey75", linewidth = 0.2) +
     geom_segment(aes(x = ci_lower, xend = ci_upper, yend = y), linewidth = 0.23) +
     geom_point(size = 1.6, stroke = 0.35) +
     facet_wrap(~metric, nrow = 1, scales = "free_x") +
     scale_x_continuous(breaks = scales::breaks_extended(n = 3)) +
-    scale_color_manual(values = colors, name = "Held-out batch") +
+    scale_color_manual(values = colors, guide = "none") +
     scale_shape_manual(values = shapes, name = "Held-out batch") +
+    guides(shape = guide_legend(override.aes = list(colour = "#4D4D4D"))) +
     scale_y_continuous(breaks = seq_along(method_ids), labels = rev(method_labels),
                        limits = c(0.5, length(method_ids) + 0.5)) +
     labs(title = spec[[4]], x = "Fold bootstrap mean and 95% percentile interval", y = NULL,

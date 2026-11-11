@@ -4,6 +4,7 @@ args <- commandArgs(trailingOnly = FALSE)
 script <- normalizePath(sub("^--file=", "", grep("^--file=", args, value = TRUE)))
 root <- dirname(dirname(script))
 suppressPackageStartupMessages(library(ggplot2))
+source(file.path(dirname(script), "method_palette.R"))
 input <- file.path(root, "generated", "revision_panel_inputs")
 counts <- read.csv(gzfile(file.path(input, "permutation_null.csv.gz")), stringsAsFactors = FALSE)
 summary <- read.csv(file.path(input, "permutation_summary.csv"), stringsAsFactors = FALSE)
@@ -11,7 +12,7 @@ effects <- read.csv(file.path(input, "biological_association_summary.csv"), stri
 ids <- c("raw", "combat", "qc_rlsc", "tiger", "serrf", "winn_auto_qc", "winn_auto_batch_qc", "winn_fixed_no_qc")
 labels <- c("Raw", "ComBat", "QC-RLSC", "TIGER", "SERRF", "WiNN (QC-tuned)", "WiNN (inferred segments)", "WiNN")
 names(labels) <- ids
-colors <- setNames(c("#737373", "#0072B2", "#E69F00", "#009E73", "#56B4E9", "#882255", "#44AA99", "#D55E00"), ids)
+colors <- palette_colours_by_id[ids]
 specs <- list(
   c("mtbls79", "cow_vs_sheep", "A", "B", "MTBLS79 cow vs sheep", "mtbls79_cow_vs_sheep"),
   c("waveica", "biological_group", "C", "D", "WaveICA deposited groups", "waveica_biological_group"),
@@ -70,10 +71,11 @@ for (spec in specs) {
   breaks <- if (max_count <= 10) c(0,1,2,5,10) else if (max_count <= 100) c(0,1,5,20,100) else c(0,1,10,100,1000,10000)
   breaks <- breaks[breaks <= max_count]
   null_plot <- ggplot(tails, aes(y = method_label)) +
-    geom_segment(aes(x = 0, xend = null_max, yend = method_label), color = "#99BBD1", linewidth = .35) +
-    geom_point(aes(x = null_q99, shape = "Null 99%"), color = "#0072B2", size = 1.8) +
-    geom_point(aes(x = null_max, shape = "Null max"), color = "#0072B2", size = 1.8) +
-    geom_point(aes(x = observed, shape = "Observed"), color = "#D55E00", size = 2) +
+    geom_segment(aes(x = 0, xend = null_max, yend = method_label), color = "#B8BEC6", linewidth = .35) +
+    geom_point(aes(x = null_q99, shape = "Null 99%"), color = "#4D4D4D", size = 1.8) +
+    geom_point(aes(x = null_max, shape = "Null max"), color = "#4D4D4D", size = 1.8) +
+    geom_point(aes(x = observed, shape = "Observed", color = method_id), size = 2.4) +
+    scale_color_manual(values = colors, guide = "none") +
     geom_text(aes(x = p_x, label = p_label), hjust = 0, size = 3.17, color = "#333333") +
     scale_shape_manual(values = c("Null 99%" = 1, "Null max" = 17, "Observed" = 18),
       breaks = c("Null 99%", "Null max", "Observed")) +

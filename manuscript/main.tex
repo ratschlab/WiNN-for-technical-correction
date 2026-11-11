@@ -89,9 +89,9 @@ For each metabolite, WiNN first identifies upper- and lower-tail outliers using 
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=0.92\textwidth]{figures/F1_winn_overview.pdf}
+\includegraphics[width=\textwidth]{figures/F1_winn_overview.pdf}
 \caption{\textbf{Overview of the WiNN workflow: randomize $\rightarrow$ test $\rightarrow$ correct.} Samples are balanced across batches and randomized along acquisition order. WiNN tests each feature within each supplied batch or inferred run segment, applies detrending only to those with detectable run-order dependence, then applies residual batch correction only to features with a significant batch effect. MAD preparation and optional PQN are not shown.}
-% Alt text: A workflow routes randomized feature profiles through selective detrending and batch adjustment; only profiles with detected technical structure are corrected.
+% Alt text: Randomized plate design, then metabolite profiles across four batches pass a run-order test, GAM detrending only where drift is detected, a batch-effect test and batch correction only where a batch effect is detected.
 \label{fig:winn-workflow}
 \end{figure*}
 
@@ -129,7 +129,7 @@ The partial-confounding study then probed the identifiability boundary. With ran
 \begin{figure*}[t]
 \centering
 \includegraphics[width=175mm]{figures/F2_simulation.pdf}
-\caption{\textbf{Simulation truth recovery and the randomization boundary.} (A) Clean-truth RMSE for selective versus forced correction. (B--D) Seven primary methods across ten seeds; diamonds and bars are means and standard errors. Lower values are favorable in A and B and higher values in C and D. (E) Median corrected-to-clean phenotype-effect ratio among 100 responsive features and (F) empirical FDR (dashed line, nominal 0.05) as phenotype is aligned with acquisition structure; 100\% is the maximum feasible alignment. Points and bars are means and standard errors across ten seeds.}
+\caption{\textbf{Simulation truth recovery and the randomization boundary.} (A) Clean-truth RMSE for selective versus forced correction. (B--D) Seven primary methods across ten seeds; diamonds and bars are means and standard errors. Lower values are favorable in A and B and higher values in C and D. (E) Median corrected-to-clean phenotype-effect ratio among 100 responsive features and (F) empirical FDR (grey line, nominal 0.05) as phenotype is aligned with batch, run order or both; 100\% is the maximum feasible alignment. Points and bars are means and standard errors across ten seeds.}
 % Alt text: WiNN has the lowest simulation error and highest truth agreement. Increasing phenotype alignment with acquisition order reduces biological recovery despite low technical variation.
 \label{fig:simulation}
 \end{figure*}

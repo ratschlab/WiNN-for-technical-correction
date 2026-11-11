@@ -23,16 +23,15 @@ file_arg <- grep("^--file=", commandArgs(FALSE), value = TRUE)
 manuscript_root <- dirname(dirname(normalizePath(gsub("~+~", " ", sub("^--file=", "", file_arg), fixed = TRUE))))
 supp_dir <- file.path(manuscript_root, "figures", "supplementary_panels")
 panel_source_dir <- file.path(manuscript_root, "figures", "source_data")
+source(file.path(manuscript_root, "scripts", "method_palette.R"))
 dir.create(supp_dir, recursive = TRUE, showWarnings = FALSE)
 dir.create(panel_source_dir, recursive = TRUE, showWarnings = FALSE)
 
 pt_to_mm <- 25.4 / 72.27
 line_width <- 0.45 * pt_to_mm
 point_stroke <- 0.35 * pt_to_mm
-gate_colours <- c(
-  "Selective / selective" = "#0072B2", "Forced drift" = "#D55E00",
-  "Forced batch" = "#009E73", "Forced drift + batch" = "#7A5195"
-)
+# All gate policies are WiNN, so they share the WiNN colour and differ by shape.
+gate_colours <- setNames(rep(winn_colour, 4), names(gate_shapes))
 dataset_labels <- c(
   simulation = "Simulation", mtbls79 = "MTBLS79",
   clinical_fiams = "Clinical FIA-MS", batchcorr_set1 = "BatchCorr Set 1",
@@ -113,13 +112,14 @@ for (spec in list(
   list("B", "residual_run_order_gam_mean_deviance", "Residual run-order deviance", "GAM deviance explained"),
   list("C", "batch_weighted_pc_r2_categorical", "Residual batch structure", "Weighted-PC R2"))) {
   panel_data <- gate_data |> filter(metric == spec[[2]])
-  plot <- ggplot(panel_data, aes(gate_label, value, colour = gate_label)) +
-    geom_point(size = 1.8, shape = 16, stroke = 0) +
+  plot <- ggplot(panel_data, aes(gate_label, value, shape = gate_label)) +
+    geom_point(size = 2.1, colour = winn_colour, stroke = 0) +
     facet_wrap(vars(dataset_short), nrow = 1, scales = "free_y") +
-    scale_colour_manual(values = gate_colours, drop = FALSE) +
+    scale_shape_manual(values = gate_shapes, drop = FALSE) +
     labs(title = paste(spec[[1]], spec[[3]]), x = NULL, y = spec[[4]]) +
     theme_panel(9.2) +
-    theme(axis.text.x = element_blank(), axis.ticks.x = element_blank(), legend.position = "bottom")
+    theme(axis.text.x = element_blank(), axis.ticks.x = element_blank(), legend.position = "bottom") +
+    guides(shape = guide_legend(override.aes = list(colour = winn_colour)))
   save_panel(plot, paste0("S2", spec[[1]], "_", spec[[2]]), 174, 55, panel_data)
 }
 seed_gate <- read_csv(file.path(final_root, "tables", "simulation_seed_ablation_metrics.csv"),
@@ -137,16 +137,15 @@ for (spec in list(
   panel_data <- seed_gate |> filter(metric == spec[[2]]) |> group_by(method_id, gate_label) |>
     mutate(method_mean = mean(value), method_se = sd(value) / sqrt(n())) |> ungroup()
   summary_data <- panel_data |> distinct(method_id, gate_label, method_mean, method_se)
-  plot <- ggplot(panel_data, aes(value, gate_label, colour = gate_label)) +
+  plot <- ggplot(panel_data, aes(value, gate_label)) +
+    geom_point(position = position_jitter(width = 0, height = 0.08, seed = 2026),
+               shape = 16, colour = winn_colour, size = 1.3, alpha = palette_point_alpha) +
     geom_segment(data = summary_data,
                  aes(x = method_mean - method_se, xend = method_mean + method_se,
                      y = gate_label, yend = gate_label),
-                 linewidth = line_width, colour = "#172033") +
-    geom_point(position = position_jitter(width = 0, height = 0.08, seed = 2026),
-               shape = 21, fill = "white", size = 1.3, stroke = point_stroke, alpha = 0.72) +
+                 linewidth = line_width, colour = palette_ink) +
     geom_point(data = summary_data, aes(method_mean, gate_label), inherit.aes = FALSE,
-               shape = 23, fill = "white", colour = "#172033", size = 2.0, stroke = point_stroke) +
-    scale_colour_manual(values = gate_colours, drop = FALSE) +
+               shape = 23, fill = winn_colour, colour = palette_ink, size = 2.3, stroke = point_stroke) +
     labs(title = paste(spec[[1]], spec[[3]]), x = spec[[4]], y = NULL) +
     theme_panel(9.2) +
     theme(legend.position = "none", panel.grid.major.y = element_blank())
@@ -165,8 +164,8 @@ for (spec in list(list("A", "simulation", "Simulation"), list("B", "mtbls79", "M
                   list("E", "sacurine", "Sacurine"), list("F", "waveica", "WaveICA"))) {
   panel_data <- trajectory |> filter(dataset_key == spec[[2]])
   plot <- ggplot(panel_data, aes(stage, value, group = 1)) +
-    geom_line(linewidth = line_width, colour = "#0072B2") +
-    geom_point(size = 1.6, colour = "#0072B2", shape = 16, stroke = 0) +
+    geom_line(linewidth = line_width, colour = winn_colour) +
+    geom_point(size = 1.8, colour = winn_colour, shape = 16, stroke = 0) +
     scale_x_discrete(labels = c("Raw" = "Raw", "Outlier shrinkage" = "MAD",
                                 "Selective drift" = "Drift", "Selective batch" = "Batch",
                                 "PQN" = "PQN")) +

@@ -6,12 +6,13 @@ args <- commandArgs(trailingOnly = FALSE)
 script <- normalizePath(sub("^--file=", "", grep("^--file=", args, value = TRUE)))
 root <- dirname(dirname(script))
 suppressPackageStartupMessages({library(ggplot2); library(ggrepel)})
+source(file.path(dirname(script), "method_palette.R"))
 input <- file.path(root, "generated", "revision_panel_inputs")
 out <- file.path(root, "figures", "supplementary_panels")
 source_out <- file.path(root, "figures", "source_data")
 ids <- c("raw", "combat", "qc_rlsc", "tiger", "serrf", "winn_auto_qc", "winn_auto_batch_qc", "winn_fixed_no_qc")
 labels <- setNames(c("Raw", "ComBat", "QC-RLSC", "TIGER", "SERRF", "WiNN (QC-tuned)", "WiNN (inferred segments)", "WiNN"), ids)
-colors <- setNames(c("#6B7280", "#0072B2", "#009E73", "#E69F00", "#D55E00", "#CC79A7", "#7A5195", "#B58B00"), labels)
+colors <- palette_method_colours[unname(labels)]
 line_width <- 0.45 * 25.4 / 72.27
 point_stroke <- 0.35 * 25.4 / 72.27
 panel_theme <- theme_classic(base_size = 9.5, base_family = "sans") + theme(
@@ -51,10 +52,11 @@ for (spec in specs4) {
  stopifnot(all(vapply(ids, function(id) abs(mean(d$value[d$method_id == id]) - means$method_mean[means$method_id == id]) < 1e-10, logical(1))))
  p <- ggplot(d, aes(value, method_label, colour = method_label)) +
   geom_point(position = position_jitter(width = 0, height = .08, seed = 2026),
-             shape = 21, fill = "white", size = 1.3, stroke = point_stroke, alpha = .72) +
-  geom_point(data = means, aes(method_mean, method_label), inherit.aes = FALSE,
-             shape = 23, fill = "white", colour = "#172033", size = 2, stroke = point_stroke) +
+             shape = 16, size = 1.3, alpha = palette_point_alpha) +
+  geom_point(data = means, aes(method_mean, method_label, fill = method_label), inherit.aes = FALSE,
+             shape = 23, colour = palette_ink, size = 2.3, stroke = point_stroke) +
   scale_colour_manual(values = colors, drop = FALSE) +
+  scale_fill_manual(values = colors, drop = FALSE) +
   labs(title = paste(spec[1], spec[3]), x = "Held-out QC CV (%)", y = NULL) + panel_theme
  save_panel(p, stem, d)
 }
@@ -70,7 +72,7 @@ for (spec in specs8) {
  stopifnot(all(d$valid_bootstrap == 2000), all(d$ci_lower <= d$ci_upper))
  p <- ggplot(d, aes(point_estimate, method_label, colour = method_label)) +
   geom_segment(aes(x = ci_lower, xend = ci_upper, y = method_label, yend = method_label), linewidth = line_width) +
-  geom_point(size = 1.8, shape = 16, stroke = 0) + scale_colour_manual(values = colors, drop = FALSE) +
+  geom_point(size = 2.1, shape = 16, stroke = 0) + scale_colour_manual(values = colors, drop = FALSE) +
   scale_x_continuous(expand = expansion(mult = c(.08, .16))) +
   labs(title = paste(spec[1], spec[4]), x = spec[5], y = NULL) + panel_theme +
   theme(plot.margin = margin(3, 12, 3, 4))
@@ -94,12 +96,13 @@ for (spec in specs10) {
  p <- ggplot(d) +
   geom_segment(aes(x = x-x_se, xend = x+x_se, y = y, yend = y, colour = method_label), linewidth = line_width) +
   geom_segment(aes(x = x, xend = x, y = y-y_se, yend = y+y_se, colour = method_label), linewidth = line_width) +
-  geom_point(aes(x, y, colour = method_label), shape = 21, fill = "white", size = 1.8, stroke = point_stroke) +
+  geom_point(aes(x, y, fill = method_label), shape = 21, colour = "white", size = 2.2, stroke = point_stroke) +
   geom_segment(data=label_data, aes(x=x, y=y, xend=label_x-.1, yend=label_y,
     colour=method_label), linewidth=line_width) +
   geom_text(data=label_data, aes(label_x, label_y, label=method_label, colour=method_label),
     size=3.2, hjust=0, show.legend=FALSE) +
   scale_colour_manual(values = colors, drop = FALSE) +
+  scale_fill_manual(values = colors, drop = FALSE) +
   scale_x_continuous(expand = expansion(mult = c(.12, .20))) +
   scale_y_continuous(expand = expansion(mult = c(.08, .10))) +
   labs(title = paste(spec[1], spec[3]), x = "Batch weighted-PC R² (%)", y = "Covariate weighted-PC R² (%)") +
