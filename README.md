@@ -21,13 +21,17 @@ The exact aggregate inputs for the current tables are in `results/final/revision
 
 The review re-executed the null-gate and biological-preparation experiments;
 all 14,877 rows in their nine archived result CSVs matched exactly. The package
-test suite passed 105 assertions. The partial-confounding preflight now checks
+test suite passed 105 assertions, and the public QC-RFSC wrapper integration
+test passed with the frozen statTarget 1.38.0 installation on Euler. The partial-confounding preflight now checks
 the authoritative log-matrix hashes with exact field names; diagnostic intensity
 hashes are no longer used as cross-platform gates. `make test-confounding-inputs`
 reconstructs and checks all 160 publication scenarios without fitting a method.
 The older 320-scenario construction configuration is retained as provenance;
 the publication task manifest selects ten seeds and 16 scenarios per seed.
-Scope, findings and limits are recorded in
+The saved corrected QC-RFSC matrix also supplies the previously missing
+MTBLS79 biological point on the same 20 sample means as the other methods;
+`analysis/evaluate_mtbls79_rfsc_sample_means.R` reproduces this point without
+refitting correction or uncertainty. Scope, findings and limits are recorded in
 [`analysis/config/revision_20261114/code_review.txt`](analysis/config/revision_20261114/code_review.txt).
 
 ## QC-RFSC and revision analyses

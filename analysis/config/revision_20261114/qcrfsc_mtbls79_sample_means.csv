@@ -1,0 +1,3 @@
+"dataset_key","method_id","batch_pc_variance_percent","biological_pc_variance_percent","batch_n","biological_n","features","biological_unit","uncertainty"
+"mtbls79","raw",36.098533296055,43.5424656261189,134,20,2488,"mean log1p profile per sample extract","not recomputed"
+"mtbls79","qc_rfsc",18.928817833772,43.6730579019026,134,20,2488,"mean log1p profile per sample extract","not recomputed"

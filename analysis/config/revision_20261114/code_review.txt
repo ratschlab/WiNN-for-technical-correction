@@ -7,6 +7,10 @@ archived aggregate results were retained. No correction benchmark was refitted.
 Checks completed
 - Package testthat suite: 105 passed, zero failures/warnings/skips.
 - Revised package README example executed successfully, returning 20 x 48.
+- Public QC-RFSC wrapper integration passed on Euler R 4.5.1/statTarget 1.38.0:
+  all three real REGfit calls use exactly authorized training controls;
+  adversarial held-out names cannot leak; abundance restoration uses training
+  references only.
 - Baseline publication validator: all semantic checks and 876 file hashes pass.
 - Re-executed verify_null_gate_calibration.R in an isolated directory: 8,000
   replicate rows, including 1,000 seeds per n=20,50,100,200 before/after MAD.
@@ -46,7 +50,15 @@ The corrected adapter's empirical points have no rerun bootstrap/permutation
 uncertainty. Earlier-adapter uncertainty is not transferable. WaveICA's point
 uses the same 568 study samples; MTBLS79's generic biological point uses 134
 study injections, unlike the 20 sample-collapsed means in the main figure.
-It must not be substituted. The clinical corrected RFSC CV 16.8798% and residual
+It must not be substituted. The saved corrected matrix and prepared public
+input were recovered from Euler and evaluated with the exact sample-mean
+procedure. The comparable RFSC point is 18.928817833772% batch variance and
+43.6730579019026% biological-group variance, using 134 injections and 20 sample
+means respectively. Raw endpoints reproduce the manuscript points within 1e-8;
+the batch endpoint reproduces the archived corrected RFSC result within 1e-8.
+No correction or uncertainty analysis was refitted. Input SHA-256 values and
+a reproducible evaluator accompany the new aggregate result.
+The clinical corrected RFSC CV 16.8798% and residual
 drift 11.6661% are above primary WiNN 12.29% and 7.5728%; the claim of lowest
 values among the seven primary methods is supported.
 The archived QC-RLSC diagnosis reports 182.8436% held-out CV and 266,216 warnings
@@ -55,8 +67,9 @@ support a layout/configuration-specific instability diagnosis.
 
 Limits
 This is not a repeat of every large correction, bootstrap, or permutation run.
-The live QC-RFSC wrapper test could not run in the default local R library
-because statTarget is absent; archived 225 integration checks are validated.
+The default local R library lacked statTarget; its integration test was
+therefore run successfully with the frozen 1.38.0 version on Euler. Archived
+225 integration checks also pass the publication validator.
 Clinical row-level data are restricted. Sample-level bootstrap clustering
 cannot be assumed to establish patient-level independence for longitudinal
 samples. Package algorithm and analyzed version remain unchanged; GitHub

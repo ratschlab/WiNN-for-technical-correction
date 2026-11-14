@@ -1,0 +1,4 @@
+Tracing function "REGfit" in package "namespace:statTarget"
+PASS: real REGfit uses exactly authorized controls; adversarial hidden IDs cannot leak; mapping and dimensions preserved; non-oracle abundance restoration verified.
+Untracing function "REGfit" in package "namespace:statTarget"
+statTarget version: 1.38.0 ; REGfit calls asserted: 3 
