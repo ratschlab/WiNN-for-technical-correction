@@ -243,7 +243,7 @@ caption_replacements = {
     "Columns are immutable matrices after each ordered stage.": "Columns describe the matrix after each ordered stage.",
     "Complete reference-split stability summary across all datasets and methods.": "Reference-split stability across all datasets and eight outputs.",
     "Complete all-method summary of leave-one-batch-out biological-effect replication.": "Leave-one-batch-out biological-effect replication across eight outputs.",
-    "Complete release-validation checklist for the frozen benchmark.": "Validation checklist for the current benchmark release. QC-RFSC updates are documented by the separate integration checks in the reproducibility package."
+    "Complete release-validation checklist for the frozen benchmark.": "Validation checklist for the current benchmark release. Historical comparator audits remain in the archived release CSV; QC-RFSC updates have separate integration checks."
 }
 for path in (ROOT / "generated/supplementary_tables").glob("*.tex"):
     text = path.read_text()

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check every numerical claim in main.tex against the frozen WiNN 0.1.6 source data.
+"""Check every numerical claim in main.tex against the frozen revised WiNN source data.
 
 Each check recomputes the displayed value from a CSV and requires the formatted token to
 appear in the main-text paragraph that starts the claim. Run from the manuscript directory:
@@ -9,6 +9,7 @@ appear in the main-text paragraph that starts the claim. Run from the manuscript
 All input CSVs needed for the current main-text claims are bundled with the manuscript.
 """
 import csv
+import math
 import sys
 from pathlib import Path
 
@@ -54,7 +55,7 @@ MT = "MTBLS79 provided a known cow-sheep"
 AB = "We examined each correction step"
 ST = "We tested whether WiNN selects features"
 DI = "This is important because correction"
-RT = "WiNN was approximately"
+RT = "Runtimes are reported"
 
 # Simulation benchmark (ten-seed means)
 s4 = read(DATA / "table_s4_simulation.csv")
@@ -117,6 +118,17 @@ for stem, anchor, cv_label in (("F3A_batchcorr_qc_cv_vs_run_order_deviance", BC,
         digits = 2 if method == "raw" else 3
         check(f"{stem} {method} batch", anchor, f"{batch_value:.{digits}f}\\%")
         check(f"{stem} {method} ICC", anchor, f"{icc:.3f}" if "batchcorr" in stem else f"{icc:.4f}")
+clinical_points = read(SRC / "F3B_clinical_qc_cv_vs_run_order_deviance.csv")
+tiger_gam = float(one(clinical_points, method_id="tiger")["residual_run_order_gam_mean_deviance"])
+check("Clinical TIGER residual run-order drift", CL, f"{tiger_gam * 100:.2f}\\%")
+primary_ids = {"raw", "combat", "qc_rlsc", "qc_rfsc", "tiger", "serrf", "winn_fixed_no_qc"}
+clinical_primary = [r for r in clinical_points if r['method_id'] in primary_ids]
+checks.append(("Clinical WiNN has the lowest primary QC CV", "seven primary methods",
+               len(clinical_primary) == 7 and
+               min(clinical_primary, key=lambda r: float(r['qc_cv']))['method_id'] == 'winn_fixed_no_qc'))
+checks.append(("Clinical TIGER has the lowest primary residual drift", "TIGER",
+               len(clinical_primary) == 7 and
+               min(clinical_primary, key=lambda r: float(r['residual_run_order_gam_deviance_percent']))['method_id'] == 'tiger'))
 ret = read(VAL / "frozen_identity_retrieval_estimates.csv")
 for dataset, anchor, methods in (("batchcorr_set1", BC, ("raw", "winn_fixed_no_qc", "combat", "qc_rlsc")),
                                  ("clinical_fiams", CL, ("raw", "winn_fixed_no_qc", "tiger"))):
@@ -149,6 +161,17 @@ checks.append(("Forced drift raises CV in four datasets", "four of six", len(up)
 f2a = read(SRC / "F2A_selective_forced_truth_rmse.csv")
 check("Selective RMSE", AB, f"{float(one([r for r in f2a if r['seed_id'] == 'SIM01'], policy='Selective')['method_mean']):.4f}")
 check("Forced drift RMSE", AB, f"{float(one([r for r in f2a if r['seed_id'] == 'SIM01'], policy='Force drift')['method_mean']):.4f}")
+ablation_seeds = read(ROOT / "generated/revision_panel_inputs/simulation_seed_ablation_metrics.csv")
+gate_seeds = {r['seed_id'] for r in ablation_seeds}
+for metric, sign in (("truth_log1p_rmse", -1), ("truth_metabolite_profile_icc_mean", 1),
+                     ("truth_sample_profile_pearson_mean", 1)):
+    forced_drift_wins = sum(
+        (float(one(ablation_seeds, seed_id=seed, method_id='G_AS', metric=metric)['value']) -
+         float(one(ablation_seeds, seed_id=seed, method_id='G_SS', metric=metric)['value'])) * sign > 0
+        for seed in gate_seeds
+    )
+    checks.append((f"Forced drift improves {metric} in all ten seeds", "all ten simulations",
+                   len(gate_seeds) == 10 and forced_drift_wins == 10))
 s10 = read(DATA / "table_s10_runtime_retention.csv")
 frac = [int(r["Batch features"]) / int(r["Features"]) * 100 for r in s10 if r["Method"] == "WiNN"]
 check("Batch selection min", AB, f"{min(frac):.1f}")
@@ -158,14 +181,18 @@ check("Batch selection max", AB, f"{max(frac):.1f}\\%")
 null = read(VAL / "null_gate_verification_summary.csv")
 for n in ("20", "50", "100", "200"):
     check(f"Null gate n={n}", ST, f"{float(one(null, n=n, stage='mad_prepared')['any_rejection']) * 100:.1f}\\%")
+calibrated = read(ROOT / "generated/calibration_revision/gate_validation_summary.csv")
+for n in ("20", "50", "100", "200"):
+    row = one(calibrated, experiment="original_null", n=n, stage="mad_prepared", algorithm="permutation_maxT")
+    check(f"Permutation null gate n={n}", ST, f"{float(row['fwer']) * 100:.1f}\\%")
 prep = read(VAL / "preparation_biology_summary.csv")
 for scenario in ("balanced_sparse", "rare_subgroup", "broad_coordinated"):
     check(f"MAD+PQN {scenario}", ST, f"{float(one(prep, scenario=scenario, stage='mad_then_pqn')['median_recovery_ratio']):.3f}")
 
-# Runtime ratio
+# Measured runtime completeness; no prespecified speedup is required.
 times = {(r["Dataset"], r["Method"]): float(r["Runtime"]) for r in s10 if r["Runtime"] not in ("--", "")}
-ratios = [times[(d, m)] / times[(d, "WiNN")] for (d, m) in times if m in ("SERRF", "TIGER")]
-checks.append(("Runtime ratio range 5-300", f"{min(ratios):.1f}-{max(ratios):.1f}", 5 <= min(ratios) < 6 and 290 <= max(ratios) < 310))
+winn_times = [v for (d,m),v in times.items() if m == "WiNN"]
+checks.append(("Six measured WiNN runtimes are finite and positive", "6 datasets", len(winn_times) == 6 and all(math.isfinite(v) and v > 0 for v in winn_times)))
 
 failed = [c for c in checks if not c[2]]
 for claim, token, _ in failed:

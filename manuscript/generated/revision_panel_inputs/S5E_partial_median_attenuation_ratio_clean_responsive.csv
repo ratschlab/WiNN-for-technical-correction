@@ -1,37 +1,37 @@
 confounding_type,level,method,metric,mean,se,n_seeds,axis,method_label,alignment_percent,lower,upper
 batch,0,Raw,median_attenuation_ratio_clean_responsive,0.9995919830972646,7.810485551601778e-4,10,Batch,Raw,0,0.9988109345421045,1.0003730316524249
-batch,0,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.9588981811106244,0.002593657620290995,10,Batch,WiNN fixed,0,0.9563045234903335,0.9614918387309154
+batch,0,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.9614886350445594,0.002292383367798606,10,Batch,WiNN fixed,0,0.9591962516767608,0.963781018412358
 batch,0.25,Raw,median_attenuation_ratio_clean_responsive,0.9998215688889156,4.591524025578079e-4,10,Batch,Raw,25,0.9993624164863578,1.0002807212914735
-batch,0.25,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.9579075189126643,0.002531306650557454,10,Batch,WiNN fixed,25,0.9553762122621069,0.9604388255632218
+batch,0.25,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.9612447939215671,0.001920453271782351,10,Batch,WiNN fixed,25,0.9593243406497848,0.9631652471933495
 batch,0.5,Raw,median_attenuation_ratio_clean_responsive,1.000467013028109,3.2901219053090486e-4,10,Batch,Raw,50,1.0001380008375782,1.0007960252186399
-batch,0.5,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.9613358463345311,0.0020852383614890706,10,Batch,WiNN fixed,50,0.959250607973042,0.9634210846960202
+batch,0.5,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.9626640548332265,0.0017565669096888418,10,Batch,WiNN fixed,50,0.9609074879235376,0.9644206217429153
 batch,0.75,Raw,median_attenuation_ratio_clean_responsive,1.0012252880506154,9.52594393655835e-4,10,Batch,Raw,75,1.0002726936569595,1.0021778824442713
-batch,0.75,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.9582936802839372,0.0028157480229722407,10,Batch,WiNN fixed,75,0.955477932260965,0.9611094283069095
+batch,0.75,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.9606549701093534,0.0023920603446930797,10,Batch,WiNN fixed,75,0.9582629097646603,0.9630470304540465
 batch,0.9,Raw,median_attenuation_ratio_clean_responsive,0.9984669462226545,0.0010485922811645787,10,Batch,Raw,90,0.9974183539414899,0.9995155385038191
-batch,0.9,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.9587463467885918,0.003495518607175215,10,Batch,WiNN fixed,90,0.9552508281814166,0.9622418653957671
+batch,0.9,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.9583946415173926,0.004129970245438783,10,Batch,WiNN fixed,90,0.9542646712719538,0.9625246117628314
 batch,1,Raw,median_attenuation_ratio_clean_responsive,0.9970639931034491,0.0024179663659924405,10,Batch,Raw,100,0.9946460267374566,0.9994819594694415
-batch,1,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.9688653831257961,0.004434489073822398,10,Batch,WiNN fixed,100,0.9644308940519737,0.9732998721996184
+batch,1,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.970412627998243,0.004355944847395067,10,Batch,WiNN fixed,100,0.9660566831508479,0.9747685728456381
 joint,0,Raw,median_attenuation_ratio_clean_responsive,0.9995919830972646,7.810485551601778e-4,10,Both,Raw,0,0.9988109345421045,1.0003730316524249
-joint,0,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.9588981811106244,0.002593657620290995,10,Both,WiNN fixed,0,0.9563045234903335,0.9614918387309154
+joint,0,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.9614886350445594,0.002292383367798606,10,Both,WiNN fixed,0,0.9591962516767608,0.963781018412358
 joint,0.25,Raw,median_attenuation_ratio_clean_responsive,0.9995262825502549,8.087749601024485e-4,10,Both,Raw,25,0.9987175075901524,1.0003350575103573
-joint,0.25,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.9492724237306496,0.003386797124389188,10,Both,WiNN fixed,25,0.9458856266062604,0.9526592208550387
+joint,0.25,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.9530620789376011,0.0032183816733084097,10,Both,WiNN fixed,25,0.9498436972642926,0.9562804606109095
 joint,0.5,Raw,median_attenuation_ratio_clean_responsive,0.9998364636154852,1.4806340742492928e-4,10,Both,Raw,50,0.9996884002080603,0.9999845270229101
-joint,0.5,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.9328466316449848,0.004124781452807257,10,Both,WiNN fixed,50,0.9287218501921776,0.9369714130977921
+joint,0.5,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.9418416970517685,0.004654561600448379,10,Both,WiNN fixed,50,0.93718713545132,0.9464962586522169
 joint,0.75,Raw,median_attenuation_ratio_clean_responsive,0.9957182302132878,0.003510128457197152,10,Both,Raw,75,0.9922081017560906,0.9992283586704849
-joint,0.75,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.8022714982066693,0.007908719494926867,10,Both,WiNN fixed,75,0.7943627787117424,0.8101802177015962
+joint,0.75,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.8829315536757416,0.011680299607712665,10,Both,WiNN fixed,75,0.871251254068029,0.8946118532834543
 joint,0.9,Raw,median_attenuation_ratio_clean_responsive,0.9953196021315642,0.007842966562627434,10,Both,Raw,90,0.9874766355689368,1.0031625686941916
-joint,0.9,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.6249240067707607,0.009366738571887684,10,Both,WiNN fixed,90,0.615557268198873,0.6342907453426483
+joint,0.9,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.8252266486904195,0.01520229021610488,10,Both,WiNN fixed,90,0.8100243584743146,0.8404289389065244
 joint,1,Raw,median_attenuation_ratio_clean_responsive,0.997985623780443,0.005210384516446498,10,Both,Raw,100,0.9927752392639965,1.0031960082968894
-joint,1,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.3425705427429247,0.008169995732568438,10,Both,WiNN fixed,100,0.33440054701035626,0.35074053847549314
+joint,1,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.7399670216174038,0.020535371142943664,10,Both,WiNN fixed,100,0.7194316504744601,0.7605023927603475
 run_order,0,Raw,median_attenuation_ratio_clean_responsive,0.9995919830972646,7.810485551601778e-4,10,Run order,Raw,0,0.9988109345421045,1.0003730316524249
-run_order,0,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.9588981811106244,0.002593657620290995,10,Run order,WiNN fixed,0,0.9563045234903335,0.9614918387309154
+run_order,0,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.9614886350445594,0.002292383367798606,10,Run order,WiNN fixed,0,0.9591962516767608,0.963781018412358
 run_order,0.25,Raw,median_attenuation_ratio_clean_responsive,1.0006088514264457,6.49407782439136e-4,10,Run order,Raw,25,0.9999594436440066,1.0012582592088848
-run_order,0.25,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.9501947226372393,0.00397722555466563,10,Run order,WiNN fixed,25,0.9462174970825736,0.9541719481919049
+run_order,0.25,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.955395987671426,0.003225934513795607,10,Run order,WiNN fixed,25,0.9521700531576304,0.9586219221852216
 run_order,0.5,Raw,median_attenuation_ratio_clean_responsive,1.0000555503380135,9.637845547513785e-4,10,Run order,Raw,50,0.9990917657832622,1.001019334892765
-run_order,0.5,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.9600454049372537,0.0032243962427216826,10,Run order,WiNN fixed,50,0.956821008694532,0.9632698011799753
+run_order,0.5,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.9643732097513746,0.0029014401100707667,10,Run order,WiNN fixed,50,0.9614717696413039,0.9672746498614454
 run_order,0.75,Raw,median_attenuation_ratio_clean_responsive,1.001743577665449,0.0010003449161769032,10,Run order,Raw,75,1.0007432327492722,1.002743922581626
-run_order,0.75,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.9497741774871403,0.003019707351031899,10,Run order,WiNN fixed,75,0.9467544701361085,0.9527938848381722
+run_order,0.75,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.9546061091723986,0.0034617378168884916,10,Run order,WiNN fixed,75,0.9511443713555101,0.9580678469892872
 run_order,0.9,Raw,median_attenuation_ratio_clean_responsive,1.0015408658730323,0.001530019086552065,10,Run order,Raw,90,1.0000108467864801,1.0030708849595844
-run_order,0.9,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.874507199541553,0.007477570033296384,10,Run order,WiNN fixed,90,0.8670296295082566,0.8819847695748494
+run_order,0.9,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.8987648840015003,0.005175744401641004,10,Run order,WiNN fixed,90,0.8935891395998593,0.9039406284031414
 run_order,1,Raw,median_attenuation_ratio_clean_responsive,1.000081704205041,8.170420504101105e-5,10,Run order,Raw,100,0.9999999999999999,1.0001634084100819
-run_order,1,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.82378953044498,0.006625603650458002,10,Run order,WiNN fixed,100,0.817163926794522,0.8304151340954381
+run_order,1,WiNN fixed default (no QC),median_attenuation_ratio_clean_responsive,0.866311541173671,0.004248477210755134,10,Run order,WiNN fixed,100,0.8620630639629159,0.8705600183844262

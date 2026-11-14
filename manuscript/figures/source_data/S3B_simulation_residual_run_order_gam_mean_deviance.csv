@@ -4,81 +4,81 @@ residual_run_order_gam_mean_deviance,0.127649520286793,lower,5000,proportion,,si
 residual_run_order_gam_mean_deviance,0.0533851989108539,lower,5000,proportion,,simulation,qc_rlsc,QC-RLSC,SIM01,QC-RLSC,0.05262077598318517,7.285109004141592e-4
 residual_run_order_gam_mean_deviance,0.085253052918361,lower,5000,proportion,,simulation,tiger,TIGER,SIM01,TIGER,0.08303445968625336,5.848809718198404e-4
 residual_run_order_gam_mean_deviance,0.0997710875953133,lower,5000,proportion,,simulation,serrf,SERRF,SIM01,SERRF,0.09655511010886014,7.431540564073481e-4
-residual_run_order_gam_mean_deviance,0.0189764816566916,lower,5000,proportion,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM01,WiNN (QC-tuned),0.01989070158199317,3.2290689053382797e-4
-residual_run_order_gam_mean_deviance,0.111003199452436,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM01,WiNN (inferred segments),0.10496639082960574,0.008783342015834788
-residual_run_order_gam_mean_deviance,0.0209534837670856,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN,SIM01,WiNN,0.02182699786083337,1.9985826692154416e-4
+residual_run_order_gam_mean_deviance,0.0303848305929475,lower,5000,proportion,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM01,WiNN (QC-tuned),0.03155452215446968,3.2804500150354345e-4
+residual_run_order_gam_mean_deviance,0.113145452672508,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM01,WiNN (inferred segments),0.1098270191904615,0.007801351949934393
+residual_run_order_gam_mean_deviance,0.0315901862190976,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN,SIM01,WiNN,0.03305805945134874,3.490246147171409e-4
 residual_run_order_gam_mean_deviance,0.126608992121227,lower,5000,proportion,,simulation,raw,Raw,SIM02,Raw,0.1250522471396879,9.987753840746206e-4
 residual_run_order_gam_mean_deviance,0.126608734434934,lower,5000,proportion,,simulation,combat,ComBat,SIM02,ComBat,0.1250526727149478,9.98346434366354e-4
 residual_run_order_gam_mean_deviance,0.0534438666496551,lower,5000,proportion,,simulation,qc_rlsc,QC-RLSC,SIM02,QC-RLSC,0.05262077598318517,7.285109004141592e-4
 residual_run_order_gam_mean_deviance,0.0838704973491164,lower,5000,proportion,,simulation,tiger,TIGER,SIM02,TIGER,0.08303445968625336,5.848809718198404e-4
 residual_run_order_gam_mean_deviance,0.0991270543958985,lower,5000,proportion,,simulation,serrf,SERRF,SIM02,SERRF,0.09655511010886014,7.431540564073481e-4
-residual_run_order_gam_mean_deviance,0.019730140926366,lower,5000,proportion,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM02,WiNN (QC-tuned),0.01989070158199317,3.2290689053382797e-4
-residual_run_order_gam_mean_deviance,0.10780346791991,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM02,WiNN (inferred segments),0.10496639082960574,0.008783342015834788
-residual_run_order_gam_mean_deviance,0.022033780551094,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN,SIM02,WiNN,0.02182699786083337,1.9985826692154416e-4
+residual_run_order_gam_mean_deviance,0.0312462681694505,lower,5000,proportion,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM02,WiNN (QC-tuned),0.03155452215446968,3.2804500150354345e-4
+residual_run_order_gam_mean_deviance,0.110676624804543,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM02,WiNN (inferred segments),0.1098270191904615,0.007801351949934393
+residual_run_order_gam_mean_deviance,0.0333614102781325,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN,SIM02,WiNN,0.03305805945134874,3.490246147171409e-4
 residual_run_order_gam_mean_deviance,0.127101627479104,lower,5000,proportion,,simulation,raw,Raw,SIM03,Raw,0.1250522471396879,9.987753840746206e-4
 residual_run_order_gam_mean_deviance,0.127101469265802,lower,5000,proportion,,simulation,combat,ComBat,SIM03,ComBat,0.1250526727149478,9.98346434366354e-4
 residual_run_order_gam_mean_deviance,0.0519252821411731,lower,5000,proportion,,simulation,qc_rlsc,QC-RLSC,SIM03,QC-RLSC,0.05262077598318517,7.285109004141592e-4
 residual_run_order_gam_mean_deviance,0.0836438425797742,lower,5000,proportion,,simulation,tiger,TIGER,SIM03,TIGER,0.08303445968625336,5.848809718198404e-4
 residual_run_order_gam_mean_deviance,0.0970790204480711,lower,5000,proportion,,simulation,serrf,SERRF,SIM03,SERRF,0.09655511010886014,7.431540564073481e-4
-residual_run_order_gam_mean_deviance,0.0195206497227795,lower,5000,proportion,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM03,WiNN (QC-tuned),0.01989070158199317,3.2290689053382797e-4
-residual_run_order_gam_mean_deviance,0.103212768071078,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM03,WiNN (inferred segments),0.10496639082960574,0.008783342015834788
-residual_run_order_gam_mean_deviance,0.0220056119450814,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN,SIM03,WiNN,0.02182699786083337,1.9985826692154416e-4
+residual_run_order_gam_mean_deviance,0.0302366908335027,lower,5000,proportion,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM03,WiNN (QC-tuned),0.03155452215446968,3.2804500150354345e-4
+residual_run_order_gam_mean_deviance,0.106018752474999,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM03,WiNN (inferred segments),0.1098270191904615,0.007801351949934393
+residual_run_order_gam_mean_deviance,0.0318166125951032,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN,SIM03,WiNN,0.03305805945134874,3.490246147171409e-4
 residual_run_order_gam_mean_deviance,0.128999212207027,lower,5000,proportion,,simulation,raw,Raw,SIM04,Raw,0.1250522471396879,9.987753840746206e-4
 residual_run_order_gam_mean_deviance,0.128998990277918,lower,5000,proportion,,simulation,combat,ComBat,SIM04,ComBat,0.1250526727149478,9.98346434366354e-4
 residual_run_order_gam_mean_deviance,0.057243273417772,lower,5000,proportion,,simulation,qc_rlsc,QC-RLSC,SIM04,QC-RLSC,0.05262077598318517,7.285109004141592e-4
 residual_run_order_gam_mean_deviance,0.0862983398148193,lower,5000,proportion,,simulation,tiger,TIGER,SIM04,TIGER,0.08303445968625336,5.848809718198404e-4
 residual_run_order_gam_mean_deviance,0.0992751574708193,lower,5000,proportion,,simulation,serrf,SERRF,SIM04,SERRF,0.09655511010886014,7.431540564073481e-4
-residual_run_order_gam_mean_deviance,0.0187577614670799,lower,5000,proportion,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM04,WiNN (QC-tuned),0.01989070158199317,3.2290689053382797e-4
-residual_run_order_gam_mean_deviance,0.11006413039903,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM04,WiNN (inferred segments),0.10496639082960574,0.008783342015834788
-residual_run_order_gam_mean_deviance,0.021194748196574,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN,SIM04,WiNN,0.02182699786083337,1.9985826692154416e-4
+residual_run_order_gam_mean_deviance,0.0304895799506205,lower,5000,proportion,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM04,WiNN (QC-tuned),0.03155452215446968,3.2804500150354345e-4
+residual_run_order_gam_mean_deviance,0.112675601308386,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM04,WiNN (inferred segments),0.1098270191904615,0.007801351949934393
+residual_run_order_gam_mean_deviance,0.0314494884983639,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN,SIM04,WiNN,0.03305805945134874,3.490246147171409e-4
 residual_run_order_gam_mean_deviance,0.125547724513172,lower,5000,proportion,,simulation,raw,Raw,SIM05,Raw,0.1250522471396879,9.987753840746206e-4
 residual_run_order_gam_mean_deviance,0.125547483311369,lower,5000,proportion,,simulation,combat,ComBat,SIM05,ComBat,0.1250526727149478,9.98346434366354e-4
 residual_run_order_gam_mean_deviance,0.0528026880027563,lower,5000,proportion,,simulation,qc_rlsc,QC-RLSC,SIM05,QC-RLSC,0.05262077598318517,7.285109004141592e-4
 residual_run_order_gam_mean_deviance,0.0815209568003766,lower,5000,proportion,,simulation,tiger,TIGER,SIM05,TIGER,0.08303445968625336,5.848809718198404e-4
 residual_run_order_gam_mean_deviance,0.0975983711525286,lower,5000,proportion,,simulation,serrf,SERRF,SIM05,SERRF,0.09655511010886014,7.431540564073481e-4
-residual_run_order_gam_mean_deviance,0.019800078423509698,lower,5000,proportion,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM05,WiNN (QC-tuned),0.01989070158199317,3.2290689053382797e-4
-residual_run_order_gam_mean_deviance,0.0582398491202359,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM05,WiNN (inferred segments),0.10496639082960574,0.008783342015834788
-residual_run_order_gam_mean_deviance,0.0223462822460397,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN,SIM05,WiNN,0.02182699786083337,1.9985826692154416e-4
+residual_run_order_gam_mean_deviance,0.0330537544502482,lower,5000,proportion,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM05,WiNN (QC-tuned),0.03155452215446968,3.2804500150354345e-4
+residual_run_order_gam_mean_deviance,0.0721612867624972,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM05,WiNN (inferred segments),0.1098270191904615,0.007801351949934393
+residual_run_order_gam_mean_deviance,0.0346761076935277,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN,SIM05,WiNN,0.03305805945134874,3.490246147171409e-4
 residual_run_order_gam_mean_deviance,0.122435574911771,lower,5000,proportion,,simulation,raw,Raw,SIM06,Raw,0.1250522471396879,9.987753840746206e-4
 residual_run_order_gam_mean_deviance,0.122435403277821,lower,5000,proportion,,simulation,combat,ComBat,SIM06,ComBat,0.1250526727149478,9.98346434366354e-4
 residual_run_order_gam_mean_deviance,0.0520776804248783,lower,5000,proportion,,simulation,qc_rlsc,QC-RLSC,SIM06,QC-RLSC,0.05262077598318517,7.285109004141592e-4
 residual_run_order_gam_mean_deviance,0.0813616544518397,lower,5000,proportion,,simulation,tiger,TIGER,SIM06,TIGER,0.08303445968625336,5.848809718198404e-4
 residual_run_order_gam_mean_deviance,0.0956868256521402,lower,5000,proportion,,simulation,serrf,SERRF,SIM06,SERRF,0.09655511010886014,7.431540564073481e-4
-residual_run_order_gam_mean_deviance,0.0215271559148715,lower,5000,proportion,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM06,WiNN (QC-tuned),0.01989070158199317,3.2290689053382797e-4
-residual_run_order_gam_mean_deviance,0.134165487496038,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM06,WiNN (inferred segments),0.10496639082960574,0.008783342015834788
-residual_run_order_gam_mean_deviance,0.0221782845837095,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN,SIM06,WiNN,0.02182699786083337,1.9985826692154416e-4
+residual_run_order_gam_mean_deviance,0.0324046558227871,lower,5000,proportion,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM06,WiNN (QC-tuned),0.03155452215446968,3.2804500150354345e-4
+residual_run_order_gam_mean_deviance,0.136537249416177,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM06,WiNN (inferred segments),0.1098270191904615,0.007801351949934393
+residual_run_order_gam_mean_deviance,0.0337316191503737,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN,SIM06,WiNN,0.03305805945134874,3.490246147171409e-4
 residual_run_order_gam_mean_deviance,0.12753075161751,lower,5000,proportion,,simulation,raw,Raw,SIM07,Raw,0.1250522471396879,9.987753840746206e-4
 residual_run_order_gam_mean_deviance,0.12753052657011,lower,5000,proportion,,simulation,combat,ComBat,SIM07,ComBat,0.1250526727149478,9.98346434366354e-4
 residual_run_order_gam_mean_deviance,0.0501568697699568,lower,5000,proportion,,simulation,qc_rlsc,QC-RLSC,SIM07,QC-RLSC,0.05262077598318517,7.285109004141592e-4
 residual_run_order_gam_mean_deviance,0.0834912544078682,lower,5000,proportion,,simulation,tiger,TIGER,SIM07,TIGER,0.08303445968625336,5.848809718198404e-4
 residual_run_order_gam_mean_deviance,0.0953415987991869,lower,5000,proportion,,simulation,serrf,SERRF,SIM07,SERRF,0.09655511010886014,7.431540564073481e-4
-residual_run_order_gam_mean_deviance,0.0186058586155936,lower,5000,proportion,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM07,WiNN (QC-tuned),0.01989070158199317,3.2290689053382797e-4
-residual_run_order_gam_mean_deviance,0.0663354922628203,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM07,WiNN (inferred segments),0.10496639082960574,0.008783342015834788
-residual_run_order_gam_mean_deviance,0.0207266585856592,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN,SIM07,WiNN,0.02182699786083337,1.9985826692154416e-4
+residual_run_order_gam_mean_deviance,0.0313953986868967,lower,5000,proportion,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM07,WiNN (QC-tuned),0.03155452215446968,3.2804500150354345e-4
+residual_run_order_gam_mean_deviance,0.0734041709394941,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM07,WiNN (inferred segments),0.1098270191904615,0.007801351949934393
+residual_run_order_gam_mean_deviance,0.0334415976078521,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN,SIM07,WiNN,0.03305805945134874,3.490246147171409e-4
 residual_run_order_gam_mean_deviance,0.122558664063858,lower,5000,proportion,,simulation,raw,Raw,SIM08,Raw,0.1250522471396879,9.987753840746206e-4
 residual_run_order_gam_mean_deviance,0.122558418840297,lower,5000,proportion,,simulation,combat,ComBat,SIM08,ComBat,0.1250526727149478,9.98346434366354e-4
 residual_run_order_gam_mean_deviance,0.0487972916733427,lower,5000,proportion,,simulation,qc_rlsc,QC-RLSC,SIM08,QC-RLSC,0.05262077598318517,7.285109004141592e-4
 residual_run_order_gam_mean_deviance,0.0804314254434211,lower,5000,proportion,,simulation,tiger,TIGER,SIM08,TIGER,0.08303445968625336,5.848809718198404e-4
 residual_run_order_gam_mean_deviance,0.0935685227450155,lower,5000,proportion,,simulation,serrf,SERRF,SIM08,SERRF,0.09655511010886014,7.431540564073481e-4
-residual_run_order_gam_mean_deviance,0.0214695734556991,lower,5000,proportion,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM08,WiNN (QC-tuned),0.01989070158199317,3.2290689053382797e-4
-residual_run_order_gam_mean_deviance,0.146909352036922,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM08,WiNN (inferred segments),0.10496639082960574,0.008783342015834788
-residual_run_order_gam_mean_deviance,0.0225135376610542,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN,SIM08,WiNN,0.02182699786083337,1.9985826692154416e-4
+residual_run_order_gam_mean_deviance,0.0330858003278059,lower,5000,proportion,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM08,WiNN (QC-tuned),0.03155452215446968,3.2804500150354345e-4
+residual_run_order_gam_mean_deviance,0.149566386958264,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM08,WiNN (inferred segments),0.1098270191904615,0.007801351949934393
+residual_run_order_gam_mean_deviance,0.0342127679185322,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN,SIM08,WiNN,0.03305805945134874,3.490246147171409e-4
 residual_run_order_gam_mean_deviance,0.123197409908073,lower,5000,proportion,,simulation,raw,Raw,SIM09,Raw,0.1250522471396879,9.987753840746206e-4
 residual_run_order_gam_mean_deviance,0.123197196298025,lower,5000,proportion,,simulation,combat,ComBat,SIM09,ComBat,0.1250526727149478,9.98346434366354e-4
 residual_run_order_gam_mean_deviance,0.0519647828252762,lower,5000,proportion,,simulation,qc_rlsc,QC-RLSC,SIM09,QC-RLSC,0.05262077598318517,7.285109004141592e-4
 residual_run_order_gam_mean_deviance,0.0828678015267214,lower,5000,proportion,,simulation,tiger,TIGER,SIM09,TIGER,0.08303445968625336,5.848809718198404e-4
 residual_run_order_gam_mean_deviance,0.0936605586391257,lower,5000,proportion,,simulation,serrf,SERRF,SIM09,SERRF,0.09655511010886014,7.431540564073481e-4
-residual_run_order_gam_mean_deviance,0.0202626011108182,lower,5000,proportion,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM09,WiNN (QC-tuned),0.01989070158199317,3.2290689053382797e-4
-residual_run_order_gam_mean_deviance,0.122997028579035,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM09,WiNN (inferred segments),0.10496639082960574,0.008783342015834788
-residual_run_order_gam_mean_deviance,0.0223350756943202,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN,SIM09,WiNN,0.02182699786083337,1.9985826692154416e-4
+residual_run_order_gam_mean_deviance,0.0316018619266109,lower,5000,proportion,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM09,WiNN (QC-tuned),0.03155452215446968,3.2804500150354345e-4
+residual_run_order_gam_mean_deviance,0.126101972323796,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM09,WiNN (inferred segments),0.1098270191904615,0.007801351949934393
+residual_run_order_gam_mean_deviance,0.0332478744642127,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN,SIM09,WiNN,0.03305805945134874,3.490246147171409e-4
 residual_run_order_gam_mean_deviance,0.118892897268797,lower,5000,proportion,,simulation,raw,Raw,SIM10,Raw,0.1250522471396879,9.987753840746206e-4
 residual_run_order_gam_mean_deviance,0.118898984586409,lower,5000,proportion,,simulation,combat,ComBat,SIM10,ComBat,0.1250526727149478,9.98346434366354e-4
 residual_run_order_gam_mean_deviance,0.0544108260161873,lower,5000,proportion,,simulation,qc_rlsc,QC-RLSC,SIM10,QC-RLSC,0.05262077598318517,7.285109004141592e-4
 residual_run_order_gam_mean_deviance,0.0816057715702357,lower,5000,proportion,,simulation,tiger,TIGER,SIM10,TIGER,0.08303445968625336,5.848809718198404e-4
 residual_run_order_gam_mean_deviance,0.0944429041905023,lower,5000,proportion,,simulation,serrf,SERRF,SIM10,SERRF,0.09655511010886014,7.431540564073481e-4
-residual_run_order_gam_mean_deviance,0.0202567145265226,lower,5000,proportion,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM10,WiNN (QC-tuned),0.01989070158199317,3.2290689053382797e-4
-residual_run_order_gam_mean_deviance,0.0889331329585522,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM10,WiNN (inferred segments),0.10496639082960574,0.008783342015834788
-residual_run_order_gam_mean_deviance,0.0219825153777159,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN,SIM10,WiNN,0.02182699786083337,1.9985826692154416e-4
+residual_run_order_gam_mean_deviance,0.0316463807838268,lower,5000,proportion,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM10,WiNN (QC-tuned),0.03155452215446968,3.2804500150354345e-4
+residual_run_order_gam_mean_deviance,0.0979826942439507,lower,5000,proportion,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM10,WiNN (inferred segments),0.1098270191904615,0.007801351949934393
+residual_run_order_gam_mean_deviance,0.0330529300882918,lower,5000,proportion,,simulation,winn_fixed_no_qc,WiNN,SIM10,WiNN,0.03305805945134874,3.490246147171409e-4
 residual_run_order_gam_mean_deviance,0.131152270899681,lower,5000,proportion,,simulation,qc_rfsc,QC-RFSC,SIM01,QC-RFSC,0.11887608227944141,0.003002590486390566
 residual_run_order_gam_mean_deviance,0.119091929727106,lower,5000,proportion,,simulation,qc_rfsc,QC-RFSC,SIM02,QC-RFSC,0.11887608227944141,0.003002590486390566
 residual_run_order_gam_mean_deviance,0.104631350872583,lower,5000,proportion,,simulation,qc_rfsc,QC-RFSC,SIM03,QC-RFSC,0.11887608227944141,0.003002590486390566

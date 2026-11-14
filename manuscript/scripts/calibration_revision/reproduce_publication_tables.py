@@ -43,8 +43,9 @@ def numbered(paths, numbers):
             if (match := re.match(r"table_s(\d+)_", path.name)) and int(match[1]) in numbers]
 
 core_outputs = numbered(tex_files + csv_files, set(range(4, 21)) | {26})
+core_outputs = [path for path in core_outputs if path.name != "table_s12_lobo_fold_level.csv"]
 core_outputs += [Path("generated/supplementary_table_data") / name for name in
-                 ("supplementary_table_manifest.csv", "leave_one_batch_out_bootstrap_summary.csv")]
+                 ("supplementary_table_manifest.csv",)]
 commands = [
     (["Rscript", "scripts/generate_supplementary_tables.R", f"--final-root={a.archive}"], core_outputs),
     (["Rscript", "scripts/nearest_baseline/generate_validation_tables.R"], numbered(tex_files, {23, 27, 28})),

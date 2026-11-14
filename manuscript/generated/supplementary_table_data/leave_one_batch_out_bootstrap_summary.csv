@@ -1,613 +1,613 @@
-"heldout_batch","endpoint","method_id","method","metric","bootstrap_mean","ci_lower","ci_upper","valid_bootstrap","dataset_key","dataset"
-"1","cow_vs_sheep","raw","Raw","pearson",0.96976065250165,0.949210844238099,0.981817230424149,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","raw","Raw","spearman",0.918415417617557,0.872081342899001,0.947275508621054,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","raw","Raw","sign_concordance",0.849863745980707,0.80224075562701,0.887459807073955,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","raw","Raw","attenuation",1.02318263862764,0.994438694157542,1.06049391264693,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","combat","ComBat","pearson",0.972554433368993,0.953771638462957,0.98370949826033,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","combat","ComBat","spearman",0.922562825276725,0.878602665539614,0.949554777179454,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","combat","ComBat","sign_concordance",0.848813906752412,0.80224075562701,0.887871784565916,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","combat","ComBat","attenuation",1.04795539802431,1.01995084906329,1.08706257616989,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","qc_rlsc","QC-RLSC","pearson",0.965458226026817,0.931354330263847,0.981142697110148,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","qc_rlsc","QC-RLSC","spearman",0.910202130893819,0.845473964930916,0.946156167748911,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","qc_rlsc","QC-RLSC","sign_concordance",0.701993569131833,0.481501205787781,0.876617765273312,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","qc_rlsc","QC-RLSC","attenuation",0.713505797818165,0.276589366268722,1.04737682258979,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","qc_rfsc","QC-RFSC","pearson",0.943668316841461,0.89542814101558,0.969909192999563,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","qc_rfsc","QC-RFSC","spearman",0.90049795968123,0.848689942970025,0.934502284200954,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","qc_rfsc","QC-RFSC","sign_concordance",0.845243368167203,0.797025723472669,0.883038585209003,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","qc_rfsc","QC-RFSC","attenuation",1.00751113901573,0.970376374767459,1.05777594630834,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","tiger","TIGER","pearson",0.967458762399064,0.948254405678655,0.979025262844343,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","tiger","TIGER","spearman",0.908731162830307,0.864915344273459,0.936646885582262,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","tiger","TIGER","sign_concordance",0.838174638263666,0.792604501607717,0.87620578778135,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","tiger","TIGER","attenuation",1.01049451546546,0.972346968181738,1.05382156049776,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","serrf","SERRF","pearson",0.971019435673281,0.952316937793696,0.982418844580113,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","serrf","SERRF","spearman",0.921738113229454,0.87824630202469,0.948852876218013,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","serrf","SERRF","sign_concordance",0.848329180064309,0.803858520900322,0.886665996784566,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","serrf","SERRF","attenuation",1.03454760251967,1.00420857822925,1.07147150978999,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","pearson",0.970701962614434,0.951803676533403,0.982058383703906,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","spearman",0.921532154778338,0.878163697223711,0.948875102035534,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","sign_concordance",0.85637479903537,0.809073553054662,0.897909967845659,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","attenuation",1.03896884866396,1.00838694126193,1.08018089925123,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","pearson",0.969650911641276,0.948237956055472,0.98194978301917,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","spearman",0.917461704047933,0.865900296286731,0.948000939724484,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","sign_concordance",0.850113143086817,0.800231109324759,0.89591036977492,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","attenuation",1.03976649441821,1.00574802068806,1.08182599357131,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","winn_fixed_no_qc","WiNN","pearson",0.970689431845571,0.951707950271861,0.982083630397351,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","winn_fixed_no_qc","WiNN","spearman",0.921437837089082,0.877555266966538,0.948766363800395,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","winn_fixed_no_qc","WiNN","sign_concordance",0.847676245980707,0.80384847266881,0.885852090032154,2000,"mtbls79","MTBLS79"
-"1","cow_vs_sheep","winn_fixed_no_qc","WiNN","attenuation",1.04129575919668,1.01254753340084,1.07777311389934,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","raw","Raw","pearson",0.972383055196831,0.950243458006461,0.983002019169311,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","raw","Raw","spearman",0.925461874108001,0.884001721421566,0.952991547392284,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","raw","Raw","sign_concordance",0.858091036977492,0.816308279742765,0.893086816720257,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","raw","Raw","attenuation",1.03419735098844,1.00725331279551,1.07665102315821,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","combat","ComBat","pearson",0.974501941390637,0.954141331351214,0.984385733534225,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","combat","ComBat","spearman",0.927403026515618,0.887781609633043,0.953363808764178,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","combat","ComBat","sign_concordance",0.859733922829582,0.818729903536977,0.892694935691318,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","combat","ComBat","attenuation",1.01728514315412,0.995515074708531,1.05338397033604,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","qc_rlsc","QC-RLSC","pearson",0.960776335641064,0.923435382396014,0.979826590396531,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","qc_rlsc","QC-RLSC","spearman",0.906364212260148,0.846501389204514,0.947146282284666,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","qc_rlsc","QC-RLSC","sign_concordance",0.721671824758842,0.371372588424437,0.9164288585209,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","qc_rlsc","QC-RLSC","attenuation",2.0607509395954,0.56878814012994,4.60311718446181,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","qc_rfsc","QC-RFSC","pearson",0.943323821042738,0.873293503384989,0.971303377887041,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","qc_rfsc","QC-RFSC","spearman",0.906997543739247,0.849062718319002,0.946385898596913,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","qc_rfsc","QC-RFSC","sign_concordance",0.85466097266881,0.811495176848875,0.893086816720257,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","qc_rfsc","QC-RFSC","attenuation",1.01594844810919,0.982503329956786,1.05506427984963,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","tiger","TIGER","pearson",0.970327624728525,0.951386930227937,0.98009399078176,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","tiger","TIGER","spearman",0.915618142313272,0.876458156859622,0.943789440455882,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","tiger","TIGER","sign_concordance",0.851494372990354,0.815112540192926,0.883440514469453,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","tiger","TIGER","attenuation",1.05126088904793,1.02039806593154,1.08908566045426,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","serrf","SERRF","pearson",0.972739610604352,0.950875120539739,0.983168052884198,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","serrf","SERRF","spearman",0.925860442123125,0.884958385333012,0.952211522966167,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","serrf","SERRF","sign_concordance",0.858506631832797,0.818307877813505,0.891087218649518,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","serrf","SERRF","attenuation",1.04315743804202,1.01772279704343,1.08349218584812,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","pearson",0.972524348532712,0.950184548110928,0.983100328266187,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","spearman",0.925201325829149,0.883978489486017,0.95172824361579,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","sign_concordance",0.861314710610932,0.818729903536977,0.895900321543408,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","attenuation",1.04781386864616,1.02076999033457,1.08361895312619,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","pearson",0.97234798697443,0.949662324600502,0.983004625147599,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","spearman",0.924789423679262,0.882915790423332,0.952314881505683,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","sign_concordance",0.860514469453376,0.816720257234727,0.895498392282958,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","attenuation",1.04810900829845,1.01825796252512,1.08452910207369,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","winn_fixed_no_qc","WiNN","pearson",0.972529978965372,0.950159154615085,0.983114414481485,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","winn_fixed_no_qc","WiNN","spearman",0.925209622072982,0.884135201714036,0.951689198265424,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","winn_fixed_no_qc","WiNN","sign_concordance",0.858616961414791,0.818327974276527,0.891077170418006,2000,"mtbls79","MTBLS79"
-"2","cow_vs_sheep","winn_fixed_no_qc","WiNN","attenuation",1.05125471239162,1.02544008519796,1.09230591505017,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","raw","Raw","pearson",0.965745434670385,0.949811563751274,0.976762054978165,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","raw","Raw","spearman",0.914033073688562,0.877777540491323,0.93896058931957,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","raw","Raw","sign_concordance",0.855533159163987,0.818729903536977,0.885450160771704,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","raw","Raw","attenuation",1.03851639768709,1.00669801217343,1.07645462599585,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","combat","ComBat","pearson",0.967730746380485,0.952019174107673,0.978448870311761,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","combat","ComBat","spearman",0.91603907812405,0.880248574140774,0.940572798742356,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","combat","ComBat","sign_concordance",0.855172025723473,0.815916398713826,0.886254019292605,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","combat","ComBat","attenuation",1.04545909068021,1.01916741754795,1.08172807288807,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","qc_rlsc","QC-RLSC","pearson",0.94464847178427,0.882985770282269,0.97130092001974,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","qc_rlsc","QC-RLSC","spearman",0.87071951932056,0.746202589213881,0.929705447938597,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","qc_rlsc","QC-RLSC","sign_concordance",0.535925844051447,0.137851688102894,0.875411977491961,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","qc_rlsc","QC-RLSC","attenuation",2.07843183423437,0.420131398904248,5.84227780099052,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","qc_rfsc","QC-RFSC","pearson",0.933909132966776,0.893341485102415,0.960710908269528,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","qc_rfsc","QC-RFSC","spearman",0.896554954521611,0.851298797297055,0.930380881300908,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","qc_rfsc","QC-RFSC","sign_concordance",0.85503536977492,0.814308681672026,0.887057877813505,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","qc_rfsc","QC-RFSC","attenuation",1.0373115746668,1.00330483078468,1.07308314665572,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","tiger","TIGER","pearson",0.964908299073029,0.949739270091391,0.975206050109629,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","tiger","TIGER","spearman",0.910341473889081,0.872807212887356,0.934937966246423,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","tiger","TIGER","sign_concordance",0.851873794212219,0.811073151125402,0.881430868167203,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","tiger","TIGER","attenuation",1.06171801049511,1.02464499770672,1.10410177482203,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","serrf","SERRF","pearson",0.966620925154973,0.951713769826024,0.977172655626672,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","serrf","SERRF","spearman",0.916671877753549,0.88096931047476,0.940959104334474,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","serrf","SERRF","sign_concordance",0.854759646302251,0.815102491961415,0.885460209003215,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","serrf","SERRF","attenuation",1.04706248337991,1.01822103425111,1.08050424743398,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","pearson",0.966605606185808,0.951494566185581,0.97698468745341,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","spearman",0.916468457454738,0.881459479486709,0.940350161639072,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","sign_concordance",0.859600683279743,0.818327974276527,0.892282958199357,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","attenuation",1.05244894275443,1.01960965173309,1.08754839986676,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","pearson",0.966421449404139,0.950923230259243,0.977171576328373,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","spearman",0.915924850854042,0.878677294754879,0.940986666701282,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","sign_concordance",0.858759847266881,0.815514469453376,0.893498794212219,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","attenuation",1.05463432176473,1.01967237002541,1.09241987613325,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","winn_fixed_no_qc","WiNN","pearson",0.966633104611533,0.951534038625372,0.976990445461777,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","winn_fixed_no_qc","WiNN","spearman",0.916548851130827,0.881615327872475,0.940372789116846,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","winn_fixed_no_qc","WiNN","sign_concordance",0.854400321543408,0.814308681672026,0.885058279742765,2000,"mtbls79","MTBLS79"
-"3","cow_vs_sheep","winn_fixed_no_qc","WiNN","attenuation",1.05363092563871,1.02300337759932,1.08713019659094,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","raw","Raw","pearson",0.965103354043279,0.940887988803225,0.978430395728335,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","raw","Raw","spearman",0.911975979170599,0.858031941413373,0.94298673971774,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","raw","Raw","sign_concordance",0.837904742765273,0.784967845659164,0.880225080385852,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","raw","Raw","attenuation",1.06082526938296,1.01404744812032,1.14604750936397,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","combat","ComBat","pearson",0.968717162513088,0.946228512431813,0.980755506224663,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","combat","ComBat","spearman",0.919160660863481,0.866425285931182,0.946394579717757,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","combat","ComBat","sign_concordance",0.85008058681672,0.788575160771704,0.886254019292605,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","combat","ComBat","attenuation",1.04126167557265,0.996092026786303,1.12277942847523,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","qc_rlsc","QC-RLSC","pearson",0.939251304714606,0.832450305443403,0.975023076344253,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","qc_rlsc","QC-RLSC","spearman",0.868071468641505,0.720875383233553,0.934587237136603,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","qc_rlsc","QC-RLSC","sign_concordance",0.553782757234727,0.110922427652733,0.876225884244373,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","qc_rlsc","QC-RLSC","attenuation",2.80771393112372,0.486010742455447,8.30677793708367,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","qc_rfsc","QC-RFSC","pearson",0.940847564198325,0.888351315060014,0.966592447756798,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","qc_rfsc","QC-RFSC","spearman",0.896850111940726,0.831863358571991,0.935089365066395,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","qc_rfsc","QC-RFSC","sign_concordance",0.845175442122187,0.790192926045016,0.880235128617363,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","qc_rfsc","QC-RFSC","attenuation",1.04256483629916,0.991955079297586,1.13247957378131,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","tiger","TIGER","pearson",0.962927126388435,0.939348661333043,0.976333639911622,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","tiger","TIGER","spearman",0.905551128807821,0.852196259389564,0.935344500789063,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","tiger","TIGER","sign_concordance",0.839934887459807,0.78173231511254,0.87620578778135,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","tiger","TIGER","attenuation",1.07203616088244,1.02996858617776,1.14906999062421,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","serrf","SERRF","pearson",0.9673167067325,0.945398973641364,0.979091056909963,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","serrf","SERRF","spearman",0.919397653294867,0.868043324355867,0.94608222336243,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","serrf","SERRF","sign_concordance",0.85066057073955,0.789790996784566,0.887067926045016,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","serrf","SERRF","attenuation",1.07151969943688,1.0235009577842,1.15344222065727,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","pearson",0.96709058970126,0.94543741822856,0.978847923998736,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","spearman",0.918446562625524,0.867934603593533,0.945563244304596,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","sign_concordance",0.856007234726688,0.803456591639871,0.891479099678457,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","attenuation",1.07112268269888,1.03183528909177,1.12664936930382,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","pearson",0.964759854447555,0.940979509789551,0.978043250365057,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","spearman",0.914605611339286,0.859944705314619,0.944223863504885,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","sign_concordance",0.852244172025723,0.797427652733119,0.888665594855305,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","attenuation",1.06513924965907,1.02059018917305,1.12225056987729,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","winn_fixed_no_qc","WiNN","pearson",0.967096400441018,0.945404054095523,0.97885173056984,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","winn_fixed_no_qc","WiNN","spearman",0.918391932301396,0.86809077034667,0.945566191248085,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","winn_fixed_no_qc","WiNN","sign_concordance",0.852998995176849,0.809475482315112,0.886665996784566,2000,"mtbls79","MTBLS79"
-"4","cow_vs_sheep","winn_fixed_no_qc","WiNN","attenuation",1.08284390702499,1.03970948486435,1.15465299000548,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","raw","Raw","pearson",0.95218797808596,0.913371029553378,0.972691120485126,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","raw","Raw","spearman",0.895690187267115,0.834328478154056,0.933105355323924,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","raw","Raw","sign_concordance",0.83009827170418,0.772106109324759,0.87379421221865,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","raw","Raw","attenuation",1.09012441808177,1.04690092517371,1.14345757086432,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","combat","ComBat","pearson",0.960574944352524,0.928527732977385,0.977415693625145,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","combat","ComBat","spearman",0.905553074776948,0.855980041971852,0.937913810748637,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","combat","ComBat","sign_concordance",0.842872789389068,0.803436495176849,0.874206189710611,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","combat","ComBat","attenuation",1.13507367326886,1.09302996817683,1.19563998745539,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","qc_rlsc","QC-RLSC","pearson",0.948499309606652,0.906702556751901,0.970902599675924,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","qc_rlsc","QC-RLSC","spearman",0.890340997509502,0.832428117275992,0.928131231894209,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","qc_rlsc","QC-RLSC","sign_concordance",0.767737138263666,0.616127411575563,0.858129019292604,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","qc_rlsc","QC-RLSC","attenuation",0.879704186342143,0.466165979632014,1.12804235357708,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","qc_rfsc","QC-RFSC","pearson",0.914967080746966,0.839913493841074,0.954196744742504,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","qc_rfsc","QC-RFSC","spearman",0.881209821615147,0.816073270437197,0.92448717099956,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","qc_rfsc","QC-RFSC","sign_concordance",0.84207154340836,0.803054662379421,0.874608118971061,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","qc_rfsc","QC-RFSC","attenuation",1.13799797787746,1.09076653161928,1.19751024794159,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","tiger","TIGER","pearson",0.952728878434276,0.916774237307755,0.971622802780151,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","tiger","TIGER","spearman",0.894852612027638,0.844772881724039,0.928315584814734,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","tiger","TIGER","sign_concordance",0.836199356913183,0.797829581993569,0.866559485530547,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","tiger","TIGER","attenuation",1.13308816670931,1.0869897691028,1.19455510003921,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","serrf","SERRF","pearson",0.953820438948714,0.916116008202964,0.973511660568602,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","serrf","SERRF","spearman",0.900623645734668,0.849653772328973,0.934728336565661,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","serrf","SERRF","sign_concordance",0.84306209807074,0.80425040192926,0.874206189710611,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","serrf","SERRF","attenuation",1.09450714721291,1.04731320875756,1.15498842035053,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","pearson",0.953789289027616,0.916483087205976,0.973187706951875,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","spearman",0.901032059856787,0.850442971185629,0.935451142813492,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","sign_concordance",0.847630627009646,0.808671623794212,0.882234726688103,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","attenuation",1.09083005015127,1.05208714770978,1.14249288423995,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","pearson",0.953562876500107,0.916221305326431,0.973046019668502,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","spearman",0.89971367610277,0.847063586087474,0.934155306134295,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","sign_concordance",0.846403536977492,0.807867765273312,0.881028938906752,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","attenuation",1.08933916256544,1.05141259134486,1.14353287982496,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","winn_fixed_no_qc","WiNN","pearson",0.953658972234359,0.916311064149559,0.97308775472075,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","winn_fixed_no_qc","WiNN","spearman",0.900769050625431,0.8498535046297,0.935258821300272,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","winn_fixed_no_qc","WiNN","sign_concordance",0.843926045016077,0.805054260450161,0.875411977491961,2000,"mtbls79","MTBLS79"
-"5","cow_vs_sheep","winn_fixed_no_qc","WiNN","attenuation",1.09911749425839,1.0549016830978,1.15347793801496,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","raw","Raw","pearson",0.950695960365394,0.89845185253374,0.973447560135951,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","raw","Raw","spearman",0.89521122229834,0.830670409465209,0.935745016408004,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","raw","Raw","sign_concordance",0.834666197749196,0.784565916398714,0.879431270096463,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","raw","Raw","attenuation",1.08968151335133,1.02996485437621,1.18690579483248,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","combat","ComBat","pearson",0.960599617577875,0.921525080178004,0.97742025307727,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","combat","ComBat","spearman",0.905945634986299,0.848840558533025,0.940174357225278,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","combat","ComBat","sign_concordance",0.845622789389068,0.80183882636656,0.883440514469453,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","combat","ComBat","attenuation",1.09881387056641,1.03769170653901,1.18677880208735,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","qc_rlsc","QC-RLSC","pearson",0.938244638702528,0.883143655047126,0.968450633214771,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","qc_rlsc","QC-RLSC","spearman",0.885227876491306,0.819871375635846,0.928723749957751,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","qc_rlsc","QC-RLSC","sign_concordance",0.744627411575563,0.340765675241158,0.947347266881029,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","qc_rlsc","QC-RLSC","attenuation",2.32637775289367,0.596027571673876,5.74124517529014,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","qc_rfsc","QC-RFSC","pearson",0.914769622163772,0.838241831942427,0.954709275737763,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","qc_rfsc","QC-RFSC","spearman",0.882210044792544,0.82093180278581,0.923217215421501,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","qc_rfsc","QC-RFSC","sign_concordance",0.841338826366559,0.79863344051447,0.877009646302251,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","qc_rfsc","QC-RFSC","attenuation",1.10810662231509,1.03870252585255,1.20727402322849,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","tiger","TIGER","pearson",0.945179190660875,0.893489891674498,0.967536373592104,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","tiger","TIGER","spearman",0.88110816394201,0.816714103865876,0.921166818446454,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","tiger","TIGER","sign_concordance",0.83038404340836,0.788173231511254,0.866559485530547,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","tiger","TIGER","attenuation",1.03322000537224,0.972667567623488,1.13221288151026,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","serrf","SERRF","pearson",0.952142164025388,0.901472748175776,0.97369579508084,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","serrf","SERRF","spearman",0.90037351389271,0.838026021845072,0.93732646235643,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","serrf","SERRF","sign_concordance",0.846386053054662,0.804652331189711,0.883038585209003,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","serrf","SERRF","attenuation",1.1008358639826,1.0391966783516,1.1906495205724,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","pearson",0.952861758102638,0.904545374491917,0.974056515937834,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","spearman",0.901460147870408,0.838083646650797,0.937907994680899,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","sign_concordance",0.846744975884244,0.802250803858521,0.887057877813505,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","attenuation",1.10094442542379,1.03829506489197,1.19399332603184,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","pearson",0.953129220445341,0.905822510951083,0.974133565855482,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","spearman",0.902019457377147,0.838555238992907,0.938313811922997,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","sign_concordance",0.845453175241158,0.80104501607717,0.885852090032154,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","attenuation",1.10134272898681,1.03777983850461,1.19601757961226,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","winn_fixed_no_qc","WiNN","pearson",0.952863869317875,0.904618757629024,0.974070172856342,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","winn_fixed_no_qc","WiNN","spearman",0.901424444405811,0.83794066956719,0.937832090963757,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","winn_fixed_no_qc","WiNN","sign_concordance",0.846787982315113,0.80344654340836,0.883450562700965,2000,"mtbls79","MTBLS79"
-"6","cow_vs_sheep","winn_fixed_no_qc","WiNN","attenuation",1.10227105510845,1.04092683026103,1.19084763499206,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","raw","Raw","pearson",0.956136953393113,0.930900855479054,0.971176322972488,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","raw","Raw","spearman",0.896483125614623,0.846668559753903,0.930478769761503,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","raw","Raw","sign_concordance",0.834297226688103,0.785771704180064,0.868981109324759,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","raw","Raw","attenuation",1.01837983557362,0.987784837282639,1.05462540821895,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","combat","ComBat","pearson",0.959695606746595,0.931178709428556,0.975602028303235,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","combat","ComBat","spearman",0.898422676890322,0.848403617120984,0.933064216996388,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","combat","ComBat","sign_concordance",0.833718448553055,0.784153938906752,0.867775321543408,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","combat","ComBat","attenuation",1.0558759531885,1.02492433661912,1.09185097907777,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","qc_rlsc","QC-RLSC","pearson",0.952575949237254,0.924640949622675,0.969917656831,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","qc_rlsc","QC-RLSC","spearman",0.889705857494922,0.838683130325151,0.926411598456167,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","qc_rlsc","QC-RLSC","sign_concordance",0.726609726688103,0.547025723472669,0.851306270096463,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","qc_rlsc","QC-RLSC","attenuation",0.75938691383197,0.311499108691649,1.0379218699164,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","qc_rfsc","QC-RFSC","pearson",0.922359538057893,0.841448979265177,0.959428113438866,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","qc_rfsc","QC-RFSC","spearman",0.875054772379399,0.810145554452912,0.922228728272064,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","qc_rfsc","QC-RFSC","sign_concordance",0.835542604501608,0.791398713826367,0.869774919614148,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","qc_rfsc","QC-RFSC","attenuation",1.03241929362729,1.00319551722502,1.06752909332968,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","tiger","TIGER","pearson",0.953789885547583,0.930176107627562,0.968055488453748,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","tiger","TIGER","spearman",0.884196637630025,0.834072253332144,0.917267443575356,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","tiger","TIGER","sign_concordance",0.823500602893891,0.772086012861736,0.858520900321543,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","tiger","TIGER","attenuation",1.01130405477245,0.978685271174314,1.05369758236815,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","serrf","SERRF","pearson",0.956110938457986,0.93016074456313,0.971383962794169,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","serrf","SERRF","spearman",0.895353853150418,0.846120869487437,0.929328307271188,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","serrf","SERRF","sign_concordance",0.83190172829582,0.783762057877814,0.865755627009646,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","serrf","SERRF","attenuation",1.02596024071446,0.994723822689479,1.05982141861676,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","pearson",0.954703589530809,0.927754660694453,0.969951458621189,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","spearman",0.891589611065964,0.840912290111227,0.925784450480566,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","sign_concordance",0.835031350482315,0.794594051446945,0.870578778135048,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","attenuation",0.993249669549275,0.959402294157733,1.02806298345149,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","pearson",0.951369944149578,0.923771146514164,0.96845362973432,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","spearman",0.886136616915435,0.827342754604031,0.924065241240163,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","sign_concordance",0.833558279742765,0.786153536977492,0.870186897106109,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","attenuation",1.00054078696642,0.9615385967783,1.05165018166231,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","winn_fixed_no_qc","WiNN","pearson",0.954684327460545,0.92779433069878,0.96990975524234,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","winn_fixed_no_qc","WiNN","spearman",0.891646722188741,0.840892562476336,0.92573474535537,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","winn_fixed_no_qc","WiNN","sign_concordance",0.833429059485531,0.792604501607717,0.865755627009646,2000,"mtbls79","MTBLS79"
-"7","cow_vs_sheep","winn_fixed_no_qc","WiNN","attenuation",0.993565568714613,0.961847803877166,1.02720741424519,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","raw","Raw","pearson",0.964549420377426,0.945469060106016,0.975981752512917,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","raw","Raw","spearman",0.917058473416054,0.879010228387043,0.941663936675555,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","raw","Raw","sign_concordance",0.855331591639871,0.815514469453376,0.886665996784566,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","raw","Raw","attenuation",1.03743006115932,1.00358655212418,1.08899299199877,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","combat","ComBat","pearson",0.967520963182566,0.948365237935168,0.978682253032694,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","combat","ComBat","spearman",0.919092648510403,0.882413709594145,0.943227735324284,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","combat","ComBat","sign_concordance",0.855201567524116,0.817926045016077,0.885460209003215,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","combat","ComBat","attenuation",1.0554196109053,1.02039275404128,1.10793073634089,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","qc_rlsc","QC-RLSC","pearson",0.938720262001522,0.871742028447817,0.970198360743335,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","qc_rlsc","QC-RLSC","spearman",0.880580134864298,0.792162566888645,0.930029565751535,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","qc_rlsc","QC-RLSC","sign_concordance",0.62915152733119,0.276105305466238,0.8758038585209,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","qc_rlsc","QC-RLSC","attenuation",3.71940382632902,0.785252644316968,8.89068126650129,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","qc_rfsc","QC-RFSC","pearson",0.946717015711843,0.910680103181818,0.967073366727905,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","qc_rfsc","QC-RFSC","spearman",0.905191718990115,0.856204087126126,0.937670645650788,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","qc_rfsc","QC-RFSC","sign_concordance",0.855551045016077,0.817514067524116,0.885852090032154,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","qc_rfsc","QC-RFSC","attenuation",1.02561091060662,0.992004177088804,1.07081394267551,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","tiger","TIGER","pearson",0.962431119587975,0.943107020631494,0.973775613918216,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","tiger","TIGER","spearman",0.906538650671054,0.865976830096221,0.933187613688064,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","tiger","TIGER","sign_concordance",0.846815916398714,0.807073954983923,0.877431672025723,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","tiger","TIGER","attenuation",1.04016279582293,1.00609452669891,1.09108701199767,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","serrf","SERRF","pearson",0.964183159089035,0.944585825375123,0.975697528032236,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","serrf","SERRF","spearman",0.916160862548743,0.877780393447871,0.940899124264708,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","serrf","SERRF","sign_concordance",0.85434786977492,0.817112138263666,0.885450160771704,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","serrf","SERRF","attenuation",1.04416976513707,1.01111611655595,1.09415472678541,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","pearson",0.963805709083325,0.945167342795127,0.974868301925914,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","spearman",0.913241346707083,0.875747278577251,0.937538025070989,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","sign_concordance",0.856471262057878,0.815514469453376,0.888665594855305,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","attenuation",1.00608852376881,0.982246442456649,1.04113727611592,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","pearson",0.963362589651292,0.945057578249941,0.974511563726881,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","spearman",0.912265568487381,0.873506227329658,0.937537105089801,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","sign_concordance",0.855262861736334,0.809485530546624,0.890675241157556,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","attenuation",1.0067011192713,0.981234187024381,1.04191692308081,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","winn_fixed_no_qc","WiNN","pearson",0.963817618606972,0.945120048244176,0.97484803678351,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","winn_fixed_no_qc","WiNN","spearman",0.913263318527282,0.875791243915094,0.937623046222652,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","winn_fixed_no_qc","WiNN","sign_concordance",0.854659163987138,0.817524115755627,0.884646302250804,2000,"mtbls79","MTBLS79"
-"8","cow_vs_sheep","winn_fixed_no_qc","WiNN","attenuation",1.00886637794201,0.982063009579951,1.04913358147381,2000,"mtbls79","MTBLS79"
-"ne1","age","raw","Raw","pearson",0.426096405442614,0.15551349211505,0.629282682655187,2000,"sacurine","Sacurine"
-"ne1","age","raw","Raw","spearman",0.335589880397897,0.0961842521125824,0.547831484130681,2000,"sacurine","Sacurine"
-"ne1","age","raw","Raw","sign_concordance",0.621362831858407,0.495575221238938,0.743362831858407,2000,"sacurine","Sacurine"
-"ne1","age","raw","Raw","attenuation",0.805733680356029,0.451430949235854,1.23418019056855,2000,"sacurine","Sacurine"
-"ne1","bmi","raw","Raw","pearson",0.165236745511321,-0.139771866790412,0.439772352781803,2000,"sacurine","Sacurine"
-"ne1","bmi","raw","Raw","spearman",0.180507493845233,-0.0527536346396966,0.402125682014771,2000,"sacurine","Sacurine"
-"ne1","bmi","raw","Raw","sign_concordance",0.565800884955752,0.442477876106195,0.690265486725664,2000,"sacurine","Sacurine"
-"ne1","bmi","raw","Raw","attenuation",0.918934413946182,0.540028603137255,1.50702298683945,2000,"sacurine","Sacurine"
-"ne1","gender","raw","Raw","pearson",0.458918930468712,0.190100343685077,0.674449891918585,2000,"sacurine","Sacurine"
-"ne1","gender","raw","Raw","spearman",0.328200337680484,0.127463362499168,0.512117406347728,2000,"sacurine","Sacurine"
-"ne1","gender","raw","Raw","sign_concordance",0.630800884955752,0.495575221238938,0.761061946902655,2000,"sacurine","Sacurine"
-"ne1","gender","raw","Raw","attenuation",0.78388289190048,0.427799596038464,1.25986673715117,2000,"sacurine","Sacurine"
-"ne1","age","combat","ComBat","pearson",0.433729220717764,0.161246775960568,0.638963584814551,2000,"sacurine","Sacurine"
-"ne1","age","combat","ComBat","spearman",0.332998735777497,0.0939920320713288,0.546592837181449,2000,"sacurine","Sacurine"
-"ne1","age","combat","ComBat","sign_concordance",0.611309734513274,0.486725663716814,0.734513274336283,2000,"sacurine","Sacurine"
-"ne1","age","combat","ComBat","attenuation",0.979309441236776,0.558929076397848,1.48582628502748,2000,"sacurine","Sacurine"
-"ne1","bmi","combat","ComBat","pearson",0.167564121671653,-0.142394380208882,0.443415716288479,2000,"sacurine","Sacurine"
-"ne1","bmi","combat","ComBat","spearman",0.181038409075787,-0.05786417093619,0.404069424113381,2000,"sacurine","Sacurine"
-"ne1","bmi","combat","ComBat","sign_concordance",0.567699115044248,0.451327433628319,0.681637168141592,2000,"sacurine","Sacurine"
-"ne1","bmi","combat","ComBat","attenuation",1.06780188476149,0.634106399613082,1.70561220593019,2000,"sacurine","Sacurine"
-"ne1","gender","combat","ComBat","pearson",0.46629633887405,0.199288813673631,0.678454216872881,2000,"sacurine","Sacurine"
-"ne1","gender","combat","ComBat","spearman",0.326312084137335,0.121583272340142,0.511012875108124,2000,"sacurine","Sacurine"
-"ne1","gender","combat","ComBat","sign_concordance",0.613893805309734,0.468805309734513,0.743362831858407,2000,"sacurine","Sacurine"
-"ne1","gender","combat","ComBat","attenuation",0.899854991843115,0.501944975236861,1.45226883127389,2000,"sacurine","Sacurine"
-"ne1","age","qc_rlsc","QC-RLSC","pearson",0.426940717871446,0.158859578209005,0.631874102955643,2000,"sacurine","Sacurine"
-"ne1","age","qc_rlsc","QC-RLSC","spearman",0.33655053978974,0.0957124559185575,0.551017615942511,2000,"sacurine","Sacurine"
-"ne1","age","qc_rlsc","QC-RLSC","sign_concordance",0.626106194690266,0.495575221238938,0.743362831858407,2000,"sacurine","Sacurine"
-"ne1","age","qc_rlsc","QC-RLSC","attenuation",0.79105865179032,0.442531281692971,1.22599638634299,2000,"sacurine","Sacurine"
-"ne1","bmi","qc_rlsc","QC-RLSC","pearson",0.156535939887328,-0.142599534301704,0.431352232122097,2000,"sacurine","Sacurine"
-"ne1","bmi","qc_rlsc","QC-RLSC","spearman",0.182615094151307,-0.0512195172666179,0.404602767981902,2000,"sacurine","Sacurine"
-"ne1","bmi","qc_rlsc","QC-RLSC","sign_concordance",0.552199115044248,0.433628318584071,0.68141592920354,2000,"sacurine","Sacurine"
-"ne1","bmi","qc_rlsc","QC-RLSC","attenuation",0.938494702008268,0.55781091690745,1.50914765287838,2000,"sacurine","Sacurine"
-"ne1","gender","qc_rlsc","QC-RLSC","pearson",0.453132152317615,0.187580780219773,0.670430427625904,2000,"sacurine","Sacurine"
-"ne1","gender","qc_rlsc","QC-RLSC","spearman",0.319201028012509,0.111368229755805,0.504653711158427,2000,"sacurine","Sacurine"
-"ne1","gender","qc_rlsc","QC-RLSC","sign_concordance",0.63008407079646,0.504424778761062,0.743584070796459,2000,"sacurine","Sacurine"
-"ne1","gender","qc_rlsc","QC-RLSC","attenuation",0.881608121949565,0.497643458147092,1.34448672290608,2000,"sacurine","Sacurine"
-"ne1","age","qc_rfsc","QC-RFSC","pearson",0.301524609922745,-0.975326421745374,0.996954667793244,2000,"sacurine","Sacurine"
-"ne1","age","qc_rfsc","QC-RFSC","spearman",0.302240272972254,0.0705115942511145,0.493622746024353,2000,"sacurine","Sacurine"
-"ne1","age","qc_rfsc","QC-RFSC","sign_concordance",0.624221238938053,0.52212389380531,0.725663716814159,2000,"sacurine","Sacurine"
-"ne1","age","qc_rfsc","QC-RFSC","attenuation",0.997279637864088,0.61283372541843,1.5229862440312,2000,"sacurine","Sacurine"
-"ne1","bmi","qc_rfsc","QC-RFSC","pearson",0.00200833953242847,-0.994574859611877,0.992939461826879,2000,"sacurine","Sacurine"
-"ne1","bmi","qc_rfsc","QC-RFSC","spearman",0.137223230920221,-0.0938223601037993,0.359724532570364,2000,"sacurine","Sacurine"
-"ne1","bmi","qc_rfsc","QC-RFSC","sign_concordance",0.534880530973451,0.424778761061947,0.646017699115044,2000,"sacurine","Sacurine"
-"ne1","bmi","qc_rfsc","QC-RFSC","attenuation",1.0862275009593,0.647684855665813,1.76420288945535,2000,"sacurine","Sacurine"
-"ne1","gender","qc_rfsc","QC-RFSC","pearson",-0.50059029839945,-0.998472194950196,0.781210641816839,2000,"sacurine","Sacurine"
-"ne1","gender","qc_rfsc","QC-RFSC","spearman",0.208562878435026,-0.000125798456317784,0.415921925943176,2000,"sacurine","Sacurine"
-"ne1","gender","qc_rfsc","QC-RFSC","sign_concordance",0.602438053097345,0.47787610619469,0.716814159292035,2000,"sacurine","Sacurine"
-"ne1","gender","qc_rfsc","QC-RFSC","attenuation",0.981246347392382,0.667067221743212,1.3881360989636,2000,"sacurine","Sacurine"
-"ne1","age","tiger","TIGER","pearson",0.402170984391975,0.13000517931933,0.607542831632087,2000,"sacurine","Sacurine"
-"ne1","age","tiger","TIGER","spearman",0.303172612116575,0.0644607924678954,0.513232334153969,2000,"sacurine","Sacurine"
-"ne1","age","tiger","TIGER","sign_concordance",0.602575221238938,0.486725663716814,0.716814159292035,2000,"sacurine","Sacurine"
-"ne1","age","tiger","TIGER","attenuation",0.861132263137663,0.504952240631698,1.26509782270435,2000,"sacurine","Sacurine"
-"ne1","bmi","tiger","TIGER","pearson",0.156875803274556,-0.141969524958958,0.430780962488821,2000,"sacurine","Sacurine"
-"ne1","bmi","tiger","TIGER","spearman",0.18212130713953,-0.0497525617140196,0.406021275533968,2000,"sacurine","Sacurine"
-"ne1","bmi","tiger","TIGER","sign_concordance",0.564637168141593,0.433628318584071,0.699115044247788,2000,"sacurine","Sacurine"
-"ne1","bmi","tiger","TIGER","attenuation",1.01244217091277,0.587474059907491,1.71079373096575,2000,"sacurine","Sacurine"
-"ne1","gender","tiger","TIGER","pearson",0.448903377628797,0.182377888801257,0.666177713889161,2000,"sacurine","Sacurine"
-"ne1","gender","tiger","TIGER","spearman",0.310218032636902,0.106024602435292,0.497010363297625,2000,"sacurine","Sacurine"
-"ne1","gender","tiger","TIGER","sign_concordance",0.64703982300885,0.52212389380531,0.761061946902655,2000,"sacurine","Sacurine"
-"ne1","gender","tiger","TIGER","attenuation",0.827295947612734,0.460849440739412,1.31024675334343,2000,"sacurine","Sacurine"
-"ne1","age","serrf","SERRF","pearson",0.434248252515817,0.166814139542993,0.632647985312691,2000,"sacurine","Sacurine"
-"ne1","age","serrf","SERRF","spearman",0.338506766085568,0.0944833738106328,0.546725289440415,2000,"sacurine","Sacurine"
-"ne1","age","serrf","SERRF","sign_concordance",0.619424778761062,0.504203539823009,0.734513274336283,2000,"sacurine","Sacurine"
-"ne1","age","serrf","SERRF","attenuation",0.845007080596947,0.500484477244853,1.25483041799409,2000,"sacurine","Sacurine"
-"ne1","bmi","serrf","SERRF","pearson",0.159971480452057,-0.138532335360187,0.432141224085632,2000,"sacurine","Sacurine"
-"ne1","bmi","serrf","SERRF","spearman",0.168625848359838,-0.0665733748087032,0.391454438086366,2000,"sacurine","Sacurine"
-"ne1","bmi","serrf","SERRF","sign_concordance",0.570690265486726,0.442477876106195,0.707964601769911,2000,"sacurine","Sacurine"
-"ne1","bmi","serrf","SERRF","attenuation",1.00172212710599,0.587837545798857,1.66436839508964,2000,"sacurine","Sacurine"
-"ne1","gender","serrf","SERRF","pearson",0.448684965232817,0.19078808005812,0.663238110101778,2000,"sacurine","Sacurine"
-"ne1","gender","serrf","SERRF","spearman",0.311320185142059,0.108283152571695,0.496961083571761,2000,"sacurine","Sacurine"
-"ne1","gender","serrf","SERRF","sign_concordance",0.648796460176991,0.52212389380531,0.761061946902655,2000,"sacurine","Sacurine"
-"ne1","gender","serrf","SERRF","attenuation",0.821770926643189,0.466783354479668,1.28078550965613,2000,"sacurine","Sacurine"
-"ne1","age","winn_auto_qc","WiNN (QC-tuned)","pearson",0.4552104632298,0.207079117751317,0.647085214467064,2000,"sacurine","Sacurine"
-"ne1","age","winn_auto_qc","WiNN (QC-tuned)","spearman",0.355814288209462,0.113055384589793,0.565573433029476,2000,"sacurine","Sacurine"
-"ne1","age","winn_auto_qc","WiNN (QC-tuned)","sign_concordance",0.55270796460177,0.353982300884956,0.725663716814159,2000,"sacurine","Sacurine"
-"ne1","age","winn_auto_qc","WiNN (QC-tuned)","attenuation",0.995661438854613,0.533116152304504,1.7677369616589,2000,"sacurine","Sacurine"
-"ne1","bmi","winn_auto_qc","WiNN (QC-tuned)","pearson",0.20682641670061,-0.0636263438013779,0.459982443889018,2000,"sacurine","Sacurine"
-"ne1","bmi","winn_auto_qc","WiNN (QC-tuned)","spearman",0.189364266584603,-0.0418858956018365,0.420284741167077,2000,"sacurine","Sacurine"
-"ne1","bmi","winn_auto_qc","WiNN (QC-tuned)","sign_concordance",0.607336283185841,0.389380530973451,0.778761061946903,2000,"sacurine","Sacurine"
-"ne1","bmi","winn_auto_qc","WiNN (QC-tuned)","attenuation",1.30633588937585,0.558246831192056,2.61771228076028,2000,"sacurine","Sacurine"
-"ne1","gender","winn_auto_qc","WiNN (QC-tuned)","pearson",0.41305761570007,0.170142846519973,0.622373782454126,2000,"sacurine","Sacurine"
-"ne1","gender","winn_auto_qc","WiNN (QC-tuned)","spearman",0.313846787876772,0.115768056756937,0.494499592454588,2000,"sacurine","Sacurine"
-"ne1","gender","winn_auto_qc","WiNN (QC-tuned)","sign_concordance",0.682845132743363,0.47787610619469,0.832079646017698,2000,"sacurine","Sacurine"
-"ne1","gender","winn_auto_qc","WiNN (QC-tuned)","attenuation",1.10013929746101,0.524711383298887,2.02527207330879,2000,"sacurine","Sacurine"
-"ne1","age","winn_auto_batch_qc","WiNN (inferred segments)","pearson",0.457118238951744,0.20728925842448,0.648036165086436,2000,"sacurine","Sacurine"
-"ne1","age","winn_auto_batch_qc","WiNN (inferred segments)","spearman",0.35737145685009,0.10989545212589,0.569516434892541,2000,"sacurine","Sacurine"
-"ne1","age","winn_auto_batch_qc","WiNN (inferred segments)","sign_concordance",0.554429203539823,0.345132743362832,0.734513274336283,2000,"sacurine","Sacurine"
-"ne1","age","winn_auto_batch_qc","WiNN (inferred segments)","attenuation",0.974136712152438,0.513877129037926,1.73174113913507,2000,"sacurine","Sacurine"
-"ne1","bmi","winn_auto_batch_qc","WiNN (inferred segments)","pearson",0.206820206867865,-0.0642252293907911,0.455567710316262,2000,"sacurine","Sacurine"
-"ne1","bmi","winn_auto_batch_qc","WiNN (inferred segments)","spearman",0.189437441779227,-0.0484032952957615,0.421131853416728,2000,"sacurine","Sacurine"
-"ne1","bmi","winn_auto_batch_qc","WiNN (inferred segments)","sign_concordance",0.616823008849558,0.407079646017699,0.778761061946903,2000,"sacurine","Sacurine"
-"ne1","bmi","winn_auto_batch_qc","WiNN (inferred segments)","attenuation",1.29024863497094,0.54768373411677,2.56983481301051,2000,"sacurine","Sacurine"
-"ne1","gender","winn_auto_batch_qc","WiNN (inferred segments)","pearson",0.407581093076004,0.165497633335778,0.61392271188426,2000,"sacurine","Sacurine"
-"ne1","gender","winn_auto_batch_qc","WiNN (inferred segments)","spearman",0.308032944640362,0.116851586931932,0.485689126023022,2000,"sacurine","Sacurine"
-"ne1","gender","winn_auto_batch_qc","WiNN (inferred segments)","sign_concordance",0.671477876106195,0.47787610619469,0.831858407079646,2000,"sacurine","Sacurine"
-"ne1","gender","winn_auto_batch_qc","WiNN (inferred segments)","attenuation",1.06052951012799,0.527666302103419,1.94570662009143,2000,"sacurine","Sacurine"
-"ne1","age","winn_fixed_no_qc","WiNN","pearson",0.453180421815778,0.205862946636938,0.646382756891958,2000,"sacurine","Sacurine"
-"ne1","age","winn_fixed_no_qc","WiNN","spearman",0.351295624293034,0.109851994477344,0.562239254108723,2000,"sacurine","Sacurine"
-"ne1","age","winn_fixed_no_qc","WiNN","sign_concordance",0.596924778761062,0.451327433628319,0.725663716814159,2000,"sacurine","Sacurine"
-"ne1","age","winn_fixed_no_qc","WiNN","attenuation",1.05019818336596,0.661359001195499,1.6518895974201,2000,"sacurine","Sacurine"
-"ne1","bmi","winn_fixed_no_qc","WiNN","pearson",0.207155957842349,-0.0616822104475759,0.453186385179666,2000,"sacurine","Sacurine"
-"ne1","bmi","winn_fixed_no_qc","WiNN","spearman",0.18841120500366,-0.0464639197551401,0.421547092288243,2000,"sacurine","Sacurine"
-"ne1","bmi","winn_fixed_no_qc","WiNN","sign_concordance",0.593849557522124,0.469026548672566,0.725663716814159,2000,"sacurine","Sacurine"
-"ne1","bmi","winn_fixed_no_qc","WiNN","attenuation",1.03463627028113,0.57732817652732,1.73393833216757,2000,"sacurine","Sacurine"
-"ne1","gender","winn_fixed_no_qc","WiNN","pearson",0.406803181271938,0.163973080127399,0.616955245878568,2000,"sacurine","Sacurine"
-"ne1","gender","winn_fixed_no_qc","WiNN","spearman",0.306193172366758,0.110768971654801,0.486058827932663,2000,"sacurine","Sacurine"
-"ne1","gender","winn_fixed_no_qc","WiNN","sign_concordance",0.658637168141593,0.530973451327434,0.769911504424779,2000,"sacurine","Sacurine"
-"ne1","gender","winn_fixed_no_qc","WiNN","attenuation",0.928914361893078,0.57516948155789,1.4079930780764,2000,"sacurine","Sacurine"
-"ne2","age","raw","Raw","pearson",0.423315326077029,0.146155927160884,0.642145440361846,2000,"sacurine","Sacurine"
-"ne2","age","raw","Raw","spearman",0.333045956983166,0.0870862166478143,0.551182089626722,2000,"sacurine","Sacurine"
-"ne2","age","raw","Raw","sign_concordance",0.619464601769911,0.495575221238938,0.743362831858407,2000,"sacurine","Sacurine"
-"ne2","age","raw","Raw","attenuation",1.31391515460798,0.816899982631767,2.24665972585259,2000,"sacurine","Sacurine"
-"ne2","bmi","raw","Raw","pearson",0.168166060335789,-0.133401769030164,0.441596325801474,2000,"sacurine","Sacurine"
-"ne2","bmi","raw","Raw","spearman",0.177483989287378,-0.0391773820613481,0.38775949830328,2000,"sacurine","Sacurine"
-"ne2","bmi","raw","Raw","sign_concordance",0.566553097345133,0.433628318584071,0.68141592920354,2000,"sacurine","Sacurine"
-"ne2","bmi","raw","Raw","attenuation",1.17180927266417,0.67285158307969,1.89815611846404,2000,"sacurine","Sacurine"
-"ne2","gender","raw","Raw","pearson",0.465638678294867,0.211059449518712,0.669358205549011,2000,"sacurine","Sacurine"
-"ne2","gender","raw","Raw","spearman",0.331357729223501,0.131500765187305,0.509828290305409,2000,"sacurine","Sacurine"
-"ne2","gender","raw","Raw","sign_concordance",0.63229203539823,0.486725663716814,0.752212389380531,2000,"sacurine","Sacurine"
-"ne2","gender","raw","Raw","attenuation",1.3626044645116,0.808537163278227,2.33512171868291,2000,"sacurine","Sacurine"
-"ne2","age","combat","ComBat","pearson",0.430906135121696,0.151618608988884,0.655424266645965,2000,"sacurine","Sacurine"
-"ne2","age","combat","ComBat","spearman",0.330521013540488,0.0781416345066206,0.553343119968062,2000,"sacurine","Sacurine"
-"ne2","age","combat","ComBat","sign_concordance",0.61083185840708,0.47787610619469,0.734513274336283,2000,"sacurine","Sacurine"
-"ne2","age","combat","ComBat","attenuation",1.07707995020291,0.673428972868253,1.84257862904006,2000,"sacurine","Sacurine"
-"ne2","bmi","combat","ComBat","pearson",0.169972398787643,-0.133299081120377,0.445862567350341,2000,"sacurine","Sacurine"
-"ne2","bmi","combat","ComBat","spearman",0.177494556357708,-0.0394655748885488,0.393044696919289,2000,"sacurine","Sacurine"
-"ne2","bmi","combat","ComBat","sign_concordance",0.567269911504425,0.442477876106195,0.68141592920354,2000,"sacurine","Sacurine"
-"ne2","bmi","combat","ComBat","attenuation",1.00793486886388,0.594808084579629,1.57713453168116,2000,"sacurine","Sacurine"
-"ne2","gender","combat","ComBat","pearson",0.472983983129896,0.215926191573216,0.675480215431899,2000,"sacurine","Sacurine"
-"ne2","gender","combat","ComBat","spearman",0.32944231153104,0.120463146250582,0.511001023022157,2000,"sacurine","Sacurine"
-"ne2","gender","combat","ComBat","sign_concordance",0.615327433628319,0.460176991150442,0.752212389380531,2000,"sacurine","Sacurine"
-"ne2","gender","combat","ComBat","attenuation",1.18405028106938,0.704998627153065,2.03889577588509,2000,"sacurine","Sacurine"
-"ne2","age","qc_rlsc","QC-RLSC","pearson",0.424402829764477,0.143097096149698,0.644853626951394,2000,"sacurine","Sacurine"
-"ne2","age","qc_rlsc","QC-RLSC","spearman",0.335060657728392,0.0798364827999202,0.556114844633708,2000,"sacurine","Sacurine"
-"ne2","age","qc_rlsc","QC-RLSC","sign_concordance",0.625101769911504,0.495575221238938,0.734513274336283,2000,"sacurine","Sacurine"
-"ne2","age","qc_rlsc","QC-RLSC","attenuation",1.33837697702266,0.825449297921309,2.28820293140823,2000,"sacurine","Sacurine"
-"ne2","bmi","qc_rlsc","QC-RLSC","pearson",0.159086725573586,-0.130370945421437,0.426585196405441,2000,"sacurine","Sacurine"
-"ne2","bmi","qc_rlsc","QC-RLSC","spearman",0.17976331592255,-0.0318833588395768,0.390698399760463,2000,"sacurine","Sacurine"
-"ne2","bmi","qc_rlsc","QC-RLSC","sign_concordance",0.551504424778761,0.424778761061947,0.672566371681416,2000,"sacurine","Sacurine"
-"ne2","bmi","qc_rlsc","QC-RLSC","attenuation",1.1355143093036,0.663169105082441,1.75835009316986,2000,"sacurine","Sacurine"
-"ne2","gender","qc_rlsc","QC-RLSC","pearson",0.459844931914769,0.197301265709161,0.670157926630179,2000,"sacurine","Sacurine"
-"ne2","gender","qc_rlsc","QC-RLSC","spearman",0.321999779592787,0.113044364229157,0.502219459045845,2000,"sacurine","Sacurine"
-"ne2","gender","qc_rlsc","QC-RLSC","sign_concordance",0.629491150442478,0.504424778761062,0.743362831858407,2000,"sacurine","Sacurine"
-"ne2","gender","qc_rlsc","QC-RLSC","attenuation",1.2015627943698,0.756251844495771,2.05786897544971,2000,"sacurine","Sacurine"
-"ne2","age","qc_rfsc","QC-RFSC","pearson",0.283737990277596,-0.963897924297814,0.997735012277965,2000,"sacurine","Sacurine"
-"ne2","age","qc_rfsc","QC-RFSC","spearman",0.299226611883692,0.0557068833588396,0.502430093485927,2000,"sacurine","Sacurine"
-"ne2","age","qc_rfsc","QC-RFSC","sign_concordance",0.622672566371681,0.521902654867257,0.725663716814159,2000,"sacurine","Sacurine"
-"ne2","age","qc_rfsc","QC-RFSC","attenuation",1.04553099275014,0.659189258438814,1.60887091233721,2000,"sacurine","Sacurine"
-"ne2","bmi","qc_rfsc","QC-RFSC","pearson",0.0303148680570933,-0.993414641184046,0.99548341920022,2000,"sacurine","Sacurine"
-"ne2","bmi","qc_rfsc","QC-RFSC","spearman",0.140344791735977,-0.0965206850089827,0.364374085102136,2000,"sacurine","Sacurine"
-"ne2","bmi","qc_rfsc","QC-RFSC","sign_concordance",0.534796460176991,0.41570796460177,0.646017699115044,2000,"sacurine","Sacurine"
-"ne2","bmi","qc_rfsc","QC-RFSC","attenuation",0.98865902274961,0.560400152305604,1.53881003330126,2000,"sacurine","Sacurine"
-"ne2","gender","qc_rfsc","QC-RFSC","pearson",-0.495064243673292,-0.998357003823138,0.811804549122998,2000,"sacurine","Sacurine"
-"ne2","gender","qc_rfsc","QC-RFSC","spearman",0.210871939250782,0.0115724183245725,0.415049030208264,2000,"sacurine","Sacurine"
-"ne2","gender","qc_rfsc","QC-RFSC","sign_concordance",0.602597345132743,0.495575221238938,0.716814159292035,2000,"sacurine","Sacurine"
-"ne2","gender","qc_rfsc","QC-RFSC","attenuation",1.05387377775979,0.719476299233487,1.49790264739039,2000,"sacurine","Sacurine"
-"ne2","age","tiger","TIGER","pearson",0.39893461610367,0.11903837424019,0.618766868677875,2000,"sacurine","Sacurine"
-"ne2","age","tiger","TIGER","spearman",0.300948811464502,0.0564155133408743,0.522733548472952,2000,"sacurine","Sacurine"
-"ne2","age","tiger","TIGER","sign_concordance",0.600464601769911,0.47787610619469,0.708185840707963,2000,"sacurine","Sacurine"
-"ne2","age","tiger","TIGER","attenuation",1.22966042428166,0.790276384237809,2.00746044771052,2000,"sacurine","Sacurine"
-"ne2","bmi","tiger","TIGER","pearson",0.159500589850872,-0.136511280934959,0.425942671013094,2000,"sacurine","Sacurine"
-"ne2","bmi","tiger","TIGER","spearman",0.17967555226562,-0.0364052415330361,0.392767732384057,2000,"sacurine","Sacurine"
-"ne2","bmi","tiger","TIGER","sign_concordance",0.566132743362832,0.424778761061947,0.690265486725664,2000,"sacurine","Sacurine"
-"ne2","bmi","tiger","TIGER","attenuation",1.06734127790635,0.606173300707809,1.73005483343742,2000,"sacurine","Sacurine"
-"ne2","gender","tiger","TIGER","pearson",0.455518140488965,0.187199632475152,0.665037979817355,2000,"sacurine","Sacurine"
-"ne2","gender","tiger","TIGER","spearman",0.312788005689001,0.10983057755007,0.492765445139397,2000,"sacurine","Sacurine"
-"ne2","gender","tiger","TIGER","sign_concordance",0.64666814159292,0.52212389380531,0.752433628318583,2000,"sacurine","Sacurine"
-"ne2","gender","tiger","TIGER","attenuation",1.29122941478607,0.775832928230326,2.1562789088546,2000,"sacurine","Sacurine"
-"ne2","age","serrf","SERRF","pearson",0.430649464959211,0.151509231881335,0.645550197751466,2000,"sacurine","Sacurine"
-"ne2","age","serrf","SERRF","spearman",0.335603038292634,0.0963560033934394,0.550889530241533,2000,"sacurine","Sacurine"
-"ne2","age","serrf","SERRF","sign_concordance",0.616694690265487,0.504203539823009,0.725663716814159,2000,"sacurine","Sacurine"
-"ne2","age","serrf","SERRF","attenuation",1.24538001997344,0.813798408385289,2.05261986634533,2000,"sacurine","Sacurine"
-"ne2","bmi","serrf","SERRF","pearson",0.162896422677927,-0.125074327527935,0.435106785270604,2000,"sacurine","Sacurine"
-"ne2","bmi","serrf","SERRF","spearman",0.165972220373944,-0.049329213520527,0.377694998003859,2000,"sacurine","Sacurine"
-"ne2","bmi","serrf","SERRF","sign_concordance",0.572769911504425,0.433628318584071,0.699115044247788,2000,"sacurine","Sacurine"
-"ne2","bmi","serrf","SERRF","attenuation",1.0794866167747,0.615558165843823,1.73693299134248,2000,"sacurine","Sacurine"
-"ne2","gender","serrf","SERRF","pearson",0.455341046870624,0.19708647280992,0.660293929525588,2000,"sacurine","Sacurine"
-"ne2","gender","serrf","SERRF","spearman",0.314078660423182,0.106787710426509,0.491351720007985,2000,"sacurine","Sacurine"
-"ne2","gender","serrf","SERRF","sign_concordance",0.648256637168142,0.52212389380531,0.761061946902655,2000,"sacurine","Sacurine"
-"ne2","gender","serrf","SERRF","attenuation",1.29912547213245,0.780166867611711,2.20508063879761,2000,"sacurine","Sacurine"
-"ne2","age","winn_auto_qc","WiNN (QC-tuned)","pearson",0.452604763104723,0.188370129739232,0.654401156589799,2000,"sacurine","Sacurine"
-"ne2","age","winn_auto_qc","WiNN (QC-tuned)","spearman",0.354691246922616,0.107953789340608,0.567625923215118,2000,"sacurine","Sacurine"
-"ne2","age","winn_auto_qc","WiNN (QC-tuned)","sign_concordance",0.557495575221239,0.353982300884956,0.725663716814159,2000,"sacurine","Sacurine"
-"ne2","age","winn_auto_qc","WiNN (QC-tuned)","attenuation",1.11882090535916,0.568417941014012,1.93529876492086,2000,"sacurine","Sacurine"
-"ne2","bmi","winn_auto_qc","WiNN (QC-tuned)","pearson",0.211527874261358,-0.0502560698305314,0.457810986726425,2000,"sacurine","Sacurine"
-"ne2","bmi","winn_auto_qc","WiNN (QC-tuned)","spearman",0.187808516035664,-0.0398706251247588,0.404195638432364,2000,"sacurine","Sacurine"
-"ne2","bmi","winn_auto_qc","WiNN (QC-tuned)","sign_concordance",0.610101769911504,0.389380530973451,0.778761061946903,2000,"sacurine","Sacurine"
-"ne2","bmi","winn_auto_qc","WiNN (QC-tuned)","attenuation",0.89757173012467,0.384929851977473,1.73183990309222,2000,"sacurine","Sacurine"
-"ne2","gender","winn_auto_qc","WiNN (QC-tuned)","pearson",0.419816807357756,0.182104714296425,0.616355291085716,2000,"sacurine","Sacurine"
-"ne2","gender","winn_auto_qc","WiNN (QC-tuned)","spearman",0.316727626588595,0.114175510679353,0.498584819349258,2000,"sacurine","Sacurine"
-"ne2","gender","winn_auto_qc","WiNN (QC-tuned)","sign_concordance",0.683411504424779,0.486725663716814,0.831858407079646,2000,"sacurine","Sacurine"
-"ne2","gender","winn_auto_qc","WiNN (QC-tuned)","attenuation",1.02520246116426,0.482173958348344,1.8963061360238,2000,"sacurine","Sacurine"
-"ne2","age","winn_auto_batch_qc","WiNN (inferred segments)","pearson",0.454463144677333,0.193821140725742,0.653673179574181,2000,"sacurine","Sacurine"
-"ne2","age","winn_auto_batch_qc","WiNN (inferred segments)","spearman",0.355790434326968,0.107666844101404,0.569094126355712,2000,"sacurine","Sacurine"
-"ne2","age","winn_auto_batch_qc","WiNN (inferred segments)","sign_concordance",0.55925221238938,0.36283185840708,0.734513274336283,2000,"sacurine","Sacurine"
-"ne2","age","winn_auto_batch_qc","WiNN (inferred segments)","attenuation",1.14465328359711,0.585481730921935,2.01480604550718,2000,"sacurine","Sacurine"
-"ne2","bmi","winn_auto_batch_qc","WiNN (inferred segments)","pearson",0.211493676764318,-0.047611071850794,0.453035209743313,2000,"sacurine","Sacurine"
-"ne2","bmi","winn_auto_batch_qc","WiNN (inferred segments)","spearman",0.18756836782221,-0.0400398812296227,0.400637725397565,2000,"sacurine","Sacurine"
-"ne2","bmi","winn_auto_batch_qc","WiNN (inferred segments)","sign_concordance",0.618221238938053,0.398230088495575,0.787610619469027,2000,"sacurine","Sacurine"
-"ne2","bmi","winn_auto_batch_qc","WiNN (inferred segments)","attenuation",0.911959732806602,0.384499323016989,1.776890915779,2000,"sacurine","Sacurine"
-"ne2","gender","winn_auto_batch_qc","WiNN (inferred segments)","pearson",0.414505174729403,0.170230652713314,0.613668443990523,2000,"sacurine","Sacurine"
-"ne2","gender","winn_auto_batch_qc","WiNN (inferred segments)","spearman",0.311084311996806,0.113172241998802,0.492413209461707,2000,"sacurine","Sacurine"
-"ne2","gender","winn_auto_batch_qc","WiNN (inferred segments)","sign_concordance",0.67133185840708,0.47787610619469,0.823008849557522,2000,"sacurine","Sacurine"
-"ne2","gender","winn_auto_batch_qc","WiNN (inferred segments)","attenuation",1.05507568568321,0.505657460772413,1.88906108339658,2000,"sacurine","Sacurine"
-"ne2","age","winn_fixed_no_qc","WiNN","pearson",0.451015523222216,0.187833440824511,0.654798597404151,2000,"sacurine","Sacurine"
-"ne2","age","winn_fixed_no_qc","WiNN","spearman",0.350452296393639,0.100990792800586,0.56760117938652,2000,"sacurine","Sacurine"
-"ne2","age","winn_fixed_no_qc","WiNN","sign_concordance",0.595610619469026,0.442477876106195,0.734513274336283,2000,"sacurine","Sacurine"
-"ne2","age","winn_fixed_no_qc","WiNN","attenuation",1.01647450985281,0.605375009188719,1.51466396173814,2000,"sacurine","Sacurine"
-"ne2","bmi","winn_fixed_no_qc","WiNN","pearson",0.211994873430612,-0.0431199429270742,0.45279427573696,2000,"sacurine","Sacurine"
-"ne2","bmi","winn_fixed_no_qc","WiNN","spearman",0.186644291869053,-0.0382381562312862,0.402323008849558,2000,"sacurine","Sacurine"
-"ne2","bmi","winn_fixed_no_qc","WiNN","sign_concordance",0.59496017699115,0.460176991150442,0.716814159292035,2000,"sacurine","Sacurine"
-"ne2","bmi","winn_fixed_no_qc","WiNN","attenuation",1.05334309610496,0.578532429221468,1.74604027965211,2000,"sacurine","Sacurine"
-"ne2","gender","winn_fixed_no_qc","WiNN","pearson",0.413465155943347,0.171749171462604,0.6122459939945,2000,"sacurine","Sacurine"
-"ne2","gender","winn_fixed_no_qc","WiNN","spearman",0.308878385122097,0.10581854248453,0.492426517067004,2000,"sacurine","Sacurine"
-"ne2","gender","winn_fixed_no_qc","WiNN","sign_concordance",0.657986725663717,0.530973451327434,0.769911504424779,2000,"sacurine","Sacurine"
-"ne2","gender","winn_fixed_no_qc","WiNN","attenuation",1.13117340835271,0.713224253863701,1.72738146279126,2000,"sacurine","Sacurine"
-"1","biological_group","raw","Raw","pearson",0.205120733807923,0.0452276776525751,0.35292538018744,2000,"waveica","WaveICA"
-"1","biological_group","raw","Raw","spearman",0.203031107969914,0.0907901424970143,0.310589100332261,2000,"waveica","WaveICA"
-"1","biological_group","raw","Raw","sign_concordance",0.563870453490172,0.5215872156013,0.60363720786256,2000,"waveica","WaveICA"
-"1","biological_group","raw","Raw","attenuation",1.14450434288308,0.883745503338619,1.48867424614056,2000,"waveica","WaveICA"
-"1","biological_group","combat","ComBat","pearson",0.276663657708265,0.093856429300982,0.436496849181366,2000,"waveica","WaveICA"
-"1","biological_group","combat","ComBat","spearman",0.213545621560222,0.0884739307723471,0.330102950945693,2000,"waveica","WaveICA"
-"1","biological_group","combat","ComBat","sign_concordance",0.564925243770314,0.519265593561368,0.605947221792292,2000,"waveica","WaveICA"
-"1","biological_group","combat","ComBat","attenuation",1.2527134250023,0.953022618351554,1.6553428837444,2000,"waveica","WaveICA"
-"1","biological_group","qc_rlsc","QC-RLSC","pearson",0.220488700068194,0.0568872262866436,0.36427109580768,2000,"waveica","WaveICA"
-"1","biological_group","qc_rlsc","QC-RLSC","spearman",0.213055004768095,0.105633067900093,0.312265596122773,2000,"waveica","WaveICA"
-"1","biological_group","qc_rlsc","QC-RLSC","sign_concordance",0.567230150131559,0.529945054945055,0.603157405974307,2000,"waveica","WaveICA"
-"1","biological_group","qc_rlsc","QC-RLSC","attenuation",1.14028291299552,0.908515558531383,1.43424208129396,2000,"waveica","WaveICA"
-"1","biological_group","qc_rfsc","QC-RFSC","pearson",0.203878636321474,0.0897110405338803,0.319503386626824,2000,"waveica","WaveICA"
-"1","biological_group","qc_rfsc","QC-RFSC","spearman",0.22530224243834,0.12981966370517,0.315321244122346,2000,"waveica","WaveICA"
-"1","biological_group","qc_rfsc","QC-RFSC","sign_concordance",0.570636588763349,0.531957127379663,0.606570190373007,2000,"waveica","WaveICA"
-"1","biological_group","qc_rfsc","QC-RFSC","attenuation",1.21331737315017,0.972740075539679,1.50843795446344,2000,"waveica","WaveICA"
-"1","biological_group","tiger","TIGER","pearson",0.170237645211918,0.029814628811185,0.299830626218556,2000,"waveica","WaveICA"
-"1","biological_group","tiger","TIGER","spearman",0.181842058987462,0.0791345639824392,0.276335307493681,2000,"waveica","WaveICA"
-"1","biological_group","tiger","TIGER","sign_concordance",0.559893901872775,0.525770004643244,0.592791363566011,2000,"waveica","WaveICA"
-"1","biological_group","tiger","TIGER","attenuation",1.14689232078635,0.932720917275464,1.41151760369106,2000,"waveica","WaveICA"
-"1","biological_group","serrf","SERRF","pearson",0.156987341775797,0.0325650211381883,0.274236104066984,2000,"waveica","WaveICA"
-"1","biological_group","serrf","SERRF","spearman",0.182032013565039,0.0809682042034209,0.275574823755878,2000,"waveica","WaveICA"
-"1","biological_group","serrf","SERRF","sign_concordance",0.559934220708869,0.525305680235258,0.592946138368673,2000,"waveica","WaveICA"
-"1","biological_group","serrf","SERRF","attenuation",1.18616963445342,0.96134033210636,1.46276441115733,2000,"waveica","WaveICA"
-"1","biological_group","winn_auto_qc","WiNN (QC-tuned)","pearson",0.23257581490055,0.057639151565651,0.380191817811308,2000,"waveica","WaveICA"
-"1","biological_group","winn_auto_qc","WiNN (QC-tuned)","spearman",0.22842489754966,0.115245072786663,0.325533672470037,2000,"waveica","WaveICA"
-"1","biological_group","winn_auto_qc","WiNN (QC-tuned)","sign_concordance",0.573798715369138,0.534123974616932,0.610907754217613,2000,"waveica","WaveICA"
-"1","biological_group","winn_auto_qc","WiNN (QC-tuned)","attenuation",1.08316225359906,0.880047329138659,1.33666856078545,2000,"waveica","WaveICA"
-"1","biological_group","winn_auto_batch_qc","WiNN (inferred segments)","pearson",0.204000858928075,0.037911195025308,0.350055804375543,2000,"waveica","WaveICA"
-"1","biological_group","winn_auto_batch_qc","WiNN (inferred segments)","spearman",0.206914424235289,0.091759696088618,0.315225621271099,2000,"waveica","WaveICA"
-"1","biological_group","winn_auto_batch_qc","WiNN (inferred segments)","sign_concordance",0.564136356601145,0.525924779445906,0.603316050147036,2000,"waveica","WaveICA"
-"1","biological_group","winn_auto_batch_qc","WiNN (inferred segments)","attenuation",1.10239087324959,0.846143131451448,1.45319666893524,2000,"waveica","WaveICA"
-"1","biological_group","winn_fixed_no_qc","WiNN","pearson",0.233496790097893,0.0587179335985525,0.380662215871734,2000,"waveica","WaveICA"
-"1","biological_group","winn_fixed_no_qc","WiNN","spearman",0.22927139987902,0.115834313684758,0.326194077929975,2000,"waveica","WaveICA"
-"1","biological_group","winn_fixed_no_qc","WiNN","sign_concordance",0.571182943816747,0.532576226590311,0.60625290202755,2000,"waveica","WaveICA"
-"1","biological_group","winn_fixed_no_qc","WiNN","attenuation",1.08038085913798,0.881648310652758,1.33498551992215,2000,"waveica","WaveICA"
-"2","biological_group","raw","Raw","pearson",0.174162933010697,-0.00458502485927067,0.342318090370266,2000,"waveica","WaveICA"
-"2","biological_group","raw","Raw","spearman",0.170270948006591,0.0258554914547441,0.299599126876501,2000,"waveica","WaveICA"
-"2","biological_group","raw","Raw","sign_concordance",0.554578238662746,0.504565856678533,0.603621730382294,2000,"waveica","WaveICA"
-"2","biological_group","raw","Raw","attenuation",1.0987721183534,0.846945291120042,1.43614289116174,2000,"waveica","WaveICA"
-"2","biological_group","combat","ComBat","pearson",0.216082914227679,0.00345217335682986,0.400296757950044,2000,"waveica","WaveICA"
-"2","biological_group","combat","ComBat","spearman",0.175913618329898,0.0267101497354106,0.3108102044552,2000,"waveica","WaveICA"
-"2","biological_group","combat","ComBat","sign_concordance",0.556436310168705,0.506113604705154,0.604859928803591,2000,"waveica","WaveICA"
-"2","biological_group","combat","ComBat","attenuation",1.2226097507057,0.930614633668827,1.62651778035444,2000,"waveica","WaveICA"
-"2","biological_group","qc_rlsc","QC-RLSC","pearson",0.189365589907115,0.0106967072121125,0.348509613948116,2000,"waveica","WaveICA"
-"2","biological_group","qc_rlsc","QC-RLSC","spearman",0.177821387076867,0.0481104995156264,0.290688675742511,2000,"waveica","WaveICA"
-"2","biological_group","qc_rlsc","QC-RLSC","sign_concordance",0.556579786410772,0.51431279987618,0.596192539854512,2000,"waveica","WaveICA"
-"2","biological_group","qc_rlsc","QC-RLSC","attenuation",1.088392603132,0.870528992895402,1.3672451405805,2000,"waveica","WaveICA"
-"2","biological_group","qc_rfsc","QC-RFSC","pearson",0.153110905184527,-0.0393367884920978,0.314347401306312,2000,"waveica","WaveICA"
-"2","biological_group","qc_rfsc","QC-RFSC","spearman",0.188942429700902,0.067171296356033,0.29337840046782,2000,"waveica","WaveICA"
-"2","biological_group","qc_rfsc","QC-RFSC","sign_concordance",0.560210880668627,0.518952174585977,0.599918743228602,2000,"waveica","WaveICA"
-"2","biological_group","qc_rfsc","QC-RFSC","attenuation",1.17828641679919,0.940902486749652,1.47302360469335,2000,"waveica","WaveICA"
-"2","biological_group","tiger","TIGER","pearson",0.13794432790257,0.000653436488263051,0.277541805388873,2000,"waveica","WaveICA"
-"2","biological_group","tiger","TIGER","spearman",0.145150205882197,0.0368234585157477,0.245371366857317,2000,"waveica","WaveICA"
-"2","biological_group","tiger","TIGER","sign_concordance",0.548594799566631,0.512923696022288,0.583044420368364,2000,"waveica","WaveICA"
-"2","biological_group","tiger","TIGER","attenuation",1.0839653927757,0.881669654582947,1.33152861777902,2000,"waveica","WaveICA"
-"2","biological_group","serrf","SERRF","pearson",0.137513062785088,0.00742845967058694,0.269537346766507,2000,"waveica","WaveICA"
-"2","biological_group","serrf","SERRF","spearman",0.14901639495765,0.0412793779740248,0.246939696840275,2000,"waveica","WaveICA"
-"2","biological_group","serrf","SERRF","sign_concordance",0.549019579012537,0.511066398390342,0.58319532580096,2000,"waveica","WaveICA"
-"2","biological_group","serrf","SERRF","attenuation",1.08451209157625,0.87523088866702,1.34735867676395,2000,"waveica","WaveICA"
-"2","biological_group","winn_auto_qc","WiNN (QC-tuned)","pearson",0.204018402012963,0.0136188636363019,0.369592210057238,2000,"waveica","WaveICA"
-"2","biological_group","winn_auto_qc","WiNN (QC-tuned)","spearman",0.192099549663391,0.0571212815787013,0.308098977162665,2000,"waveica","WaveICA"
-"2","biological_group","winn_auto_qc","WiNN (QC-tuned)","sign_concordance",0.562510369911778,0.516324872310788,0.604863798173657,2000,"waveica","WaveICA"
-"2","biological_group","winn_auto_qc","WiNN (QC-tuned)","attenuation",1.08482149928681,0.871575808574537,1.35764769400207,2000,"waveica","WaveICA"
-"2","biological_group","winn_auto_batch_qc","WiNN (inferred segments)","pearson",0.179044635171236,0.00230340575002707,0.345896684377665,2000,"waveica","WaveICA"
-"2","biological_group","winn_auto_batch_qc","WiNN (inferred segments)","spearman",0.175648391810355,0.0301958282906144,0.301621763863422,2000,"waveica","WaveICA"
-"2","biological_group","winn_auto_batch_qc","WiNN (inferred segments)","sign_concordance",0.556059046587216,0.509514780993654,0.601327193932828,2000,"waveica","WaveICA"
-"2","biological_group","winn_auto_batch_qc","WiNN (inferred segments)","attenuation",1.13298554175928,0.872250085531345,1.46291022068723,2000,"waveica","WaveICA"
-"2","biological_group","winn_fixed_no_qc","WiNN","pearson",0.205214137653328,0.0147905098068856,0.371114998315458,2000,"waveica","WaveICA"
-"2","biological_group","winn_fixed_no_qc","WiNN","spearman",0.192880019355124,0.0567615551027518,0.309568929069885,2000,"waveica","WaveICA"
-"2","biological_group","winn_fixed_no_qc","WiNN","sign_concordance",0.560358845379972,0.517868750967342,0.600220554093794,2000,"waveica","WaveICA"
-"2","biological_group","winn_fixed_no_qc","WiNN","attenuation",1.08788707288459,0.871205565704246,1.35267677655358,2000,"waveica","WaveICA"
-"3","biological_group","raw","Raw","pearson",0.185543523637973,0.0246999178008364,0.32174089488069,2000,"waveica","WaveICA"
-"3","biological_group","raw","Raw","spearman",0.19145373045522,0.0530456555455553,0.313683740559431,2000,"waveica","WaveICA"
-"3","biological_group","raw","Raw","sign_concordance",0.560972991796935,0.509982974771707,0.608884073672806,2000,"waveica","WaveICA"
-"3","biological_group","raw","Raw","attenuation",1.41326151164587,1.08774818986749,1.81018371284609,2000,"waveica","WaveICA"
-"3","biological_group","combat","ComBat","pearson",0.233069348959409,0.0507713547270463,0.385036870572977,2000,"waveica","WaveICA"
-"3","biological_group","combat","ComBat","spearman",0.19775864020482,0.0566921962780839,0.323362222993637,2000,"waveica","WaveICA"
-"3","biological_group","combat","ComBat","sign_concordance",0.562416963318372,0.511979569726049,0.609038848475468,2000,"waveica","WaveICA"
-"3","biological_group","combat","ComBat","attenuation",1.40946632902796,1.08117072359901,1.84089232322585,2000,"waveica","WaveICA"
-"3","biological_group","qc_rlsc","QC-RLSC","pearson",0.200221121173249,0.0464213844289021,0.3356027240665,2000,"waveica","WaveICA"
-"3","biological_group","qc_rlsc","QC-RLSC","spearman",0.202193034181262,0.0885367094377398,0.300976103174857,2000,"waveica","WaveICA"
-"3","biological_group","qc_rlsc","QC-RLSC","sign_concordance",0.564991177836248,0.526230459681164,0.601303977712428,2000,"waveica","WaveICA"
-"3","biological_group","qc_rlsc","QC-RLSC","attenuation",1.4023228417737,1.12802661261312,1.71175720382067,2000,"waveica","WaveICA"
-"3","biological_group","qc_rfsc","QC-RFSC","pearson",0.157733441701486,0.00541028227883309,0.295061908961917,2000,"waveica","WaveICA"
-"3","biological_group","qc_rfsc","QC-RFSC","spearman",0.208346999855598,0.10396345278903,0.304638219165519,2000,"waveica","WaveICA"
-"3","biological_group","qc_rfsc","QC-RFSC","sign_concordance",0.568905277820771,0.530552546045504,0.606721095805603,2000,"waveica","WaveICA"
-"3","biological_group","qc_rfsc","QC-RFSC","attenuation",1.32839415145855,1.06384547936994,1.62521850452523,2000,"waveica","WaveICA"
-"3","biological_group","tiger","TIGER","pearson",0.151365460726144,0.0204788566118027,0.268454752538633,2000,"waveica","WaveICA"
-"3","biological_group","tiger","TIGER","spearman",0.1683044697934,0.0636425791483206,0.257848726204478,2000,"waveica","WaveICA"
-"3","biological_group","tiger","TIGER","sign_concordance",0.55717149048135,0.521436310168705,0.589386317907445,2000,"waveica","WaveICA"
-"3","biological_group","tiger","TIGER","attenuation",1.38849320484151,1.13638999804245,1.67009145402533,2000,"waveica","WaveICA"
-"3","biological_group","serrf","SERRF","pearson",0.139972657399038,0.0252473609633033,0.246788774016317,2000,"waveica","WaveICA"
-"3","biological_group","serrf","SERRF","spearman",0.166380239395746,0.0665203139858503,0.254929062903561,2000,"waveica","WaveICA"
-"3","biological_group","serrf","SERRF","sign_concordance",0.555491642160656,0.5215872156013,0.587374245472837,2000,"waveica","WaveICA"
-"3","biological_group","serrf","SERRF","attenuation",1.33683764082581,1.09005821079404,1.61192623768977,2000,"waveica","WaveICA"
-"3","biological_group","winn_auto_qc","WiNN (QC-tuned)","pearson",0.216945930891852,0.0552472071800658,0.358338473320385,2000,"waveica","WaveICA"
-"3","biological_group","winn_auto_qc","WiNN (QC-tuned)","spearman",0.218639250322682,0.0990845251527265,0.319974507748524,2000,"waveica","WaveICA"
-"3","biological_group","winn_auto_qc","WiNN (QC-tuned)","sign_concordance",0.573020894598359,0.530250735180313,0.612289119331373,2000,"waveica","WaveICA"
-"3","biological_group","winn_auto_qc","WiNN (QC-tuned)","attenuation",1.44804249552255,1.17507073863113,1.76923347300292,2000,"waveica","WaveICA"
-"3","biological_group","winn_auto_batch_qc","WiNN (inferred segments)","pearson",0.1920139982997,0.0346925304064964,0.324436674055581,2000,"waveica","WaveICA"
-"3","biological_group","winn_auto_batch_qc","WiNN (inferred segments)","spearman",0.198494318199936,0.0654250892584593,0.31040928861381,2000,"waveica","WaveICA"
-"3","biological_group","winn_auto_batch_qc","WiNN (inferred segments)","sign_concordance",0.562512459371614,0.516638291286179,0.603474694319765,2000,"waveica","WaveICA"
-"3","biological_group","winn_auto_batch_qc","WiNN (inferred segments)","attenuation",1.43965773611416,1.11826726402235,1.85073462235531,2000,"waveica","WaveICA"
-"3","biological_group","winn_fixed_no_qc","WiNN","pearson",0.218042401312241,0.0535709791711778,0.359821191948656,2000,"waveica","WaveICA"
-"3","biological_group","winn_fixed_no_qc","WiNN","spearman",0.219602775202428,0.0991292156590054,0.321857181497787,2000,"waveica","WaveICA"
-"3","biological_group","winn_fixed_no_qc","WiNN","sign_concordance",0.569600139297322,0.528702987153691,0.606098127224888,2000,"waveica","WaveICA"
-"3","biological_group","winn_fixed_no_qc","WiNN","attenuation",1.45408658129842,1.18087392601237,1.76436694536543,2000,"waveica","WaveICA"
+heldout_batch,endpoint,method_id,method,metric,bootstrap_mean,ci_lower,ci_upper,valid_bootstrap,dataset_key,dataset
+1,cow_vs_sheep,raw,Raw,pearson,0.96976065250165,0.949210844238099,0.981817230424149,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,raw,Raw,spearman,0.918415417617557,0.872081342899001,0.947275508621054,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,raw,Raw,sign_concordance,0.849863745980707,0.80224075562701,0.887459807073955,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,raw,Raw,attenuation,1.02318263862764,0.994438694157542,1.06049391264693,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,combat,ComBat,pearson,0.972554433368993,0.953771638462957,0.98370949826033,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,combat,ComBat,spearman,0.922562825276725,0.878602665539614,0.949554777179454,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,combat,ComBat,sign_concordance,0.848813906752412,0.80224075562701,0.887871784565916,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,combat,ComBat,attenuation,1.04795539802431,1.01995084906329,1.08706257616989,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,qc_rlsc,QC-RLSC,pearson,0.965458226026817,0.931354330263847,0.981142697110148,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,qc_rlsc,QC-RLSC,spearman,0.910202130893819,0.845473964930916,0.946156167748911,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,qc_rlsc,QC-RLSC,sign_concordance,0.701993569131833,0.481501205787781,0.876617765273312,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,qc_rlsc,QC-RLSC,attenuation,0.713505797818165,0.276589366268722,1.04737682258979,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,qc_rfsc,QC-RFSC,pearson,0.943668316841461,0.89542814101558,0.969909192999563,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,qc_rfsc,QC-RFSC,spearman,0.90049795968123,0.848689942970025,0.934502284200954,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,qc_rfsc,QC-RFSC,sign_concordance,0.845243368167203,0.797025723472669,0.883038585209003,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,qc_rfsc,QC-RFSC,attenuation,1.00751113901573,0.970376374767459,1.05777594630834,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,tiger,TIGER,pearson,0.967458762399064,0.948254405678655,0.979025262844343,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,tiger,TIGER,spearman,0.908731162830307,0.864915344273459,0.936646885582262,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,tiger,TIGER,sign_concordance,0.838174638263666,0.792604501607717,0.87620578778135,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,tiger,TIGER,attenuation,1.01049451546546,0.972346968181738,1.05382156049776,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,serrf,SERRF,pearson,0.971019435673281,0.952316937793696,0.982418844580113,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,serrf,SERRF,spearman,0.921738113229454,0.87824630202469,0.948852876218013,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,serrf,SERRF,sign_concordance,0.848329180064309,0.803858520900322,0.886665996784566,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,serrf,SERRF,attenuation,1.03454760251967,1.00420857822925,1.07147150978999,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),pearson,0.970680085284782,0.951839191167883,0.982081812542896,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),spearman,0.921498777956666,0.877447333045342,0.948689599747249,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.856649718649518,0.809073553054662,0.89792001607717,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),attenuation,1.03915277527854,1.00843613945967,1.07957961074124,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.970536832904907,0.95113753233969,0.982217936586559,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.920859645583704,0.876329052034227,0.949367364394757,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.855630225080386,0.807465836012862,0.898713826366559,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),attenuation,1.03708936952856,1.00510416584465,1.07821066462345,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,winn_fixed_no_qc,WiNN,pearson,0.97066467289007,0.951738095267849,0.982084517016781,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,winn_fixed_no_qc,WiNN,spearman,0.921402189376176,0.877299854016484,0.948711855367882,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,winn_fixed_no_qc,WiNN,sign_concordance,0.847886655948553,0.80384847266881,0.885450160771704,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,winn_fixed_no_qc,WiNN,attenuation,1.04156801079292,1.01311239099768,1.07804892166202,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,raw,Raw,pearson,0.972383055196831,0.950243458006461,0.983002019169311,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,raw,Raw,spearman,0.925461874108001,0.884001721421566,0.952991547392284,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,raw,Raw,sign_concordance,0.858091036977492,0.816308279742765,0.893086816720257,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,raw,Raw,attenuation,1.03419735098844,1.00725331279551,1.07665102315821,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,combat,ComBat,pearson,0.974501941390637,0.954141331351214,0.984385733534225,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,combat,ComBat,spearman,0.927403026515618,0.887781609633043,0.953363808764178,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,combat,ComBat,sign_concordance,0.859733922829582,0.818729903536977,0.892694935691318,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,combat,ComBat,attenuation,1.01728514315412,0.995515074708531,1.05338397033604,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,qc_rlsc,QC-RLSC,pearson,0.960776335641064,0.923435382396014,0.979826590396531,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,qc_rlsc,QC-RLSC,spearman,0.906364212260148,0.846501389204514,0.947146282284666,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,qc_rlsc,QC-RLSC,sign_concordance,0.721671824758842,0.371372588424437,0.9164288585209,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,qc_rlsc,QC-RLSC,attenuation,2.0607509395954,0.56878814012994,4.60311718446181,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,qc_rfsc,QC-RFSC,pearson,0.943323821042738,0.873293503384989,0.971303377887041,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,qc_rfsc,QC-RFSC,spearman,0.906997543739247,0.849062718319002,0.946385898596913,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,qc_rfsc,QC-RFSC,sign_concordance,0.85466097266881,0.811495176848875,0.893086816720257,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,qc_rfsc,QC-RFSC,attenuation,1.01594844810919,0.982503329956786,1.05506427984963,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,tiger,TIGER,pearson,0.970327624728525,0.951386930227937,0.98009399078176,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,tiger,TIGER,spearman,0.915618142313272,0.876458156859622,0.943789440455882,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,tiger,TIGER,sign_concordance,0.851494372990354,0.815112540192926,0.883440514469453,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,tiger,TIGER,attenuation,1.05126088904793,1.02039806593154,1.08908566045426,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,serrf,SERRF,pearson,0.972739610604352,0.950875120539739,0.983168052884198,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,serrf,SERRF,spearman,0.925860442123125,0.884958385333012,0.952211522966167,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,serrf,SERRF,sign_concordance,0.858506631832797,0.818307877813505,0.891087218649518,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,serrf,SERRF,attenuation,1.04315743804202,1.01772279704343,1.08349218584812,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),pearson,0.972494957790295,0.950195176418633,0.983089408139781,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),spearman,0.925143942721606,0.883917145115452,0.951639275324275,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.861093649517685,0.818327974276527,0.896302250803859,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),attenuation,1.04778883410554,1.02075678774551,1.08367775122893,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.972415324216368,0.949260192865194,0.983067110308661,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.925127988553504,0.882816437889687,0.952136230134922,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.861489750803858,0.817112138263666,0.89591036977492,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),attenuation,1.04693857831153,1.01876464999432,1.08186332651417,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,winn_fixed_no_qc,WiNN,pearson,0.972500213588192,0.950190877607946,0.983108274176864,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,winn_fixed_no_qc,WiNN,spearman,0.925156717499469,0.883990589218699,0.951693758453361,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,winn_fixed_no_qc,WiNN,sign_concordance,0.858563303858521,0.818327974276527,0.891077170418006,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,winn_fixed_no_qc,WiNN,attenuation,1.05126569974972,1.02516633136197,1.09249556598072,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,raw,Raw,pearson,0.965745434670385,0.949811563751274,0.976762054978165,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,raw,Raw,spearman,0.914033073688562,0.877777540491323,0.93896058931957,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,raw,Raw,sign_concordance,0.855533159163987,0.818729903536977,0.885450160771704,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,raw,Raw,attenuation,1.03851639768709,1.00669801217343,1.07645462599585,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,combat,ComBat,pearson,0.967730746380485,0.952019174107673,0.978448870311761,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,combat,ComBat,spearman,0.91603907812405,0.880248574140774,0.940572798742356,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,combat,ComBat,sign_concordance,0.855172025723473,0.815916398713826,0.886254019292605,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,combat,ComBat,attenuation,1.04545909068021,1.01916741754795,1.08172807288807,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,qc_rlsc,QC-RLSC,pearson,0.94464847178427,0.882985770282269,0.97130092001974,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,qc_rlsc,QC-RLSC,spearman,0.87071951932056,0.746202589213881,0.929705447938597,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,qc_rlsc,QC-RLSC,sign_concordance,0.535925844051447,0.137851688102894,0.875411977491961,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,qc_rlsc,QC-RLSC,attenuation,2.07843183423437,0.420131398904248,5.84227780099052,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,qc_rfsc,QC-RFSC,pearson,0.933909132966776,0.893341485102415,0.960710908269528,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,qc_rfsc,QC-RFSC,spearman,0.896554954521611,0.851298797297055,0.930380881300908,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,qc_rfsc,QC-RFSC,sign_concordance,0.85503536977492,0.814308681672026,0.887057877813505,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,qc_rfsc,QC-RFSC,attenuation,1.0373115746668,1.00330483078468,1.07308314665572,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,tiger,TIGER,pearson,0.964908299073029,0.949739270091391,0.975206050109629,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,tiger,TIGER,spearman,0.910341473889081,0.872807212887356,0.934937966246423,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,tiger,TIGER,sign_concordance,0.851873794212219,0.811073151125402,0.881430868167203,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,tiger,TIGER,attenuation,1.06171801049511,1.02464499770672,1.10410177482203,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,serrf,SERRF,pearson,0.966620925154973,0.951713769826024,0.977172655626672,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,serrf,SERRF,spearman,0.916671877753549,0.88096931047476,0.940959104334474,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,serrf,SERRF,sign_concordance,0.854759646302251,0.815102491961415,0.885460209003215,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,serrf,SERRF,attenuation,1.04706248337991,1.01822103425111,1.08050424743398,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),pearson,0.966535931490572,0.951345612662149,0.977000420980601,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),spearman,0.916236690605717,0.880852428081267,0.940215606058082,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.859225281350482,0.818317926045016,0.891881028938907,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),attenuation,1.05291580990352,1.01994688217657,1.08806932876037,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.966471771459038,0.950632437251721,0.977028548270753,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.916291296080282,0.880531790434309,0.940965854155166,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.859363545016077,0.816720257234727,0.893900723472669,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),attenuation,1.05230607327604,1.01908680002692,1.08944053500337,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,winn_fixed_no_qc,WiNN,pearson,0.966530338393305,0.951439595738042,0.976975604885296,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,winn_fixed_no_qc,WiNN,spearman,0.916161315741111,0.880827545111702,0.94018352974686,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,winn_fixed_no_qc,WiNN,sign_concordance,0.854015675241158,0.814690514469453,0.885048231511254,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,winn_fixed_no_qc,WiNN,attenuation,1.05443032725142,1.02355805040978,1.08970157916451,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,raw,Raw,pearson,0.965103354043279,0.940887988803225,0.978430395728335,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,raw,Raw,spearman,0.911975979170599,0.858031941413373,0.94298673971774,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,raw,Raw,sign_concordance,0.837904742765273,0.784967845659164,0.880225080385852,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,raw,Raw,attenuation,1.06082526938296,1.01404744812032,1.14604750936397,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,combat,ComBat,pearson,0.968717162513088,0.946228512431813,0.980755506224663,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,combat,ComBat,spearman,0.919160660863481,0.866425285931182,0.946394579717757,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,combat,ComBat,sign_concordance,0.85008058681672,0.788575160771704,0.886254019292605,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,combat,ComBat,attenuation,1.04126167557265,0.996092026786303,1.12277942847523,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,qc_rlsc,QC-RLSC,pearson,0.939251304714606,0.832450305443403,0.975023076344253,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,qc_rlsc,QC-RLSC,spearman,0.868071468641505,0.720875383233553,0.934587237136603,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,qc_rlsc,QC-RLSC,sign_concordance,0.553782757234727,0.110922427652733,0.876225884244373,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,qc_rlsc,QC-RLSC,attenuation,2.80771393112372,0.486010742455447,8.30677793708367,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,qc_rfsc,QC-RFSC,pearson,0.940847564198325,0.888351315060014,0.966592447756798,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,qc_rfsc,QC-RFSC,spearman,0.896850111940726,0.831863358571991,0.935089365066395,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,qc_rfsc,QC-RFSC,sign_concordance,0.845175442122187,0.790192926045016,0.880235128617363,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,qc_rfsc,QC-RFSC,attenuation,1.04256483629916,0.991955079297586,1.13247957378131,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,tiger,TIGER,pearson,0.962927126388435,0.939348661333043,0.976333639911622,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,tiger,TIGER,spearman,0.905551128807821,0.852196259389564,0.935344500789063,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,tiger,TIGER,sign_concordance,0.839934887459807,0.78173231511254,0.87620578778135,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,tiger,TIGER,attenuation,1.07203616088244,1.02996858617776,1.14906999062421,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,serrf,SERRF,pearson,0.9673167067325,0.945398973641364,0.979091056909963,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,serrf,SERRF,spearman,0.919397653294867,0.868043324355867,0.94608222336243,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,serrf,SERRF,sign_concordance,0.85066057073955,0.789790996784566,0.887067926045016,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,serrf,SERRF,attenuation,1.07151969943688,1.0235009577842,1.15344222065727,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),pearson,0.967143965383478,0.945427783517475,0.97886818432509,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),spearman,0.918633248434771,0.867751166583053,0.945771749356129,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.856325964630225,0.80384847266881,0.891881028938907,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),attenuation,1.07101235466311,1.03182128154644,1.12681049171877,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.965308006521369,0.941804685772838,0.978461882619394,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.914280949867314,0.859149467217504,0.94389429335854,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.851586816720257,0.796221864951768,0.888675643086817,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),attenuation,1.07015395902519,1.03005587334875,1.1204607951489,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,winn_fixed_no_qc,WiNN,pearson,0.967156210302364,0.945407002035025,0.978885458185861,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,winn_fixed_no_qc,WiNN,spearman,0.918571956794678,0.867850100801764,0.945595200098264,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,winn_fixed_no_qc,WiNN,sign_concordance,0.853061294212219,0.809475482315112,0.887057877813505,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,winn_fixed_no_qc,WiNN,attenuation,1.08281261852041,1.03965206648643,1.15571175379273,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,raw,Raw,pearson,0.95218797808596,0.913371029553378,0.972691120485126,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,raw,Raw,spearman,0.895690187267115,0.834328478154056,0.933105355323924,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,raw,Raw,sign_concordance,0.83009827170418,0.772106109324759,0.87379421221865,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,raw,Raw,attenuation,1.09012441808177,1.04690092517371,1.14345757086432,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,combat,ComBat,pearson,0.960574944352524,0.928527732977385,0.977415693625145,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,combat,ComBat,spearman,0.905553074776948,0.855980041971852,0.937913810748637,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,combat,ComBat,sign_concordance,0.842872789389068,0.803436495176849,0.874206189710611,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,combat,ComBat,attenuation,1.13507367326886,1.09302996817683,1.19563998745539,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,qc_rlsc,QC-RLSC,pearson,0.948499309606652,0.906702556751901,0.970902599675924,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,qc_rlsc,QC-RLSC,spearman,0.890340997509502,0.832428117275992,0.928131231894209,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,qc_rlsc,QC-RLSC,sign_concordance,0.767737138263666,0.616127411575563,0.858129019292604,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,qc_rlsc,QC-RLSC,attenuation,0.879704186342143,0.466165979632014,1.12804235357708,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,qc_rfsc,QC-RFSC,pearson,0.914967080746966,0.839913493841074,0.954196744742504,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,qc_rfsc,QC-RFSC,spearman,0.881209821615147,0.816073270437197,0.92448717099956,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,qc_rfsc,QC-RFSC,sign_concordance,0.84207154340836,0.803054662379421,0.874608118971061,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,qc_rfsc,QC-RFSC,attenuation,1.13799797787746,1.09076653161928,1.19751024794159,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,tiger,TIGER,pearson,0.952728878434276,0.916774237307755,0.971622802780151,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,tiger,TIGER,spearman,0.894852612027638,0.844772881724039,0.928315584814734,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,tiger,TIGER,sign_concordance,0.836199356913183,0.797829581993569,0.866559485530547,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,tiger,TIGER,attenuation,1.13308816670931,1.0869897691028,1.19455510003921,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,serrf,SERRF,pearson,0.953820438948714,0.916116008202964,0.973511660568602,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,serrf,SERRF,spearman,0.900623645734668,0.849653772328973,0.934728336565661,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,serrf,SERRF,sign_concordance,0.84306209807074,0.80425040192926,0.874206189710611,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,serrf,SERRF,attenuation,1.09450714721291,1.04731320875756,1.15498842035053,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),pearson,0.953723809917262,0.916285250824021,0.973097137626878,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),spearman,0.900813724798564,0.850360232212205,0.935246676999275,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.847486133440514,0.808681672025723,0.882234726688103,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),attenuation,1.09056184964519,1.05203118816135,1.1423888821344,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.95385235671019,0.916916062671815,0.973198742194831,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.900709989445631,0.848701647821201,0.934984390302121,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.847806270096463,0.809485530546624,0.882234726688103,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),attenuation,1.08978019391839,1.05219359100427,1.14350668178106,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,winn_fixed_no_qc,WiNN,pearson,0.953640837825172,0.916239393353902,0.973044736911489,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,winn_fixed_no_qc,WiNN,spearman,0.900695348434239,0.849786060905991,0.935235768378192,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,winn_fixed_no_qc,WiNN,sign_concordance,0.843869172025723,0.804642282958199,0.8758038585209,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,winn_fixed_no_qc,WiNN,attenuation,1.09907768643127,1.05470627701405,1.15381654530759,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,raw,Raw,pearson,0.950695960365394,0.89845185253374,0.973447560135951,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,raw,Raw,spearman,0.89521122229834,0.830670409465209,0.935745016408004,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,raw,Raw,sign_concordance,0.834666197749196,0.784565916398714,0.879431270096463,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,raw,Raw,attenuation,1.08968151335133,1.02996485437621,1.18690579483248,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,combat,ComBat,pearson,0.960599617577875,0.921525080178004,0.97742025307727,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,combat,ComBat,spearman,0.905945634986299,0.848840558533025,0.940174357225278,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,combat,ComBat,sign_concordance,0.845622789389068,0.80183882636656,0.883440514469453,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,combat,ComBat,attenuation,1.09881387056641,1.03769170653901,1.18677880208735,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,qc_rlsc,QC-RLSC,pearson,0.938244638702528,0.883143655047126,0.968450633214771,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,qc_rlsc,QC-RLSC,spearman,0.885227876491306,0.819871375635846,0.928723749957751,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,qc_rlsc,QC-RLSC,sign_concordance,0.744627411575563,0.340765675241158,0.947347266881029,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,qc_rlsc,QC-RLSC,attenuation,2.32637775289367,0.596027571673876,5.74124517529014,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,qc_rfsc,QC-RFSC,pearson,0.914769622163772,0.838241831942427,0.954709275737763,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,qc_rfsc,QC-RFSC,spearman,0.882210044792544,0.82093180278581,0.923217215421501,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,qc_rfsc,QC-RFSC,sign_concordance,0.841338826366559,0.79863344051447,0.877009646302251,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,qc_rfsc,QC-RFSC,attenuation,1.10810662231509,1.03870252585255,1.20727402322849,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,tiger,TIGER,pearson,0.945179190660875,0.893489891674498,0.967536373592104,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,tiger,TIGER,spearman,0.88110816394201,0.816714103865876,0.921166818446454,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,tiger,TIGER,sign_concordance,0.83038404340836,0.788173231511254,0.866559485530547,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,tiger,TIGER,attenuation,1.03322000537224,0.972667567623488,1.13221288151026,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,serrf,SERRF,pearson,0.952142164025388,0.901472748175776,0.97369579508084,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,serrf,SERRF,spearman,0.90037351389271,0.838026021845072,0.93732646235643,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,serrf,SERRF,sign_concordance,0.846386053054662,0.804652331189711,0.883038585209003,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,serrf,SERRF,attenuation,1.1008358639826,1.0391966783516,1.1906495205724,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),pearson,0.952853353719705,0.904459159234474,0.974063233947905,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),spearman,0.901385472556545,0.837983954459061,0.937908275492452,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.846570136655949,0.802250803858521,0.887861736334405,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),attenuation,1.10081462259278,1.03785664840909,1.19316032832,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.953172869876269,0.905944439689771,0.974283933531095,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.902065100998012,0.839413729249396,0.938180632525092,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.845002411575563,0.801034967845659,0.885058279742765,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),attenuation,1.09942780644567,1.03475693746355,1.19170758089339,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,winn_fixed_no_qc,WiNN,pearson,0.952859107725685,0.904504486682886,0.974083267821916,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,winn_fixed_no_qc,WiNN,spearman,0.901389493759276,0.837906533510244,0.937823427257282,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,winn_fixed_no_qc,WiNN,sign_concordance,0.846714831189711,0.803054662379421,0.883440514469453,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,winn_fixed_no_qc,WiNN,attenuation,1.10219386172801,1.04065477710296,1.19093279753209,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,raw,Raw,pearson,0.956136953393113,0.930900855479054,0.971176322972488,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,raw,Raw,spearman,0.896483125614623,0.846668559753903,0.930478769761503,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,raw,Raw,sign_concordance,0.834297226688103,0.785771704180064,0.868981109324759,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,raw,Raw,attenuation,1.01837983557362,0.987784837282639,1.05462540821895,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,combat,ComBat,pearson,0.959695606746595,0.931178709428556,0.975602028303235,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,combat,ComBat,spearman,0.898422676890322,0.848403617120984,0.933064216996388,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,combat,ComBat,sign_concordance,0.833718448553055,0.784153938906752,0.867775321543408,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,combat,ComBat,attenuation,1.0558759531885,1.02492433661912,1.09185097907777,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,qc_rlsc,QC-RLSC,pearson,0.952575949237254,0.924640949622675,0.969917656831,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,qc_rlsc,QC-RLSC,spearman,0.889705857494922,0.838683130325151,0.926411598456167,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,qc_rlsc,QC-RLSC,sign_concordance,0.726609726688103,0.547025723472669,0.851306270096463,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,qc_rlsc,QC-RLSC,attenuation,0.75938691383197,0.311499108691649,1.0379218699164,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,qc_rfsc,QC-RFSC,pearson,0.922359538057893,0.841448979265177,0.959428113438866,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,qc_rfsc,QC-RFSC,spearman,0.875054772379399,0.810145554452912,0.922228728272064,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,qc_rfsc,QC-RFSC,sign_concordance,0.835542604501608,0.791398713826367,0.869774919614148,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,qc_rfsc,QC-RFSC,attenuation,1.03241929362729,1.00319551722502,1.06752909332968,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,tiger,TIGER,pearson,0.953789885547583,0.930176107627562,0.968055488453748,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,tiger,TIGER,spearman,0.884196637630025,0.834072253332144,0.917267443575356,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,tiger,TIGER,sign_concordance,0.823500602893891,0.772086012861736,0.858520900321543,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,tiger,TIGER,attenuation,1.01130405477245,0.978685271174314,1.05369758236815,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,serrf,SERRF,pearson,0.956110938457986,0.93016074456313,0.971383962794169,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,serrf,SERRF,spearman,0.895353853150418,0.846120869487437,0.929328307271188,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,serrf,SERRF,sign_concordance,0.83190172829582,0.783762057877814,0.865755627009646,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,serrf,SERRF,attenuation,1.02596024071446,0.994723822689479,1.05982141861676,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),pearson,0.954726288021608,0.927827006057143,0.96997816347478,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),spearman,0.891833300321094,0.841076731708393,0.925901736871812,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.835242966237942,0.794212218649518,0.870578778135048,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),attenuation,0.993555654212123,0.959706834453144,1.02861485250371,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.951548593204002,0.923638015198381,0.968687132171659,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.886878120946334,0.828119552716565,0.924920986902664,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.834546020900322,0.787379421221865,0.871382636655949,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),attenuation,0.9966585027018,0.958368113434213,1.04606674805674,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,winn_fixed_no_qc,WiNN,pearson,0.954717987458936,0.927797703028379,0.969949680597602,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,winn_fixed_no_qc,WiNN,spearman,0.89186669454194,0.84114715389287,0.925917881159619,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,winn_fixed_no_qc,WiNN,sign_concordance,0.833556672025723,0.792202572347267,0.865765675241157,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,winn_fixed_no_qc,WiNN,attenuation,0.993860275792954,0.962396979471872,1.02721611610633,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,raw,Raw,pearson,0.964549420377426,0.945469060106016,0.975981752512917,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,raw,Raw,spearman,0.917058473416054,0.879010228387043,0.941663936675555,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,raw,Raw,sign_concordance,0.855331591639871,0.815514469453376,0.886665996784566,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,raw,Raw,attenuation,1.03743006115932,1.00358655212418,1.08899299199877,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,combat,ComBat,pearson,0.967520963182566,0.948365237935168,0.978682253032694,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,combat,ComBat,spearman,0.919092648510403,0.882413709594145,0.943227735324284,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,combat,ComBat,sign_concordance,0.855201567524116,0.817926045016077,0.885460209003215,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,combat,ComBat,attenuation,1.0554196109053,1.02039275404128,1.10793073634089,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,qc_rlsc,QC-RLSC,pearson,0.938720262001522,0.871742028447817,0.970198360743335,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,qc_rlsc,QC-RLSC,spearman,0.880580134864298,0.792162566888645,0.930029565751535,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,qc_rlsc,QC-RLSC,sign_concordance,0.62915152733119,0.276105305466238,0.8758038585209,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,qc_rlsc,QC-RLSC,attenuation,3.71940382632902,0.785252644316968,8.89068126650129,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,qc_rfsc,QC-RFSC,pearson,0.946717015711843,0.910680103181818,0.967073366727905,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,qc_rfsc,QC-RFSC,spearman,0.905191718990115,0.856204087126126,0.937670645650788,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,qc_rfsc,QC-RFSC,sign_concordance,0.855551045016077,0.817514067524116,0.885852090032154,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,qc_rfsc,QC-RFSC,attenuation,1.02561091060662,0.992004177088804,1.07081394267551,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,tiger,TIGER,pearson,0.962431119587975,0.943107020631494,0.973775613918216,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,tiger,TIGER,spearman,0.906538650671054,0.865976830096221,0.933187613688064,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,tiger,TIGER,sign_concordance,0.846815916398714,0.807073954983923,0.877431672025723,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,tiger,TIGER,attenuation,1.04016279582293,1.00609452669891,1.09108701199767,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,serrf,SERRF,pearson,0.964183159089035,0.944585825375123,0.975697528032236,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,serrf,SERRF,spearman,0.916160862548743,0.877780393447871,0.940899124264708,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,serrf,SERRF,sign_concordance,0.85434786977492,0.817112138263666,0.885450160771704,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,serrf,SERRF,attenuation,1.04416976513707,1.01111611655595,1.09415472678541,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),pearson,0.963767841412499,0.945151095659995,0.974839914595886,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),spearman,0.913123824134155,0.875380388485984,0.937512828740198,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.856546020900322,0.815112540192926,0.888665594855305,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),attenuation,1.00590339240727,0.982154405823088,1.04084285511084,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.963428182006782,0.945148526243567,0.974539042834633,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.912319689727591,0.873150952972416,0.937654518796828,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.855484525723473,0.810681270096463,0.889871382636656,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),attenuation,1.00271424148247,0.97852522314445,1.03660393978514,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,winn_fixed_no_qc,WiNN,pearson,0.963775964968291,0.945126516082662,0.97482971699102,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,winn_fixed_no_qc,WiNN,spearman,0.913130712641781,0.875293500295914,0.937525191441523,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,winn_fixed_no_qc,WiNN,sign_concordance,0.85426788585209,0.817504019292605,0.884646302250804,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,winn_fixed_no_qc,WiNN,attenuation,1.00916500282276,0.982549133832314,1.05013107640602,2000,mtbls79,MTBLS79
+ne1,age,raw,Raw,pearson,0.426096405442614,0.15551349211505,0.629282682655187,2000,sacurine,Sacurine
+ne1,age,raw,Raw,spearman,0.335589880397897,0.0961842521125824,0.547831484130681,2000,sacurine,Sacurine
+ne1,age,raw,Raw,sign_concordance,0.621362831858407,0.495575221238938,0.743362831858407,2000,sacurine,Sacurine
+ne1,age,raw,Raw,attenuation,0.805733680356029,0.451430949235854,1.23418019056855,2000,sacurine,Sacurine
+ne1,bmi,raw,Raw,pearson,0.165236745511321,-0.139771866790412,0.439772352781803,2000,sacurine,Sacurine
+ne1,bmi,raw,Raw,spearman,0.180507493845233,-0.0527536346396966,0.402125682014771,2000,sacurine,Sacurine
+ne1,bmi,raw,Raw,sign_concordance,0.565800884955752,0.442477876106195,0.690265486725664,2000,sacurine,Sacurine
+ne1,bmi,raw,Raw,attenuation,0.918934413946182,0.540028603137255,1.50702298683945,2000,sacurine,Sacurine
+ne1,gender,raw,Raw,pearson,0.458918930468712,0.190100343685077,0.674449891918585,2000,sacurine,Sacurine
+ne1,gender,raw,Raw,spearman,0.328200337680484,0.127463362499168,0.512117406347728,2000,sacurine,Sacurine
+ne1,gender,raw,Raw,sign_concordance,0.630800884955752,0.495575221238938,0.761061946902655,2000,sacurine,Sacurine
+ne1,gender,raw,Raw,attenuation,0.78388289190048,0.427799596038464,1.25986673715117,2000,sacurine,Sacurine
+ne1,age,combat,ComBat,pearson,0.433729220717764,0.161246775960568,0.638963584814551,2000,sacurine,Sacurine
+ne1,age,combat,ComBat,spearman,0.332998735777497,0.0939920320713288,0.546592837181449,2000,sacurine,Sacurine
+ne1,age,combat,ComBat,sign_concordance,0.611309734513274,0.486725663716814,0.734513274336283,2000,sacurine,Sacurine
+ne1,age,combat,ComBat,attenuation,0.979309441236776,0.558929076397848,1.48582628502748,2000,sacurine,Sacurine
+ne1,bmi,combat,ComBat,pearson,0.167564121671653,-0.142394380208882,0.443415716288479,2000,sacurine,Sacurine
+ne1,bmi,combat,ComBat,spearman,0.181038409075787,-0.05786417093619,0.404069424113381,2000,sacurine,Sacurine
+ne1,bmi,combat,ComBat,sign_concordance,0.567699115044248,0.451327433628319,0.681637168141592,2000,sacurine,Sacurine
+ne1,bmi,combat,ComBat,attenuation,1.06780188476149,0.634106399613082,1.70561220593019,2000,sacurine,Sacurine
+ne1,gender,combat,ComBat,pearson,0.46629633887405,0.199288813673631,0.678454216872881,2000,sacurine,Sacurine
+ne1,gender,combat,ComBat,spearman,0.326312084137335,0.121583272340142,0.511012875108124,2000,sacurine,Sacurine
+ne1,gender,combat,ComBat,sign_concordance,0.613893805309734,0.468805309734513,0.743362831858407,2000,sacurine,Sacurine
+ne1,gender,combat,ComBat,attenuation,0.899854991843115,0.501944975236861,1.45226883127389,2000,sacurine,Sacurine
+ne1,age,qc_rlsc,QC-RLSC,pearson,0.426940717871446,0.158859578209005,0.631874102955643,2000,sacurine,Sacurine
+ne1,age,qc_rlsc,QC-RLSC,spearman,0.33655053978974,0.0957124559185575,0.551017615942511,2000,sacurine,Sacurine
+ne1,age,qc_rlsc,QC-RLSC,sign_concordance,0.626106194690266,0.495575221238938,0.743362831858407,2000,sacurine,Sacurine
+ne1,age,qc_rlsc,QC-RLSC,attenuation,0.79105865179032,0.442531281692971,1.22599638634299,2000,sacurine,Sacurine
+ne1,bmi,qc_rlsc,QC-RLSC,pearson,0.156535939887328,-0.142599534301704,0.431352232122097,2000,sacurine,Sacurine
+ne1,bmi,qc_rlsc,QC-RLSC,spearman,0.182615094151307,-0.0512195172666179,0.404602767981902,2000,sacurine,Sacurine
+ne1,bmi,qc_rlsc,QC-RLSC,sign_concordance,0.552199115044248,0.433628318584071,0.68141592920354,2000,sacurine,Sacurine
+ne1,bmi,qc_rlsc,QC-RLSC,attenuation,0.938494702008268,0.55781091690745,1.50914765287838,2000,sacurine,Sacurine
+ne1,gender,qc_rlsc,QC-RLSC,pearson,0.453132152317615,0.187580780219773,0.670430427625904,2000,sacurine,Sacurine
+ne1,gender,qc_rlsc,QC-RLSC,spearman,0.319201028012509,0.111368229755805,0.504653711158427,2000,sacurine,Sacurine
+ne1,gender,qc_rlsc,QC-RLSC,sign_concordance,0.63008407079646,0.504424778761062,0.743584070796459,2000,sacurine,Sacurine
+ne1,gender,qc_rlsc,QC-RLSC,attenuation,0.881608121949565,0.497643458147092,1.34448672290608,2000,sacurine,Sacurine
+ne1,age,qc_rfsc,QC-RFSC,pearson,0.301524609922745,-0.975326421745374,0.996954667793244,2000,sacurine,Sacurine
+ne1,age,qc_rfsc,QC-RFSC,spearman,0.302240272972254,0.0705115942511145,0.493622746024353,2000,sacurine,Sacurine
+ne1,age,qc_rfsc,QC-RFSC,sign_concordance,0.624221238938053,0.52212389380531,0.725663716814159,2000,sacurine,Sacurine
+ne1,age,qc_rfsc,QC-RFSC,attenuation,0.997279637864088,0.61283372541843,1.5229862440312,2000,sacurine,Sacurine
+ne1,bmi,qc_rfsc,QC-RFSC,pearson,0.00200833953242847,-0.994574859611877,0.992939461826879,2000,sacurine,Sacurine
+ne1,bmi,qc_rfsc,QC-RFSC,spearman,0.137223230920221,-0.0938223601037993,0.359724532570364,2000,sacurine,Sacurine
+ne1,bmi,qc_rfsc,QC-RFSC,sign_concordance,0.534880530973451,0.424778761061947,0.646017699115044,2000,sacurine,Sacurine
+ne1,bmi,qc_rfsc,QC-RFSC,attenuation,1.0862275009593,0.647684855665813,1.76420288945535,2000,sacurine,Sacurine
+ne1,gender,qc_rfsc,QC-RFSC,pearson,-0.50059029839945,-0.998472194950196,0.781210641816839,2000,sacurine,Sacurine
+ne1,gender,qc_rfsc,QC-RFSC,spearman,0.208562878435026,-0.000125798456317784,0.415921925943176,2000,sacurine,Sacurine
+ne1,gender,qc_rfsc,QC-RFSC,sign_concordance,0.602438053097345,0.47787610619469,0.716814159292035,2000,sacurine,Sacurine
+ne1,gender,qc_rfsc,QC-RFSC,attenuation,0.981246347392382,0.667067221743212,1.3881360989636,2000,sacurine,Sacurine
+ne1,age,tiger,TIGER,pearson,0.402170984391975,0.13000517931933,0.607542831632087,2000,sacurine,Sacurine
+ne1,age,tiger,TIGER,spearman,0.303172612116575,0.0644607924678954,0.513232334153969,2000,sacurine,Sacurine
+ne1,age,tiger,TIGER,sign_concordance,0.602575221238938,0.486725663716814,0.716814159292035,2000,sacurine,Sacurine
+ne1,age,tiger,TIGER,attenuation,0.861132263137663,0.504952240631698,1.26509782270435,2000,sacurine,Sacurine
+ne1,bmi,tiger,TIGER,pearson,0.156875803274556,-0.141969524958958,0.430780962488821,2000,sacurine,Sacurine
+ne1,bmi,tiger,TIGER,spearman,0.18212130713953,-0.0497525617140196,0.406021275533968,2000,sacurine,Sacurine
+ne1,bmi,tiger,TIGER,sign_concordance,0.564637168141593,0.433628318584071,0.699115044247788,2000,sacurine,Sacurine
+ne1,bmi,tiger,TIGER,attenuation,1.01244217091277,0.587474059907491,1.71079373096575,2000,sacurine,Sacurine
+ne1,gender,tiger,TIGER,pearson,0.448903377628797,0.182377888801257,0.666177713889161,2000,sacurine,Sacurine
+ne1,gender,tiger,TIGER,spearman,0.310218032636902,0.106024602435292,0.497010363297625,2000,sacurine,Sacurine
+ne1,gender,tiger,TIGER,sign_concordance,0.64703982300885,0.52212389380531,0.761061946902655,2000,sacurine,Sacurine
+ne1,gender,tiger,TIGER,attenuation,0.827295947612734,0.460849440739412,1.31024675334343,2000,sacurine,Sacurine
+ne1,age,serrf,SERRF,pearson,0.434248252515817,0.166814139542993,0.632647985312691,2000,sacurine,Sacurine
+ne1,age,serrf,SERRF,spearman,0.338506766085568,0.0944833738106328,0.546725289440415,2000,sacurine,Sacurine
+ne1,age,serrf,SERRF,sign_concordance,0.619424778761062,0.504203539823009,0.734513274336283,2000,sacurine,Sacurine
+ne1,age,serrf,SERRF,attenuation,0.845007080596947,0.500484477244853,1.25483041799409,2000,sacurine,Sacurine
+ne1,bmi,serrf,SERRF,pearson,0.159971480452057,-0.138532335360187,0.432141224085632,2000,sacurine,Sacurine
+ne1,bmi,serrf,SERRF,spearman,0.168625848359838,-0.0665733748087032,0.391454438086366,2000,sacurine,Sacurine
+ne1,bmi,serrf,SERRF,sign_concordance,0.570690265486726,0.442477876106195,0.707964601769911,2000,sacurine,Sacurine
+ne1,bmi,serrf,SERRF,attenuation,1.00172212710599,0.587837545798857,1.66436839508964,2000,sacurine,Sacurine
+ne1,gender,serrf,SERRF,pearson,0.448684965232817,0.19078808005812,0.663238110101778,2000,sacurine,Sacurine
+ne1,gender,serrf,SERRF,spearman,0.311320185142059,0.108283152571695,0.496961083571761,2000,sacurine,Sacurine
+ne1,gender,serrf,SERRF,sign_concordance,0.648796460176991,0.52212389380531,0.761061946902655,2000,sacurine,Sacurine
+ne1,gender,serrf,SERRF,attenuation,0.821770926643189,0.466783354479668,1.28078550965613,2000,sacurine,Sacurine
+ne1,age,winn_auto_qc,WiNN (QC-tuned),pearson,0.453264388909502,0.198989557928903,0.64585379359946,2000,sacurine,Sacurine
+ne1,age,winn_auto_qc,WiNN (QC-tuned),spearman,0.352140661387983,0.10554552864462,0.566415970789806,2000,sacurine,Sacurine
+ne1,age,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.553070796460177,0.353982300884956,0.725663716814159,2000,sacurine,Sacurine
+ne1,age,winn_auto_qc,WiNN (QC-tuned),attenuation,0.97396620506977,0.516323062708666,1.71408415589743,2000,sacurine,Sacurine
+ne1,bmi,winn_auto_qc,WiNN (QC-tuned),pearson,0.207922725158203,-0.0592944445617914,0.457185481389445,2000,sacurine,Sacurine
+ne1,bmi,winn_auto_qc,WiNN (QC-tuned),spearman,0.192987711258234,-0.0406154351586932,0.423416602901058,2000,sacurine,Sacurine
+ne1,bmi,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.61116814159292,0.398230088495575,0.778761061946903,2000,sacurine,Sacurine
+ne1,bmi,winn_auto_qc,WiNN (QC-tuned),attenuation,1.28780734222669,0.548981418658639,2.63343750408264,2000,sacurine,Sacurine
+ne1,gender,winn_auto_qc,WiNN (QC-tuned),pearson,0.414995164511223,0.171659395976747,0.62264329177837,2000,sacurine,Sacurine
+ne1,gender,winn_auto_qc,WiNN (QC-tuned),spearman,0.318368703839244,0.126098085368288,0.495845531971522,2000,sacurine,Sacurine
+ne1,gender,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.686389380530973,0.486725663716814,0.84070796460177,2000,sacurine,Sacurine
+ne1,gender,winn_auto_qc,WiNN (QC-tuned),attenuation,1.10339277485635,0.525584827822278,2.03456515699398,2000,sacurine,Sacurine
+ne1,age,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.456959117579379,0.203506999081118,0.647952749630587,2000,sacurine,Sacurine
+ne1,age,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.357395044580478,0.107730471089228,0.571205669039856,2000,sacurine,Sacurine
+ne1,age,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.553048672566372,0.353982300884956,0.734513274336283,2000,sacurine,Sacurine
+ne1,age,winn_auto_batch_qc,WiNN (inferred segments),attenuation,0.963274965007223,0.515800997740701,1.71415382705477,2000,sacurine,Sacurine
+ne1,bmi,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.208681002667538,-0.0591907343592981,0.454607540579278,2000,sacurine,Sacurine
+ne1,bmi,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.193412265453457,-0.0431386818816954,0.423163550469093,2000,sacurine,Sacurine
+ne1,bmi,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.612044247787611,0.407079646017699,0.778761061946903,2000,sacurine,Sacurine
+ne1,bmi,winn_auto_batch_qc,WiNN (inferred segments),attenuation,1.27872388153917,0.545208193584246,2.5902152021572,2000,sacurine,Sacurine
+ne1,gender,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.415674490719873,0.172493754971434,0.622776798308971,2000,sacurine,Sacurine
+ne1,gender,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.314942793931732,0.122462821877703,0.493165920886286,2000,sacurine,Sacurine
+ne1,gender,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.678769911504425,0.47787610619469,0.831858407079646,2000,sacurine,Sacurine
+ne1,gender,winn_auto_batch_qc,WiNN (inferred segments),attenuation,1.05552301223714,0.516821228393328,1.94330947759777,2000,sacurine,Sacurine
+ne1,age,winn_fixed_no_qc,WiNN,pearson,0.453898079281215,0.20285405934169,0.646503841197545,2000,sacurine,Sacurine
+ne1,age,winn_fixed_no_qc,WiNN,spearman,0.352187142358108,0.106892299886885,0.566015079180252,2000,sacurine,Sacurine
+ne1,age,winn_fixed_no_qc,WiNN,sign_concordance,0.597805309734513,0.451327433628319,0.725663716814159,2000,sacurine,Sacurine
+ne1,age,winn_fixed_no_qc,WiNN,attenuation,1.01990960096497,0.656355040702775,1.56515046404813,2000,sacurine,Sacurine
+ne1,bmi,winn_fixed_no_qc,WiNN,pearson,0.208017332821298,-0.0599877029049591,0.453140448158912,2000,sacurine,Sacurine
+ne1,bmi,winn_fixed_no_qc,WiNN,spearman,0.192197555559252,-0.0421636918623994,0.424608673231752,2000,sacurine,Sacurine
+ne1,bmi,winn_fixed_no_qc,WiNN,sign_concordance,0.59929203539823,0.469026548672566,0.734513274336283,2000,sacurine,Sacurine
+ne1,bmi,winn_fixed_no_qc,WiNN,attenuation,1.0397032807571,0.579423031425247,1.75034008063402,2000,sacurine,Sacurine
+ne1,gender,winn_fixed_no_qc,WiNN,pearson,0.414222070136429,0.171733178194843,0.621038422931043,2000,sacurine,Sacurine
+ne1,gender,winn_fixed_no_qc,WiNN,spearman,0.315645115277131,0.121163043116641,0.494277521791204,2000,sacurine,Sacurine
+ne1,gender,winn_fixed_no_qc,WiNN,sign_concordance,0.658362831858407,0.52212389380531,0.769911504424779,2000,sacurine,Sacurine
+ne1,gender,winn_fixed_no_qc,WiNN,attenuation,0.91044586681054,0.567978149723477,1.38562289475908,2000,sacurine,Sacurine
+ne2,age,raw,Raw,pearson,0.423315326077029,0.146155927160884,0.642145440361846,2000,sacurine,Sacurine
+ne2,age,raw,Raw,spearman,0.333045956983166,0.0870862166478143,0.551182089626722,2000,sacurine,Sacurine
+ne2,age,raw,Raw,sign_concordance,0.619464601769911,0.495575221238938,0.743362831858407,2000,sacurine,Sacurine
+ne2,age,raw,Raw,attenuation,1.31391515460798,0.816899982631767,2.24665972585259,2000,sacurine,Sacurine
+ne2,bmi,raw,Raw,pearson,0.168166060335789,-0.133401769030164,0.441596325801474,2000,sacurine,Sacurine
+ne2,bmi,raw,Raw,spearman,0.177483989287378,-0.0391773820613481,0.38775949830328,2000,sacurine,Sacurine
+ne2,bmi,raw,Raw,sign_concordance,0.566553097345133,0.433628318584071,0.68141592920354,2000,sacurine,Sacurine
+ne2,bmi,raw,Raw,attenuation,1.17180927266417,0.67285158307969,1.89815611846404,2000,sacurine,Sacurine
+ne2,gender,raw,Raw,pearson,0.465638678294867,0.211059449518712,0.669358205549011,2000,sacurine,Sacurine
+ne2,gender,raw,Raw,spearman,0.331357729223501,0.131500765187305,0.509828290305409,2000,sacurine,Sacurine
+ne2,gender,raw,Raw,sign_concordance,0.63229203539823,0.486725663716814,0.752212389380531,2000,sacurine,Sacurine
+ne2,gender,raw,Raw,attenuation,1.3626044645116,0.808537163278227,2.33512171868291,2000,sacurine,Sacurine
+ne2,age,combat,ComBat,pearson,0.430906135121696,0.151618608988884,0.655424266645965,2000,sacurine,Sacurine
+ne2,age,combat,ComBat,spearman,0.330521013540488,0.0781416345066206,0.553343119968062,2000,sacurine,Sacurine
+ne2,age,combat,ComBat,sign_concordance,0.61083185840708,0.47787610619469,0.734513274336283,2000,sacurine,Sacurine
+ne2,age,combat,ComBat,attenuation,1.07707995020291,0.673428972868253,1.84257862904006,2000,sacurine,Sacurine
+ne2,bmi,combat,ComBat,pearson,0.169972398787643,-0.133299081120377,0.445862567350341,2000,sacurine,Sacurine
+ne2,bmi,combat,ComBat,spearman,0.177494556357708,-0.0394655748885488,0.393044696919289,2000,sacurine,Sacurine
+ne2,bmi,combat,ComBat,sign_concordance,0.567269911504425,0.442477876106195,0.68141592920354,2000,sacurine,Sacurine
+ne2,bmi,combat,ComBat,attenuation,1.00793486886388,0.594808084579629,1.57713453168116,2000,sacurine,Sacurine
+ne2,gender,combat,ComBat,pearson,0.472983983129896,0.215926191573216,0.675480215431899,2000,sacurine,Sacurine
+ne2,gender,combat,ComBat,spearman,0.32944231153104,0.120463146250582,0.511001023022157,2000,sacurine,Sacurine
+ne2,gender,combat,ComBat,sign_concordance,0.615327433628319,0.460176991150442,0.752212389380531,2000,sacurine,Sacurine
+ne2,gender,combat,ComBat,attenuation,1.18405028106938,0.704998627153065,2.03889577588509,2000,sacurine,Sacurine
+ne2,age,qc_rlsc,QC-RLSC,pearson,0.424402829764477,0.143097096149698,0.644853626951394,2000,sacurine,Sacurine
+ne2,age,qc_rlsc,QC-RLSC,spearman,0.335060657728392,0.0798364827999202,0.556114844633708,2000,sacurine,Sacurine
+ne2,age,qc_rlsc,QC-RLSC,sign_concordance,0.625101769911504,0.495575221238938,0.734513274336283,2000,sacurine,Sacurine
+ne2,age,qc_rlsc,QC-RLSC,attenuation,1.33837697702266,0.825449297921309,2.28820293140823,2000,sacurine,Sacurine
+ne2,bmi,qc_rlsc,QC-RLSC,pearson,0.159086725573586,-0.130370945421437,0.426585196405441,2000,sacurine,Sacurine
+ne2,bmi,qc_rlsc,QC-RLSC,spearman,0.17976331592255,-0.0318833588395768,0.390698399760463,2000,sacurine,Sacurine
+ne2,bmi,qc_rlsc,QC-RLSC,sign_concordance,0.551504424778761,0.424778761061947,0.672566371681416,2000,sacurine,Sacurine
+ne2,bmi,qc_rlsc,QC-RLSC,attenuation,1.1355143093036,0.663169105082441,1.75835009316986,2000,sacurine,Sacurine
+ne2,gender,qc_rlsc,QC-RLSC,pearson,0.459844931914769,0.197301265709161,0.670157926630179,2000,sacurine,Sacurine
+ne2,gender,qc_rlsc,QC-RLSC,spearman,0.321999779592787,0.113044364229157,0.502219459045845,2000,sacurine,Sacurine
+ne2,gender,qc_rlsc,QC-RLSC,sign_concordance,0.629491150442478,0.504424778761062,0.743362831858407,2000,sacurine,Sacurine
+ne2,gender,qc_rlsc,QC-RLSC,attenuation,1.2015627943698,0.756251844495771,2.05786897544971,2000,sacurine,Sacurine
+ne2,age,qc_rfsc,QC-RFSC,pearson,0.283737990277596,-0.963897924297814,0.997735012277965,2000,sacurine,Sacurine
+ne2,age,qc_rfsc,QC-RFSC,spearman,0.299226611883692,0.0557068833588396,0.502430093485927,2000,sacurine,Sacurine
+ne2,age,qc_rfsc,QC-RFSC,sign_concordance,0.622672566371681,0.521902654867257,0.725663716814159,2000,sacurine,Sacurine
+ne2,age,qc_rfsc,QC-RFSC,attenuation,1.04553099275014,0.659189258438814,1.60887091233721,2000,sacurine,Sacurine
+ne2,bmi,qc_rfsc,QC-RFSC,pearson,0.0303148680570933,-0.993414641184046,0.99548341920022,2000,sacurine,Sacurine
+ne2,bmi,qc_rfsc,QC-RFSC,spearman,0.140344791735977,-0.0965206850089827,0.364374085102136,2000,sacurine,Sacurine
+ne2,bmi,qc_rfsc,QC-RFSC,sign_concordance,0.534796460176991,0.41570796460177,0.646017699115044,2000,sacurine,Sacurine
+ne2,bmi,qc_rfsc,QC-RFSC,attenuation,0.98865902274961,0.560400152305604,1.53881003330126,2000,sacurine,Sacurine
+ne2,gender,qc_rfsc,QC-RFSC,pearson,-0.495064243673292,-0.998357003823138,0.811804549122998,2000,sacurine,Sacurine
+ne2,gender,qc_rfsc,QC-RFSC,spearman,0.210871939250782,0.0115724183245725,0.415049030208264,2000,sacurine,Sacurine
+ne2,gender,qc_rfsc,QC-RFSC,sign_concordance,0.602597345132743,0.495575221238938,0.716814159292035,2000,sacurine,Sacurine
+ne2,gender,qc_rfsc,QC-RFSC,attenuation,1.05387377775979,0.719476299233487,1.49790264739039,2000,sacurine,Sacurine
+ne2,age,tiger,TIGER,pearson,0.39893461610367,0.11903837424019,0.618766868677875,2000,sacurine,Sacurine
+ne2,age,tiger,TIGER,spearman,0.300948811464502,0.0564155133408743,0.522733548472952,2000,sacurine,Sacurine
+ne2,age,tiger,TIGER,sign_concordance,0.600464601769911,0.47787610619469,0.708185840707963,2000,sacurine,Sacurine
+ne2,age,tiger,TIGER,attenuation,1.22966042428166,0.790276384237809,2.00746044771052,2000,sacurine,Sacurine
+ne2,bmi,tiger,TIGER,pearson,0.159500589850872,-0.136511280934959,0.425942671013094,2000,sacurine,Sacurine
+ne2,bmi,tiger,TIGER,spearman,0.17967555226562,-0.0364052415330361,0.392767732384057,2000,sacurine,Sacurine
+ne2,bmi,tiger,TIGER,sign_concordance,0.566132743362832,0.424778761061947,0.690265486725664,2000,sacurine,Sacurine
+ne2,bmi,tiger,TIGER,attenuation,1.06734127790635,0.606173300707809,1.73005483343742,2000,sacurine,Sacurine
+ne2,gender,tiger,TIGER,pearson,0.455518140488965,0.187199632475152,0.665037979817355,2000,sacurine,Sacurine
+ne2,gender,tiger,TIGER,spearman,0.312788005689001,0.10983057755007,0.492765445139397,2000,sacurine,Sacurine
+ne2,gender,tiger,TIGER,sign_concordance,0.64666814159292,0.52212389380531,0.752433628318583,2000,sacurine,Sacurine
+ne2,gender,tiger,TIGER,attenuation,1.29122941478607,0.775832928230326,2.1562789088546,2000,sacurine,Sacurine
+ne2,age,serrf,SERRF,pearson,0.430649464959211,0.151509231881335,0.645550197751466,2000,sacurine,Sacurine
+ne2,age,serrf,SERRF,spearman,0.335603038292634,0.0963560033934394,0.550889530241533,2000,sacurine,Sacurine
+ne2,age,serrf,SERRF,sign_concordance,0.616694690265487,0.504203539823009,0.725663716814159,2000,sacurine,Sacurine
+ne2,age,serrf,SERRF,attenuation,1.24538001997344,0.813798408385289,2.05261986634533,2000,sacurine,Sacurine
+ne2,bmi,serrf,SERRF,pearson,0.162896422677927,-0.125074327527935,0.435106785270604,2000,sacurine,Sacurine
+ne2,bmi,serrf,SERRF,spearman,0.165972220373944,-0.049329213520527,0.377694998003859,2000,sacurine,Sacurine
+ne2,bmi,serrf,SERRF,sign_concordance,0.572769911504425,0.433628318584071,0.699115044247788,2000,sacurine,Sacurine
+ne2,bmi,serrf,SERRF,attenuation,1.0794866167747,0.615558165843823,1.73693299134248,2000,sacurine,Sacurine
+ne2,gender,serrf,SERRF,pearson,0.455341046870624,0.19708647280992,0.660293929525588,2000,sacurine,Sacurine
+ne2,gender,serrf,SERRF,spearman,0.314078660423182,0.106787710426509,0.491351720007985,2000,sacurine,Sacurine
+ne2,gender,serrf,SERRF,sign_concordance,0.648256637168142,0.52212389380531,0.761061946902655,2000,sacurine,Sacurine
+ne2,gender,serrf,SERRF,attenuation,1.29912547213245,0.780166867611711,2.20508063879761,2000,sacurine,Sacurine
+ne2,age,winn_auto_qc,WiNN (QC-tuned),pearson,0.450506294308019,0.184114691913026,0.654600641746235,2000,sacurine,Sacurine
+ne2,age,winn_auto_qc,WiNN (QC-tuned),spearman,0.350741304311664,0.0966288093020161,0.567621140794464,2000,sacurine,Sacurine
+ne2,age,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.558097345132743,0.36283185840708,0.734513274336283,2000,sacurine,Sacurine
+ne2,age,winn_auto_qc,WiNN (QC-tuned),attenuation,1.14219735373253,0.581279105161664,1.98888002243401,2000,sacurine,Sacurine
+ne2,bmi,winn_auto_qc,WiNN (QC-tuned),pearson,0.212493104102581,-0.0482216944006341,0.454003655123955,2000,sacurine,Sacurine
+ne2,bmi,winn_auto_qc,WiNN (QC-tuned),spearman,0.191057958779693,-0.0370134406813494,0.403902455253177,2000,sacurine,Sacurine
+ne2,bmi,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.613619469026549,0.398008849557522,0.778761061946903,2000,sacurine,Sacurine
+ne2,bmi,winn_auto_qc,WiNN (QC-tuned),attenuation,0.915549941080804,0.388293558676408,1.79633970125186,2000,sacurine,Sacurine
+ne2,gender,winn_auto_qc,WiNN (QC-tuned),pearson,0.42172136322822,0.182229241632266,0.618437561797974,2000,sacurine,Sacurine
+ne2,gender,winn_auto_qc,WiNN (QC-tuned),spearman,0.320909895036263,0.115747887417659,0.503622163816621,2000,sacurine,Sacurine
+ne2,gender,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.686230088495575,0.495353982300885,0.831858407079646,2000,sacurine,Sacurine
+ne2,gender,winn_auto_qc,WiNN (QC-tuned),attenuation,1.02564829626955,0.480721093734078,1.91936220038005,2000,sacurine,Sacurine
+ne2,age,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.454089551040878,0.191767963421596,0.656525229903953,2000,sacurine,Sacurine
+ne2,age,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.355625569731852,0.105311397963936,0.572919439084437,2000,sacurine,Sacurine
+ne2,age,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.558424778761062,0.362610619469027,0.734513274336283,2000,sacurine,Sacurine
+ne2,age,winn_auto_batch_qc,WiNN (inferred segments),attenuation,1.15632033664783,0.592863348413402,2.01354315227702,2000,sacurine,Sacurine
+ne2,bmi,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.213078567587078,-0.045527430973699,0.455008768990802,2000,sacurine,Sacurine
+ne2,bmi,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.19128119385854,-0.0357250981435891,0.404281514072793,2000,sacurine,Sacurine
+ne2,bmi,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.614030973451327,0.398008849557522,0.778761061946903,2000,sacurine,Sacurine
+ne2,bmi,winn_auto_batch_qc,WiNN (inferred segments),attenuation,0.918634786602812,0.391411355708436,1.76471491031249,2000,sacurine,Sacurine
+ne2,gender,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.422553361134894,0.181964737931744,0.620172513875296,2000,sacurine,Sacurine
+ne2,gender,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.317633990950828,0.113677307206068,0.499274319648679,2000,sacurine,Sacurine
+ne2,gender,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.678092920353982,0.47787610619469,0.823230088495574,2000,sacurine,Sacurine
+ne2,gender,winn_auto_batch_qc,WiNN (inferred segments),attenuation,1.06493023717263,0.507561228934973,1.93387449052062,2000,sacurine,Sacurine
+ne2,age,winn_fixed_no_qc,WiNN,pearson,0.451156545455979,0.185128236454344,0.652803718900226,2000,sacurine,Sacurine
+ne2,age,winn_fixed_no_qc,WiNN,spearman,0.350934942444607,0.100420645086167,0.565422890744561,2000,sacurine,Sacurine
+ne2,age,winn_fixed_no_qc,WiNN,sign_concordance,0.597278761061947,0.451327433628319,0.734513274336283,2000,sacurine,Sacurine
+ne2,age,winn_fixed_no_qc,WiNN,attenuation,1.03800857035741,0.633710682871227,1.5253112021519,2000,sacurine,Sacurine
+ne2,bmi,winn_fixed_no_qc,WiNN,pearson,0.212645156297129,-0.0441369237644816,0.451672102484459,2000,sacurine,Sacurine
+ne2,bmi,winn_fixed_no_qc,WiNN,spearman,0.190375182979573,-0.0343631479140329,0.401034666311797,2000,sacurine,Sacurine
+ne2,bmi,winn_fixed_no_qc,WiNN,sign_concordance,0.600451327433628,0.451327433628319,0.717035398230087,2000,sacurine,Sacurine
+ne2,bmi,winn_fixed_no_qc,WiNN,attenuation,1.0441836281983,0.578590257775704,1.72032437960751,2000,sacurine,Sacurine
+ne2,gender,winn_fixed_no_qc,WiNN,pearson,0.42086601504148,0.180842399908635,0.618038967169835,2000,sacurine,Sacurine
+ne2,gender,winn_fixed_no_qc,WiNN,spearman,0.31820912069998,0.1154206034999,0.499907054694258,2000,sacurine,Sacurine
+ne2,gender,winn_fixed_no_qc,WiNN,sign_concordance,0.657455752212389,0.530973451327434,0.769911504424779,2000,sacurine,Sacurine
+ne2,gender,winn_fixed_no_qc,WiNN,attenuation,1.15263321545404,0.726663895897119,1.74640938771606,2000,sacurine,Sacurine
+1,biological_group,raw,Raw,pearson,0.205120733807923,0.0452276776525751,0.35292538018744,2000,waveica,WaveICA
+1,biological_group,raw,Raw,spearman,0.203031107969914,0.0907901424970143,0.310589100332261,2000,waveica,WaveICA
+1,biological_group,raw,Raw,sign_concordance,0.563870453490172,0.5215872156013,0.60363720786256,2000,waveica,WaveICA
+1,biological_group,raw,Raw,attenuation,1.14450434288308,0.883745503338619,1.48867424614056,2000,waveica,WaveICA
+1,biological_group,combat,ComBat,pearson,0.276663657708265,0.093856429300982,0.436496849181366,2000,waveica,WaveICA
+1,biological_group,combat,ComBat,spearman,0.213545621560222,0.0884739307723471,0.330102950945693,2000,waveica,WaveICA
+1,biological_group,combat,ComBat,sign_concordance,0.564925243770314,0.519265593561368,0.605947221792292,2000,waveica,WaveICA
+1,biological_group,combat,ComBat,attenuation,1.2527134250023,0.953022618351554,1.6553428837444,2000,waveica,WaveICA
+1,biological_group,qc_rlsc,QC-RLSC,pearson,0.220488700068194,0.0568872262866436,0.36427109580768,2000,waveica,WaveICA
+1,biological_group,qc_rlsc,QC-RLSC,spearman,0.213055004768095,0.105633067900093,0.312265596122773,2000,waveica,WaveICA
+1,biological_group,qc_rlsc,QC-RLSC,sign_concordance,0.567230150131559,0.529945054945055,0.603157405974307,2000,waveica,WaveICA
+1,biological_group,qc_rlsc,QC-RLSC,attenuation,1.14028291299552,0.908515558531383,1.43424208129396,2000,waveica,WaveICA
+1,biological_group,qc_rfsc,QC-RFSC,pearson,0.203878636321474,0.0897110405338803,0.319503386626824,2000,waveica,WaveICA
+1,biological_group,qc_rfsc,QC-RFSC,spearman,0.22530224243834,0.12981966370517,0.315321244122346,2000,waveica,WaveICA
+1,biological_group,qc_rfsc,QC-RFSC,sign_concordance,0.570636588763349,0.531957127379663,0.606570190373007,2000,waveica,WaveICA
+1,biological_group,qc_rfsc,QC-RFSC,attenuation,1.21331737315017,0.972740075539679,1.50843795446344,2000,waveica,WaveICA
+1,biological_group,tiger,TIGER,pearson,0.170237645211918,0.029814628811185,0.299830626218556,2000,waveica,WaveICA
+1,biological_group,tiger,TIGER,spearman,0.181842058987462,0.0791345639824392,0.276335307493681,2000,waveica,WaveICA
+1,biological_group,tiger,TIGER,sign_concordance,0.559893901872775,0.525770004643244,0.592791363566011,2000,waveica,WaveICA
+1,biological_group,tiger,TIGER,attenuation,1.14689232078635,0.932720917275464,1.41151760369106,2000,waveica,WaveICA
+1,biological_group,serrf,SERRF,pearson,0.156987341775797,0.0325650211381883,0.274236104066984,2000,waveica,WaveICA
+1,biological_group,serrf,SERRF,spearman,0.182032013565039,0.0809682042034209,0.275574823755878,2000,waveica,WaveICA
+1,biological_group,serrf,SERRF,sign_concordance,0.559934220708869,0.525305680235258,0.592946138368673,2000,waveica,WaveICA
+1,biological_group,serrf,SERRF,attenuation,1.18616963445342,0.96134033210636,1.46276441115733,2000,waveica,WaveICA
+1,biological_group,winn_auto_qc,WiNN (QC-tuned),pearson,0.226097824606425,0.0484736082010108,0.377480257927651,2000,waveica,WaveICA
+1,biological_group,winn_auto_qc,WiNN (QC-tuned),spearman,0.223608400531875,0.113243236359788,0.323343952440637,2000,waveica,WaveICA
+1,biological_group,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.572573053706857,0.53226280761492,0.610277046896765,2000,waveica,WaveICA
+1,biological_group,winn_auto_qc,WiNN (QC-tuned),attenuation,1.0868432012381,0.880214051599545,1.34774772749208,2000,waveica,WaveICA
+1,biological_group,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.222634151211373,0.0552269958693629,0.371712425224862,2000,waveica,WaveICA
+1,biological_group,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.218186857332854,0.0999100355014167,0.326310587716944,2000,waveica,WaveICA
+1,biological_group,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.567224810400867,0.524837486457205,0.608268843832224,2000,waveica,WaveICA
+1,biological_group,winn_auto_batch_qc,WiNN (inferred segments),attenuation,1.06472004722745,0.850381489280835,1.33677300561589,2000,waveica,WaveICA
+1,biological_group,winn_fixed_no_qc,WiNN,pearson,0.227300070781657,0.0528872506960836,0.377926994089739,2000,waveica,WaveICA
+1,biological_group,winn_fixed_no_qc,WiNN,spearman,0.224311911884786,0.113623651486141,0.3236817118828,2000,waveica,WaveICA
+1,biological_group,winn_fixed_no_qc,WiNN,sign_concordance,0.569824794923386,0.532100294072125,0.605018572976319,2000,waveica,WaveICA
+1,biological_group,winn_fixed_no_qc,WiNN,attenuation,1.08463555475141,0.876531855858167,1.34231759705489,2000,waveica,WaveICA
+2,biological_group,raw,Raw,pearson,0.174162933010697,-0.00458502485927067,0.342318090370266,2000,waveica,WaveICA
+2,biological_group,raw,Raw,spearman,0.170270948006591,0.0258554914547441,0.299599126876501,2000,waveica,WaveICA
+2,biological_group,raw,Raw,sign_concordance,0.554578238662746,0.504565856678533,0.603621730382294,2000,waveica,WaveICA
+2,biological_group,raw,Raw,attenuation,1.0987721183534,0.846945291120042,1.43614289116174,2000,waveica,WaveICA
+2,biological_group,combat,ComBat,pearson,0.216082914227679,0.00345217335682986,0.400296757950044,2000,waveica,WaveICA
+2,biological_group,combat,ComBat,spearman,0.175913618329898,0.0267101497354106,0.3108102044552,2000,waveica,WaveICA
+2,biological_group,combat,ComBat,sign_concordance,0.556436310168705,0.506113604705154,0.604859928803591,2000,waveica,WaveICA
+2,biological_group,combat,ComBat,attenuation,1.2226097507057,0.930614633668827,1.62651778035444,2000,waveica,WaveICA
+2,biological_group,qc_rlsc,QC-RLSC,pearson,0.189365589907115,0.0106967072121125,0.348509613948116,2000,waveica,WaveICA
+2,biological_group,qc_rlsc,QC-RLSC,spearman,0.177821387076867,0.0481104995156264,0.290688675742511,2000,waveica,WaveICA
+2,biological_group,qc_rlsc,QC-RLSC,sign_concordance,0.556579786410772,0.51431279987618,0.596192539854512,2000,waveica,WaveICA
+2,biological_group,qc_rlsc,QC-RLSC,attenuation,1.088392603132,0.870528992895402,1.3672451405805,2000,waveica,WaveICA
+2,biological_group,qc_rfsc,QC-RFSC,pearson,0.153110905184527,-0.0393367884920978,0.314347401306312,2000,waveica,WaveICA
+2,biological_group,qc_rfsc,QC-RFSC,spearman,0.188942429700902,0.067171296356033,0.29337840046782,2000,waveica,WaveICA
+2,biological_group,qc_rfsc,QC-RFSC,sign_concordance,0.560210880668627,0.518952174585977,0.599918743228602,2000,waveica,WaveICA
+2,biological_group,qc_rfsc,QC-RFSC,attenuation,1.17828641679919,0.940902486749652,1.47302360469335,2000,waveica,WaveICA
+2,biological_group,tiger,TIGER,pearson,0.13794432790257,0.000653436488263051,0.277541805388873,2000,waveica,WaveICA
+2,biological_group,tiger,TIGER,spearman,0.145150205882197,0.0368234585157477,0.245371366857317,2000,waveica,WaveICA
+2,biological_group,tiger,TIGER,sign_concordance,0.548594799566631,0.512923696022288,0.583044420368364,2000,waveica,WaveICA
+2,biological_group,tiger,TIGER,attenuation,1.0839653927757,0.881669654582947,1.33152861777902,2000,waveica,WaveICA
+2,biological_group,serrf,SERRF,pearson,0.137513062785088,0.00742845967058694,0.269537346766507,2000,waveica,WaveICA
+2,biological_group,serrf,SERRF,spearman,0.14901639495765,0.0412793779740248,0.246939696840275,2000,waveica,WaveICA
+2,biological_group,serrf,SERRF,sign_concordance,0.549019579012537,0.511066398390342,0.58319532580096,2000,waveica,WaveICA
+2,biological_group,serrf,SERRF,attenuation,1.08451209157625,0.87523088866702,1.34735867676395,2000,waveica,WaveICA
+2,biological_group,winn_auto_qc,WiNN (QC-tuned),pearson,0.197316403135292,0.00675249250848058,0.3675259595779,2000,waveica,WaveICA
+2,biological_group,winn_auto_qc,WiNN (QC-tuned),spearman,0.186712603260045,0.0535945680208634,0.304409845882251,2000,waveica,WaveICA
+2,biological_group,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.561154542640458,0.514316669246247,0.604859928803591,2000,waveica,WaveICA
+2,biological_group,winn_auto_qc,WiNN (QC-tuned),attenuation,1.08659489972446,0.873202637774397,1.35954579184996,2000,waveica,WaveICA
+2,biological_group,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.188840326417304,-0.0106772935056709,0.363451164924881,2000,waveica,WaveICA
+2,biological_group,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.178628863269467,0.0173132666494284,0.316405526678157,2000,waveica,WaveICA
+2,biological_group,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.557003327658257,0.502689212196254,0.607189289583656,2000,waveica,WaveICA
+2,biological_group,winn_auto_batch_qc,WiNN (inferred segments),attenuation,1.15014274449649,0.904244605322401,1.45437658866245,2000,waveica,WaveICA
+2,biological_group,winn_fixed_no_qc,WiNN,pearson,0.198913580779492,0.00735854804242598,0.367497487662816,2000,waveica,WaveICA
+2,biological_group,winn_fixed_no_qc,WiNN,spearman,0.187550535423331,0.0547213832660371,0.304135235691673,2000,waveica,WaveICA
+2,biological_group,winn_fixed_no_qc,WiNN,sign_concordance,0.558711577155239,0.515709642470206,0.598204612289119,2000,waveica,WaveICA
+2,biological_group,winn_fixed_no_qc,WiNN,attenuation,1.08831385061266,0.872442882509892,1.35456538029872,2000,waveica,WaveICA
+3,biological_group,raw,Raw,pearson,0.185543523637973,0.0246999178008364,0.32174089488069,2000,waveica,WaveICA
+3,biological_group,raw,Raw,spearman,0.19145373045522,0.0530456555455553,0.313683740559431,2000,waveica,WaveICA
+3,biological_group,raw,Raw,sign_concordance,0.560972991796935,0.509982974771707,0.608884073672806,2000,waveica,WaveICA
+3,biological_group,raw,Raw,attenuation,1.41326151164587,1.08774818986749,1.81018371284609,2000,waveica,WaveICA
+3,biological_group,combat,ComBat,pearson,0.233069348959409,0.0507713547270463,0.385036870572977,2000,waveica,WaveICA
+3,biological_group,combat,ComBat,spearman,0.19775864020482,0.0566921962780839,0.323362222993637,2000,waveica,WaveICA
+3,biological_group,combat,ComBat,sign_concordance,0.562416963318372,0.511979569726049,0.609038848475468,2000,waveica,WaveICA
+3,biological_group,combat,ComBat,attenuation,1.40946632902796,1.08117072359901,1.84089232322585,2000,waveica,WaveICA
+3,biological_group,qc_rlsc,QC-RLSC,pearson,0.200221121173249,0.0464213844289021,0.3356027240665,2000,waveica,WaveICA
+3,biological_group,qc_rlsc,QC-RLSC,spearman,0.202193034181262,0.0885367094377398,0.300976103174857,2000,waveica,WaveICA
+3,biological_group,qc_rlsc,QC-RLSC,sign_concordance,0.564991177836248,0.526230459681164,0.601303977712428,2000,waveica,WaveICA
+3,biological_group,qc_rlsc,QC-RLSC,attenuation,1.4023228417737,1.12802661261312,1.71175720382067,2000,waveica,WaveICA
+3,biological_group,qc_rfsc,QC-RFSC,pearson,0.157733441701486,0.00541028227883309,0.295061908961917,2000,waveica,WaveICA
+3,biological_group,qc_rfsc,QC-RFSC,spearman,0.208346999855598,0.10396345278903,0.304638219165519,2000,waveica,WaveICA
+3,biological_group,qc_rfsc,QC-RFSC,sign_concordance,0.568905277820771,0.530552546045504,0.606721095805603,2000,waveica,WaveICA
+3,biological_group,qc_rfsc,QC-RFSC,attenuation,1.32839415145855,1.06384547936994,1.62521850452523,2000,waveica,WaveICA
+3,biological_group,tiger,TIGER,pearson,0.151365460726144,0.0204788566118027,0.268454752538633,2000,waveica,WaveICA
+3,biological_group,tiger,TIGER,spearman,0.1683044697934,0.0636425791483206,0.257848726204478,2000,waveica,WaveICA
+3,biological_group,tiger,TIGER,sign_concordance,0.55717149048135,0.521436310168705,0.589386317907445,2000,waveica,WaveICA
+3,biological_group,tiger,TIGER,attenuation,1.38849320484151,1.13638999804245,1.67009145402533,2000,waveica,WaveICA
+3,biological_group,serrf,SERRF,pearson,0.139972657399038,0.0252473609633033,0.246788774016317,2000,waveica,WaveICA
+3,biological_group,serrf,SERRF,spearman,0.166380239395746,0.0665203139858503,0.254929062903561,2000,waveica,WaveICA
+3,biological_group,serrf,SERRF,sign_concordance,0.555491642160656,0.5215872156013,0.587374245472837,2000,waveica,WaveICA
+3,biological_group,serrf,SERRF,attenuation,1.33683764082581,1.09005821079404,1.61192623768977,2000,waveica,WaveICA
+3,biological_group,winn_auto_qc,WiNN (QC-tuned),pearson,0.212300913129549,0.0467877906137773,0.357811428546567,2000,waveica,WaveICA
+3,biological_group,winn_auto_qc,WiNN (QC-tuned),spearman,0.212328074661056,0.0907816516072044,0.318756729036773,2000,waveica,WaveICA
+3,biological_group,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.570787029871537,0.527313883299799,0.611515245318062,2000,waveica,WaveICA
+3,biological_group,winn_auto_qc,WiNN (QC-tuned),attenuation,1.45060821454181,1.17211486311609,1.77510407295266,2000,waveica,WaveICA
+3,biological_group,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.205707687216878,0.0400594859075985,0.352758118727507,2000,waveica,WaveICA
+3,biological_group,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.205785163480761,0.0622819777485479,0.327751255552196,2000,waveica,WaveICA
+3,biological_group,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.565167156786875,0.514780993654233,0.609828199969045,2000,waveica,WaveICA
+3,biological_group,winn_auto_batch_qc,WiNN (inferred segments),attenuation,1.46335776428293,1.15515282532314,1.83278800480214,2000,waveica,WaveICA
+3,biological_group,winn_fixed_no_qc,WiNN,pearson,0.212934409746801,0.0510048247260375,0.357366003335987,2000,waveica,WaveICA
+3,biological_group,winn_fixed_no_qc,WiNN,spearman,0.212963318366475,0.0924202255199828,0.317224238868955,2000,waveica,WaveICA
+3,biological_group,winn_fixed_no_qc,WiNN,sign_concordance,0.567045116854976,0.526540009286488,0.604709023370995,2000,waveica,WaveICA
+3,biological_group,winn_fixed_no_qc,WiNN,attenuation,1.45638682495019,1.18054925181461,1.76974342707831,2000,waveica,WaveICA

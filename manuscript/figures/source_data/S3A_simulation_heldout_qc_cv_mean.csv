@@ -4,81 +4,81 @@ heldout_qc_cv_mean,12.404955532938,lower,1000,percent,,simulation,combat,ComBat,
 heldout_qc_cv_mean,11.3390164195857,lower,1000,percent,,simulation,qc_rlsc,QC-RLSC,SIM01,QC-RLSC,11.25029250900539,0.19914204314012643
 heldout_qc_cv_mean,9.77944159674684,lower,1000,percent,,simulation,tiger,TIGER,SIM01,TIGER,9.525527084208903,0.1846396973111994
 heldout_qc_cv_mean,12.495344300561,lower,1000,percent,,simulation,serrf,SERRF,SIM01,SERRF,12.60984744908386,0.17163955178065077
-heldout_qc_cv_mean,8.45986081858991,lower,1000,percent,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM01,WiNN (QC-tuned),8.414460422608993,0.058912134872008186
-heldout_qc_cv_mean,15.7359616350191,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM01,WiNN (inferred segments),14.08106717480257,0.6591021606091811
-heldout_qc_cv_mean,8.43198165168273,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN,SIM01,WiNN,8.41494624052402,0.05668382698821019
+heldout_qc_cv_mean,8.77324507329338,lower,1000,percent,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM01,WiNN (QC-tuned),8.792330575795932,0.046656976298665456
+heldout_qc_cv_mean,15.7966070607371,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM01,WiNN (inferred segments),14.27697799463895,0.6334891962049088
+heldout_qc_cv_mean,8.85006472224174,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN,SIM01,WiNN,8.87611973692835,0.049341070378505776
 heldout_qc_cv_mean,46.0458554803273,lower,1000,percent,,simulation,raw,Raw,SIM02,Raw,44.54995227584848,0.28469317456554777
 heldout_qc_cv_mean,12.8587769260744,lower,1000,percent,,simulation,combat,ComBat,SIM02,ComBat,12.552271727652,0.1585170266385854
 heldout_qc_cv_mean,12.7286285306739,lower,1000,percent,,simulation,qc_rlsc,QC-RLSC,SIM02,QC-RLSC,11.25029250900539,0.19914204314012643
 heldout_qc_cv_mean,10.397952597894,lower,1000,percent,,simulation,tiger,TIGER,SIM02,TIGER,9.525527084208903,0.1846396973111994
 heldout_qc_cv_mean,13.0409237364573,lower,1000,percent,,simulation,serrf,SERRF,SIM02,SERRF,12.60984744908386,0.17163955178065077
-heldout_qc_cv_mean,8.8130339588927,lower,1000,percent,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM02,WiNN (QC-tuned),8.414460422608993,0.058912134872008186
-heldout_qc_cv_mean,15.4082223955084,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM02,WiNN (inferred segments),14.08106717480257,0.6591021606091811
-heldout_qc_cv_mean,8.76123025874983,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN,SIM02,WiNN,8.41494624052402,0.05668382698821019
+heldout_qc_cv_mean,9.10094567411606,lower,1000,percent,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM02,WiNN (QC-tuned),8.792330575795932,0.046656976298665456
+heldout_qc_cv_mean,15.4076601993447,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM02,WiNN (inferred segments),14.27697799463895,0.6334891962049088
+heldout_qc_cv_mean,9.18828744981703,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN,SIM02,WiNN,8.87611973692835,0.049341070378505776
 heldout_qc_cv_mean,45.3978250493888,lower,1000,percent,,simulation,raw,Raw,SIM03,Raw,44.54995227584848,0.28469317456554777
 heldout_qc_cv_mean,13.0099848734501,lower,1000,percent,,simulation,combat,ComBat,SIM03,ComBat,12.552271727652,0.1585170266385854
 heldout_qc_cv_mean,10.8854662369357,lower,1000,percent,,simulation,qc_rlsc,QC-RLSC,SIM03,QC-RLSC,11.25029250900539,0.19914204314012643
 heldout_qc_cv_mean,9.59791108356221,lower,1000,percent,,simulation,tiger,TIGER,SIM03,TIGER,9.525527084208903,0.1846396973111994
 heldout_qc_cv_mean,13.0404393713486,lower,1000,percent,,simulation,serrf,SERRF,SIM03,SERRF,12.60984744908386,0.17163955178065077
-heldout_qc_cv_mean,8.34542031043527,lower,1000,percent,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM03,WiNN (QC-tuned),8.414460422608993,0.058912134872008186
-heldout_qc_cv_mean,15.6434416683636,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM03,WiNN (inferred segments),14.08106717480257,0.6591021606091811
-heldout_qc_cv_mean,8.39628618177895,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN,SIM03,WiNN,8.41494624052402,0.05668382698821019
+heldout_qc_cv_mean,8.73258833746431,lower,1000,percent,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM03,WiNN (QC-tuned),8.792330575795932,0.046656976298665456
+heldout_qc_cv_mean,15.7184357352293,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM03,WiNN (inferred segments),14.27697799463895,0.6334891962049088
+heldout_qc_cv_mean,8.84748215007376,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN,SIM03,WiNN,8.87611973692835,0.049341070378505776
 heldout_qc_cv_mean,44.4829301439678,lower,1000,percent,,simulation,raw,Raw,SIM04,Raw,44.54995227584848,0.28469317456554777
 heldout_qc_cv_mean,12.9916709746876,lower,1000,percent,,simulation,combat,ComBat,SIM04,ComBat,12.552271727652,0.1585170266385854
 heldout_qc_cv_mean,11.6809968854423,lower,1000,percent,,simulation,qc_rlsc,QC-RLSC,SIM04,QC-RLSC,11.25029250900539,0.19914204314012643
 heldout_qc_cv_mean,10.0031343596027,lower,1000,percent,,simulation,tiger,TIGER,SIM04,TIGER,9.525527084208903,0.1846396973111994
 heldout_qc_cv_mean,12.7087527186891,lower,1000,percent,,simulation,serrf,SERRF,SIM04,SERRF,12.60984744908386,0.17163955178065077
-heldout_qc_cv_mean,8.42109143000472,lower,1000,percent,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM04,WiNN (QC-tuned),8.414460422608993,0.058912134872008186
-heldout_qc_cv_mean,11.1606288506553,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM04,WiNN (inferred segments),14.08106717480257,0.6591021606091811
-heldout_qc_cv_mean,8.51133237921787,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN,SIM04,WiNN,8.41494624052402,0.05668382698821019
+heldout_qc_cv_mean,8.79990072944367,lower,1000,percent,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM04,WiNN (QC-tuned),8.792330575795932,0.046656976298665456
+heldout_qc_cv_mean,11.2300338987553,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM04,WiNN (inferred segments),14.27697799463895,0.6334891962049088
+heldout_qc_cv_mean,8.8951403726983,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN,SIM04,WiNN,8.87611973692835,0.049341070378505776
 heldout_qc_cv_mean,43.6862535911735,lower,1000,percent,,simulation,raw,Raw,SIM05,Raw,44.54995227584848,0.28469317456554777
 heldout_qc_cv_mean,11.92085090388,lower,1000,percent,,simulation,combat,ComBat,SIM05,ComBat,12.552271727652,0.1585170266385854
 heldout_qc_cv_mean,10.6716288444473,lower,1000,percent,,simulation,qc_rlsc,QC-RLSC,SIM05,QC-RLSC,11.25029250900539,0.19914204314012643
 heldout_qc_cv_mean,8.87914165112623,lower,1000,percent,,simulation,tiger,TIGER,SIM05,TIGER,9.525527084208903,0.1846396973111994
 heldout_qc_cv_mean,11.8581349303357,lower,1000,percent,,simulation,serrf,SERRF,SIM05,SERRF,12.60984744908386,0.17163955178065077
-heldout_qc_cv_mean,8.14355647649173,lower,1000,percent,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM05,WiNN (QC-tuned),8.414460422608993,0.058912134872008186
-heldout_qc_cv_mean,10.3679288098029,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM05,WiNN (inferred segments),14.08106717480257,0.6591021606091811
-heldout_qc_cv_mean,8.2004454654158,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN,SIM05,WiNN,8.41494624052402,0.05668382698821019
+heldout_qc_cv_mean,8.65892989636289,lower,1000,percent,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM05,WiNN (QC-tuned),8.792330575795932,0.046656976298665456
+heldout_qc_cv_mean,10.900666703141,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM05,WiNN (inferred segments),14.27697799463895,0.6334891962049088
+heldout_qc_cv_mean,8.74498692450937,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN,SIM05,WiNN,8.87611973692835,0.049341070378505776
 heldout_qc_cv_mean,45.4455913430314,lower,1000,percent,,simulation,raw,Raw,SIM06,Raw,44.54995227584848,0.28469317456554777
 heldout_qc_cv_mean,12.8952172294557,lower,1000,percent,,simulation,combat,ComBat,SIM06,ComBat,12.552271727652,0.1585170266385854
 heldout_qc_cv_mean,10.8726259102405,lower,1000,percent,,simulation,qc_rlsc,QC-RLSC,SIM06,QC-RLSC,11.25029250900539,0.19914204314012643
 heldout_qc_cv_mean,9.12950458948082,lower,1000,percent,,simulation,tiger,TIGER,SIM06,TIGER,9.525527084208903,0.1846396973111994
 heldout_qc_cv_mean,12.8488710941019,lower,1000,percent,,simulation,serrf,SERRF,SIM06,SERRF,12.60984744908386,0.17163955178065077
-heldout_qc_cv_mean,8.43885762992211,lower,1000,percent,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM06,WiNN (QC-tuned),8.414460422608993,0.058912134872008186
-heldout_qc_cv_mean,16.5314649218742,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM06,WiNN (inferred segments),14.08106717480257,0.6591021606091811
-heldout_qc_cv_mean,8.40228644471579,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN,SIM06,WiNN,8.41494624052402,0.05668382698821019
+heldout_qc_cv_mean,8.82480753056561,lower,1000,percent,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM06,WiNN (QC-tuned),8.792330575795932,0.046656976298665456
+heldout_qc_cv_mean,16.5847043536499,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM06,WiNN (inferred segments),14.27697799463895,0.6334891962049088
+heldout_qc_cv_mean,8.89512998182514,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN,SIM06,WiNN,8.87611973692835,0.049341070378505776
 heldout_qc_cv_mean,43.3237040927998,lower,1000,percent,,simulation,raw,Raw,SIM07,Raw,44.54995227584848,0.28469317456554777
 heldout_qc_cv_mean,11.7840832213615,lower,1000,percent,,simulation,combat,ComBat,SIM07,ComBat,12.552271727652,0.1585170266385854
 heldout_qc_cv_mean,11.2190861584307,lower,1000,percent,,simulation,qc_rlsc,QC-RLSC,SIM07,QC-RLSC,11.25029250900539,0.19914204314012643
 heldout_qc_cv_mean,9.49457510683067,lower,1000,percent,,simulation,tiger,TIGER,SIM07,TIGER,9.525527084208903,0.1846396973111994
 heldout_qc_cv_mean,12.1704309539012,lower,1000,percent,,simulation,serrf,SERRF,SIM07,SERRF,12.60984744908386,0.17163955178065077
-heldout_qc_cv_mean,8.34709723583897,lower,1000,percent,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM07,WiNN (QC-tuned),8.414460422608993,0.058912134872008186
-heldout_qc_cv_mean,13.8845361551276,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM07,WiNN (inferred segments),14.08106717480257,0.6591021606091811
-heldout_qc_cv_mean,8.34469650694875,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN,SIM07,WiNN,8.41494624052402,0.05668382698821019
+heldout_qc_cv_mean,8.73297225452008,lower,1000,percent,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM07,WiNN (QC-tuned),8.792330575795932,0.046656976298665456
+heldout_qc_cv_mean,14.1144009037403,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM07,WiNN (inferred segments),14.27697799463895,0.6334891962049088
+heldout_qc_cv_mean,8.78336510332471,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN,SIM07,WiNN,8.87611973692835,0.049341070378505776
 heldout_qc_cv_mean,44.7497650511745,lower,1000,percent,,simulation,raw,Raw,SIM08,Raw,44.54995227584848,0.28469317456554777
 heldout_qc_cv_mean,11.9061588656452,lower,1000,percent,,simulation,combat,ComBat,SIM08,ComBat,12.552271727652,0.1585170266385854
 heldout_qc_cv_mean,10.4999131624941,lower,1000,percent,,simulation,qc_rlsc,QC-RLSC,SIM08,QC-RLSC,11.25029250900539,0.19914204314012643
 heldout_qc_cv_mean,8.3970204233217,lower,1000,percent,,simulation,tiger,TIGER,SIM08,TIGER,9.525527084208903,0.1846396973111994
 heldout_qc_cv_mean,11.6664082856115,lower,1000,percent,,simulation,serrf,SERRF,SIM08,SERRF,12.60984744908386,0.17163955178065077
-heldout_qc_cv_mean,8.2227611767821,lower,1000,percent,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM08,WiNN (QC-tuned),8.414460422608993,0.058912134872008186
-heldout_qc_cv_mean,12.6313973853372,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM08,WiNN (inferred segments),14.08106717480257,0.6591021606091811
-heldout_qc_cv_mean,8.18216532065597,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN,SIM08,WiNN,8.41494624052402,0.05668382698821019
+heldout_qc_cv_mean,8.61402690798377,lower,1000,percent,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM08,WiNN (QC-tuned),8.792330575795932,0.046656976298665456
+heldout_qc_cv_mean,12.6488849453904,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM08,WiNN (inferred segments),14.27697799463895,0.6334891962049088
+heldout_qc_cv_mean,8.67092846231084,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN,SIM08,WiNN,8.87611973692835,0.049341070378505776
 heldout_qc_cv_mean,44.6627755388353,lower,1000,percent,,simulation,raw,Raw,SIM09,Raw,44.54995227584848,0.28469317456554777
 heldout_qc_cv_mean,12.8033174849817,lower,1000,percent,,simulation,combat,ComBat,SIM09,ComBat,12.552271727652,0.1585170266385854
 heldout_qc_cv_mean,11.3741576870574,lower,1000,percent,,simulation,qc_rlsc,QC-RLSC,SIM09,QC-RLSC,11.25029250900539,0.19914204314012643
 heldout_qc_cv_mean,9.6832002731165,lower,1000,percent,,simulation,tiger,TIGER,SIM09,TIGER,9.525527084208903,0.1846396973111994
 heldout_qc_cv_mean,13.1099223455663,lower,1000,percent,,simulation,serrf,SERRF,SIM09,SERRF,12.60984744908386,0.17163955178065077
-heldout_qc_cv_mean,8.58524193509833,lower,1000,percent,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM09,WiNN (QC-tuned),8.414460422608993,0.058912134872008186
-heldout_qc_cv_mean,15.3830335981864,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM09,WiNN (inferred segments),14.08106717480257,0.6591021606091811
-heldout_qc_cv_mean,8.61773957050885,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN,SIM09,WiNN,8.41494624052402,0.05668382698821019
+heldout_qc_cv_mean,8.97968339720477,lower,1000,percent,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM09,WiNN (QC-tuned),8.792330575795932,0.046656976298665456
+heldout_qc_cv_mean,15.4292558158069,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM09,WiNN (inferred segments),14.27697799463895,0.6334891962049088
+heldout_qc_cv_mean,9.08887587134448,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN,SIM09,WiNN,8.87611973692835,0.049341070378505776
 heldout_qc_cv_mean,43.4947793580392,lower,1000,percent,,simulation,raw,Raw,SIM10,Raw,44.54995227584848,0.28469317456554777
 heldout_qc_cv_mean,12.9477012640458,lower,1000,percent,,simulation,combat,ComBat,SIM10,ComBat,12.552271727652,0.1585170266385854
 heldout_qc_cv_mean,11.2314052547463,lower,1000,percent,,simulation,qc_rlsc,QC-RLSC,SIM10,QC-RLSC,11.25029250900539,0.19914204314012643
 heldout_qc_cv_mean,9.89338916040737,lower,1000,percent,,simulation,tiger,TIGER,SIM10,TIGER,9.525527084208903,0.1846396973111994
 heldout_qc_cv_mean,13.159246754266,lower,1000,percent,,simulation,serrf,SERRF,SIM10,SERRF,12.60984744908386,0.17163955178065077
-heldout_qc_cv_mean,8.3676832540341,lower,1000,percent,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM10,WiNN (QC-tuned),8.414460422608993,0.058912134872008186
-heldout_qc_cv_mean,14.064056328151,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM10,WiNN (inferred segments),14.08106717480257,0.6591021606091811
-heldout_qc_cv_mean,8.30129862556567,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN,SIM10,WiNN,8.41494624052402,0.05668382698821019
+heldout_qc_cv_mean,8.70620595700477,lower,1000,percent,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM10,WiNN (QC-tuned),8.792330575795932,0.046656976298665456
+heldout_qc_cv_mean,14.9391303305946,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM10,WiNN (inferred segments),14.27697799463895,0.6334891962049088
+heldout_qc_cv_mean,8.79693633113814,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN,SIM10,WiNN,8.87611973692835,0.049341070378505776
 heldout_qc_cv_mean,14.7280131359941,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM01,QC-RFSC,15.91619282340851,1.9785796275920546
 heldout_qc_cv_mean,32.0168289753813,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM02,QC-RFSC,15.91619282340851,1.9785796275920546
 heldout_qc_cv_mean,19.0850132446883,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM03,QC-RFSC,15.91619282340851,1.9785796275920546

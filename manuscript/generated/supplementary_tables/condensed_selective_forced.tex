@@ -1,6 +1,6 @@
 \footnotesize
 \begin{longtable}{llrrrr}
-\caption{Selective versus forced correction. Each policy changes one gate of the WiNN workflow: forced drift detrends every testable feature-segment profile, forced batch adjusts every eligible feature, and MAD preparation and PQN remain active. Technical rows use one prespecified representative simulation seed and the empirical point estimates; ground-truth rows are means over ten simulation seeds, in which the selective policy was best for every endpoint in every seed. Lower values are favorable for CV, drift, batch $R^2$ and RMSE.}\label{tab:supp_selective_forced}\\
+\caption{Selective versus forced correction. Each policy changes one gate of the WiNN workflow: forced drift detrends every testable feature-segment profile, forced batch adjusts every eligible feature, and MAD preparation and PQN remain active. Technical rows use one prespecified representative simulation seed and the empirical point estimates; ground-truth rows are means over ten simulation seeds. Lower values are favorable for CV, drift, batch $R^2$ and RMSE.}\label{tab:supp_selective_forced}\\
 \toprule
 Dataset & Endpoint & Selective & Forced drift & Forced batch & Forced both \\
 \midrule
@@ -15,31 +15,31 @@ Dataset & Endpoint & Selective & Forced drift & Forced batch & Forced both \\
 \endfoot
 \bottomrule
 \endlastfoot
-Simulation (seed 1) & Held-out QC CV (\%) & 8.43 & 8.96 & 8.80 & 9.15 \\
- & Residual drift deviance & 0.0210 & 0.0041 & 0.0209 & 0.0041 \\
+Simulation (seed 1) & Held-out QC CV (\%) & 8.85 & 8.96 & 9.23 & 9.15 \\
+ & Residual drift deviance & 0.0316 & 0.0041 & 0.0316 & 0.0041 \\
  & Batch $R^2$ & 0.0010 & 0.0011 & 0.0001 & 0.0001 \\
 \midrule
-MTBLS79 & Held-out QC CV (\%) & 16.68 & 17.75 & 15.98 & 17.17 \\
- & Residual drift deviance & 0.1403 & 0.0859 & 0.1402 & 0.0858 \\
+MTBLS79 & Held-out QC CV (\%) & 16.69 & 17.75 & 15.98 & 17.17 \\
+ & Residual drift deviance & 0.1408 & 0.0859 & 0.1406 & 0.0858 \\
  & Batch $R^2$ & 0.0109 & 0.0089 & 0.0107 & 0.0081 \\
 \midrule
-Clinical FIA-MS & Held-out QC CV (\%) & 12.29 & 12.75 & 12.28 & 12.74 \\
- & Residual drift deviance & 0.0757 & 0.0267 & 0.0757 & 0.0267 \\
- & Batch $R^2$ & 0.0021 & 0.0011 & 0.0020 & 0.0011 \\
+Clinical FIA-MS & Held-out QC CV (\%) & 12.03 & 12.75 & 12.02 & 12.74 \\
+ & Residual drift deviance & 0.0934 & 0.0267 & 0.0934 & 0.0267 \\
+ & Batch $R^2$ & 0.0022 & 0.0011 & 0.0021 & 0.0011 \\
 \midrule
-BatchCorr Set 1 & Held-out QC CV (\%) & 26.87 & 26.77 & 27.00 & 26.89 \\
- & Residual drift deviance & 0.0443 & 0.0071 & 0.0443 & 0.0071 \\
- & Batch $R^2$ & 0.0006 & 0.0006 & 0.0005 & 0.0006 \\
+BatchCorr Set 1 & Held-out QC CV (\%) & 27.30 & 26.77 & 27.35 & 26.89 \\
+ & Residual drift deviance & 0.0554 & 0.0071 & 0.0554 & 0.0071 \\
+ & Batch $R^2$ & 0.0006 & 0.0006 & 0.0006 & 0.0006 \\
 \midrule
-Sacurine & Held-out QC CV (\%) & 22.28 & 19.09 & 21.71 & 18.32 \\
- & Residual drift deviance & 0.0512 & 0.0129 & 0.0517 & 0.0126 \\
- & Batch $R^2$ & 0.0006 & 0.0004 & 0.0003 & 0.0002 \\
+Sacurine & Held-out QC CV (\%) & 22.77 & 19.09 & 22.10 & 18.32 \\
+ & Residual drift deviance & 0.0675 & 0.0129 & 0.0667 & 0.0126 \\
+ & Batch $R^2$ & 0.0007 & 0.0004 & 0.0004 & 0.0002 \\
 \midrule
-WaveICA & Held-out QC CV (\%) & 37.65 & 37.72 & 37.64 & 37.72 \\
- & Residual drift deviance & 0.0157 & 0.0045 & 0.0157 & 0.0045 \\
- & Batch $R^2$ & 0.0026 & 0.0023 & 0.0025 & 0.0023 \\
+WaveICA & Held-out QC CV (\%) & 37.45 & 37.72 & 37.45 & 37.72 \\
+ & Residual drift deviance & 0.0417 & 0.0045 & 0.0417 & 0.0045 \\
+ & Batch $R^2$ & 0.0028 & 0.0023 & 0.0028 & 0.0023 \\
 \midrule
-Simulation (ten seeds) & Ground-truth RMSE & 0.0722 & 0.0726 & 0.0726 & 0.0730 \\
- & Feature ICC(A,1) & 0.9231 & 0.9214 & 0.9221 & 0.9204 \\
- & Sample correlation & 0.9247 & 0.9232 & 0.9238 & 0.9222 \\
+Simulation (ten seeds) & Ground-truth RMSE & 0.0744 & 0.0726 & 0.0748 & 0.0730 \\
+ & Feature ICC(A,1) & 0.9186 & 0.9214 & 0.9177 & 0.9204 \\
+ & Sample correlation & 0.9199 & 0.9232 & 0.9189 & 0.9222 \\
 \end{longtable}

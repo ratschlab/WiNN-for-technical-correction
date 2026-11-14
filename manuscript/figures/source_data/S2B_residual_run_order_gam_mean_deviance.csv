@@ -1,25 +1,25 @@
 dataset_key,dataset,method_id,method,metric,value,direction,denominator,units,gate_label,dataset_short
-simulation,Simulation,G_SS,selective/selective,residual_run_order_gam_mean_deviance,0.0209534837670856,lower,5000,proportion,Selective / selective,Simulation
+simulation,Simulation,G_SS,selective/selective,residual_run_order_gam_mean_deviance,0.0315901862190976,lower,5000,proportion,Selective / selective,Simulation
 simulation,Simulation,G_AS,all/selective,residual_run_order_gam_mean_deviance,0.00414504651443451,lower,5000,proportion,Forced drift,Simulation
-simulation,Simulation,G_SA,selective/all,residual_run_order_gam_mean_deviance,0.0209470011910822,lower,5000,proportion,Forced batch,Simulation
+simulation,Simulation,G_SA,selective/all,residual_run_order_gam_mean_deviance,0.0315711449833521,lower,5000,proportion,Forced batch,Simulation
 simulation,Simulation,G_AA,all/all,residual_run_order_gam_mean_deviance,0.00413156167497473,lower,5000,proportion,Forced drift + batch,Simulation
-mtbls79,MTBLS79,G_SS,selective/selective,residual_run_order_gam_mean_deviance,0.140339001542225,lower,19904,proportion,Selective / selective,MTBLS79
+mtbls79,MTBLS79,G_SS,selective/selective,residual_run_order_gam_mean_deviance,0.140817160520405,lower,19904,proportion,Selective / selective,MTBLS79
 mtbls79,MTBLS79,G_AS,all/selective,residual_run_order_gam_mean_deviance,0.0859276871272637,lower,19904,proportion,Forced drift,MTBLS79
-mtbls79,MTBLS79,G_SA,selective/all,residual_run_order_gam_mean_deviance,0.14016363370295,lower,19904,proportion,Forced batch,MTBLS79
+mtbls79,MTBLS79,G_SA,selective/all,residual_run_order_gam_mean_deviance,0.14063039549499,lower,19904,proportion,Forced batch,MTBLS79
 mtbls79,MTBLS79,G_AA,all/all,residual_run_order_gam_mean_deviance,0.0857924739947714,lower,19904,proportion,Forced drift + batch,MTBLS79
-clinical_fiams,Clinical FIA-MS,G_SS,selective/selective,residual_run_order_gam_mean_deviance,0.0757278401912235,lower,12752,proportion,Selective / selective,Clinical
+clinical_fiams,Clinical FIA-MS,G_SS,selective/selective,residual_run_order_gam_mean_deviance,0.0934350583156554,lower,12752,proportion,Selective / selective,Clinical
 clinical_fiams,Clinical FIA-MS,G_AS,all/selective,residual_run_order_gam_mean_deviance,0.0266526322242477,lower,12752,proportion,Forced drift,Clinical
-clinical_fiams,Clinical FIA-MS,G_SA,selective/all,residual_run_order_gam_mean_deviance,0.0757037514934107,lower,12752,proportion,Forced batch,Clinical
+clinical_fiams,Clinical FIA-MS,G_SA,selective/all,residual_run_order_gam_mean_deviance,0.0934447443494708,lower,12752,proportion,Forced batch,Clinical
 clinical_fiams,Clinical FIA-MS,G_AA,all/all,residual_run_order_gam_mean_deviance,0.0266660926221512,lower,12752,proportion,Forced drift + batch,Clinical
-batchcorr_set1,BatchCorr Set 1,G_SS,selective/selective,residual_run_order_gam_mean_deviance,0.044295687835247,lower,1990,proportion,Selective / selective,BatchCorr
+batchcorr_set1,BatchCorr Set 1,G_SS,selective/selective,residual_run_order_gam_mean_deviance,0.0554297967909436,lower,1990,proportion,Selective / selective,BatchCorr
 batchcorr_set1,BatchCorr Set 1,G_AS,all/selective,residual_run_order_gam_mean_deviance,0.0070839580539846,lower,1990,proportion,Forced drift,BatchCorr
-batchcorr_set1,BatchCorr Set 1,G_SA,selective/all,residual_run_order_gam_mean_deviance,0.0442596572880987,lower,1990,proportion,Forced batch,BatchCorr
+batchcorr_set1,BatchCorr Set 1,G_SA,selective/all,residual_run_order_gam_mean_deviance,0.0553844148662798,lower,1990,proportion,Forced batch,BatchCorr
 batchcorr_set1,BatchCorr Set 1,G_AA,all/all,residual_run_order_gam_mean_deviance,0.00708290650901515,lower,1990,proportion,Forced drift + batch,BatchCorr
-sacurine,Sacurine,G_SS,selective/selective,residual_run_order_gam_mean_deviance,0.051160470193612,lower,226,proportion,Selective / selective,Sacurine
+sacurine,Sacurine,G_SS,selective/selective,residual_run_order_gam_mean_deviance,0.0674877241464781,lower,226,proportion,Selective / selective,Sacurine
 sacurine,Sacurine,G_AS,all/selective,residual_run_order_gam_mean_deviance,0.0128885491890612,lower,226,proportion,Forced drift,Sacurine
-sacurine,Sacurine,G_SA,selective/all,residual_run_order_gam_mean_deviance,0.0517372979338822,lower,226,proportion,Forced batch,Sacurine
+sacurine,Sacurine,G_SA,selective/all,residual_run_order_gam_mean_deviance,0.0667482277272601,lower,226,proportion,Forced batch,Sacurine
 sacurine,Sacurine,G_AA,all/all,residual_run_order_gam_mean_deviance,0.0126215648914522,lower,226,proportion,Forced drift + batch,Sacurine
-waveica,WaveICA,G_SS,selective/selective,residual_run_order_gam_mean_deviance,0.0157259577250271,lower,19383,proportion,Selective / selective,WaveICA
+waveica,WaveICA,G_SS,selective/selective,residual_run_order_gam_mean_deviance,0.0417398377582608,lower,19383,proportion,Selective / selective,WaveICA
 waveica,WaveICA,G_AS,all/selective,residual_run_order_gam_mean_deviance,0.0044536493671809,lower,19383,proportion,Forced drift,WaveICA
-waveica,WaveICA,G_SA,selective/all,residual_run_order_gam_mean_deviance,0.0157262632793206,lower,19383,proportion,Forced batch,WaveICA
+waveica,WaveICA,G_SA,selective/all,residual_run_order_gam_mean_deviance,0.041741010965969,lower,19383,proportion,Forced batch,WaveICA
 waveica,WaveICA,G_AA,all/all,residual_run_order_gam_mean_deviance,0.00445583098678426,lower,19383,proportion,Forced drift + batch,WaveICA

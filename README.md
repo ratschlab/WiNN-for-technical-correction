@@ -12,7 +12,7 @@ The Ljung–Box statistic is unchanged. Its default selection rule now uses 999 
 
 The rerun covers the same 480 task bundles and all affected downstream analyses, including 2,000-draw bootstrap estimates, 5,000-permutation biological checks, reference splits, ablations, partial confounding, query-weighted sample matching and paired feature effects. See [`analysis/config/calibration_revision/README.md`](analysis/config/calibration_revision/README.md) for the execution order, unchanged comparator checks and source provenance. Fixed-segment error control requires joint exchangeability of the true-null profiles; it does not automatically extend to data-driven segmentation or QC-guided tuning.
 
-The current supplementary aggregate inputs are in `results/final/revision_inputs/supplement_20261114/`; public derivative inputs are in `results/final/revision_inputs/derivative_20261114/`. The independent drift-gate validation and its unchanged preparation controls are documented in `manuscript/scripts/calibration_revision/README.md`. The complete rerun protocol is in `analysis/config/calibration_revision/README.md`.
+The current supplementary aggregate inputs are in `results/final/revision_inputs/supplement_20261114/`; public derivative inputs are in `results/final/revision_inputs/derivative_20261114/`. The code and result inputs are fixed at analysis commit [`3794b8408070950cd59c0eed9fe207c6c8fbb5f6`](https://github.com/ratschlab/WiNN-for-technical-correction/tree/3794b8408070950cd59c0eed9fe207c6c8fbb5f6); the subsequent publication commit adds the matching manuscript, final figure/table generators and publication checks. The independent drift-gate validation and its unchanged preparation controls are documented in `manuscript/scripts/calibration_revision/README.md`. The complete rerun protocol is in `analysis/config/calibration_revision/README.md`.
 
 The previous release notes below document the historical smoother repair and its validation. They do not describe the new drift calibration.
 
@@ -134,7 +134,7 @@ The current aggregate inputs for supplementary tables are supplied as compressed
 make tables
 ```
 
-The printed supplement condenses 31 detailed tables into 13 (`manuscript/scripts/condense_supplementary_tables.py`); the detailed tables remain as source data. The mapping between published and detailed tables and the exact commands are in [`manuscript/generated/supplementary_table_data/README.md`](manuscript/generated/supplementary_table_data/README.md). An isolated regeneration from these inputs reproduced all 32 TeX tables byte for byte and all 24 CSV tables row for row (`analysis/config/revision_20261111/table_reproduction_checks.csv`).
+The printed supplement condenses 31 detailed tables into 13 (`manuscript/scripts/condense_supplementary_tables.py`); the detailed tables remain as source data. The mapping between published and detailed tables and the exact commands are in [`manuscript/generated/supplementary_table_data/README.md`](manuscript/generated/supplementary_table_data/README.md). An isolated replay deleted and regenerated 29 TeX outputs byte for byte and 19 CSV outputs row for row; eight static or staged inputs were checked separately. All 56 checks passed (`analysis/config/calibration_revision/table_reproduction_checks.csv`).
 
 ## Verify and render the publication bundle
 

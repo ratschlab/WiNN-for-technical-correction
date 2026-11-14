@@ -119,78 +119,78 @@ heldout_batch,endpoint,method_id,method,metric,bootstrap_mean,ci_lower,ci_upper,
 8,cow_vs_sheep,serrf,SERRF,pearson,0.964183159089035,0.944585825375122,0.975697528032235,2000,mtbls79,MTBLS79
 8,cow_vs_sheep,serrf,SERRF,spearman,0.916160862548743,0.87778039344787,0.940899124264708,2000,mtbls79,MTBLS79
 8,cow_vs_sheep,serrf,SERRF,sign_concordance,0.85434786977492,0.817112138263666,0.885450160771704,2000,mtbls79,MTBLS79
-1,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),pearson,0.970698419223203,0.95181573575255,0.982056087401548,2000,mtbls79,MTBLS79
-1,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),spearman,0.921522738225362,0.877990695705027,0.948856458688535,2000,mtbls79,MTBLS79
-1,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.856452371382637,0.809083601286174,0.898311897106109,2000,mtbls79,MTBLS79
-2,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),pearson,0.972528354511728,0.950161444054795,0.983111046727775,2000,mtbls79,MTBLS79
-2,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),spearman,0.925177863340614,0.884002347247978,0.951700386821497,2000,mtbls79,MTBLS79
-2,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.861225080385852,0.818327974276527,0.89591036977492,2000,mtbls79,MTBLS79
-3,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),pearson,0.966599826200041,0.951507700684964,0.97698918627722,2000,mtbls79,MTBLS79
-3,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),spearman,0.916525620788673,0.881421725760401,0.940388047161368,2000,mtbls79,MTBLS79
-3,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.859630225080386,0.817524115755627,0.891881028938907,2000,mtbls79,MTBLS79
-4,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),pearson,0.967075625250204,0.945422140119473,0.978848677663849,2000,mtbls79,MTBLS79
-4,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),spearman,0.918436531479767,0.867838014568139,0.94553178402177,2000,mtbls79,MTBLS79
-4,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.856024919614148,0.803838424437299,0.891881028938907,2000,mtbls79,MTBLS79
-5,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),pearson,0.953786787795165,0.91653950661505,0.973194207808042,2000,mtbls79,MTBLS79
-5,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),spearman,0.901034181809594,0.85044770678339,0.935384192341041,2000,mtbls79,MTBLS79
-5,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.847648110932476,0.808269694533762,0.882234726688103,2000,mtbls79,MTBLS79
-6,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),pearson,0.952860883482653,0.904579203422819,0.974052903538937,2000,mtbls79,MTBLS79
-6,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),spearman,0.901451786803051,0.83807107791841,0.937925890398307,2000,mtbls79,MTBLS79
-6,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.846722266881029,0.802250803858521,0.887057877813505,2000,mtbls79,MTBLS79
-7,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),pearson,0.954694808921953,0.927715541341138,0.969927849562565,2000,mtbls79,MTBLS79
-7,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),spearman,0.891579289309469,0.840936000357519,0.925772939875561,2000,mtbls79,MTBLS79
-7,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.835030546623794,0.794202170418006,0.870186897106109,2000,mtbls79,MTBLS79
-8,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),pearson,0.963811464186544,0.94518859844776,0.974873991680472,2000,mtbls79,MTBLS79
-8,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),spearman,0.913213504910573,0.875698684718582,0.937517434022387,2000,mtbls79,MTBLS79
-8,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.856440112540193,0.815504421221865,0.888665594855305,2000,mtbls79,MTBLS79
-1,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.970357715976191,0.950290094093629,0.982235617123711,2000,mtbls79,MTBLS79
-1,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.920201793148192,0.875087493972427,0.948778084059585,2000,mtbls79,MTBLS79
-1,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.853612138263666,0.805456189710611,0.89671422829582,2000,mtbls79,MTBLS79
-2,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.972358412014276,0.949538987662311,0.983039335434122,2000,mtbls79,MTBLS79
-2,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.92493553415619,0.882928201101825,0.952125073368836,2000,mtbls79,MTBLS79
-2,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.860548834405145,0.816318327974277,0.895508440514469,2000,mtbls79,MTBLS79
-3,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.96642411273632,0.950894912511178,0.977057070691302,2000,mtbls79,MTBLS79
-3,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.916252081429924,0.880128014569089,0.940855604765849,2000,mtbls79,MTBLS79
-3,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.859594453376206,0.816720257234727,0.893488745980707,2000,mtbls79,MTBLS79
-4,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.965320119786398,0.942355347460692,0.978357743191101,2000,mtbls79,MTBLS79
-4,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.914898540266672,0.861795769935028,0.944139114048528,2000,mtbls79,MTBLS79
-4,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.852845056270096,0.799427250803858,0.889469453376206,2000,mtbls79,MTBLS79
-5,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.953761129720509,0.916812093422248,0.973126498561183,2000,mtbls79,MTBLS79
-5,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.900312968018832,0.847762368260287,0.934542511079173,2000,mtbls79,MTBLS79
-5,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.847148914790997,0.808269694533762,0.881832797427653,2000,mtbls79,MTBLS79
-6,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.953105038326332,0.90595053650252,0.974178075919433,2000,mtbls79,MTBLS79
-6,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.901961405126996,0.838749749203883,0.937911934944609,2000,mtbls79,MTBLS79
-6,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.845309083601286,0.80064308681672,0.884656350482315,2000,mtbls79,MTBLS79
-7,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.95140784497269,0.923625934524034,0.968535922819321,2000,mtbls79,MTBLS79
-7,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.886480658752922,0.82798249651805,0.924281368837137,2000,mtbls79,MTBLS79
-7,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.834481511254019,0.786967443729903,0.87099075562701,2000,mtbls79,MTBLS79
-8,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.963415201141128,0.945071526488459,0.974500409953253,2000,mtbls79,MTBLS79
-8,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.91220189525093,0.87344831594655,0.937304628031041,2000,mtbls79,MTBLS79
-8,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.855558078778135,0.811475080385852,0.890675241157556,2000,mtbls79,MTBLS79
-1,cow_vs_sheep,winn_fixed_no_qc,WiNN,pearson,0.97068189612716,0.951677588139729,0.982095706990572,2000,mtbls79,MTBLS79
-1,cow_vs_sheep,winn_fixed_no_qc,WiNN,spearman,0.921413107867348,0.877189243230335,0.948837765572286,2000,mtbls79,MTBLS79
-1,cow_vs_sheep,winn_fixed_no_qc,WiNN,sign_concordance,0.847715032154341,0.80384847266881,0.885460209003215,2000,mtbls79,MTBLS79
-2,cow_vs_sheep,winn_fixed_no_qc,WiNN,pearson,0.972505066058972,0.950202227350261,0.983109714486652,2000,mtbls79,MTBLS79
-2,cow_vs_sheep,winn_fixed_no_qc,WiNN,spearman,0.925184138832493,0.884102811788358,0.951704472107544,2000,mtbls79,MTBLS79
-2,cow_vs_sheep,winn_fixed_no_qc,WiNN,sign_concordance,0.858613344051447,0.818327974276527,0.891077170418006,2000,mtbls79,MTBLS79
-3,cow_vs_sheep,winn_fixed_no_qc,WiNN,pearson,0.966538738370218,0.951429311380731,0.976956365531152,2000,mtbls79,MTBLS79
-3,cow_vs_sheep,winn_fixed_no_qc,WiNN,spearman,0.916190327776521,0.880789188817097,0.940214096540154,2000,mtbls79,MTBLS79
-3,cow_vs_sheep,winn_fixed_no_qc,WiNN,sign_concordance,0.854031752411576,0.814298633440515,0.885048231511254,2000,mtbls79,MTBLS79
-4,cow_vs_sheep,winn_fixed_no_qc,WiNN,pearson,0.967146376523145,0.945401961095221,0.978885752645324,2000,mtbls79,MTBLS79
-4,cow_vs_sheep,winn_fixed_no_qc,WiNN,spearman,0.918525077126521,0.867975898845171,0.945546447893513,2000,mtbls79,MTBLS79
-4,cow_vs_sheep,winn_fixed_no_qc,WiNN,sign_concordance,0.853026125401929,0.809083601286174,0.886665996784566,2000,mtbls79,MTBLS79
-5,cow_vs_sheep,winn_fixed_no_qc,WiNN,pearson,0.953636618899107,0.916283296747657,0.97305756847847,2000,mtbls79,MTBLS79
-5,cow_vs_sheep,winn_fixed_no_qc,WiNN,spearman,0.900672555899034,0.849534866518387,0.935177101320599,2000,mtbls79,MTBLS79
-5,cow_vs_sheep,winn_fixed_no_qc,WiNN,sign_concordance,0.843833601286174,0.803858520900322,0.8758038585209,2000,mtbls79,MTBLS79
-6,cow_vs_sheep,winn_fixed_no_qc,WiNN,pearson,0.952856476411067,0.904498146239867,0.974082932676645,2000,mtbls79,MTBLS79
-6,cow_vs_sheep,winn_fixed_no_qc,WiNN,spearman,0.901377104902505,0.837924870391638,0.937788904889658,2000,mtbls79,MTBLS79
-6,cow_vs_sheep,winn_fixed_no_qc,WiNN,sign_concordance,0.84668790192926,0.803054662379421,0.883440514469453,2000,mtbls79,MTBLS79
-7,cow_vs_sheep,winn_fixed_no_qc,WiNN,pearson,0.954705665210401,0.92783031811139,0.969954414648507,2000,mtbls79,MTBLS79
-7,cow_vs_sheep,winn_fixed_no_qc,WiNN,spearman,0.891792766623919,0.841100319021714,0.92593791350699,2000,mtbls79,MTBLS79
-7,cow_vs_sheep,winn_fixed_no_qc,WiNN,sign_concordance,0.833512861736334,0.792594453376206,0.865755627009646,2000,mtbls79,MTBLS79
-8,cow_vs_sheep,winn_fixed_no_qc,WiNN,pearson,0.963783532984137,0.945123812045968,0.974836246722118,2000,mtbls79,MTBLS79
-8,cow_vs_sheep,winn_fixed_no_qc,WiNN,spearman,0.913160149564393,0.875222587743095,0.937498678650746,2000,mtbls79,MTBLS79
-8,cow_vs_sheep,winn_fixed_no_qc,WiNN,sign_concordance,0.854402733118971,0.817112138263666,0.884646302250804,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),pearson,0.970680085284782,0.951839191167883,0.982081812542896,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),spearman,0.921498777956666,0.877447333045342,0.948689599747249,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.856649718649518,0.809073553054662,0.89792001607717,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),pearson,0.972494957790295,0.950195176418633,0.983089408139781,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),spearman,0.925143942721606,0.883917145115452,0.951639275324275,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.861093649517685,0.818327974276527,0.896302250803859,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),pearson,0.966535931490572,0.951345612662149,0.977000420980601,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),spearman,0.916236690605717,0.880852428081267,0.940215606058082,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.859225281350482,0.818317926045016,0.891881028938907,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),pearson,0.967143965383478,0.945427783517475,0.97886818432509,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),spearman,0.918633248434771,0.867751166583053,0.945771749356129,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.856325964630225,0.80384847266881,0.891881028938907,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),pearson,0.953723809917262,0.916285250824021,0.973097137626878,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),spearman,0.900813724798564,0.850360232212205,0.935246676999275,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.847486133440514,0.808681672025723,0.882234726688103,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),pearson,0.952853353719705,0.904459159234474,0.974063233947905,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),spearman,0.901385472556545,0.837983954459061,0.937908275492452,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.846570136655949,0.802250803858521,0.887861736334405,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),pearson,0.954726288021608,0.927827006057143,0.96997816347478,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),spearman,0.891833300321094,0.841076731708393,0.925901736871812,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.835242966237942,0.794212218649518,0.870578778135048,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),pearson,0.963767841412499,0.945151095659995,0.974839914595886,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),spearman,0.913123824134155,0.875380388485984,0.937512828740198,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.856546020900322,0.815112540192926,0.888665594855305,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.970536832904907,0.95113753233969,0.982217936586559,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.920859645583704,0.876329052034227,0.949367364394757,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.855630225080386,0.807465836012862,0.898713826366559,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.972415324216368,0.949260192865194,0.983067110308661,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.925127988553504,0.882816437889687,0.952136230134922,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.861489750803858,0.817112138263666,0.89591036977492,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.966471771459038,0.950632437251721,0.977028548270753,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.916291296080282,0.880531790434309,0.940965854155166,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.859363545016077,0.816720257234727,0.893900723472669,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.965308006521369,0.941804685772838,0.978461882619394,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.914280949867314,0.859149467217504,0.94389429335854,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.851586816720257,0.796221864951768,0.888675643086817,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.95385235671019,0.916916062671815,0.973198742194831,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.900709989445631,0.848701647821201,0.934984390302121,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.847806270096463,0.809485530546624,0.882234726688103,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.953172869876269,0.905944439689771,0.974283933531095,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.902065100998012,0.839413729249396,0.938180632525092,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.845002411575563,0.801034967845659,0.885058279742765,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.951548593204002,0.923638015198381,0.968687132171659,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.886878120946334,0.828119552716565,0.924920986902664,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.834546020900322,0.787379421221865,0.871382636655949,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.963428182006782,0.945148526243567,0.974539042834633,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.912319689727591,0.873150952972416,0.937654518796828,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.855484525723473,0.810681270096463,0.889871382636656,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,winn_fixed_no_qc,WiNN,pearson,0.97066467289007,0.951738095267849,0.982084517016781,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,winn_fixed_no_qc,WiNN,spearman,0.921402189376176,0.877299854016484,0.948711855367882,2000,mtbls79,MTBLS79
+1,cow_vs_sheep,winn_fixed_no_qc,WiNN,sign_concordance,0.847886655948553,0.80384847266881,0.885450160771704,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,winn_fixed_no_qc,WiNN,pearson,0.972500213588192,0.950190877607946,0.983108274176864,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,winn_fixed_no_qc,WiNN,spearman,0.925156717499469,0.883990589218699,0.951693758453361,2000,mtbls79,MTBLS79
+2,cow_vs_sheep,winn_fixed_no_qc,WiNN,sign_concordance,0.858563303858521,0.818327974276527,0.891077170418006,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,winn_fixed_no_qc,WiNN,pearson,0.966530338393305,0.951439595738042,0.976975604885296,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,winn_fixed_no_qc,WiNN,spearman,0.916161315741111,0.880827545111702,0.94018352974686,2000,mtbls79,MTBLS79
+3,cow_vs_sheep,winn_fixed_no_qc,WiNN,sign_concordance,0.854015675241158,0.814690514469453,0.885048231511254,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,winn_fixed_no_qc,WiNN,pearson,0.967156210302364,0.945407002035025,0.978885458185861,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,winn_fixed_no_qc,WiNN,spearman,0.918571956794678,0.867850100801764,0.945595200098264,2000,mtbls79,MTBLS79
+4,cow_vs_sheep,winn_fixed_no_qc,WiNN,sign_concordance,0.853061294212219,0.809475482315112,0.887057877813505,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,winn_fixed_no_qc,WiNN,pearson,0.953640837825172,0.916239393353902,0.973044736911489,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,winn_fixed_no_qc,WiNN,spearman,0.900695348434239,0.849786060905991,0.935235768378192,2000,mtbls79,MTBLS79
+5,cow_vs_sheep,winn_fixed_no_qc,WiNN,sign_concordance,0.843869172025723,0.804642282958199,0.8758038585209,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,winn_fixed_no_qc,WiNN,pearson,0.952859107725685,0.904504486682886,0.974083267821916,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,winn_fixed_no_qc,WiNN,spearman,0.901389493759276,0.837906533510244,0.937823427257282,2000,mtbls79,MTBLS79
+6,cow_vs_sheep,winn_fixed_no_qc,WiNN,sign_concordance,0.846714831189711,0.803054662379421,0.883440514469453,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,winn_fixed_no_qc,WiNN,pearson,0.954717987458936,0.927797703028379,0.969949680597602,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,winn_fixed_no_qc,WiNN,spearman,0.89186669454194,0.84114715389287,0.925917881159619,2000,mtbls79,MTBLS79
+7,cow_vs_sheep,winn_fixed_no_qc,WiNN,sign_concordance,0.833556672025723,0.792202572347267,0.865765675241157,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,winn_fixed_no_qc,WiNN,pearson,0.963775964968291,0.945126516082662,0.97482971699102,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,winn_fixed_no_qc,WiNN,spearman,0.913130712641781,0.875293500295914,0.937525191441523,2000,mtbls79,MTBLS79
+8,cow_vs_sheep,winn_fixed_no_qc,WiNN,sign_concordance,0.85426788585209,0.817504019292605,0.884646302250804,2000,mtbls79,MTBLS79
 ne1,age,raw,Raw,pearson,0.426096405442614,0.15551349211505,0.629282682655187,2000,sacurine,Sacurine
 ne1,age,raw,Raw,spearman,0.335589880397897,0.0961842521125824,0.54783148413068,2000,sacurine,Sacurine
 ne1,age,raw,Raw,sign_concordance,0.621362831858407,0.495575221238938,0.743362831858407,2000,sacurine,Sacurine
@@ -281,60 +281,60 @@ ne2,bmi,serrf,SERRF,sign_concordance,0.572769911504425,0.433628318584071,0.69911
 ne2,gender,serrf,SERRF,pearson,0.455341046870624,0.197086472809921,0.660293929525588,2000,sacurine,Sacurine
 ne2,gender,serrf,SERRF,spearman,0.314078660423182,0.106787710426509,0.491351720007985,2000,sacurine,Sacurine
 ne2,gender,serrf,SERRF,sign_concordance,0.648256637168142,0.52212389380531,0.761061946902655,2000,sacurine,Sacurine
-ne1,age,winn_auto_qc,WiNN (QC-tuned),pearson,0.455504895345171,0.20513076427746,0.646933790186608,2000,sacurine,Sacurine
-ne1,age,winn_auto_qc,WiNN (QC-tuned),spearman,0.356301716681083,0.111614212522457,0.569288750083173,2000,sacurine,Sacurine
-ne1,age,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.553159292035398,0.353761061946903,0.725663716814159,2000,sacurine,Sacurine
-ne1,bmi,winn_auto_qc,WiNN (QC-tuned),pearson,0.207975746809557,-0.0629072733909866,0.45562067774168,2000,sacurine,Sacurine
-ne1,bmi,winn_auto_qc,WiNN (QC-tuned),spearman,0.191133283984297,-0.0434790654734181,0.423237366092222,2000,sacurine,Sacurine
-ne1,bmi,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.60612389380531,0.389380530973451,0.778761061946903,2000,sacurine,Sacurine
-ne1,gender,winn_auto_qc,WiNN (QC-tuned),pearson,0.414150325146904,0.171036714325328,0.622465335174461,2000,sacurine,Sacurine
-ne1,gender,winn_auto_qc,WiNN (QC-tuned),spearman,0.315365306241267,0.118334553197152,0.494750565573225,2000,sacurine,Sacurine
-ne1,gender,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.683632743362832,0.47787610619469,0.84070796460177,2000,sacurine,Sacurine
-ne2,age,winn_auto_qc,WiNN (QC-tuned),pearson,0.452976265881455,0.184393898008743,0.654174621503101,2000,sacurine,Sacurine
-ne2,age,winn_auto_qc,WiNN (QC-tuned),spearman,0.355209840142391,0.108306232949631,0.567454379865593,2000,sacurine,Sacurine
-ne2,age,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.55816814159292,0.353982300884956,0.734513274336283,2000,sacurine,Sacurine
-ne2,bmi,winn_auto_qc,WiNN (QC-tuned),pearson,0.212685777224564,-0.047703133855396,0.45594390750274,2000,sacurine,Sacurine
-ne2,bmi,winn_auto_qc,WiNN (QC-tuned),spearman,0.189618807804911,-0.0379354082107925,0.403316296826136,2000,sacurine,Sacurine
-ne2,bmi,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.608628318584071,0.389380530973451,0.778761061946903,2000,sacurine,Sacurine
-ne2,gender,winn_auto_qc,WiNN (QC-tuned),pearson,0.420940107233621,0.182860900351053,0.617351008580902,2000,sacurine,Sacurine
-ne2,gender,winn_auto_qc,WiNN (QC-tuned),spearman,0.318218839410473,0.112590242198416,0.502505780491051,2000,sacurine,Sacurine
-ne2,gender,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.684004424778761,0.48672566371681403,0.831858407079646,2000,sacurine,Sacurine
-ne1,age,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.457462146895129,0.20594450914877,0.647828007397059,2000,sacurine,Sacurine
-ne1,age,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.357683520194291,0.112526199347927,0.571669147980571,2000,sacurine,Sacurine
-ne1,age,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.55383185840708,0.353982300884956,0.725663716814159,2000,sacurine,Sacurine
-ne1,bmi,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.207831128850715,-0.0616557604409361,0.454253249970047,2000,sacurine,Sacurine
-ne1,bmi,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.191091157096281,-0.0473613513873179,0.425129333288975,2000,sacurine,Sacurine
-ne1,bmi,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.609676991150442,0.398230088495575,0.778761061946903,2000,sacurine,Sacurine
-ne1,gender,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.411977831426269,0.167254230432453,0.617571644990806,2000,sacurine,Sacurine
-ne1,gender,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.31039302764655,0.119016567968594,0.487787569033203,2000,sacurine,Sacurine
-ne1,gender,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.674194690265487,0.47787610619469,0.831858407079646,2000,sacurine,Sacurine
-ne2,age,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.454680300349427,0.191800504216735,0.654424721997375,2000,sacurine,Sacurine
-ne2,age,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.356031568134939,0.107709054161954,0.569024885221904,2000,sacurine,Sacurine
-ne2,age,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.558477876106195,0.353982300884956,0.734513274336283,2000,sacurine,Sacurine
-ne2,bmi,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.21240916683347,-0.051139437096504,0.454817232445815,2000,sacurine,Sacurine
-ne2,bmi,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.189175747721073,-0.0387939566837448,0.403298622662852,2000,sacurine,Sacurine
-ne2,bmi,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.611982300884956,0.398230088495575,0.778761061946903,2000,sacurine,Sacurine
-ne2,gender,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.418966806943388,0.177334404189895,0.6162168930796,2000,sacurine,Sacurine
-ne2,gender,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.313303434193892,0.115046950894936,0.498663833255706,2000,sacurine,Sacurine
-ne2,gender,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.673942477876106,0.47787610619469,0.823008849557522,2000,sacurine,Sacurine
-ne1,age,winn_fixed_no_qc,WiNN,pearson,0.454047101772475,0.204595373164358,0.647415565966497,2000,sacurine,Sacurine
-ne1,age,winn_fixed_no_qc,WiNN,spearman,0.352392898729124,0.105967213387451,0.56523575254508,2000,sacurine,Sacurine
-ne1,age,winn_fixed_no_qc,WiNN,sign_concordance,0.597703539823009,0.45110619469026503,0.725663716814159,2000,sacurine,Sacurine
-ne1,bmi,winn_fixed_no_qc,WiNN,pearson,0.20913921821433,-0.0601589379498568,0.453454445214119,2000,sacurine,Sacurine
-ne1,bmi,winn_fixed_no_qc,WiNN,spearman,0.192790035098809,-0.0399065972453257,0.425115609821013,2000,sacurine,Sacurine
-ne1,bmi,winn_fixed_no_qc,WiNN,sign_concordance,0.601442477876106,0.469026548672566,0.734513274336283,2000,sacurine,Sacurine
-ne1,gender,winn_fixed_no_qc,WiNN,pearson,0.412580660747506,0.169022806105762,0.619496268438202,2000,sacurine,Sacurine
-ne1,gender,winn_fixed_no_qc,WiNN,spearman,0.311720307405682,0.114207740035931,0.492434626388981,2000,sacurine,Sacurine
-ne1,gender,winn_fixed_no_qc,WiNN,sign_concordance,0.660991150442478,0.530973451327434,0.769911504424779,2000,sacurine,Sacurine
-ne2,age,winn_fixed_no_qc,WiNN,pearson,0.451391927102746,0.184924145766176,0.652119721865728,2000,sacurine,Sacurine
-ne2,age,winn_fixed_no_qc,WiNN,spearman,0.351172533102668,0.101576119502296,0.565596929270078,2000,sacurine,Sacurine
-ne2,age,winn_fixed_no_qc,WiNN,sign_concordance,0.596681415929204,0.451327433628319,0.734513274336283,2000,sacurine,Sacurine
-ne2,bmi,winn_fixed_no_qc,WiNN,pearson,0.21392564556611,-0.041113527050224,0.454573040385538,2000,sacurine,Sacurine
-ne2,bmi,winn_fixed_no_qc,WiNN,spearman,0.191222802581675,-0.0339204621065939,0.404435799121698,2000,sacurine,Sacurine
-ne2,bmi,winn_fixed_no_qc,WiNN,sign_concordance,0.602690265486726,0.460176991150442,0.725663716814159,2000,sacurine,Sacurine
-ne2,gender,winn_fixed_no_qc,WiNN,pearson,0.419250620063509,0.17937339591311,0.61586426123917,2000,sacurine,Sacurine
-ne2,gender,winn_fixed_no_qc,WiNN,spearman,0.314440045079513,0.109256063277663,0.498397681149777,2000,sacurine,Sacurine
-ne2,gender,winn_fixed_no_qc,WiNN,sign_concordance,0.660132743362832,0.530973451327434,0.769911504424779,2000,sacurine,Sacurine
+ne1,age,winn_auto_qc,WiNN (QC-tuned),pearson,0.453264388909502,0.198989557928903,0.64585379359946,2000,sacurine,Sacurine
+ne1,age,winn_auto_qc,WiNN (QC-tuned),spearman,0.352140661387983,0.10554552864462,0.566415970789806,2000,sacurine,Sacurine
+ne1,age,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.553070796460177,0.353982300884956,0.725663716814159,2000,sacurine,Sacurine
+ne1,bmi,winn_auto_qc,WiNN (QC-tuned),pearson,0.207922725158203,-0.0592944445617914,0.457185481389445,2000,sacurine,Sacurine
+ne1,bmi,winn_auto_qc,WiNN (QC-tuned),spearman,0.192987711258234,-0.0406154351586932,0.423416602901058,2000,sacurine,Sacurine
+ne1,bmi,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.61116814159292,0.398230088495575,0.778761061946903,2000,sacurine,Sacurine
+ne1,gender,winn_auto_qc,WiNN (QC-tuned),pearson,0.414995164511223,0.171659395976747,0.62264329177837,2000,sacurine,Sacurine
+ne1,gender,winn_auto_qc,WiNN (QC-tuned),spearman,0.318368703839244,0.126098085368288,0.495845531971522,2000,sacurine,Sacurine
+ne1,gender,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.686389380530973,0.486725663716814,0.84070796460177,2000,sacurine,Sacurine
+ne2,age,winn_auto_qc,WiNN (QC-tuned),pearson,0.450506294308019,0.184114691913026,0.654600641746235,2000,sacurine,Sacurine
+ne2,age,winn_auto_qc,WiNN (QC-tuned),spearman,0.350741304311664,0.0966288093020161,0.567621140794464,2000,sacurine,Sacurine
+ne2,age,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.558097345132743,0.36283185840708,0.734513274336283,2000,sacurine,Sacurine
+ne2,bmi,winn_auto_qc,WiNN (QC-tuned),pearson,0.212493104102581,-0.0482216944006341,0.454003655123955,2000,sacurine,Sacurine
+ne2,bmi,winn_auto_qc,WiNN (QC-tuned),spearman,0.191057958779693,-0.0370134406813494,0.403902455253177,2000,sacurine,Sacurine
+ne2,bmi,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.613619469026549,0.398008849557522,0.778761061946903,2000,sacurine,Sacurine
+ne2,gender,winn_auto_qc,WiNN (QC-tuned),pearson,0.42172136322822,0.182229241632266,0.618437561797974,2000,sacurine,Sacurine
+ne2,gender,winn_auto_qc,WiNN (QC-tuned),spearman,0.320909895036263,0.115747887417659,0.503622163816621,2000,sacurine,Sacurine
+ne2,gender,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.686230088495575,0.495353982300885,0.831858407079646,2000,sacurine,Sacurine
+ne1,age,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.456959117579379,0.203506999081118,0.647952749630587,2000,sacurine,Sacurine
+ne1,age,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.357395044580478,0.107730471089228,0.571205669039856,2000,sacurine,Sacurine
+ne1,age,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.553048672566372,0.353982300884956,0.734513274336283,2000,sacurine,Sacurine
+ne1,bmi,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.208681002667538,-0.0591907343592981,0.454607540579278,2000,sacurine,Sacurine
+ne1,bmi,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.193412265453457,-0.0431386818816954,0.423163550469093,2000,sacurine,Sacurine
+ne1,bmi,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.612044247787611,0.407079646017699,0.778761061946903,2000,sacurine,Sacurine
+ne1,gender,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.415674490719873,0.172493754971434,0.622776798308971,2000,sacurine,Sacurine
+ne1,gender,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.314942793931732,0.122462821877703,0.493165920886286,2000,sacurine,Sacurine
+ne1,gender,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.678769911504425,0.47787610619469,0.831858407079646,2000,sacurine,Sacurine
+ne2,age,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.454089551040878,0.191767963421596,0.656525229903953,2000,sacurine,Sacurine
+ne2,age,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.355625569731852,0.105311397963936,0.572919439084437,2000,sacurine,Sacurine
+ne2,age,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.558424778761062,0.362610619469027,0.734513274336283,2000,sacurine,Sacurine
+ne2,bmi,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.213078567587078,-0.045527430973699,0.455008768990802,2000,sacurine,Sacurine
+ne2,bmi,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.19128119385854,-0.0357250981435891,0.404281514072793,2000,sacurine,Sacurine
+ne2,bmi,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.614030973451327,0.398008849557522,0.778761061946903,2000,sacurine,Sacurine
+ne2,gender,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.422553361134894,0.181964737931744,0.620172513875296,2000,sacurine,Sacurine
+ne2,gender,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.317633990950828,0.113677307206068,0.499274319648679,2000,sacurine,Sacurine
+ne2,gender,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.678092920353982,0.47787610619469,0.823230088495574,2000,sacurine,Sacurine
+ne1,age,winn_fixed_no_qc,WiNN,pearson,0.453898079281215,0.20285405934169,0.646503841197545,2000,sacurine,Sacurine
+ne1,age,winn_fixed_no_qc,WiNN,spearman,0.352187142358108,0.106892299886885,0.566015079180252,2000,sacurine,Sacurine
+ne1,age,winn_fixed_no_qc,WiNN,sign_concordance,0.597805309734513,0.451327433628319,0.725663716814159,2000,sacurine,Sacurine
+ne1,bmi,winn_fixed_no_qc,WiNN,pearson,0.208017332821298,-0.0599877029049591,0.453140448158912,2000,sacurine,Sacurine
+ne1,bmi,winn_fixed_no_qc,WiNN,spearman,0.192197555559252,-0.0421636918623994,0.424608673231752,2000,sacurine,Sacurine
+ne1,bmi,winn_fixed_no_qc,WiNN,sign_concordance,0.59929203539823,0.469026548672566,0.734513274336283,2000,sacurine,Sacurine
+ne1,gender,winn_fixed_no_qc,WiNN,pearson,0.414222070136429,0.171733178194843,0.621038422931043,2000,sacurine,Sacurine
+ne1,gender,winn_fixed_no_qc,WiNN,spearman,0.315645115277131,0.121163043116641,0.494277521791204,2000,sacurine,Sacurine
+ne1,gender,winn_fixed_no_qc,WiNN,sign_concordance,0.658362831858407,0.52212389380531,0.769911504424779,2000,sacurine,Sacurine
+ne2,age,winn_fixed_no_qc,WiNN,pearson,0.451156545455979,0.185128236454344,0.652803718900226,2000,sacurine,Sacurine
+ne2,age,winn_fixed_no_qc,WiNN,spearman,0.350934942444607,0.100420645086167,0.565422890744561,2000,sacurine,Sacurine
+ne2,age,winn_fixed_no_qc,WiNN,sign_concordance,0.597278761061947,0.451327433628319,0.734513274336283,2000,sacurine,Sacurine
+ne2,bmi,winn_fixed_no_qc,WiNN,pearson,0.212645156297129,-0.0441369237644816,0.451672102484459,2000,sacurine,Sacurine
+ne2,bmi,winn_fixed_no_qc,WiNN,spearman,0.190375182979573,-0.0343631479140329,0.401034666311797,2000,sacurine,Sacurine
+ne2,bmi,winn_fixed_no_qc,WiNN,sign_concordance,0.600451327433628,0.451327433628319,0.717035398230087,2000,sacurine,Sacurine
+ne2,gender,winn_fixed_no_qc,WiNN,pearson,0.42086601504148,0.180842399908635,0.618038967169835,2000,sacurine,Sacurine
+ne2,gender,winn_fixed_no_qc,WiNN,spearman,0.31820912069998,0.1154206034999,0.499907054694258,2000,sacurine,Sacurine
+ne2,gender,winn_fixed_no_qc,WiNN,sign_concordance,0.657455752212389,0.530973451327434,0.769911504424779,2000,sacurine,Sacurine
 1,biological_group,raw,Raw,pearson,0.205120733807923,0.0452276776525751,0.35292538018744,2000,waveica,WaveICA
 1,biological_group,raw,Raw,spearman,0.203031107969914,0.0907901424970143,0.310589100332261,2000,waveica,WaveICA
 1,biological_group,raw,Raw,sign_concordance,0.563870453490172,0.5215872156013,0.60363720786256,2000,waveica,WaveICA
@@ -380,30 +380,30 @@ ne2,gender,winn_fixed_no_qc,WiNN,sign_concordance,0.660132743362832,0.5309734513
 3,biological_group,serrf,SERRF,pearson,0.139972657399038,0.0252473609633034,0.246788774016317,2000,waveica,WaveICA
 3,biological_group,serrf,SERRF,spearman,0.166380239395746,0.0665203139858503,0.254929062903562,2000,waveica,WaveICA
 3,biological_group,serrf,SERRF,sign_concordance,0.555491642160656,0.5215872156013,0.587374245472837,2000,waveica,WaveICA
-1,biological_group,winn_auto_qc,WiNN (QC-tuned),pearson,0.229845106899318,0.0537287007927595,0.380763610876785,2000,waveica,WaveICA
-1,biological_group,winn_auto_qc,WiNN (QC-tuned),spearman,0.226052394884743,0.11138547991288,0.323929527620834,2000,waveica,WaveICA
-1,biological_group,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.572965872156013,0.533497136666151,0.610122272094103,2000,waveica,WaveICA
-2,biological_group,winn_auto_qc,WiNN (QC-tuned),pearson,0.200934003436322,0.0101742304746541,0.370988678814663,2000,waveica,WaveICA
-2,biological_group,winn_auto_qc,WiNN (QC-tuned),spearman,0.188387897601803,0.0539642950194561,0.30521262369765,2000,waveica,WaveICA
-2,biological_group,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.561321776814735,0.514622349481504,0.60409766290048,2000,waveica,WaveICA
-3,biological_group,winn_auto_qc,WiNN (QC-tuned),pearson,0.213840120113578,0.051433040008741,0.357926003686851,2000,waveica,WaveICA
-3,biological_group,winn_auto_qc,WiNN (QC-tuned),spearman,0.213979329388126,0.0933147614771002,0.318208334983486,2000,waveica,WaveICA
-3,biological_group,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.571179848320693,0.527317752669865,0.6113604705154,2000,waveica,WaveICA
-1,biological_group,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.223375155276941,0.0546477484587063,0.371791073224378,2000,waveica,WaveICA
-1,biological_group,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.218203322189366,0.100735510186423,0.327299459390347,2000,waveica,WaveICA
-1,biological_group,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.569882603312181,0.52623432905123,0.613840736728061,2000,waveica,WaveICA
-2,biological_group,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.189027594487584,-0.0120826361536554,0.362448671419176,2000,waveica,WaveICA
-2,biological_group,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.178620705312817,0.0149257490818748,0.317682921329595,2000,waveica,WaveICA
-2,biological_group,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.558679383996285,0.500375328896456,0.613376412320074,2000,waveica,WaveICA
-3,biological_group,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.20628701875855401,0.0403663674924692,0.353613603946829,2000,waveica,WaveICA
-3,biological_group,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.205926379965351,0.0616239672535046,0.326805584874864,2000,waveica,WaveICA
-3,biological_group,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.568384460609813,0.514777124284167,0.61647964711345,2000,waveica,WaveICA
-1,biological_group,winn_fixed_no_qc,WiNN,pearson,0.230362289205769,0.0528250156348707,0.380945018584745,2000,waveica,WaveICA
-1,biological_group,winn_fixed_no_qc,WiNN,spearman,0.226595367797391,0.111792314533132,0.324852348356021,2000,waveica,WaveICA
-1,biological_group,winn_fixed_no_qc,WiNN,sign_concordance,0.570433214672651,0.531651447144405,0.605637672186968,2000,waveica,WaveICA
-2,biological_group,winn_fixed_no_qc,WiNN,pearson,0.201299349437735,0.0110951703725033,0.371817643809939,2000,waveica,WaveICA
-2,biological_group,winn_fixed_no_qc,WiNN,spearman,0.188637089125641,0.0505315900003407,0.305538576777663,2000,waveica,WaveICA
-2,biological_group,winn_fixed_no_qc,WiNN,sign_concordance,0.558902104937316,0.515705773100139,0.597898932053862,2000,waveica,WaveICA
-3,biological_group,winn_fixed_no_qc,WiNN,pearson,0.214163985913971,0.0489766929641527,0.356287348409134,2000,waveica,WaveICA
-3,biological_group,winn_fixed_no_qc,WiNN,spearman,0.214429999705939,0.0941841994520319,0.319046086666021,2000,waveica,WaveICA
-3,biological_group,winn_fixed_no_qc,WiNN,sign_concordance,0.567832611050921,0.527004333694475,0.605169478408915,2000,waveica,WaveICA
+1,biological_group,winn_auto_qc,WiNN (QC-tuned),pearson,0.226097824606425,0.0484736082010108,0.377480257927651,2000,waveica,WaveICA
+1,biological_group,winn_auto_qc,WiNN (QC-tuned),spearman,0.223608400531875,0.113243236359788,0.323343952440637,2000,waveica,WaveICA
+1,biological_group,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.572573053706857,0.53226280761492,0.610277046896765,2000,waveica,WaveICA
+2,biological_group,winn_auto_qc,WiNN (QC-tuned),pearson,0.197316403135292,0.00675249250848058,0.3675259595779,2000,waveica,WaveICA
+2,biological_group,winn_auto_qc,WiNN (QC-tuned),spearman,0.186712603260045,0.0535945680208634,0.304409845882251,2000,waveica,WaveICA
+2,biological_group,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.561154542640458,0.514316669246247,0.604859928803591,2000,waveica,WaveICA
+3,biological_group,winn_auto_qc,WiNN (QC-tuned),pearson,0.212300913129549,0.0467877906137773,0.357811428546567,2000,waveica,WaveICA
+3,biological_group,winn_auto_qc,WiNN (QC-tuned),spearman,0.212328074661056,0.0907816516072044,0.318756729036773,2000,waveica,WaveICA
+3,biological_group,winn_auto_qc,WiNN (QC-tuned),sign_concordance,0.570787029871537,0.527313883299799,0.611515245318062,2000,waveica,WaveICA
+1,biological_group,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.222634151211373,0.0552269958693629,0.371712425224862,2000,waveica,WaveICA
+1,biological_group,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.218186857332854,0.0999100355014167,0.326310587716944,2000,waveica,WaveICA
+1,biological_group,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.567224810400867,0.524837486457205,0.608268843832224,2000,waveica,WaveICA
+2,biological_group,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.188840326417304,-0.0106772935056709,0.363451164924881,2000,waveica,WaveICA
+2,biological_group,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.178628863269467,0.0173132666494284,0.316405526678157,2000,waveica,WaveICA
+2,biological_group,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.557003327658257,0.502689212196254,0.607189289583656,2000,waveica,WaveICA
+3,biological_group,winn_auto_batch_qc,WiNN (inferred segments),pearson,0.205707687216878,0.0400594859075985,0.352758118727507,2000,waveica,WaveICA
+3,biological_group,winn_auto_batch_qc,WiNN (inferred segments),spearman,0.205785163480761,0.0622819777485479,0.327751255552196,2000,waveica,WaveICA
+3,biological_group,winn_auto_batch_qc,WiNN (inferred segments),sign_concordance,0.565167156786875,0.514780993654233,0.609828199969045,2000,waveica,WaveICA
+1,biological_group,winn_fixed_no_qc,WiNN,pearson,0.227300070781657,0.0528872506960836,0.377926994089739,2000,waveica,WaveICA
+1,biological_group,winn_fixed_no_qc,WiNN,spearman,0.224311911884786,0.113623651486141,0.3236817118828,2000,waveica,WaveICA
+1,biological_group,winn_fixed_no_qc,WiNN,sign_concordance,0.569824794923386,0.532100294072125,0.605018572976319,2000,waveica,WaveICA
+2,biological_group,winn_fixed_no_qc,WiNN,pearson,0.198913580779492,0.00735854804242598,0.367497487662816,2000,waveica,WaveICA
+2,biological_group,winn_fixed_no_qc,WiNN,spearman,0.187550535423331,0.0547213832660371,0.304135235691673,2000,waveica,WaveICA
+2,biological_group,winn_fixed_no_qc,WiNN,sign_concordance,0.558711577155239,0.515709642470206,0.598204612289119,2000,waveica,WaveICA
+3,biological_group,winn_fixed_no_qc,WiNN,pearson,0.212934409746801,0.0510048247260375,0.357366003335987,2000,waveica,WaveICA
+3,biological_group,winn_fixed_no_qc,WiNN,spearman,0.212963318366475,0.0924202255199828,0.317224238868955,2000,waveica,WaveICA
+3,biological_group,winn_fixed_no_qc,WiNN,sign_concordance,0.567045116854976,0.526540009286488,0.604709023370995,2000,waveica,WaveICA

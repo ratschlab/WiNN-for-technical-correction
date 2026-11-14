@@ -4,78 +4,78 @@
 "heldout_qc_cv_mean",11.5240046123491,"lower",1594,"percent",NA,"clinical_fiams","qc_rlsc","QC-RLSC","SPLIT01","Clinical FIA-MS","Held-out QC CV (%)","QC-RLSC",11.7076030130468
 "heldout_qc_cv_mean",7.89469714773929,"lower",1594,"percent",NA,"clinical_fiams","tiger","TIGER","SPLIT01","Clinical FIA-MS","Held-out QC CV (%)","TIGER",8.2222806704212
 "heldout_qc_cv_mean",9.83112850553221,"lower",1594,"percent",NA,"clinical_fiams","serrf","SERRF","SPLIT01","Clinical FIA-MS","Held-out QC CV (%)","SERRF",9.88672998225407
-"heldout_qc_cv_mean",8.94164375372061,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_qc","WiNN (QC-tuned)","SPLIT01","Clinical FIA-MS","Held-out QC CV (%)","WiNN (QC-tuned)",9.1057283059178
-"heldout_qc_cv_mean",9.26345186432997,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT01","Clinical FIA-MS","Held-out QC CV (%)","WiNN (inferred segments)",9.23905988880479
-"heldout_qc_cv_mean",9.83109751200147,"lower",1594,"percent",NA,"clinical_fiams","winn_fixed_no_qc","WiNN","SPLIT01","Clinical FIA-MS","Held-out QC CV (%)","WiNN",10.0356568941893
+"heldout_qc_cv_mean",8.94576696236292,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_qc","WiNN (QC-tuned)","SPLIT01","Clinical FIA-MS","Held-out QC CV (%)","WiNN (QC-tuned)",9.15330406600704
+"heldout_qc_cv_mean",9.63396168405424,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT01","Clinical FIA-MS","Held-out QC CV (%)","WiNN (inferred segments)",9.50175616387193
+"heldout_qc_cv_mean",9.91295766450255,"lower",1594,"percent",NA,"clinical_fiams","winn_fixed_no_qc","WiNN","SPLIT01","Clinical FIA-MS","Held-out QC CV (%)","WiNN",10.0697109625497
 "heldout_qc_cv_mean",10.6073087297709,"lower",1594,"percent",NA,"clinical_fiams","raw","Raw","SPLIT02","Clinical FIA-MS","Held-out QC CV (%)","Raw",13.1385245277527
 "heldout_qc_cv_mean",9.78594334889146,"lower",1594,"percent",NA,"clinical_fiams","combat","ComBat","SPLIT02","Clinical FIA-MS","Held-out QC CV (%)","ComBat",11.5855535083218
 "heldout_qc_cv_mean",10.788572036038,"lower",1594,"percent",NA,"clinical_fiams","qc_rlsc","QC-RLSC","SPLIT02","Clinical FIA-MS","Held-out QC CV (%)","QC-RLSC",11.7076030130468
 "heldout_qc_cv_mean",7.29716362728252,"lower",1594,"percent",NA,"clinical_fiams","tiger","TIGER","SPLIT02","Clinical FIA-MS","Held-out QC CV (%)","TIGER",8.2222806704212
 "heldout_qc_cv_mean",8.58034151182807,"lower",1594,"percent",NA,"clinical_fiams","serrf","SERRF","SPLIT02","Clinical FIA-MS","Held-out QC CV (%)","SERRF",9.88672998225407
-"heldout_qc_cv_mean",8.06037096262741,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_qc","WiNN (QC-tuned)","SPLIT02","Clinical FIA-MS","Held-out QC CV (%)","WiNN (QC-tuned)",9.1057283059178
-"heldout_qc_cv_mean",7.92427762144625,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT02","Clinical FIA-MS","Held-out QC CV (%)","WiNN (inferred segments)",9.23905988880479
-"heldout_qc_cv_mean",8.5272225713646,"lower",1594,"percent",NA,"clinical_fiams","winn_fixed_no_qc","WiNN","SPLIT02","Clinical FIA-MS","Held-out QC CV (%)","WiNN",10.0356568941893
+"heldout_qc_cv_mean",8.11417714368279,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_qc","WiNN (QC-tuned)","SPLIT02","Clinical FIA-MS","Held-out QC CV (%)","WiNN (QC-tuned)",9.15330406600704
+"heldout_qc_cv_mean",8.19115661316911,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT02","Clinical FIA-MS","Held-out QC CV (%)","WiNN (inferred segments)",9.50175616387193
+"heldout_qc_cv_mean",8.52170778960198,"lower",1594,"percent",NA,"clinical_fiams","winn_fixed_no_qc","WiNN","SPLIT02","Clinical FIA-MS","Held-out QC CV (%)","WiNN",10.0697109625497
 "heldout_qc_cv_mean",11.9730232004291,"lower",1594,"percent",NA,"clinical_fiams","raw","Raw","SPLIT03","Clinical FIA-MS","Held-out QC CV (%)","Raw",13.1385245277527
 "heldout_qc_cv_mean",11.5842308990855,"lower",1594,"percent",NA,"clinical_fiams","combat","ComBat","SPLIT03","Clinical FIA-MS","Held-out QC CV (%)","ComBat",11.5855535083218
 "heldout_qc_cv_mean",11.4599973417277,"lower",1594,"percent",NA,"clinical_fiams","qc_rlsc","QC-RLSC","SPLIT03","Clinical FIA-MS","Held-out QC CV (%)","QC-RLSC",11.7076030130468
 "heldout_qc_cv_mean",8.22268552310252,"lower",1594,"percent",NA,"clinical_fiams","tiger","TIGER","SPLIT03","Clinical FIA-MS","Held-out QC CV (%)","TIGER",8.2222806704212
 "heldout_qc_cv_mean",9.74594667390414,"lower",1594,"percent",NA,"clinical_fiams","serrf","SERRF","SPLIT03","Clinical FIA-MS","Held-out QC CV (%)","SERRF",9.88672998225407
-"heldout_qc_cv_mean",9.3187590980724,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_qc","WiNN (QC-tuned)","SPLIT03","Clinical FIA-MS","Held-out QC CV (%)","WiNN (QC-tuned)",9.1057283059178
-"heldout_qc_cv_mean",9.68365704184888,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT03","Clinical FIA-MS","Held-out QC CV (%)","WiNN (inferred segments)",9.23905988880479
-"heldout_qc_cv_mean",10.4328753138759,"lower",1594,"percent",NA,"clinical_fiams","winn_fixed_no_qc","WiNN","SPLIT03","Clinical FIA-MS","Held-out QC CV (%)","WiNN",10.0356568941893
+"heldout_qc_cv_mean",9.40356274081208,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_qc","WiNN (QC-tuned)","SPLIT03","Clinical FIA-MS","Held-out QC CV (%)","WiNN (QC-tuned)",9.15330406600704
+"heldout_qc_cv_mean",9.82508481232026,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT03","Clinical FIA-MS","Held-out QC CV (%)","WiNN (inferred segments)",9.50175616387193
+"heldout_qc_cv_mean",10.4081622434854,"lower",1594,"percent",NA,"clinical_fiams","winn_fixed_no_qc","WiNN","SPLIT03","Clinical FIA-MS","Held-out QC CV (%)","WiNN",10.0697109625497
 "heldout_qc_cv_mean",12.0389445143801,"lower",1594,"percent",NA,"clinical_fiams","raw","Raw","SPLIT04","Clinical FIA-MS","Held-out QC CV (%)","Raw",13.1385245277527
 "heldout_qc_cv_mean",10.3512501472607,"lower",1594,"percent",NA,"clinical_fiams","combat","ComBat","SPLIT04","Clinical FIA-MS","Held-out QC CV (%)","ComBat",11.5855535083218
 "heldout_qc_cv_mean",10.2583097221074,"lower",1594,"percent",NA,"clinical_fiams","qc_rlsc","QC-RLSC","SPLIT04","Clinical FIA-MS","Held-out QC CV (%)","QC-RLSC",11.7076030130468
 "heldout_qc_cv_mean",7.58331421364171,"lower",1594,"percent",NA,"clinical_fiams","tiger","TIGER","SPLIT04","Clinical FIA-MS","Held-out QC CV (%)","TIGER",8.2222806704212
 "heldout_qc_cv_mean",9.08710545367918,"lower",1594,"percent",NA,"clinical_fiams","serrf","SERRF","SPLIT04","Clinical FIA-MS","Held-out QC CV (%)","SERRF",9.88672998225407
-"heldout_qc_cv_mean",8.56975400570759,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_qc","WiNN (QC-tuned)","SPLIT04","Clinical FIA-MS","Held-out QC CV (%)","WiNN (QC-tuned)",9.1057283059178
-"heldout_qc_cv_mean",8.50436172567684,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT04","Clinical FIA-MS","Held-out QC CV (%)","WiNN (inferred segments)",9.23905988880479
-"heldout_qc_cv_mean",9.14045393617797,"lower",1594,"percent",NA,"clinical_fiams","winn_fixed_no_qc","WiNN","SPLIT04","Clinical FIA-MS","Held-out QC CV (%)","WiNN",10.0356568941893
+"heldout_qc_cv_mean",8.57362103684518,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_qc","WiNN (QC-tuned)","SPLIT04","Clinical FIA-MS","Held-out QC CV (%)","WiNN (QC-tuned)",9.15330406600704
+"heldout_qc_cv_mean",8.70019750869309,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT04","Clinical FIA-MS","Held-out QC CV (%)","WiNN (inferred segments)",9.50175616387193
+"heldout_qc_cv_mean",9.09985832813565,"lower",1594,"percent",NA,"clinical_fiams","winn_fixed_no_qc","WiNN","SPLIT04","Clinical FIA-MS","Held-out QC CV (%)","WiNN",10.0697109625497
 "heldout_qc_cv_mean",10.9010676239609,"lower",1594,"percent",NA,"clinical_fiams","raw","Raw","SPLIT05","Clinical FIA-MS","Held-out QC CV (%)","Raw",13.1385245277527
 "heldout_qc_cv_mean",9.68950009745185,"lower",1594,"percent",NA,"clinical_fiams","combat","ComBat","SPLIT05","Clinical FIA-MS","Held-out QC CV (%)","ComBat",11.5855535083218
 "heldout_qc_cv_mean",10.3051827149439,"lower",1594,"percent",NA,"clinical_fiams","qc_rlsc","QC-RLSC","SPLIT05","Clinical FIA-MS","Held-out QC CV (%)","QC-RLSC",11.7076030130468
 "heldout_qc_cv_mean",7.13697872815159,"lower",1594,"percent",NA,"clinical_fiams","tiger","TIGER","SPLIT05","Clinical FIA-MS","Held-out QC CV (%)","TIGER",8.2222806704212
 "heldout_qc_cv_mean",8.63741082598352,"lower",1594,"percent",NA,"clinical_fiams","serrf","SERRF","SPLIT05","Clinical FIA-MS","Held-out QC CV (%)","SERRF",9.88672998225407
-"heldout_qc_cv_mean",7.99936994159534,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_qc","WiNN (QC-tuned)","SPLIT05","Clinical FIA-MS","Held-out QC CV (%)","WiNN (QC-tuned)",9.1057283059178
-"heldout_qc_cv_mean",8.18773413610002,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT05","Clinical FIA-MS","Held-out QC CV (%)","WiNN (inferred segments)",9.23905988880479
-"heldout_qc_cv_mean",8.5896550561126,"lower",1594,"percent",NA,"clinical_fiams","winn_fixed_no_qc","WiNN","SPLIT05","Clinical FIA-MS","Held-out QC CV (%)","WiNN",10.0356568941893
+"heldout_qc_cv_mean",7.99717464231234,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_qc","WiNN (QC-tuned)","SPLIT05","Clinical FIA-MS","Held-out QC CV (%)","WiNN (QC-tuned)",9.15330406600704
+"heldout_qc_cv_mean",8.36117292375079,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT05","Clinical FIA-MS","Held-out QC CV (%)","WiNN (inferred segments)",9.50175616387193
+"heldout_qc_cv_mean",8.51393453705966,"lower",1594,"percent",NA,"clinical_fiams","winn_fixed_no_qc","WiNN","SPLIT05","Clinical FIA-MS","Held-out QC CV (%)","WiNN",10.0697109625497
 "heldout_qc_cv_mean",15.5536424008064,"lower",1594,"percent",NA,"clinical_fiams","raw","Raw","SPLIT06","Clinical FIA-MS","Held-out QC CV (%)","Raw",13.1385245277527
 "heldout_qc_cv_mean",12.5654867472037,"lower",1594,"percent",NA,"clinical_fiams","combat","ComBat","SPLIT06","Clinical FIA-MS","Held-out QC CV (%)","ComBat",11.5855535083218
 "heldout_qc_cv_mean",12.4525571854525,"lower",1594,"percent",NA,"clinical_fiams","qc_rlsc","QC-RLSC","SPLIT06","Clinical FIA-MS","Held-out QC CV (%)","QC-RLSC",11.7076030130468
 "heldout_qc_cv_mean",9.59377829638498,"lower",1594,"percent",NA,"clinical_fiams","tiger","TIGER","SPLIT06","Clinical FIA-MS","Held-out QC CV (%)","TIGER",8.2222806704212
 "heldout_qc_cv_mean",10.6561193427528,"lower",1594,"percent",NA,"clinical_fiams","serrf","SERRF","SPLIT06","Clinical FIA-MS","Held-out QC CV (%)","SERRF",9.88672998225407
-"heldout_qc_cv_mean",9.79985106139784,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_qc","WiNN (QC-tuned)","SPLIT06","Clinical FIA-MS","Held-out QC CV (%)","WiNN (QC-tuned)",9.1057283059178
-"heldout_qc_cv_mean",9.78342748646887,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT06","Clinical FIA-MS","Held-out QC CV (%)","WiNN (inferred segments)",9.23905988880479
-"heldout_qc_cv_mean",11.1099656285035,"lower",1594,"percent",NA,"clinical_fiams","winn_fixed_no_qc","WiNN","SPLIT06","Clinical FIA-MS","Held-out QC CV (%)","WiNN",10.0356568941893
+"heldout_qc_cv_mean",9.81775698906834,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_qc","WiNN (QC-tuned)","SPLIT06","Clinical FIA-MS","Held-out QC CV (%)","WiNN (QC-tuned)",9.15330406600704
+"heldout_qc_cv_mean",9.99683714096316,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT06","Clinical FIA-MS","Held-out QC CV (%)","WiNN (inferred segments)",9.50175616387193
+"heldout_qc_cv_mean",11.140591188737,"lower",1594,"percent",NA,"clinical_fiams","winn_fixed_no_qc","WiNN","SPLIT06","Clinical FIA-MS","Held-out QC CV (%)","WiNN",10.0697109625497
 "heldout_qc_cv_mean",14.4240457099573,"lower",1594,"percent",NA,"clinical_fiams","raw","Raw","SPLIT07","Clinical FIA-MS","Held-out QC CV (%)","Raw",13.1385245277527
 "heldout_qc_cv_mean",12.5860681526229,"lower",1594,"percent",NA,"clinical_fiams","combat","ComBat","SPLIT07","Clinical FIA-MS","Held-out QC CV (%)","ComBat",11.5855535083218
 "heldout_qc_cv_mean",11.2841728473578,"lower",1594,"percent",NA,"clinical_fiams","qc_rlsc","QC-RLSC","SPLIT07","Clinical FIA-MS","Held-out QC CV (%)","QC-RLSC",11.7076030130468
 "heldout_qc_cv_mean",8.05621499459818,"lower",1594,"percent",NA,"clinical_fiams","tiger","TIGER","SPLIT07","Clinical FIA-MS","Held-out QC CV (%)","TIGER",8.2222806704212
 "heldout_qc_cv_mean",10.1889998950128,"lower",1594,"percent",NA,"clinical_fiams","serrf","SERRF","SPLIT07","Clinical FIA-MS","Held-out QC CV (%)","SERRF",9.88672998225407
-"heldout_qc_cv_mean",9.38431416789233,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_qc","WiNN (QC-tuned)","SPLIT07","Clinical FIA-MS","Held-out QC CV (%)","WiNN (QC-tuned)",9.1057283059178
-"heldout_qc_cv_mean",9.99526706120588,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT07","Clinical FIA-MS","Held-out QC CV (%)","WiNN (inferred segments)",9.23905988880479
-"heldout_qc_cv_mean",10.2698226063972,"lower",1594,"percent",NA,"clinical_fiams","winn_fixed_no_qc","WiNN","SPLIT07","Clinical FIA-MS","Held-out QC CV (%)","WiNN",10.0356568941893
+"heldout_qc_cv_mean",9.38490278696758,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_qc","WiNN (QC-tuned)","SPLIT07","Clinical FIA-MS","Held-out QC CV (%)","WiNN (QC-tuned)",9.15330406600704
+"heldout_qc_cv_mean",10.4474381370807,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT07","Clinical FIA-MS","Held-out QC CV (%)","WiNN (inferred segments)",9.50175616387193
+"heldout_qc_cv_mean",10.3603520808021,"lower",1594,"percent",NA,"clinical_fiams","winn_fixed_no_qc","WiNN","SPLIT07","Clinical FIA-MS","Held-out QC CV (%)","WiNN",10.0697109625497
 "heldout_qc_cv_mean",13.1649983613127,"lower",1594,"percent",NA,"clinical_fiams","raw","Raw","SPLIT08","Clinical FIA-MS","Held-out QC CV (%)","Raw",13.1385245277527
 "heldout_qc_cv_mean",10.7455616524998,"lower",1594,"percent",NA,"clinical_fiams","combat","ComBat","SPLIT08","Clinical FIA-MS","Held-out QC CV (%)","ComBat",11.5855535083218
 "heldout_qc_cv_mean",13.1542798523359,"lower",1594,"percent",NA,"clinical_fiams","qc_rlsc","QC-RLSC","SPLIT08","Clinical FIA-MS","Held-out QC CV (%)","QC-RLSC",11.7076030130468
 "heldout_qc_cv_mean",7.93561649054551,"lower",1594,"percent",NA,"clinical_fiams","tiger","TIGER","SPLIT08","Clinical FIA-MS","Held-out QC CV (%)","TIGER",8.2222806704212
 "heldout_qc_cv_mean",9.8085671891017,"lower",1594,"percent",NA,"clinical_fiams","serrf","SERRF","SPLIT08","Clinical FIA-MS","Held-out QC CV (%)","SERRF",9.88672998225407
-"heldout_qc_cv_mean",8.09630443000421,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_qc","WiNN (QC-tuned)","SPLIT08","Clinical FIA-MS","Held-out QC CV (%)","WiNN (QC-tuned)",9.1057283059178
-"heldout_qc_cv_mean",8.15716806999434,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT08","Clinical FIA-MS","Held-out QC CV (%)","WiNN (inferred segments)",9.23905988880479
-"heldout_qc_cv_mean",9.31317865927215,"lower",1594,"percent",NA,"clinical_fiams","winn_fixed_no_qc","WiNN","SPLIT08","Clinical FIA-MS","Held-out QC CV (%)","WiNN",10.0356568941893
+"heldout_qc_cv_mean",8.24946875447592,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_qc","WiNN (QC-tuned)","SPLIT08","Clinical FIA-MS","Held-out QC CV (%)","WiNN (QC-tuned)",9.15330406600704
+"heldout_qc_cv_mean",8.58785966910731,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT08","Clinical FIA-MS","Held-out QC CV (%)","WiNN (inferred segments)",9.50175616387193
+"heldout_qc_cv_mean",9.48236320528906,"lower",1594,"percent",NA,"clinical_fiams","winn_fixed_no_qc","WiNN","SPLIT08","Clinical FIA-MS","Held-out QC CV (%)","WiNN",10.0697109625497
 "heldout_qc_cv_mean",14.018421156613,"lower",1594,"percent",NA,"clinical_fiams","raw","Raw","SPLIT09","Clinical FIA-MS","Held-out QC CV (%)","Raw",13.1385245277527
 "heldout_qc_cv_mean",13.0274627730443,"lower",1594,"percent",NA,"clinical_fiams","combat","ComBat","SPLIT09","Clinical FIA-MS","Held-out QC CV (%)","ComBat",11.5855535083218
 "heldout_qc_cv_mean",12.8787022979727,"lower",1594,"percent",NA,"clinical_fiams","qc_rlsc","QC-RLSC","SPLIT09","Clinical FIA-MS","Held-out QC CV (%)","QC-RLSC",11.7076030130468
 "heldout_qc_cv_mean",8.7237084373429,"lower",1594,"percent",NA,"clinical_fiams","tiger","TIGER","SPLIT09","Clinical FIA-MS","Held-out QC CV (%)","TIGER",8.2222806704212
 "heldout_qc_cv_mean",10.6083742703527,"lower",1594,"percent",NA,"clinical_fiams","serrf","SERRF","SPLIT09","Clinical FIA-MS","Held-out QC CV (%)","SERRF",9.88672998225407
-"heldout_qc_cv_mean",10.0084930587321,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_qc","WiNN (QC-tuned)","SPLIT09","Clinical FIA-MS","Held-out QC CV (%)","WiNN (QC-tuned)",9.1057283059178
-"heldout_qc_cv_mean",10.2555613364607,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT09","Clinical FIA-MS","Held-out QC CV (%)","WiNN (inferred segments)",9.23905988880479
-"heldout_qc_cv_mean",11.0785176400793,"lower",1594,"percent",NA,"clinical_fiams","winn_fixed_no_qc","WiNN","SPLIT09","Clinical FIA-MS","Held-out QC CV (%)","WiNN",10.0356568941893
+"heldout_qc_cv_mean",10.0415269203699,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_qc","WiNN (QC-tuned)","SPLIT09","Clinical FIA-MS","Held-out QC CV (%)","WiNN (QC-tuned)",9.15330406600704
+"heldout_qc_cv_mean",10.4129888991691,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT09","Clinical FIA-MS","Held-out QC CV (%)","WiNN (inferred segments)",9.50175616387193
+"heldout_qc_cv_mean",11.0465691172444,"lower",1594,"percent",NA,"clinical_fiams","winn_fixed_no_qc","WiNN","SPLIT09","Clinical FIA-MS","Held-out QC CV (%)","WiNN",10.0697109625497
 "heldout_qc_cv_mean",15.202241168653,"lower",1594,"percent",NA,"clinical_fiams","raw","Raw","SPLIT10","Clinical FIA-MS","Held-out QC CV (%)","Raw",13.1385245277527
 "heldout_qc_cv_mean",14.3905913677002,"lower",1594,"percent",NA,"clinical_fiams","combat","ComBat","SPLIT10","Clinical FIA-MS","Held-out QC CV (%)","ComBat",11.5855535083218
 "heldout_qc_cv_mean",12.9702515201833,"lower",1594,"percent",NA,"clinical_fiams","qc_rlsc","QC-RLSC","SPLIT10","Clinical FIA-MS","Held-out QC CV (%)","QC-RLSC",11.7076030130468
 "heldout_qc_cv_mean",9.7786492454228,"lower",1594,"percent",NA,"clinical_fiams","tiger","TIGER","SPLIT10","Clinical FIA-MS","Held-out QC CV (%)","TIGER",8.2222806704212
 "heldout_qc_cv_mean",11.7233061543936,"lower",1594,"percent",NA,"clinical_fiams","serrf","SERRF","SPLIT10","Clinical FIA-MS","Held-out QC CV (%)","SERRF",9.88672998225407
-"heldout_qc_cv_mean",10.8784225794282,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_qc","WiNN (QC-tuned)","SPLIT10","Clinical FIA-MS","Held-out QC CV (%)","WiNN (QC-tuned)",9.1057283059178
-"heldout_qc_cv_mean",10.6356925445162,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT10","Clinical FIA-MS","Held-out QC CV (%)","WiNN (inferred segments)",9.23905988880479
-"heldout_qc_cv_mean",12.0637800181079,"lower",1594,"percent",NA,"clinical_fiams","winn_fixed_no_qc","WiNN","SPLIT10","Clinical FIA-MS","Held-out QC CV (%)","WiNN",10.0356568941893
+"heldout_qc_cv_mean",11.0050826831734,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_qc","WiNN (QC-tuned)","SPLIT10","Clinical FIA-MS","Held-out QC CV (%)","WiNN (QC-tuned)",9.15330406600704
+"heldout_qc_cv_mean",10.8608642504115,"lower",1594,"percent",NA,"clinical_fiams","winn_auto_batch_qc","WiNN (inferred segments)","SPLIT10","Clinical FIA-MS","Held-out QC CV (%)","WiNN (inferred segments)",9.50175616387193
+"heldout_qc_cv_mean",12.2106134706395,"lower",1594,"percent",NA,"clinical_fiams","winn_fixed_no_qc","WiNN","SPLIT10","Clinical FIA-MS","Held-out QC CV (%)","WiNN",10.0697109625497

@@ -1,41 +1,41 @@
 metric,value,direction,denominator,units,notes,dataset_key,method_id,method,seed_id,gate_label,method_mean,method_se
-truth_sample_profile_pearson_mean,0.927581128819737,higher,450,correlation,,simulation,G_SS,selective/selective,SIM01,Selective / selective,0.924745257414109,9.86743957990273e-4
+truth_sample_profile_pearson_mean,0.922513392240546,higher,450,correlation,,simulation,G_SS,selective/selective,SIM01,Selective / selective,0.9199315841774188,9.914361721913459e-4
 truth_sample_profile_pearson_mean,0.926341462341993,higher,450,correlation,,simulation,G_AS,all/selective,SIM01,Forced drift,0.9231938843255107,0.0010172687225672456
-truth_sample_profile_pearson_mean,0.926658491565625,higher,450,correlation,,simulation,G_SA,selective/all,SIM01,Forced batch,0.9237544702787199,9.910345335549656e-4
+truth_sample_profile_pearson_mean,0.921585565154851,higher,450,correlation,,simulation,G_SA,selective/all,SIM01,Forced batch,0.9189293517473456,9.965556725884505e-4
 truth_sample_profile_pearson_mean,0.925417845735704,higher,450,correlation,,simulation,G_AA,all/all,SIM01,Forced drift + batch,0.922204233115596,0.0010231615778631855
-truth_sample_profile_pearson_mean,0.920959760448699,higher,450,correlation,,simulation,G_SS,selective/selective,SIM02,Selective / selective,0.924745257414109,9.86743957990273e-4
+truth_sample_profile_pearson_mean,0.916221824849834,higher,450,correlation,,simulation,G_SS,selective/selective,SIM02,Selective / selective,0.9199315841774188,9.914361721913459e-4
 truth_sample_profile_pearson_mean,0.91950929243979,higher,450,correlation,,simulation,G_AS,all/selective,SIM02,Forced drift,0.9231938843255107,0.0010172687225672456
-truth_sample_profile_pearson_mean,0.919969374868592,higher,450,correlation,,simulation,G_SA,selective/all,SIM02,Forced batch,0.9237544702787199,9.910345335549656e-4
+truth_sample_profile_pearson_mean,0.915215558019001,higher,450,correlation,,simulation,G_SA,selective/all,SIM02,Forced batch,0.9189293517473456,9.965556725884505e-4
 truth_sample_profile_pearson_mean,0.918519430326369,higher,450,correlation,,simulation,G_AA,all/all,SIM02,Forced drift + batch,0.922204233115596,0.0010231615778631855
-truth_sample_profile_pearson_mean,0.922735508047416,higher,450,correlation,,simulation,G_SS,selective/selective,SIM03,Selective / selective,0.924745257414109,9.86743957990273e-4
+truth_sample_profile_pearson_mean,0.918319057074143,higher,450,correlation,,simulation,G_SS,selective/selective,SIM03,Selective / selective,0.9199315841774188,9.914361721913459e-4
 truth_sample_profile_pearson_mean,0.921054478298703,higher,450,correlation,,simulation,G_AS,all/selective,SIM03,Forced drift,0.9231938843255107,0.0010172687225672456
-truth_sample_profile_pearson_mean,0.921765363886209,higher,450,correlation,,simulation,G_SA,selective/all,SIM03,Forced batch,0.9237544702787199,9.910345335549656e-4
+truth_sample_profile_pearson_mean,0.917330204980307,higher,450,correlation,,simulation,G_SA,selective/all,SIM03,Forced batch,0.9189293517473456,9.965556725884505e-4
 truth_sample_profile_pearson_mean,0.920084084891915,higher,450,correlation,,simulation,G_AA,all/all,SIM03,Forced drift + batch,0.922204233115596,0.0010231615778631855
-truth_sample_profile_pearson_mean,0.928968844053239,higher,450,correlation,,simulation,G_SS,selective/selective,SIM04,Selective / selective,0.924745257414109,9.86743957990273e-4
+truth_sample_profile_pearson_mean,0.924679627723287,higher,450,correlation,,simulation,G_SS,selective/selective,SIM04,Selective / selective,0.9199315841774188,9.914361721913459e-4
 truth_sample_profile_pearson_mean,0.92751963413647,higher,450,correlation,,simulation,G_AS,all/selective,SIM04,Forced drift,0.9231938843255107,0.0010172687225672456
-truth_sample_profile_pearson_mean,0.928007589165868,higher,450,correlation,,simulation,G_SA,selective/all,SIM04,Forced batch,0.9237544702787199,9.910345335549656e-4
+truth_sample_profile_pearson_mean,0.923711863791479,higher,450,correlation,,simulation,G_SA,selective/all,SIM04,Forced batch,0.9189293517473456,9.965556725884505e-4
 truth_sample_profile_pearson_mean,0.926557491657418,higher,450,correlation,,simulation,G_AA,all/all,SIM04,Forced drift + batch,0.922204233115596,0.0010231615778631855
-truth_sample_profile_pearson_mean,0.92213037713444,higher,450,correlation,,simulation,G_SS,selective/selective,SIM05,Selective / selective,0.924745257414109,9.86743957990273e-4
+truth_sample_profile_pearson_mean,0.916700321218107,higher,450,correlation,,simulation,G_SS,selective/selective,SIM05,Selective / selective,0.9199315841774188,9.914361721913459e-4
 truth_sample_profile_pearson_mean,0.920663897421078,higher,450,correlation,,simulation,G_AS,all/selective,SIM05,Forced drift,0.9231938843255107,0.0010172687225672456
-truth_sample_profile_pearson_mean,0.921157708926094,higher,450,correlation,,simulation,G_SA,selective/all,SIM05,Forced batch,0.9237544702787199,9.910345335549656e-4
+truth_sample_profile_pearson_mean,0.91570678076266,higher,450,correlation,,simulation,G_SA,selective/all,SIM05,Forced batch,0.9189293517473456,9.965556725884505e-4
 truth_sample_profile_pearson_mean,0.919690623985265,higher,450,correlation,,simulation,G_AA,all/all,SIM05,Forced drift + batch,0.922204233115596,0.0010231615778631855
-truth_sample_profile_pearson_mean,0.926426539853729,higher,450,correlation,,simulation,G_SS,selective/selective,SIM06,Selective / selective,0.924745257414109,9.86743957990273e-4
+truth_sample_profile_pearson_mean,0.921428542354773,higher,450,correlation,,simulation,G_SS,selective/selective,SIM06,Selective / selective,0.9199315841774188,9.914361721913459e-4
 truth_sample_profile_pearson_mean,0.924905409182372,higher,450,correlation,,simulation,G_AS,all/selective,SIM06,Forced drift,0.9231938843255107,0.0010172687225672456
-truth_sample_profile_pearson_mean,0.925305890372114,higher,450,correlation,,simulation,G_SA,selective/all,SIM06,Forced batch,0.9237544702787199,9.910345335549656e-4
+truth_sample_profile_pearson_mean,0.920299431607129,higher,450,correlation,,simulation,G_SA,selective/all,SIM06,Forced batch,0.9189293517473456,9.965556725884505e-4
 truth_sample_profile_pearson_mean,0.923782585362932,higher,450,correlation,,simulation,G_AA,all/all,SIM06,Forced drift + batch,0.922204233115596,0.0010231615778631855
-truth_sample_profile_pearson_mean,0.925959722805548,higher,450,correlation,,simulation,G_SS,selective/selective,SIM07,Selective / selective,0.924745257414109,9.86743957990273e-4
+truth_sample_profile_pearson_mean,0.920798133377798,higher,450,correlation,,simulation,G_SS,selective/selective,SIM07,Selective / selective,0.9199315841774188,9.914361721913459e-4
 truth_sample_profile_pearson_mean,0.924252416273138,higher,450,correlation,,simulation,G_AS,all/selective,SIM07,Forced drift,0.9231938843255107,0.0010172687225672456
-truth_sample_profile_pearson_mean,0.924929980773541,higher,450,correlation,,simulation,G_SA,selective/all,SIM07,Forced batch,0.9237544702787199,9.910345335549656e-4
+truth_sample_profile_pearson_mean,0.919748962388548,higher,450,correlation,,simulation,G_SA,selective/all,SIM07,Forced batch,0.9189293517473456,9.965556725884505e-4
 truth_sample_profile_pearson_mean,0.923223620389942,higher,450,correlation,,simulation,G_AA,all/all,SIM07,Forced drift + batch,0.922204233115596,0.0010231615778631855
-truth_sample_profile_pearson_mean,0.919910937493686,higher,450,correlation,,simulation,G_SS,selective/selective,SIM08,Selective / selective,0.924745257414109,9.86743957990273e-4
+truth_sample_profile_pearson_mean,0.91535475190757,higher,450,correlation,,simulation,G_SS,selective/selective,SIM08,Selective / selective,0.9199315841774188,9.914361721913459e-4
 truth_sample_profile_pearson_mean,0.918163882927565,higher,450,correlation,,simulation,G_AS,all/selective,SIM08,Forced drift,0.9231938843255107,0.0010172687225672456
-truth_sample_profile_pearson_mean,0.9189169913828,higher,450,correlation,,simulation,G_SA,selective/all,SIM08,Forced batch,0.9237544702787199,9.910345335549656e-4
+truth_sample_profile_pearson_mean,0.914355058247836,higher,450,correlation,,simulation,G_SA,selective/all,SIM08,Forced batch,0.9189293517473456,9.965556725884505e-4
 truth_sample_profile_pearson_mean,0.917166457200591,higher,450,correlation,,simulation,G_AA,all/all,SIM08,Forced drift + batch,0.922204233115596,0.0010231615778631855
-truth_sample_profile_pearson_mean,0.927705240831072,higher,450,correlation,,simulation,G_SS,selective/selective,SIM09,Selective / selective,0.924745257414109,9.86743957990273e-4
+truth_sample_profile_pearson_mean,0.922791606690887,higher,450,correlation,,simulation,G_SS,selective/selective,SIM09,Selective / selective,0.9199315841774188,9.914361721913459e-4
 truth_sample_profile_pearson_mean,0.926449315730968,higher,450,correlation,,simulation,G_AS,all/selective,SIM09,Forced drift,0.9231938843255107,0.0010172687225672456
-truth_sample_profile_pearson_mean,0.926853453706703,higher,450,correlation,,simulation,G_SA,selective/all,SIM09,Forced batch,0.9237544702787199,9.910345335549656e-4
+truth_sample_profile_pearson_mean,0.921932112708871,higher,450,correlation,,simulation,G_SA,selective/all,SIM09,Forced batch,0.9189293517473456,9.965556725884505e-4
 truth_sample_profile_pearson_mean,0.925609112180984,higher,450,correlation,,simulation,G_AA,all/all,SIM09,Forced drift + batch,0.922204233115596,0.0010231615778631855
-truth_sample_profile_pearson_mean,0.925074514653524,higher,450,correlation,,simulation,G_SS,selective/selective,SIM10,Selective / selective,0.924745257414109,9.86743957990273e-4
+truth_sample_profile_pearson_mean,0.920508584337243,higher,450,correlation,,simulation,G_SS,selective/selective,SIM10,Selective / selective,0.9199315841774188,9.914361721913459e-4
 truth_sample_profile_pearson_mean,0.923079054503031,higher,450,correlation,,simulation,G_AS,all/selective,SIM10,Forced drift,0.9231938843255107,0.0010172687225672456
-truth_sample_profile_pearson_mean,0.923979858139653,higher,450,correlation,,simulation,G_SA,selective/all,SIM10,Forced batch,0.9237544702787199,9.910345335549656e-4
+truth_sample_profile_pearson_mean,0.919407979812774,higher,450,correlation,,simulation,G_SA,selective/all,SIM10,Forced batch,0.9189293517473456,9.965556725884505e-4
 truth_sample_profile_pearson_mean,0.92199107942484,higher,450,correlation,,simulation,G_AA,all/all,SIM10,Forced drift + batch,0.922204233115596,0.0010231615778631855

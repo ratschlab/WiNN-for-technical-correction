@@ -1,0 +1,77 @@
+[
+  {
+    "file": "generated/supplementary_table_data/endpoint_free_selection_manifest.csv",
+    "comparator_rows": 36,
+    "passed": true
+  },
+  {
+    "file": "generated/supplementary_table_data/intensity_domain_safeguard.csv",
+    "comparator_rows": 456,
+    "passed": true
+  },
+  {
+    "file": "generated/supplementary_table_data/leave_one_batch_out_bootstrap_summary.csv",
+    "comparator_rows": 408,
+    "passed": true
+  },
+  {
+    "file": "generated/supplementary_table_data/table_s10_runtime_retention.csv",
+    "comparator_rows": 30,
+    "passed": true
+  },
+  {
+    "file": "generated/supplementary_table_data/table_s11_association_permutation.csv",
+    "comparator_rows": 25,
+    "passed": true
+  },
+  {
+    "file": "generated/supplementary_table_data/table_s12_lobo_fold_level.csv",
+    "comparator_rows": 255,
+    "passed": true
+  },
+  {
+    "file": "generated/supplementary_table_data/table_s12_lobo_summary.csv",
+    "comparator_rows": 75,
+    "passed": true
+  },
+  {
+    "file": "generated/supplementary_table_data/table_s14_reference_splits.csv",
+    "comparator_rows": 30,
+    "passed": true
+  },
+  {
+    "file": "generated/supplementary_table_data/table_s4_simulation.csv",
+    "comparator_rows": 6,
+    "passed": true
+  },
+  {
+    "file": "generated/supplementary_table_data/table_s5_mtbls79.csv",
+    "comparator_rows": 5,
+    "passed": true
+  },
+  {
+    "file": "generated/supplementary_table_data/table_s6_batchcorr.csv",
+    "comparator_rows": 5,
+    "passed": true
+  },
+  {
+    "file": "generated/supplementary_table_data/table_s7_clinical.csv",
+    "comparator_rows": 5,
+    "passed": true
+  },
+  {
+    "file": "generated/supplementary_table_data/table_s8_sacurine.csv",
+    "comparator_rows": 5,
+    "passed": true
+  },
+  {
+    "file": "generated/supplementary_table_data/table_s9_waveica.csv",
+    "comparator_rows": 5,
+    "passed": true
+  },
+  {
+    "file": "generated/supplementary_table_data/tiger_nonfinite_feature_fallback.csv",
+    "comparator_rows": 76,
+    "passed": true
+  }
+]

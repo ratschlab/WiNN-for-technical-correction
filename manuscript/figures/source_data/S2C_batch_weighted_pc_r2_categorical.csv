@@ -1,25 +1,25 @@
 dataset_key,dataset,method_id,method,metric,value,direction,denominator,units,gate_label,dataset_short
-simulation,Simulation,G_SS,selective/selective,batch_weighted_pc_r2_categorical,0.00104441467773887,lower,450,weighted R-squared,Selective / selective,Simulation
+simulation,Simulation,G_SS,selective/selective,batch_weighted_pc_r2_categorical,0.00102217034654324,lower,450,weighted R-squared,Selective / selective,Simulation
 simulation,Simulation,G_AS,all/selective,batch_weighted_pc_r2_categorical,0.00107950763052334,lower,450,weighted R-squared,Forced drift,Simulation
-simulation,Simulation,G_SA,selective/all,batch_weighted_pc_r2_categorical,8.63845380170726e-5,lower,450,weighted R-squared,Forced batch,Simulation
+simulation,Simulation,G_SA,selective/all,batch_weighted_pc_r2_categorical,1.0371967006683e-4,lower,450,weighted R-squared,Forced batch,Simulation
 simulation,Simulation,G_AA,all/all,batch_weighted_pc_r2_categorical,9.51162043016886e-5,lower,450,weighted R-squared,Forced drift + batch,Simulation
-mtbls79,MTBLS79,G_SS,selective/selective,batch_weighted_pc_r2_categorical,0.0108837435440364,lower,134,weighted R-squared,Selective / selective,MTBLS79
+mtbls79,MTBLS79,G_SS,selective/selective,batch_weighted_pc_r2_categorical,0.0108817642468997,lower,134,weighted R-squared,Selective / selective,MTBLS79
 mtbls79,MTBLS79,G_AS,all/selective,batch_weighted_pc_r2_categorical,0.00888734294063982,lower,134,weighted R-squared,Forced drift,MTBLS79
-mtbls79,MTBLS79,G_SA,selective/all,batch_weighted_pc_r2_categorical,0.0106990744637312,lower,134,weighted R-squared,Forced batch,MTBLS79
+mtbls79,MTBLS79,G_SA,selective/all,batch_weighted_pc_r2_categorical,0.0107003706755004,lower,134,weighted R-squared,Forced batch,MTBLS79
 mtbls79,MTBLS79,G_AA,all/all,batch_weighted_pc_r2_categorical,0.00808325101779084,lower,134,weighted R-squared,Forced drift + batch,MTBLS79
-clinical_fiams,Clinical FIA-MS,G_SS,selective/selective,batch_weighted_pc_r2_categorical,0.00209422396564622,lower,536,weighted R-squared,Selective / selective,Clinical
+clinical_fiams,Clinical FIA-MS,G_SS,selective/selective,batch_weighted_pc_r2_categorical,0.00221425635390252,lower,536,weighted R-squared,Selective / selective,Clinical
 clinical_fiams,Clinical FIA-MS,G_AS,all/selective,batch_weighted_pc_r2_categorical,0.00114148410841319,lower,536,weighted R-squared,Forced drift,Clinical
-clinical_fiams,Clinical FIA-MS,G_SA,selective/all,batch_weighted_pc_r2_categorical,0.00197602025432582,lower,536,weighted R-squared,Forced batch,Clinical
+clinical_fiams,Clinical FIA-MS,G_SA,selective/all,batch_weighted_pc_r2_categorical,0.00207904761924138,lower,536,weighted R-squared,Forced batch,Clinical
 clinical_fiams,Clinical FIA-MS,G_AA,all/all,batch_weighted_pc_r2_categorical,0.00106618651126065,lower,536,weighted R-squared,Forced drift + batch,Clinical
-batchcorr_set1,BatchCorr Set 1,G_SS,selective/selective,batch_weighted_pc_r2_categorical,5.6347557327368e-4,lower,710,weighted R-squared,Selective / selective,BatchCorr
+batchcorr_set1,BatchCorr Set 1,G_SS,selective/selective,batch_weighted_pc_r2_categorical,6.1783984340079e-4,lower,710,weighted R-squared,Selective / selective,BatchCorr
 batchcorr_set1,BatchCorr Set 1,G_AS,all/selective,batch_weighted_pc_r2_categorical,5.9145925776104e-4,lower,710,weighted R-squared,Forced drift,BatchCorr
-batchcorr_set1,BatchCorr Set 1,G_SA,selective/all,batch_weighted_pc_r2_categorical,5.0134061795939e-4,lower,710,weighted R-squared,Forced batch,BatchCorr
+batchcorr_set1,BatchCorr Set 1,G_SA,selective/all,batch_weighted_pc_r2_categorical,5.5821700533711e-4,lower,710,weighted R-squared,Forced batch,BatchCorr
 batchcorr_set1,BatchCorr Set 1,G_AA,all/all,batch_weighted_pc_r2_categorical,5.6194922733052e-4,lower,710,weighted R-squared,Forced drift + batch,BatchCorr
-sacurine,Sacurine,G_SS,selective/selective,batch_weighted_pc_r2_categorical,6.1694213206163e-4,lower,184,weighted R-squared,Selective / selective,Sacurine
+sacurine,Sacurine,G_SS,selective/selective,batch_weighted_pc_r2_categorical,7.3899100317073e-4,lower,184,weighted R-squared,Selective / selective,Sacurine
 sacurine,Sacurine,G_AS,all/selective,batch_weighted_pc_r2_categorical,4.3699551369579e-4,lower,184,weighted R-squared,Forced drift,Sacurine
-sacurine,Sacurine,G_SA,selective/all,batch_weighted_pc_r2_categorical,3.1931946397011e-4,lower,184,weighted R-squared,Forced batch,Sacurine
+sacurine,Sacurine,G_SA,selective/all,batch_weighted_pc_r2_categorical,3.8124532824159e-4,lower,184,weighted R-squared,Forced batch,Sacurine
 sacurine,Sacurine,G_AA,all/all,batch_weighted_pc_r2_categorical,1.9007445433437e-4,lower,184,weighted R-squared,Forced drift + batch,Sacurine
-waveica,WaveICA,G_SS,selective/selective,batch_weighted_pc_r2_categorical,0.00256077164587594,lower,568,weighted R-squared,Selective / selective,WaveICA
+waveica,WaveICA,G_SS,selective/selective,batch_weighted_pc_r2_categorical,0.00283808321784621,lower,568,weighted R-squared,Selective / selective,WaveICA
 waveica,WaveICA,G_AS,all/selective,batch_weighted_pc_r2_categorical,0.00229445763648674,lower,568,weighted R-squared,Forced drift,WaveICA
-waveica,WaveICA,G_SA,selective/all,batch_weighted_pc_r2_categorical,0.00254981641249695,lower,568,weighted R-squared,Forced batch,WaveICA
+waveica,WaveICA,G_SA,selective/all,batch_weighted_pc_r2_categorical,0.00281321070212405,lower,568,weighted R-squared,Forced batch,WaveICA
 waveica,WaveICA,G_AA,all/all,batch_weighted_pc_r2_categorical,0.00227983793177708,lower,568,weighted R-squared,Forced drift + batch,WaveICA

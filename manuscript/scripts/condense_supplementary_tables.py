@@ -214,7 +214,7 @@ def selective_forced():
                "drift detrends every testable feature-segment profile, forced batch adjusts every eligible "
                "feature, and MAD preparation and PQN remain active. Technical rows use one prespecified "
                "representative simulation seed and the empirical point estimates; clean-truth rows are means over "
-               "ten simulation seeds, in which the selective policy was best for every endpoint in every seed. "
+               "ten simulation seeds. "
                "Lower values are favorable for CV, GAM, batch $R^2$ and RMSE.")
     return longtable("llrrrr", caption, "tab:supp_selective_forced",
                      ["Dataset", "Endpoint", "Selective", "Forced drift", "Forced batch", "Forced both"],

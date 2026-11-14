@@ -30,23 +30,23 @@ correlation",0.921738113229454,0.87824630202469,0.948852876218013,2000,"mtbls79"
 "1","cow_vs_sheep","serrf","SERRF","Sign
 concordance",0.848329180064309,0.803858520900322,0.886665996784566,2000,"mtbls79","MTBLS79","SERRF",3.78125
 "1","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Pearson effect
-correlation",0.970701962614434,0.951803676533403,0.982058383703906,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.78125
+correlation",0.970680085284782,0.951839191167883,0.982081812542896,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.78125
 "1","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Spearman effect
-correlation",0.921532154778338,0.878163697223711,0.948875102035534,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.78125
+correlation",0.921498777956666,0.877447333045342,0.948689599747249,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.78125
 "1","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Sign
-concordance",0.85637479903537,0.809073553054662,0.897909967845659,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.78125
+concordance",0.856649718649518,0.809073553054662,0.89792001607717,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.78125
 "1","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Pearson effect
-correlation",0.969650911641276,0.948237956055472,0.98194978301917,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.78125
+correlation",0.970536832904907,0.95113753233969,0.982217936586559,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.78125
 "1","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Spearman effect
-correlation",0.917461704047933,0.865900296286731,0.948000939724484,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.78125
+correlation",0.920859645583704,0.876329052034227,0.949367364394757,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.78125
 "1","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Sign
-concordance",0.850113143086817,0.800231109324759,0.89591036977492,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.78125
+concordance",0.855630225080386,0.807465836012862,0.898713826366559,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.78125
 "1","cow_vs_sheep","winn_fixed_no_qc","WiNN","Pearson effect
-correlation",0.970689431845571,0.951707950271861,0.982083630397351,2000,"mtbls79","MTBLS79","WiNN",0.78125
+correlation",0.97066467289007,0.951738095267849,0.982084517016781,2000,"mtbls79","MTBLS79","WiNN",0.78125
 "1","cow_vs_sheep","winn_fixed_no_qc","WiNN","Spearman effect
-correlation",0.921437837089082,0.877555266966538,0.948766363800395,2000,"mtbls79","MTBLS79","WiNN",0.78125
+correlation",0.921402189376176,0.877299854016484,0.948711855367882,2000,"mtbls79","MTBLS79","WiNN",0.78125
 "1","cow_vs_sheep","winn_fixed_no_qc","WiNN","Sign
-concordance",0.847676245980707,0.80384847266881,0.885852090032154,2000,"mtbls79","MTBLS79","WiNN",0.78125
+concordance",0.847886655948553,0.80384847266881,0.885450160771704,2000,"mtbls79","MTBLS79","WiNN",0.78125
 "2","cow_vs_sheep","raw","Raw","Pearson effect
 correlation",0.972383055196831,0.950243458006461,0.983002019169311,2000,"mtbls79","MTBLS79","Raw",7.84375
 "2","cow_vs_sheep","raw","Raw","Spearman effect
@@ -78,23 +78,23 @@ correlation",0.925860442123125,0.884958385333012,0.952211522966167,2000,"mtbls79
 "2","cow_vs_sheep","serrf","SERRF","Sign
 concordance",0.858506631832797,0.818307877813505,0.891087218649518,2000,"mtbls79","MTBLS79","SERRF",3.84375
 "2","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Pearson effect
-correlation",0.972524348532712,0.950184548110928,0.983100328266187,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.84375
+correlation",0.972494957790295,0.950195176418633,0.983089408139781,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.84375
 "2","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Spearman effect
-correlation",0.925201325829149,0.883978489486017,0.95172824361579,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.84375
+correlation",0.925143942721606,0.883917145115452,0.951639275324275,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.84375
 "2","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Sign
-concordance",0.861314710610932,0.818729903536977,0.895900321543408,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.84375
+concordance",0.861093649517685,0.818327974276527,0.896302250803859,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.84375
 "2","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Pearson effect
-correlation",0.97234798697443,0.949662324600502,0.983004625147599,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.84375
+correlation",0.972415324216368,0.949260192865194,0.983067110308661,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.84375
 "2","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Spearman effect
-correlation",0.924789423679262,0.882915790423332,0.952314881505683,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.84375
+correlation",0.925127988553504,0.882816437889687,0.952136230134922,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.84375
 "2","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Sign
-concordance",0.860514469453376,0.816720257234727,0.895498392282958,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.84375
+concordance",0.861489750803858,0.817112138263666,0.89591036977492,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.84375
 "2","cow_vs_sheep","winn_fixed_no_qc","WiNN","Pearson effect
-correlation",0.972529978965372,0.950159154615085,0.983114414481485,2000,"mtbls79","MTBLS79","WiNN",0.84375
+correlation",0.972500213588192,0.950190877607946,0.983108274176864,2000,"mtbls79","MTBLS79","WiNN",0.84375
 "2","cow_vs_sheep","winn_fixed_no_qc","WiNN","Spearman effect
-correlation",0.925209622072982,0.884135201714036,0.951689198265424,2000,"mtbls79","MTBLS79","WiNN",0.84375
+correlation",0.925156717499469,0.883990589218699,0.951693758453361,2000,"mtbls79","MTBLS79","WiNN",0.84375
 "2","cow_vs_sheep","winn_fixed_no_qc","WiNN","Sign
-concordance",0.858616961414791,0.818327974276527,0.891077170418006,2000,"mtbls79","MTBLS79","WiNN",0.84375
+concordance",0.858563303858521,0.818327974276527,0.891077170418006,2000,"mtbls79","MTBLS79","WiNN",0.84375
 "3","cow_vs_sheep","raw","Raw","Pearson effect
 correlation",0.965745434670385,0.949811563751274,0.976762054978165,2000,"mtbls79","MTBLS79","Raw",7.90625
 "3","cow_vs_sheep","raw","Raw","Spearman effect
@@ -126,23 +126,23 @@ correlation",0.916671877753549,0.88096931047476,0.940959104334474,2000,"mtbls79"
 "3","cow_vs_sheep","serrf","SERRF","Sign
 concordance",0.854759646302251,0.815102491961415,0.885460209003215,2000,"mtbls79","MTBLS79","SERRF",3.90625
 "3","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Pearson effect
-correlation",0.966605606185808,0.951494566185581,0.97698468745341,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.90625
+correlation",0.966535931490572,0.951345612662149,0.977000420980601,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.90625
 "3","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Spearman effect
-correlation",0.916468457454738,0.881459479486709,0.940350161639072,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.90625
+correlation",0.916236690605717,0.880852428081267,0.940215606058082,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.90625
 "3","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Sign
-concordance",0.859600683279743,0.818327974276527,0.892282958199357,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.90625
+concordance",0.859225281350482,0.818317926045016,0.891881028938907,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.90625
 "3","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Pearson effect
-correlation",0.966421449404139,0.950923230259243,0.977171576328373,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.90625
+correlation",0.966471771459038,0.950632437251721,0.977028548270753,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.90625
 "3","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Spearman effect
-correlation",0.915924850854042,0.878677294754879,0.940986666701282,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.90625
+correlation",0.916291296080282,0.880531790434309,0.940965854155166,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.90625
 "3","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Sign
-concordance",0.858759847266881,0.815514469453376,0.893498794212219,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.90625
+concordance",0.859363545016077,0.816720257234727,0.893900723472669,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.90625
 "3","cow_vs_sheep","winn_fixed_no_qc","WiNN","Pearson effect
-correlation",0.966633104611533,0.951534038625372,0.976990445461777,2000,"mtbls79","MTBLS79","WiNN",0.90625
+correlation",0.966530338393305,0.951439595738042,0.976975604885296,2000,"mtbls79","MTBLS79","WiNN",0.90625
 "3","cow_vs_sheep","winn_fixed_no_qc","WiNN","Spearman effect
-correlation",0.916548851130827,0.881615327872475,0.940372789116846,2000,"mtbls79","MTBLS79","WiNN",0.90625
+correlation",0.916161315741111,0.880827545111702,0.94018352974686,2000,"mtbls79","MTBLS79","WiNN",0.90625
 "3","cow_vs_sheep","winn_fixed_no_qc","WiNN","Sign
-concordance",0.854400321543408,0.814308681672026,0.885058279742765,2000,"mtbls79","MTBLS79","WiNN",0.90625
+concordance",0.854015675241158,0.814690514469453,0.885048231511254,2000,"mtbls79","MTBLS79","WiNN",0.90625
 "4","cow_vs_sheep","raw","Raw","Pearson effect
 correlation",0.965103354043279,0.940887988803225,0.978430395728335,2000,"mtbls79","MTBLS79","Raw",7.96875
 "4","cow_vs_sheep","raw","Raw","Spearman effect
@@ -174,23 +174,23 @@ correlation",0.919397653294867,0.868043324355867,0.94608222336243,2000,"mtbls79"
 "4","cow_vs_sheep","serrf","SERRF","Sign
 concordance",0.85066057073955,0.789790996784566,0.887067926045016,2000,"mtbls79","MTBLS79","SERRF",3.96875
 "4","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Pearson effect
-correlation",0.96709058970126,0.94543741822856,0.978847923998736,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.96875
+correlation",0.967143965383478,0.945427783517475,0.97886818432509,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.96875
 "4","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Spearman effect
-correlation",0.918446562625524,0.867934603593533,0.945563244304596,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.96875
+correlation",0.918633248434771,0.867751166583053,0.945771749356129,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.96875
 "4","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Sign
-concordance",0.856007234726688,0.803456591639871,0.891479099678457,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.96875
+concordance",0.856325964630225,0.80384847266881,0.891881028938907,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",2.96875
 "4","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Pearson effect
-correlation",0.964759854447555,0.940979509789551,0.978043250365057,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.96875
+correlation",0.965308006521369,0.941804685772838,0.978461882619394,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.96875
 "4","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Spearman effect
-correlation",0.914605611339286,0.859944705314619,0.944223863504885,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.96875
+correlation",0.914280949867314,0.859149467217504,0.94389429335854,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.96875
 "4","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Sign
-concordance",0.852244172025723,0.797427652733119,0.888665594855305,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.96875
+concordance",0.851586816720257,0.796221864951768,0.888675643086817,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",1.96875
 "4","cow_vs_sheep","winn_fixed_no_qc","WiNN","Pearson effect
-correlation",0.967096400441018,0.945404054095523,0.97885173056984,2000,"mtbls79","MTBLS79","WiNN",0.96875
+correlation",0.967156210302364,0.945407002035025,0.978885458185861,2000,"mtbls79","MTBLS79","WiNN",0.96875
 "4","cow_vs_sheep","winn_fixed_no_qc","WiNN","Spearman effect
-correlation",0.918391932301396,0.86809077034667,0.945566191248085,2000,"mtbls79","MTBLS79","WiNN",0.96875
+correlation",0.918571956794678,0.867850100801764,0.945595200098264,2000,"mtbls79","MTBLS79","WiNN",0.96875
 "4","cow_vs_sheep","winn_fixed_no_qc","WiNN","Sign
-concordance",0.852998995176849,0.809475482315112,0.886665996784566,2000,"mtbls79","MTBLS79","WiNN",0.96875
+concordance",0.853061294212219,0.809475482315112,0.887057877813505,2000,"mtbls79","MTBLS79","WiNN",0.96875
 "5","cow_vs_sheep","raw","Raw","Pearson effect
 correlation",0.95218797808596,0.913371029553378,0.972691120485126,2000,"mtbls79","MTBLS79","Raw",8.03125
 "5","cow_vs_sheep","raw","Raw","Spearman effect
@@ -222,23 +222,23 @@ correlation",0.900623645734668,0.849653772328973,0.934728336565661,2000,"mtbls79
 "5","cow_vs_sheep","serrf","SERRF","Sign
 concordance",0.84306209807074,0.80425040192926,0.874206189710611,2000,"mtbls79","MTBLS79","SERRF",4.03125
 "5","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Pearson effect
-correlation",0.953789289027616,0.916483087205976,0.973187706951875,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.03125
+correlation",0.953723809917262,0.916285250824021,0.973097137626878,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.03125
 "5","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Spearman effect
-correlation",0.901032059856787,0.850442971185629,0.935451142813492,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.03125
+correlation",0.900813724798564,0.850360232212205,0.935246676999275,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.03125
 "5","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Sign
-concordance",0.847630627009646,0.808671623794212,0.882234726688103,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.03125
+concordance",0.847486133440514,0.808681672025723,0.882234726688103,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.03125
 "5","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Pearson effect
-correlation",0.953562876500107,0.916221305326431,0.973046019668502,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.03125
+correlation",0.95385235671019,0.916916062671815,0.973198742194831,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.03125
 "5","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Spearman effect
-correlation",0.89971367610277,0.847063586087474,0.934155306134295,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.03125
+correlation",0.900709989445631,0.848701647821201,0.934984390302121,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.03125
 "5","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Sign
-concordance",0.846403536977492,0.807867765273312,0.881028938906752,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.03125
+concordance",0.847806270096463,0.809485530546624,0.882234726688103,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.03125
 "5","cow_vs_sheep","winn_fixed_no_qc","WiNN","Pearson effect
-correlation",0.953658972234359,0.916311064149559,0.97308775472075,2000,"mtbls79","MTBLS79","WiNN",1.03125
+correlation",0.953640837825172,0.916239393353902,0.973044736911489,2000,"mtbls79","MTBLS79","WiNN",1.03125
 "5","cow_vs_sheep","winn_fixed_no_qc","WiNN","Spearman effect
-correlation",0.900769050625431,0.8498535046297,0.935258821300272,2000,"mtbls79","MTBLS79","WiNN",1.03125
+correlation",0.900695348434239,0.849786060905991,0.935235768378192,2000,"mtbls79","MTBLS79","WiNN",1.03125
 "5","cow_vs_sheep","winn_fixed_no_qc","WiNN","Sign
-concordance",0.843926045016077,0.805054260450161,0.875411977491961,2000,"mtbls79","MTBLS79","WiNN",1.03125
+concordance",0.843869172025723,0.804642282958199,0.8758038585209,2000,"mtbls79","MTBLS79","WiNN",1.03125
 "6","cow_vs_sheep","raw","Raw","Pearson effect
 correlation",0.950695960365394,0.89845185253374,0.973447560135951,2000,"mtbls79","MTBLS79","Raw",8.09375
 "6","cow_vs_sheep","raw","Raw","Spearman effect
@@ -270,23 +270,23 @@ correlation",0.90037351389271,0.838026021845072,0.93732646235643,2000,"mtbls79",
 "6","cow_vs_sheep","serrf","SERRF","Sign
 concordance",0.846386053054662,0.804652331189711,0.883038585209003,2000,"mtbls79","MTBLS79","SERRF",4.09375
 "6","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Pearson effect
-correlation",0.952861758102638,0.904545374491917,0.974056515937834,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.09375
+correlation",0.952853353719705,0.904459159234474,0.974063233947905,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.09375
 "6","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Spearman effect
-correlation",0.901460147870408,0.838083646650797,0.937907994680899,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.09375
+correlation",0.901385472556545,0.837983954459061,0.937908275492452,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.09375
 "6","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Sign
-concordance",0.846744975884244,0.802250803858521,0.887057877813505,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.09375
+concordance",0.846570136655949,0.802250803858521,0.887861736334405,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.09375
 "6","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Pearson effect
-correlation",0.953129220445341,0.905822510951083,0.974133565855482,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.09375
+correlation",0.953172869876269,0.905944439689771,0.974283933531095,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.09375
 "6","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Spearman effect
-correlation",0.902019457377147,0.838555238992907,0.938313811922997,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.09375
+correlation",0.902065100998012,0.839413729249396,0.938180632525092,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.09375
 "6","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Sign
-concordance",0.845453175241158,0.80104501607717,0.885852090032154,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.09375
+concordance",0.845002411575563,0.801034967845659,0.885058279742765,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.09375
 "6","cow_vs_sheep","winn_fixed_no_qc","WiNN","Pearson effect
-correlation",0.952863869317875,0.904618757629024,0.974070172856342,2000,"mtbls79","MTBLS79","WiNN",1.09375
+correlation",0.952859107725685,0.904504486682886,0.974083267821916,2000,"mtbls79","MTBLS79","WiNN",1.09375
 "6","cow_vs_sheep","winn_fixed_no_qc","WiNN","Spearman effect
-correlation",0.901424444405811,0.83794066956719,0.937832090963757,2000,"mtbls79","MTBLS79","WiNN",1.09375
+correlation",0.901389493759276,0.837906533510244,0.937823427257282,2000,"mtbls79","MTBLS79","WiNN",1.09375
 "6","cow_vs_sheep","winn_fixed_no_qc","WiNN","Sign
-concordance",0.846787982315113,0.80344654340836,0.883450562700965,2000,"mtbls79","MTBLS79","WiNN",1.09375
+concordance",0.846714831189711,0.803054662379421,0.883440514469453,2000,"mtbls79","MTBLS79","WiNN",1.09375
 "7","cow_vs_sheep","raw","Raw","Pearson effect
 correlation",0.956136953393113,0.930900855479054,0.971176322972488,2000,"mtbls79","MTBLS79","Raw",8.15625
 "7","cow_vs_sheep","raw","Raw","Spearman effect
@@ -318,23 +318,23 @@ correlation",0.895353853150418,0.846120869487437,0.929328307271188,2000,"mtbls79
 "7","cow_vs_sheep","serrf","SERRF","Sign
 concordance",0.83190172829582,0.783762057877814,0.865755627009646,2000,"mtbls79","MTBLS79","SERRF",4.15625
 "7","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Pearson effect
-correlation",0.954703589530809,0.927754660694453,0.969951458621189,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.15625
+correlation",0.954726288021608,0.927827006057143,0.96997816347478,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.15625
 "7","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Spearman effect
-correlation",0.891589611065964,0.840912290111227,0.925784450480566,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.15625
+correlation",0.891833300321094,0.841076731708393,0.925901736871812,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.15625
 "7","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Sign
-concordance",0.835031350482315,0.794594051446945,0.870578778135048,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.15625
+concordance",0.835242966237942,0.794212218649518,0.870578778135048,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.15625
 "7","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Pearson effect
-correlation",0.951369944149578,0.923771146514164,0.96845362973432,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.15625
+correlation",0.951548593204002,0.923638015198381,0.968687132171659,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.15625
 "7","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Spearman effect
-correlation",0.886136616915435,0.827342754604031,0.924065241240163,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.15625
+correlation",0.886878120946334,0.828119552716565,0.924920986902664,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.15625
 "7","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Sign
-concordance",0.833558279742765,0.786153536977492,0.870186897106109,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.15625
+concordance",0.834546020900322,0.787379421221865,0.871382636655949,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.15625
 "7","cow_vs_sheep","winn_fixed_no_qc","WiNN","Pearson effect
-correlation",0.954684327460545,0.92779433069878,0.96990975524234,2000,"mtbls79","MTBLS79","WiNN",1.15625
+correlation",0.954717987458936,0.927797703028379,0.969949680597602,2000,"mtbls79","MTBLS79","WiNN",1.15625
 "7","cow_vs_sheep","winn_fixed_no_qc","WiNN","Spearman effect
-correlation",0.891646722188741,0.840892562476336,0.92573474535537,2000,"mtbls79","MTBLS79","WiNN",1.15625
+correlation",0.89186669454194,0.84114715389287,0.925917881159619,2000,"mtbls79","MTBLS79","WiNN",1.15625
 "7","cow_vs_sheep","winn_fixed_no_qc","WiNN","Sign
-concordance",0.833429059485531,0.792604501607717,0.865755627009646,2000,"mtbls79","MTBLS79","WiNN",1.15625
+concordance",0.833556672025723,0.792202572347267,0.865765675241157,2000,"mtbls79","MTBLS79","WiNN",1.15625
 "8","cow_vs_sheep","raw","Raw","Pearson effect
 correlation",0.964549420377426,0.945469060106016,0.975981752512917,2000,"mtbls79","MTBLS79","Raw",8.21875
 "8","cow_vs_sheep","raw","Raw","Spearman effect
@@ -366,20 +366,20 @@ correlation",0.916160862548743,0.877780393447871,0.940899124264708,2000,"mtbls79
 "8","cow_vs_sheep","serrf","SERRF","Sign
 concordance",0.85434786977492,0.817112138263666,0.885450160771704,2000,"mtbls79","MTBLS79","SERRF",4.21875
 "8","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Pearson effect
-correlation",0.963805709083325,0.945167342795127,0.974868301925914,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.21875
+correlation",0.963767841412499,0.945151095659995,0.974839914595886,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.21875
 "8","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Spearman effect
-correlation",0.913241346707083,0.875747278577251,0.937538025070989,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.21875
+correlation",0.913123824134155,0.875380388485984,0.937512828740198,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.21875
 "8","cow_vs_sheep","winn_auto_qc","WiNN (QC-tuned)","Sign
-concordance",0.856471262057878,0.815514469453376,0.888665594855305,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.21875
+concordance",0.856546020900322,0.815112540192926,0.888665594855305,2000,"mtbls79","MTBLS79","WiNN (QC-tuned)",3.21875
 "8","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Pearson effect
-correlation",0.963362589651292,0.945057578249941,0.974511563726881,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.21875
+correlation",0.963428182006782,0.945148526243567,0.974539042834633,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.21875
 "8","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Spearman effect
-correlation",0.912265568487381,0.873506227329658,0.937537105089801,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.21875
+correlation",0.912319689727591,0.873150952972416,0.937654518796828,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.21875
 "8","cow_vs_sheep","winn_auto_batch_qc","WiNN (inferred segments)","Sign
-concordance",0.855262861736334,0.809485530546624,0.890675241157556,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.21875
+concordance",0.855484525723473,0.810681270096463,0.889871382636656,2000,"mtbls79","MTBLS79","WiNN (inferred segments)",2.21875
 "8","cow_vs_sheep","winn_fixed_no_qc","WiNN","Pearson effect
-correlation",0.963817618606972,0.945120048244176,0.97484803678351,2000,"mtbls79","MTBLS79","WiNN",1.21875
+correlation",0.963775964968291,0.945126516082662,0.97482971699102,2000,"mtbls79","MTBLS79","WiNN",1.21875
 "8","cow_vs_sheep","winn_fixed_no_qc","WiNN","Spearman effect
-correlation",0.913263318527282,0.875791243915094,0.937623046222652,2000,"mtbls79","MTBLS79","WiNN",1.21875
+correlation",0.913130712641781,0.875293500295914,0.937525191441523,2000,"mtbls79","MTBLS79","WiNN",1.21875
 "8","cow_vs_sheep","winn_fixed_no_qc","WiNN","Sign
-concordance",0.854659163987138,0.817524115755627,0.884646302250804,2000,"mtbls79","MTBLS79","WiNN",1.21875
+concordance",0.85426788585209,0.817504019292605,0.884646302250804,2000,"mtbls79","MTBLS79","WiNN",1.21875

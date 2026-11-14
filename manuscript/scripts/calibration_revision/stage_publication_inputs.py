@@ -335,6 +335,9 @@ def prepare(s, expected_calibration="permutation"):
     s.matching("generated/supplementary_table_data/leave_one_batch_out_bootstrap_summary.csv",
                s.table("leave_one_batch_out_bootstrap_summary", derivative=True),
                ["dataset_key", "method_id", "heldout_batch", "endpoint", "metric"], outside=True)
+    s.matching("generated/supplementary_table_data/table_s12_lobo_fold_level.csv",
+               s.table("leave_one_batch_out_bootstrap_summary", derivative=True),
+               ["dataset_key", "method_id", "heldout_batch", "endpoint", "metric"], outside=True)
 
 
 
@@ -412,8 +415,8 @@ def main():
     derivative = (args.derivative_root or final / "derivative").resolve()
     staging = Staging(root, final, derivative)
     prepare(staging, args.expected_calibration)
-    if len(staging.pending) != 37:
-        raise ValueError("Expected all 37 main/supplementary numerical, configuration and safeguard input files")
+    if len(staging.pending) != 38:
+        raise ValueError("Expected all 38 main/supplementary numerical, configuration and safeguard input files")
     if args.review_validation_root:
         prepare_review_validation(staging, args.review_validation_root.resolve())
     session_info = None

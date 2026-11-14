@@ -5,87 +5,87 @@ heldout_qc_cv_mean,41.6995653089239,lower,6461,percent,,waveica,qc_rlsc,QC-RLSC,
 heldout_qc_cv_mean,16.7908141452777,lower,6461,percent,,waveica,qc_rfsc,QC-RFSC,SPLIT01,WaveICA,Held-out QC CV (%),QC-RFSC,16.94750887283118
 heldout_qc_cv_mean,25.564261985711,lower,6461,percent,,waveica,tiger,TIGER,SPLIT01,WaveICA,Held-out QC CV (%),TIGER,25.68669220112821
 heldout_qc_cv_mean,34.2520184037082,lower,6461,percent,,waveica,serrf,SERRF,SPLIT01,WaveICA,Held-out QC CV (%),SERRF,34.158538201781084
-heldout_qc_cv_mean,38.3780508569381,lower,6461,percent,,waveica,winn_auto_qc,WiNN auto (QC),SPLIT01,WaveICA,Held-out QC CV (%),WiNN auto,38.79601740065396
-heldout_qc_cv_mean,40.7401590056742,lower,6461,percent,,waveica,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT01,WaveICA,Held-out QC CV (%),WiNN auto-batch,41.92819338278704
-heldout_qc_cv_mean,38.4233837774731,lower,6461,percent,,waveica,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT01,WaveICA,Held-out QC CV (%),WiNN fixed,38.81391040499445
+heldout_qc_cv_mean,38.0900297187238,lower,6461,percent,,waveica,winn_auto_qc,WiNN auto (QC),SPLIT01,WaveICA,Held-out QC CV (%),WiNN auto,38.61079545627362
+heldout_qc_cv_mean,40.9593675074462,lower,6461,percent,,waveica,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT01,WaveICA,Held-out QC CV (%),WiNN auto-batch,42.03763710017763
+heldout_qc_cv_mean,38.2532119607673,lower,6461,percent,,waveica,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT01,WaveICA,Held-out QC CV (%),WiNN fixed,38.77491535463993
 heldout_qc_cv_mean,51.9068528852617,lower,6461,percent,,waveica,raw,Raw,SPLIT02,WaveICA,Held-out QC CV (%),Raw,50.06052771103864
 heldout_qc_cv_mean,42.4842572015363,lower,6461,percent,,waveica,combat,ComBat,SPLIT02,WaveICA,Held-out QC CV (%),ComBat,40.97781585176402
 heldout_qc_cv_mean,42.238741571233,lower,6461,percent,,waveica,qc_rlsc,QC-RLSC,SPLIT02,WaveICA,Held-out QC CV (%),QC-RLSC,42.05190685497545
 heldout_qc_cv_mean,17.3963372628392,lower,6461,percent,,waveica,qc_rfsc,QC-RFSC,SPLIT02,WaveICA,Held-out QC CV (%),QC-RFSC,16.94750887283118
 heldout_qc_cv_mean,26.2038841679234,lower,6461,percent,,waveica,tiger,TIGER,SPLIT02,WaveICA,Held-out QC CV (%),TIGER,25.68669220112821
 heldout_qc_cv_mean,34.4700061124981,lower,6461,percent,,waveica,serrf,SERRF,SPLIT02,WaveICA,Held-out QC CV (%),SERRF,34.158538201781084
-heldout_qc_cv_mean,39.2556880197296,lower,6461,percent,,waveica,winn_auto_qc,WiNN auto (QC),SPLIT02,WaveICA,Held-out QC CV (%),WiNN auto,38.79601740065396
-heldout_qc_cv_mean,43.4363080512116,lower,6461,percent,,waveica,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT02,WaveICA,Held-out QC CV (%),WiNN auto-batch,41.92819338278704
-heldout_qc_cv_mean,39.2840265648185,lower,6461,percent,,waveica,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT02,WaveICA,Held-out QC CV (%),WiNN fixed,38.81391040499445
+heldout_qc_cv_mean,38.8687005203626,lower,6461,percent,,waveica,winn_auto_qc,WiNN auto (QC),SPLIT02,WaveICA,Held-out QC CV (%),WiNN auto,38.61079545627362
+heldout_qc_cv_mean,43.5410185620306,lower,6461,percent,,waveica,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT02,WaveICA,Held-out QC CV (%),WiNN auto-batch,42.03763710017763
+heldout_qc_cv_mean,39.0811059004621,lower,6461,percent,,waveica,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT02,WaveICA,Held-out QC CV (%),WiNN fixed,38.77491535463993
 heldout_qc_cv_mean,49.122555207139,lower,6461,percent,,waveica,raw,Raw,SPLIT03,WaveICA,Held-out QC CV (%),Raw,50.06052771103864
 heldout_qc_cv_mean,42.023633057022,lower,6461,percent,,waveica,combat,ComBat,SPLIT03,WaveICA,Held-out QC CV (%),ComBat,40.97781585176402
 heldout_qc_cv_mean,43.4063486450603,lower,6461,percent,,waveica,qc_rlsc,QC-RLSC,SPLIT03,WaveICA,Held-out QC CV (%),QC-RLSC,42.05190685497545
 heldout_qc_cv_mean,17.1521496545522,lower,6461,percent,,waveica,qc_rfsc,QC-RFSC,SPLIT03,WaveICA,Held-out QC CV (%),QC-RFSC,16.94750887283118
 heldout_qc_cv_mean,26.6065327354618,lower,6461,percent,,waveica,tiger,TIGER,SPLIT03,WaveICA,Held-out QC CV (%),TIGER,25.68669220112821
 heldout_qc_cv_mean,34.741727378664,lower,6461,percent,,waveica,serrf,SERRF,SPLIT03,WaveICA,Held-out QC CV (%),SERRF,34.158538201781084
-heldout_qc_cv_mean,39.1245592526793,lower,6461,percent,,waveica,winn_auto_qc,WiNN auto (QC),SPLIT03,WaveICA,Held-out QC CV (%),WiNN auto,38.79601740065396
-heldout_qc_cv_mean,41.5015415907511,lower,6461,percent,,waveica,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT03,WaveICA,Held-out QC CV (%),WiNN auto-batch,41.92819338278704
-heldout_qc_cv_mean,39.1110928378247,lower,6461,percent,,waveica,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT03,WaveICA,Held-out QC CV (%),WiNN fixed,38.81391040499445
+heldout_qc_cv_mean,39.0948266374232,lower,6461,percent,,waveica,winn_auto_qc,WiNN auto (QC),SPLIT03,WaveICA,Held-out QC CV (%),WiNN auto,38.61079545627362
+heldout_qc_cv_mean,41.6168963830345,lower,6461,percent,,waveica,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT03,WaveICA,Held-out QC CV (%),WiNN auto-batch,42.03763710017763
+heldout_qc_cv_mean,39.1972862055275,lower,6461,percent,,waveica,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT03,WaveICA,Held-out QC CV (%),WiNN fixed,38.77491535463993
 heldout_qc_cv_mean,50.5339068590698,lower,6461,percent,,waveica,raw,Raw,SPLIT04,WaveICA,Held-out QC CV (%),Raw,50.06052771103864
 heldout_qc_cv_mean,39.948990684096,lower,6461,percent,,waveica,combat,ComBat,SPLIT04,WaveICA,Held-out QC CV (%),ComBat,40.97781585176402
 heldout_qc_cv_mean,43.0770562251366,lower,6461,percent,,waveica,qc_rlsc,QC-RLSC,SPLIT04,WaveICA,Held-out QC CV (%),QC-RLSC,42.05190685497545
 heldout_qc_cv_mean,16.7722445853436,lower,6461,percent,,waveica,qc_rfsc,QC-RFSC,SPLIT04,WaveICA,Held-out QC CV (%),QC-RFSC,16.94750887283118
 heldout_qc_cv_mean,25.2272096620226,lower,6461,percent,,waveica,tiger,TIGER,SPLIT04,WaveICA,Held-out QC CV (%),TIGER,25.68669220112821
 heldout_qc_cv_mean,33.943902391579,lower,6461,percent,,waveica,serrf,SERRF,SPLIT04,WaveICA,Held-out QC CV (%),SERRF,34.158538201781084
-heldout_qc_cv_mean,38.3679781881974,lower,6461,percent,,waveica,winn_auto_qc,WiNN auto (QC),SPLIT04,WaveICA,Held-out QC CV (%),WiNN auto,38.79601740065396
-heldout_qc_cv_mean,42.172661518194,lower,6461,percent,,waveica,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT04,WaveICA,Held-out QC CV (%),WiNN auto-batch,41.92819338278704
-heldout_qc_cv_mean,38.4125040238197,lower,6461,percent,,waveica,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT04,WaveICA,Held-out QC CV (%),WiNN fixed,38.81391040499445
+heldout_qc_cv_mean,38.152791558516,lower,6461,percent,,waveica,winn_auto_qc,WiNN auto (QC),SPLIT04,WaveICA,Held-out QC CV (%),WiNN auto,38.61079545627362
+heldout_qc_cv_mean,42.278144060892,lower,6461,percent,,waveica,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT04,WaveICA,Held-out QC CV (%),WiNN auto-batch,42.03763710017763
+heldout_qc_cv_mean,38.2670692386286,lower,6461,percent,,waveica,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT04,WaveICA,Held-out QC CV (%),WiNN fixed,38.77491535463993
 heldout_qc_cv_mean,49.1930266636205,lower,6461,percent,,waveica,raw,Raw,SPLIT05,WaveICA,Held-out QC CV (%),Raw,50.06052771103864
 heldout_qc_cv_mean,39.7687057831819,lower,6461,percent,,waveica,combat,ComBat,SPLIT05,WaveICA,Held-out QC CV (%),ComBat,40.97781585176402
 heldout_qc_cv_mean,40.9254323462496,lower,6461,percent,,waveica,qc_rlsc,QC-RLSC,SPLIT05,WaveICA,Held-out QC CV (%),QC-RLSC,42.05190685497545
 heldout_qc_cv_mean,17.0540811979105,lower,6461,percent,,waveica,qc_rfsc,QC-RFSC,SPLIT05,WaveICA,Held-out QC CV (%),QC-RFSC,16.94750887283118
 heldout_qc_cv_mean,25.6407706982382,lower,6461,percent,,waveica,tiger,TIGER,SPLIT05,WaveICA,Held-out QC CV (%),TIGER,25.68669220112821
 heldout_qc_cv_mean,33.9544302825771,lower,6461,percent,,waveica,serrf,SERRF,SPLIT05,WaveICA,Held-out QC CV (%),SERRF,34.158538201781084
-heldout_qc_cv_mean,38.5198786797498,lower,6461,percent,,waveica,winn_auto_qc,WiNN auto (QC),SPLIT05,WaveICA,Held-out QC CV (%),WiNN auto,38.79601740065396
-heldout_qc_cv_mean,40.5415494980564,lower,6461,percent,,waveica,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT05,WaveICA,Held-out QC CV (%),WiNN auto-batch,41.92819338278704
-heldout_qc_cv_mean,38.4798242667812,lower,6461,percent,,waveica,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT05,WaveICA,Held-out QC CV (%),WiNN fixed,38.81391040499445
+heldout_qc_cv_mean,38.6301547457454,lower,6461,percent,,waveica,winn_auto_qc,WiNN auto (QC),SPLIT05,WaveICA,Held-out QC CV (%),WiNN auto,38.61079545627362
+heldout_qc_cv_mean,40.6638623596921,lower,6461,percent,,waveica,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT05,WaveICA,Held-out QC CV (%),WiNN auto-batch,42.03763710017763
+heldout_qc_cv_mean,38.6989811564708,lower,6461,percent,,waveica,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT05,WaveICA,Held-out QC CV (%),WiNN fixed,38.77491535463993
 heldout_qc_cv_mean,49.227588589972,lower,6461,percent,,waveica,raw,Raw,SPLIT06,WaveICA,Held-out QC CV (%),Raw,50.06052771103864
 heldout_qc_cv_mean,41.0796529916698,lower,6461,percent,,waveica,combat,ComBat,SPLIT06,WaveICA,Held-out QC CV (%),ComBat,40.97781585176402
 heldout_qc_cv_mean,43.1415145821068,lower,6461,percent,,waveica,qc_rlsc,QC-RLSC,SPLIT06,WaveICA,Held-out QC CV (%),QC-RLSC,42.05190685497545
 heldout_qc_cv_mean,17.2865943480177,lower,6461,percent,,waveica,qc_rfsc,QC-RFSC,SPLIT06,WaveICA,Held-out QC CV (%),QC-RFSC,16.94750887283118
 heldout_qc_cv_mean,26.3960882183357,lower,6461,percent,,waveica,tiger,TIGER,SPLIT06,WaveICA,Held-out QC CV (%),TIGER,25.68669220112821
 heldout_qc_cv_mean,34.5822059152346,lower,6461,percent,,waveica,serrf,SERRF,SPLIT06,WaveICA,Held-out QC CV (%),SERRF,34.158538201781084
-heldout_qc_cv_mean,39.7127164686712,lower,6461,percent,,waveica,winn_auto_qc,WiNN auto (QC),SPLIT06,WaveICA,Held-out QC CV (%),WiNN auto,38.79601740065396
-heldout_qc_cv_mean,43.1661262618057,lower,6461,percent,,waveica,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT06,WaveICA,Held-out QC CV (%),WiNN auto-batch,41.92819338278704
-heldout_qc_cv_mean,39.7332726126627,lower,6461,percent,,waveica,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT06,WaveICA,Held-out QC CV (%),WiNN fixed,38.81391040499445
+heldout_qc_cv_mean,38.9302111478693,lower,6461,percent,,waveica,winn_auto_qc,WiNN auto (QC),SPLIT06,WaveICA,Held-out QC CV (%),WiNN auto,38.61079545627362
+heldout_qc_cv_mean,43.2305540756011,lower,6461,percent,,waveica,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT06,WaveICA,Held-out QC CV (%),WiNN auto-batch,42.03763710017763
+heldout_qc_cv_mean,39.2811525561404,lower,6461,percent,,waveica,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT06,WaveICA,Held-out QC CV (%),WiNN fixed,38.77491535463993
 heldout_qc_cv_mean,47.3345193090441,lower,6461,percent,,waveica,raw,Raw,SPLIT07,WaveICA,Held-out QC CV (%),Raw,50.06052771103864
 heldout_qc_cv_mean,38.4919766651504,lower,6461,percent,,waveica,combat,ComBat,SPLIT07,WaveICA,Held-out QC CV (%),ComBat,40.97781585176402
 heldout_qc_cv_mean,38.1787959536601,lower,6461,percent,,waveica,qc_rlsc,QC-RLSC,SPLIT07,WaveICA,Held-out QC CV (%),QC-RLSC,42.05190685497545
 heldout_qc_cv_mean,16.0537933730823,lower,6461,percent,,waveica,qc_rfsc,QC-RFSC,SPLIT07,WaveICA,Held-out QC CV (%),QC-RFSC,16.94750887283118
 heldout_qc_cv_mean,24.1770210794309,lower,6461,percent,,waveica,tiger,TIGER,SPLIT07,WaveICA,Held-out QC CV (%),TIGER,25.68669220112821
 heldout_qc_cv_mean,32.7453793438783,lower,6461,percent,,waveica,serrf,SERRF,SPLIT07,WaveICA,Held-out QC CV (%),SERRF,34.158538201781084
-heldout_qc_cv_mean,35.8800503350576,lower,6461,percent,,waveica,winn_auto_qc,WiNN auto (QC),SPLIT07,WaveICA,Held-out QC CV (%),WiNN auto,38.79601740065396
-heldout_qc_cv_mean,40.3535400527476,lower,6461,percent,,waveica,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT07,WaveICA,Held-out QC CV (%),WiNN auto-batch,41.92819338278704
-heldout_qc_cv_mean,35.8429564861911,lower,6461,percent,,waveica,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT07,WaveICA,Held-out QC CV (%),WiNN fixed,38.81391040499445
+heldout_qc_cv_mean,36.1220439949484,lower,6461,percent,,waveica,winn_auto_qc,WiNN auto (QC),SPLIT07,WaveICA,Held-out QC CV (%),WiNN auto,38.61079545627362
+heldout_qc_cv_mean,40.4486754116721,lower,6461,percent,,waveica,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT07,WaveICA,Held-out QC CV (%),WiNN auto-batch,42.03763710017763
+heldout_qc_cv_mean,36.138095183071,lower,6461,percent,,waveica,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT07,WaveICA,Held-out QC CV (%),WiNN fixed,38.77491535463993
 heldout_qc_cv_mean,52.1773611197173,lower,6461,percent,,waveica,raw,Raw,SPLIT08,WaveICA,Held-out QC CV (%),Raw,50.06052771103864
 heldout_qc_cv_mean,43.1326717926442,lower,6461,percent,,waveica,combat,ComBat,SPLIT08,WaveICA,Held-out QC CV (%),ComBat,40.97781585176402
 heldout_qc_cv_mean,42.7870267393888,lower,6461,percent,,waveica,qc_rlsc,QC-RLSC,SPLIT08,WaveICA,Held-out QC CV (%),QC-RLSC,42.05190685497545
 heldout_qc_cv_mean,17.1514793297499,lower,6461,percent,,waveica,qc_rfsc,QC-RFSC,SPLIT08,WaveICA,Held-out QC CV (%),QC-RFSC,16.94750887283118
 heldout_qc_cv_mean,26.022871555182,lower,6461,percent,,waveica,tiger,TIGER,SPLIT08,WaveICA,Held-out QC CV (%),TIGER,25.68669220112821
 heldout_qc_cv_mean,34.6026330660121,lower,6461,percent,,waveica,serrf,SERRF,SPLIT08,WaveICA,Held-out QC CV (%),SERRF,34.158538201781084
-heldout_qc_cv_mean,39.819046014779,lower,6461,percent,,waveica,winn_auto_qc,WiNN auto (QC),SPLIT08,WaveICA,Held-out QC CV (%),WiNN auto,38.79601740065396
-heldout_qc_cv_mean,43.1495242646896,lower,6461,percent,,waveica,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT08,WaveICA,Held-out QC CV (%),WiNN auto-batch,41.92819338278704
-heldout_qc_cv_mean,39.9106447053277,lower,6461,percent,,waveica,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT08,WaveICA,Held-out QC CV (%),WiNN fixed,38.81391040499445
+heldout_qc_cv_mean,39.5678835447043,lower,6461,percent,,waveica,winn_auto_qc,WiNN auto (QC),SPLIT08,WaveICA,Held-out QC CV (%),WiNN auto,38.61079545627362
+heldout_qc_cv_mean,43.2378400291699,lower,6461,percent,,waveica,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT08,WaveICA,Held-out QC CV (%),WiNN auto-batch,42.03763710017763
+heldout_qc_cv_mean,39.822625387812,lower,6461,percent,,waveica,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT08,WaveICA,Held-out QC CV (%),WiNN fixed,38.77491535463993
 heldout_qc_cv_mean,51.2093468915116,lower,6461,percent,,waveica,raw,Raw,SPLIT09,WaveICA,Held-out QC CV (%),Raw,50.06052771103864
 heldout_qc_cv_mean,43.1244178523339,lower,6461,percent,,waveica,combat,ComBat,SPLIT09,WaveICA,Held-out QC CV (%),ComBat,40.97781585176402
 heldout_qc_cv_mean,42.7975477189439,lower,6461,percent,,waveica,qc_rlsc,QC-RLSC,SPLIT09,WaveICA,Held-out QC CV (%),QC-RLSC,42.05190685497545
 heldout_qc_cv_mean,17.1504002568018,lower,6461,percent,,waveica,qc_rfsc,QC-RFSC,SPLIT09,WaveICA,Held-out QC CV (%),QC-RFSC,16.94750887283118
 heldout_qc_cv_mean,25.9356332894506,lower,6461,percent,,waveica,tiger,TIGER,SPLIT09,WaveICA,Held-out QC CV (%),TIGER,25.68669220112821
 heldout_qc_cv_mean,34.5219019097713,lower,6461,percent,,waveica,serrf,SERRF,SPLIT09,WaveICA,Held-out QC CV (%),SERRF,34.158538201781084
-heldout_qc_cv_mean,40.2018037707888,lower,6461,percent,,waveica,winn_auto_qc,WiNN auto (QC),SPLIT09,WaveICA,Held-out QC CV (%),WiNN auto,38.79601740065396
-heldout_qc_cv_mean,43.1370781219808,lower,6461,percent,,waveica,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT09,WaveICA,Held-out QC CV (%),WiNN auto-batch,41.92819338278704
-heldout_qc_cv_mean,40.22369024774,lower,6461,percent,,waveica,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT09,WaveICA,Held-out QC CV (%),WiNN fixed,38.81391040499445
+heldout_qc_cv_mean,40.0747837128389,lower,6461,percent,,waveica,winn_auto_qc,WiNN auto (QC),SPLIT09,WaveICA,Held-out QC CV (%),WiNN auto,38.61079545627362
+heldout_qc_cv_mean,43.2250983803657,lower,6461,percent,,waveica,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT09,WaveICA,Held-out QC CV (%),WiNN auto-batch,42.03763710017763
+heldout_qc_cv_mean,40.2475231946298,lower,6461,percent,,waveica,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT09,WaveICA,Held-out QC CV (%),WiNN fixed,38.77491535463993
 heldout_qc_cv_mean,49.6379430997798,lower,6461,percent,,waveica,raw,Raw,SPLIT10,WaveICA,Held-out QC CV (%),Raw,50.06052771103864
 heldout_qc_cv_mean,40.5219758814271,lower,6461,percent,,waveica,combat,ComBat,SPLIT10,WaveICA,Held-out QC CV (%),ComBat,40.97781585176402
 heldout_qc_cv_mean,42.2670394590515,lower,6461,percent,,waveica,qc_rlsc,QC-RLSC,SPLIT10,WaveICA,Held-out QC CV (%),QC-RLSC,42.05190685497545
 heldout_qc_cv_mean,16.6671945747369,lower,6461,percent,,waveica,qc_rfsc,QC-RFSC,SPLIT10,WaveICA,Held-out QC CV (%),QC-RFSC,16.94750887283118
 heldout_qc_cv_mean,25.0926486195259,lower,6461,percent,,waveica,tiger,TIGER,SPLIT10,WaveICA,Held-out QC CV (%),TIGER,25.68669220112821
 heldout_qc_cv_mean,33.7711772138881,lower,6461,percent,,waveica,serrf,SERRF,SPLIT10,WaveICA,Held-out QC CV (%),SERRF,34.158538201781084
-heldout_qc_cv_mean,38.7004024199488,lower,6461,percent,,waveica,winn_auto_qc,WiNN auto (QC),SPLIT10,WaveICA,Held-out QC CV (%),WiNN auto,38.79601740065396
-heldout_qc_cv_mean,41.0834454627594,lower,6461,percent,,waveica,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT10,WaveICA,Held-out QC CV (%),WiNN auto-batch,41.92819338278704
-heldout_qc_cv_mean,38.7177085273058,lower,6461,percent,,waveica,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT10,WaveICA,Held-out QC CV (%),WiNN fixed,38.81391040499445
+heldout_qc_cv_mean,38.5765289816043,lower,6461,percent,,waveica,winn_auto_qc,WiNN auto (QC),SPLIT10,WaveICA,Held-out QC CV (%),WiNN auto,38.61079545627362
+heldout_qc_cv_mean,41.1749142318721,lower,6461,percent,,waveica,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT10,WaveICA,Held-out QC CV (%),WiNN auto-batch,42.03763710017763
+heldout_qc_cv_mean,38.7621027628898,lower,6461,percent,,waveica,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT10,WaveICA,Held-out QC CV (%),WiNN fixed,38.77491535463993

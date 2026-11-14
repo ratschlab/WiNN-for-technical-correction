@@ -1,6 +1,6 @@
 dataset_key,dataset,stage,value,id
 clinical_fiams,Clinical FIA-MS,Raw,0.150509455379697,3
 clinical_fiams,Clinical FIA-MS,Outlier shrinkage,0.15822003960981,3
-clinical_fiams,Clinical FIA-MS,Selective drift,0.173065442485729,3
-clinical_fiams,Clinical FIA-MS,Selective batch,0.00172742614220366,3
-clinical_fiams,Clinical FIA-MS,PQN,0.00209422396564622,3
+clinical_fiams,Clinical FIA-MS,Selective drift,0.169933355157606,3
+clinical_fiams,Clinical FIA-MS,Selective batch,0.0018244293933304,3
+clinical_fiams,Clinical FIA-MS,PQN,0.00221425635390252,3

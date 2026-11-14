@@ -1,41 +1,41 @@
 metric,value,direction,denominator,units,notes,dataset_key,method_id,method,seed_id,gate_label,method_mean,method_se
-truth_log1p_rmse,0.071143307219603,lower,450000,log1p intensity,,simulation,G_SS,selective/selective,SIM01,Selective / selective,0.07217980913651321,4.210329381192779e-4
-truth_log1p_rmse,0.0714339688454679,lower,450000,log1p intensity,,simulation,G_AS,all/selective,SIM01,Forced drift,0.07259794618886792,4.278727335483767e-4
-truth_log1p_rmse,0.0714921089653844,lower,450000,log1p intensity,,simulation,G_SA,selective/all,SIM01,Forced batch,0.07256417333400793,4.2118564758053767e-4
-truth_log1p_rmse,0.0717997888362232,lower,450000,log1p intensity,,simulation,G_AA,all/all,SIM01,Forced drift + batch,0.07297879274195826,4.270043438680011e-4
-truth_log1p_rmse,0.0738143976596201,lower,450000,log1p intensity,,simulation,G_SS,selective/selective,SIM02,Selective / selective,0.07217980913651321,4.210329381192779e-4
-truth_log1p_rmse,0.0741994493371121,lower,450000,log1p intensity,,simulation,G_AS,all/selective,SIM02,Forced drift,0.07259794618886792,4.278727335483767e-4
-truth_log1p_rmse,0.0742055217530989,lower,450000,log1p intensity,,simulation,G_SA,selective/all,SIM02,Forced batch,0.07256417333400793,4.2118564758053767e-4
-truth_log1p_rmse,0.0745764416886525,lower,450000,log1p intensity,,simulation,G_AA,all/all,SIM02,Forced drift + batch,0.07297879274195826,4.270043438680011e-4
-truth_log1p_rmse,0.0725502829694544,lower,450000,log1p intensity,,simulation,G_SS,selective/selective,SIM03,Selective / selective,0.07217980913651321,4.210329381192779e-4
-truth_log1p_rmse,0.0730145332723412,lower,450000,log1p intensity,,simulation,G_AS,all/selective,SIM03,Forced drift,0.07259794618886792,4.278727335483767e-4
-truth_log1p_rmse,0.0729228776677553,lower,450000,log1p intensity,,simulation,G_SA,selective/all,SIM03,Forced batch,0.07256417333400793,4.2118564758053767e-4
-truth_log1p_rmse,0.0733800634930131,lower,450000,log1p intensity,,simulation,G_AA,all/all,SIM03,Forced drift + batch,0.07297879274195826,4.270043438680011e-4
-truth_log1p_rmse,0.0704315979820671,lower,450000,log1p intensity,,simulation,G_SS,selective/selective,SIM04,Selective / selective,0.07217980913651321,4.210329381192779e-4
-truth_log1p_rmse,0.0708602325664564,lower,450000,log1p intensity,,simulation,G_AS,all/selective,SIM04,Forced drift,0.07259794618886792,4.278727335483767e-4
-truth_log1p_rmse,0.0708277582664547,lower,450000,log1p intensity,,simulation,G_SA,selective/all,SIM04,Forced batch,0.07256417333400793,4.2118564758053767e-4
-truth_log1p_rmse,0.0712477015963698,lower,450000,log1p intensity,,simulation,G_AA,all/all,SIM04,Forced drift + batch,0.07297879274195826,4.270043438680011e-4
-truth_log1p_rmse,0.0729585926966025,lower,450000,log1p intensity,,simulation,G_SS,selective/selective,SIM05,Selective / selective,0.07217980913651321,4.210329381192779e-4
-truth_log1p_rmse,0.0732567401633496,lower,450000,log1p intensity,,simulation,G_AS,all/selective,SIM05,Forced drift,0.07259794618886792,4.278727335483767e-4
-truth_log1p_rmse,0.0733173421244214,lower,450000,log1p intensity,,simulation,G_SA,selective/all,SIM05,Forced batch,0.07256417333400793,4.2118564758053767e-4
-truth_log1p_rmse,0.0736240434489918,lower,450000,log1p intensity,,simulation,G_AA,all/all,SIM05,Forced drift + batch,0.07297879274195826,4.270043438680011e-4
-truth_log1p_rmse,0.0712105678386005,lower,450000,log1p intensity,,simulation,G_SS,selective/selective,SIM06,Selective / selective,0.07217980913651321,4.210329381192779e-4
-truth_log1p_rmse,0.0716128277122734,lower,450000,log1p intensity,,simulation,G_AS,all/selective,SIM06,Forced drift,0.07259794618886792,4.278727335483767e-4
-truth_log1p_rmse,0.0716392671505098,lower,450000,log1p intensity,,simulation,G_SA,selective/all,SIM06,Forced batch,0.07256417333400793,4.2118564758053767e-4
-truth_log1p_rmse,0.0720541253846741,lower,450000,log1p intensity,,simulation,G_AA,all/all,SIM06,Forced drift + batch,0.07297879274195826,4.270043438680011e-4
-truth_log1p_rmse,0.0718066379907322,lower,450000,log1p intensity,,simulation,G_SS,selective/selective,SIM07,Selective / selective,0.07217980913651321,4.210329381192779e-4
-truth_log1p_rmse,0.072343741985902807,lower,450000,log1p intensity,,simulation,G_AS,all/selective,SIM07,Forced drift,0.07259794618886792,4.278727335483767e-4
-truth_log1p_rmse,0.0722212488530943,lower,450000,log1p intensity,,simulation,G_SA,selective/all,SIM07,Forced batch,0.07256417333400793,4.2118564758053767e-4
-truth_log1p_rmse,0.0727277164604828,lower,450000,log1p intensity,,simulation,G_AA,all/all,SIM07,Forced drift + batch,0.07297879274195826,4.270043438680011e-4
-truth_log1p_rmse,0.0745846103233532,lower,450000,log1p intensity,,simulation,G_SS,selective/selective,SIM08,Selective / selective,0.07217980913651321,4.210329381192779e-4
-truth_log1p_rmse,0.0750382934021875,lower,450000,log1p intensity,,simulation,G_AS,all/selective,SIM08,Forced drift,0.07259794618886792,4.278727335483767e-4
-truth_log1p_rmse,0.0749631793940686,lower,450000,log1p intensity,,simulation,G_SA,selective/all,SIM08,Forced batch,0.07256417333400793,4.2118564758053767e-4
-truth_log1p_rmse,0.0754016663278861,lower,450000,log1p intensity,,simulation,G_AA,all/all,SIM08,Forced drift + batch,0.07297879274195826,4.270043438680011e-4
-truth_log1p_rmse,0.0709480472144716,lower,450000,log1p intensity,,simulation,G_SS,selective/selective,SIM09,Selective / selective,0.07217980913651321,4.210329381192779e-4
-truth_log1p_rmse,0.071254552248296,lower,450000,log1p intensity,,simulation,G_AS,all/selective,SIM09,Forced drift,0.07259794618886792,4.278727335483767e-4
-truth_log1p_rmse,0.0712831575326733,lower,450000,log1p intensity,,simulation,G_SA,selective/all,SIM09,Forced batch,0.07256417333400793,4.2118564758053767e-4
-truth_log1p_rmse,0.0715871848461704,lower,450000,log1p intensity,,simulation,G_AA,all/all,SIM09,Forced drift + batch,0.07297879274195826,4.270043438680011e-4
-truth_log1p_rmse,0.0723500494706276,lower,450000,log1p intensity,,simulation,G_SS,selective/selective,SIM10,Selective / selective,0.07217980913651321,4.210329381192779e-4
-truth_log1p_rmse,0.0729651223552923,lower,450000,log1p intensity,,simulation,G_AS,all/selective,SIM10,Forced drift,0.07259794618886792,4.278727335483767e-4
-truth_log1p_rmse,0.0727692716326186,lower,450000,log1p intensity,,simulation,G_SA,selective/all,SIM10,Forced batch,0.07256417333400793,4.2118564758053767e-4
-truth_log1p_rmse,0.0733891953371188,lower,450000,log1p intensity,,simulation,G_AA,all/all,SIM10,Forced drift + batch,0.07297879274195826,4.270043438680011e-4
+truth_log1p_rmse,0.0735085226457759,lower,450000,log1p intensity,,simulation,G_SS,selective/selective,SIM01,Selective / selective,0.07443969410829224,0.00041664867198774793
+truth_log1p_rmse,0.0714339688454679,lower,450000,log1p intensity,,simulation,G_AS,all/selective,SIM01,Forced drift,0.07259794618886792,0.0004278727335483767
+truth_log1p_rmse,0.0738507505797092,lower,450000,log1p intensity,,simulation,G_SA,selective/all,SIM01,Forced batch,0.07481174212726603,0.0004179166253124362
+truth_log1p_rmse,0.0717997888362232,lower,450000,log1p intensity,,simulation,G_AA,all/all,SIM01,Forced drift + batch,0.07297879274195826,0.00042700434386800116
+truth_log1p_rmse,0.0760106741257683,lower,450000,log1p intensity,,simulation,G_SS,selective/selective,SIM02,Selective / selective,0.07443969410829224,0.00041664867198774793
+truth_log1p_rmse,0.0741994493371121,lower,450000,log1p intensity,,simulation,G_AS,all/selective,SIM02,Forced drift,0.07259794618886792,0.0004278727335483767
+truth_log1p_rmse,0.0763936310272734,lower,450000,log1p intensity,,simulation,G_SA,selective/all,SIM02,Forced batch,0.07481174212726603,0.0004179166253124362
+truth_log1p_rmse,0.0745764416886525,lower,450000,log1p intensity,,simulation,G_AA,all/all,SIM02,Forced drift + batch,0.07297879274195826,0.00042700434386800116
+truth_log1p_rmse,0.0745927652774265,lower,450000,log1p intensity,,simulation,G_SS,selective/selective,SIM03,Selective / selective,0.07443969410829224,0.00041664867198774793
+truth_log1p_rmse,0.0730145332723412,lower,450000,log1p intensity,,simulation,G_AS,all/selective,SIM03,Forced drift,0.07259794618886792,0.0004278727335483767
+truth_log1p_rmse,0.0749515049203483,lower,450000,log1p intensity,,simulation,G_SA,selective/all,SIM03,Forced batch,0.07481174212726603,0.0004179166253124362
+truth_log1p_rmse,0.0733800634930131,lower,450000,log1p intensity,,simulation,G_AA,all/all,SIM03,Forced drift + batch,0.07297879274195826,0.00042700434386800116
+truth_log1p_rmse,0.0725079314800315,lower,450000,log1p intensity,,simulation,G_SS,selective/selective,SIM04,Selective / selective,0.07443969410829224,0.00041664867198774793
+truth_log1p_rmse,0.0708602325664564,lower,450000,log1p intensity,,simulation,G_AS,all/selective,SIM04,Forced drift,0.07259794618886792,0.0004278727335483767
+truth_log1p_rmse,0.0728788062112059,lower,450000,log1p intensity,,simulation,G_SA,selective/all,SIM04,Forced batch,0.07481174212726603,0.0004179166253124362
+truth_log1p_rmse,0.0712477015963698,lower,450000,log1p intensity,,simulation,G_AA,all/all,SIM04,Forced drift + batch,0.07297879274195826,0.00042700434386800116
+truth_log1p_rmse,0.0754986702495676,lower,450000,log1p intensity,,simulation,G_SS,selective/selective,SIM05,Selective / selective,0.07443969410829224,0.00041664867198774793
+truth_log1p_rmse,0.0732567401633496,lower,450000,log1p intensity,,simulation,G_AS,all/selective,SIM05,Forced drift,0.07259794618886792,0.0004278727335483767
+truth_log1p_rmse,0.0758517437360698,lower,450000,log1p intensity,,simulation,G_SA,selective/all,SIM05,Forced batch,0.07481174212726603,0.0004179166253124362
+truth_log1p_rmse,0.0736240434489918,lower,450000,log1p intensity,,simulation,G_AA,all/all,SIM05,Forced drift + batch,0.07297879274195826,0.00042700434386800116
+truth_log1p_rmse,0.0735402916623635,lower,450000,log1p intensity,,simulation,G_SS,selective/selective,SIM06,Selective / selective,0.07443969410829224,0.00041664867198774793
+truth_log1p_rmse,0.0716128277122734,lower,450000,log1p intensity,,simulation,G_AS,all/selective,SIM06,Forced drift,0.07259794618886792,0.0004278727335483767
+truth_log1p_rmse,0.073950702622304,lower,450000,log1p intensity,,simulation,G_SA,selective/all,SIM06,Forced batch,0.07481174212726603,0.0004179166253124362
+truth_log1p_rmse,0.0720541253846741,lower,450000,log1p intensity,,simulation,G_AA,all/all,SIM06,Forced drift + batch,0.07297879274195826,0.00042700434386800116
+truth_log1p_rmse,0.0742450462526726,lower,450000,log1p intensity,,simulation,G_SS,selective/selective,SIM07,Selective / selective,0.07443969410829224,0.00041664867198774793
+truth_log1p_rmse,0.0723437419859028,lower,450000,log1p intensity,,simulation,G_AS,all/selective,SIM07,Forced drift,0.07259794618886792,0.0004278727335483767
+truth_log1p_rmse,0.0746523788489165,lower,450000,log1p intensity,,simulation,G_SA,selective/all,SIM07,Forced batch,0.07481174212726603,0.0004179166253124362
+truth_log1p_rmse,0.0727277164604828,lower,450000,log1p intensity,,simulation,G_AA,all/all,SIM07,Forced drift + batch,0.07297879274195826,0.00042700434386800116
+truth_log1p_rmse,0.0767142517156225,lower,450000,log1p intensity,,simulation,G_SS,selective/selective,SIM08,Selective / selective,0.07443969410829224,0.00041664867198774793
+truth_log1p_rmse,0.0750382934021875,lower,450000,log1p intensity,,simulation,G_AS,all/selective,SIM08,Forced drift,0.07259794618886792,0.0004278727335483767
+truth_log1p_rmse,0.0770842084462778,lower,450000,log1p intensity,,simulation,G_SA,selective/all,SIM08,Forced batch,0.07481174212726603,0.0004179166253124362
+truth_log1p_rmse,0.0754016663278861,lower,450000,log1p intensity,,simulation,G_AA,all/all,SIM08,Forced drift + batch,0.07297879274195826,0.00042700434386800116
+truth_log1p_rmse,0.0732625213682598,lower,450000,log1p intensity,,simulation,G_SS,selective/selective,SIM09,Selective / selective,0.07443969410829224,0.00041664867198774793
+truth_log1p_rmse,0.071254552248296,lower,450000,log1p intensity,,simulation,G_AS,all/selective,SIM09,Forced drift,0.07259794618886792,0.0004278727335483767
+truth_log1p_rmse,0.0735818552568247,lower,450000,log1p intensity,,simulation,G_SA,selective/all,SIM09,Forced batch,0.07481174212726603,0.0004179166253124362
+truth_log1p_rmse,0.0715871848461704,lower,450000,log1p intensity,,simulation,G_AA,all/all,SIM09,Forced drift + batch,0.07297879274195826,0.00042700434386800116
+truth_log1p_rmse,0.0745162663054341,lower,450000,log1p intensity,,simulation,G_SS,selective/selective,SIM10,Selective / selective,0.07443969410829224,0.00041664867198774793
+truth_log1p_rmse,0.0729651223552923,lower,450000,log1p intensity,,simulation,G_AS,all/selective,SIM10,Forced drift,0.07259794618886792,0.0004278727335483767
+truth_log1p_rmse,0.0749218396237307,lower,450000,log1p intensity,,simulation,G_SA,selective/all,SIM10,Forced batch,0.07481174212726603,0.0004179166253124362
+truth_log1p_rmse,0.0733891953371188,lower,450000,log1p intensity,,simulation,G_AA,all/all,SIM10,Forced drift + batch,0.07297879274195826,0.00042700434386800116

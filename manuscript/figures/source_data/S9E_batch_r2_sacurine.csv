@@ -1,6 +1,6 @@
 dataset_key,dataset,stage,value,id
 sacurine,Sacurine,Raw,0.131658082609212,5
 sacurine,Sacurine,Outlier shrinkage,0.129641086172234,5
-sacurine,Sacurine,Selective drift,0.137825126466048,5
-sacurine,Sacurine,Selective batch,5.1283367676491e-4,5
-sacurine,Sacurine,PQN,6.1694213206163e-4,5
+sacurine,Sacurine,Selective drift,0.135116942006839,5
+sacurine,Sacurine,Selective batch,4.9304570203708e-4,5
+sacurine,Sacurine,PQN,7.3899100317073e-4,5

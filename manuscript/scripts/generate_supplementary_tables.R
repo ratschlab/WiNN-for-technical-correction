@@ -378,9 +378,8 @@ write_longtable(
 # median fold bounds for every estimable method-endpoint-metric combination.
 lobo_raw <- read_csv(file.path(derivative_root, "leave_one_batch_out_bootstrap_summary.csv"), show_col_types = FALSE) |>
   filter(metric %in% c("pearson", "spearman", "sign_concordance"), method_id %in% method_order)
-write_csv(lobo_raw, file.path(out_csv, "table_s12_lobo_fold_level.csv"), na = "")
-# S7 consumes this unformatted alias; keep it synchronized with the table source.
-write_csv(lobo_raw, file.path(out_csv, "leave_one_batch_out_bootstrap_summary.csv"), na = "")
+# The two fold-level source CSVs are staged by stage_publication_inputs.py.
+# Preserve their comparator strings and the full S7 source's attenuation rows.
 lobo <- lobo_raw |>
   group_by(dataset_key, dataset, endpoint, method_id, method, metric) |>
   summarise(
@@ -641,13 +640,15 @@ figure_panels <- c(
   list.files(file.path(package_root, "figures", "main_panels"), pattern = "[.]pdf$"),
   list.files(file.path(package_root, "figures", "supplementary_panels"), pattern = "[.]pdf$")
 )
-if(length(figure_panels) != 69L) stop("The current table requires the audited 69-panel figure package.")
+if(length(figure_panels) != 72L) stop("The current table requires the audited 72-panel figure package.")
 figure_row <- validation$Check == "all figures have source data"
 validation$Check[figure_row] <- "all declared figure panels have source data"
-validation$Detail[figure_row] <- "69 of 69 figure-panel/source entries"
+validation$Detail[figure_row] <- "72 of 72 figure-panel/source entries"
 write_csv_copy(validation, "table_s19_release_validation")
+validation_display <- validation
+validation_display$Detail <- sub(" Reused competitor outputs.*$", "", validation_display$Detail)
 write_longtable(
-  validation, "table_s19_release_validation",
+  validation_display, "table_s19_release_validation",
   "Complete release-validation checklist for the frozen benchmark.",
   "tab:supp_validation", "llp{10.5cm}",
   c("Check", "Passed", "Detail"),

@@ -1,6 +1,6 @@
 dataset_key,dataset,stage,value,id
 batchcorr_set1,BatchCorr Set 1,Raw,0.561111591272931,4
 batchcorr_set1,BatchCorr Set 1,Outlier shrinkage,0.568121519981498,4
-batchcorr_set1,BatchCorr Set 1,Selective drift,0.613541892245326,4
-batchcorr_set1,BatchCorr Set 1,Selective batch,2.7400523531157e-4,4
-batchcorr_set1,BatchCorr Set 1,PQN,5.6347557327368e-4,4
+batchcorr_set1,BatchCorr Set 1,Selective drift,0.608590469184829,4
+batchcorr_set1,BatchCorr Set 1,Selective batch,2.7344976648688e-4,4
+batchcorr_set1,BatchCorr Set 1,PQN,6.1783984340079e-4,4
