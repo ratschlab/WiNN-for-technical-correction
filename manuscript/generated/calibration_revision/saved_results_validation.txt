@@ -1,0 +1,2 @@
+PASS: all 31200 paired rows and 11600 planned datasets; 8000 original null counts reproduced;
+all summary statistics and exact intervals reproduced from saved replicates.

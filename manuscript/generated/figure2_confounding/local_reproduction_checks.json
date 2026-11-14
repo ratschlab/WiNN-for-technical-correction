@@ -1,0 +1,28 @@
+[
+  {
+    "file": "summary.csv",
+    "byte_identical": false,
+    "changed_numeric_cells": 194,
+    "max_abs_difference": 3.552713678800501e-15
+  },
+  {
+    "file": "design_diagnostics.csv",
+    "byte_identical": true
+  },
+  {
+    "file": "input_manifest.csv",
+    "byte_identical": true
+  },
+  {
+    "file": "validation.json",
+    "byte_identical": true
+  },
+  {
+    "file": "seed_metrics.csv",
+    "byte_identical": true
+  },
+  {
+    "file": "run_manifests.json",
+    "byte_identical": true
+  }
+]

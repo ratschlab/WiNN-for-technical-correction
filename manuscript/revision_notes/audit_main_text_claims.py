@@ -46,13 +46,12 @@ def check(claim, anchor, token):
 
 ABS = "\\textbf{Results:}"
 SIM = "Across ten paired simulations"
-PC = "The partial-confounding study showed"
+PC = "The confounding experiment showed"
 BC = "BatchCorr tested whether"
 CL = "The internal clinical FIA-MS cohort provided"
 WV = "WaveICA had strong batch"
 MT = "MTBLS79 provided a known cow-sheep"
 AB = "We examined each correction step"
-ST = "We tested whether WiNN selects features"
 DI = "This is important because correction"
 RT = "WiNN was approximately"
 
@@ -84,24 +83,22 @@ for r in base:
     if r.get("metric") == "truth_log1p_rmse" and r.get("method_id") in ("mean_batch_all", "wehrens_ancova_all"):
         check(f"Baseline RMSE {r['method_id']}", SIM, f"{float(r['mean']):.3f}")
 
-# Partial confounding
-FULL = "100\\%"
-s13 = read(DATA / "table_s13_partial_confounding.csv")
-none = one(s13, Type="None")
-check("PC random recovery", PC, f"{lead(none['Clean ratio']):.3f}")
-assert lead(none["TPR"]) == 1.0
-check("PC batch TPR", PC, f"{lead(one(s13, Type='Batch', Alignment=FULL)['TPR']):.3f}")
-check("PC run-order recovery", PC, f"{lead(one(s13, Type='Run order', Alignment=FULL)['Clean ratio']):.3f}")
-joint = one(s13, Type="Joint", Alignment=FULL)
-for field in ("Clean ratio", "TPR", "FDR"):
-    check(f"PC joint {field}", PC, f"{lead(joint[field]):.3f}")
-cv = [lead(r["QC CV"]) for r in s13]
-check("PC CV min", PC, f"{min(cv):.2f}\\%")
-check("PC CV max", PC, f"{max(cv):.2f}\\%")
-pcs = read(ROOT / "generated/revision_panel_inputs/S5B_partial_residual_run_order_gam_mean_deviance.csv")
-gam = [float(r["mean"]) for r in pcs if r["metric"] == "residual_run_order_gam_mean_deviance" and r["method"].startswith("WiNN")]
-check("PC GAM min", PC, f"{min(gam) * 100:.1f}\\%")
-check("PC GAM max", PC, f"{max(gam) * 100:.1f}\\%")
+# Revised Figure 2E–F confounding experiment (all 190 prespecified tasks).
+conf = read(ROOT / "generated/figure2_confounding/summary.csv")
+for axis, strength, metric in (("batch", "0.0", "effect_recovery"),
+    ("batch", "0.9", "effect_recovery"), ("batch", "0.9", "true_positive_rate"),
+    ("joint", "0.9", "effect_recovery"), ("joint", "0.9", "true_positive_rate"),
+    ("batch", "1.0", "effect_recovery"), ("run_order", "1.0", "effect_recovery"),
+    ("run_order", "1.0", "true_positive_rate")):
+    r = one(conf, axis=axis, strength=strength, method="WiNN", endpoint="marginal", metric=metric)
+    check(f"Confounding {axis} {strength} {metric}", PC, f"{float(r['mean']):.3f}")
+for metric, expected in (("true_positive_rate",0), ("empirical_fdr",0), ("zero_discoveries",1), ("discoveries",0)):
+    r=one(conf,axis="batch",strength="1.0",method="WiNN",endpoint="marginal",metric=metric)
+    checks.append((f"Complete batch confounding {metric}", str(expected),float(r['mean'])==expected and int(r['n_seeds'])==10))
+truth=[r for r in conf if r['method']=='Truth' and r['endpoint']=='marginal' and r['metric']=='true_positive_rate']
+checks.append(("Artifact-free sensitivity throughout grid", "1.000",len(truth)==21 and all(float(r['mean'])==1 for r in truth)))
+check("Artifact-free sensitivity text",PC,"1.000")
+checks.append(("No main-text selection-limit subsection", "supplement only", "\\subsection{Limits of the selection test and preprocessing}" not in text))
 
 # Repeated-identity datasets (Figure 3 source data)
 for stem, anchor, cv_label in (("F3A_batchcorr_qc_cv_vs_run_order_deviance", BC, None), ("F3B_clinical_qc_cv_vs_run_order_deviance", CL, None)):
@@ -154,13 +151,8 @@ frac = [int(r["Batch features"]) / int(r["Features"]) * 100 for r in s10 if r["M
 check("Batch selection min", AB, f"{min(frac):.1f}")
 check("Batch selection max", AB, f"{max(frac):.1f}\\%")
 
-# Stress tests
-null = read(VAL / "null_gate_verification_summary.csv")
-for n in ("20", "50", "100", "200"):
-    check(f"Null gate n={n}", ST, f"{float(one(null, n=n, stage='mad_prepared')['any_rejection']) * 100:.1f}\\%")
-prep = read(VAL / "preparation_biology_summary.csv")
-for scenario in ("balanced_sparse", "rare_subgroup", "broad_coordinated"):
-    check(f"MAD+PQN {scenario}", ST, f"{float(one(prep, scenario=scenario, stage='mad_then_pqn')['median_recovery_ratio']):.3f}")
+# Selection/preprocessing claims moved to Supplementary Methods S10;
+# verified by audit_new_claims.py and the standalone calibration audit.
 
 # Runtime ratio
 times = {(r["Dataset"], r["Method"]): float(r["Runtime"]) for r in s10 if r["Runtime"] not in ("--", "")}

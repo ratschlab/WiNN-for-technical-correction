@@ -1,0 +1,1872 @@
+{
+  "baseline_commit": "706616f",
+  "files": [
+    {
+      "path": "figures/F1_winn_overview.pdf",
+      "sha256": "304cbd3148f570c06947c2b973c91ca831f416b8ad36fa2fc5755e28f72bf355"
+    },
+    {
+      "path": "figures/F3_replicates.pdf",
+      "sha256": "e01027a8349546b5399f045a4561747c2e8227761e5751fcbf518e2c7dcbb17f"
+    },
+    {
+      "path": "figures/F4_biological_structure.pdf",
+      "sha256": "bb6918d7b260c0c50ef9db7eac0956af58e0d173d59f67d2ed6c708788ea36be"
+    },
+    {
+      "path": "figures/compiled_supplementary/Figure_S1.pdf",
+      "sha256": "ea3f37bcb06cd5d1ef66e0871700aaf685ae4f95c35cb8ea49fa239ae24a7aed"
+    },
+    {
+      "path": "figures/compiled_supplementary/Figure_S10.pdf",
+      "sha256": "d65b2192ce2cea0db296d709df3c3f7a9ddc7d9667f8f8be9530ec6f1ffbe5dd"
+    },
+    {
+      "path": "figures/compiled_supplementary/Figure_S2.pdf",
+      "sha256": "85a8f176ca6b9c000b1ad0d624fc4331546d9533744a7edd68cf32b3349b2a05"
+    },
+    {
+      "path": "figures/compiled_supplementary/Figure_S3.pdf",
+      "sha256": "a5535f0abcd2e3b7e701b893d1e4ab8ecb570455ddf0795d29e700353b0f4c6c"
+    },
+    {
+      "path": "figures/compiled_supplementary/Figure_S4.pdf",
+      "sha256": "8c3b3723c2a63ac7253288d2fc812dbc04d75c00c44bccc3a87720a55ea7525a"
+    },
+    {
+      "path": "figures/compiled_supplementary/Figure_S5.pdf",
+      "sha256": "64d23f8a3e01965473e23d04798734741277230c06be7f25d2bdca3891d9fe1f"
+    },
+    {
+      "path": "figures/compiled_supplementary/Figure_S6.pdf",
+      "sha256": "014e66906ecb6f023cbfff85a297e7ac78029939ae9b6fd90ca4123ef71794fe"
+    },
+    {
+      "path": "figures/compiled_supplementary/Figure_S7.pdf",
+      "sha256": "0226e4c416ff3e644ccddb1537e933a6561e06a085eceb49e506ff04c0190418"
+    },
+    {
+      "path": "figures/compiled_supplementary/Figure_S8.pdf",
+      "sha256": "d675567eb6ad8d6a73c75d7861d04e91cbba9c6c444eef1153f508a46aece767"
+    },
+    {
+      "path": "figures/compiled_supplementary/Figure_S9.pdf",
+      "sha256": "f5b3dc4260fac969dbac2589093b54c92048424142a6c5535402721d5534ce62"
+    },
+    {
+      "path": "figures/main_panels/F2A_selective_forced_truth_rmse.pdf",
+      "sha256": "b31dc2eade64fc092a5623a3e48227915b20538fb6812436a28cbf3bd3449d1a"
+    },
+    {
+      "path": "figures/main_panels/F2B_truth_log1p_rmse.pdf",
+      "sha256": "3992e18e3b0c5a409502774dcf4cdf1183ca54cff2fc430dc8bc6d15af2b4c4b"
+    },
+    {
+      "path": "figures/main_panels/F2C_truth_metabolite_profile_icc_mean.pdf",
+      "sha256": "c86ca4870bf29d47f0306a82593a0cb80faafc4cded5fff0167997c7196dddba"
+    },
+    {
+      "path": "figures/main_panels/F2D_truth_sample_profile_pearson_mean.pdf",
+      "sha256": "d3bef407aac9105215a9b8d8229e5836fb4e1e47dfc082dc7928a7fc1b0356bd"
+    },
+    {
+      "path": "figures/main_panels/F3A_batchcorr_qc_cv_vs_run_order_deviance.pdf",
+      "sha256": "c0925f122c7d2507dd9a5d32c6eea0a6d8ea1cb3144505756a8949b995e70755"
+    },
+    {
+      "path": "figures/main_panels/F3B_clinical_qc_cv_vs_run_order_deviance.pdf",
+      "sha256": "81f71886fc039c9531eee63941575afbb09ce563b2ffb989f53f13651d8ba94b"
+    },
+    {
+      "path": "figures/main_panels/F3C_batchcorr_batch_variance_vs_replicate_icc.pdf",
+      "sha256": "756a2a7e9456fb8e17a24294f988e296fc3e45af4403d3fa58dfbc2493c23119"
+    },
+    {
+      "path": "figures/main_panels/F3D_clinical_plate_variance_vs_replicate_icc.pdf",
+      "sha256": "98ebd629cedece35046663a1815e9d66ef335e0d3de9e0c33c65be83f0bd0e0f"
+    },
+    {
+      "path": "figures/main_panels/F4A_waveica_batch_vs_group.pdf",
+      "sha256": "e8d234b8733ebfb1031c906e00e28dd5b30361199653bfc96301ccf775c23703"
+    },
+    {
+      "path": "figures/main_panels/F4B_mtbls79_batch_vs_group.pdf",
+      "sha256": "ce2f39ab79c8274e0984e9bc921b775839bf97c04d6b3846477f3fefb6f21a59"
+    },
+    {
+      "path": "figures/source_data/F2A_selective_forced_truth_rmse.csv",
+      "sha256": "425dd942f265096254728c3e0e946bb39996bf3cb155d7c945efa8f2cc2b8b6d"
+    },
+    {
+      "path": "figures/source_data/F2B_truth_log1p_rmse.csv",
+      "sha256": "9ddb1810cb378fd41bdd620ec9d347a462014abe9b5794851193df77646067e7"
+    },
+    {
+      "path": "figures/source_data/F2C_truth_metabolite_profile_icc_mean.csv",
+      "sha256": "a1d23ff7a31ab531810c7b7b4095ccaf3932e96650c54fe72668f2b041dc8ed9"
+    },
+    {
+      "path": "figures/source_data/F2D_truth_sample_profile_pearson_mean.csv",
+      "sha256": "f7f02fa0690ad360f80e80d529c33f618798e2c32c2c5e0fe9b7e956e4d7b920"
+    },
+    {
+      "path": "figures/source_data/F3A_batchcorr_qc_cv_vs_run_order_deviance.csv",
+      "sha256": "1ddfcc00e1c53ebcc4206cd1b89e06a90f0277678a6663f6de3a41f2fb9a45b7"
+    },
+    {
+      "path": "figures/source_data/F3B_clinical_qc_cv_vs_run_order_deviance.csv",
+      "sha256": "01ba2fe742442bd8613b5e6fb56d08b8433eeb7c92b6d3eefb4f37cc20f7623a"
+    },
+    {
+      "path": "figures/source_data/F3C_batchcorr_batch_variance_vs_replicate_icc.csv",
+      "sha256": "1ddfcc00e1c53ebcc4206cd1b89e06a90f0277678a6663f6de3a41f2fb9a45b7"
+    },
+    {
+      "path": "figures/source_data/F3D_clinical_plate_variance_vs_replicate_icc.csv",
+      "sha256": "01ba2fe742442bd8613b5e6fb56d08b8433eeb7c92b6d3eefb4f37cc20f7623a"
+    },
+    {
+      "path": "figures/source_data/F4A_waveica_batch_vs_group.csv",
+      "sha256": "c24e46423e9b53598158e979c5044c60bbcc9899ada95a6f0de74fa8f40433c9"
+    },
+    {
+      "path": "figures/source_data/F4B_mtbls79_batch_vs_group.csv",
+      "sha256": "48ba66f82526a060de5ad087a4f14c8ec62969f4ae73bc1610df0a0abb610f56"
+    },
+    {
+      "path": "figures/source_data/S10A_sacurine_age_weighted_pc_r2.csv",
+      "sha256": "39d80fd3513c8040481269937fa7ca0bc5f84aa26721dd382e54a3cf2e231d77"
+    },
+    {
+      "path": "figures/source_data/S10B_sacurine_bmi_weighted_pc_r2.csv",
+      "sha256": "23057f13c53897fe6ae931e56cd79f21eaf5e290d343154840175ccf8b6ee603"
+    },
+    {
+      "path": "figures/source_data/S10C_sacurine_gender_weighted_pc_r2.csv",
+      "sha256": "0ab112fe2f69f644d9d8b5f18a61fedeca1df113114e0001f771d0e272aa5876"
+    },
+    {
+      "path": "figures/source_data/S1A_stage_heldout_qc_cv_mean.csv",
+      "sha256": "bd48648d36434d401307bca04035fee62bc78a3bb564bbb8d514259d609d34aa"
+    },
+    {
+      "path": "figures/source_data/S1B_stage_residual_run_order_gam_mean_deviance.csv",
+      "sha256": "1119a51eec5253d947db6f4cfe8d129628f31d8801bc24f8d5f1c3bbb31cb7fc"
+    },
+    {
+      "path": "figures/source_data/S1C_stage_batch_weighted_pc_r2_categorical.csv",
+      "sha256": "ef308e5ae5d33086384d8c4473b58c0890d4a17ae21a935e46646bd62a79fd4b"
+    },
+    {
+      "path": "figures/source_data/S2A_heldout_qc_cv_mean.csv",
+      "sha256": "a51fdfdcee2eeea7fbb2f1118be342368bfa6cfad500041aaa1fb877880cc431"
+    },
+    {
+      "path": "figures/source_data/S2B_residual_run_order_gam_mean_deviance.csv",
+      "sha256": "4aacd135e1329d6326de1f3d6e35739d9669f3a1f930087139b16c332b7ebb7a"
+    },
+    {
+      "path": "figures/source_data/S2C_batch_weighted_pc_r2_categorical.csv",
+      "sha256": "f26175e0973746fb50ead7aa7a4fe83bceb187360cb4e9a858c0c4653c81c329"
+    },
+    {
+      "path": "figures/source_data/S2D_truth_log1p_rmse.csv",
+      "sha256": "b7856f4029c8d160af92c945202cac8659ec44498f305a0ad3a49ee60ed0b3af"
+    },
+    {
+      "path": "figures/source_data/S2E_truth_metabolite_profile_icc_mean.csv",
+      "sha256": "41f06ed017a6286058df09a3ecb3d9056b96f0337b6eb06222235cc9e88259e2"
+    },
+    {
+      "path": "figures/source_data/S2F_truth_sample_profile_pearson_mean.csv",
+      "sha256": "bacb5da6dd55c2677abd2067a14aeb428b1f608a5effba67c6d91f691715e32c"
+    },
+    {
+      "path": "figures/source_data/S3A_simulation_heldout_qc_cv_mean.csv",
+      "sha256": "7e47c9ce26f91b4327418d70f67a9b46ae4aca593ba0f3bf31a92cd5906ff8b4"
+    },
+    {
+      "path": "figures/source_data/S3B_simulation_residual_run_order_gam_mean_deviance.csv",
+      "sha256": "9419895f800a6d0d1492aa6293dbc82ad6f7c5d3416fdfc122bb61c61d310c8a"
+    },
+    {
+      "path": "figures/source_data/S3C_simulation_batch_weighted_pc_r2_categorical.csv",
+      "sha256": "7e928f4b1013944eb6670f8725fe989479bfd01ba9f84b3f42632f706ef28142"
+    },
+    {
+      "path": "figures/source_data/S3D_simulation_truth_log1p_rmse.csv",
+      "sha256": "52321eb0a1fe192ad5f82fee4655ca9c7bca81d1ab5c677f2621ac6d0b1c7ccc"
+    },
+    {
+      "path": "figures/source_data/S3E_simulation_truth_metabolite_profile_icc_mean.csv",
+      "sha256": "a41126c6271d1d61b329a7d689f0ac3f440e0cdef9ed640a18037452e8607c87"
+    },
+    {
+      "path": "figures/source_data/S3F_simulation_truth_sample_profile_pearson_mean.csv",
+      "sha256": "4d338c0354a4635c352b29a10f526c9c234c5dd47b874bbecae824369b0e9fa2"
+    },
+    {
+      "path": "figures/source_data/S4A_reference_simulation.csv",
+      "sha256": "ec051f902489a8f97330cb30a7001ffae05705735d2fb69fdfc29a34360ce581"
+    },
+    {
+      "path": "figures/source_data/S4B_reference_mtbls79.csv",
+      "sha256": "9dd853cc4028e4cf66cb2a46798bfa5b3bedfcd8912095c05f1269d08ecf82e5"
+    },
+    {
+      "path": "figures/source_data/S4C_reference_clinical_fiams.csv",
+      "sha256": "d444de9df46a85e743adf4fc50b3ac5829268f7e02be0d514ee2a556f6b47747"
+    },
+    {
+      "path": "figures/source_data/S4D_reference_batchcorr_set1.csv",
+      "sha256": "af9eb6829833ed4de84d9d6eba6056f695210c6cfc5231d9b87194b652faa0b4"
+    },
+    {
+      "path": "figures/source_data/S4E_reference_sacurine.csv",
+      "sha256": "99ba75c2aefd76daaf7596f48ef7e25f6b5aaeaaef56ca6cf1f7f0a61f45be49"
+    },
+    {
+      "path": "figures/source_data/S4F_reference_waveica.csv",
+      "sha256": "a908cdeba542019645792a0ea3471982be802cc9b42f4057014d48e9d4bec119"
+    },
+    {
+      "path": "figures/source_data/S5A_partial_heldout_qc_cv_mean.csv",
+      "sha256": "0ac4c291f334c11b5e875b307893cefb6916bbef9e08a45f62253521553ee4b6"
+    },
+    {
+      "path": "figures/source_data/S5B_partial_residual_run_order_gam_mean_deviance.csv",
+      "sha256": "6eafd65cd0936e65169026168cdea6705ef4594272255d15802c6404ac40ae7b"
+    },
+    {
+      "path": "figures/source_data/S5C_partial_batch_weighted_pc_r2_categorical.csv",
+      "sha256": "4e2aec6170af1b98f8c424c79b1f6db8affbfc95bbd717dc74b97859cf078f89"
+    },
+    {
+      "path": "figures/source_data/S5D_partial_clean_sample_profile_pearson_mean.csv",
+      "sha256": "77a683839e186d0b918fd5a7e56a74f25dfb15d20f4281423c176dca9ffe7728"
+    },
+    {
+      "path": "figures/source_data/S5E_partial_median_attenuation_ratio_clean_responsive.csv",
+      "sha256": "cb212b3203ae62c78bdfe1c4af74fe5031396ab1a272e0f75ccb652e5cc96d1e"
+    },
+    {
+      "path": "figures/source_data/S5F_partial_empirical_fdr.csv",
+      "sha256": "532b31f5d51e267df883def10fe08aa854bbece59a92bb2c5943079921da0906"
+    },
+    {
+      "path": "figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv",
+      "sha256": "bbabd9dabb52b703b9eb3a7d52f405d974e2903c3d59e660bc20c145f0027f4f"
+    },
+    {
+      "path": "figures/source_data/S6B_effect_variance_mtbls79_cow_vs_sheep.csv",
+      "sha256": "ee52c64798ec00c6fc2402d1744011d1e31810317efb338030f333a0c64d8a58"
+    },
+    {
+      "path": "figures/source_data/S6C_permutation_waveica_biological_group.csv",
+      "sha256": "6869be12d8e1f4b97442c6253dd2033dd31530e073621cbabffc22f114c2af4a"
+    },
+    {
+      "path": "figures/source_data/S6D_effect_variance_waveica_biological_group.csv",
+      "sha256": "fbe4df96d4190aa62ca70fdb0393f68c0d49e71754941838890f8872226c42db"
+    },
+    {
+      "path": "figures/source_data/S6E_permutation_sacurine_age.csv",
+      "sha256": "da43250a8e9d51d36bf2b46ea7e201655d5492ae1df465867ae16910423dbda6"
+    },
+    {
+      "path": "figures/source_data/S6F_effect_variance_sacurine_age.csv",
+      "sha256": "7e42ae19832e1891573793beae19c2511aedfa27249c4796be619dc417fe5e52"
+    },
+    {
+      "path": "figures/source_data/S6G_permutation_sacurine_bmi.csv",
+      "sha256": "0bc4a269c2df84d86de90760b6b6d043a927c748532af2c99c9b2b4c83ebe1c1"
+    },
+    {
+      "path": "figures/source_data/S6H_effect_variance_sacurine_bmi.csv",
+      "sha256": "d4d6c0e89eb2b2decc60d6fee98e93db29d930edce4109a301576453d1512933"
+    },
+    {
+      "path": "figures/source_data/S6I_permutation_sacurine_gender.csv",
+      "sha256": "7f8abd8daf2a096c2998fbdced49d41310a0ef5ea508ea91ab9e33c4796aea21"
+    },
+    {
+      "path": "figures/source_data/S6J_effect_variance_sacurine_gender.csv",
+      "sha256": "6e1048816157e67261a5d11d6d08df8a05ef3e035e9f506e92a501477a8f42ff"
+    },
+    {
+      "path": "figures/source_data/S7A_lobo_mtbls79_cow_vs_sheep.csv",
+      "sha256": "bd766fd728c08d43c202ef8bb66cf60af976cfa1cf36529f557ae7e9ef91c38f"
+    },
+    {
+      "path": "figures/source_data/S7B_lobo_waveica_biological_group.csv",
+      "sha256": "921e3e82dc81bdd31821367543e52a386dd808ffefeaf703820bd7e8a21035df"
+    },
+    {
+      "path": "figures/source_data/S7C_lobo_sacurine_age.csv",
+      "sha256": "f394ffa07152f081c908d0b5ecb99f7596b2385f1693a27b965975e8e839086a"
+    },
+    {
+      "path": "figures/source_data/S7D_lobo_sacurine_bmi.csv",
+      "sha256": "ede874bd5e1c42cadda9b0bbc6ceaac688572eeff309529ea222df523d90e4e8"
+    },
+    {
+      "path": "figures/source_data/S7E_lobo_sacurine_gender.csv",
+      "sha256": "e54af5ccddfdb2cf69cf2fdae317a8c491ee4900fd124242d1addd5ceeb3e2c3"
+    },
+    {
+      "path": "figures/source_data/S8A_batchcorr_set1_batch_weighted_pc_r2_categorical.csv",
+      "sha256": "d4d8a77d3ade892a8a1356d9b85608c964552d21a8127c3ef492b8997e39b674"
+    },
+    {
+      "path": "figures/source_data/S8B_batchcorr_set1_sample_replicate_pearson_median.csv",
+      "sha256": "a17e3a855a7b784c3b6c3dcc007d6fcbce4fdc038e71819889855ae3317ad04f"
+    },
+    {
+      "path": "figures/source_data/S8C_batchcorr_set1_genuine_replicate_icc_median.csv",
+      "sha256": "dfdc4c6bbbb3818a72c04bb2a733fc7d2e1898c57f49517f18b1a05958ca53e8"
+    },
+    {
+      "path": "figures/source_data/S8D_clinical_fiams_batch_weighted_pc_r2_categorical.csv",
+      "sha256": "930cf31af0740dcd00ef64a9c790fd2eb29531e30eaba6611e899303fc540641"
+    },
+    {
+      "path": "figures/source_data/S8E_clinical_fiams_sample_replicate_pearson_median.csv",
+      "sha256": "048872f667e3ee567292f0e50c5009f6380a989119cbe92d387d16d143b81458"
+    },
+    {
+      "path": "figures/source_data/S8F_clinical_fiams_genuine_replicate_icc_median.csv",
+      "sha256": "5c73249c806ca0a923627e5a92286e3174bb33bb196286484e6be7f07d42758a"
+    },
+    {
+      "path": "figures/source_data/S9A_batch_r2_simulation.csv",
+      "sha256": "92ea24ca73074aba26c8bf848effcafa62df06f25417c8a45e282cc914cb3812"
+    },
+    {
+      "path": "figures/source_data/S9B_batch_r2_mtbls79.csv",
+      "sha256": "cf7a28c8769b74ce9d164b92fdd03c6b92ecb56ab1db1e358c4c896193d6d948"
+    },
+    {
+      "path": "figures/source_data/S9C_batch_r2_clinical_fiams.csv",
+      "sha256": "1dc72a0f3f5a9a199c9cc76eb90abb17f98fef7d2c783564cfd922b686e002f1"
+    },
+    {
+      "path": "figures/source_data/S9D_batch_r2_batchcorr_set1.csv",
+      "sha256": "02d102d0251f154cb3d47e102e8d00db034f1162c8ed7805efda16061881a49a"
+    },
+    {
+      "path": "figures/source_data/S9E_batch_r2_sacurine.csv",
+      "sha256": "958a9b908e11236dcdb48b2e82c402bd3c83c47a1b69b80451be284ea76b4f8a"
+    },
+    {
+      "path": "figures/source_data/S9F_batch_r2_waveica.csv",
+      "sha256": "8e12921c82ce9261f5d8485c32c926ae27ba2a2ad13a59a1175a32c53eb68c5e"
+    },
+    {
+      "path": "figures/supplementary_panels/S10A_sacurine_age_weighted_pc_r2.pdf",
+      "sha256": "4a50dea235864b07a9a915c86c4dcfb835b0c14b551abd92352c99777a15eac3"
+    },
+    {
+      "path": "figures/supplementary_panels/S10A_sacurine_age_weighted_pc_r2.png",
+      "sha256": "22d98dcc73d22c3f5a11eeb056a77f1429c169925e1d01ae6abff25699ec0bd2"
+    },
+    {
+      "path": "figures/supplementary_panels/S10B_sacurine_bmi_weighted_pc_r2.pdf",
+      "sha256": "e8ceaf6fb27bc818963050230ddf90879c69219115a99b2a2f1b1b077c44a600"
+    },
+    {
+      "path": "figures/supplementary_panels/S10B_sacurine_bmi_weighted_pc_r2.png",
+      "sha256": "2550392dfbaf5c1d0f913a3a5042941c7ccca32e3b028513cf8f3a4b5ecefffe"
+    },
+    {
+      "path": "figures/supplementary_panels/S10C_sacurine_gender_weighted_pc_r2.pdf",
+      "sha256": "0eeea2b1d2d3733f88a099258053acc68c5985c4f8ce3b5119a50142493508e2"
+    },
+    {
+      "path": "figures/supplementary_panels/S10C_sacurine_gender_weighted_pc_r2.png",
+      "sha256": "aa340f34505ed5010dfd6258b3b5d28495e9422a16fd266175a15be3b9f8e82f"
+    },
+    {
+      "path": "figures/supplementary_panels/S1A_stage_heldout_qc_cv_mean.pdf",
+      "sha256": "74fc261a9a222b9f192fecfaf674038e456e9aefeda00a7240bc476f6e11a1a7"
+    },
+    {
+      "path": "figures/supplementary_panels/S1B_stage_residual_run_order_gam_mean_deviance.pdf",
+      "sha256": "47fe9896a654c9400c3460658a487a746e1d0b72a5206f8923df41b08ffe9348"
+    },
+    {
+      "path": "figures/supplementary_panels/S1C_stage_batch_weighted_pc_r2_categorical.pdf",
+      "sha256": "b5cebf29acd4326f39ea2db879c078e4da7dfa5c2244051ae7f8677caeb3b0fc"
+    },
+    {
+      "path": "figures/supplementary_panels/S2A_heldout_qc_cv_mean.pdf",
+      "sha256": "32c84542dce55ff772724b88e0324f0e3a185c5e22702fe18911549e45db7cc5"
+    },
+    {
+      "path": "figures/supplementary_panels/S2B_residual_run_order_gam_mean_deviance.pdf",
+      "sha256": "0f062a7b8cc796efae9378d4ee177bd6a017ce08979fc000272b00d3591ac5c1"
+    },
+    {
+      "path": "figures/supplementary_panels/S2C_batch_weighted_pc_r2_categorical.pdf",
+      "sha256": "6ef75f5dc1956de6323b7d6a0ef90873908007896eb9040f1d50fa25b9512c2a"
+    },
+    {
+      "path": "figures/supplementary_panels/S2D_truth_log1p_rmse.pdf",
+      "sha256": "e058d7bce7a5b251e154c3cfae46f8c642069ae092a446ff1b284d116924dc06"
+    },
+    {
+      "path": "figures/supplementary_panels/S2E_truth_metabolite_profile_icc_mean.pdf",
+      "sha256": "4716b9312db94e3b28b68800981a6da6af5483067c8980db9a878da8d1145e98"
+    },
+    {
+      "path": "figures/supplementary_panels/S2F_truth_sample_profile_pearson_mean.pdf",
+      "sha256": "80207f846badc55cf8fc3092a36a890713a6cfb3a70d1fa3a82945840c724ee2"
+    },
+    {
+      "path": "figures/supplementary_panels/S3A_simulation_heldout_qc_cv_mean.pdf",
+      "sha256": "7eea49ead948468f808cc70901c17655e23524c83d86b151c9333f2560eb7cde"
+    },
+    {
+      "path": "figures/supplementary_panels/S3B_simulation_residual_run_order_gam_mean_deviance.pdf",
+      "sha256": "b88e375112353eeaba1303369b7d5b5f78bdc6e91247a9feac02a7f69b2484c3"
+    },
+    {
+      "path": "figures/supplementary_panels/S3C_simulation_batch_weighted_pc_r2_categorical.pdf",
+      "sha256": "8588c27690ef83b10bcae0138b0977c08db33560483fef6f2521d25bae7f03ac"
+    },
+    {
+      "path": "figures/supplementary_panels/S3D_simulation_truth_log1p_rmse.pdf",
+      "sha256": "b149d3b797f1eed5ec7b190b989f6343a7fa4fd12991059827c9b75a81bd8101"
+    },
+    {
+      "path": "figures/supplementary_panels/S3E_simulation_truth_metabolite_profile_icc_mean.pdf",
+      "sha256": "73126bc26ed316f6f123817c74185a41cb6093e21d78f733718d26f88ffd175d"
+    },
+    {
+      "path": "figures/supplementary_panels/S3F_simulation_truth_sample_profile_pearson_mean.pdf",
+      "sha256": "a8e3e0ea22c2fd03d1195bf5b7be50ae2774b69deae3be7499af0376ec68f1d5"
+    },
+    {
+      "path": "figures/supplementary_panels/S4A_reference_simulation.pdf",
+      "sha256": "0d11e555a6ee03c247a549aec9acbfcdc247bd0d55a5ce944de381c9c80bbfce"
+    },
+    {
+      "path": "figures/supplementary_panels/S4A_reference_simulation.png",
+      "sha256": "b711d8384f75d20e24cc0447020ec85d2cf3d785b3060a77538855c7fa129194"
+    },
+    {
+      "path": "figures/supplementary_panels/S4B_reference_mtbls79.pdf",
+      "sha256": "6320b7020f301e6b2629cf3b066842bb4cd29a23cb4ccb8c2128a34dcfbf0b7e"
+    },
+    {
+      "path": "figures/supplementary_panels/S4B_reference_mtbls79.png",
+      "sha256": "7020ad9da289439f657cde3fbced878eb3b727a7e1b02676796141a00d6edfe5"
+    },
+    {
+      "path": "figures/supplementary_panels/S4C_reference_clinical_fiams.pdf",
+      "sha256": "083e827c24e9f63c5928f0965d9de1c6a8bd45420c401de8f859aa414f9d7abd"
+    },
+    {
+      "path": "figures/supplementary_panels/S4C_reference_clinical_fiams.png",
+      "sha256": "a85957b3d2132177e02c84ee6d53cd5cad77bfdefa1c87440c152b52a3fbdeaa"
+    },
+    {
+      "path": "figures/supplementary_panels/S4D_reference_batchcorr_set1.pdf",
+      "sha256": "6fdb923f996f355f84747f1d33ad744b4f97781e213c8fa1eb2fe73143b5e9f3"
+    },
+    {
+      "path": "figures/supplementary_panels/S4D_reference_batchcorr_set1.png",
+      "sha256": "96e801bacb0ee2ca0f12f594d682f166fc449f0fd076724534252dcb41bb84c6"
+    },
+    {
+      "path": "figures/supplementary_panels/S4E_reference_sacurine.pdf",
+      "sha256": "5e053ec78a7b589c79565fe3cd81545386e1ebebe759d074c256375840906349"
+    },
+    {
+      "path": "figures/supplementary_panels/S4E_reference_sacurine.png",
+      "sha256": "155bb84c832087dfd4322a81def615d16d1a2f0d0bde0e07fc1f6f9bc16a9b04"
+    },
+    {
+      "path": "figures/supplementary_panels/S4F_reference_waveica.pdf",
+      "sha256": "97c2b10228f626f3b980175fa6fee8b15dffc7252def8e650c2838ca00ae7067"
+    },
+    {
+      "path": "figures/supplementary_panels/S4F_reference_waveica.png",
+      "sha256": "642c5085a46ca9fcf090281f894f1d2bc05349d8c3dac2d6e8abf345187ee11f"
+    },
+    {
+      "path": "figures/supplementary_panels/S5A_partial_heldout_qc_cv_mean.pdf",
+      "sha256": "392fc0cd189429d3db9a448d18bc4d57d8a86bdcb2935239779d0a275fa04cf6"
+    },
+    {
+      "path": "figures/supplementary_panels/S5B_partial_residual_run_order_gam_mean_deviance.pdf",
+      "sha256": "6b28131784ee95cde11cde47240e01a617d8fde33b4d968ab61307fbcc03de62"
+    },
+    {
+      "path": "figures/supplementary_panels/S5C_partial_batch_weighted_pc_r2_categorical.pdf",
+      "sha256": "9584bf1da70b155db97c5eecc23c446e97a59ca0d1ca63080cfbc14f5863daa8"
+    },
+    {
+      "path": "figures/supplementary_panels/S5D_partial_clean_sample_profile_pearson_mean.pdf",
+      "sha256": "c1a789c916546990f2aa24b6e7a4ba89eb4221f97186f426ce6f20f5fb947e90"
+    },
+    {
+      "path": "figures/supplementary_panels/S5E_partial_median_attenuation_ratio_clean_responsive.pdf",
+      "sha256": "09bbe6ef2a8b287bb79e2bf62f76c620aad9b127966c4efe0065c47b2e18f7a0"
+    },
+    {
+      "path": "figures/supplementary_panels/S5F_partial_empirical_fdr.pdf",
+      "sha256": "08457e3c96dc717861ccb8fa6078b84c0f7a8715b738d6b875fde788c4cd9188"
+    },
+    {
+      "path": "figures/supplementary_panels/S6A_permutation_mtbls79_cow_vs_sheep.pdf",
+      "sha256": "d0ccce6f85db275d43dc059016b0d4a0c960447f763c4a2e221d8028428bf7c5"
+    },
+    {
+      "path": "figures/supplementary_panels/S6A_permutation_mtbls79_cow_vs_sheep.png",
+      "sha256": "3298ad58985f4c4562b23007ae549f0a250ae84fc4bb45e0b58a2dfb6f4d7d9b"
+    },
+    {
+      "path": "figures/supplementary_panels/S6B_effect_variance_mtbls79_cow_vs_sheep.pdf",
+      "sha256": "187e48406c2af4962add992c50ec2694b2eee92a315438e308fd60af0d5cc17e"
+    },
+    {
+      "path": "figures/supplementary_panels/S6B_effect_variance_mtbls79_cow_vs_sheep.png",
+      "sha256": "295bb9c04d2f618b37bd7ff65100b8ce7a90fb51e5da71dd6ac20ab479ab1228"
+    },
+    {
+      "path": "figures/supplementary_panels/S6C_permutation_waveica_biological_group.pdf",
+      "sha256": "65bf93ad98cabf45ab69405154f3c3fc439b906941487bf0cf682ce96b945937"
+    },
+    {
+      "path": "figures/supplementary_panels/S6C_permutation_waveica_biological_group.png",
+      "sha256": "cb181e20c67296a445c9571f12f362818545574abc21076c7352d389e53cd892"
+    },
+    {
+      "path": "figures/supplementary_panels/S6D_effect_variance_waveica_biological_group.pdf",
+      "sha256": "1ded9828763554ec03d85d8bc183234319575c55b3e8b7462319e1aabde47613"
+    },
+    {
+      "path": "figures/supplementary_panels/S6D_effect_variance_waveica_biological_group.png",
+      "sha256": "4d9f4ad3f5db07f15d30bac98cb9341fcedaa201f3714421aafbeaca4894bfd9"
+    },
+    {
+      "path": "figures/supplementary_panels/S6E_permutation_sacurine_age.pdf",
+      "sha256": "dba888483152791d25f7cc10ac0100fac4ab2ed9c2f3899b53434e3bfd95b021"
+    },
+    {
+      "path": "figures/supplementary_panels/S6E_permutation_sacurine_age.png",
+      "sha256": "f5042c1f88b936017a858b8f98671dee7917624eff96293ec080b08008dc73e2"
+    },
+    {
+      "path": "figures/supplementary_panels/S6F_effect_variance_sacurine_age.pdf",
+      "sha256": "392a6d8677b0d688ae2e26df041525635c457e20e399b885267d984d9ec5e5d7"
+    },
+    {
+      "path": "figures/supplementary_panels/S6F_effect_variance_sacurine_age.png",
+      "sha256": "71e3865e22125125a5ed7376480c2491c8e8388506f3946547dd8c1d138de9d4"
+    },
+    {
+      "path": "figures/supplementary_panels/S6G_permutation_sacurine_bmi.pdf",
+      "sha256": "f95363cfa40a3f32a348cef0ba67620d39d17d170281278696ede18889c0197c"
+    },
+    {
+      "path": "figures/supplementary_panels/S6G_permutation_sacurine_bmi.png",
+      "sha256": "11d73bdac047970151cc10f58dfe30b7b400eacdaf1698eb2308ffaae483fdc1"
+    },
+    {
+      "path": "figures/supplementary_panels/S6H_effect_variance_sacurine_bmi.pdf",
+      "sha256": "80558b100492aac8e77b1d4fd1bc0e2d5f27413f0760d673846714e976068061"
+    },
+    {
+      "path": "figures/supplementary_panels/S6H_effect_variance_sacurine_bmi.png",
+      "sha256": "553cf7178d73402107417e037d887f5c2838c4d7e03db01204a263bc48354931"
+    },
+    {
+      "path": "figures/supplementary_panels/S6I_permutation_sacurine_gender.pdf",
+      "sha256": "4ca830f4a6b27bde24ac753173c5eb1aea853ab103e355547c34fd8e6142200e"
+    },
+    {
+      "path": "figures/supplementary_panels/S6I_permutation_sacurine_gender.png",
+      "sha256": "9cd164143ae94edbc5ccae853df18737310550afa0ae50ef4d6d71fd195096d5"
+    },
+    {
+      "path": "figures/supplementary_panels/S6J_effect_variance_sacurine_gender.pdf",
+      "sha256": "156552a97c0be45d7b40310e3ceba562e9d43b9ac80206a239e192a9a1be1c47"
+    },
+    {
+      "path": "figures/supplementary_panels/S6J_effect_variance_sacurine_gender.png",
+      "sha256": "7164d207911af7716c1d087540ffe74c125a3c33e03201ed89d6d3882b6a70bb"
+    },
+    {
+      "path": "figures/supplementary_panels/S7A_lobo_mtbls79_cow_vs_sheep.pdf",
+      "sha256": "9a110ad6b7dc203d35bbbecae2906c528324444f6f6d76cf5c5d6e81dca5a494"
+    },
+    {
+      "path": "figures/supplementary_panels/S7B_lobo_waveica_biological_group.pdf",
+      "sha256": "6e0e49bd4ba0219ed0d763dc520493e48afc90258b604beaed0a08065e638d2d"
+    },
+    {
+      "path": "figures/supplementary_panels/S7C_lobo_sacurine_age.pdf",
+      "sha256": "1f2a60376713ef6a72901e39fd61507338616edccbbac691f7d3b58759d9e0ff"
+    },
+    {
+      "path": "figures/supplementary_panels/S7D_lobo_sacurine_bmi.pdf",
+      "sha256": "c06d6efd3f15b9feaed2b75f529f567828dbae4a700f7e2fce4c6e96461a4823"
+    },
+    {
+      "path": "figures/supplementary_panels/S7E_lobo_sacurine_gender.pdf",
+      "sha256": "be81eb1a052631c6c94a79aaaeedb00b6f005df407cfbe0b351c2fdac7b3e538"
+    },
+    {
+      "path": "figures/supplementary_panels/S8A_batchcorr_set1_batch_weighted_pc_r2_categorical.pdf",
+      "sha256": "8c545846762c56afaecffdf00b7e52da03269f47b159af872abc2b3db7543021"
+    },
+    {
+      "path": "figures/supplementary_panels/S8A_batchcorr_set1_batch_weighted_pc_r2_categorical.png",
+      "sha256": "8302d4bdd0cc8fc3d6ccc45232e47cb6637e02108efc9a4285b7ba46a3746a57"
+    },
+    {
+      "path": "figures/supplementary_panels/S8B_batchcorr_set1_sample_replicate_pearson_median.pdf",
+      "sha256": "66c8fc59cc1bbd8d416631bab3f0b6064a063bc7c685ca9ee89e6fb26d212f1d"
+    },
+    {
+      "path": "figures/supplementary_panels/S8B_batchcorr_set1_sample_replicate_pearson_median.png",
+      "sha256": "355b7078cae1671e652720ff76129f31296475ea5de455788c18b7250770d24d"
+    },
+    {
+      "path": "figures/supplementary_panels/S8C_batchcorr_set1_genuine_replicate_icc_median.pdf",
+      "sha256": "5f4d85bf7f218663945044349f9a970fddfd544ee15723b47eed19f0990bddde"
+    },
+    {
+      "path": "figures/supplementary_panels/S8C_batchcorr_set1_genuine_replicate_icc_median.png",
+      "sha256": "26e1ca894f8d56343a0a919d6cd9613b3138ee7d28dea57075d1bccbf1e1c4a7"
+    },
+    {
+      "path": "figures/supplementary_panels/S8D_clinical_fiams_batch_weighted_pc_r2_categorical.pdf",
+      "sha256": "0ed5d6a4f5b0585fddbecea3fce98d1d631142b3cf772916ad35d22ff5a901b4"
+    },
+    {
+      "path": "figures/supplementary_panels/S8D_clinical_fiams_batch_weighted_pc_r2_categorical.png",
+      "sha256": "ee34151b37bba286cad32f1ec331a1277e45bafb84feb36659098af28a4a5604"
+    },
+    {
+      "path": "figures/supplementary_panels/S8E_clinical_fiams_sample_replicate_pearson_median.pdf",
+      "sha256": "d7a8c879450befb3a8840b7e38ab97f4c55f38dc0fce8979702b32bc9b1c99db"
+    },
+    {
+      "path": "figures/supplementary_panels/S8E_clinical_fiams_sample_replicate_pearson_median.png",
+      "sha256": "60b058a337d030a0b7c98dbd5c22975b513792bfc8175b48d540b7e7858807bc"
+    },
+    {
+      "path": "figures/supplementary_panels/S8F_clinical_fiams_genuine_replicate_icc_median.pdf",
+      "sha256": "59609dfeea7fd747f21c41ba38ca89e249e6d9b1e73a4275b9d02e0b41ee5746"
+    },
+    {
+      "path": "figures/supplementary_panels/S8F_clinical_fiams_genuine_replicate_icc_median.png",
+      "sha256": "8f2c9a3560be9ee42276348b0f5a8fa61cd40e62702c1d67cbe6d62ac32b06a8"
+    },
+    {
+      "path": "figures/supplementary_panels/S9A_batch_r2_simulation.pdf",
+      "sha256": "262f2d164f9ff82faf358e1ac0b3122ca0d5e683bc2d59f1bc706b6cd0641903"
+    },
+    {
+      "path": "figures/supplementary_panels/S9B_batch_r2_mtbls79.pdf",
+      "sha256": "0147b774b84918f79790651f98a5a0a88c03563543becc5b27c7d2d09a0cdfc0"
+    },
+    {
+      "path": "figures/supplementary_panels/S9C_batch_r2_clinical_fiams.pdf",
+      "sha256": "0b6f83802d2fbc09b47781bad59b30fc83960d5779aa279d3403daf2f750e623"
+    },
+    {
+      "path": "figures/supplementary_panels/S9D_batch_r2_batchcorr_set1.pdf",
+      "sha256": "9a8ecfeaef7c46afa897bc1fc875fde70c3f9b1aab68ff1f682d4def13f6e13c"
+    },
+    {
+      "path": "figures/supplementary_panels/S9E_batch_r2_sacurine.pdf",
+      "sha256": "ed905b7e18ff514b498306e32f06184be2dd3a6cb5bf458f82e2f21769a8393b"
+    },
+    {
+      "path": "figures/supplementary_panels/S9F_batch_r2_waveica.pdf",
+      "sha256": "2485eaeaa99d58277d417cbacfea5806d6e345eefdd58b9c9af36c38ff581304"
+    },
+    {
+      "path": "generated/figure_preview_manifest.csv",
+      "sha256": "3bf191ba72ad109c047e7accd90fdaea8efdf30625ab80036fd5b752540810ec"
+    },
+    {
+      "path": "generated/review_validation/README.md",
+      "sha256": "2a7cdaee33eb3f49954e4dff196fb09abbc6e7916b5ed9a6d14c81533168fcfb"
+    },
+    {
+      "path": "generated/review_validation/baseline_biology_sessionInfo.txt",
+      "sha256": "e309c03bbda4a0a40e74df64e3f4e0673fa820c82a284aaaffc203ac6aa10a2b"
+    },
+    {
+      "path": "generated/review_validation/baseline_biology_validation_checks.csv",
+      "sha256": "dcc79503b71e001887c576de5e0857b3bef0c8011fe0be3c75ba19b2df4e2f6a"
+    },
+    {
+      "path": "generated/review_validation/baseline_empirical_feature_effects.csv",
+      "sha256": "7d9801eeff60ef48eca197defb8a4682649a786939296363b61e54763d21c25f"
+    },
+    {
+      "path": "generated/review_validation/baseline_empirical_input_manifest.csv",
+      "sha256": "0d4ed4a8318109755c6e838fb5ce7208c4e9a4da56c1f5c3689163d9e8cce3ed"
+    },
+    {
+      "path": "generated/review_validation/baseline_empirical_lobo_effects.csv",
+      "sha256": "33b68fb417d0ab9ca47b66bb4691def724cbd722691f75cd354181aa867243b9"
+    },
+    {
+      "path": "generated/review_validation/baseline_identity_protocol_counts.csv",
+      "sha256": "1a20b7dc226160dcaa1ae6145884a7caddb997d946ed892ee66d652588ca0c81"
+    },
+    {
+      "path": "generated/review_validation/baseline_simulation_input_checks.csv",
+      "sha256": "a01ab9891b2c3ce1643be48d2175fe4d173fdf6b4b4a47ca748358aa9a75f869"
+    },
+    {
+      "path": "generated/review_validation/baseline_simulation_paired_differences.csv",
+      "sha256": "65b97c9924c53cd77831d89c05c26e275b9491eca6022cc9553f0d4a94822a67"
+    },
+    {
+      "path": "generated/review_validation/baseline_simulation_seed_metrics.csv",
+      "sha256": "9cf48815bf2ce72c91a88ca3ffb52fb10811dbf33b228adc27c70ff775dd1524"
+    },
+    {
+      "path": "generated/review_validation/baseline_simulation_sessionInfo.txt",
+      "sha256": "5434c4506f1d18ea1b6f035cb46566717f985550ed7a5fcb5e879f679b80e175"
+    },
+    {
+      "path": "generated/review_validation/baseline_simulation_summary.csv",
+      "sha256": "ddfa939ba894cebe818709a3304bff85a7f34239310f9bb65e7ed2342a70bf0a"
+    },
+    {
+      "path": "generated/review_validation/batch_gate_calibration_replicates.csv",
+      "sha256": "8aa10cbee5327a7307ddb29b4c932e66de290e944b8c1675444110445fece9b6"
+    },
+    {
+      "path": "generated/review_validation/batch_gate_calibration_summary.csv",
+      "sha256": "87748e72dfae269e18ff879b5c7bba825be49bb0791f56617f5153fe27eb77c8"
+    },
+    {
+      "path": "generated/review_validation/batchcorr_identity_retrieval_paired.csv",
+      "sha256": "56e832bfbd305f585a562fb0ef7635f373cd89e35055e076fd605791e5e5d3b1"
+    },
+    {
+      "path": "generated/review_validation/biology_sessionInfo.txt",
+      "sha256": "0dcbd5460a8e4151cb0cdc55af95f46a335da172d0c6287958677db1aaf319bf"
+    },
+    {
+      "path": "generated/review_validation/biology_source_manifest.csv",
+      "sha256": "2a0d3e8e1dfedde8d31474fd8f0c583f4441ef868ee8f19e074f8d9582459a73"
+    },
+    {
+      "path": "generated/review_validation/clinical_batch_r2_bootstrap_bias_audit.csv",
+      "sha256": "39a8f1df213bcff710d160786a64a591efd388cfb93ef4f6eff9d415926e891d"
+    },
+    {
+      "path": "generated/review_validation/design_covariate_acquisition_quartiles.csv",
+      "sha256": "bce02b7ebdc7b761c44897ac370c161a26547fce1ba6ebe19eedfa67555a3c90"
+    },
+    {
+      "path": "generated/review_validation/design_group_acquisition_quartiles.csv",
+      "sha256": "f1148284674d7c5bdc1e8db09524e3cccde5f4c279ab4fc9c4c02abc179c6d56"
+    },
+    {
+      "path": "generated/review_validation/design_metadata_manifest.csv",
+      "sha256": "0b7e620320ee98781f389ce148b7cced93d071d1d9b4c2b44bcb9ac8327328f7"
+    },
+    {
+      "path": "generated/review_validation/drift_gate_calibration_replicates.csv",
+      "sha256": "563cfd5cc24b8798bc75ad11e9cf83f00dacbe7364768311ae3febd177c5c5c9"
+    },
+    {
+      "path": "generated/review_validation/drift_gate_calibration_summary.csv",
+      "sha256": "fba318f832810f62294af1c01c8cf0be96f8f4ceb5e8e411a1bfa4931f1dfcee"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/empirical_evaluation/batchcorr_set1/COMPLETE.txt",
+      "sha256": "7441d7e2dc05e68ee2dbae0bd28358db475552abd5664ec6382df91a557959e8"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/empirical_evaluation/batchcorr_set1/corrected/metrics.csv",
+      "sha256": "f659a3415eda05319fc7b97c193d0cd323438c57efcc6ba986f0e8a57365e02f"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/empirical_evaluation/batchcorr_set1/legacy/metrics.csv",
+      "sha256": "556ed0556cecc7c6a41f24e15ad52887f891c425b27abb7c8d89591087aa8a88"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/empirical_evaluation/batchcorr_set1/sessionInfo.txt",
+      "sha256": "c2c7dae394ae3d12ca197b87208d55526e29abd1158e93cb8c5eda11981aced1"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/empirical_evaluation/clinical_fiams/COMPLETE.txt",
+      "sha256": "b398f124234806b0362ab9ca997daefd475a3309de2662799f02302d5b987d7e"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/empirical_evaluation/clinical_fiams/corrected/metrics.csv",
+      "sha256": "e2613b5c0f96458fc5d816992c7cff77b348f9a8378c036910b2d6267397633b"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/empirical_evaluation/clinical_fiams/legacy/metrics.csv",
+      "sha256": "197e9ccdd6bab43b4520a2728d3597b8af781730669d227fe07cdafb882a3f3d"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/empirical_evaluation/clinical_fiams/sessionInfo.txt",
+      "sha256": "c2c7dae394ae3d12ca197b87208d55526e29abd1158e93cb8c5eda11981aced1"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/empirical_evaluation/mtbls79/COMPLETE.txt",
+      "sha256": "fbd6d2b0029fb7488640048ac7e2f6e575f506e37f68844a1982fca175e868db"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/empirical_evaluation/mtbls79/corrected/metrics.csv",
+      "sha256": "f9c25f66e570c89d758df12fb308dcb43d7f8efe5c9f1db6c843d33b00cd33fa"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/empirical_evaluation/mtbls79/legacy/metrics.csv",
+      "sha256": "f2fd53faacd8f2a3ac798e77cf1502f8e574135705d67c128b576bca920f738c"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/empirical_evaluation/mtbls79/sessionInfo.txt",
+      "sha256": "c2c7dae394ae3d12ca197b87208d55526e29abd1158e93cb8c5eda11981aced1"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/empirical_evaluation/sacurine/COMPLETE.txt",
+      "sha256": "a13fcc9b0d7fdbab445aa5b19cfbada94120751c77bc93d2fd032f54a79fd1da"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/empirical_evaluation/sacurine/corrected/metrics.csv",
+      "sha256": "fb76bc81e72bf1d43f1806260b2e3da2e4f7aef13fae7f997049aa5e5a86270c"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/empirical_evaluation/sacurine/legacy/metrics.csv",
+      "sha256": "d0ba1ebf96168ec8f35527b04ae9c1ba78ee7c23137f09a05bcfa8fa58820e37"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/empirical_evaluation/sacurine/sessionInfo.txt",
+      "sha256": "7fac4ae62e781fb18a8cff53a0242f477241b7966c54488b98eb83080b7b81f6"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/empirical_evaluation/waveica/COMPLETE.txt",
+      "sha256": "6674306046d5a3f2aac4495b04ef380660b765bdac77e7ffebec9d6fdd63fd08"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/empirical_evaluation/waveica/corrected/metrics.csv",
+      "sha256": "508554f3212366f5672f80c7dc4c4c6882a2071049e8731a404f1576ec1ac8a9"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/empirical_evaluation/waveica/legacy/metrics.csv",
+      "sha256": "c7b8f742c1118dd366a9b62a1bc61a82c51683b27b6a87b7292ea3469bc205dd"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/empirical_evaluation/waveica/sessionInfo.txt",
+      "sha256": "7fac4ae62e781fb18a8cff53a0242f477241b7966c54488b98eb83080b7b81f6"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/results/batchcorr_set1/COMPLETE.txt",
+      "sha256": "614e7a583bacaee941ba95803381877fe27f8a62005e9665a9fb56a3642c663c"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/results/batchcorr_set1/REGfit_training_index_assertions.csv",
+      "sha256": "98d229e99dfd45e6ac3d431eefda43a0f4e93813fcc2a10d453cbf3153c574b6"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/results/batchcorr_set1/revision_diagnostic_metrics.csv",
+      "sha256": "17a9fb6f66830eab1a76c98d94a32432e89fb60af5e7b50bfe7f5626bbd50b35"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/results/batchcorr_set1/selected_parameters.csv",
+      "sha256": "5e092ff9b09d97ab035783ec472d208de9c5792c852a0e1915b8c0d4fe12d3d9"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/results/batchcorr_set1/selection_summary.csv",
+      "sha256": "4a7a3236bad7b17d02bdd7161d8521d1b1e37f38813e27bd2ffc6d389fe58c6a"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/results/clinical_fiams/COMPLETE.txt",
+      "sha256": "80000c82d5e7aff19c639c835e76645007a58b074c57808f3a1a26fdaee0a5c1"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/results/clinical_fiams/REGfit_training_index_assertions.csv",
+      "sha256": "e5ac0f985573587e165c048cd3a335141d151fec823005412ea8a6597a040800"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/results/clinical_fiams/revision_diagnostic_metrics.csv",
+      "sha256": "68649cf31b51e894ab3725955eea612ab5cb7dc9c0202cbee6ca94dbfbcd2761"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/results/clinical_fiams/selected_parameters.csv",
+      "sha256": "fda1326a67de21c3ddeb282d536bc7a6589b610d01fe36ce3ae94f96d7378e8e"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/results/clinical_fiams/selection_summary.csv",
+      "sha256": "467ca0cdf1ea6f46c630783ba8bf3999af271f61df52b8e7a5a2e13d9e79ecd0"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/results/mtbls79/COMPLETE.txt",
+      "sha256": "626f590de920e0c203c698b6f29ee9a63525d9bdc0c687d92adab94c51be1ff2"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/results/mtbls79/REGfit_training_index_assertions.csv",
+      "sha256": "0481427ade87212fe7d157d5c4fd9470f22ef6995b5f5fbb35d4f30750816b5f"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/results/mtbls79/revision_diagnostic_metrics.csv",
+      "sha256": "9879fc845b3bdc54b52b88091f18c044c28da72bf79164e7a6b68b0efd41fbac"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/results/mtbls79/selected_parameters.csv",
+      "sha256": "a666c18242135c6f662c58bd4699eb7ed715ab44be2b1f41e84fe4f7c82992c2"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/results/mtbls79/selection_summary.csv",
+      "sha256": "dc9d925afff03821fad2936c8d57da8383708fb6ac574d4ddfc056eec806d463"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/results/sacurine/COMPLETE.txt",
+      "sha256": "c674b0545fc264250e2c85ee02c2bf33c7e66e78d0b5f9138051f58516b824ca"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/results/sacurine/REGfit_training_index_assertions.csv",
+      "sha256": "703e23b8b63a8ebbeb9101ace61ecb0469bafbc5af1f5c92398483afe2c723e3"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/results/sacurine/revision_diagnostic_metrics.csv",
+      "sha256": "8eb78a5784661710169d4d74dd2d23aa62b0a82610741ecc1856bf10b368a499"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/results/sacurine/selected_parameters.csv",
+      "sha256": "163c75bab3203200f37e8507a9be5db1fd665a2a01fe50ef0ef54addbea21251"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/results/sacurine/selection_summary.csv",
+      "sha256": "21c4ef6ca2867d34a436d4238dc9d98d0ae8ecc0961bf47b8b7fc81a7dee5565"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/results/waveica/COMPLETE.txt",
+      "sha256": "fedfc6e42ac9e6909b34a195d9bc81f3f6387c0c269c64e7d86642d663825df9"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/results/waveica/REGfit_training_index_assertions.csv",
+      "sha256": "f7d73e8206b46dbba169e35464747ae49cc9beb3394798c93a9f717836e6f491"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/results/waveica/revision_diagnostic_metrics.csv",
+      "sha256": "a3dd4826f8d9e88026379ab136aeefda24372aec05f976a8d821638713a8a3ed"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/results/waveica/selected_parameters.csv",
+      "sha256": "a0aae9bc371fb6238110268efad5aa7779d8f9f1eaeb5622aab72f6b835f0a48"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/results/waveica/selection_summary.csv",
+      "sha256": "8c53120d0c0ad29e580eeaf88dc0a1b35b2a0e21905b598931da43a89c120bff"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_evaluation/SIM01/COMPLETE.txt",
+      "sha256": "49033f4b6c0e14ca6f91d1fd9780029a37b6301ae393700855f61d235474c0c5"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_evaluation/SIM01/metrics.csv",
+      "sha256": "aa1a9977bce7a3fe48237c5eeaacf8c50e989e479c11bb6a86380ec2b5accc5d"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_evaluation/SIM02/COMPLETE.txt",
+      "sha256": "49033f4b6c0e14ca6f91d1fd9780029a37b6301ae393700855f61d235474c0c5"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_evaluation/SIM02/metrics.csv",
+      "sha256": "5a685eec357f9ee3a7c9a1129d0f83626b4b0f9aec4df219d4765287e61dcfc0"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_evaluation/SIM03/COMPLETE.txt",
+      "sha256": "49033f4b6c0e14ca6f91d1fd9780029a37b6301ae393700855f61d235474c0c5"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_evaluation/SIM03/metrics.csv",
+      "sha256": "d777a3d4853e05353b220167373069b623ed032cb70357ca46dd00e6509e5976"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_evaluation/SIM04/COMPLETE.txt",
+      "sha256": "49033f4b6c0e14ca6f91d1fd9780029a37b6301ae393700855f61d235474c0c5"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_evaluation/SIM04/metrics.csv",
+      "sha256": "e02a5a9a3181a578ea0b02a291a1386de4270662635385dab7fa3d6bf19a0cab"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_evaluation/SIM05/COMPLETE.txt",
+      "sha256": "49033f4b6c0e14ca6f91d1fd9780029a37b6301ae393700855f61d235474c0c5"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_evaluation/SIM05/metrics.csv",
+      "sha256": "d6ab97f77e7d9201674e273e36b04ed6b06e478ff259c64add4d3f0f7354811d"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_evaluation/SIM06/COMPLETE.txt",
+      "sha256": "49033f4b6c0e14ca6f91d1fd9780029a37b6301ae393700855f61d235474c0c5"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_evaluation/SIM06/metrics.csv",
+      "sha256": "cefff8610a91b2940e29ba7fd95f863d404c0c9a793f18a2540bd332e147e105"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_evaluation/SIM07/COMPLETE.txt",
+      "sha256": "49033f4b6c0e14ca6f91d1fd9780029a37b6301ae393700855f61d235474c0c5"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_evaluation/SIM07/metrics.csv",
+      "sha256": "a5ee97fb2ba823c411be4c8e76cb0393c79e9a13ca75d185ad4f2bbe67eb0d5e"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_evaluation/SIM08/COMPLETE.txt",
+      "sha256": "49033f4b6c0e14ca6f91d1fd9780029a37b6301ae393700855f61d235474c0c5"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_evaluation/SIM08/metrics.csv",
+      "sha256": "940b7895f5d3d6df54bc68e65677268efe6aa696075a9d8d725b16e23ba6556e"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_evaluation/SIM09/COMPLETE.txt",
+      "sha256": "49033f4b6c0e14ca6f91d1fd9780029a37b6301ae393700855f61d235474c0c5"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_evaluation/SIM09/metrics.csv",
+      "sha256": "50e11e59a4a08661e472e3de3fb416ed93d55f3be58674cb4b0125475cb93be9"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_evaluation/SIM10/COMPLETE.txt",
+      "sha256": "49033f4b6c0e14ca6f91d1fd9780029a37b6301ae393700855f61d235474c0c5"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_evaluation/SIM10/metrics.csv",
+      "sha256": "60bae5d880760d71e421566e03528319838b99b96194d557daec1df8cd5204cf"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM01/COMPLETE.txt",
+      "sha256": "a5541cef289849b080ed61ce99859e18eaa9e553200b8ed60236b1420ac253a3"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM01/REGfit_training_index_assertions.csv",
+      "sha256": "6cbcddc9161b0206619ccdc349bb6572feaef14b3970a1624d573a415e2eef6b"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM01/input_identity_checks.csv",
+      "sha256": "84b22a8f812f06f14e0d85c34deed889e18e835e26bb9d06bdfe5bfc3087fa07"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM01/simulation_truth_metrics.csv",
+      "sha256": "f46f51188355a1f4a4e9cd5e6ca89999a815efabb8374a102c77546b7d663bd0"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM02/COMPLETE.txt",
+      "sha256": "f40875fde8911ea973385657ca5d85d56aa69ced9a78b0c21cad16197119fa01"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM02/REGfit_training_index_assertions.csv",
+      "sha256": "6cbcddc9161b0206619ccdc349bb6572feaef14b3970a1624d573a415e2eef6b"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM02/input_identity_checks.csv",
+      "sha256": "71ea79e05efb2cf69ad731d2141b2db1eaff6fc46514ef5f14e1be45946666e5"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM02/simulation_truth_metrics.csv",
+      "sha256": "b631af71ef9751bb1d117e8bff2f02c03e8e04f0f43c4a0e796bfececcb05add"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM03/COMPLETE.txt",
+      "sha256": "4e367007ceb2d614b597e73532ef2b628484d453eeeaf9ad696740192fe0e5cb"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM03/REGfit_training_index_assertions.csv",
+      "sha256": "6cbcddc9161b0206619ccdc349bb6572feaef14b3970a1624d573a415e2eef6b"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM03/input_identity_checks.csv",
+      "sha256": "0ef608d09cbed8c359ef6607bc3ef2d9f23578ba3a16a06ed01f415c75164240"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM03/simulation_truth_metrics.csv",
+      "sha256": "c20a86a9e8f18066c487c538dbcb3bc1c6849c133f4546f35c68637510445610"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM04/COMPLETE.txt",
+      "sha256": "8a1183ef8719d8f92f22d46e0cab0a66de0c9241273c64cb2bebf403c278f696"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM04/REGfit_training_index_assertions.csv",
+      "sha256": "6cbcddc9161b0206619ccdc349bb6572feaef14b3970a1624d573a415e2eef6b"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM04/input_identity_checks.csv",
+      "sha256": "849abba0d4b524bef469a48fa4f134f5d86e75dd24497ffd870a6b563cbf5401"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM04/simulation_truth_metrics.csv",
+      "sha256": "5309f63b960dcb04f8af49d3ec26ddba766d6010b07ec8efba2cb5b069016f76"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM05/COMPLETE.txt",
+      "sha256": "6b849fac034b4317448d1ed2e1e8ce70034594c8ca973759b8661b9458c59438"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM05/REGfit_training_index_assertions.csv",
+      "sha256": "6cbcddc9161b0206619ccdc349bb6572feaef14b3970a1624d573a415e2eef6b"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM05/input_identity_checks.csv",
+      "sha256": "a6c2a86a971fc80cb6a432331e03b44066ca3ad82613217dbdfa2078919321b1"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM05/simulation_truth_metrics.csv",
+      "sha256": "da39a54d99c3080bd0d6627b7c9c802927904b9cd2909da6da302521e583681a"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM06/COMPLETE.txt",
+      "sha256": "5acabc9e71979d2cab68adb1202542f99a9e8abdbdf2abd3549a1b7dfbda6114"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM06/REGfit_training_index_assertions.csv",
+      "sha256": "6cbcddc9161b0206619ccdc349bb6572feaef14b3970a1624d573a415e2eef6b"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM06/input_identity_checks.csv",
+      "sha256": "6f469f10933c0b0ddd62caa6f95097ad5a35a99e64ac2815a143b625094c9f70"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM06/simulation_truth_metrics.csv",
+      "sha256": "958ec54fe7598cf3bc5db4e3348a53bf7b7bc3bd8a40bfdbddf55654926fffd0"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM07/COMPLETE.txt",
+      "sha256": "ee7e5509fe2aaeb80afc259519822116a1fec07e3e50bdae393249090df79a71"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM07/REGfit_training_index_assertions.csv",
+      "sha256": "6cbcddc9161b0206619ccdc349bb6572feaef14b3970a1624d573a415e2eef6b"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM07/input_identity_checks.csv",
+      "sha256": "642cbb117fc14350d03f4719a418de260b9564501d14fe8053f3be33cdefec7a"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM07/simulation_truth_metrics.csv",
+      "sha256": "182f0c3403b2adcb364ec246b8a040727b47ab1fde060ad50c0ebd4c1995fd8e"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM08/COMPLETE.txt",
+      "sha256": "c38832a5988ddb8c7e081f8da1235f64ef614df077ff676da3ececbcfa9753b6"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM08/REGfit_training_index_assertions.csv",
+      "sha256": "6cbcddc9161b0206619ccdc349bb6572feaef14b3970a1624d573a415e2eef6b"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM08/input_identity_checks.csv",
+      "sha256": "ef7d0c307a6d5b06af73cab211f4bbed97711e6ac48ce34249e954ca2c388c39"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM08/simulation_truth_metrics.csv",
+      "sha256": "b872dd22e57cf608c0eeee57a1d81196d07bc0021452396051db9ba3f2301890"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM09/COMPLETE.txt",
+      "sha256": "4ea6db8f95d353a161c67a9074e3bd2c3a53ccf5d4f180db6d36daa96242adfc"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM09/REGfit_training_index_assertions.csv",
+      "sha256": "6cbcddc9161b0206619ccdc349bb6572feaef14b3970a1624d573a415e2eef6b"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM09/input_identity_checks.csv",
+      "sha256": "c098ce38d0895a354889794c935804d25adeb57bbc29b8c660291d254a76b21f"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM09/simulation_truth_metrics.csv",
+      "sha256": "6cc23f9696d8d6c74d18fe59e6bcb2065914a99b77eadd73a112d325be38b672"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM10/COMPLETE.txt",
+      "sha256": "cf52fb02bcf89d6fa6a62a2e2c413a0a9760d90e91f7011586231df70603ece5"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM10/REGfit_training_index_assertions.csv",
+      "sha256": "6cbcddc9161b0206619ccdc349bb6572feaef14b3970a1624d573a415e2eef6b"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM10/input_identity_checks.csv",
+      "sha256": "11ed4ec9a83eafcccc90e18bf212797e2a7f867cf77b1c822425d2403df3e17c"
+    },
+    {
+      "path": "generated/review_validation/euler_completed/simulation_results/SIM10/simulation_truth_metrics.csv",
+      "sha256": "297931add96cd8a9f5e44671e0ca00e5184b9e598f8cdd7a54ebc208c9141f71"
+    },
+    {
+      "path": "generated/review_validation/frozen_derivative_input_manifest.csv",
+      "sha256": "7fb11f4703d6f009cb8145e4453196d8606fc54143d7f72200f3c5d23e66dc92"
+    },
+    {
+      "path": "generated/review_validation/frozen_identity_retrieval_estimates.csv",
+      "sha256": "c2808d93c64f9335ae9774de5fc333b5f674667160da088ef419e5658ec48226"
+    },
+    {
+      "path": "generated/review_validation/frozen_identity_retrieval_estimates_before_query_weighting.csv",
+      "sha256": "7aa50c3f50ff5a11bc4fe7117f053bf8c8e520d705fd538a972f5683c876660e"
+    },
+    {
+      "path": "generated/review_validation/frozen_identity_retrieval_input_manifest.csv",
+      "sha256": "5a49d6b9b48a4fd05ea14629680dcd0ba1c99e770c0b2d9788f3962f8b8f87d7"
+    },
+    {
+      "path": "generated/review_validation/frozen_identity_retrieval_paired_differences.csv",
+      "sha256": "173c33a9a4f77ad285d4a1e37beb44b67d53bb0ed64b35bab78586523d71a312"
+    },
+    {
+      "path": "generated/review_validation/frozen_identity_retrieval_paired_differences_before_query_weighting.csv",
+      "sha256": "235acb054c4b9e66655bf1fc8535a428ebea47e4787e0ac29a1f805d2f420292"
+    },
+    {
+      "path": "generated/review_validation/injected_effect_scale_audit.csv",
+      "sha256": "74c695edc91b08314bdac8b8be39635eb5a9c164de35f45f7c16ba1b5e0b8af3"
+    },
+    {
+      "path": "generated/review_validation/mtbls79_qcrlsc_coverage.csv",
+      "sha256": "ffcd3fb3727e3c42bb7761f062aaed41d3e28c96828d3fd435046d6206ad0994"
+    },
+    {
+      "path": "generated/review_validation/mtbls79_qcrlsc_failing_profile_traces.csv",
+      "sha256": "67583bf965aa6d6206bb75553057af2fe8327340c1c07b2fb8bb474f47b34b42"
+    },
+    {
+      "path": "generated/review_validation/mtbls79_qcrlsc_feature_diagnostics.csv",
+      "sha256": "6ad7d8962cb84517055ea887a4cf7d79d5d3b6ec92790353ef6dfb1f5e41cde1"
+    },
+    {
+      "path": "generated/review_validation/mtbls79_qcrlsc_summary.csv",
+      "sha256": "20140dc93440095a9f10bc4cb2d5fb2a01a3b71b7a2e587c467d7334693db130"
+    },
+    {
+      "path": "generated/review_validation/mtbls79_qcrlsc_warnings.txt",
+      "sha256": "d57b1fff73adcf719bae3eabcca319fdf910ccd6d237d17ac89be2e9a74c2284"
+    },
+    {
+      "path": "generated/review_validation/nearest_baseline_metrics.csv",
+      "sha256": "da5037345df136abf9c2fdf6262876b6e13ca4fe36f0bba8a4a97a2932d2df10"
+    },
+    {
+      "path": "generated/review_validation/null_gate_verification_replicates.csv",
+      "sha256": "478ee2ddeaacb4817695505908daef6879e5893b6919f3ae17172c2ef146baf3"
+    },
+    {
+      "path": "generated/review_validation/null_gate_verification_summary.csv",
+      "sha256": "ae98ca50a679a93935700e39f735c285b5a46b72c4e45ad4e6e6656504dd73ae"
+    },
+    {
+      "path": "generated/review_validation/paired_feature_effects_descriptive.csv",
+      "sha256": "0afff0c1174b320bf937ad8933ac765dd724731d039d5da91adc554660a54abd"
+    },
+    {
+      "path": "generated/review_validation/periodic_qc_counterexample.csv",
+      "sha256": "9ba2b6db7a287f345de4fc90ae20cc3f5bfa39dcfb6a0ef187982d6e13bbe480"
+    },
+    {
+      "path": "generated/review_validation/preparation_biology_replicates.csv",
+      "sha256": "45a8c5bd7bde220938f7b0b16a7be5d8cbee08b3e24be8c61703f96da4c96aff"
+    },
+    {
+      "path": "generated/review_validation/preparation_biology_summary.csv",
+      "sha256": "afa0267c84c8c3e3aec6fcf8c25be34d8d0c5ad7fb462a33c97f4e09f326fb36"
+    },
+    {
+      "path": "generated/review_validation/prepared_design_group_by_batch.csv",
+      "sha256": "a4814f286480479c465094f21a694feae1343c2c447c0a3969454f855a37d473"
+    },
+    {
+      "path": "generated/review_validation/prepared_design_identity_by_batch.csv",
+      "sha256": "2cd9a9ed706ce5c8986b660fe4112825e5e2fc0d9beef4863c75816c6cb1790c"
+    },
+    {
+      "path": "generated/review_validation/prepared_design_input_manifest.csv",
+      "sha256": "43e03e5a258070dbeccdfff03614c7a45c0fa5ba3ceedb5fcb2e8e8bae835cfb"
+    },
+    {
+      "path": "generated/review_validation/prepared_design_reference_placement.csv",
+      "sha256": "2db638ffd2983d68017a2d77d1424fc0b03b14cef6867ed25efdba0e1f1b7554"
+    },
+    {
+      "path": "generated/review_validation/prepared_design_run_order_balance.csv",
+      "sha256": "5a282485f786360a3eaeaf729e05459e532cfa3d2bc122381009c2d8127286d2"
+    },
+    {
+      "path": "generated/review_validation/primary_intensity_domain_safeguard.csv",
+      "sha256": "a415333836b778cc74b0ec9a5dbaead2577f8ea762233458af62c2ece115f16e"
+    },
+    {
+      "path": "generated/review_validation/primary_tiger_nonfinite_feature_fallback.csv",
+      "sha256": "f1a96fe7437d1e29345316484cafb17e5ef87873768b36bbf2576275e80bbd37"
+    },
+    {
+      "path": "generated/review_validation/public_design_group_by_batch.csv",
+      "sha256": "2930e8c40205dd5a1f97b73a5c3eff7148c29b8d7cec7bee0d065b952b275ac9"
+    },
+    {
+      "path": "generated/review_validation/public_design_identity_placement.csv",
+      "sha256": "08865486b8a9fb57818c9226a105e700387c3852607e065ba0a86728818e92c1"
+    },
+    {
+      "path": "generated/review_validation/public_design_reference_placement.csv",
+      "sha256": "a1f81b1d7b84adb3df4af7ce573f9e501c9095ca6818f056fe47740816a6c769"
+    },
+    {
+      "path": "generated/review_validation/public_design_run_order_balance.csv",
+      "sha256": "90e5d2fafabda5acdfe81074064b35f9381072b3bc93b3d33a9fe6b57294cb13"
+    },
+    {
+      "path": "generated/review_validation/qcrfsc_REGfit_assertion_summary.csv",
+      "sha256": "8e57b8df99b1b8e77781ed5500f3f408ec9f0e078dbb351f14b0700c12c05c75"
+    },
+    {
+      "path": "generated/review_validation/qcrfsc_completed_empirical_all_endpoints.csv",
+      "sha256": "d50964ef064a2c48bd093f50dacf2186fae42ec77e496dbf232c829740966afe"
+    },
+    {
+      "path": "generated/review_validation/qcrfsc_completed_empirical_summary.csv",
+      "sha256": "2b4151bc0e4ae74dd1408e647399a017c0dc2bbc68f5a66a3462d44f527b0ce3"
+    },
+    {
+      "path": "generated/review_validation/qcrfsc_completed_integration_checks.csv",
+      "sha256": "2bb9c3eac37fdff368c83941397aa512fe4a5fed82ef83b09f51d9761c89021d"
+    },
+    {
+      "path": "generated/review_validation/qcrfsc_completed_simulation_summary.csv",
+      "sha256": "1d91d40d67e02ba7e0784766d58d3aefef1def295fa65bb0bcb2968f72845cff"
+    },
+    {
+      "path": "generated/review_validation/qcrfsc_followup_experiment_status.csv",
+      "sha256": "5b7345b1c83bde9a4189f2a21faa7ac380c94b34121f04fe1f03e26ebee41e4c"
+    },
+    {
+      "path": "generated/review_validation/qcrfsc_identifier_summary.csv",
+      "sha256": "b775d3137b744d18afdb8a3aa1e8a01de7f9f787f957714e01804175e6798fef"
+    },
+    {
+      "path": "generated/review_validation/qcrfsc_mtbls79_sample_means.csv",
+      "sha256": "381858ff4c8716433cebbd70f58cc5f4d397667ebb8eeef63fc254d44e3b89c3"
+    },
+    {
+      "path": "generated/review_validation/qcrfsc_mtbls79_sample_means_input_hashes.csv",
+      "sha256": "b3a932ac2f15af8f847bb08243a3bdb01d7c884fa4ee06d0046131882bf095de"
+    },
+    {
+      "path": "generated/review_validation/qcrfsc_previous_simulation_metrics.csv",
+      "sha256": "7bf23b2c7a9d44f0aefa0030108f200a685adb498dbe5f5b9d6ea20b67fd4f6c"
+    },
+    {
+      "path": "generated/review_validation/qcrfsc_revision_diagnostic_metrics.csv",
+      "sha256": "a4ab3ebc57d874352c0cfa089c57d8e7ae3ba0be783ff17098e6c8570000457e"
+    },
+    {
+      "path": "generated/review_validation/qcrfsc_revision_selection_summary.csv",
+      "sha256": "e6fd6262e19888a6d360dce6ff14e6fee79645d3137aa26a69cbbd587ed0f83d"
+    },
+    {
+      "path": "generated/review_validation/qcrfsc_revision_status.csv",
+      "sha256": "6300bbbd0db2a97c128e6c970b0c8996960f3cc78ee69f40f4dd2f9f6fdb95a8"
+    },
+    {
+      "path": "generated/review_validation/qcrfsc_scheduler_closing_snapshot.csv",
+      "sha256": "4d619621f1c62f16e81d84ce0c046598a435d61d184a75915d787e92590b60e2"
+    },
+    {
+      "path": "generated/review_validation/reference_coverage_by_batch.csv",
+      "sha256": "2e7ba49ec2c8edd3237fad72c093506afb99d097186f942c60a1b0ac3f7b18f3"
+    },
+    {
+      "path": "generated/review_validation/retrieval_query_weighted_bootstrap_replicates.csv.gz",
+      "sha256": "07bcf8686df03fb36c0a7e550edfbe4ddbc256407c3929163fce569315ab4f07"
+    },
+    {
+      "path": "generated/review_validation/simulation_revision_input_identity.csv",
+      "sha256": "e8fb85a30ce6ddca46832d3528e1fa193116f6e7c25f96504baf144db9bf2bbd"
+    },
+    {
+      "path": "generated/revision_panel_inputs/S10A_sacurine_age_weighted_pc_r2.csv",
+      "sha256": "ba3a21f8941dfba7b0363b22442809ccf1e04ee7b157ef18cdeff9c54d016912"
+    },
+    {
+      "path": "generated/revision_panel_inputs/S10B_sacurine_bmi_weighted_pc_r2.csv",
+      "sha256": "be6c967634e4da09febdb5d4d17e5785f9277cb577577ed2b06840a1d2bacf9c"
+    },
+    {
+      "path": "generated/revision_panel_inputs/S10C_sacurine_gender_weighted_pc_r2.csv",
+      "sha256": "893bb6cddab29d8d53e923705571c29d71cea968d6e536f8501b45c1a1d7c803"
+    },
+    {
+      "path": "generated/revision_panel_inputs/S4A_reference_simulation.csv",
+      "sha256": "d65417ba3bd75d8262bef20e6578e84b7dab5bbc713020743da2e944c057650f"
+    },
+    {
+      "path": "generated/revision_panel_inputs/S4B_reference_mtbls79.csv",
+      "sha256": "7238963cb5805a6cfec103687d71e373986436f6028945b0d6e55fd9d10866cc"
+    },
+    {
+      "path": "generated/revision_panel_inputs/S4C_reference_clinical_fiams.csv",
+      "sha256": "c980a87841e329bcbd8c9458aed0d43fd08e92bffe1a8b4821f2186485bd1ada"
+    },
+    {
+      "path": "generated/revision_panel_inputs/S4D_reference_batchcorr_set1.csv",
+      "sha256": "33827437689485181f2299600b25721493cfb13cdc8a3c29332289fc38aaf92f"
+    },
+    {
+      "path": "generated/revision_panel_inputs/S4E_reference_sacurine.csv",
+      "sha256": "3cb64ea8d66133da9e4cdd59b5343c397ba3289cadc4434f7762c529f6b3b640"
+    },
+    {
+      "path": "generated/revision_panel_inputs/S4F_reference_waveica.csv",
+      "sha256": "089133d7b1e140cbe746502705f9818c3bf0987fe871d2e8282cda24db9f72f4"
+    },
+    {
+      "path": "generated/revision_panel_inputs/S5A_partial_heldout_qc_cv_mean.csv",
+      "sha256": "5cf0f933224b04f069dc3c53378a87c4267bd3203c4500b9bc5e78054e305b57"
+    },
+    {
+      "path": "generated/revision_panel_inputs/S5B_partial_residual_run_order_gam_mean_deviance.csv",
+      "sha256": "b0b6ef2d911c91f930a2fdabef75e1dfe314c009f187a8defa0762617b328ab6"
+    },
+    {
+      "path": "generated/revision_panel_inputs/S5C_partial_batch_weighted_pc_r2_categorical.csv",
+      "sha256": "ffd37d74868162110a89c19be1279e68f382fbfef9c4171ce390c0bc549c5af6"
+    },
+    {
+      "path": "generated/revision_panel_inputs/S5D_partial_clean_sample_profile_pearson_mean.csv",
+      "sha256": "eee6262aa47b08bb81b5f4622fc3142ccdce91aeae60cb5d74d497779462c761"
+    },
+    {
+      "path": "generated/revision_panel_inputs/S5E_partial_median_attenuation_ratio_clean_responsive.csv",
+      "sha256": "f49898b1a7b73193c3884995755c406482f9cb0b17eb9f5b8502e60e314a35b8"
+    },
+    {
+      "path": "generated/revision_panel_inputs/S5F_partial_empirical_fdr.csv",
+      "sha256": "afe6c53d7bec8a092dc03a14065af4b6e05b0485dcafb1e9e66ece5a4722f55e"
+    },
+    {
+      "path": "generated/revision_panel_inputs/S8A_batchcorr_set1_batch_weighted_pc_r2_categorical.csv",
+      "sha256": "06942d73a3a11bf430d7c2a3208296732ec3e25f6ea9a03a2078453a0cec5a4b"
+    },
+    {
+      "path": "generated/revision_panel_inputs/S8B_batchcorr_set1_sample_replicate_pearson_median.csv",
+      "sha256": "4f88c02401f72786a14ec64dca32568bd1ccc5f554ce8b2bef798d565afc74c0"
+    },
+    {
+      "path": "generated/revision_panel_inputs/S8C_batchcorr_set1_genuine_replicate_icc_median.csv",
+      "sha256": "d2ea75883a723cbd3dc904f21fb9ed6929a2493693aa40a04af1d0a65f9693fb"
+    },
+    {
+      "path": "generated/revision_panel_inputs/S8D_clinical_fiams_batch_weighted_pc_r2_categorical.csv",
+      "sha256": "c9192a5d7996840a355aee6673a0d26cfc171d3f6549d734122f5b760ea00bf6"
+    },
+    {
+      "path": "generated/revision_panel_inputs/S8E_clinical_fiams_sample_replicate_pearson_median.csv",
+      "sha256": "27cf1ec44fa4de66681c7366007d76537703341a0eaffe7a7c9b197b2fd0e22b"
+    },
+    {
+      "path": "generated/revision_panel_inputs/S8F_clinical_fiams_genuine_replicate_icc_median.csv",
+      "sha256": "3a6c84938ccfdf9fdf004ee4d2985124ca5e6d3aa0b8314a288d76ee27c3b969"
+    },
+    {
+      "path": "generated/revision_panel_inputs/ablation_stage_impacts.csv",
+      "sha256": "d98127763b0001434c6b63d5c15c67c62f17d4f6e639d095b871265dc2d4e710"
+    },
+    {
+      "path": "generated/revision_panel_inputs/biological_association_summary.csv",
+      "sha256": "d61227cfb7f02d12c538dba46988aa9902339b20f45a72f64f81d6b2d824984f"
+    },
+    {
+      "path": "generated/revision_panel_inputs/categorical_batch_r2_trajectory.csv",
+      "sha256": "3b28226d1fa06026e32dc29a8aeb3cc65ea8eb2f28d2d2b8c7d273435123386c"
+    },
+    {
+      "path": "generated/revision_panel_inputs/confounding_fixed_winn.csv",
+      "sha256": "804d80881c74d5d6f5037d04b8e764620c6db46a38773d872eedac5e33a79bf3"
+    },
+    {
+      "path": "generated/revision_panel_inputs/eccb2026_identity_tradeoffs_v2.csv",
+      "sha256": "cdf5938d53e426a93578582b74fb5f4684e8b20bdbab7587172cc3175a97e5db"
+    },
+    {
+      "path": "generated/revision_panel_inputs/eccb2026_public_effect_tradeoffs_v2.csv",
+      "sha256": "02006b5987b44baf36957eccb6df66a215460166267546bef52ba4568b9e2fd0"
+    },
+    {
+      "path": "generated/revision_panel_inputs/permutation_null.csv.gz",
+      "sha256": "a27e9573c753d34bff3ba6e5792c19d92ad3538e14d93a70054c45346be03b57"
+    },
+    {
+      "path": "generated/revision_panel_inputs/permutation_summary.csv",
+      "sha256": "304dd5dbe9ca1455c4339136aa25a33853915a34463aaa0b422bb1c05d4c96b0"
+    },
+    {
+      "path": "generated/revision_panel_inputs/selective_forced_truth_rmse.csv",
+      "sha256": "b7856f4029c8d160af92c945202cac8659ec44498f305a0ad3a49ee60ed0b3af"
+    },
+    {
+      "path": "generated/revision_panel_inputs/selective_vs_forced_metrics_long.csv",
+      "sha256": "b34eb4841503df3c45566c72b6dddb0ec5216b812a27f1c502fae2d1952201ec"
+    },
+    {
+      "path": "generated/revision_panel_inputs/simulation_seed_ablation_metrics.csv",
+      "sha256": "6efa46090504687d5caf62aa7e1c994b2736c8ab2d787628122f3f013d357c7d"
+    },
+    {
+      "path": "generated/revision_panel_inputs/simulation_seed_method_metrics.csv",
+      "sha256": "9f0bb37bb9fd31c512e3cdb9ee97d1d74f9bf91273f46c0f77c6a45fb124897a"
+    },
+    {
+      "path": "generated/revision_panel_inputs/supplementary_uncertainty_source_manifest.csv",
+      "sha256": "8a16497c44fa3a64f22ab3b52c68096c2c7fc9e183404e29905e256f34c0c520"
+    },
+    {
+      "path": "generated/supplementary_table_data/README.md",
+      "sha256": "39b6ba2488552ed55a0c7a40d1158fdcdd92af92fea4e6745d255af262384b6d"
+    },
+    {
+      "path": "generated/supplementary_table_data/endpoint_free_selection_manifest.csv",
+      "sha256": "be472eac63e5dcd3888df01a43dbf010bcc38a834922025163af5d995f4ce198"
+    },
+    {
+      "path": "generated/supplementary_table_data/intensity_domain_safeguard.csv",
+      "sha256": "4d479e1f96ff7dc537b1041d33f73d2a873247ade6b1dbfe18669ad4121cc8d1"
+    },
+    {
+      "path": "generated/supplementary_table_data/leave_one_batch_out_bootstrap_summary.csv",
+      "sha256": "19c11907491b78f18c62cc4ee68dd058219fa91b5743728610a50ca585b06ab4"
+    },
+    {
+      "path": "generated/supplementary_table_data/supplementary_table_manifest.csv",
+      "sha256": "cc758b972294f934fe1b45b3693909ce3af6ac8efd83ff2be731bf0ad33ced62"
+    },
+    {
+      "path": "generated/supplementary_table_data/table_s10_runtime_retention.csv",
+      "sha256": "20d11fd18d6568b51ad9740eac1b28a5fe3e8b9ebd1dcc358b4b5134d5d77c35"
+    },
+    {
+      "path": "generated/supplementary_table_data/table_s11_association_permutation.csv",
+      "sha256": "3e082646524e1f403e46080fa74c97611b7c05410c991b03c89bf5d60820bc32"
+    },
+    {
+      "path": "generated/supplementary_table_data/table_s12_lobo_fold_level.csv",
+      "sha256": "56c160a2ace83a05c34cd14b421958a015138175a3b1028f73d457e5a490929a"
+    },
+    {
+      "path": "generated/supplementary_table_data/table_s12_lobo_summary.csv",
+      "sha256": "129cd891a5cc3b0bed88782e7da44b1ec9e6e0295bbb402f998d214c836d1d25"
+    },
+    {
+      "path": "generated/supplementary_table_data/table_s13_partial_confounding.csv",
+      "sha256": "1270a4578534183dc22ee1567b4446a8580e6797039ac05edec2d5718cdfae74"
+    },
+    {
+      "path": "generated/supplementary_table_data/table_s14_reference_splits.csv",
+      "sha256": "50f3a6d608d25f167f7182eceae830479339999b8483b93f45c57b960eb4cb83"
+    },
+    {
+      "path": "generated/supplementary_table_data/table_s15_selective_forced.csv",
+      "sha256": "86840b993ae9653d4c9b09c2698dd665e2e84f6581ce23d79039b4abc7a33686"
+    },
+    {
+      "path": "generated/supplementary_table_data/table_s16_cumulative_stages.csv",
+      "sha256": "630a45084902b78fc5a7211c3acf4e76d5c68784ff3594733d7d4815ed866ea5"
+    },
+    {
+      "path": "generated/supplementary_table_data/table_s17_winn_parameters.csv",
+      "sha256": "d366f74076770e82749b317dce3471442fe322b70f9ef52a2c9c73c92ca3da10"
+    },
+    {
+      "path": "generated/supplementary_table_data/table_s18_safeguards.csv",
+      "sha256": "da922e471327ece54cd8fa796faaea9e1cb611d242dce90f0c13ee1e44c0fb7c"
+    },
+    {
+      "path": "generated/supplementary_table_data/table_s19_release_validation.csv",
+      "sha256": "2689182a12fc1861a0da2a55212d30ab95681f2b829a9614eb43755a8680804c"
+    },
+    {
+      "path": "generated/supplementary_table_data/table_s20_nonestimable.csv",
+      "sha256": "30aa37ff2fcc1f556426e2f2fc77c341a1a8d282add99cd2d89f870b1ce3cf11"
+    },
+    {
+      "path": "generated/supplementary_table_data/table_s26_qcrfsc_empirical.csv",
+      "sha256": "2b4151bc0e4ae74dd1408e647399a017c0dc2bbc68f5a66a3462d44f527b0ce3"
+    },
+    {
+      "path": "generated/supplementary_table_data/table_s4_simulation.csv",
+      "sha256": "06d0acfa8f6c6e40f0c3bb59ffb613985179ba3f80694f197906ca9ad127f823"
+    },
+    {
+      "path": "generated/supplementary_table_data/table_s5_mtbls79.csv",
+      "sha256": "c31c5be6648372559b712f7b55081c29c35daef75007d49de94b7efffbc16bd7"
+    },
+    {
+      "path": "generated/supplementary_table_data/table_s6_batchcorr.csv",
+      "sha256": "e74d5fb4da3dfd426169ed554818341311abd46d27ce5531be80f1f7ac031e35"
+    },
+    {
+      "path": "generated/supplementary_table_data/table_s7_clinical.csv",
+      "sha256": "e2d6ac503c7040bb2dd7ca999a1863a04f746262eaf50c38b8629bb226c6b6ad"
+    },
+    {
+      "path": "generated/supplementary_table_data/table_s8_sacurine.csv",
+      "sha256": "c52e28c52218b35c22f15935eda54a50440def25ab65b7a671064d64c136d987"
+    },
+    {
+      "path": "generated/supplementary_table_data/table_s9_waveica.csv",
+      "sha256": "188560e8a8584864b2c00c46a954cc3e20b2f46b3231b20b772f2c1649337db7"
+    },
+    {
+      "path": "generated/supplementary_table_data/tiger_nonfinite_feature_fallback.csv",
+      "sha256": "80068cc5518de86d7e305211be508536f8a9063277da0f85b481fe7b41ebcb05"
+    },
+    {
+      "path": "generated/supplementary_tables/condensed_baselines.tex",
+      "sha256": "fe0d71696e1ec7f3eeca108b6e8faa2e37cdc2c76e8caa3a742b1cb2a232515a"
+    },
+    {
+      "path": "generated/supplementary_tables/condensed_complete_benchmark.tex",
+      "sha256": "e677eb230d43726aed072b7d88df2b293cba0fbe7028b2215a8d15d7f9dde803"
+    },
+    {
+      "path": "generated/supplementary_tables/condensed_selected_settings.tex",
+      "sha256": "15aae0336ed49abf9116a804f2007634a4cbe189b2cce4cee94567c3279b0cba"
+    },
+    {
+      "path": "generated/supplementary_tables/condensed_selective_forced.tex",
+      "sha256": "25c6e7c170e5828a519d676cc7a2c1d02c957733bd40526200f8910b36de96d9"
+    },
+    {
+      "path": "generated/supplementary_tables/table_s10_runtime_retention.tex",
+      "sha256": "da641e6508707b5ca12adbbd0b7e7328a973ca0914b6461c8940458e45c2a055"
+    },
+    {
+      "path": "generated/supplementary_tables/table_s11_association_permutation.tex",
+      "sha256": "180c73bec0c0169e7ac73342fbf2be9ec7b72ebaee44d2aa134f37503acc9556"
+    },
+    {
+      "path": "generated/supplementary_tables/table_s12_lobo_summary.tex",
+      "sha256": "548a8c255e3e9af46c515dc52853a8d22b7fcbc2dba84a30e2b475d817f3e59b"
+    },
+    {
+      "path": "generated/supplementary_tables/table_s13_partial_confounding.tex",
+      "sha256": "a6f6cf16dc053a4a8d828d18f3041ace88344b641cfd04a8721efe3c4d4013d9"
+    },
+    {
+      "path": "generated/supplementary_tables/table_s14_reference_splits.tex",
+      "sha256": "381782030b76b664fac2c337f57c208b15ef5388e7c367379538d784dc460f9c"
+    },
+    {
+      "path": "generated/supplementary_tables/table_s15_selective_forced.tex",
+      "sha256": "868b6be8131304ee38aa6f759f30a846f83e8ed1f1238fd49d449e8ded24c0d9"
+    },
+    {
+      "path": "generated/supplementary_tables/table_s16_cumulative_stages.tex",
+      "sha256": "c8baae99f8b33872f6f5b1acc660fc4f188edb8d56df49f932fc28944b32cf2e"
+    },
+    {
+      "path": "generated/supplementary_tables/table_s17_winn_parameters.tex",
+      "sha256": "3d3b23f94f73012ee4af16e0ae65ecd22057f456fd820366405ede47ac288a3c"
+    },
+    {
+      "path": "generated/supplementary_tables/table_s18_safeguards.tex",
+      "sha256": "227f8686eea94a5afc91bff48840ef75f31e77e1179e224cd59b6dedb8fc01f5"
+    },
+    {
+      "path": "generated/supplementary_tables/table_s19_release_validation.tex",
+      "sha256": "ba67999e90d57b29cbbd849617fadf1d2194e2723d5e3909bd11ee0483f30c53"
+    },
+    {
+      "path": "generated/supplementary_tables/table_s20_nonestimable.tex",
+      "sha256": "53145f05f9504e50913faa0cc3342d743596615ce6baff9db0d48b986cb7151a"
+    },
+    {
+      "path": "generated/supplementary_tables/table_s21_selected_parameters.tex",
+      "sha256": "75b0337355ecb7ec439d38272777eb199844ae8ffdea0c5e027c8941a6ff3a38"
+    },
+    {
+      "path": "generated/supplementary_tables/table_s22_primary_safeguards.tex",
+      "sha256": "5122a015f538a222f469074cc80bce73a586f7f93fd0d50d3588a8ef984b32a2"
+    },
+    {
+      "path": "generated/supplementary_tables/table_s23_identity_retrieval.tex",
+      "sha256": "b069c9daec3d00ab310c508582b96f8d73c970ef49e09303246ce2de5d445728"
+    },
+    {
+      "path": "generated/supplementary_tables/table_s24_paired_feature_effects.tex",
+      "sha256": "f79a3fb57ff408628bb7022f67df772c6ab57f7aaad0d467b96ce52df37c7050"
+    },
+    {
+      "path": "generated/supplementary_tables/table_s25_nearest_baselines.tex",
+      "sha256": "d506a8a3e5bf3b3a97ddc6dd4413835099ff6518768dfeb90c26b021da6faec0"
+    },
+    {
+      "path": "generated/supplementary_tables/table_s26_qcrfsc_empirical.tex",
+      "sha256": "9f7c99fef17a7cfdc1f22ca46e68a4867b4ac5eb86eb331057650812506facad"
+    },
+    {
+      "path": "generated/supplementary_tables/table_s27_baseline_simulation.tex",
+      "sha256": "9da7a90e021af48ff5776f905b371ab75e00a5d81390d3e7e94fc133d38c20c6"
+    },
+    {
+      "path": "generated/supplementary_tables/table_s28_baseline_empirical_effects.tex",
+      "sha256": "8b0b2daee1554c3b832841c70e72b527f7a379c21734b2f2d396b881d2c1ed0e"
+    },
+    {
+      "path": "generated/supplementary_tables/table_s29_preparation_response_patterns.tex",
+      "sha256": "fd5aea51aac33be49f0cddfb0c01aefa56f19ff386ee3ed67c4802501a0f9723"
+    },
+    {
+      "path": "generated/supplementary_tables/table_s30_acquisition_group_balance.tex",
+      "sha256": "93773061adb375cb20e725be258254a4322f3ab5932793aede32e58fd5d123e7"
+    },
+    {
+      "path": "generated/supplementary_tables/table_s31_reference_acquisition_placement.tex",
+      "sha256": "f4759e7ab0920dd64b4f24408c8585cebbfc71a2db157a246bf0245f7167b4ff"
+    },
+    {
+      "path": "generated/supplementary_tables/table_s4_simulation.tex",
+      "sha256": "8bb60e37fe24fec01b89e8fb6a713658bdb2a9777bb6c7dc8207bff121ac34c3"
+    },
+    {
+      "path": "generated/supplementary_tables/table_s5_mtbls79.tex",
+      "sha256": "1190575312e887cd8a65893cccdb71954e93d0427cdbe13c60994fdd2ecbf450"
+    },
+    {
+      "path": "generated/supplementary_tables/table_s6_batchcorr.tex",
+      "sha256": "3108564d178e4d6d392172ac5ebc32aaba196ca259c810bd02d92057d3044d25"
+    },
+    {
+      "path": "generated/supplementary_tables/table_s7_clinical.tex",
+      "sha256": "41eac366a33e6bfbb8238ead54097acbe14af82283bb07f1f72529a4bfa8f7d9"
+    },
+    {
+      "path": "generated/supplementary_tables/table_s8_sacurine.tex",
+      "sha256": "0cc686982291473e682748bce30622729f825364bc4a57b2f58264cba54fd021"
+    },
+    {
+      "path": "generated/supplementary_tables/table_s9_waveica.tex",
+      "sha256": "150a5ebbf3fbb5324264d95e84cd8a4f7b727a368ab9c387e1adc263c0ddf152"
+    }
+  ],
+  "assembly": [
+    {
+      "figure": "F2_simulation.pdf",
+      "panel": "F2A_selective_forced_truth_rmse.pdf",
+      "panel_sha256": "b31dc2eade64fc092a5623a3e48227915b20538fb6812436a28cbf3bd3449d1a",
+      "width_mm": "85",
+      "height_mm": "50",
+      "x_mm": "0.0",
+      "y_mm": "106.0625"
+    },
+    {
+      "figure": "F2_simulation.pdf",
+      "panel": "F2B_truth_log1p_rmse.pdf",
+      "panel_sha256": "3992e18e3b0c5a409502774dcf4cdf1183ca54cff2fc430dc8bc6d15af2b4c4b",
+      "width_mm": "85",
+      "height_mm": "50",
+      "x_mm": "90.0",
+      "y_mm": "106.0625"
+    },
+    {
+      "figure": "F2_simulation.pdf",
+      "panel": "F2C_truth_metabolite_profile_icc_mean.pdf",
+      "panel_sha256": "c86ca4870bf29d47f0306a82593a0cb80faafc4cded5fff0167997c7196dddba",
+      "width_mm": "85",
+      "height_mm": "50",
+      "x_mm": "0.0",
+      "y_mm": "53.0625"
+    },
+    {
+      "figure": "F2_simulation.pdf",
+      "panel": "F2D_truth_sample_profile_pearson_mean.pdf",
+      "panel_sha256": "d3bef407aac9105215a9b8d8229e5836fb4e1e47dfc082dc7928a7fc1b0356bd",
+      "width_mm": "85",
+      "height_mm": "50",
+      "x_mm": "90.0",
+      "y_mm": "53.0625"
+    },
+    {
+      "figure": "F3_replicates.pdf",
+      "panel": "F3A_batchcorr_qc_cv_vs_run_order_deviance.pdf",
+      "panel_sha256": "c0925f122c7d2507dd9a5d32c6eea0a6d8ea1cb3144505756a8949b995e70755",
+      "width_mm": "85",
+      "height_mm": "50",
+      "x_mm": "0.0",
+      "y_mm": "53.0625"
+    },
+    {
+      "figure": "F3_replicates.pdf",
+      "panel": "F3B_clinical_qc_cv_vs_run_order_deviance.pdf",
+      "panel_sha256": "81f71886fc039c9531eee63941575afbb09ce563b2ffb989f53f13651d8ba94b",
+      "width_mm": "85",
+      "height_mm": "50",
+      "x_mm": "90.0",
+      "y_mm": "53.0625"
+    },
+    {
+      "figure": "F3_replicates.pdf",
+      "panel": "F3C_batchcorr_batch_variance_vs_replicate_icc.pdf",
+      "panel_sha256": "756a2a7e9456fb8e17a24294f988e296fc3e45af4403d3fa58dfbc2493c23119",
+      "width_mm": "85",
+      "height_mm": "50",
+      "x_mm": "0.0",
+      "y_mm": "0.06250000000000584"
+    },
+    {
+      "figure": "F3_replicates.pdf",
+      "panel": "F3D_clinical_plate_variance_vs_replicate_icc.pdf",
+      "panel_sha256": "98ebd629cedece35046663a1815e9d66ef335e0d3de9e0c33c65be83f0bd0e0f",
+      "width_mm": "85",
+      "height_mm": "50",
+      "x_mm": "90.0",
+      "y_mm": "0.06250000000000584"
+    },
+    {
+      "figure": "F4_biological_structure.pdf",
+      "panel": "F4A_waveica_batch_vs_group.pdf",
+      "panel_sha256": "e8d234b8733ebfb1031c906e00e28dd5b30361199653bfc96301ccf775c23703",
+      "width_mm": "85",
+      "height_mm": "50",
+      "x_mm": "0.0",
+      "y_mm": "0.06250000000000584"
+    },
+    {
+      "figure": "F4_biological_structure.pdf",
+      "panel": "F4B_mtbls79_batch_vs_group.pdf",
+      "panel_sha256": "ce2f39ab79c8274e0984e9bc921b775839bf97c04d6b3846477f3fefb6f21a59",
+      "width_mm": "85",
+      "height_mm": "50",
+      "x_mm": "90.0",
+      "y_mm": "0.06250000000000584"
+    }
+  ],
+  "additional_authorized_change": "Retain standalone calibration comparison only in the supplement (S11); refresh its containing bundle. Existing S1-S10 panels and results remain protected.",
+  "main_text_blocks": [
+    {
+      "anchor": "We examined each correction step",
+      "sha256": "db48bd957e3ea5829a72fe549b1758f71636b152d740309652e26e6d8ea35800"
+    },
+    {
+      "anchor": "Across ten paired simulations",
+      "sha256": "5f9d6b7a4b8de858ca0b7eb4e63e3488e2dbbf99de5b4f47ee99f139f26d9c4a"
+    },
+    {
+      "anchor": "WiNN combines tests for run-order and batch effects",
+      "sha256": "2122ca49b66debe8886931bd3ee5f379f8e85f17218d812171bb6487d1d448e4"
+    },
+    {
+      "anchor": "\\textbf{Results:}",
+      "sha256": "5f18b1d29afc3aa3e166262413d1724ec1def812c028da8f2bf20c42ae05e744"
+    }
+  ]
+}

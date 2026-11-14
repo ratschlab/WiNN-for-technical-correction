@@ -70,7 +70,7 @@ def main():
             add('no obsolete raster method label',rel,not hits,f'{len(hits)} obsolete labels')
     atlas=PdfReader(ROOT/'figures/WiNN_figures.pdf')
     titles=[str(item['/Title']) for item in atlas.outline if isinstance(item,dict)]
-    add('figure atlas bookmarks','figures/WiNN_figures.pdf',len(titles)==14,'; '.join(titles))
+    add('figure atlas bookmarks','figures/WiNN_figures.pdf',len(titles)==15,'; '.join(titles))
     out=ROOT/'revision_notes/figure_package_audit.csv'
     with out.open('w',newline='') as stream:
         writer=csv.DictWriter(stream,fieldnames=list(checks[0]),lineterminator='\n')

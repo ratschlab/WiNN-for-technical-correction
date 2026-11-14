@@ -1,0 +1,11 @@
+{
+  "tasks": 190,
+  "seeds": 10,
+  "conditions_per_seed": 19,
+  "technical_artifacts_fixed_within_seed": true,
+  "package_version": "0.1.6",
+  "complete_batch_separation_verified": true,
+  "joint_and_batch_full_boundary_identical": true,
+  "primary_metric_rows": 4560,
+  "protocol_sha256": "3c1eabbdede31e6213305b013f556f4bdc0b98c28c62ba5c09b1a9ada35ce4f8"
+}

@@ -13,8 +13,8 @@ F3,A,BatchCorr: QC precision,main_panels/F3A_batchcorr_qc_cv_vs_run_order_devian
 F3,B,Clinical: QC precision,main_panels/F3B_clinical_qc_cv_vs_run_order_deviance.pdf,NA,source_data/F3B_clinical_qc_cv_vs_run_order_deviance.csv,85,50
 F3,C,BatchCorr: batch vs ICC,main_panels/F3C_batchcorr_batch_variance_vs_replicate_icc.pdf,NA,source_data/F3C_batchcorr_batch_variance_vs_replicate_icc.csv,85,50
 F3,D,Clinical: plate vs ICC,main_panels/F3D_clinical_plate_variance_vs_replicate_icc.pdf,NA,source_data/F3D_clinical_plate_variance_vs_replicate_icc.csv,85,50
-F2,E,WiNN: effect recovery,main_panels/F2E_median_attenuation_ratio_clean_responsive.pdf,NA,source_data/F2E_median_attenuation_ratio_clean_responsive.csv,85,50
-F2,F,WiNN: empirical FDR,main_panels/F2F_empirical_fdr.pdf,NA,source_data/F2F_empirical_fdr.csv,85,50
+F2,E,WiNN: retained group contrast,main_panels/F2E_median_attenuation_ratio_clean_responsive.pdf,NA,source_data/F2E_median_attenuation_ratio_clean_responsive.csv,85,50
+F2,F,WiNN: detection and false discoveries,main_panels/F2F_empirical_fdr.pdf,NA,source_data/F2F_empirical_fdr.csv,85,50
 F4,A,WaveICA group 0 vs 1,main_panels/F4A_waveica_batch_vs_group.pdf,NA,source_data/F4A_waveica_batch_vs_group.csv,85,50
 F4,B,MTBLS79 cow vs sheep,main_panels/F4B_mtbls79_batch_vs_group.pdf,NA,source_data/F4B_mtbls79_batch_vs_group.csv,85,50
 S5,A,Held-out QC CV,supplementary_panels/S5A_partial_heldout_qc_cv_mean.pdf,NA,source_data/S5A_partial_heldout_qc_cv_mean.csv,85,65

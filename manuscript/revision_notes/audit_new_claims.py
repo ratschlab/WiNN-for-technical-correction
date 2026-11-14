@@ -43,7 +43,7 @@ for n in (20, 50, 100, 200):
     for stage in ("unprepared", "mad_prepared"):
         r = one(null, n=n, stage=stage)
         if stage == "mad_prepared":
-            check_token(f"Prepared gate global-null rejection n={n}", "main.tex",
+            check_token(f"Prepared gate global-null rejection n={n}", "supplementary.tex",
                 "We tested whether WiNN selects features", f"{float(r['any_rejection'])*100:.1f}\\%",
                 VALIDATION / "null_gate_verification_summary.csv", r["any_rejection"])
         else:
@@ -52,11 +52,29 @@ for n in (20, 50, 100, 200):
                     "An independent null experiment", f"{float(r[field]):.3f}",
                     VALIDATION / "null_gate_verification_summary.csv", r[field])
 
+# Standalone calibration comparison is supplementary only; benchmarks stay at 0.1.6.
+calibration_path = ROOT / "generated/calibration_revision/gate_validation_summary.csv"
+calibration = read_csv(calibration_path)
+for n in (20, 50, 100, 200):
+    r = one(calibration, experiment="original_null", n=n, stage="mad_prepared", algorithm="permutation_maxT")
+    check_token(f"Alternative maxT null rate n={n}", "supplementary.tex",
+        "We tested whether WiNN selects features", f"{float(r['fwer'])*100:.1f}\\%", calibration_path, r['fwer'])
+    for field in ("fwer", "fwer_lower", "fwer_upper"):
+        digits = 3 if field == "fwer" else 4
+        check_token(f"Alternative null n={n} {field}", "supplementary.tex", "The paired null comparison reuses",
+            f"{float(r[field]):.{digits}f}", calibration_path, r[field])
+for rho in (0, 0.6):
+    for algorithm in ("asymptotic_BH", "permutation_maxT"):
+        r = one(calibration, experiment="robustness", n=20, rho=rho, distribution="gaussian",
+            scenario="mixed_linear_drift", algorithm=algorithm)
+        check_token(f"Alternative power rho={rho} {algorithm}", "supplementary.tex", "For Gaussian linear drift",
+            f"{float(r['sensitivity']):.4f}", calibration_path, r['sensitivity'])
+
 biology = read_csv(VALIDATION / "preparation_biology_summary.csv")
 for scenario in ("balanced_sparse", "rare_subgroup", "broad_coordinated"):
     r = one(biology, scenario=scenario, stage="mad_then_pqn")
     value = float(r["median_recovery_ratio"])
-    check_token(f"MAD+PQN recovery {scenario}", "main.tex", "We tested whether WiNN selects features",
+    check_token(f"MAD+PQN recovery {scenario}", "supplementary.tex", "We tested whether WiNN selects features",
         f"{value:.3f}", VALIDATION / "preparation_biology_summary.csv", value)
     check_token(f"Supplement MAD+PQN recovery {scenario}", "supplementary.tex", "MAD followed by PQN retained",
         f"{value:.3f}", VALIDATION / "preparation_biology_summary.csv", value)

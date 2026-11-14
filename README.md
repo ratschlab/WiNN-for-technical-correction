@@ -42,9 +42,13 @@ refitting correction or uncertainty. Scope, findings and limits are recorded in
 - The publication bundle includes identity retrieval, null-gate calibration, rare- and coordinated-response stress experiments, ANCOVA and mean-only baselines, design audits and their code. `manuscript/generated/review_validation/README.md` describes their estimands and provenance.
 - All main and supplementary figure panels, numerical source tables and assembled PDF bundles are under `manuscript/figures/`, with the matching sources `manuscript/main.tex` and `manuscript/supplementary.tex`.
 
-The 14 November manuscript revision resolves all author notes, applies the same terminology to figures and supplementary methods, and includes numerical and layout verification under `manuscript/revision_notes/`. `bash manuscript/scripts/build_manuscript.sh` builds both documents; the final layout audit records seven main-text and 45 supplementary pages, with no overfull boxes or text outside page boundaries. Numerical claim and figure checks are retained with the manuscript.
+The 14 November manuscript revision resolves all author notes, applies the same terminology to figures and supplementary methods, and includes numerical and layout verification under `manuscript/revision_notes/`. `bash manuscript/scripts/build_manuscript.sh` builds both documents; the final layout audit records seven main-text and 47 supplementary pages, with no overfull boxes or text outside page boundaries. Numerical claim and figure checks are retained with the manuscript.
 
 `publication_manifest.csv` records the byte count and SHA-256 of every public repository file other than itself. The original task manifests and aggregation code under `analysis/` remain available as execution infrastructure; the commands below are the publication workflow.
+
+Selection-test limits and the separate permutation-calibration comparison are confined to Supplementary Methods S10 and Figure S11. The experimental alternative was not applied to any correction benchmark.
+
+The focused Figure 2E–F confounding revision is documented in [`analysis/figure2_confounding/README.md`](analysis/figure2_confounding/README.md). It changes phenotype allocation and biological-preservation endpoints only; WiNN 0.1.6, the technical-artifact generator, Figure 2A–D and all other benchmark outputs remain fixed.
 
 ## Environment and public inputs
 

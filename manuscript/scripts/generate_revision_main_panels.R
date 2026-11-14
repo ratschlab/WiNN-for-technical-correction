@@ -378,6 +378,15 @@ make_identity_scatter(
 # Main Figure 2E-F: identifiability boundary.
 # -----------------------------------------------------------------------------
 
+if (file.exists(file.path(package_root, "generated/figure2_confounding/summary.csv"))) {
+  source(file.path(dirname(script_path), "figure2_confounding/plot.R"))
+  revised <- plot_figure2_confounding(package_root)
+  for (spec in revised) panel_manifest[[length(panel_manifest) + 1L]] <- data.frame(
+    figure="F2", panel=spec[[1]], title=if(spec[[1]]=="E") "WiNN: retained group contrast" else "WiNN: detection and false discoveries",
+    pdf=file.path("main_panels",paste0(spec[[2]],".pdf")), png=NA_character_,
+    source_csv=file.path("source_data",paste0(spec[[2]],".csv")), width_mm=85,height_mm=50,
+    stringsAsFactors=FALSE)
+} else {
 confounding_file <- file.path(revision_inputs, "confounding_fixed_winn.csv")
 confounding <- read_csv(confounding_file, show_col_types = FALSE) |>
   filter(metric %in% c("median_attenuation_ratio_clean_responsive", "empirical_fdr")) |>
@@ -430,6 +439,8 @@ for (spec in confounding_main_specs) {
     plot, main_dir, paste0("F2", spec[[1]], "_", spec[[2]]), 85, 50,
     panel_data, "F2", spec[[1]], spec[[3]]
   )
+}
+
 }
 
 public_effect_file <- file.path(revision_inputs, "eccb2026_public_effect_tradeoffs_v2.csv")

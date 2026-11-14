@@ -22,8 +22,8 @@ GAP = 3.0 * MM
 
 
 def figure_layouts():
-    """Read all S1-S10 figure blocks, retaining explicit TeX row breaks."""
-    layouts = OrderedDict((f"S{n}", []) for n in range(1, 11))
+    """Read all S1-S11 figure blocks, retaining explicit TeX row breaks."""
+    layouts = OrderedDict((f"S{n}", []) for n in range(1, 12))
     tex = (ROOT / "supplementary.tex").read_text()
     blocks = re.findall(r"\\begin\{figure\*\}.*?\\end\{figure\*\}", tex, re.S)
     for block in blocks:
@@ -39,7 +39,7 @@ def figure_layouts():
         assert all(re.match(r"S\d+", name)[0] == figure_id for row in rows for name in row)
         layouts[figure_id].append(rows)
     assert all(layouts.values()), "Every supplementary figure must have a layout."
-    assert sum(len(row) for pages in layouts.values() for rows in pages for row in rows) == 57
+    assert sum(len(row) for pages in layouts.values() for rows in pages for row in rows) == 60
     return layouts
 
 
@@ -100,7 +100,7 @@ def main():
     bundle = PdfWriter()
     for path in paths:
         bundle.append(path)
-    bundle.add_metadata({"/Title": "WiNN supplementary figures S1-S10", "/Creator": "assemble_supplementary_figures.py"})
+    bundle.add_metadata({"/Title": "WiNN supplementary figures S1-S11", "/Creator": "assemble_supplementary_figures.py"})
     bundle_path = OUTPUT / "Supplementary_figures.pdf"
     bundle.write(bundle_path)
     assert len(PdfReader(bundle_path).pages) == sum(len(pages) for pages in layouts.values())
@@ -117,9 +117,9 @@ def main():
         atlas_path = ROOT / "figures/WiNN_figures.pdf"
         atlas.write(atlas_path)
         check = PdfReader(atlas_path)
-        assert len(check.outline) == 14
+        assert len(check.outline) == 15
         assert len(check.pages) == sum(len(PdfReader(path).pages) for path in main_paths + paths)
-        print(f"{atlas_path.relative_to(ROOT)}: {len(check.pages)} pages; 14 figure bookmarks")
+        print(f"{atlas_path.relative_to(ROOT)}: {len(check.pages)} pages; 15 figure bookmarks")
 
 
 if __name__ == "__main__":

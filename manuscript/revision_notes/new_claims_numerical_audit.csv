@@ -3,27 +3,47 @@ Unprepared gate n=20 any_rejection,supplementary.tex,0.131,generated/review_vali
 Unprepared gate n=20 any_rejection_lower,supplementary.tex,0.111,generated/review_validation/null_gate_verification_summary.csv,0.11069846103122,True
 Unprepared gate n=20 any_rejection_upper,supplementary.tex,0.154,generated/review_validation/null_gate_verification_summary.csv,0.153501170400157,True
 Unprepared gate n=20 rejected_features,supplementary.tex,0.161,generated/review_validation/null_gate_verification_summary.csv,0.161,True
-Prepared gate global-null rejection n=20,main.tex,13.5\%,generated/review_validation/null_gate_verification_summary.csv,0.135,True
+Prepared gate global-null rejection n=20,supplementary.tex,13.5\%,generated/review_validation/null_gate_verification_summary.csv,0.135,True
 Unprepared gate n=50 any_rejection,supplementary.tex,0.350,generated/review_validation/null_gate_verification_summary.csv,0.35,True
 Unprepared gate n=50 any_rejection_lower,supplementary.tex,0.320,generated/review_validation/null_gate_verification_summary.csv,0.320416124151366,True
 Unprepared gate n=50 any_rejection_upper,supplementary.tex,0.380,generated/review_validation/null_gate_verification_summary.csv,0.380470191255976,True
 Unprepared gate n=50 rejected_features,supplementary.tex,0.498,generated/review_validation/null_gate_verification_summary.csv,0.498,True
-Prepared gate global-null rejection n=50,main.tex,34.9\%,generated/review_validation/null_gate_verification_summary.csv,0.349,True
+Prepared gate global-null rejection n=50,supplementary.tex,34.9\%,generated/review_validation/null_gate_verification_summary.csv,0.349,True
 Unprepared gate n=100 any_rejection,supplementary.tex,0.197,generated/review_validation/null_gate_verification_summary.csv,0.197,True
 Unprepared gate n=100 any_rejection_lower,supplementary.tex,0.173,generated/review_validation/null_gate_verification_summary.csv,0.172769750535665,True
 Unprepared gate n=100 any_rejection_upper,supplementary.tex,0.223,generated/review_validation/null_gate_verification_summary.csv,0.22302825707539,True
 Unprepared gate n=100 rejected_features,supplementary.tex,0.241,generated/review_validation/null_gate_verification_summary.csv,0.241,True
-Prepared gate global-null rejection n=100,main.tex,19.8\%,generated/review_validation/null_gate_verification_summary.csv,0.198,True
+Prepared gate global-null rejection n=100,supplementary.tex,19.8\%,generated/review_validation/null_gate_verification_summary.csv,0.198,True
 Unprepared gate n=200 any_rejection,supplementary.tex,0.122,generated/review_validation/null_gate_verification_summary.csv,0.122,True
 Unprepared gate n=200 any_rejection_lower,supplementary.tex,0.102,generated/review_validation/null_gate_verification_summary.csv,0.102351137440077,True
 Unprepared gate n=200 any_rejection_upper,supplementary.tex,0.144,generated/review_validation/null_gate_verification_summary.csv,0.143904219427417,True
 Unprepared gate n=200 rejected_features,supplementary.tex,0.142,generated/review_validation/null_gate_verification_summary.csv,0.142,True
-Prepared gate global-null rejection n=200,main.tex,12.3\%,generated/review_validation/null_gate_verification_summary.csv,0.123,True
-MAD+PQN recovery balanced_sparse,main.tex,1.000,generated/review_validation/preparation_biology_summary.csv,1.00018544595019,True
+Prepared gate global-null rejection n=200,supplementary.tex,12.3\%,generated/review_validation/null_gate_verification_summary.csv,0.123,True
+Alternative maxT null rate n=20,supplementary.tex,4.0\%,generated/calibration_revision/gate_validation_summary.csv,0.04,True
+Alternative null n=20 fwer,supplementary.tex,0.040,generated/calibration_revision/gate_validation_summary.csv,0.04,True
+Alternative null n=20 fwer_lower,supplementary.tex,0.0287,generated/calibration_revision/gate_validation_summary.csv,0.0287276252858908,True
+Alternative null n=20 fwer_upper,supplementary.tex,0.0541,generated/calibration_revision/gate_validation_summary.csv,0.0540726968193684,True
+Alternative maxT null rate n=50,supplementary.tex,3.9\%,generated/calibration_revision/gate_validation_summary.csv,0.039,True
+Alternative null n=50 fwer,supplementary.tex,0.039,generated/calibration_revision/gate_validation_summary.csv,0.039,True
+Alternative null n=50 fwer_lower,supplementary.tex,0.0279,generated/calibration_revision/gate_validation_summary.csv,0.0278771487953364,True
+Alternative null n=50 fwer_upper,supplementary.tex,0.0529,generated/calibration_revision/gate_validation_summary.csv,0.0529309357854451,True
+Alternative maxT null rate n=100,supplementary.tex,4.8\%,generated/calibration_revision/gate_validation_summary.csv,0.048,True
+Alternative null n=100 fwer,supplementary.tex,0.048,generated/calibration_revision/gate_validation_summary.csv,0.048,True
+Alternative null n=100 fwer_lower,supplementary.tex,0.0356,generated/calibration_revision/gate_validation_summary.csv,0.0356002653428833,True
+Alternative null n=100 fwer_upper,supplementary.tex,0.0631,generated/calibration_revision/gate_validation_summary.csv,0.0631401154015092,True
+Alternative maxT null rate n=200,supplementary.tex,4.5\%,generated/calibration_revision/gate_validation_summary.csv,0.045,True
+Alternative null n=200 fwer,supplementary.tex,0.045,generated/calibration_revision/gate_validation_summary.csv,0.045,True
+Alternative null n=200 fwer_lower,supplementary.tex,0.0330,generated/calibration_revision/gate_validation_summary.csv,0.0330096254311487,True
+Alternative null n=200 fwer_upper,supplementary.tex,0.0598,generated/calibration_revision/gate_validation_summary.csv,0.0597528326934078,True
+Alternative power rho=0 asymptotic_BH,supplementary.tex,0.9995,generated/calibration_revision/gate_validation_summary.csv,0.9995,True
+Alternative power rho=0 permutation_maxT,supplementary.tex,0.8935,generated/calibration_revision/gate_validation_summary.csv,0.8935,True
+Alternative power rho=0.6 asymptotic_BH,supplementary.tex,0.9970,generated/calibration_revision/gate_validation_summary.csv,0.997,True
+Alternative power rho=0.6 permutation_maxT,supplementary.tex,0.9455,generated/calibration_revision/gate_validation_summary.csv,0.9455,True
+MAD+PQN recovery balanced_sparse,supplementary.tex,1.000,generated/review_validation/preparation_biology_summary.csv,1.00018544595019,True
 Supplement MAD+PQN recovery balanced_sparse,supplementary.tex,1.000,generated/review_validation/preparation_biology_summary.csv,1.00018544595019,True
-MAD+PQN recovery rare_subgroup,main.tex,0.310,generated/review_validation/preparation_biology_summary.csv,0.309918712142122,True
+MAD+PQN recovery rare_subgroup,supplementary.tex,0.310,generated/review_validation/preparation_biology_summary.csv,0.309918712142122,True
 Supplement MAD+PQN recovery rare_subgroup,supplementary.tex,0.310,generated/review_validation/preparation_biology_summary.csv,0.309918712142122,True
-MAD+PQN recovery broad_coordinated,main.tex,0.534,generated/review_validation/preparation_biology_summary.csv,0.534296883433415,True
+MAD+PQN recovery broad_coordinated,supplementary.tex,0.534,generated/review_validation/preparation_biology_summary.csv,0.534296883433415,True
 Supplement MAD+PQN recovery broad_coordinated,supplementary.tex,0.534,generated/review_validation/preparation_biology_summary.csv,0.534296883433415,True
 Stage recovery rare_subgroup mad_only,supplementary.tex,0.319,generated/review_validation/preparation_biology_summary.csv,0.31886137324682,True
 Stage recovery rare_subgroup pqn_only,supplementary.tex,0.991,generated/review_validation/preparation_biology_summary.csv,0.990644227919858,True

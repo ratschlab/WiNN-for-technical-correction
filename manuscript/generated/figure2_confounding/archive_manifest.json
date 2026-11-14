@@ -1,0 +1,10 @@
+{
+  "archive": "task_outputs.tar.gz",
+  "sha256": "3639e1eaffe50b72a95c1d3cc872da669f7af3504aeb59352d555a6cc4c0da1c",
+  "bytes": 27323692,
+  "files": 1330,
+  "verified_hashes": 950,
+  "tasks": 190,
+  "independent_welch_comparisons": 2280,
+  "max_welch_difference": 2.44249065417534e-15
+}
