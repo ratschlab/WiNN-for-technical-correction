@@ -5,87 +5,87 @@ heldout_qc_cv_mean,331.463127380563,lower,2488,percent,,mtbls79,qc_rlsc,QC-RLSC,
 heldout_qc_cv_mean,10.7447470772645,lower,2488,percent,,mtbls79,qc_rfsc,QC-RFSC,SPLIT01,MTBLS79,Held-out QC CV (%),QC-RFSC,10.6348394084937
 heldout_qc_cv_mean,14.2117474656413,lower,2488,percent,,mtbls79,tiger,TIGER,SPLIT01,MTBLS79,Held-out QC CV (%),TIGER,14.39872311119367
 heldout_qc_cv_mean,17.9936070159453,lower,2488,percent,,mtbls79,serrf,SERRF,SPLIT01,MTBLS79,Held-out QC CV (%),SERRF,17.87226568517132
-heldout_qc_cv_mean,17.0288499539328,lower,2488,percent,,mtbls79,winn_auto_qc,WiNN auto (QC),SPLIT01,MTBLS79,Held-out QC CV (%),WiNN auto,16.82393363175824
-heldout_qc_cv_mean,17.5672068040643,lower,2488,percent,,mtbls79,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT01,MTBLS79,Held-out QC CV (%),WiNN auto-batch,17.27307889273004
-heldout_qc_cv_mean,17.5497463904276,lower,2488,percent,,mtbls79,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT01,MTBLS79,Held-out QC CV (%),WiNN fixed,17.37317912068707
+heldout_qc_cv_mean,17.0229308853113,lower,2488,percent,,mtbls79,winn_auto_qc,WiNN auto (QC),SPLIT01,MTBLS79,Held-out QC CV (%),WiNN auto,16.81693244331504
+heldout_qc_cv_mean,17.4694408076993,lower,2488,percent,,mtbls79,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT01,MTBLS79,Held-out QC CV (%),WiNN auto-batch,17.19067499860838
+heldout_qc_cv_mean,17.543383804556,lower,2488,percent,,mtbls79,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT01,MTBLS79,Held-out QC CV (%),WiNN fixed,17.36651330787098
 heldout_qc_cv_mean,29.8147899508902,lower,2488,percent,,mtbls79,raw,Raw,SPLIT02,MTBLS79,Held-out QC CV (%),Raw,29.42877126381661
 heldout_qc_cv_mean,16.4977700369536,lower,2488,percent,,mtbls79,combat,ComBat,SPLIT02,MTBLS79,Held-out QC CV (%),ComBat,16.740424857377228
 heldout_qc_cv_mean,35.2491714631521,lower,2488,percent,,mtbls79,qc_rlsc,QC-RLSC,SPLIT02,MTBLS79,Held-out QC CV (%),QC-RLSC,154.7107590818127
 heldout_qc_cv_mean,10.5746632879997,lower,2488,percent,,mtbls79,qc_rfsc,QC-RFSC,SPLIT02,MTBLS79,Held-out QC CV (%),QC-RFSC,10.6348394084937
 heldout_qc_cv_mean,14.1113272195319,lower,2488,percent,,mtbls79,tiger,TIGER,SPLIT02,MTBLS79,Held-out QC CV (%),TIGER,14.39872311119367
 heldout_qc_cv_mean,17.8047444394758,lower,2488,percent,,mtbls79,serrf,SERRF,SPLIT02,MTBLS79,Held-out QC CV (%),SERRF,17.87226568517132
-heldout_qc_cv_mean,16.8888550652293,lower,2488,percent,,mtbls79,winn_auto_qc,WiNN auto (QC),SPLIT02,MTBLS79,Held-out QC CV (%),WiNN auto,16.82393363175824
-heldout_qc_cv_mean,17.0182419691364,lower,2488,percent,,mtbls79,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT02,MTBLS79,Held-out QC CV (%),WiNN auto-batch,17.27307889273004
-heldout_qc_cv_mean,17.396400574616,lower,2488,percent,,mtbls79,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT02,MTBLS79,Held-out QC CV (%),WiNN fixed,17.37317912068707
+heldout_qc_cv_mean,16.8806328656574,lower,2488,percent,,mtbls79,winn_auto_qc,WiNN auto (QC),SPLIT02,MTBLS79,Held-out QC CV (%),WiNN auto,16.81693244331504
+heldout_qc_cv_mean,16.9045946021339,lower,2488,percent,,mtbls79,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT02,MTBLS79,Held-out QC CV (%),WiNN auto-batch,17.19067499860838
+heldout_qc_cv_mean,17.3869667862408,lower,2488,percent,,mtbls79,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT02,MTBLS79,Held-out QC CV (%),WiNN fixed,17.36651330787098
 heldout_qc_cv_mean,29.835073206221,lower,2488,percent,,mtbls79,raw,Raw,SPLIT03,MTBLS79,Held-out QC CV (%),Raw,29.42877126381661
 heldout_qc_cv_mean,16.8267746152924,lower,2488,percent,,mtbls79,combat,ComBat,SPLIT03,MTBLS79,Held-out QC CV (%),ComBat,16.740424857377228
 heldout_qc_cv_mean,182.018327690685,lower,2488,percent,,mtbls79,qc_rlsc,QC-RLSC,SPLIT03,MTBLS79,Held-out QC CV (%),QC-RLSC,154.7107590818127
 heldout_qc_cv_mean,10.5669697002793,lower,2488,percent,,mtbls79,qc_rfsc,QC-RFSC,SPLIT03,MTBLS79,Held-out QC CV (%),QC-RFSC,10.6348394084937
 heldout_qc_cv_mean,13.8731335828839,lower,2488,percent,,mtbls79,tiger,TIGER,SPLIT03,MTBLS79,Held-out QC CV (%),TIGER,14.39872311119367
 heldout_qc_cv_mean,17.6891549442599,lower,2488,percent,,mtbls79,serrf,SERRF,SPLIT03,MTBLS79,Held-out QC CV (%),SERRF,17.87226568517132
-heldout_qc_cv_mean,17.0771386271754,lower,2488,percent,,mtbls79,winn_auto_qc,WiNN auto (QC),SPLIT03,MTBLS79,Held-out QC CV (%),WiNN auto,16.82393363175824
-heldout_qc_cv_mean,17.7985620061702,lower,2488,percent,,mtbls79,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT03,MTBLS79,Held-out QC CV (%),WiNN auto-batch,17.27307889273004
-heldout_qc_cv_mean,17.6036474105298,lower,2488,percent,,mtbls79,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT03,MTBLS79,Held-out QC CV (%),WiNN fixed,17.37317912068707
+heldout_qc_cv_mean,17.0666014431576,lower,2488,percent,,mtbls79,winn_auto_qc,WiNN auto (QC),SPLIT03,MTBLS79,Held-out QC CV (%),WiNN auto,16.81693244331504
+heldout_qc_cv_mean,17.6756500053713,lower,2488,percent,,mtbls79,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT03,MTBLS79,Held-out QC CV (%),WiNN auto-batch,17.19067499860838
+heldout_qc_cv_mean,17.5966389168137,lower,2488,percent,,mtbls79,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT03,MTBLS79,Held-out QC CV (%),WiNN fixed,17.36651330787098
 heldout_qc_cv_mean,28.3542220110721,lower,2488,percent,,mtbls79,raw,Raw,SPLIT04,MTBLS79,Held-out QC CV (%),Raw,29.42877126381661
 heldout_qc_cv_mean,17.042751453292,lower,2488,percent,,mtbls79,combat,ComBat,SPLIT04,MTBLS79,Held-out QC CV (%),ComBat,16.740424857377228
 heldout_qc_cv_mean,153.734136030293,lower,2488,percent,,mtbls79,qc_rlsc,QC-RLSC,SPLIT04,MTBLS79,Held-out QC CV (%),QC-RLSC,154.7107590818127
 heldout_qc_cv_mean,10.6809768847318,lower,2488,percent,,mtbls79,qc_rfsc,QC-RFSC,SPLIT04,MTBLS79,Held-out QC CV (%),QC-RFSC,10.6348394084937
 heldout_qc_cv_mean,14.3105246088768,lower,2488,percent,,mtbls79,tiger,TIGER,SPLIT04,MTBLS79,Held-out QC CV (%),TIGER,14.39872311119367
 heldout_qc_cv_mean,18.2963310756751,lower,2488,percent,,mtbls79,serrf,SERRF,SPLIT04,MTBLS79,Held-out QC CV (%),SERRF,17.87226568517132
-heldout_qc_cv_mean,16.9675873009229,lower,2488,percent,,mtbls79,winn_auto_qc,WiNN auto (QC),SPLIT04,MTBLS79,Held-out QC CV (%),WiNN auto,16.82393363175824
-heldout_qc_cv_mean,17.1138854080874,lower,2488,percent,,mtbls79,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT04,MTBLS79,Held-out QC CV (%),WiNN auto-batch,17.27307889273004
-heldout_qc_cv_mean,17.5489474111158,lower,2488,percent,,mtbls79,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT04,MTBLS79,Held-out QC CV (%),WiNN fixed,17.37317912068707
+heldout_qc_cv_mean,16.9618977969295,lower,2488,percent,,mtbls79,winn_auto_qc,WiNN auto (QC),SPLIT04,MTBLS79,Held-out QC CV (%),WiNN auto,16.81693244331504
+heldout_qc_cv_mean,17.0482428987633,lower,2488,percent,,mtbls79,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT04,MTBLS79,Held-out QC CV (%),WiNN auto-batch,17.19067499860838
+heldout_qc_cv_mean,17.5459358752401,lower,2488,percent,,mtbls79,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT04,MTBLS79,Held-out QC CV (%),WiNN fixed,17.36651330787098
 heldout_qc_cv_mean,29.5714884927215,lower,2488,percent,,mtbls79,raw,Raw,SPLIT05,MTBLS79,Held-out QC CV (%),Raw,29.42877126381661
 heldout_qc_cv_mean,16.9702695187896,lower,2488,percent,,mtbls79,combat,ComBat,SPLIT05,MTBLS79,Held-out QC CV (%),ComBat,16.740424857377228
 heldout_qc_cv_mean,187.850905585212,lower,2488,percent,,mtbls79,qc_rlsc,QC-RLSC,SPLIT05,MTBLS79,Held-out QC CV (%),QC-RLSC,154.7107590818127
 heldout_qc_cv_mean,11.016094837435,lower,2488,percent,,mtbls79,qc_rfsc,QC-RFSC,SPLIT05,MTBLS79,Held-out QC CV (%),QC-RFSC,10.6348394084937
 heldout_qc_cv_mean,14.2091436569514,lower,2488,percent,,mtbls79,tiger,TIGER,SPLIT05,MTBLS79,Held-out QC CV (%),TIGER,14.39872311119367
 heldout_qc_cv_mean,18.2246116514788,lower,2488,percent,,mtbls79,serrf,SERRF,SPLIT05,MTBLS79,Held-out QC CV (%),SERRF,17.87226568517132
-heldout_qc_cv_mean,16.8825223718318,lower,2488,percent,,mtbls79,winn_auto_qc,WiNN auto (QC),SPLIT05,MTBLS79,Held-out QC CV (%),WiNN auto,16.82393363175824
-heldout_qc_cv_mean,17.7710107700517,lower,2488,percent,,mtbls79,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT05,MTBLS79,Held-out QC CV (%),WiNN auto-batch,17.27307889273004
-heldout_qc_cv_mean,17.537567715275,lower,2488,percent,,mtbls79,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT05,MTBLS79,Held-out QC CV (%),WiNN fixed,17.37317912068707
+heldout_qc_cv_mean,16.8768235279773,lower,2488,percent,,mtbls79,winn_auto_qc,WiNN auto (QC),SPLIT05,MTBLS79,Held-out QC CV (%),WiNN auto,16.81693244331504
+heldout_qc_cv_mean,17.6547479087118,lower,2488,percent,,mtbls79,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT05,MTBLS79,Held-out QC CV (%),WiNN auto-batch,17.19067499860838
+heldout_qc_cv_mean,17.5319902284477,lower,2488,percent,,mtbls79,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT05,MTBLS79,Held-out QC CV (%),WiNN fixed,17.36651330787098
 heldout_qc_cv_mean,28.7960525930171,lower,2488,percent,,mtbls79,raw,Raw,SPLIT06,MTBLS79,Held-out QC CV (%),Raw,29.42877126381661
 heldout_qc_cv_mean,16.5443341817688,lower,2488,percent,,mtbls79,combat,ComBat,SPLIT06,MTBLS79,Held-out QC CV (%),ComBat,16.740424857377228
 heldout_qc_cv_mean,38.9909028086251,lower,2488,percent,,mtbls79,qc_rlsc,QC-RLSC,SPLIT06,MTBLS79,Held-out QC CV (%),QC-RLSC,154.7107590818127
 heldout_qc_cv_mean,10.4501911319857,lower,2488,percent,,mtbls79,qc_rfsc,QC-RFSC,SPLIT06,MTBLS79,Held-out QC CV (%),QC-RFSC,10.6348394084937
 heldout_qc_cv_mean,14.2382569019325,lower,2488,percent,,mtbls79,tiger,TIGER,SPLIT06,MTBLS79,Held-out QC CV (%),TIGER,14.39872311119367
 heldout_qc_cv_mean,17.6456406508879,lower,2488,percent,,mtbls79,serrf,SERRF,SPLIT06,MTBLS79,Held-out QC CV (%),SERRF,17.87226568517132
-heldout_qc_cv_mean,16.7072022933734,lower,2488,percent,,mtbls79,winn_auto_qc,WiNN auto (QC),SPLIT06,MTBLS79,Held-out QC CV (%),WiNN auto,16.82393363175824
-heldout_qc_cv_mean,16.7202755000969,lower,2488,percent,,mtbls79,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT06,MTBLS79,Held-out QC CV (%),WiNN auto-batch,17.27307889273004
-heldout_qc_cv_mean,17.125962399708,lower,2488,percent,,mtbls79,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT06,MTBLS79,Held-out QC CV (%),WiNN fixed,17.37317912068707
+heldout_qc_cv_mean,16.698597989707,lower,2488,percent,,mtbls79,winn_auto_qc,WiNN auto (QC),SPLIT06,MTBLS79,Held-out QC CV (%),WiNN auto,16.81693244331504
+heldout_qc_cv_mean,16.7245921452726,lower,2488,percent,,mtbls79,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT06,MTBLS79,Held-out QC CV (%),WiNN auto-batch,17.19067499860838
+heldout_qc_cv_mean,17.1252460211616,lower,2488,percent,,mtbls79,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT06,MTBLS79,Held-out QC CV (%),WiNN fixed,17.36651330787098
 heldout_qc_cv_mean,29.4974404631797,lower,2488,percent,,mtbls79,raw,Raw,SPLIT07,MTBLS79,Held-out QC CV (%),Raw,29.42877126381661
 heldout_qc_cv_mean,16.998467023867,lower,2488,percent,,mtbls79,combat,ComBat,SPLIT07,MTBLS79,Held-out QC CV (%),ComBat,16.740424857377228
 heldout_qc_cv_mean,176.191757770554,lower,2488,percent,,mtbls79,qc_rlsc,QC-RLSC,SPLIT07,MTBLS79,Held-out QC CV (%),QC-RLSC,154.7107590818127
 heldout_qc_cv_mean,10.5087022515731,lower,2488,percent,,mtbls79,qc_rfsc,QC-RFSC,SPLIT07,MTBLS79,Held-out QC CV (%),QC-RFSC,10.6348394084937
 heldout_qc_cv_mean,14.0520845659875,lower,2488,percent,,mtbls79,tiger,TIGER,SPLIT07,MTBLS79,Held-out QC CV (%),TIGER,14.39872311119367
 heldout_qc_cv_mean,18.0593874750019,lower,2488,percent,,mtbls79,serrf,SERRF,SPLIT07,MTBLS79,Held-out QC CV (%),SERRF,17.87226568517132
-heldout_qc_cv_mean,17.0922035469208,lower,2488,percent,,mtbls79,winn_auto_qc,WiNN auto (QC),SPLIT07,MTBLS79,Held-out QC CV (%),WiNN auto,16.82393363175824
-heldout_qc_cv_mean,17.1666225758773,lower,2488,percent,,mtbls79,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT07,MTBLS79,Held-out QC CV (%),WiNN auto-batch,17.27307889273004
-heldout_qc_cv_mean,17.5895891619875,lower,2488,percent,,mtbls79,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT07,MTBLS79,Held-out QC CV (%),WiNN fixed,17.37317912068707
+heldout_qc_cv_mean,17.0846423416024,lower,2488,percent,,mtbls79,winn_auto_qc,WiNN auto (QC),SPLIT07,MTBLS79,Held-out QC CV (%),WiNN auto,16.81693244331504
+heldout_qc_cv_mean,17.0708894007842,lower,2488,percent,,mtbls79,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT07,MTBLS79,Held-out QC CV (%),WiNN auto-batch,17.19067499860838
+heldout_qc_cv_mean,17.579884890321,lower,2488,percent,,mtbls79,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT07,MTBLS79,Held-out QC CV (%),WiNN fixed,17.36651330787098
 heldout_qc_cv_mean,29.891893027712,lower,2488,percent,,mtbls79,raw,Raw,SPLIT08,MTBLS79,Held-out QC CV (%),Raw,29.42877126381661
 heldout_qc_cv_mean,16.3890598169677,lower,2488,percent,,mtbls79,combat,ComBat,SPLIT08,MTBLS79,Held-out QC CV (%),ComBat,16.740424857377228
 heldout_qc_cv_mean,131.514265111655,lower,2488,percent,,mtbls79,qc_rlsc,QC-RLSC,SPLIT08,MTBLS79,Held-out QC CV (%),QC-RLSC,154.7107590818127
 heldout_qc_cv_mean,10.7481270778521,lower,2488,percent,,mtbls79,qc_rfsc,QC-RFSC,SPLIT08,MTBLS79,Held-out QC CV (%),QC-RFSC,10.6348394084937
 heldout_qc_cv_mean,15.2486741633455,lower,2488,percent,,mtbls79,tiger,TIGER,SPLIT08,MTBLS79,Held-out QC CV (%),TIGER,14.39872311119367
 heldout_qc_cv_mean,17.6339595217266,lower,2488,percent,,mtbls79,serrf,SERRF,SPLIT08,MTBLS79,Held-out QC CV (%),SERRF,17.87226568517132
-heldout_qc_cv_mean,16.373299233335,lower,2488,percent,,mtbls79,winn_auto_qc,WiNN auto (QC),SPLIT08,MTBLS79,Held-out QC CV (%),WiNN auto,16.82393363175824
-heldout_qc_cv_mean,17.2755263051457,lower,2488,percent,,mtbls79,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT08,MTBLS79,Held-out QC CV (%),WiNN auto-batch,17.27307889273004
-heldout_qc_cv_mean,17.0461215746748,lower,2488,percent,,mtbls79,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT08,MTBLS79,Held-out QC CV (%),WiNN fixed,17.37317912068707
+heldout_qc_cv_mean,16.3604739388723,lower,2488,percent,,mtbls79,winn_auto_qc,WiNN auto (QC),SPLIT08,MTBLS79,Held-out QC CV (%),WiNN auto,16.81693244331504
+heldout_qc_cv_mean,17.1373234701698,lower,2488,percent,,mtbls79,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT08,MTBLS79,Held-out QC CV (%),WiNN auto-batch,17.19067499860838
+heldout_qc_cv_mean,17.0343272176099,lower,2488,percent,,mtbls79,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT08,MTBLS79,Held-out QC CV (%),WiNN fixed,17.36651330787098
 heldout_qc_cv_mean,29.9546405903895,lower,2488,percent,,mtbls79,raw,Raw,SPLIT09,MTBLS79,Held-out QC CV (%),Raw,29.42877126381661
 heldout_qc_cv_mean,16.8430307940274,lower,2488,percent,,mtbls79,combat,ComBat,SPLIT09,MTBLS79,Held-out QC CV (%),ComBat,16.740424857377228
 heldout_qc_cv_mean,177.744891082922,lower,2488,percent,,mtbls79,qc_rlsc,QC-RLSC,SPLIT09,MTBLS79,Held-out QC CV (%),QC-RLSC,154.7107590818127
 heldout_qc_cv_mean,10.3701976759785,lower,2488,percent,,mtbls79,qc_rfsc,QC-RFSC,SPLIT09,MTBLS79,Held-out QC CV (%),QC-RFSC,10.6348394084937
 heldout_qc_cv_mean,14.202031722188,lower,2488,percent,,mtbls79,tiger,TIGER,SPLIT09,MTBLS79,Held-out QC CV (%),TIGER,14.39872311119367
 heldout_qc_cv_mean,17.717398513385,lower,2488,percent,,mtbls79,serrf,SERRF,SPLIT09,MTBLS79,Held-out QC CV (%),SERRF,17.87226568517132
-heldout_qc_cv_mean,16.9117109366774,lower,2488,percent,,mtbls79,winn_auto_qc,WiNN auto (QC),SPLIT09,MTBLS79,Held-out QC CV (%),WiNN auto,16.82393363175824
-heldout_qc_cv_mean,17.6489739877074,lower,2488,percent,,mtbls79,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT09,MTBLS79,Held-out QC CV (%),WiNN auto-batch,17.27307889273004
-heldout_qc_cv_mean,17.4725071304456,lower,2488,percent,,mtbls79,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT09,MTBLS79,Held-out QC CV (%),WiNN fixed,17.37317912068707
+heldout_qc_cv_mean,16.9057634767938,lower,2488,percent,,mtbls79,winn_auto_qc,WiNN auto (QC),SPLIT09,MTBLS79,Held-out QC CV (%),WiNN auto,16.81693244331504
+heldout_qc_cv_mean,17.5631833360565,lower,2488,percent,,mtbls79,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT09,MTBLS79,Held-out QC CV (%),WiNN auto-batch,17.19067499860838
+heldout_qc_cv_mean,17.4659294376949,lower,2488,percent,,mtbls79,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT09,MTBLS79,Held-out QC CV (%),WiNN fixed,17.36651330787098
 heldout_qc_cv_mean,28.9187098311481,lower,2488,percent,,mtbls79,raw,Raw,SPLIT10,MTBLS79,Held-out QC CV (%),Raw,29.42877126381661
 heldout_qc_cv_mean,16.3897110857448,lower,2488,percent,,mtbls79,combat,ComBat,SPLIT10,MTBLS79,Held-out QC CV (%),ComBat,16.740424857377228
 heldout_qc_cv_mean,132.350105894466,lower,2488,percent,,mtbls79,qc_rlsc,QC-RLSC,SPLIT10,MTBLS79,Held-out QC CV (%),QC-RLSC,154.7107590818127
 heldout_qc_cv_mean,10.6877241598373,lower,2488,percent,,mtbls79,qc_rfsc,QC-RFSC,SPLIT10,MTBLS79,Held-out QC CV (%),QC-RFSC,10.6348394084937
 heldout_qc_cv_mean,15.5303072245979,lower,2488,percent,,mtbls79,tiger,TIGER,SPLIT10,MTBLS79,Held-out QC CV (%),TIGER,14.39872311119367
 heldout_qc_cv_mean,17.6578215638769,lower,2488,percent,,mtbls79,serrf,SERRF,SPLIT10,MTBLS79,Held-out QC CV (%),SERRF,17.87226568517132
-heldout_qc_cv_mean,16.3099669881836,lower,2488,percent,,mtbls79,winn_auto_qc,WiNN auto (QC),SPLIT10,MTBLS79,Held-out QC CV (%),WiNN auto,16.82393363175824
-heldout_qc_cv_mean,16.6504836009631,lower,2488,percent,,mtbls79,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT10,MTBLS79,Held-out QC CV (%),WiNN auto-batch,17.27307889273004
-heldout_qc_cv_mean,16.8613014380906,lower,2488,percent,,mtbls79,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT10,MTBLS79,Held-out QC CV (%),WiNN fixed,17.37317912068707
+heldout_qc_cv_mean,16.3109601671418,lower,2488,percent,,mtbls79,winn_auto_qc,WiNN auto (QC),SPLIT10,MTBLS79,Held-out QC CV (%),WiNN auto,16.81693244331504
+heldout_qc_cv_mean,16.6580854111211,lower,2488,percent,,mtbls79,winn_auto_batch_qc,WiNN auto-batch (QC),SPLIT10,MTBLS79,Held-out QC CV (%),WiNN auto-batch,17.19067499860838
+heldout_qc_cv_mean,16.8548299006241,lower,2488,percent,,mtbls79,winn_fixed_no_qc,WiNN fixed default (no QC),SPLIT10,MTBLS79,Held-out QC CV (%),WiNN fixed,17.36651330787098

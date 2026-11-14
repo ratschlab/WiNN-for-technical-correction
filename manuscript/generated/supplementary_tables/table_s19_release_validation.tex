@@ -1,6 +1,6 @@
 \tiny
 \begin{longtable}{llp{10.5cm}}
-\caption{Validation checklist for the current benchmark release. Historical comparator audits remain in the archived release CSV; QC-RFSC updates have separate integration checks.}\label{tab:supp_validation}\\
+\caption{Validation checklist for the original benchmark release. QC-RFSC updates are documented by the separate integration checks in the reproducibility package.}\label{tab:supp_validation}\\
 \toprule
 Check & Passed & Detail \\
 \midrule
@@ -15,23 +15,23 @@ Check & Passed & Detail \\
 \endfoot
 \bottomrule
 \endlastfoot
-all prespecified tasks complete & yes & Recalibrated WiNN re-run: primary\_methods=24/24; dataset\_ablation\_bundles=6/6; simulation\_seed\_methods=40/40; simulation\_seed\_ablation\_bundles=10/10; reference\_split\_methods=240/240; partial\_confounding=160/160; primary\_evaluations=6/6; ablation\_evaluations=6/6; simulation\_seed\_evaluations=10/10; reference\_split\_evaluations=60/60. \\
-execution ledgers cover prespecified tasks and attempts & yes & Recalibrated WiNN re-run: 942 logical tasks and 562 scheduler attempts audited; 380 competitor tasks reused from the previous validated release. \\
-no unresolved failure artifacts & yes & Recalibrated WiNN re-run: 0 resolved attempt artifact(s); 0 unresolved. \\
-all analytical runs use frozen winn & yes & Recalibrated WiNN re-run: 480 analytical run manifests audited. \\
-all corrected matrices are finite and nonnegative & yes & Recalibrated WiNN re-run: 304 primary, split, and repeated-simulation matrices audited. \\
+all prespecified tasks complete & yes & WiNN 0.1.6 re-run: primary\_methods=24/24; dataset\_ablation\_bundles=6/6; simulation\_seed\_methods=40/40; simulation\_seed\_ablation\_bundles=10/10; reference\_split\_methods=240/240; partial\_confounding=160/160; primary\_evaluations=6/6; ablation\_evaluations=6/6; simulation\_seed\_evaluations=10/10; reference\_split\_evaluations=60/60. Reused competitor outputs (previous validated release): primary\_methods=54/54; dataset\_ablation\_bundles=6/6; simulation\_seed\_methods=90/90; simulation\_seed\_ablation\_bundles=10/10; reference\_split\_methods=540/540; partial\_confounding=160/160; primary\_evaluations=6/6; ablation\_evaluations=6/6; simulation\_seed\_evaluations=10/10; reference\_split\_evaluations=60/60 \\
+execution ledgers cover prespecified tasks and attempts & yes & WiNN 0.1.6 re-run: 942 logical tasks and 563 scheduler attempts audited; 380 competitor tasks reused from the previous validated release. Reused competitor outputs (previous validated release): 942 logical tasks and 1034 scheduler attempts audited \\
+no unresolved failure artifacts & yes & WiNN 0.1.6 re-run: 0 resolved attempt artifact(s); 0 unresolved. Reused competitor outputs (previous validated release): 2 resolved attempt artifact(s); 0 unresolved \\
+all analytical runs use frozen winn & yes & WiNN 0.1.6 re-run: 480 analytical run manifests audited. Reused competitor outputs (previous validated release): 860 analytical run manifests audited \\
+all corrected matrices are finite and nonnegative & yes & WiNN 0.1.6 re-run: 304 primary, split, and repeated-simulation matrices audited. Reused competitor outputs (previous validated release): 684 primary, split, and repeated-simulation matrices audited \\
 negative competitor extrapolations are recorded before flooring & yes & 22 of 684 correction runs used the intensity-domain floor \\
 tiger nonfinite feature fallbacks are recorded & yes & 11 of 76 TIGER runs restored affected features \\
 selection manifest excludes evaluation endpoints & yes & 6 endpoint-availability fields are uniformly false \\
 selection manifest has frozen software and seed provenance & yes & 54 dataset-method selection records audited \\
 primary competitor rankings are complete and training qc only & yes & 57 candidate rows in 17 selected configurations \\
-training and hidden references are separated & yes & Recalibrated WiNN re-run: 540 role, manifest, and recorded-control checks audited. \\
-batch r2 is categorical & yes & Recalibrated WiNN re-run: 448 batch R-squared rows audited. \\
+training and hidden references are separated & yes & WiNN 0.1.6 re-run: 540 role, manifest, and recorded-control checks audited. Reused competitor outputs (previous validated release): 840 role, manifest, and recorded-control checks audited \\
+batch r2 is categorical & yes & WiNN 0.1.6 re-run: 448 batch R-squared rows audited. Reused competitor outputs (previous validated release): 828 batch R-squared rows audited \\
 metric crosswalk covers saved metrics & yes & 51 unique saved metrics documented \\
-replicate metrics have distinct definitions & yes & Recalibrated WiNN re-run: 53 ICC rows and 106 repeatability-ratio rows audited. \\
+replicate metrics have distinct definitions & yes & WiNN 0.1.6 re-run: 53 ICC rows and 106 repeatability-ratio rows audited. Reused competitor outputs (previous validated release): 108 ICC rows and 216 repeatability-ratio rows audited \\
 all primary winn modes save selected parameters & yes & 18 dataset-mode parameter records audited \\
 reused matrix loading time is not reported as method runtime & yes & 51 reused correction fits have reportable runtime set to NA \\
 competitor reuse decisions match validated run artifacts & yes & 36 dataset-method reuse records audited \\
 all primary outputs preserve declared panels & yes & 108 of 108 feature/sample coverage rows \\
-all declared figure panels have source data & yes & 72 of 72 figure-panel/source entries \\
+all declared figure panels have source data & yes & 69 of 69 figure-panel/source entries \\
 \end{longtable}

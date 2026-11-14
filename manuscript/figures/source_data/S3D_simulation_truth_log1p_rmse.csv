@@ -4,81 +4,81 @@ truth_log1p_rmse,0.103140426488342,lower,450000,log1p intensity,,simulation,comb
 truth_log1p_rmse,0.0889256275915072,lower,450000,log1p intensity,,simulation,qc_rlsc,QC-RLSC,SIM01,QC-RLSC,0.0896251707671351,4.057752226001743e-4
 truth_log1p_rmse,0.110960348256366,lower,450000,log1p intensity,,simulation,tiger,TIGER,SIM01,TIGER,0.1142785176450041,0.0011682204702083009
 truth_log1p_rmse,0.0953567821019156,lower,450000,log1p intensity,,simulation,serrf,SERRF,SIM01,SERRF,0.09653973880997489,6.968115246906153e-4
-truth_log1p_rmse,0.0731605328247996,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM01,WiNN (QC-tuned),0.07410118246616672,4.1314295507669836e-4
-truth_log1p_rmse,0.0958039156723834,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM01,WiNN (inferred segments),0.09726361133710489,0.0018647580402641447
-truth_log1p_rmse,0.0735085226457759,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN,SIM01,WiNN,0.07443969410829224,4.1664867198774793e-4
+truth_log1p_rmse,0.0708648353924626,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM01,WiNN (QC-tuned),0.07193290647999033,4.277823550140042e-4
+truth_log1p_rmse,0.0954181862551183,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM01,WiNN (inferred segments),0.09626644298232859,0.0020692436085886405
+truth_log1p_rmse,0.071143307219603,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN,SIM01,WiNN,0.07217980913651321,4.210329381192779e-4
 truth_log1p_rmse,0.299586966363763,lower,450000,log1p intensity,,simulation,raw,Raw,SIM02,Raw,0.292733754336732,0.0015270526247322764
 truth_log1p_rmse,0.104041863757707,lower,450000,log1p intensity,,simulation,combat,ComBat,SIM02,ComBat,0.1030734899793088,3.724838883690087e-4
 truth_log1p_rmse,0.0905198314245843,lower,450000,log1p intensity,,simulation,qc_rlsc,QC-RLSC,SIM02,QC-RLSC,0.0896251707671351,4.057752226001743e-4
 truth_log1p_rmse,0.112838168927485,lower,450000,log1p intensity,,simulation,tiger,TIGER,SIM02,TIGER,0.1142785176450041,0.0011682204702083009
 truth_log1p_rmse,0.0983462447772914,lower,450000,log1p intensity,,simulation,serrf,SERRF,SIM02,SERRF,0.09653973880997489,6.968115246906153e-4
-truth_log1p_rmse,0.075704040732883,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM02,WiNN (QC-tuned),0.07410118246616672,4.1314295507669836e-4
-truth_log1p_rmse,0.0998304971194572,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM02,WiNN (inferred segments),0.09726361133710489,0.0018647580402641447
-truth_log1p_rmse,0.0760106741257683,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN,SIM02,WiNN,0.07443969410829224,4.1664867198774793e-4
+truth_log1p_rmse,0.0735381726970156,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM02,WiNN (QC-tuned),0.07193290647999033,4.277823550140042e-4
+truth_log1p_rmse,0.0992618681969144,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM02,WiNN (inferred segments),0.09626644298232859,0.0020692436085886405
+truth_log1p_rmse,0.0738143976596201,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN,SIM02,WiNN,0.07217980913651321,4.210329381192779e-4
 truth_log1p_rmse,0.296671614858162,lower,450000,log1p intensity,,simulation,raw,Raw,SIM03,Raw,0.292733754336732,0.0015270526247322764
 truth_log1p_rmse,0.104715439921577,lower,450000,log1p intensity,,simulation,combat,ComBat,SIM03,ComBat,0.1030734899793088,3.724838883690087e-4
 truth_log1p_rmse,0.0901299375636216,lower,450000,log1p intensity,,simulation,qc_rlsc,QC-RLSC,SIM03,QC-RLSC,0.0896251707671351,4.057752226001743e-4
 truth_log1p_rmse,0.115493632360381,lower,450000,log1p intensity,,simulation,tiger,TIGER,SIM03,TIGER,0.1142785176450041,0.0011682204702083009
 truth_log1p_rmse,0.0973782389760755,lower,450000,log1p intensity,,simulation,serrf,SERRF,SIM03,SERRF,0.09653973880997489,6.968115246906153e-4
-truth_log1p_rmse,0.0742479998697931,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM03,WiNN (QC-tuned),0.07410118246616672,4.1314295507669836e-4
-truth_log1p_rmse,0.0972124833060108,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM03,WiNN (inferred segments),0.09726361133710489,0.0018647580402641447
-truth_log1p_rmse,0.0745927652774265,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN,SIM03,WiNN,0.07443969410829224,4.1664867198774793e-4
+truth_log1p_rmse,0.0722148206060154,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM03,WiNN (QC-tuned),0.07193290647999033,4.277823550140042e-4
+truth_log1p_rmse,0.0966659217238068,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM03,WiNN (inferred segments),0.09626644298232859,0.0020692436085886405
+truth_log1p_rmse,0.0725502829694544,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN,SIM03,WiNN,0.07217980913651321,4.210329381192779e-4
 truth_log1p_rmse,0.28712493486875,lower,450000,log1p intensity,,simulation,raw,Raw,SIM04,Raw,0.292733754336732,0.0015270526247322764
 truth_log1p_rmse,0.102961375054937,lower,450000,log1p intensity,,simulation,combat,ComBat,SIM04,ComBat,0.1030734899793088,3.724838883690087e-4
 truth_log1p_rmse,0.0908515850120854,lower,450000,log1p intensity,,simulation,qc_rlsc,QC-RLSC,SIM04,QC-RLSC,0.0896251707671351,4.057752226001743e-4
 truth_log1p_rmse,0.109498030245738,lower,450000,log1p intensity,,simulation,tiger,TIGER,SIM04,TIGER,0.1142785176450041,0.0011682204702083009
 truth_log1p_rmse,0.0955984547039546,lower,450000,log1p intensity,,simulation,serrf,SERRF,SIM04,SERRF,0.09653973880997489,6.968115246906153e-4
-truth_log1p_rmse,0.0722901933409008,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM04,WiNN (QC-tuned),0.07410118246616672,4.1314295507669836e-4
-truth_log1p_rmse,0.0955235743193639,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM04,WiNN (inferred segments),0.09726361133710489,0.0018647580402641447
-truth_log1p_rmse,0.0725079314800315,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN,SIM04,WiNN,0.07443969410829224,4.1664867198774793e-4
+truth_log1p_rmse,0.0700449366749125,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM04,WiNN (QC-tuned),0.07193290647999033,4.277823550140042e-4
+truth_log1p_rmse,0.0951138824202788,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM04,WiNN (inferred segments),0.09626644298232859,0.0020692436085886405
+truth_log1p_rmse,0.0704315979820671,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN,SIM04,WiNN,0.07217980913651321,4.210329381192779e-4
 truth_log1p_rmse,0.290233101916151,lower,450000,log1p intensity,,simulation,raw,Raw,SIM05,Raw,0.292733754336732,0.0015270526247322764
 truth_log1p_rmse,0.103735612774752,lower,450000,log1p intensity,,simulation,combat,ComBat,SIM05,ComBat,0.1030734899793088,3.724838883690087e-4
 truth_log1p_rmse,0.0894309444757946,lower,450000,log1p intensity,,simulation,qc_rlsc,QC-RLSC,SIM05,QC-RLSC,0.0896251707671351,4.057752226001743e-4
 truth_log1p_rmse,0.113289738497088,lower,450000,log1p intensity,,simulation,tiger,TIGER,SIM05,TIGER,0.1142785176450041,0.0011682204702083009
 truth_log1p_rmse,0.0974893139381562,lower,450000,log1p intensity,,simulation,serrf,SERRF,SIM05,SERRF,0.09653973880997489,6.968115246906153e-4
-truth_log1p_rmse,0.0751107581900048,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM05,WiNN (QC-tuned),0.07410118246616672,4.1314295507669836e-4
-truth_log1p_rmse,0.092043886568249,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM05,WiNN (inferred segments),0.09726361133710489,0.0018647580402641447
-truth_log1p_rmse,0.0754986702495676,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN,SIM05,WiNN,0.07443969410829224,4.1664867198774793e-4
+truth_log1p_rmse,0.0726099005091295,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM05,WiNN (QC-tuned),0.07193290647999033,4.277823550140042e-4
+truth_log1p_rmse,0.0885865295728501,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM05,WiNN (inferred segments),0.09626644298232859,0.0020692436085886405
+truth_log1p_rmse,0.0729585926966025,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN,SIM05,WiNN,0.07217980913651321,4.210329381192779e-4
 truth_log1p_rmse,0.295443790010821,lower,450000,log1p intensity,,simulation,raw,Raw,SIM06,Raw,0.292733754336732,0.0015270526247322764
 truth_log1p_rmse,0.102261037577514,lower,450000,log1p intensity,,simulation,combat,ComBat,SIM06,ComBat,0.1030734899793088,3.724838883690087e-4
 truth_log1p_rmse,0.0899877288122817,lower,450000,log1p intensity,,simulation,qc_rlsc,QC-RLSC,SIM06,QC-RLSC,0.0896251707671351,4.057752226001743e-4
 truth_log1p_rmse,0.120731799348592,lower,450000,log1p intensity,,simulation,tiger,TIGER,SIM06,TIGER,0.1142785176450041,0.0011682204702083009
 truth_log1p_rmse,0.0967878235868101,lower,450000,log1p intensity,,simulation,serrf,SERRF,SIM06,SERRF,0.09653973880997489,6.968115246906153e-4
-truth_log1p_rmse,0.0731603065406409,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM06,WiNN (QC-tuned),0.07410118246616672,4.1314295507669836e-4
-truth_log1p_rmse,0.101852620079472,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM06,WiNN (inferred segments),0.09726361133710489,0.0018647580402641447
-truth_log1p_rmse,0.0735402916623635,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN,SIM06,WiNN,0.07443969410829224,4.1664867198774793e-4
+truth_log1p_rmse,0.0710044977921859,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM06,WiNN (QC-tuned),0.07193290647999033,4.277823550140042e-4
+truth_log1p_rmse,0.101479764137807,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM06,WiNN (inferred segments),0.09626644298232859,0.0020692436085886405
+truth_log1p_rmse,0.0712105678386005,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN,SIM06,WiNN,0.07217980913651321,4.210329381192779e-4
 truth_log1p_rmse,0.290083897729829,lower,450000,log1p intensity,,simulation,raw,Raw,SIM07,Raw,0.292733754336732,0.0015270526247322764
 truth_log1p_rmse,0.103139304764973,lower,450000,log1p intensity,,simulation,combat,ComBat,SIM07,ComBat,0.1030734899793088,3.724838883690087e-4
 truth_log1p_rmse,0.0876127231721568,lower,450000,log1p intensity,,simulation,qc_rlsc,QC-RLSC,SIM07,QC-RLSC,0.0896251707671351,4.057752226001743e-4
 truth_log1p_rmse,0.11103200958276,lower,450000,log1p intensity,,simulation,tiger,TIGER,SIM07,TIGER,0.1142785176450041,0.0011682204702083009
 truth_log1p_rmse,0.0930059089482615,lower,450000,log1p intensity,,simulation,serrf,SERRF,SIM07,SERRF,0.09653973880997489,6.968115246906153e-4
-truth_log1p_rmse,0.0739394020793867,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM07,WiNN (QC-tuned),0.07410118246616672,4.1314295507669836e-4
-truth_log1p_rmse,0.0875047654061546,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM07,WiNN (inferred segments),0.09726361133710489,0.0018647580402641447
-truth_log1p_rmse,0.0742450462526726,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN,SIM07,WiNN,0.07443969410829224,4.1664867198774793e-4
+truth_log1p_rmse,0.0716608129593994,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM07,WiNN (QC-tuned),0.07193290647999033,4.277823550140042e-4
+truth_log1p_rmse,0.0861231904980138,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM07,WiNN (inferred segments),0.09626644298232859,0.0020692436085886405
+truth_log1p_rmse,0.0718066379907322,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN,SIM07,WiNN,0.07217980913651321,4.210329381192779e-4
 truth_log1p_rmse,0.299543032234809,lower,450000,log1p intensity,,simulation,raw,Raw,SIM08,Raw,0.292733754336732,0.0015270526247322764
 truth_log1p_rmse,0.104057097947677,lower,450000,log1p intensity,,simulation,combat,ComBat,SIM08,ComBat,0.1030734899793088,3.724838883690087e-4
 truth_log1p_rmse,0.0903805652843296,lower,450000,log1p intensity,,simulation,qc_rlsc,QC-RLSC,SIM08,QC-RLSC,0.0896251707671351,4.057752226001743e-4
 truth_log1p_rmse,0.118021099222866,lower,450000,log1p intensity,,simulation,tiger,TIGER,SIM08,TIGER,0.1142785176450041,0.0011682204702083009
 truth_log1p_rmse,0.0993038121640298,lower,450000,log1p intensity,,simulation,serrf,SERRF,SIM08,SERRF,0.09653973880997489,6.968115246906153e-4
-truth_log1p_rmse,0.0763530988272856,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM08,WiNN (QC-tuned),0.07410118246616672,4.1314295507669836e-4
-truth_log1p_rmse,0.108897528922275,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM08,WiNN (inferred segments),0.09726361133710489,0.0018647580402641447
-truth_log1p_rmse,0.0767142517156225,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN,SIM08,WiNN,0.07443969410829224,4.1664867198774793e-4
+truth_log1p_rmse,0.0743989332066518,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM08,WiNN (QC-tuned),0.07193290647999033,4.277823550140042e-4
+truth_log1p_rmse,0.108604004996959,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM08,WiNN (inferred segments),0.09626644298232859,0.0020692436085886405
+truth_log1p_rmse,0.0745846103233532,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN,SIM08,WiNN,0.07217980913651321,4.210329381192779e-4
 truth_log1p_rmse,0.286072426961136,lower,450000,log1p intensity,,simulation,raw,Raw,SIM09,Raw,0.292733754336732,0.0015270526247322764
 truth_log1p_rmse,0.100722739664892,lower,450000,log1p intensity,,simulation,combat,ComBat,SIM09,ComBat,0.1030734899793088,3.724838883690087e-4
 truth_log1p_rmse,0.0873857158225286,lower,450000,log1p intensity,,simulation,qc_rlsc,QC-RLSC,SIM09,QC-RLSC,0.0896251707671351,4.057752226001743e-4
 truth_log1p_rmse,0.112680767574634,lower,450000,log1p intensity,,simulation,tiger,TIGER,SIM09,TIGER,0.1142785176450041,0.0011682204702083009
 truth_log1p_rmse,0.0932453035439334,lower,450000,log1p intensity,,simulation,serrf,SERRF,SIM09,SERRF,0.09653973880997489,6.968115246906153e-4
-truth_log1p_rmse,0.0728387659558476,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM09,WiNN (QC-tuned),0.07410118246616672,4.1314295507669836e-4
-truth_log1p_rmse,0.100312416256828,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM09,WiNN (inferred segments),0.09726361133710489,0.0018647580402641447
-truth_log1p_rmse,0.0732625213682598,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN,SIM09,WiNN,0.07443969410829224,4.1664867198774793e-4
+truth_log1p_rmse,0.0707051886132699,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM09,WiNN (QC-tuned),0.07193290647999033,4.277823550140042e-4
+truth_log1p_rmse,0.0997235699012865,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM09,WiNN (inferred segments),0.09626644298232859,0.0020692436085886405
+truth_log1p_rmse,0.0709480472144716,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN,SIM09,WiNN,0.07217980913651321,4.210329381192779e-4
 truth_log1p_rmse,0.291738246535687,lower,450000,log1p intensity,,simulation,raw,Raw,SIM10,Raw,0.292733754336732,0.0015270526247322764
 truth_log1p_rmse,0.101960001840717,lower,450000,log1p intensity,,simulation,combat,ComBat,SIM10,ComBat,0.1030734899793088,3.724838883690087e-4
 truth_log1p_rmse,0.0910270485124611,lower,450000,log1p intensity,,simulation,qc_rlsc,QC-RLSC,SIM10,QC-RLSC,0.0896251707671351,4.057752226001743e-4
 truth_log1p_rmse,0.118239582434131,lower,450000,log1p intensity,,simulation,tiger,TIGER,SIM10,TIGER,0.1142785176450041,0.0011682204702083009
 truth_log1p_rmse,0.0988855053593208,lower,450000,log1p intensity,,simulation,serrf,SERRF,SIM10,SERRF,0.09653973880997489,6.968115246906153e-4
-truth_log1p_rmse,0.0742067263001251,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM10,WiNN (QC-tuned),0.07410118246616672,4.1314295507669836e-4
-truth_log1p_rmse,0.093654425720855,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM10,WiNN (inferred segments),0.09726361133710489,0.0018647580402641447
-truth_log1p_rmse,0.0745162663054341,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN,SIM10,WiNN,0.07443969410829224,4.1664867198774793e-4
+truth_log1p_rmse,0.0722869663488607,lower,450000,log1p intensity,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM10,WiNN (QC-tuned),0.07193290647999033,4.277823550140042e-4
+truth_log1p_rmse,0.0916875121202511,lower,450000,log1p intensity,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM10,WiNN (inferred segments),0.09626644298232859,0.0020692436085886405
+truth_log1p_rmse,0.0723500494706276,lower,450000,log1p intensity,,simulation,winn_fixed_no_qc,WiNN,SIM10,WiNN,0.07217980913651321,4.210329381192779e-4
 truth_log1p_rmse,0.121051074735813,lower,450000,log1p intensity,,simulation,qc_rfsc,QC-RFSC,SIM01,QC-RFSC,0.128985194899057,0.0024589408397940682
 truth_log1p_rmse,0.118647429849104,lower,450000,log1p intensity,,simulation,qc_rfsc,QC-RFSC,SIM02,QC-RFSC,0.128985194899057,0.0024589408397940682
 truth_log1p_rmse,0.126924545324551,lower,450000,log1p intensity,,simulation,qc_rfsc,QC-RFSC,SIM03,QC-RFSC,0.128985194899057,0.0024589408397940682

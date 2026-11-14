@@ -1,8 +1,7 @@
 #!/usr/bin/env Rscript
-# Rebuild S4, S8 and S10 from the staged aggregate panel inputs.
+# Rebuild S4, S8 and S10 from the original aggregate panel inputs.
 # QC-RFSC is omitted because these analyses have not been repeated for its revised adapter.
-# WiNN inputs must be refreshed from the declared release before rendering;
-# comparator rows and reference-split assignments are preserved.
+# Every other estimate, uncertainty interval and hidden-reference split is unchanged.
 args <- commandArgs(trailingOnly = FALSE)
 script <- normalizePath(sub("^--file=", "", grep("^--file=", args, value = TRUE)))
 root <- dirname(dirname(script))
@@ -84,7 +83,7 @@ specs10 <- list(c("A", "age_weighted_pc_r2", "Sacurine age"),
 for (spec in specs10) {
  stem <- paste0("S10", spec[1], "_sacurine_", spec[2]); d <- read_input(stem, 8)
  stopifnot(all(is.finite(as.matrix(d[c("x", "x_se", "y", "y_se")]))))
- # Put labels in one column, with leaders to the staged estimates.
+ # Put labels in one column, with leaders to the unchanged estimates.
  # Acquisition-variance removal clusters seven methods near x=0.
  label_data <- d
  selected <- which(label_data$method_id != "raw")
@@ -111,4 +110,4 @@ for (spec in specs10) {
                       plot.margin = margin(3, 10, 3, 4))
  save_panel(p, stem, d, width = 174, height = 60)
 }
-cat("Rebuilt 15 supplementary panels from staged release inputs.\n")
+cat("Rebuilt 15 supplementary panels with unchanged non-RFSC inputs.\n")

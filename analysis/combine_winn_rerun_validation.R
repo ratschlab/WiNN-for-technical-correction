@@ -31,7 +31,7 @@ combined <- rerun
 index <- combined$check %in% artifact_checks
 old <- previous$detail[match(combined$check[index], previous$check)]
 combined$detail[index] <- paste0(
-  "Recalibrated WiNN re-run: ", sub("^re-run methods \\([^)]*\\): ", "", combined$detail[index]),
+  "WiNN 0.1.6 re-run: ", sub("^re-run methods \\([^)]*\\): ", "", combined$detail[index]),
   ". Reused competitor outputs (previous validated release): ", old
 )
 write.csv(combined, arg("out"), row.names = FALSE)

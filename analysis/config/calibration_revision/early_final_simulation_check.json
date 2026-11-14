@@ -1,8 +1,0 @@
-{
-  "early_rows": 640,
-  "final_rows": 1440,
-  "scientific_value_mismatches": 0,
-  "all_early_keys_present": true,
-  "restored_frozen_raw_runtime_rows": 10,
-  "note": "Only raw timing differs: frozen original comparator metadata restored by the strict splice."
-}

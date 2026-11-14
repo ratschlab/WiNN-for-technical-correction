@@ -1,41 +1,41 @@
 metric,value,direction,denominator,units,notes,dataset_key,method_id,method,seed_id,gate_label,method_mean,method_se
-truth_metabolite_profile_icc_mean,0.91939620808173,higher,1000,"ICC(A,1)",,simulation,G_SS,selective/selective,SIM01,Selective / selective,0.9186258925741031,5.221325971711612e-4
+truth_metabolite_profile_icc_mean,0.924082662854262,higher,1000,"ICC(A,1)",,simulation,G_SS,selective/selective,SIM01,Selective / selective,0.923063117958038,4.916498528894598e-4
 truth_metabolite_profile_icc_mean,0.922684645475163,higher,1000,"ICC(A,1)",,simulation,G_AS,all/selective,SIM01,Forced drift,0.9213549099215705,5.044350155602932e-4
-truth_metabolite_profile_icc_mean,0.91853108852391,higher,1000,"ICC(A,1)",,simulation,G_SA,selective/all,SIM01,Forced batch,0.9176826738698955,5.320314754589497e-4
+truth_metabolite_profile_icc_mean,0.923225454159703,higher,1000,"ICC(A,1)",,simulation,G_SA,selective/all,SIM01,Forced batch,0.9221199916909129,5.009172081360505e-4
 truth_metabolite_profile_icc_mean,0.921787445111459,higher,1000,"ICC(A,1)",,simulation,G_AA,all/all,SIM01,Forced drift + batch,0.9204044844673044,5.14174530717253e-4
-truth_metabolite_profile_icc_mean,0.915474682189464,higher,1000,"ICC(A,1)",,simulation,G_SS,selective/selective,SIM02,Selective / selective,0.9186258925741031,5.221325971711612e-4
+truth_metabolite_profile_icc_mean,0.919983482750274,higher,1000,"ICC(A,1)",,simulation,G_SS,selective/selective,SIM02,Selective / selective,0.923063117958038,4.916498528894598e-4
 truth_metabolite_profile_icc_mean,0.918325098668783,higher,1000,"ICC(A,1)",,simulation,G_AS,all/selective,SIM02,Forced drift,0.9213549099215705,5.044350155602932e-4
-truth_metabolite_profile_icc_mean,0.91450278767842,higher,1000,"ICC(A,1)",,simulation,G_SA,selective/all,SIM02,Forced batch,0.9176826738698955,5.320314754589497e-4
+truth_metabolite_profile_icc_mean,0.919018426826049,higher,1000,"ICC(A,1)",,simulation,G_SA,selective/all,SIM02,Forced batch,0.9221199916909129,5.009172081360505e-4
 truth_metabolite_profile_icc_mean,0.917370273646434,higher,1000,"ICC(A,1)",,simulation,G_AA,all/all,SIM02,Forced drift + batch,0.9204044844673044,5.14174530717253e-4
-truth_metabolite_profile_icc_mean,0.920059877575455,higher,1000,"ICC(A,1)",,simulation,G_SS,selective/selective,SIM03,Selective / selective,0.9186258925741031,5.221325971711612e-4
+truth_metabolite_profile_icc_mean,0.924031165240754,higher,1000,"ICC(A,1)",,simulation,G_SS,selective/selective,SIM03,Selective / selective,0.923063117958038,4.916498528894598e-4
 truth_metabolite_profile_icc_mean,0.922183715900966,higher,1000,"ICC(A,1)",,simulation,G_AS,all/selective,SIM03,Forced drift,0.9213549099215705,5.044350155602932e-4
-truth_metabolite_profile_icc_mean,0.919135578879281,higher,1000,"ICC(A,1)",,simulation,G_SA,selective/all,SIM03,Forced batch,0.9176826738698955,5.320314754589497e-4
+truth_metabolite_profile_icc_mean,0.923105630958997,higher,1000,"ICC(A,1)",,simulation,G_SA,selective/all,SIM03,Forced batch,0.9221199916909129,5.009172081360505e-4
 truth_metabolite_profile_icc_mean,0.921254594017492,higher,1000,"ICC(A,1)",,simulation,G_AA,all/all,SIM03,Forced drift + batch,0.9204044844673044,5.14174530717253e-4
-truth_metabolite_profile_icc_mean,0.920386225359146,higher,1000,"ICC(A,1)",,simulation,G_SS,selective/selective,SIM04,Selective / selective,0.9186258925741031,5.221325971711612e-4
+truth_metabolite_profile_icc_mean,0.924222102031436,higher,1000,"ICC(A,1)",,simulation,G_SS,selective/selective,SIM04,Selective / selective,0.923063117958038,4.916498528894598e-4
 truth_metabolite_profile_icc_mean,0.922503708218143,higher,1000,"ICC(A,1)",,simulation,G_AS,all/selective,SIM04,Forced drift,0.9213549099215705,5.044350155602932e-4
-truth_metabolite_profile_icc_mean,0.919465543830338,higher,1000,"ICC(A,1)",,simulation,G_SA,selective/all,SIM04,Forced batch,0.9176826738698955,5.320314754589497e-4
+truth_metabolite_profile_icc_mean,0.923277154992878,higher,1000,"ICC(A,1)",,simulation,G_SA,selective/all,SIM04,Forced batch,0.9221199916909129,5.009172081360505e-4
 truth_metabolite_profile_icc_mean,0.921560246924276,higher,1000,"ICC(A,1)",,simulation,G_AA,all/all,SIM04,Forced drift + batch,0.9204044844673044,5.14174530717253e-4
-truth_metabolite_profile_icc_mean,0.917757951559249,higher,1000,"ICC(A,1)",,simulation,G_SS,selective/selective,SIM05,Selective / selective,0.9186258925741031,5.221325971711612e-4
+truth_metabolite_profile_icc_mean,0.92283653680755,higher,1000,"ICC(A,1)",,simulation,G_SS,selective/selective,SIM05,Selective / selective,0.923063117958038,4.916498528894598e-4
 truth_metabolite_profile_icc_mean,0.921387702237348,higher,1000,"ICC(A,1)",,simulation,G_AS,all/selective,SIM05,Forced drift,0.9213549099215705,5.044350155602932e-4
-truth_metabolite_profile_icc_mean,0.916830690228468,higher,1000,"ICC(A,1)",,simulation,G_SA,selective/all,SIM05,Forced batch,0.9176826738698955,5.320314754589497e-4
+truth_metabolite_profile_icc_mean,0.921927700724735,higher,1000,"ICC(A,1)",,simulation,G_SA,selective/all,SIM05,Forced batch,0.9221199916909129,5.009172081360505e-4
 truth_metabolite_profile_icc_mean,0.920451175437433,higher,1000,"ICC(A,1)",,simulation,G_AA,all/all,SIM05,Forced drift + batch,0.9204044844673044,5.14174530717253e-4
-truth_metabolite_profile_icc_mean,0.918006190396594,higher,1000,"ICC(A,1)",,simulation,G_SS,selective/selective,SIM06,Selective / selective,0.9186258925741031,5.221325971711612e-4
+truth_metabolite_profile_icc_mean,0.92267186486143,higher,1000,"ICC(A,1)",,simulation,G_SS,selective/selective,SIM06,Selective / selective,0.923063117958038,4.916498528894598e-4
 truth_metabolite_profile_icc_mean,0.92086667693328,higher,1000,"ICC(A,1)",,simulation,G_AS,all/selective,SIM06,Forced drift,0.9213549099215705,5.044350155602932e-4
-truth_metabolite_profile_icc_mean,0.916975666156017,higher,1000,"ICC(A,1)",,simulation,G_SA,selective/all,SIM06,Forced batch,0.9176826738698955,5.320314754589497e-4
+truth_metabolite_profile_icc_mean,0.921632400161443,higher,1000,"ICC(A,1)",,simulation,G_SA,selective/all,SIM06,Forced batch,0.9221199916909129,5.009172081360505e-4
 truth_metabolite_profile_icc_mean,0.919790996847304,higher,1000,"ICC(A,1)",,simulation,G_AA,all/all,SIM06,Forced drift + batch,0.9204044844673044,5.14174530717253e-4
-truth_metabolite_profile_icc_mean,0.918738808243597,higher,1000,"ICC(A,1)",,simulation,G_SS,selective/selective,SIM07,Selective / selective,0.9186258925741031,5.221325971711612e-4
+truth_metabolite_profile_icc_mean,0.923460408693878,higher,1000,"ICC(A,1)",,simulation,G_SS,selective/selective,SIM07,Selective / selective,0.923063117958038,4.916498528894598e-4
 truth_metabolite_profile_icc_mean,0.921552825769852,higher,1000,"ICC(A,1)",,simulation,G_AS,all/selective,SIM07,Forced drift,0.9213549099215705,5.044350155602932e-4
-truth_metabolite_profile_icc_mean,0.917726923605359,higher,1000,"ICC(A,1)",,simulation,G_SA,selective/all,SIM07,Forced batch,0.9176826738698955,5.320314754589497e-4
+truth_metabolite_profile_icc_mean,0.9224608657731,higher,1000,"ICC(A,1)",,simulation,G_SA,selective/all,SIM07,Forced batch,0.9221199916909129,5.009172081360505e-4
 truth_metabolite_profile_icc_mean,0.920588704869943,higher,1000,"ICC(A,1)",,simulation,G_AA,all/all,SIM07,Forced drift + batch,0.9204044844673044,5.14174530717253e-4
-truth_metabolite_profile_icc_mean,0.91665115166165,higher,1000,"ICC(A,1)",,simulation,G_SS,selective/selective,SIM08,Selective / selective,0.9186258925741031,5.221325971711612e-4
+truth_metabolite_profile_icc_mean,0.920873371405843,higher,1000,"ICC(A,1)",,simulation,G_SS,selective/selective,SIM08,Selective / selective,0.923063117958038,4.916498528894598e-4
 truth_metabolite_profile_icc_mean,0.919138342291993,higher,1000,"ICC(A,1)",,simulation,G_AS,all/selective,SIM08,Forced drift,0.9213549099215705,5.044350155602932e-4
-truth_metabolite_profile_icc_mean,0.915705040441202,higher,1000,"ICC(A,1)",,simulation,G_SA,selective/all,SIM08,Forced batch,0.9176826738698955,5.320314754589497e-4
+truth_metabolite_profile_icc_mean,0.91992918974316,higher,1000,"ICC(A,1)",,simulation,G_SA,selective/all,SIM08,Forced batch,0.9221199916909129,5.009172081360505e-4
 truth_metabolite_profile_icc_mean,0.918205806176684,higher,1000,"ICC(A,1)",,simulation,G_AA,all/all,SIM08,Forced drift + batch,0.9204044844673044,5.14174530717253e-4
-truth_metabolite_profile_icc_mean,0.920437953743901,higher,1000,"ICC(A,1)",,simulation,G_SS,selective/selective,SIM09,Selective / selective,0.9186258925741031,5.221325971711612e-4
+truth_metabolite_profile_icc_mean,0.924958632010037,higher,1000,"ICC(A,1)",,simulation,G_SS,selective/selective,SIM09,Selective / selective,0.923063117958038,4.916498528894598e-4
 truth_metabolite_profile_icc_mean,0.923535336937269,higher,1000,"ICC(A,1)",,simulation,G_AS,all/selective,SIM09,Forced drift,0.9213549099215705,5.044350155602932e-4
-truth_metabolite_profile_icc_mean,0.919634868817457,higher,1000,"ICC(A,1)",,simulation,G_SA,selective/all,SIM09,Forced batch,0.9176826738698955,5.320314754589497e-4
+truth_metabolite_profile_icc_mean,0.924148273794918,higher,1000,"ICC(A,1)",,simulation,G_SA,selective/all,SIM09,Forced batch,0.9221199916909129,5.009172081360505e-4
 truth_metabolite_profile_icc_mean,0.922720024734135,higher,1000,"ICC(A,1)",,simulation,G_AA,all/all,SIM09,Forced drift + batch,0.9204044844673044,5.14174530717253e-4
-truth_metabolite_profile_icc_mean,0.919349876930245,higher,1000,"ICC(A,1)",,simulation,G_SS,selective/selective,SIM10,Selective / selective,0.9186258925741031,5.221325971711612e-4
+truth_metabolite_profile_icc_mean,0.923510952924916,higher,1000,"ICC(A,1)",,simulation,G_SS,selective/selective,SIM10,Selective / selective,0.923063117958038,4.916498528894598e-4
 truth_metabolite_profile_icc_mean,0.921371046782908,higher,1000,"ICC(A,1)",,simulation,G_AS,all/selective,SIM10,Forced drift,0.9213549099215705,5.044350155602932e-4
-truth_metabolite_profile_icc_mean,0.918318550538504,higher,1000,"ICC(A,1)",,simulation,G_SA,selective/all,SIM10,Forced batch,0.9176826738698955,5.320314754589497e-4
+truth_metabolite_profile_icc_mean,0.922474819774145,higher,1000,"ICC(A,1)",,simulation,G_SA,selective/all,SIM10,Forced batch,0.9221199916909129,5.009172081360505e-4
 truth_metabolite_profile_icc_mean,0.920315576907884,higher,1000,"ICC(A,1)",,simulation,G_AA,all/all,SIM10,Forced drift + batch,0.9204044844673044,5.14174530717253e-4

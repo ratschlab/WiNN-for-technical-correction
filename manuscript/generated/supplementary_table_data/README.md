@@ -1,13 +1,13 @@
 # Current supplementary table sources
 
-These CSVs are the current publication sources for the permutation-calibrated WiNN development version 0.1.7.9999 (package commit `ab4969792c98bd86208a28a4e83b7a69e204b9fc`, 14 November 2026). Only WiNN outputs were recomputed; raw and comparator rows are preserved from the preceding publication snapshot, including the corrected QC-RFSC results. The table numbers below (S4–S31) are the detailed generator outputs. The published supplement condenses them into 13 tables (see "Published numbering" at the end); tables that are not printed remain available here as source data.
+These CSVs are the current publication sources for the WiNN 0.1.6 results (frozen 11 November 2026). Only the WiNN outputs were recomputed for 0.1.6; raw and comparator rows are reused unchanged from the validated release. The table numbers below (S4–S31) are the detailed generator outputs. The published supplement condenses them into 13 tables (see "Published numbering" at the end); tables that are not printed remain available here as source data.
 
-The detailed tables S4–S20 begin with aggregate outputs from the benchmark and its derivative evaluation; the validated 27 October RFSC integration then replaces simulation RFSC results and removes obsolete empirical RFSC estimates. The previous public analysis base was `21de7c448bfa5545d27c5a930161fb0bd8e40d85`; it did not contain the full derivative export or the new revision analyses. This revision publishes the exact aggregate inputs needed for table assembly, compressed with an uncompressed SHA-256 manifest under `results/final/revision_inputs/supplement_20261114/` in the analysis repository (the earlier 0.1.4 and 0.1.6 inputs remain in their dated archives). Clinical inputs there are aggregate dataset/method/metric results only.
+The detailed tables S4–S20 begin with aggregate outputs from the benchmark and its derivative evaluation; the validated 27 October RFSC integration then replaces simulation RFSC results and removes obsolete empirical RFSC estimates. The previous public analysis base was `21de7c448bfa5545d27c5a930161fb0bd8e40d85`; it did not contain the full derivative export or the new revision analyses. This revision publishes the exact aggregate inputs needed for table assembly, compressed with an uncompressed SHA-256 manifest under `results/final/revision_inputs/supplement_20261111/` in the analysis repository (the 27 July 0.1.4 inputs remain under `supplement_20260727/`). Clinical inputs there are aggregate dataset/method/metric results only.
 
 From the public analysis repository root, regenerate the current tables without refitting any correction model:
 
 ```sh
-Rscript manuscript/scripts/generate_supplementary_tables.R --final-root=results/final/revision_inputs/supplement_20261114
+Rscript manuscript/scripts/generate_supplementary_tables.R --final-root=results/final/revision_inputs/supplement_20261111
 Rscript manuscript/scripts/nearest_baseline/generate_validation_tables.R
 python3 manuscript/scripts/generate_review2_support_tables.py
 Rscript manuscript/scripts/generate_s24_paired_effects_table.R
@@ -19,7 +19,7 @@ The first command automatically calls `manuscript/scripts/benchmark_revision/int
 From an Overleaf manuscript checkout, use the equivalent command with an absolute path to the aggregate archive in the public analysis checkout:
 
 ```sh
-Rscript scripts/generate_supplementary_tables.R --final-root=/path/to/WiNN-for-technical-correction/results/final/revision_inputs/supplement_20261114
+Rscript scripts/generate_supplementary_tables.R --final-root=/path/to/WiNN-for-technical-correction/results/final/revision_inputs/supplement_20261111
 Rscript scripts/nearest_baseline/generate_validation_tables.R
 python3 scripts/generate_review2_support_tables.py
 Rscript scripts/generate_s24_paired_effects_table.R
@@ -48,12 +48,11 @@ Rscript scripts/generate_revision_ablation_panels.R
 Rscript scripts/generate_revision_supplementary_uncertainty_panels.R
 Rscript scripts/generate_revision_s6_panels.R
 Rscript scripts/generate_review_fold_panels.R
-Rscript scripts/calibration_revision/plot_gate_validation.R
 python3 scripts/assemble_main_figures.py
 python3 scripts/assemble_supplementary_figures.py
 ```
 
-Main/S5 sources are in `../revision_panel_inputs/`. The S6 exact 5,000-draw null distributions are supplied compressed as `../revision_panel_inputs/permutation_null.csv.gz`; S7 uses the included `leave_one_batch_out_bootstrap_summary.csv` and displays individual batch folds. Figure S11 uses the independently validated summaries in `../calibration_revision/`. These rendering commands do not perform correction or tune parameters. The drift gate uses permutation maxT familywise adjustment; batch ANOVA and biological-association tests retain their separate BH adjustments. The residual Ljung–Box endpoint remains the frozen asymptotic/BH diagnostic for comparability, not the new production gate.
+Main/S5 sources are in `../revision_panel_inputs/`. The S6 exact 5,000-draw null distributions are supplied compressed as `../revision_panel_inputs/permutation_null.csv.gz`; S7 uses the included `leave_one_batch_out_bootstrap_summary.csv` and displays individual batch folds. These rendering commands do not perform correction or tune parameters.
 
 ## Published numbering (condensed supplement)
 
@@ -77,21 +76,3 @@ Main/S5 sources are in `../revision_panel_inputs/`. The S6 exact 5,000-draw null
 
 Not printed, available as source data: the uncorrected technical summary (now the Raw rows of S4), S12 leave-one-batch-out summaries (shown in Supplementary Figure S7), S14 reference splits (Supplementary Figure S4), S16 cumulative stages (Supplementary Figures S1 and S9), S18/S22 numerical safeguards and S20 non-estimable analyses (summarized in Section S9), S19 release validation, and S31 reference placement.
 
-
-## Isolated table reproduction check
-
-The included driver deletes each producer's declared outputs in an isolated
-copy before running the five table generators, then compares the regenerated
-TeX bytes and parsed CSV rows with this publication snapshot. Preserved static
-tables and staged inputs are labelled separately in the proof. This checks
-table assembly from the supplied aggregates; it does not refit correction models.
-
-From the manuscript directory, choose a new replay directory outside this checkout:
-
-```sh
-python3 scripts/calibration_revision/reproduce_publication_tables.py \
-  --source=. \
-  --archive=/path/to/WiNN-for-technical-correction/results/final/revision_inputs/supplement_20261114 \
-  --work=/tmp/winn_table_replay \
-  --proof=generated/calibration_revision/table_reproduction_checks.csv
-```

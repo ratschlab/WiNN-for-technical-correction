@@ -94,21 +94,11 @@ for(dataset in datasets) {
    v<-matches[[method]]$identity;i<-match(units,v$identity);z<-as.matrix(v[i,c('top1','reciprocal_rank')]);z[unit_weights==0,]<-0
    if(method=='raw')check(paste(dataset,'recomputed raw retrieval matches archived summaries'),max(abs(z-identity_values$raw))<1e-10)else identity_values[[method]]<-z
   }
-  # WiNN is re-evaluated after a calibration change. Its independent point
-  # reference must be the same new derivative release, not the previous paper.
-  # Every unchanged comparator still has to reproduce the publication point.
-  winn_methods<-c('winn_auto_qc','winn_auto_batch_qc','winn_fixed_no_qc')
-  fresh_points<-read_input_csv(file.path(derivative,dataset,'biological_point_metrics.csv'),stringsAsFactors=FALSE)
   for(method in frozen_methods)for(j in 1:2) {
    metric<-c('cross_batch_top1_accuracy','cross_batch_mean_reciprocal_rank')[j]
-   original<-if(method %in% winn_methods) {
-    fresh_points$value[fresh_points$method_id==method & fresh_points$metric==metric]
-   } else {
-    old_est$point_estimate[old_est$dataset==dataset & old_est$method_id==method & old_est$metric==metric]
-   }
+   original<-old_est$point_estimate[old_est$dataset==dataset & old_est$method_id==method & old_est$metric==metric]
    actual<-sum(unit_weights*identity_values[[method]][,j])/sum(unit_weights)
-   check(paste(dataset,method,metric,'reproduces query-weighted point'),
-    length(original)==1 && is.finite(original) && is.finite(actual) && abs(actual-original)<1e-10,actual)
+   check(paste(dataset,method,metric,'reproduces query-weighted point'),length(original)==1 && abs(actual-original)<1e-10,actual)
   }
   draws<-cluster_bootstrap_draws(units,NULL,2000,2026072701L+if(dataset=='batchcorr_set1')199L else 1594L)
   counts<-t(vapply(draws,function(draw)tabulate(match(draw,units),nbins=length(units)),numeric(length(units))))

@@ -5,6 +5,6 @@ qc_rlsc,QC-RLSC,batch_weighted_pc_r2_categorical,lower,1.9474791944152e-4,0.0120
 qc_rfsc,QC-RFSC,batch_weighted_pc_r2_categorical,lower,0.325051677252748,0.329720281313983,0.302968044292618,0.355423288238893,2000,batchcorr_set1,BatchCorr Set 1,QC-RFSC
 tiger,TIGER,batch_weighted_pc_r2_categorical,lower,0.0526939397083854,0.0670801607702466,0.0505410267672614,0.0858769358754601,2000,batchcorr_set1,BatchCorr Set 1,TIGER
 serrf,SERRF,batch_weighted_pc_r2_categorical,lower,0.00435624904876198,0.0167223427111244,0.00908214708987754,0.0276268596383967,2000,batchcorr_set1,BatchCorr Set 1,SERRF
-winn_auto_qc,WiNN auto (QC),batch_weighted_pc_r2_categorical,lower,0.000532213992632964,0.0124597259171809,0.00728705887209987,0.0190060426356552,2000,batchcorr_set1,BatchCorr Set 1,WiNN auto
-winn_auto_batch_qc,WiNN auto-batch (QC),batch_weighted_pc_r2_categorical,lower,0.0152533556186746,0.0260255299558986,0.0170905412955527,0.0367019350263851,2000,batchcorr_set1,BatchCorr Set 1,WiNN auto-batch
-winn_fixed_no_qc,WiNN fixed default (no QC),batch_weighted_pc_r2_categorical,lower,0.000617839843400788,0.0124896389281463,0.00721433614764914,0.0194095082979315,2000,batchcorr_set1,BatchCorr Set 1,WiNN fixed
+winn_auto_qc,WiNN auto (QC),batch_weighted_pc_r2_categorical,lower,5.7607122217269e-4,0.0125024683101898,0.00735856120700035,0.0190939629963065,2000,batchcorr_set1,BatchCorr Set 1,WiNN auto
+winn_auto_batch_qc,WiNN auto-batch (QC),batch_weighted_pc_r2_categorical,lower,0.00684362608957494,0.0184980199837387,0.0115855229094522,0.0269126985028576,2000,batchcorr_set1,BatchCorr Set 1,WiNN auto-batch
+winn_fixed_no_qc,WiNN fixed default (no QC),batch_weighted_pc_r2_categorical,lower,5.6347557327367e-4,0.0124120692634349,0.00716320861920421,0.0192414890652,2000,batchcorr_set1,BatchCorr Set 1,WiNN fixed

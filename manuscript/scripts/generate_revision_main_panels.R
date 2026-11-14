@@ -415,8 +415,8 @@ for (spec in confounding_main_specs) {
       breaks = c(0, 25, 50, 75, 100),
       expand = expansion(mult = c(0.02, 0.04))
     ) +
-    scale_y_continuous(limits = if (spec[[2]] == "empirical_fdr") c(0, 0.40) else c(0, 1.03),
-                       breaks = if (spec[[2]] == "empirical_fdr") c(0, 0.05, 0.15, 0.25, 0.35) else c(0, 0.5, 1)) +
+    scale_y_continuous(limits = if (spec[[2]] == "empirical_fdr") c(0, 0.30) else c(0, 1.03),
+                       breaks = if (spec[[2]] == "empirical_fdr") c(0, 0.05, 0.15, 0.25) else c(0, 0.5, 1)) +
     labs(
       title = paste(spec[[1]], spec[[3]]),
       x = "Alignment strength (%)", y = spec[[4]], shape = NULL, linetype = NULL

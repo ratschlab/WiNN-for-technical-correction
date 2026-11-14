@@ -1,92 +1,92 @@
-check,passed,detail
-batchcorr_set1 metadata alignment,TRUE,
-batchcorr_set1 raw queries distinct,TRUE,
-batchcorr_set1 raw all eligible identity summaries,TRUE,
-batchcorr_set1 combat all eligible identity summaries,TRUE,
-batchcorr_set1 qc_rlsc all eligible identity summaries,TRUE,
-batchcorr_set1 tiger all eligible identity summaries,TRUE,
-batchcorr_set1 serrf all eligible identity summaries,TRUE,
-batchcorr_set1 winn_auto_qc all eligible identity summaries,TRUE,
-batchcorr_set1 winn_auto_batch_qc all eligible identity summaries,TRUE,
-batchcorr_set1 winn_fixed_no_qc all eligible identity summaries,TRUE,
-batchcorr_set1 raw common query set,TRUE,
-batchcorr_set1 recomputed raw retrieval matches archived summaries,TRUE,
-batchcorr_set1 raw cross_batch_top1_accuracy reproduces query-weighted point,TRUE,0.463203463203463
-batchcorr_set1 raw cross_batch_mean_reciprocal_rank reproduces query-weighted point,TRUE,0.527636947384144
-batchcorr_set1 combat cross_batch_top1_accuracy reproduces query-weighted point,TRUE,0.715728715728716
-batchcorr_set1 combat cross_batch_mean_reciprocal_rank reproduces query-weighted point,TRUE,0.771982446249471
-batchcorr_set1 qc_rlsc cross_batch_top1_accuracy reproduces query-weighted point,TRUE,0.712842712842713
-batchcorr_set1 qc_rlsc cross_batch_mean_reciprocal_rank reproduces query-weighted point,TRUE,0.76811997689774
-batchcorr_set1 tiger cross_batch_top1_accuracy reproduces query-weighted point,TRUE,0.694083694083694
-batchcorr_set1 tiger cross_batch_mean_reciprocal_rank reproduces query-weighted point,TRUE,0.753894447630381
-batchcorr_set1 serrf cross_batch_top1_accuracy reproduces query-weighted point,TRUE,0.692640692640693
-batchcorr_set1 serrf cross_batch_mean_reciprocal_rank reproduces query-weighted point,TRUE,0.752660685068139
-batchcorr_set1 winn_auto_qc cross_batch_top1_accuracy reproduces query-weighted point,TRUE,0.714285714285714
-batchcorr_set1 winn_auto_qc cross_batch_mean_reciprocal_rank reproduces query-weighted point,TRUE,0.767795857617663
-batchcorr_set1 winn_auto_batch_qc cross_batch_top1_accuracy reproduces query-weighted point,TRUE,0.707070707070707
-batchcorr_set1 winn_auto_batch_qc cross_batch_mean_reciprocal_rank reproduces query-weighted point,TRUE,0.761623778037606
-batchcorr_set1 winn_fixed_no_qc cross_batch_top1_accuracy reproduces query-weighted point,TRUE,0.714285714285714
-batchcorr_set1 winn_fixed_no_qc cross_batch_mean_reciprocal_rank reproduces query-weighted point,TRUE,0.767621658797809
-batchcorr_set1 mean_batch_all cross_batch_top1_accuracy reused baseline draws complete,TRUE,
-batchcorr_set1 cross_batch_top1_accuracy reused draws share the recomputed raw series,TRUE,
-batchcorr_set1 wehrens_ancova_all cross_batch_top1_accuracy reused baseline draws complete,TRUE,
-batchcorr_set1 cross_batch_top1_accuracy reused draws share the recomputed raw series,TRUE,
-batchcorr_set1 mean_batch_all cross_batch_mean_reciprocal_rank reused baseline draws complete,TRUE,
-batchcorr_set1 cross_batch_mean_reciprocal_rank reused draws share the recomputed raw series,TRUE,
-batchcorr_set1 wehrens_ancova_all cross_batch_mean_reciprocal_rank reused baseline draws complete,TRUE,
-batchcorr_set1 cross_batch_mean_reciprocal_rank reused draws share the recomputed raw series,TRUE,
-clinical_fiams metadata alignment,TRUE,
-clinical_fiams raw queries distinct,TRUE,
-clinical_fiams raw all eligible identity summaries,TRUE,
-clinical_fiams combat all eligible identity summaries,TRUE,
-clinical_fiams qc_rlsc all eligible identity summaries,TRUE,
-clinical_fiams tiger all eligible identity summaries,TRUE,
-clinical_fiams serrf all eligible identity summaries,TRUE,
-clinical_fiams winn_auto_qc all eligible identity summaries,TRUE,
-clinical_fiams winn_auto_batch_qc all eligible identity summaries,TRUE,
-clinical_fiams winn_fixed_no_qc all eligible identity summaries,TRUE,
-clinical_fiams raw common query set,TRUE,
-clinical_fiams recomputed raw retrieval matches archived summaries,TRUE,
-clinical_fiams raw cross_batch_top1_accuracy reproduces query-weighted point,TRUE,0.751865671641791
-clinical_fiams raw cross_batch_mean_reciprocal_rank reproduces query-weighted point,TRUE,0.793563085196202
-clinical_fiams combat cross_batch_top1_accuracy reproduces query-weighted point,TRUE,0.847014925373134
-clinical_fiams combat cross_batch_mean_reciprocal_rank reproduces query-weighted point,TRUE,0.874497272798018
-clinical_fiams qc_rlsc cross_batch_top1_accuracy reproduces query-weighted point,TRUE,0.854477611940298
-clinical_fiams qc_rlsc cross_batch_mean_reciprocal_rank reproduces query-weighted point,TRUE,0.877651571001407
-clinical_fiams tiger cross_batch_top1_accuracy reproduces query-weighted point,TRUE,0.880597014925373
-clinical_fiams tiger cross_batch_mean_reciprocal_rank reproduces query-weighted point,TRUE,0.912702417727928
-clinical_fiams serrf cross_batch_top1_accuracy reproduces query-weighted point,TRUE,0.876865671641791
-clinical_fiams serrf cross_batch_mean_reciprocal_rank reproduces query-weighted point,TRUE,0.902227319717455
-clinical_fiams winn_auto_qc cross_batch_top1_accuracy reproduces query-weighted point,TRUE,0.860074626865672
-clinical_fiams winn_auto_qc cross_batch_mean_reciprocal_rank reproduces query-weighted point,TRUE,0.879832821725034
-clinical_fiams winn_auto_batch_qc cross_batch_top1_accuracy reproduces query-weighted point,TRUE,0.848880597014925
-clinical_fiams winn_auto_batch_qc cross_batch_mean_reciprocal_rank reproduces query-weighted point,TRUE,0.873495209713656
-clinical_fiams winn_fixed_no_qc cross_batch_top1_accuracy reproduces query-weighted point,TRUE,0.858208955223881
-clinical_fiams winn_fixed_no_qc cross_batch_mean_reciprocal_rank reproduces query-weighted point,TRUE,0.879056194155555
-clinical_fiams mean_batch_all cross_batch_top1_accuracy reused baseline draws complete,TRUE,
-clinical_fiams cross_batch_top1_accuracy reused draws share the recomputed raw series,TRUE,
-clinical_fiams wehrens_ancova_all cross_batch_top1_accuracy reused baseline draws complete,TRUE,
-clinical_fiams cross_batch_top1_accuracy reused draws share the recomputed raw series,TRUE,
-clinical_fiams mean_batch_all cross_batch_mean_reciprocal_rank reused baseline draws complete,TRUE,
-clinical_fiams cross_batch_mean_reciprocal_rank reused draws share the recomputed raw series,TRUE,
-clinical_fiams wehrens_ancova_all cross_batch_mean_reciprocal_rank reused baseline draws complete,TRUE,
-clinical_fiams cross_batch_mean_reciprocal_rank reused draws share the recomputed raw series,TRUE,
-mtbls79 metadata alignment,TRUE,
-mtbls79 cow_vs_sheep raw feature effects match frozen export,TRUE,
-mtbls79 raw cow_vs_sheep matched feature effects,TRUE,
-mtbls79 winn_fixed_no_qc cow_vs_sheep matched feature effects,TRUE,
-waveica metadata alignment,TRUE,
-waveica biological_group raw feature effects match frozen export,TRUE,
-waveica raw biological_group matched feature effects,TRUE,
-waveica winn_fixed_no_qc biological_group matched feature effects,TRUE,
-sacurine metadata alignment,TRUE,
-sacurine age raw feature effects match frozen export,TRUE,
-sacurine bmi raw feature effects match frozen export,TRUE,
-sacurine gender raw feature effects match frozen export,TRUE,
-sacurine raw age matched feature effects,TRUE,
-sacurine raw bmi matched feature effects,TRUE,
-sacurine raw gender matched feature effects,TRUE,
-sacurine winn_fixed_no_qc age matched feature effects,TRUE,
-sacurine winn_fixed_no_qc bmi matched feature effects,TRUE,
-sacurine winn_fixed_no_qc gender matched feature effects,TRUE,
-baseline rows reused from previous run (not re-evaluated),TRUE,review_validation sha256 7d9801eeff60ef48eca197defb8a4682649a786939296363b61e54763d21c25f
+"check","passed","detail"
+"batchcorr_set1 metadata alignment",TRUE,""
+"batchcorr_set1 raw queries distinct",TRUE,""
+"batchcorr_set1 raw all eligible identity summaries",TRUE,""
+"batchcorr_set1 combat all eligible identity summaries",TRUE,""
+"batchcorr_set1 qc_rlsc all eligible identity summaries",TRUE,""
+"batchcorr_set1 tiger all eligible identity summaries",TRUE,""
+"batchcorr_set1 serrf all eligible identity summaries",TRUE,""
+"batchcorr_set1 winn_auto_qc all eligible identity summaries",TRUE,""
+"batchcorr_set1 winn_auto_batch_qc all eligible identity summaries",TRUE,""
+"batchcorr_set1 winn_fixed_no_qc all eligible identity summaries",TRUE,""
+"batchcorr_set1 raw common query set",TRUE,""
+"batchcorr_set1 recomputed raw retrieval matches archived summaries",TRUE,""
+"batchcorr_set1 raw cross_batch_top1_accuracy reproduces query-weighted point",TRUE,"0.463203463203463"
+"batchcorr_set1 raw cross_batch_mean_reciprocal_rank reproduces query-weighted point",TRUE,"0.527636947384144"
+"batchcorr_set1 combat cross_batch_top1_accuracy reproduces query-weighted point",TRUE,"0.715728715728716"
+"batchcorr_set1 combat cross_batch_mean_reciprocal_rank reproduces query-weighted point",TRUE,"0.771982446249471"
+"batchcorr_set1 qc_rlsc cross_batch_top1_accuracy reproduces query-weighted point",TRUE,"0.712842712842713"
+"batchcorr_set1 qc_rlsc cross_batch_mean_reciprocal_rank reproduces query-weighted point",TRUE,"0.76811997689774"
+"batchcorr_set1 tiger cross_batch_top1_accuracy reproduces query-weighted point",TRUE,"0.694083694083694"
+"batchcorr_set1 tiger cross_batch_mean_reciprocal_rank reproduces query-weighted point",TRUE,"0.753894447630381"
+"batchcorr_set1 serrf cross_batch_top1_accuracy reproduces query-weighted point",TRUE,"0.692640692640693"
+"batchcorr_set1 serrf cross_batch_mean_reciprocal_rank reproduces query-weighted point",TRUE,"0.752660685068139"
+"batchcorr_set1 winn_auto_qc cross_batch_top1_accuracy reproduces query-weighted point",TRUE,"0.70995670995671"
+"batchcorr_set1 winn_auto_qc cross_batch_mean_reciprocal_rank reproduces query-weighted point",TRUE,"0.764854753325705"
+"batchcorr_set1 winn_auto_batch_qc cross_batch_top1_accuracy reproduces query-weighted point",TRUE,"0.707070707070707"
+"batchcorr_set1 winn_auto_batch_qc cross_batch_mean_reciprocal_rank reproduces query-weighted point",TRUE,"0.763686211104661"
+"batchcorr_set1 winn_fixed_no_qc cross_batch_top1_accuracy reproduces query-weighted point",TRUE,"0.711399711399711"
+"batchcorr_set1 winn_fixed_no_qc cross_batch_mean_reciprocal_rank reproduces query-weighted point",TRUE,"0.765473295053721"
+"batchcorr_set1 mean_batch_all cross_batch_top1_accuracy reused baseline draws complete",TRUE,""
+"batchcorr_set1 cross_batch_top1_accuracy reused draws share the recomputed raw series",TRUE,""
+"batchcorr_set1 wehrens_ancova_all cross_batch_top1_accuracy reused baseline draws complete",TRUE,""
+"batchcorr_set1 cross_batch_top1_accuracy reused draws share the recomputed raw series",TRUE,""
+"batchcorr_set1 mean_batch_all cross_batch_mean_reciprocal_rank reused baseline draws complete",TRUE,""
+"batchcorr_set1 cross_batch_mean_reciprocal_rank reused draws share the recomputed raw series",TRUE,""
+"batchcorr_set1 wehrens_ancova_all cross_batch_mean_reciprocal_rank reused baseline draws complete",TRUE,""
+"batchcorr_set1 cross_batch_mean_reciprocal_rank reused draws share the recomputed raw series",TRUE,""
+"clinical_fiams metadata alignment",TRUE,""
+"clinical_fiams raw queries distinct",TRUE,""
+"clinical_fiams raw all eligible identity summaries",TRUE,""
+"clinical_fiams combat all eligible identity summaries",TRUE,""
+"clinical_fiams qc_rlsc all eligible identity summaries",TRUE,""
+"clinical_fiams tiger all eligible identity summaries",TRUE,""
+"clinical_fiams serrf all eligible identity summaries",TRUE,""
+"clinical_fiams winn_auto_qc all eligible identity summaries",TRUE,""
+"clinical_fiams winn_auto_batch_qc all eligible identity summaries",TRUE,""
+"clinical_fiams winn_fixed_no_qc all eligible identity summaries",TRUE,""
+"clinical_fiams raw common query set",TRUE,""
+"clinical_fiams recomputed raw retrieval matches archived summaries",TRUE,""
+"clinical_fiams raw cross_batch_top1_accuracy reproduces query-weighted point",TRUE,"0.751865671641791"
+"clinical_fiams raw cross_batch_mean_reciprocal_rank reproduces query-weighted point",TRUE,"0.793563085196202"
+"clinical_fiams combat cross_batch_top1_accuracy reproduces query-weighted point",TRUE,"0.847014925373134"
+"clinical_fiams combat cross_batch_mean_reciprocal_rank reproduces query-weighted point",TRUE,"0.874497272798018"
+"clinical_fiams qc_rlsc cross_batch_top1_accuracy reproduces query-weighted point",TRUE,"0.854477611940298"
+"clinical_fiams qc_rlsc cross_batch_mean_reciprocal_rank reproduces query-weighted point",TRUE,"0.877651571001407"
+"clinical_fiams tiger cross_batch_top1_accuracy reproduces query-weighted point",TRUE,"0.880597014925373"
+"clinical_fiams tiger cross_batch_mean_reciprocal_rank reproduces query-weighted point",TRUE,"0.912702417727928"
+"clinical_fiams serrf cross_batch_top1_accuracy reproduces query-weighted point",TRUE,"0.876865671641791"
+"clinical_fiams serrf cross_batch_mean_reciprocal_rank reproduces query-weighted point",TRUE,"0.902227319717455"
+"clinical_fiams winn_auto_qc cross_batch_top1_accuracy reproduces query-weighted point",TRUE,"0.863805970149254"
+"clinical_fiams winn_auto_qc cross_batch_mean_reciprocal_rank reproduces query-weighted point",TRUE,"0.882342879379807"
+"clinical_fiams winn_auto_batch_qc cross_batch_top1_accuracy reproduces query-weighted point",TRUE,"0.858208955223881"
+"clinical_fiams winn_auto_batch_qc cross_batch_mean_reciprocal_rank reproduces query-weighted point",TRUE,"0.87859398059293"
+"clinical_fiams winn_fixed_no_qc cross_batch_top1_accuracy reproduces query-weighted point",TRUE,"0.865671641791045"
+"clinical_fiams winn_fixed_no_qc cross_batch_mean_reciprocal_rank reproduces query-weighted point",TRUE,"0.883512112396421"
+"clinical_fiams mean_batch_all cross_batch_top1_accuracy reused baseline draws complete",TRUE,""
+"clinical_fiams cross_batch_top1_accuracy reused draws share the recomputed raw series",TRUE,""
+"clinical_fiams wehrens_ancova_all cross_batch_top1_accuracy reused baseline draws complete",TRUE,""
+"clinical_fiams cross_batch_top1_accuracy reused draws share the recomputed raw series",TRUE,""
+"clinical_fiams mean_batch_all cross_batch_mean_reciprocal_rank reused baseline draws complete",TRUE,""
+"clinical_fiams cross_batch_mean_reciprocal_rank reused draws share the recomputed raw series",TRUE,""
+"clinical_fiams wehrens_ancova_all cross_batch_mean_reciprocal_rank reused baseline draws complete",TRUE,""
+"clinical_fiams cross_batch_mean_reciprocal_rank reused draws share the recomputed raw series",TRUE,""
+"mtbls79 metadata alignment",TRUE,""
+"mtbls79 cow_vs_sheep raw feature effects match frozen export",TRUE,""
+"mtbls79 raw cow_vs_sheep matched feature effects",TRUE,""
+"mtbls79 winn_fixed_no_qc cow_vs_sheep matched feature effects",TRUE,""
+"waveica metadata alignment",TRUE,""
+"waveica biological_group raw feature effects match frozen export",TRUE,""
+"waveica raw biological_group matched feature effects",TRUE,""
+"waveica winn_fixed_no_qc biological_group matched feature effects",TRUE,""
+"sacurine metadata alignment",TRUE,""
+"sacurine age raw feature effects match frozen export",TRUE,""
+"sacurine bmi raw feature effects match frozen export",TRUE,""
+"sacurine gender raw feature effects match frozen export",TRUE,""
+"sacurine raw age matched feature effects",TRUE,""
+"sacurine raw bmi matched feature effects",TRUE,""
+"sacurine raw gender matched feature effects",TRUE,""
+"sacurine winn_fixed_no_qc age matched feature effects",TRUE,""
+"sacurine winn_fixed_no_qc bmi matched feature effects",TRUE,""
+"sacurine winn_fixed_no_qc gender matched feature effects",TRUE,""
+"baseline rows reused from previous run (not re-evaluated)",TRUE,"review_validation_full_20261111 sha256 64cf65095184b0fc601c91d68d9982d0e44a21bf6d5f8963b8d4da08c4a8e06e"

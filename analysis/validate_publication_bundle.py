@@ -4,8 +4,6 @@ from pathlib import Path
 import csv
 import hashlib
 import gzip
-import io
-import json
 import math
 import statistics
 import subprocess
@@ -29,26 +27,6 @@ def tracked_files():
     return sorted({name for name in names if name and name != MANIFEST.name and (ROOT / name).is_file()})
 
 def validate():
-    package = json.loads((ROOT / 'package/frozen_package.json').read_text())
-    require(package['version'] == '0.1.7.9999', 'Current package version differs')
-    require(package['drift_calibration'] == 'permutation' and package['n_permutations'] == 999 and package['permutation_seed'] == 104729, 'Calibration defaults differ')
-    require(hashlib.sha256((ROOT / package['source_archive']).read_bytes()).hexdigest() == package['source_archive_sha256'], 'Frozen package archive differs')
-    evidence = ROOT / 'analysis/config/calibration_revision'
-    require(read(evidence / 'validation_helper_body_sha256.csv') == read(evidence / 'production_helper_body_sha256.csv'), 'Validation and production algorithms differ')
-    selected = read(evidence / 'primary_selected_parameter_preflight.csv')
-    require(len(selected) == 18 and all(r['test'] == 'Ljung-Box' and r['drift_calibration'] == 'permutation' and int(r['n_permutations']) == 999 and int(r['permutation_seed']) == 104729 for r in selected), 'Primary fits used unexpected gate settings')
-    for name in ['supplement_20261114', 'derivative_20261114']:
-        folder = ROOT / 'results/final/revision_inputs' / name
-        manifest = read(folder / 'input_manifest.csv')
-        require(len(manifest) >= 13, 'Incomplete aggregate archive: ' + name)
-        for row in manifest:
-            data = gzip.decompress((folder / (row['file'] + '.gz')).read_bytes())
-            require(hashlib.sha256(data).hexdigest() == row['uncompressed_sha256'] and len(data) == int(row['uncompressed_bytes']), 'Archive input differs: ' + row['file'])
-            require(len(list(csv.DictReader(io.StringIO(data.decode())))) == int(row['rows']), 'Archive row count differs: ' + row['file'])
-    release_checks = read(ROOT / 'results/final/revision_inputs/supplement_20261114/validation/release_validation.csv.gz')
-    require(len(release_checks) == 19 and all(r['passed'].lower() == 'true' for r in release_checks), 'Current release validation failed')
-    current_tables = read(ROOT / 'analysis/config/calibration_revision/table_reproduction_checks.csv')
-    require(len(current_tables) >= 56 and all(r['passed'].lower() == 'true' for r in current_tables), 'Current table reproduction failed')
     metrics = read(ROOT / 'results/final/tables/simulation_seed_method_metrics.csv')
     source = read(MANUSCRIPT / 'generated/revision_panel_inputs/simulation_seed_method_metrics.csv')
     observed = {(r['seed_id'], r['method_id'], r['metric']): r['value'] for r in metrics}
@@ -69,9 +47,6 @@ def validate():
     manifest = read(ROOT / 'analysis/config/endpoint_free_selection_manifest.csv')
     manuscript_manifest = read(MANUSCRIPT / 'generated/supplementary_table_data/endpoint_free_selection_manifest.csv')
     require(manifest == manuscript_manifest, 'Selected-parameter manifests differ')
-    winn_selection = [r for r in manifest if r['method_id'].startswith('winn_')]
-    require(len(winn_selection) == 18, 'Incomplete WiNN selection manifest')
-    require(all(r['source_version'] == package['version'] and int(r['candidate_count']) == (1 if r['method_id'] == 'winn_fixed_no_qc' else 36) for r in winn_selection), 'WiNN selection metadata differs')
     for row in read(MANUSCRIPT / 'generated/review_validation/qcrfsc_completed_empirical_summary.csv'):
         selected = next(r for r in manifest if r['dataset_key'] == row['dataset_key'] and r['method_id'] == 'qc_rfsc')
         require(selected['selected_parameters'] == row['selected_parameters'], 'Selected RFSC configuration differs')
@@ -87,8 +62,8 @@ def validate():
             clinical = 'clinical_fiams' in row.values() or any('Clinical FIA' in str(v) for v in row.values())
             if clinical:
                 require(not any(row.get(k) for k in identity_columns), 'Clinical identifiers in ' + str(f.relative_to(ROOT)))
-    # Keep the historical input-preparation and 0.1.6 table proofs alongside the
-    # current release and table checks above.
+    # Input preparation is unchanged since the 27 October revision. Table regeneration was
+    # repeated for the WiNN 0.1.6 release from the bundled supplement_20261111 inputs.
     for folder, name, count in [('revision_20261027', 'input_preparation_checks.csv', 5),
                                 ('revision_20261111', 'table_reproduction_checks.csv', 56)]:
         rows = read(ROOT / 'analysis/config' / folder / name)
@@ -98,7 +73,7 @@ def validate():
         else:
             require(all(row['exact_matrix_match'] == 'TRUE' and row['roles_features_candidates_folds_match'] == 'TRUE' for row in rows), 'Input preparation differs')
     baseline_checks = read(MANUSCRIPT / 'generated/review_validation/baseline_biology_validation_checks.csv')
-    # The calibrated WiNN refresh reuses unchanged baseline fits and bootstrap draws, so it
+    # The WiNN 0.1.6 refresh reuses the unchanged baseline fits and bootstrap draws, so it
     # records the 91 checks that apply to recomputed WiNN rows and reused baseline rows.
     require(len(baseline_checks) == 91 and all(row['passed'] == 'TRUE' for row in baseline_checks), 'Baseline/identity validation failed')
     require(not list(MANUSCRIPT.rglob('*.rds')), 'Matrix file unexpectedly included in manuscript bundle')
@@ -125,5 +100,5 @@ require({r['path'] for r in rows} == set(tracked_files()), 'Manifest does not co
 for row in rows:
     data = (ROOT / row['path']).read_bytes()
     require(len(data) == int(row['size_bytes']) and hashlib.sha256(data).hexdigest() == row['sha256'], 'Manifest mismatch: ' + row['path'])
-print('PASS: permutation-calibrated WiNN results, corrected RFSC results, selection settings, table regeneration, publication assets, privacy checks and', len(rows), 'file hashes')
+print('PASS: WiNN 0.1.6 results, corrected RFSC results, selection settings, table regeneration, publication assets, privacy checks and', len(rows), 'file hashes')
 print('Document source:', 'included' if (MANUSCRIPT / 'main.tex').exists() else 'separate citation/documentation commit; supporting assets included')

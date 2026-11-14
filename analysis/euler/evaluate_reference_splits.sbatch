@@ -1,11 +1,11 @@
 #!/bin/bash
-#SBATCH --job-name=winn017_ref_eval
+#SBATCH --job-name=winn016_ref_eval
 #SBATCH --output=slurm-%x-%A_%a.out
 #SBATCH --error=slurm-%x-%A_%a.err
-#SBATCH --time=04:00:00
-#SBATCH --mem-per-cpu=8G
+#SBATCH --time=36:00:00
+#SBATCH --mem-per-cpu=48G
 #SBATCH --cpus-per-task=1
-#SBATCH --array=1-60%60
+#SBATCH --array=1-60%24
 
 set -euo pipefail
 # Clean Lmod initialisation; personal shell profiles are not sourced so that no

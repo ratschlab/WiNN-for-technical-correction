@@ -99,12 +99,6 @@ release_load_simulation <- function(seed_id = "SIM01") {
 release_load_dataset <- function(dataset_key) {
   if (identical(dataset_key, "simulation")) {
     prepared <- release_load_simulation("SIM01")
-  } else if (identical(dataset_key, "clinical_fiams") &&
-             file.exists(file.path(source_root, "data/private/clinical_fiams/prepared_pair_level.rds"))) {
-    # Exact frozen correction units can be reused when injection-level inputs
-    # are no longer staged. The canonical input hash remains mandatory.
-    prepared <- readRDS(file.path(source_root, "data/private/clinical_fiams/prepared_pair_level.rds"))
-    release_validate_input(prepared, dataset_key)
   } else {
     prepared <- tq_prepare_dataset(source_root, dataset_key)
   }

@@ -5,17 +5,14 @@ export R_LIBS_USER := $(PROJECT_LIB)
 export WINN_RELEASE_ROOT := $(CURDIR)
 export WINN_CANONICAL_SOURCE_ROOT := $(CURDIR)
 
-.PHONY: restore install-winn install-derivative-deps download preprocess simulations smoke aggregate-historical validate-results report tables config-manifest
+.PHONY: restore install-winn download preprocess simulations smoke aggregate-historical validate-results report tables config-manifest
 
 restore:
 	$(R) -e 'renv::restore(prompt = FALSE)'
 
 install-winn:
 	mkdir -p "$(PROJECT_LIB)"
-	R CMD INSTALL --library="$(PROJECT_LIB)" package/winn_0.1.7.9999.tar.gz
-
-install-derivative-deps:
-	$(R) analysis/install_derivative_dependencies.R "$(PROJECT_LIB)"
+	R CMD INSTALL --library="$(PROJECT_LIB)" package/winn_0.1.6.tar.gz
 
 download:
 	$(PYTHON) scripts/download_mtbls79.py
@@ -58,7 +55,7 @@ report:
 	$(PYTHON) manuscript/scripts/assemble_supplementary_figures.py
 
 tables:
-	$(R) manuscript/scripts/generate_supplementary_tables.R --final-root=results/final/revision_inputs/supplement_20261114
+	$(R) manuscript/scripts/generate_supplementary_tables.R --final-root=results/final/revision_inputs/supplement_20261111
 	$(R) manuscript/scripts/nearest_baseline/generate_validation_tables.R
 	$(PYTHON) manuscript/scripts/generate_review2_support_tables.py
 	$(R) manuscript/scripts/generate_s24_paired_effects_table.R

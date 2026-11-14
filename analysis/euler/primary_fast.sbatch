@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=winn017_primary
+#SBATCH --job-name=winn016_primary
 #SBATCH --output=slurm-%x-%A_%a.out
 #SBATCH --error=slurm-%x-%A_%a.err
 #SBATCH --time=12:00:00

@@ -1,9 +1,0 @@
-"repeated_identities","technical_batch_artifact","stage","discoveries","sensitivity","false_discovery_proportion","null_p_lt_005"
-FALSE,FALSE,"after_drift",0.12,NA,0.08,0.0516
-TRUE,FALSE,"after_drift",0,NA,0,0
-FALSE,TRUE,"after_drift",20.93,1,0.0420798042537173,0.051
-TRUE,TRUE,"after_drift",20,1,0,0
-FALSE,FALSE,"before_drift",0.12,NA,0.08,0.0516
-TRUE,FALSE,"before_drift",0,NA,0,0
-FALSE,TRUE,"before_drift",20.93,1,0.0420798042537173,0.051
-TRUE,TRUE,"before_drift",20,1,0,0

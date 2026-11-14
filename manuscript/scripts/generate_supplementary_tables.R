@@ -1,7 +1,7 @@
 #!/usr/bin/env Rscript
 
-# Generate supplementary manuscript tables from the explicitly supplied
-# aggregate release. This script performs no correction, tuning, or selection.
+# Generate supplementary manuscript tables from the frozen 2026-07-27
+# analysis release. This script performs no correction, tuning, or selection.
 
 args_full <- commandArgs(trailingOnly = FALSE)
 file_arg <- grep("^--file=", args_full, value = TRUE)
@@ -378,8 +378,7 @@ write_longtable(
 # median fold bounds for every estimable method-endpoint-metric combination.
 lobo_raw <- read_csv(file.path(derivative_root, "leave_one_batch_out_bootstrap_summary.csv"), show_col_types = FALSE) |>
   filter(metric %in% c("pearson", "spearman", "sign_concordance"), method_id %in% method_order)
-# The two fold-level source CSVs are staged by stage_publication_inputs.py.
-# Preserve their comparator strings and the full S7 source's attenuation rows.
+write_csv(lobo_raw, file.path(out_csv, "table_s12_lobo_fold_level.csv"), na = "")
 lobo <- lobo_raw |>
   group_by(dataset_key, dataset, endpoint, method_id, method, metric) |>
   summarise(
@@ -568,17 +567,13 @@ write_longtable(
 )
 
 # S17. Dataset-specific WiNN mode parameters.
-params <- read_csv(file.path(table_root, "primary_winn_selected_parameters.csv"), show_col_types = FALSE)
-# Archives before permutation calibration lack this field and remain reproducible.
-if (!"drift_calibration" %in% names(params)) params$drift_calibration <- "asymptotic"
-params <- params |>
+params <- read_csv(file.path(table_root, "primary_winn_selected_parameters.csv"), show_col_types = FALSE) |>
   mutate(
     dataset_key = factor(dataset_key, levels = dataset_order),
     method_id = factor(method_id, levels = c("winn_auto_qc", "winn_auto_batch_qc", "winn_fixed_no_qc")),
     fixed = as.character(method_id) == "winn_fixed_no_qc",
     BatchSource = ifelse(fixed, "supplied", batch_source),
-    Test = ifelse(test == "Ljung-Box" & drift_calibration == "permutation",
-                  "Ljung-Box (maxT)", as.character(test)),
+    Test = "Ljung-Box",
     Smoother = ifelse(fixed, "conservative", spline_method),
     DriftFDR = ifelse(fixed, "0.05", fmt(acorr_fdr, 2)),
     BatchFDR = ifelse(fixed, "0.05", fmt(anova_fdr, 2)),
@@ -595,9 +590,9 @@ params <- params |>
 write_csv_copy(params, "table_s17_winn_parameters")
 write_longtable(
   params, "table_s17_winn_parameters",
-  "WiNN parameters for every dataset and operating mode. WiNN uses the same frozen settings in every dataset and receives no QC identities. Automatic-mode settings were selected from the prespecified grid using labelled training QCs only. The maxT drift threshold is a per-segment family-wise threshold; the ANOVA batch threshold uses BH FDR.",
+  "WiNN parameters for every dataset and operating mode. WiNN uses the same frozen settings in every dataset and receives no QC identities. Automatic-mode settings were selected from the prespecified grid using labelled training QCs only.",
   "tab:supp_winn_parameters", "lllrlrrrr",
-  c("Dataset", "Mode", "Batch source", "Segments", "Test", "Smoother", "Drift threshold", "Batch FDR", "PQN"),
+  c("Dataset", "Mode", "Batch source", "Segments", "Test", "Smoother", "Drift FDR", "Batch FDR", "PQN"),
   landscape = TRUE, size = "\\tiny"
 )
 
@@ -640,15 +635,13 @@ figure_panels <- c(
   list.files(file.path(package_root, "figures", "main_panels"), pattern = "[.]pdf$"),
   list.files(file.path(package_root, "figures", "supplementary_panels"), pattern = "[.]pdf$")
 )
-if(length(figure_panels) != 72L) stop("The current table requires the audited 72-panel figure package.")
+if(length(figure_panels) != 69L) stop("The current table requires the audited 69-panel figure package.")
 figure_row <- validation$Check == "all figures have source data"
 validation$Check[figure_row] <- "all declared figure panels have source data"
-validation$Detail[figure_row] <- "72 of 72 figure-panel/source entries"
+validation$Detail[figure_row] <- "69 of 69 figure-panel/source entries"
 write_csv_copy(validation, "table_s19_release_validation")
-validation_display <- validation
-validation_display$Detail <- sub(" Reused competitor outputs.*$", "", validation_display$Detail)
 write_longtable(
-  validation_display, "table_s19_release_validation",
+  validation, "table_s19_release_validation",
   "Complete release-validation checklist for the frozen benchmark.",
   "tab:supp_validation", "llp{10.5cm}",
   c("Check", "Passed", "Detail"),
@@ -681,7 +674,7 @@ write_longtable(
 table_files <- sort(list.files(out_tex, pattern = "^table_s([4-9]|1[0-9]|20)_.*[.]tex$"))
 manifest <- data.frame(
   file = table_files,
-  generated_from = paste0("primary and derivative aggregate export: ", basename(final_root)),
+  generated_from = "archived primary benchmark and local derivative aggregate export; supplied in supplement_20260727",
   publication_revision = ifelse(grepl("^table_s4_", table_files),
     "corrected ten-seed RFSC results applied by integrate_completed_results.py",
     "current labels and RFSC exclusions applied by integrate_completed_results.py; S21-S31 have separate source mappings"),

@@ -38,45 +38,19 @@ def check_token(claim, target, anchor, token, source, expected):
         source=str(source.relative_to(ROOT)), source_value=expected,
         passed=token in blocks[0]))
 
-calibration_path = ROOT / "generated/calibration_revision/gate_validation_summary.csv"
-calibrated = read_csv(calibration_path)
 null = read_csv(VALIDATION / "null_gate_verification_summary.csv")
 for n in (20, 50, 100, 200):
-    legacy = one(null, n=n, stage="mad_prepared")
-    for target, anchor, token in (
-        ("main.tex", "We tested whether WiNN selects features", f"{float(legacy['any_rejection'])*100:.1f}\\%"),
-        ("supplementary.tex", "The paired null comparison reused", f"{float(legacy['any_rejection']):.3f}")):
-        check_token(f"Legacy prepared null n={n}", target, anchor, token,
-            VALIDATION / "null_gate_verification_summary.csv", legacy['any_rejection'])
     for stage in ("unprepared", "mad_prepared"):
-        row = one(calibrated, experiment="original_null", n=n, stage=stage, algorithm="permutation_maxT")
+        r = one(null, n=n, stage=stage)
         if stage == "mad_prepared":
-            check_token(f"Permutation prepared null n={n}", "main.tex", "We tested whether WiNN selects features",
-                f"{float(row['fwer'])*100:.1f}\\%", calibration_path, row['fwer'])
-            for field in ("fwer_lower", "fwer_upper"):
-                check_token(f"Permutation prepared null n={n} {field}", "supplementary.tex",
-                    "The paired null comparison reused", f"{float(row[field]):.4f}", calibration_path, row[field])
-        check_token(f"Permutation null n={n} {stage}", "supplementary.tex", "The paired null comparison reused",
-            f"{float(row['fwer']):.3f}", calibration_path, row['fwer'])
-fixed_path = ROOT / "generated/calibration_revision/fixed_seed_null_summary.csv"
-fixed = read_csv(fixed_path)[0]
-for field, digits in (("any_false_selection",3),("lower",4),("upper",4)):
-    check_token(f"Fixed-seed null {field}", "supplementary.tex", "Additional experiments crossed",
-        f"{float(fixed[field]):.{digits}f}", fixed_path, fixed[field])
-mixed = [r for r in calibrated if r['experiment']=='robustness' and r['scenario']=='mixed_linear_drift' and r['algorithm']=='permutation_maxT']
-for label, field, op, digits in (("minimum sensitivity","sensitivity",min,4),("maximum sensitivity","sensitivity",max,3),
-    ("minimum FDP","mean_fdp",min,5),("maximum FDP","mean_fdp",max,5)):
-    value = op(float(r[field]) for r in mixed)
-    check_token(label,"supplementary.tex","In the mixed-signal designs",f"{value:.{digits}f}",calibration_path,value)
-for rho in ("0","0.6"):
-    for algorithm in ("asymptotic_BH","permutation_maxT"):
-        row=one(calibrated,experiment="robustness",n=20,rho=rho,distribution="gaussian",scenario="mixed_linear_drift",algorithm=algorithm)
-        check_token(f"Short-segment sensitivity {rho} {algorithm}","supplementary.tex","In the mixed-signal designs",
-            f"{float(row['sensitivity']):.4f}",calibration_path,row['sensitivity'])
-period_path=ROOT / "generated/calibration_revision/periodic_qc_counterexample.csv"
-period=read_csv(period_path)[0]
-check_token("Periodic pattern selected by maxT","supplementary.tex","The periodic-QC designs",
-    f"{float(period['permutation_maxT_p']):.3f}",period_path,period['permutation_maxT_p'])
+            check_token(f"Prepared gate global-null rejection n={n}", "main.tex",
+                "We tested whether WiNN selects features", f"{float(r['any_rejection'])*100:.1f}\\%",
+                VALIDATION / "null_gate_verification_summary.csv", r["any_rejection"])
+        else:
+            for field in ("any_rejection", "any_rejection_lower", "any_rejection_upper", "rejected_features"):
+                check_token(f"Unprepared gate n={n} {field}", "supplementary.tex",
+                    "An independent null experiment", f"{float(r[field]):.3f}",
+                    VALIDATION / "null_gate_verification_summary.csv", r[field])
 
 biology = read_csv(VALIDATION / "preparation_biology_summary.csv")
 for scenario in ("balanced_sparse", "rare_subgroup", "broad_coordinated"):

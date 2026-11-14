@@ -1,6 +1,6 @@
 dataset_key,dataset,stage,value,id
 waveica,WaveICA,Raw,0.69436740649987,6
 waveica,WaveICA,Outlier shrinkage,0.696520411780516,6
-waveica,WaveICA,Selective drift,0.808648631791424,6
-waveica,WaveICA,Selective batch,0.00297641099262219,6
-waveica,WaveICA,PQN,0.00283808321784621,6
+waveica,WaveICA,Selective drift,0.812966995430736,6
+waveica,WaveICA,Selective batch,0.0028081328140907,6
+waveica,WaveICA,PQN,0.00256077164587594,6
