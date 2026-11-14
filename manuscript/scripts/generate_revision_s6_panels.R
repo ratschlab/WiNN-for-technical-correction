@@ -15,7 +15,7 @@ names(labels) <- ids
 colors <- palette_colours_by_id[ids]
 specs <- list(
   c("mtbls79", "cow_vs_sheep", "A", "B", "MTBLS79 cow vs sheep", "mtbls79_cow_vs_sheep"),
-  c("waveica", "biological_group", "C", "D", "WaveICA deposited groups", "waveica_biological_group"),
+  c("waveica", "biological_group", "C", "D", "WaveICA biological groups", "waveica_biological_group"),
   c("sacurine", "age", "E", "F", "Sacurine age", "sacurine_age"),
   c("sacurine", "bmi", "G", "H", "Sacurine BMI", "sacurine_bmi"),
   c("sacurine", "gender", "I", "J", "Sacurine gender", "sacurine_gender")

@@ -1,14 +1,14 @@
 \begin{landscape}
 \scriptsize
 \begin{longtable}{lrrrrrr}
-\caption{Complete benchmark results for all outputs. QC CV is mean held-out reference CV (\%); GAM is residual run-order deviance explained (proportion); batch $R^2$ is categorical weighted-PC $R^2$ among study injections. Simulation cells are mean $\pm$ seed-level standard error and include clean-truth endpoints. Empirical cells are point estimates; brackets are 95\% percentile intervals from 2,000 paired bootstrap resamples of the independent biological unit, conditional on the fitted corrections. Replicate $r$ and ICC are replicate-profile Pearson correlation and within-identity feature-profile ICC(A,1); BH features counts group-associated features after Benjamini--Hochberg adjustment. $^{a}$QC-RFSC empirical rows are point estimates from the corrected adapter, whose resampling analyses were not repeated; 14, 37, 1, 2 and 459 features in MTBLS79, BatchCorr, the clinical cohort, Sacurine and WaveICA kept their input values after nonfinite fits.}\label{tab:supp_complete_benchmark}\\
+\caption{Complete benchmark results for all outputs. QC CV is mean held-out QC CV (\%); Drift is residual run-order drift (GAM deviance explained, proportion); batch $R^2$ is variance explained by batch, calculated as variance-weighted PC $R^2$ among study injections. Simulation cells are mean $\pm$ seed-level standard error and include ground-truth endpoints. Empirical cells are point estimates; brackets are 95\% percentile intervals from 2,000 paired bootstrap resamples of the independent biological unit, conditional on the fitted corrections. Replicate $r$ and ICC are replicate-profile Pearson correlation and within-sample feature-profile ICC(A,1); BH features counts group-associated features after Benjamini--Hochberg adjustment. $^{a}$QC-RFSC empirical rows are point estimates from the corrected adapter, whose resampling analyses were not repeated; 14, 37, 1, 2 and 459 features in MTBLS79, BatchCorr, the clinical cohort, Sacurine and WaveICA kept their input values after nonfinite fits.}\label{tab:supp_complete_benchmark}\\
 \toprule
-Method & QC CV (\%) & GAM & Batch $R^2$ & \multicolumn{3}{c}{Preservation endpoints} \\
+Method & QC CV (\%) & Drift & Batch $R^2$ & \multicolumn{3}{c}{Preservation endpoints} \\
 \midrule
 \endfirsthead
 \multicolumn{7}{l}{\textit{Table \thetable{} continued}}\\
 \toprule
-Method & QC CV (\%) & GAM & Batch $R^2$ & \multicolumn{3}{c}{Preservation endpoints} \\
+Method & QC CV (\%) & Drift & Batch $R^2$ & \multicolumn{3}{c}{Preservation endpoints} \\
 \midrule
 \endhead
 \midrule
@@ -33,7 +33,7 @@ WiNN & 8.41 $\pm$ 0.06 & 0.0218 $\pm$ 0.0002 & 0.0008 $\pm$ 0.0001 & 0.0722 $\pm
 Raw & 28.76 & 0.142 & 0.361 & 0.435 [0.373, 0.470] & 0.952 & 0.549 \\
 ComBat & 16.09 & 0.142 & 0.006 & 0.439 [0.378, 0.475] & 0.978 & 0.696 \\
 QC-RLSC & 182.84 & 0.097 & 0.029 & 0.125 [0.102, 0.361] & 0.988 & 0.092 \\
-QC-RFSC$^{a}$ & 15.69 & 0.158 & 0.189 & -- & 0.960 & -- \\
+QC-RFSC$^{a}$ & 15.69 & 0.158 & 0.189 & 0.437 & 0.960 & -- \\
 TIGER & 13.81 & 0.142 & 0.216 & 0.428 [0.364, 0.463] & 0.961 & 0.579 \\
 SERRF & 17.11 & 0.142 & 0.008 & 0.438 [0.378, 0.473] & 0.975 & 0.668 \\
 WiNN (QC-tuned) & 15.99 & 0.140 & 0.011 & 0.443 [0.379, 0.473] & 0.976 & 0.680 \\
@@ -81,7 +81,7 @@ WiNN & 22.28 & 0.051 & 0.0006 & 0.058 [0.038, 0.092] & 0.031 [0.016, 0.066] & 0.
 Raw & 49.66 & 0.206 & 0.6944 & 0.0028 [0.0010, 0.0058] & 206 & 0.082 \\
 ComBat & 40.24 & 0.207 & 0.0005 & 0.0074 [0.0045, 0.0157] & 371 & 0.106 \\
 QC-RLSC & 39.33 & 0.109 & 0.0016 & 0.0115 [0.0065, 0.0220] & 432 & 0.111 \\
-QC-RFSC$^{a}$ & 28.89 & 0.128 & 0.5160 & -- & -- & -- \\
+QC-RFSC$^{a}$ & 28.89 & 0.128 & 0.5160 & 0.0086 & -- & -- \\
 TIGER & 26.14 & 0.113 & 0.5006 & 0.0067 [0.0033, 0.0126] & 262 & 0.099 \\
 SERRF & 34.04 & 0.117 & 0.0416 & 0.0094 [0.0054, 0.0186] & 329 & 0.104 \\
 WiNN (QC-tuned) & 37.62 & 0.020 & 0.0022 & 0.0145 [0.0086, 0.0269] & 485 & 0.123 \\

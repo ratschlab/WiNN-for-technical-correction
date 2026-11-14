@@ -28,7 +28,7 @@ SPECS = [
 manifest = []
 for filename, panel_names in SPECS:
     rows = len(panel_names) // 2
-    height_mm = rows * 55 + (rows - 1) * 3
+    height_mm = rows * 50 + (rows - 1) * 3
     page = PageObject.create_blank_page(width=175 * MM, height=height_mm * MM)
     for index, name in enumerate(panel_names):
         source = PANELS / name
@@ -36,16 +36,16 @@ for filename, panel_names in SPECS:
         assert len(reader.pages) == 1
         panel = reader.pages[0]
         assert abs(float(panel.mediabox.width) - 85 * MM) < 1.1
-        assert abs(float(panel.mediabox.height) - 55 * MM) < 1.1
+        assert abs(float(panel.mediabox.height) - 50 * MM) < 1.1
         scale = 85 * MM / float(panel.mediabox.width)
         row, column = divmod(index, 2)
         x = column * 90 * MM
-        y = (height_mm - (row + 1) * 55 - row * 3) * MM
-        y += 55 * MM - float(panel.mediabox.height) * scale
+        y = (height_mm - (row + 1) * 50 - row * 3) * MM
+        y += 50 * MM - float(panel.mediabox.height) * scale
         page.merge_transformed_page(panel, Transformation().scale(scale).translate(x, y))
         manifest.append(dict(figure=filename, panel=name,
             panel_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),
-            width_mm=85, height_mm=55, x_mm=x/MM, y_mm=y/MM))
+            width_mm=85, height_mm=50, x_mm=x/MM, y_mm=y/MM))
     writer = PdfWriter()
     writer.add_page(page)
     writer.add_metadata({'/Title':filename.removesuffix('.pdf').replace('_',' '),

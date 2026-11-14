@@ -14,6 +14,8 @@ from pypdf import PdfReader
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
+OLD_TERMINOLOGY = re.compile(r'clean[ -](?:truth|reference)|to clean|held-out reference CV|deposited groups|weighted[ -]PC R|run-order deviance', re.I)
+
 OLD = re.compile(r'\bwinn\s*(?:fixed|auto)|\bfixed[\s-]+winn\b', re.I)
 
 def digest(path):
@@ -40,6 +42,9 @@ def main():
         reader=PdfReader(path)
         txt=normalize('\n'.join(p.extract_text() or '' for p in reader.pages))
         matches=OLD.findall(txt)
+        old_terms=OLD_TERMINOLOGY.findall(txt)
+        add('current displayed endpoint terminology',path.relative_to(ROOT),not old_terms,
+            '; '.join(old_terms))
         add('no obsolete displayed method label',path.relative_to(ROOT),not matches,
             f'{len(reader.pages)} pages; {len(matches)} obsolete labels')
     for path in sorted((ROOT/'figures/source_data').glob('*.csv')):

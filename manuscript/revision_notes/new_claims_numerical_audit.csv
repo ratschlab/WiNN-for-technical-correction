@@ -1,0 +1,309 @@
+claim,target,expected_display,source,source_value,passed
+Unprepared gate n=20 any_rejection,supplementary.tex,0.131,generated/review_validation/null_gate_verification_summary.csv,0.131,True
+Unprepared gate n=20 any_rejection_lower,supplementary.tex,0.111,generated/review_validation/null_gate_verification_summary.csv,0.11069846103122,True
+Unprepared gate n=20 any_rejection_upper,supplementary.tex,0.154,generated/review_validation/null_gate_verification_summary.csv,0.153501170400157,True
+Unprepared gate n=20 rejected_features,supplementary.tex,0.161,generated/review_validation/null_gate_verification_summary.csv,0.161,True
+Prepared gate global-null rejection n=20,main.tex,13.5\%,generated/review_validation/null_gate_verification_summary.csv,0.135,True
+Unprepared gate n=50 any_rejection,supplementary.tex,0.350,generated/review_validation/null_gate_verification_summary.csv,0.35,True
+Unprepared gate n=50 any_rejection_lower,supplementary.tex,0.320,generated/review_validation/null_gate_verification_summary.csv,0.320416124151366,True
+Unprepared gate n=50 any_rejection_upper,supplementary.tex,0.380,generated/review_validation/null_gate_verification_summary.csv,0.380470191255976,True
+Unprepared gate n=50 rejected_features,supplementary.tex,0.498,generated/review_validation/null_gate_verification_summary.csv,0.498,True
+Prepared gate global-null rejection n=50,main.tex,34.9\%,generated/review_validation/null_gate_verification_summary.csv,0.349,True
+Unprepared gate n=100 any_rejection,supplementary.tex,0.197,generated/review_validation/null_gate_verification_summary.csv,0.197,True
+Unprepared gate n=100 any_rejection_lower,supplementary.tex,0.173,generated/review_validation/null_gate_verification_summary.csv,0.172769750535665,True
+Unprepared gate n=100 any_rejection_upper,supplementary.tex,0.223,generated/review_validation/null_gate_verification_summary.csv,0.22302825707539,True
+Unprepared gate n=100 rejected_features,supplementary.tex,0.241,generated/review_validation/null_gate_verification_summary.csv,0.241,True
+Prepared gate global-null rejection n=100,main.tex,19.8\%,generated/review_validation/null_gate_verification_summary.csv,0.198,True
+Unprepared gate n=200 any_rejection,supplementary.tex,0.122,generated/review_validation/null_gate_verification_summary.csv,0.122,True
+Unprepared gate n=200 any_rejection_lower,supplementary.tex,0.102,generated/review_validation/null_gate_verification_summary.csv,0.102351137440077,True
+Unprepared gate n=200 any_rejection_upper,supplementary.tex,0.144,generated/review_validation/null_gate_verification_summary.csv,0.143904219427417,True
+Unprepared gate n=200 rejected_features,supplementary.tex,0.142,generated/review_validation/null_gate_verification_summary.csv,0.142,True
+Prepared gate global-null rejection n=200,main.tex,12.3\%,generated/review_validation/null_gate_verification_summary.csv,0.123,True
+MAD+PQN recovery balanced_sparse,main.tex,1.000,generated/review_validation/preparation_biology_summary.csv,1.00018544595019,True
+Supplement MAD+PQN recovery balanced_sparse,supplementary.tex,1.000,generated/review_validation/preparation_biology_summary.csv,1.00018544595019,True
+MAD+PQN recovery rare_subgroup,main.tex,0.310,generated/review_validation/preparation_biology_summary.csv,0.309918712142122,True
+Supplement MAD+PQN recovery rare_subgroup,supplementary.tex,0.310,generated/review_validation/preparation_biology_summary.csv,0.309918712142122,True
+MAD+PQN recovery broad_coordinated,main.tex,0.534,generated/review_validation/preparation_biology_summary.csv,0.534296883433415,True
+Supplement MAD+PQN recovery broad_coordinated,supplementary.tex,0.534,generated/review_validation/preparation_biology_summary.csv,0.534296883433415,True
+Stage recovery rare_subgroup mad_only,supplementary.tex,0.319,generated/review_validation/preparation_biology_summary.csv,0.31886137324682,True
+Stage recovery rare_subgroup pqn_only,supplementary.tex,0.991,generated/review_validation/preparation_biology_summary.csv,0.990644227919858,True
+Stage recovery broad_coordinated mad_only,supplementary.tex,0.778,generated/review_validation/preparation_biology_summary.csv,0.777871432811463,True
+Stage recovery broad_coordinated pqn_only,supplementary.tex,0.711,generated/review_validation/preparation_biology_summary.csv,0.710619538847181,True
+Query-weighted retrieval batchcorr_set1 raw,main.tex,46.3\%,generated/review_validation/frozen_identity_retrieval_estimates.csv,0.463203463203463,True
+Supplement retrieval batchcorr_set1 raw,supplementary.tex,0.4632,generated/review_validation/frozen_identity_retrieval_estimates.csv,0.463203463203463,True
+Query-weighted retrieval batchcorr_set1 winn_fixed_no_qc,main.tex,71.1\%,generated/review_validation/frozen_identity_retrieval_estimates.csv,0.711399711399711,True
+Supplement retrieval batchcorr_set1 winn_fixed_no_qc,supplementary.tex,0.7114,generated/review_validation/frozen_identity_retrieval_estimates.csv,0.711399711399711,True
+Query-weighted retrieval clinical_fiams raw,main.tex,75.2\%,generated/review_validation/frozen_identity_retrieval_estimates.csv,0.751865671641791,True
+Supplement retrieval clinical_fiams raw,supplementary.tex,0.7519,generated/review_validation/frozen_identity_retrieval_estimates.csv,0.751865671641791,True
+Query-weighted retrieval clinical_fiams winn_fixed_no_qc,main.tex,86.6\%,generated/review_validation/frozen_identity_retrieval_estimates.csv,0.865671641791045,True
+Supplement retrieval clinical_fiams winn_fixed_no_qc,supplementary.tex,0.8657,generated/review_validation/frozen_identity_retrieval_estimates.csv,0.865671641791045,True
+Frozen paired retrieval delta batchcorr_set1 point_direction_normalized_difference,supplementary.tex,0.2482,generated/review_validation/frozen_identity_retrieval_paired_differences.csv,0.248196248196248,True
+Frozen paired retrieval delta batchcorr_set1 ci_lower,supplementary.tex,0.2049,generated/review_validation/frozen_identity_retrieval_paired_differences.csv,0.204941860465116,True
+Frozen paired retrieval delta batchcorr_set1 ci_upper,supplementary.tex,0.2920,generated/review_validation/frozen_identity_retrieval_paired_differences.csv,0.292024380495604,True
+Frozen paired retrieval delta clinical_fiams point_direction_normalized_difference,supplementary.tex,0.1138,generated/review_validation/frozen_identity_retrieval_paired_differences.csv,0.113805970149254,True
+Frozen paired retrieval delta clinical_fiams ci_lower,supplementary.tex,0.0730,generated/review_validation/frozen_identity_retrieval_paired_differences.csv,0.0730337078651686,True
+Frozen paired retrieval delta clinical_fiams ci_upper,supplementary.tex,0.1573,generated/review_validation/frozen_identity_retrieval_paired_differences.csv,0.157305971702039,True
+S24 matched-feature row mtbls79 cow_vs_sheep combat,generated/supplementary_tables/table_s24_paired_feature_effects.tex,0.984 & 0.979 & 1.000,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row mtbls79 cow_vs_sheep qc_rlsc,generated/supplementary_tables/table_s24_paired_feature_effects.tex,1.006 & 0.856 & 0.999,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row mtbls79 cow_vs_sheep tiger,generated/supplementary_tables/table_s24_paired_feature_effects.tex,0.964 & 0.959 & 0.998,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row mtbls79 cow_vs_sheep serrf,generated/supplementary_tables/table_s24_paired_feature_effects.tex,0.993 & 0.971 & 1.000,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row mtbls79 cow_vs_sheep winn_auto_qc,generated/supplementary_tables/table_s24_paired_feature_effects.tex,0.981 & 0.970 & 0.999,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row mtbls79 cow_vs_sheep winn_auto_batch_qc,generated/supplementary_tables/table_s24_paired_feature_effects.tex,0.979 & 0.966 & 0.999,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row mtbls79 cow_vs_sheep winn_fixed_no_qc,generated/supplementary_tables/table_s24_paired_feature_effects.tex,0.980 & 0.969 & 0.999,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row waveica biological_group combat,generated/supplementary_tables/table_s24_paired_feature_effects.tex,0.945 & 0.942 & 0.973,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row waveica biological_group qc_rlsc,generated/supplementary_tables/table_s24_paired_feature_effects.tex,0.995 & 0.991 & 1.000,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row waveica biological_group tiger,generated/supplementary_tables/table_s24_paired_feature_effects.tex,0.980 & 0.935 & 0.986,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row waveica biological_group serrf,generated/supplementary_tables/table_s24_paired_feature_effects.tex,1.000 & 0.936 & 0.967,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row waveica biological_group winn_auto_qc,generated/supplementary_tables/table_s24_paired_feature_effects.tex,0.964 & 0.917 & 0.993,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row waveica biological_group winn_auto_batch_qc,generated/supplementary_tables/table_s24_paired_feature_effects.tex,0.966 & 0.911 & 0.994,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row waveica biological_group winn_fixed_no_qc,generated/supplementary_tables/table_s24_paired_feature_effects.tex,0.968 & 0.951 & 0.993,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row sacurine age combat,generated/supplementary_tables/table_s24_paired_feature_effects.tex,0.988 & 0.991 & 0.999,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row sacurine age qc_rlsc,generated/supplementary_tables/table_s24_paired_feature_effects.tex,1.003 & 0.956 & 0.999,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row sacurine age tiger,generated/supplementary_tables/table_s24_paired_feature_effects.tex,0.938 & 0.956 & 0.996,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row sacurine age serrf,generated/supplementary_tables/table_s24_paired_feature_effects.tex,0.987 & 0.982 & 0.998,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row sacurine age winn_auto_qc,generated/supplementary_tables/table_s24_paired_feature_effects.tex,0.901 & 0.858 & 0.995,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row sacurine age winn_auto_batch_qc,generated/supplementary_tables/table_s24_paired_feature_effects.tex,0.900 & 0.858 & 0.995,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row sacurine age winn_fixed_no_qc,generated/supplementary_tables/table_s24_paired_feature_effects.tex,0.936 & 0.973 & 0.995,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row sacurine bmi combat,generated/supplementary_tables/table_s24_paired_feature_effects.tex,0.966 & 0.973 & 0.997,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row sacurine bmi qc_rlsc,generated/supplementary_tables/table_s24_paired_feature_effects.tex,0.975 & 0.929 & 0.990,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row sacurine bmi tiger,generated/supplementary_tables/table_s24_paired_feature_effects.tex,0.984 & 0.982 & 0.997,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row sacurine bmi serrf,generated/supplementary_tables/table_s24_paired_feature_effects.tex,1.000 & 0.973 & 0.996,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row sacurine bmi winn_auto_qc,generated/supplementary_tables/table_s24_paired_feature_effects.tex,1.008 & 0.903 & 0.985,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row sacurine bmi winn_auto_batch_qc,generated/supplementary_tables/table_s24_paired_feature_effects.tex,1.008 & 0.903 & 0.984,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row sacurine bmi winn_fixed_no_qc,generated/supplementary_tables/table_s24_paired_feature_effects.tex,0.969 & 0.947 & 0.985,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row sacurine gender combat,generated/supplementary_tables/table_s24_paired_feature_effects.tex,0.997 & 0.973 & 0.999,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row sacurine gender qc_rlsc,generated/supplementary_tables/table_s24_paired_feature_effects.tex,0.946 & 0.965 & 0.997,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row sacurine gender tiger,generated/supplementary_tables/table_s24_paired_feature_effects.tex,0.990 & 0.947 & 0.998,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row sacurine gender serrf,generated/supplementary_tables/table_s24_paired_feature_effects.tex,1.007 & 0.929 & 0.998,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row sacurine gender winn_auto_qc,generated/supplementary_tables/table_s24_paired_feature_effects.tex,0.924 & 0.885 & 0.974,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row sacurine gender winn_auto_batch_qc,generated/supplementary_tables/table_s24_paired_feature_effects.tex,0.915 & 0.894 & 0.974,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+S24 matched-feature row sacurine gender winn_fixed_no_qc,generated/supplementary_tables/table_s24_paired_feature_effects.tex,0.871 & 0.929 & 0.975,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
+Supplement fixed-WiNN feature effects mtbls79 cow_vs_sheep slope_through_origin_vs_raw,supplementary.tex,0.980,generated/review_validation/paired_feature_effects_descriptive.csv,0.979747080381147,True
+Supplement fixed-WiNN feature effects mtbls79 cow_vs_sheep sign_concordance_vs_raw,supplementary.tex,0.969,generated/review_validation/paired_feature_effects_descriptive.csv,0.968649517684887,True
+Supplement fixed-WiNN feature effects waveica biological_group slope_through_origin_vs_raw,supplementary.tex,0.968,generated/review_validation/paired_feature_effects_descriptive.csv,0.967791728988995,True
+Supplement fixed-WiNN feature effects waveica biological_group sign_concordance_vs_raw,supplementary.tex,0.951,generated/review_validation/paired_feature_effects_descriptive.csv,0.951400711964092,True
+Supplement fixed-WiNN feature effects sacurine age slope_through_origin_vs_raw,supplementary.tex,0.936,generated/review_validation/paired_feature_effects_descriptive.csv,0.935847833555337,True
+Supplement fixed-WiNN feature effects sacurine age sign_concordance_vs_raw,supplementary.tex,0.973,generated/review_validation/paired_feature_effects_descriptive.csv,0.973451327433628,True
+Supplement fixed-WiNN feature effects sacurine bmi slope_through_origin_vs_raw,supplementary.tex,0.969,generated/review_validation/paired_feature_effects_descriptive.csv,0.969099534565002,True
+Supplement fixed-WiNN feature effects sacurine bmi sign_concordance_vs_raw,supplementary.tex,0.947,generated/review_validation/paired_feature_effects_descriptive.csv,0.946902654867257,True
+Supplement fixed-WiNN feature effects sacurine gender slope_through_origin_vs_raw,supplementary.tex,0.871,generated/review_validation/paired_feature_effects_descriptive.csv,0.871428184564188,True
+Supplement fixed-WiNN feature effects sacurine gender sign_concordance_vs_raw,supplementary.tex,0.929,generated/review_validation/paired_feature_effects_descriptive.csv,0.929203539823009,True
+S6A raw null_q99,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,10.010000000000218,generated/revision_panel_inputs/permutation_null.csv.gz,10.010000000000218,True
+S6A raw null_q999,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,480.12400000002526,generated/revision_panel_inputs/permutation_null.csv.gz,480.12400000002526,True
+S6A raw null_max,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,827,generated/revision_panel_inputs/permutation_null.csv.gz,827,True
+S6A raw empirical_p,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,0.0001999600079984003,generated/revision_panel_inputs/permutation_null.csv.gz,0.0001999600079984003,True
+S6A raw permutations,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6A combat null_q99,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,17.040000000000873,generated/revision_panel_inputs/permutation_null.csv.gz,17.040000000000873,True
+S6A combat null_q999,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,517.1410000000287,generated/revision_panel_inputs/permutation_null.csv.gz,517.1410000000287,True
+S6A combat null_max,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,861,generated/revision_panel_inputs/permutation_null.csv.gz,861,True
+S6A combat empirical_p,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,0.0001999600079984003,generated/revision_panel_inputs/permutation_null.csv.gz,0.0001999600079984003,True
+S6A combat permutations,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6A qc_rlsc null_q99,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,0.0,generated/revision_panel_inputs/permutation_null.csv.gz,0.0,True
+S6A qc_rlsc null_q999,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,356.12300000002506,generated/revision_panel_inputs/permutation_null.csv.gz,356.12300000002506,True
+S6A qc_rlsc null_max,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,707,generated/revision_panel_inputs/permutation_null.csv.gz,707,True
+S6A qc_rlsc empirical_p,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,0.001799640071985603,generated/revision_panel_inputs/permutation_null.csv.gz,0.001799640071985603,True
+S6A qc_rlsc permutations,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6A tiger null_q99,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,10.0,generated/revision_panel_inputs/permutation_null.csv.gz,10.0,True
+S6A tiger null_q999,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,449.0580000000118,generated/revision_panel_inputs/permutation_null.csv.gz,449.0580000000118,True
+S6A tiger null_max,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,802,generated/revision_panel_inputs/permutation_null.csv.gz,802,True
+S6A tiger empirical_p,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,0.0001999600079984003,generated/revision_panel_inputs/permutation_null.csv.gz,0.0001999600079984003,True
+S6A tiger permutations,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6A serrf null_q99,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,15.020000000000437,generated/revision_panel_inputs/permutation_null.csv.gz,15.020000000000437,True
+S6A serrf null_q999,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,510.1140000000232,generated/revision_panel_inputs/permutation_null.csv.gz,510.1140000000232,True
+S6A serrf null_max,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,848,generated/revision_panel_inputs/permutation_null.csv.gz,848,True
+S6A serrf empirical_p,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,0.0001999600079984003,generated/revision_panel_inputs/permutation_null.csv.gz,0.0001999600079984003,True
+S6A serrf permutations,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6A winn_auto_qc null_q99,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,19.01000000000022,generated/revision_panel_inputs/permutation_null.csv.gz,19.01000000000022,True
+S6A winn_auto_qc null_q999,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,477.15200000003097,generated/revision_panel_inputs/permutation_null.csv.gz,477.15200000003097,True
+S6A winn_auto_qc null_max,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,818,generated/revision_panel_inputs/permutation_null.csv.gz,818,True
+S6A winn_auto_qc empirical_p,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,0.0001999600079984003,generated/revision_panel_inputs/permutation_null.csv.gz,0.0001999600079984003,True
+S6A winn_auto_qc permutations,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6A winn_auto_batch_qc null_q99,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,16.01000000000022,generated/revision_panel_inputs/permutation_null.csv.gz,16.01000000000022,True
+S6A winn_auto_batch_qc null_q999,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,482.14200000002893,generated/revision_panel_inputs/permutation_null.csv.gz,482.14200000002893,True
+S6A winn_auto_batch_qc null_max,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,814,generated/revision_panel_inputs/permutation_null.csv.gz,814,True
+S6A winn_auto_batch_qc empirical_p,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,0.0001999600079984003,generated/revision_panel_inputs/permutation_null.csv.gz,0.0001999600079984003,True
+S6A winn_auto_batch_qc permutations,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6A winn_fixed_no_qc null_q99,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,20.0,generated/revision_panel_inputs/permutation_null.csv.gz,20.0,True
+S6A winn_fixed_no_qc null_q999,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,510.1550000000316,generated/revision_panel_inputs/permutation_null.csv.gz,510.1550000000316,True
+S6A winn_fixed_no_qc null_max,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,862,generated/revision_panel_inputs/permutation_null.csv.gz,862,True
+S6A winn_fixed_no_qc empirical_p,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,0.0001999600079984003,generated/revision_panel_inputs/permutation_null.csv.gz,0.0001999600079984003,True
+S6A winn_fixed_no_qc permutations,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6C raw null_q99,figures/source_data/S6C_permutation_waveica_biological_group.csv,5.0,generated/revision_panel_inputs/permutation_null.csv.gz,5.0,True
+S6C raw null_q999,figures/source_data/S6C_permutation_waveica_biological_group.csv,62.00200000000041,generated/revision_panel_inputs/permutation_null.csv.gz,62.00200000000041,True
+S6C raw null_max,figures/source_data/S6C_permutation_waveica_biological_group.csv,174,generated/revision_panel_inputs/permutation_null.csv.gz,174,True
+S6C raw empirical_p,figures/source_data/S6C_permutation_waveica_biological_group.csv,0.0001999600079984003,generated/revision_panel_inputs/permutation_null.csv.gz,0.0001999600079984003,True
+S6C raw permutations,figures/source_data/S6C_permutation_waveica_biological_group.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6C combat null_q99,figures/source_data/S6C_permutation_waveica_biological_group.csv,12.010000000000218,generated/revision_panel_inputs/permutation_null.csv.gz,12.010000000000218,True
+S6C combat null_q999,figures/source_data/S6C_permutation_waveica_biological_group.csv,71.0010000000002,generated/revision_panel_inputs/permutation_null.csv.gz,71.0010000000002,True
+S6C combat null_max,figures/source_data/S6C_permutation_waveica_biological_group.csv,360,generated/revision_panel_inputs/permutation_null.csv.gz,360,True
+S6C combat empirical_p,figures/source_data/S6C_permutation_waveica_biological_group.csv,0.0001999600079984003,generated/revision_panel_inputs/permutation_null.csv.gz,0.0001999600079984003,True
+S6C combat permutations,figures/source_data/S6C_permutation_waveica_biological_group.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6C qc_rlsc null_q99,figures/source_data/S6C_permutation_waveica_biological_group.csv,81.0,generated/revision_panel_inputs/permutation_null.csv.gz,81.0,True
+S6C qc_rlsc null_q999,figures/source_data/S6C_permutation_waveica_biological_group.csv,151.0010000000002,generated/revision_panel_inputs/permutation_null.csv.gz,151.0010000000002,True
+S6C qc_rlsc null_max,figures/source_data/S6C_permutation_waveica_biological_group.csv,193,generated/revision_panel_inputs/permutation_null.csv.gz,193,True
+S6C qc_rlsc empirical_p,figures/source_data/S6C_permutation_waveica_biological_group.csv,0.0001999600079984003,generated/revision_panel_inputs/permutation_null.csv.gz,0.0001999600079984003,True
+S6C qc_rlsc permutations,figures/source_data/S6C_permutation_waveica_biological_group.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6C tiger null_q99,figures/source_data/S6C_permutation_waveica_biological_group.csv,84.01000000000022,generated/revision_panel_inputs/permutation_null.csv.gz,84.01000000000022,True
+S6C tiger null_q999,figures/source_data/S6C_permutation_waveica_biological_group.csv,145.01300000000265,generated/revision_panel_inputs/permutation_null.csv.gz,145.01300000000265,True
+S6C tiger null_max,figures/source_data/S6C_permutation_waveica_biological_group.csv,177,generated/revision_panel_inputs/permutation_null.csv.gz,177,True
+S6C tiger empirical_p,figures/source_data/S6C_permutation_waveica_biological_group.csv,0.0001999600079984003,generated/revision_panel_inputs/permutation_null.csv.gz,0.0001999600079984003,True
+S6C tiger permutations,figures/source_data/S6C_permutation_waveica_biological_group.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6C serrf null_q99,figures/source_data/S6C_permutation_waveica_biological_group.csv,88.01000000000022,generated/revision_panel_inputs/permutation_null.csv.gz,88.01000000000022,True
+S6C serrf null_q999,figures/source_data/S6C_permutation_waveica_biological_group.csv,153.01200000000244,generated/revision_panel_inputs/permutation_null.csv.gz,153.01200000000244,True
+S6C serrf null_max,figures/source_data/S6C_permutation_waveica_biological_group.csv,179,generated/revision_panel_inputs/permutation_null.csv.gz,179,True
+S6C serrf empirical_p,figures/source_data/S6C_permutation_waveica_biological_group.csv,0.0001999600079984003,generated/revision_panel_inputs/permutation_null.csv.gz,0.0001999600079984003,True
+S6C serrf permutations,figures/source_data/S6C_permutation_waveica_biological_group.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6C winn_auto_qc null_q99,figures/source_data/S6C_permutation_waveica_biological_group.csv,24.0,generated/revision_panel_inputs/permutation_null.csv.gz,24.0,True
+S6C winn_auto_qc null_q999,figures/source_data/S6C_permutation_waveica_biological_group.csv,87.00200000000041,generated/revision_panel_inputs/permutation_null.csv.gz,87.00200000000041,True
+S6C winn_auto_qc null_max,figures/source_data/S6C_permutation_waveica_biological_group.csv,156,generated/revision_panel_inputs/permutation_null.csv.gz,156,True
+S6C winn_auto_qc empirical_p,figures/source_data/S6C_permutation_waveica_biological_group.csv,0.0001999600079984003,generated/revision_panel_inputs/permutation_null.csv.gz,0.0001999600079984003,True
+S6C winn_auto_qc permutations,figures/source_data/S6C_permutation_waveica_biological_group.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6C winn_auto_batch_qc null_q99,figures/source_data/S6C_permutation_waveica_biological_group.csv,23.01000000000022,generated/revision_panel_inputs/permutation_null.csv.gz,23.01000000000022,True
+S6C winn_auto_batch_qc null_q999,figures/source_data/S6C_permutation_waveica_biological_group.csv,75.02900000000591,generated/revision_panel_inputs/permutation_null.csv.gz,75.02900000000591,True
+S6C winn_auto_batch_qc null_max,figures/source_data/S6C_permutation_waveica_biological_group.csv,157,generated/revision_panel_inputs/permutation_null.csv.gz,157,True
+S6C winn_auto_batch_qc empirical_p,figures/source_data/S6C_permutation_waveica_biological_group.csv,0.0001999600079984003,generated/revision_panel_inputs/permutation_null.csv.gz,0.0001999600079984003,True
+S6C winn_auto_batch_qc permutations,figures/source_data/S6C_permutation_waveica_biological_group.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6C winn_fixed_no_qc null_q99,figures/source_data/S6C_permutation_waveica_biological_group.csv,26.01000000000022,generated/revision_panel_inputs/permutation_null.csv.gz,26.01000000000022,True
+S6C winn_fixed_no_qc null_q999,figures/source_data/S6C_permutation_waveica_biological_group.csv,77.01100000000224,generated/revision_panel_inputs/permutation_null.csv.gz,77.01100000000224,True
+S6C winn_fixed_no_qc null_max,figures/source_data/S6C_permutation_waveica_biological_group.csv,153,generated/revision_panel_inputs/permutation_null.csv.gz,153,True
+S6C winn_fixed_no_qc empirical_p,figures/source_data/S6C_permutation_waveica_biological_group.csv,0.0001999600079984003,generated/revision_panel_inputs/permutation_null.csv.gz,0.0001999600079984003,True
+S6C winn_fixed_no_qc permutations,figures/source_data/S6C_permutation_waveica_biological_group.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6E raw null_q99,figures/source_data/S6E_permutation_sacurine_age.csv,2.0,generated/revision_panel_inputs/permutation_null.csv.gz,2.0,True
+S6E raw null_q999,figures/source_data/S6E_permutation_sacurine_age.csv,13.0,generated/revision_panel_inputs/permutation_null.csv.gz,13.0,True
+S6E raw null_max,figures/source_data/S6E_permutation_sacurine_age.csv,41,generated/revision_panel_inputs/permutation_null.csv.gz,41,True
+S6E raw empirical_p,figures/source_data/S6E_permutation_sacurine_age.csv,0.0005998800239952009,generated/revision_panel_inputs/permutation_null.csv.gz,0.0005998800239952009,True
+S6E raw permutations,figures/source_data/S6E_permutation_sacurine_age.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6E combat null_q99,figures/source_data/S6E_permutation_sacurine_age.csv,2.0,generated/revision_panel_inputs/permutation_null.csv.gz,2.0,True
+S6E combat null_q999,figures/source_data/S6E_permutation_sacurine_age.csv,23.006000000001222,generated/revision_panel_inputs/permutation_null.csv.gz,23.006000000001222,True
+S6E combat null_max,figures/source_data/S6E_permutation_sacurine_age.csv,44,generated/revision_panel_inputs/permutation_null.csv.gz,44,True
+S6E combat empirical_p,figures/source_data/S6E_permutation_sacurine_age.csv,0.0015996800639872025,generated/revision_panel_inputs/permutation_null.csv.gz,0.0015996800639872025,True
+S6E combat permutations,figures/source_data/S6E_permutation_sacurine_age.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6E qc_rlsc null_q99,figures/source_data/S6E_permutation_sacurine_age.csv,2.0,generated/revision_panel_inputs/permutation_null.csv.gz,2.0,True
+S6E qc_rlsc null_q999,figures/source_data/S6E_permutation_sacurine_age.csv,12.0,generated/revision_panel_inputs/permutation_null.csv.gz,12.0,True
+S6E qc_rlsc null_max,figures/source_data/S6E_permutation_sacurine_age.csv,27,generated/revision_panel_inputs/permutation_null.csv.gz,27,True
+S6E qc_rlsc empirical_p,figures/source_data/S6E_permutation_sacurine_age.csv,0.0005998800239952009,generated/revision_panel_inputs/permutation_null.csv.gz,0.0005998800239952009,True
+S6E qc_rlsc permutations,figures/source_data/S6E_permutation_sacurine_age.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6E tiger null_q99,figures/source_data/S6E_permutation_sacurine_age.csv,2.0,generated/revision_panel_inputs/permutation_null.csv.gz,2.0,True
+S6E tiger null_q999,figures/source_data/S6E_permutation_sacurine_age.csv,12.002000000000407,generated/revision_panel_inputs/permutation_null.csv.gz,12.002000000000407,True
+S6E tiger null_max,figures/source_data/S6E_permutation_sacurine_age.csv,34,generated/revision_panel_inputs/permutation_null.csv.gz,34,True
+S6E tiger empirical_p,figures/source_data/S6E_permutation_sacurine_age.csv,0.0009998000399920016,generated/revision_panel_inputs/permutation_null.csv.gz,0.0009998000399920016,True
+S6E tiger permutations,figures/source_data/S6E_permutation_sacurine_age.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6E serrf null_q99,figures/source_data/S6E_permutation_sacurine_age.csv,2.0,generated/revision_panel_inputs/permutation_null.csv.gz,2.0,True
+S6E serrf null_q999,figures/source_data/S6E_permutation_sacurine_age.csv,14.003000000000611,generated/revision_panel_inputs/permutation_null.csv.gz,14.003000000000611,True
+S6E serrf null_max,figures/source_data/S6E_permutation_sacurine_age.csv,36,generated/revision_panel_inputs/permutation_null.csv.gz,36,True
+S6E serrf empirical_p,figures/source_data/S6E_permutation_sacurine_age.csv,0.0011997600479904018,generated/revision_panel_inputs/permutation_null.csv.gz,0.0011997600479904018,True
+S6E serrf permutations,figures/source_data/S6E_permutation_sacurine_age.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6E winn_auto_qc null_q99,figures/source_data/S6E_permutation_sacurine_age.csv,4.0,generated/revision_panel_inputs/permutation_null.csv.gz,4.0,True
+S6E winn_auto_qc null_q999,figures/source_data/S6E_permutation_sacurine_age.csv,33.00600000000122,generated/revision_panel_inputs/permutation_null.csv.gz,33.00600000000122,True
+S6E winn_auto_qc null_max,figures/source_data/S6E_permutation_sacurine_age.csv,55,generated/revision_panel_inputs/permutation_null.csv.gz,55,True
+S6E winn_auto_qc empirical_p,figures/source_data/S6E_permutation_sacurine_age.csv,0.003999200159968006,generated/revision_panel_inputs/permutation_null.csv.gz,0.003999200159968006,True
+S6E winn_auto_qc permutations,figures/source_data/S6E_permutation_sacurine_age.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6E winn_auto_batch_qc null_q99,figures/source_data/S6E_permutation_sacurine_age.csv,4.0,generated/revision_panel_inputs/permutation_null.csv.gz,4.0,True
+S6E winn_auto_batch_qc null_q999,figures/source_data/S6E_permutation_sacurine_age.csv,32.00900000000183,generated/revision_panel_inputs/permutation_null.csv.gz,32.00900000000183,True
+S6E winn_auto_batch_qc null_max,figures/source_data/S6E_permutation_sacurine_age.csv,55,generated/revision_panel_inputs/permutation_null.csv.gz,55,True
+S6E winn_auto_batch_qc empirical_p,figures/source_data/S6E_permutation_sacurine_age.csv,0.003999200159968006,generated/revision_panel_inputs/permutation_null.csv.gz,0.003999200159968006,True
+S6E winn_auto_batch_qc permutations,figures/source_data/S6E_permutation_sacurine_age.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6E winn_fixed_no_qc null_q99,figures/source_data/S6E_permutation_sacurine_age.csv,2.0,generated/revision_panel_inputs/permutation_null.csv.gz,2.0,True
+S6E winn_fixed_no_qc null_q999,figures/source_data/S6E_permutation_sacurine_age.csv,9.001000000000204,generated/revision_panel_inputs/permutation_null.csv.gz,9.001000000000204,True
+S6E winn_fixed_no_qc null_max,figures/source_data/S6E_permutation_sacurine_age.csv,16,generated/revision_panel_inputs/permutation_null.csv.gz,16,True
+S6E winn_fixed_no_qc empirical_p,figures/source_data/S6E_permutation_sacurine_age.csv,0.0001999600079984003,generated/revision_panel_inputs/permutation_null.csv.gz,0.0001999600079984003,True
+S6E winn_fixed_no_qc permutations,figures/source_data/S6E_permutation_sacurine_age.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6G raw null_q99,figures/source_data/S6G_permutation_sacurine_bmi.csv,1.0,generated/revision_panel_inputs/permutation_null.csv.gz,1.0,True
+S6G raw null_q999,figures/source_data/S6G_permutation_sacurine_bmi.csv,8.0,generated/revision_panel_inputs/permutation_null.csv.gz,8.0,True
+S6G raw null_max,figures/source_data/S6G_permutation_sacurine_bmi.csv,46,generated/revision_panel_inputs/permutation_null.csv.gz,46,True
+S6G raw empirical_p,figures/source_data/S6G_permutation_sacurine_bmi.csv,1.0,generated/revision_panel_inputs/permutation_null.csv.gz,1.0,True
+S6G raw permutations,figures/source_data/S6G_permutation_sacurine_bmi.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6G combat null_q99,figures/source_data/S6G_permutation_sacurine_bmi.csv,2.0,generated/revision_panel_inputs/permutation_null.csv.gz,2.0,True
+S6G combat null_q999,figures/source_data/S6G_permutation_sacurine_bmi.csv,21.001000000000204,generated/revision_panel_inputs/permutation_null.csv.gz,21.001000000000204,True
+S6G combat null_max,figures/source_data/S6G_permutation_sacurine_bmi.csv,44,generated/revision_panel_inputs/permutation_null.csv.gz,44,True
+S6G combat empirical_p,figures/source_data/S6G_permutation_sacurine_bmi.csv,0.03239352129574085,generated/revision_panel_inputs/permutation_null.csv.gz,0.03239352129574085,True
+S6G combat permutations,figures/source_data/S6G_permutation_sacurine_bmi.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6G qc_rlsc null_q99,figures/source_data/S6G_permutation_sacurine_bmi.csv,2.0,generated/revision_panel_inputs/permutation_null.csv.gz,2.0,True
+S6G qc_rlsc null_q999,figures/source_data/S6G_permutation_sacurine_bmi.csv,10.001000000000204,generated/revision_panel_inputs/permutation_null.csv.gz,10.001000000000204,True
+S6G qc_rlsc null_max,figures/source_data/S6G_permutation_sacurine_bmi.csv,35,generated/revision_panel_inputs/permutation_null.csv.gz,35,True
+S6G qc_rlsc empirical_p,figures/source_data/S6G_permutation_sacurine_bmi.csv,1.0,generated/revision_panel_inputs/permutation_null.csv.gz,1.0,True
+S6G qc_rlsc permutations,figures/source_data/S6G_permutation_sacurine_bmi.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6G tiger null_q99,figures/source_data/S6G_permutation_sacurine_bmi.csv,2.0,generated/revision_panel_inputs/permutation_null.csv.gz,2.0,True
+S6G tiger null_q999,figures/source_data/S6G_permutation_sacurine_bmi.csv,8.005000000001019,generated/revision_panel_inputs/permutation_null.csv.gz,8.005000000001019,True
+S6G tiger null_max,figures/source_data/S6G_permutation_sacurine_bmi.csv,53,generated/revision_panel_inputs/permutation_null.csv.gz,53,True
+S6G tiger empirical_p,figures/source_data/S6G_permutation_sacurine_bmi.csv,0.033193361327734455,generated/revision_panel_inputs/permutation_null.csv.gz,0.033193361327734455,True
+S6G tiger permutations,figures/source_data/S6G_permutation_sacurine_bmi.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6G serrf null_q99,figures/source_data/S6G_permutation_sacurine_bmi.csv,2.0,generated/revision_panel_inputs/permutation_null.csv.gz,2.0,True
+S6G serrf null_q999,figures/source_data/S6G_permutation_sacurine_bmi.csv,11.003000000000611,generated/revision_panel_inputs/permutation_null.csv.gz,11.003000000000611,True
+S6G serrf null_max,figures/source_data/S6G_permutation_sacurine_bmi.csv,59,generated/revision_panel_inputs/permutation_null.csv.gz,59,True
+S6G serrf empirical_p,figures/source_data/S6G_permutation_sacurine_bmi.csv,0.03279344131173765,generated/revision_panel_inputs/permutation_null.csv.gz,0.03279344131173765,True
+S6G serrf permutations,figures/source_data/S6G_permutation_sacurine_bmi.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6G winn_auto_qc null_q99,figures/source_data/S6G_permutation_sacurine_bmi.csv,4.0,generated/revision_panel_inputs/permutation_null.csv.gz,4.0,True
+S6G winn_auto_qc null_q999,figures/source_data/S6G_permutation_sacurine_bmi.csv,31.006000000001222,generated/revision_panel_inputs/permutation_null.csv.gz,31.006000000001222,True
+S6G winn_auto_qc null_max,figures/source_data/S6G_permutation_sacurine_bmi.csv,49,generated/revision_panel_inputs/permutation_null.csv.gz,49,True
+S6G winn_auto_qc empirical_p,figures/source_data/S6G_permutation_sacurine_bmi.csv,0.03579284143171366,generated/revision_panel_inputs/permutation_null.csv.gz,0.03579284143171366,True
+S6G winn_auto_qc permutations,figures/source_data/S6G_permutation_sacurine_bmi.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6G winn_auto_batch_qc null_q99,figures/source_data/S6G_permutation_sacurine_bmi.csv,4.010000000000218,generated/revision_panel_inputs/permutation_null.csv.gz,4.010000000000218,True
+S6G winn_auto_batch_qc null_q999,figures/source_data/S6G_permutation_sacurine_bmi.csv,33.0,generated/revision_panel_inputs/permutation_null.csv.gz,33.0,True
+S6G winn_auto_batch_qc null_max,figures/source_data/S6G_permutation_sacurine_bmi.csv,43,generated/revision_panel_inputs/permutation_null.csv.gz,43,True
+S6G winn_auto_batch_qc empirical_p,figures/source_data/S6G_permutation_sacurine_bmi.csv,0.01219756048790242,generated/revision_panel_inputs/permutation_null.csv.gz,0.01219756048790242,True
+S6G winn_auto_batch_qc permutations,figures/source_data/S6G_permutation_sacurine_bmi.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6G winn_fixed_no_qc null_q99,figures/source_data/S6G_permutation_sacurine_bmi.csv,2.0,generated/revision_panel_inputs/permutation_null.csv.gz,2.0,True
+S6G winn_fixed_no_qc null_q999,figures/source_data/S6G_permutation_sacurine_bmi.csv,9.0,generated/revision_panel_inputs/permutation_null.csv.gz,9.0,True
+S6G winn_fixed_no_qc null_max,figures/source_data/S6G_permutation_sacurine_bmi.csv,17,generated/revision_panel_inputs/permutation_null.csv.gz,17,True
+S6G winn_fixed_no_qc empirical_p,figures/source_data/S6G_permutation_sacurine_bmi.csv,0.003599280143971206,generated/revision_panel_inputs/permutation_null.csv.gz,0.003599280143971206,True
+S6G winn_fixed_no_qc permutations,figures/source_data/S6G_permutation_sacurine_bmi.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6I raw null_q99,figures/source_data/S6I_permutation_sacurine_gender.csv,2.0,generated/revision_panel_inputs/permutation_null.csv.gz,2.0,True
+S6I raw null_q999,figures/source_data/S6I_permutation_sacurine_gender.csv,25.00500000000102,generated/revision_panel_inputs/permutation_null.csv.gz,25.00500000000102,True
+S6I raw null_max,figures/source_data/S6I_permutation_sacurine_gender.csv,49,generated/revision_panel_inputs/permutation_null.csv.gz,49,True
+S6I raw empirical_p,figures/source_data/S6I_permutation_sacurine_gender.csv,0.0023995200959808036,generated/revision_panel_inputs/permutation_null.csv.gz,0.0023995200959808036,True
+S6I raw permutations,figures/source_data/S6I_permutation_sacurine_gender.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6I combat null_q99,figures/source_data/S6I_permutation_sacurine_gender.csv,2.0,generated/revision_panel_inputs/permutation_null.csv.gz,2.0,True
+S6I combat null_q999,figures/source_data/S6I_permutation_sacurine_gender.csv,20.002000000000407,generated/revision_panel_inputs/permutation_null.csv.gz,20.002000000000407,True
+S6I combat null_max,figures/source_data/S6I_permutation_sacurine_gender.csv,39,generated/revision_panel_inputs/permutation_null.csv.gz,39,True
+S6I combat empirical_p,figures/source_data/S6I_permutation_sacurine_gender.csv,0.0021995600879824036,generated/revision_panel_inputs/permutation_null.csv.gz,0.0021995600879824036,True
+S6I combat permutations,figures/source_data/S6I_permutation_sacurine_gender.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6I qc_rlsc null_q99,figures/source_data/S6I_permutation_sacurine_gender.csv,2.0,generated/revision_panel_inputs/permutation_null.csv.gz,2.0,True
+S6I qc_rlsc null_q999,figures/source_data/S6I_permutation_sacurine_gender.csv,11.004000000000815,generated/revision_panel_inputs/permutation_null.csv.gz,11.004000000000815,True
+S6I qc_rlsc null_max,figures/source_data/S6I_permutation_sacurine_gender.csv,28,generated/revision_panel_inputs/permutation_null.csv.gz,28,True
+S6I qc_rlsc empirical_p,figures/source_data/S6I_permutation_sacurine_gender.csv,0.0011997600479904018,generated/revision_panel_inputs/permutation_null.csv.gz,0.0011997600479904018,True
+S6I qc_rlsc permutations,figures/source_data/S6I_permutation_sacurine_gender.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6I tiger null_q99,figures/source_data/S6I_permutation_sacurine_gender.csv,2.0,generated/revision_panel_inputs/permutation_null.csv.gz,2.0,True
+S6I tiger null_q999,figures/source_data/S6I_permutation_sacurine_gender.csv,16.0,generated/revision_panel_inputs/permutation_null.csv.gz,16.0,True
+S6I tiger null_max,figures/source_data/S6I_permutation_sacurine_gender.csv,23,generated/revision_panel_inputs/permutation_null.csv.gz,23,True
+S6I tiger empirical_p,figures/source_data/S6I_permutation_sacurine_gender.csv,0.0013997200559888023,generated/revision_panel_inputs/permutation_null.csv.gz,0.0013997200559888023,True
+S6I tiger permutations,figures/source_data/S6I_permutation_sacurine_gender.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6I serrf null_q99,figures/source_data/S6I_permutation_sacurine_gender.csv,2.0,generated/revision_panel_inputs/permutation_null.csv.gz,2.0,True
+S6I serrf null_q999,figures/source_data/S6I_permutation_sacurine_gender.csv,18.001000000000204,generated/revision_panel_inputs/permutation_null.csv.gz,18.001000000000204,True
+S6I serrf null_max,figures/source_data/S6I_permutation_sacurine_gender.csv,26,generated/revision_panel_inputs/permutation_null.csv.gz,26,True
+S6I serrf empirical_p,figures/source_data/S6I_permutation_sacurine_gender.csv,0.0007998400319936012,generated/revision_panel_inputs/permutation_null.csv.gz,0.0007998400319936012,True
+S6I serrf permutations,figures/source_data/S6I_permutation_sacurine_gender.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6I winn_auto_qc null_q99,figures/source_data/S6I_permutation_sacurine_gender.csv,5.0,generated/revision_panel_inputs/permutation_null.csv.gz,5.0,True
+S6I winn_auto_qc null_q999,figures/source_data/S6I_permutation_sacurine_gender.csv,36.00200000000041,generated/revision_panel_inputs/permutation_null.csv.gz,36.00200000000041,True
+S6I winn_auto_qc null_max,figures/source_data/S6I_permutation_sacurine_gender.csv,64,generated/revision_panel_inputs/permutation_null.csv.gz,64,True
+S6I winn_auto_qc empirical_p,figures/source_data/S6I_permutation_sacurine_gender.csv,0.0023995200959808036,generated/revision_panel_inputs/permutation_null.csv.gz,0.0023995200959808036,True
+S6I winn_auto_qc permutations,figures/source_data/S6I_permutation_sacurine_gender.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6I winn_auto_batch_qc null_q99,figures/source_data/S6I_permutation_sacurine_gender.csv,5.0,generated/revision_panel_inputs/permutation_null.csv.gz,5.0,True
+S6I winn_auto_batch_qc null_q999,figures/source_data/S6I_permutation_sacurine_gender.csv,35.0,generated/revision_panel_inputs/permutation_null.csv.gz,35.0,True
+S6I winn_auto_batch_qc null_max,figures/source_data/S6I_permutation_sacurine_gender.csv,60,generated/revision_panel_inputs/permutation_null.csv.gz,60,True
+S6I winn_auto_batch_qc empirical_p,figures/source_data/S6I_permutation_sacurine_gender.csv,0.0027994401119776045,generated/revision_panel_inputs/permutation_null.csv.gz,0.0027994401119776045,True
+S6I winn_auto_batch_qc permutations,figures/source_data/S6I_permutation_sacurine_gender.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+S6I winn_fixed_no_qc null_q99,figures/source_data/S6I_permutation_sacurine_gender.csv,2.0,generated/revision_panel_inputs/permutation_null.csv.gz,2.0,True
+S6I winn_fixed_no_qc null_q999,figures/source_data/S6I_permutation_sacurine_gender.csv,10.001000000000204,generated/revision_panel_inputs/permutation_null.csv.gz,10.001000000000204,True
+S6I winn_fixed_no_qc null_max,figures/source_data/S6I_permutation_sacurine_gender.csv,29,generated/revision_panel_inputs/permutation_null.csv.gz,29,True
+S6I winn_fixed_no_qc empirical_p,figures/source_data/S6I_permutation_sacurine_gender.csv,0.0005998800239952009,generated/revision_panel_inputs/permutation_null.csv.gz,0.0005998800239952009,True
+S6I winn_fixed_no_qc permutations,figures/source_data/S6I_permutation_sacurine_gender.csv,5000,generated/revision_panel_inputs/permutation_null.csv.gz,5000,True
+Supplement completed RFSC simulation heldout_qc_cv_mean,supplementary.tex,15.92,generated/review_validation/qcrfsc_completed_simulation_summary.csv,15.91619282340851,True
+Supplement completed RFSC simulation truth_log1p_rmse,supplementary.tex,0.1290,generated/review_validation/qcrfsc_completed_simulation_summary.csv,0.128985194899057,True
+Supplement completed RFSC simulation truth_metabolite_profile_icc_mean,supplementary.tex,0.8509,generated/review_validation/qcrfsc_completed_simulation_summary.csv,0.8509151619611572,True
+Supplement completed RFSC simulation truth_sample_profile_pearson_mean,supplementary.tex,0.8229,generated/review_validation/qcrfsc_completed_simulation_summary.csv,0.8229365227490864,True
+Completed RFSC precision mtbls79 raw_cv_percent,supplementary.tex,28.76\%,generated/review_validation/qcrfsc_completed_empirical_summary.csv,28.75722275311,True
+Completed RFSC precision mtbls79 qcrfsc_cv_percent,supplementary.tex,15.69\%,generated/review_validation/qcrfsc_completed_empirical_summary.csv,15.6881195296124,True
+S26 completed RFSC row mtbls79,generated/supplementary_tables/table_s26_qcrfsc_empirical.tex,28.757 & 15.688 & 14 & 2488,generated/review_validation/qcrfsc_completed_empirical_summary.csv,precision and retained-feature summaries,True
+Completed RFSC precision batchcorr_set1 raw_cv_percent,supplementary.tex,66.57\%,generated/review_validation/qcrfsc_completed_empirical_summary.csv,66.5698818959707,True
+Completed RFSC precision batchcorr_set1 qcrfsc_cv_percent,supplementary.tex,42.92\%,generated/review_validation/qcrfsc_completed_empirical_summary.csv,42.9229903313747,True
+S26 completed RFSC row batchcorr_set1,generated/supplementary_tables/table_s26_qcrfsc_empirical.tex,66.570 & 42.923 & 37 & 199,generated/review_validation/qcrfsc_completed_empirical_summary.csv,precision and retained-feature summaries,True
+Completed RFSC precision clinical_fiams raw_cv_percent,supplementary.tex,16.59\%,generated/review_validation/qcrfsc_completed_empirical_summary.csv,16.5943872074111,True
+Completed RFSC precision clinical_fiams qcrfsc_cv_percent,supplementary.tex,16.88\%,generated/review_validation/qcrfsc_completed_empirical_summary.csv,16.8798209814971,True
+S26 completed RFSC row clinical_fiams,generated/supplementary_tables/table_s26_qcrfsc_empirical.tex,16.594 & 16.880 & 1 & 1594,generated/review_validation/qcrfsc_completed_empirical_summary.csv,precision and retained-feature summaries,True
+Completed RFSC precision sacurine raw_cv_percent,supplementary.tex,32.60\%,generated/review_validation/qcrfsc_completed_empirical_summary.csv,32.5994242278841,True
+Completed RFSC precision sacurine qcrfsc_cv_percent,supplementary.tex,13.64\%,generated/review_validation/qcrfsc_completed_empirical_summary.csv,13.6442943562489,True
+S26 completed RFSC row sacurine,generated/supplementary_tables/table_s26_qcrfsc_empirical.tex,32.599 & 13.644 & 2 & 113,generated/review_validation/qcrfsc_completed_empirical_summary.csv,precision and retained-feature summaries,True
+Completed RFSC precision waveica raw_cv_percent,supplementary.tex,49.66\%,generated/review_validation/qcrfsc_completed_empirical_summary.csv,49.6615125014856,True
+Completed RFSC precision waveica qcrfsc_cv_percent,supplementary.tex,28.89\%,generated/review_validation/qcrfsc_completed_empirical_summary.csv,28.8917940135068,True
+S26 completed RFSC row waveica,generated/supplementary_tables/table_s26_qcrfsc_empirical.tex,49.662 & 28.892 & 459 & 6461,generated/review_validation/qcrfsc_completed_empirical_summary.csv,precision and retained-feature summaries,True

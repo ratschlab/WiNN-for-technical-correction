@@ -686,3 +686,7 @@ message("Generated ", nrow(manifest), " supplementary TeX tables in ", out_tex)
 # Apply the validated corrected RFSC results after generating the original tables.
 status <- system2("python3", shQuote(file.path(package_root, "scripts", "benchmark_revision", "integrate_completed_results.py")))
 if (status != 0) stop("Corrected RFSC table integration failed.")
+
+# Keep generated display labels consistent without renaming analysis identifiers.
+status <- system2("python3", shQuote(file.path(package_root, "scripts", "normalize_table_terminology.py")))
+if (status != 0) stop("Table terminology normalization failed.")

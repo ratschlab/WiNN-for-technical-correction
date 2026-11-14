@@ -1,7 +1,7 @@
 \begin{landscape}
 \footnotesize
 \begin{longtable}{p{3.0cm}p{3.6cm}rrrrr}
-\caption{Same-information baselines. Mean-only batch centering and the Wehrens study-sample ANCOVA use all injections with the same intensity, acquisition-order and batch information as WiNN; the study-only ANCOVA additionally uses reference identities to choose fitting observations. (A) Ten-seed clean-truth endpoints; WiNN advantages are comparator minus WiNN for RMSE and WiNN minus comparator otherwise, with 95\% $t_9$ intervals, and WiNN improved every endpoint in every seed. (B) Held-out reference CV, categorical batch weighted-PC $R^2$ among study injections and negative extrapolations floored at zero. (C) Through-origin slope, sign agreement and Pearson correlation of corrected against raw feature effects, median leave-one-batch-out effect correlation and BH-significant feature counts. Raw effects are an observed reference, not biological truth.}\label{tab:supp_baselines}\\
+\caption{Same-information baselines. Mean-only batch centering and the Wehrens study-sample ANCOVA use all injections with the same intensity, acquisition-order and batch information as WiNN; the study-only ANCOVA additionally uses reference identities to choose fitting observations. (A) Ten-seed ground-truth endpoints; WiNN advantages are comparator minus WiNN for RMSE and WiNN minus comparator otherwise, with 95\% $t_9$ intervals, and WiNN improved every endpoint in every seed. (B) Held-out QC CV, variance explained by batch (weighted-PC $R^2$) among study injections and negative extrapolations floored at zero. (C) Through-origin slope, sign agreement and Pearson correlation of corrected against raw feature effects, median leave-one-batch-out effect correlation and BH-significant feature counts. Raw effects are an observed reference, not biological truth.}\label{tab:supp_baselines}\\
 \toprule
 \endfirsthead
 \multicolumn{7}{l}{\textit{Table \thetable{} continued}}\\
@@ -13,7 +13,7 @@
 \bottomrule
 \endlastfoot
 \multicolumn{7}{l}{\textbf{A. Simulation truth (ten seeds; mean $\pm$ SE)}} \\
- & \textit{Method} & \textit{Hidden-ref.\ CV (\%)} & \textit{RMSE} & \textit{Feature ICC} & \textit{Sample $r$} &  \\
+ & \textit{Method} & \textit{Held-out QC CV (\%)} & \textit{RMSE} & \textit{Feature ICC} & \textit{Sample $r$} &  \\
 \midrule
 Simulation & Raw & $44.550 \pm 0.285$ & $0.2927 \pm 0.0015$ & $0.5879 \pm 0.0020$ & $0.5189 \pm 0.0021$ &  \\
 Simulation & Mean-only batch & $15.623 \pm 0.193$ & $0.1164 \pm 0.0004$ & $0.8487 \pm 0.0008$ & $0.8454 \pm 0.0008$ &  \\

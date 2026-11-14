@@ -1,0 +1,37 @@
+# macOS
+.DS_Store
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.brf
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.toc
+*.lot
+*.lof
+*.synctex.gz
+*.synctex(busy)
+*.bcf
+*.run.xml
+*.xdv
+
+# Local build directories
+/build/
+/out/
+/tmp/
+
+# Editor state
+.vscode/
+
+# Locally compiled review PDFs
+/main.pdf
+/supplementary.pdf
+/review_main.pdf
+
+# Python generator caches
+__pycache__/
+*.pyc

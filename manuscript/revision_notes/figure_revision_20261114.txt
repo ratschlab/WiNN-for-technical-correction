@@ -1,0 +1,26 @@
+Figure and table revision audit, 14 November 2026
+
+All requested endpoint display terms are propagated through the main and supplementary vector figures, their PNG previews, and generated table TeX. Numerical CSV field names and file paths remain stable. Original Figure 1 and the established method palette are unchanged.
+
+QC-RFSC: the earlier-adapter main empirical input rows were removed. Figure 3 now displays the completed corrected-adapter point estimates from table_s26_qcrfsc_empirical.csv with no uncertainty bars. Figure 4A displays the comparable 568-sample WaveICA point from qcrfsc_completed_empirical_all_endpoints.csv: batch variance 51.5953725788584%, biological-group variance 0.859524436407075%; no uncertainty is available. Figure 4B displays a newly reevaluated comparable QC-RFSC point: batch variance 18.928817833772% from 134 study injections; cow-sheep variance 43.6730579019026% from the mean log1p profiles of 20 sample extracts. The archived corrected matrix was recovered from Euler, with input SHA-256 hashes recorded. The reevaluation exactly reproduces both original raw endpoints and the archived corrected batch endpoint (tolerance 1e-8). No correction refit or bootstrap rerun was needed; no old interval or incompatible endpoint was substituted. Supplementary uncertainty/permutation panels remain restricted to the eight outputs with valid corresponding evaluations.
+
+Reproducibility: all four ablation aggregate input files are now included under generated/revision_panel_inputs; generate_revision_ablation_panels.R no longer depends on an external historical source folder. The table generator and condensed assembler run normalize_table_terminology.py to maintain the requested display language without changing source-data identifiers.
+
+Layout: main panels retain 85 mm native width and existing font sizes, with heights reduced from 55 to 50 mm. This saves 30 mm across Figures 2-4. Wrapped long y-axis labels, moved ablation titles to the full panel width, and added space for the final S2F tick label. All 23 pages of the main/supplementary figure atlas were visually inspected, with changed layouts reinspected after regeneration. PDF glyph-coordinate inspection found zero characters outside the boundaries of any individual main or supplementary panel.
+
+Validation: all five R plotting generators completed successfully. Python figure assembly and updated terminology/provenance audit passed: 86 vector PDFs, 25 rendered PNG previews, 428 checks, zero failures. Every numerical value in row-preserving plotted source CSVs was compared with HEAD at tolerance 1e-12; zero differences were found. Figure 3/4 source CSVs were reviewed separately because the corrected QC-RFSC points were added. Python scripts passed compilation, and table terminology normalization is idempotent.
+
+Generation sequence (from manuscript checkout):
+Rscript scripts/generate_revision_main_panels.R
+Rscript scripts/generate_revision_ablation_panels.R
+Rscript scripts/generate_revision_supplementary_uncertainty_panels.R
+Rscript scripts/generate_revision_s6_panels.R
+Rscript scripts/generate_review_fold_panels.R
+python3 scripts/condense_supplementary_tables.py
+python3 scripts/assemble_main_figures.py
+python3 scripts/assemble_supplementary_figures.py
+python3 scripts/render_figure_previews.py
+python3 scripts/audit_figure_package.py
+
+Python used for PDF assembly, rendering and auditing:
+/Users/ttanna/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3

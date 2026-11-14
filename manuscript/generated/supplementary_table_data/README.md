@@ -33,7 +33,7 @@ Revision table mappings:
 - **S23:** `../review_validation/frozen_identity_retrieval_estimates.csv` and `frozen_identity_retrieval_paired_differences.csv`. All current intervals use 2,000 paired biological-identity resamples with query-count weighting aligned to the point estimator. Earlier identity-weighted intervals remain only in explicitly suffixed audit files.
 - **S24:** `../review_validation/paired_feature_effects_descriptive.csv`; matched-feature effects are relative to raw input, not known biological truth.
 - **S25:** `../review_validation/nearest_baseline_metrics.csv`; reference precision and batch association for the regression baselines.
-- **S26:** `table_s26_qcrfsc_empirical.csv` and `../review_validation/qcrfsc_completed_empirical_all_endpoints.csv`; all five completed corrected RFSC empirical point evaluations. There are no new RFSC empirical uncertainty intervals.
+- **S26:** `table_s26_qcrfsc_empirical.csv` and `../review_validation/qcrfsc_completed_empirical_all_endpoints.csv`; all five completed corrected RFSC empirical point evaluations. There are no new RFSC empirical uncertainty intervals. The comparable MTBLS79 biological-group point uses 20 mean log1p sample profiles, reevaluated from the archived corrected matrix in `../review_validation/qcrfsc_mtbls79_sample_means.csv`; its raw endpoints reproduce the main figure, and input hashes are supplied alongside it. Figure 4 and the condensed benchmark table use this sample-level point and the valid 568-sample WaveICA group point.
 - **S27:** `../review_validation/baseline_simulation_summary.csv` and `baseline_simulation_paired_differences.csv`; the exact ten simulation seeds, with paired t intervals.
 - **S28:** `../review_validation/baseline_empirical_feature_effects.csv` and `baseline_empirical_lobo_effects.csv`; descriptive feature effects against input and consistency across batches.
 - **S29:** `../review_validation/preparation_biology_summary.csv`; the separate MAD, PQN and combined stage experiments.
@@ -44,6 +44,7 @@ Current figure generation uses included numerical inputs. From the manuscript di
 
 ```sh
 Rscript scripts/generate_revision_main_panels.R
+Rscript scripts/generate_revision_ablation_panels.R
 Rscript scripts/generate_revision_supplementary_uncertainty_panels.R
 Rscript scripts/generate_revision_s6_panels.R
 Rscript scripts/generate_review_fold_panels.R
@@ -68,7 +69,7 @@ Main/S5 sources are in `../revision_panel_inputs/`. The S6 exact 5,000-draw null
 | S7 | Partial confounding | S13 |
 | S8 | Biological associations and permutation nulls | S11 |
 | S9 | Matched-feature effects | S24 |
-| S10 | Cross-batch identity retrieval | S23 |
+| S10 | Cross-batch sample matching | S23 |
 | S11 | Same-information baselines | S27 + S25 + S28 |
 | S12 | Preparation and PQN response patterns | S29 |
 | S13 | Acquisition design (group balance) | S30 |

@@ -114,6 +114,12 @@ def decimals(value):
 
 def complete_benchmark():
     rfsc = {r["dataset"]: r for r in read_csv(DATA / "table_s26_qcrfsc_empirical.csv")}
+    rfsc_mtbls79 = next(r for r in read_csv(ROOT / "generated/review_validation/qcrfsc_mtbls79_sample_means.csv")
+                       if r["method_id"] == "qc_rfsc")
+    assert int(rfsc_mtbls79["biological_n"]) == 20
+    rfsc_waveica = next(r for r in read_csv(ROOT / "generated/review_validation/qcrfsc_completed_empirical_all_endpoints.csv")
+                       if r["dataset_key"] == "waveica" and r["metric"] == "biological_weighted_pc_r2")
+    assert int(rfsc_waveica["denominator"]) == 568
     blocks = [
         ("Simulation", "table_s4_simulation.csv", "mean $\\pm$ SE, ten seeds",
          ["Batch R2", "QC CV", "GAM", "RMSE", "ICC", "Pearson"], ["RMSE", "ICC(A,1)", "Sample $r$"]),
@@ -156,7 +162,10 @@ def complete_benchmark():
                 if dataset in ("BatchCorr Set 1", "Clinical FIA-MS"):
                     extra = [f"{float(q['replicate_profile_pearson']):.4f}", f"{float(q['replicate_profile_icc']):.4f}", ""]
                 elif dataset == "MTBLS79":
-                    extra = ["--", f"{float(q['replicate_profile_pearson']):.3f}", "--"]
+                    extra = [f"{float(rfsc_mtbls79['biological_pc_variance_percent']) / 100:.3f}",
+                             f"{float(q['replicate_profile_pearson']):.3f}", "--"]
+                elif dataset == "WaveICA":
+                    extra = [f"{float(rfsc_waveica['value']):.4f}", "--", "--"]
                 lines.append(row(["QC-RFSC$^{a}$", cv, gam, batch] + extra))
     lines = lines[1:]
     caption = ("Complete benchmark results for all outputs. QC CV is mean held-out reference CV (\\%); GAM is "
@@ -261,3 +270,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+    from normalize_table_terminology import main as normalize_tables
+    normalize_tables()

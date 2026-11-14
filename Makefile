@@ -1,4 +1,5 @@
 R ?= Rscript
+PYTHON ?= python3
 PROJECT_LIB := $(CURDIR)/Rlib
 export R_LIBS_USER := $(PROJECT_LIB)
 export WINN_RELEASE_ROOT := $(CURDIR)
@@ -14,10 +15,10 @@ install-winn:
 	R CMD INSTALL --library="$(PROJECT_LIB)" package/winn_0.1.6.tar.gz
 
 download:
-	python3 scripts/download_mtbls79.py
-	python3 scripts/download_batchcorr_set1.py
-	python3 scripts/download_sacurine.py
-	python3 scripts/download_waveica_adenocarcinoma.py
+	$(PYTHON) scripts/download_mtbls79.py
+	$(PYTHON) scripts/download_batchcorr_set1.py
+	$(PYTHON) scripts/download_sacurine.py
+	$(PYTHON) scripts/download_waveica_adenocarcinoma.py
 
 preprocess:
 	$(R) scripts/preprocess_mtbls79_public_data.R
@@ -39,24 +40,26 @@ aggregate-historical:
 	$(R) analysis/validate_release.R
 
 validate-results:
-	python3 analysis/validate_publication_bundle.py
+	$(PYTHON) analysis/validate_publication_bundle.py
 
 config-manifest:
 	$(R) analysis/write_config_manifest.R
 
 report:
+	$(R) manuscript/scripts/generate_revision_ablation_panels.R
+	$(R) manuscript/scripts/generate_review_fold_panels.R
 	$(R) manuscript/scripts/generate_revision_main_panels.R
 	$(R) manuscript/scripts/generate_revision_supplementary_uncertainty_panels.R
 	$(R) manuscript/scripts/generate_revision_s6_panels.R
-	python3 manuscript/scripts/assemble_main_figures.py
-	python3 manuscript/scripts/assemble_supplementary_figures.py
+	$(PYTHON) manuscript/scripts/assemble_main_figures.py
+	$(PYTHON) manuscript/scripts/assemble_supplementary_figures.py
 
 tables:
 	$(R) manuscript/scripts/generate_supplementary_tables.R --final-root=results/final/revision_inputs/supplement_20261111
 	$(R) manuscript/scripts/nearest_baseline/generate_validation_tables.R
-	python3 manuscript/scripts/generate_review2_support_tables.py
+	$(PYTHON) manuscript/scripts/generate_review2_support_tables.py
 	$(R) manuscript/scripts/generate_s24_paired_effects_table.R
-	python3 manuscript/scripts/condense_supplementary_tables.py
+	$(PYTHON) manuscript/scripts/condense_supplementary_tables.py
 
 # Lightweight reconstruction check; no method fitting or private inputs.
 test-confounding-inputs:

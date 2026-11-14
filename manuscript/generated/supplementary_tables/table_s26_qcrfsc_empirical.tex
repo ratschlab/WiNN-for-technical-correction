@@ -1,12 +1,12 @@
 \footnotesize
 \begin{longtable}{lrrrrrr}
-\caption{QC-RFSC empirical point estimates and feature retention. Mean CV is calculated across features in the held-out reference set. GAM is residual acquisition-order deviance explained; batch $R^2$ is categorical weighted-PC $R^2$ among study injections. Features without a returned correction retain their input abundance. Replicate-profile agreement is summarized across repeated biological identities. Clinical results use the reconstructed pair-level input described in the Methods.}\label{tab:supp_qcrfsc_empirical}\\
+\caption{QC-RFSC empirical point estimates and feature retention. Mean CV is calculated across features in the held-out reference set. Drift is residual run-order drift (GAM deviance explained); batch $R^2$ is variance explained by batch, calculated as variance-weighted PC $R^2$ among study injections. Features without a returned correction retain their input abundance. Replicate-profile agreement is summarized across repeated biological samples. Clinical results use the reconstructed pair-level input described in the Methods.}\label{tab:supp_qcrfsc_empirical}\\
 \toprule
-Dataset & Raw CV (\%) & QC-RFSC CV (\%) & Raw-restored & Retained & GAM (\%) & Batch $R^2$ \\
+Dataset & Raw CV (\%) & QC-RFSC CV (\%) & Raw-restored & Retained & Drift (\%) & Batch $R^2$ \\
 \midrule
 \endfirsthead
 \toprule
-Dataset & Raw CV (\%) & QC-RFSC CV (\%) & Raw-restored & Retained & GAM (\%) & Batch $R^2$ \\
+Dataset & Raw CV (\%) & QC-RFSC CV (\%) & Raw-restored & Retained & Drift (\%) & Batch $R^2$ \\
 \midrule
 \endhead
 \bottomrule
@@ -17,7 +17,7 @@ Clinical FIA-MS & 16.594 & 16.880 & 1 & 1594 & 11.666 & 0.02061 \\
 Sacurine & 32.599 & 13.644 & 2 & 113 & 3.356 & 0.00245 \\
 WaveICA & 49.662 & 28.892 & 459 & 6461 & 12.756 & 0.51595 \\
 \midrule
-\multicolumn{7}{l}{Replicate-profile agreement in the repeated-identity datasets} \\
+\multicolumn{7}{l}{Replicate-profile agreement in the datasets with repeated samples} \\
 BatchCorr Set 1 & \multicolumn{3}{l}{ICC(A,1): 0.9101} & \multicolumn{3}{l}{Pearson correlation: 0.9182} \\
 Clinical FIA-MS & \multicolumn{3}{l}{ICC(A,1): 0.9836} & \multicolumn{3}{l}{Pearson correlation: 0.9862} \\
 \end{longtable}

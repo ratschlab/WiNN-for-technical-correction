@@ -5,22 +5,14 @@
 # a committed generator. No correction, tuning or model selection is run here.
 #
 # Usage:
-#   Rscript scripts/generate_revision_ablation_panels.R \
-#     --final-root=<release results/final> \
-#     --source-root=<dir with SF_ablation_stage_impacts.csv, SF_categorical_batch_r2_trajectory.csv>
+#   Rscript scripts/generate_revision_ablation_panels.R
+# Frozen publication inputs are included in generated/revision_panel_inputs/.
 suppressPackageStartupMessages({
   library(dplyr); library(ggplot2); library(readr); library(scales)
 })
-args <- commandArgs(TRUE)
-arg <- function(name) {
-  hit <- sub(paste0("^--", name, "="), "", grep(paste0("^--", name, "="), args, value = TRUE))
-  if (length(hit) != 1L) stop("Supply --", name, "=", call. = FALSE)
-  normalizePath(hit, mustWork = TRUE)
-}
-final_root <- arg("final-root")
-source_root <- arg("source-root")
 file_arg <- grep("^--file=", commandArgs(FALSE), value = TRUE)
 manuscript_root <- dirname(dirname(normalizePath(gsub("~+~", " ", sub("^--file=", "", file_arg), fixed = TRUE))))
+input_root <- file.path(manuscript_root, "generated", "revision_panel_inputs")
 supp_dir <- file.path(manuscript_root, "figures", "supplementary_panels")
 panel_source_dir <- file.path(manuscript_root, "figures", "source_data")
 source(file.path(manuscript_root, "scripts", "method_palette.R"))
@@ -48,6 +40,7 @@ theme_panel <- function(base_size = 9.5) {
       panel.background = element_rect(fill = "white", colour = NA),
       plot.background = element_rect(fill = "white", colour = NA),
       plot.title = element_text(face = "bold", colour = "#172033", size = base_size),
+      plot.title.position = "plot",
       plot.subtitle = element_text(colour = "#465269", size = base_size - 0.4),
       axis.title = element_text(colour = "#263247", size = base_size - 0.2),
       axis.text = element_text(colour = "#263247", size = base_size - 0.4),
@@ -66,7 +59,7 @@ save_panel <- function(plot, stem, width_mm, height_mm, source_data) {
 }
 
 # S1: ordered stage impacts ------------------------------------------------------
-stage_data <- read_csv(file.path(source_root, "SF_ablation_stage_impacts.csv"), show_col_types = FALSE) |>
+stage_data <- read_csv(file.path(input_root, "ablation_stage_impacts.csv"), show_col_types = FALSE) |>
   mutate(
     stage_short = factor(recode(stage, Outlier_shrinkage = "MAD", Selective_drift = "Drift",
                                 Selective_batch = "Batch", PQN = "PQN"),
@@ -95,7 +88,7 @@ for (spec in list(
 }
 
 # S2: selective and forced gates ------------------------------------------------------
-gate_data <- read_csv(file.path(final_root, "tables", "selective_vs_forced_metrics_long.csv"),
+gate_data <- read_csv(file.path(input_root, "selective_vs_forced_metrics_long.csv"),
                       show_col_types = FALSE) |>
   mutate(
     gate_label = recode(method_id, G_SS = "Selective / selective", G_AS = "Forced drift",
@@ -109,8 +102,8 @@ gate_data <- read_csv(file.path(final_root, "tables", "selective_vs_forced_metri
   )
 for (spec in list(
   list("A", "heldout_qc_cv_mean", "Held-out QC CV", "Held-out QC CV (%)"),
-  list("B", "residual_run_order_gam_mean_deviance", "Residual run-order deviance", "GAM deviance explained"),
-  list("C", "batch_weighted_pc_r2_categorical", "Residual batch structure", "Weighted-PC R2"))) {
+  list("B", "residual_run_order_gam_mean_deviance", "Residual run-order drift", "Residual run-order drift"),
+  list("C", "batch_weighted_pc_r2_categorical", "Variance explained by batch", "Variance explained by batch"))) {
   panel_data <- gate_data |> filter(metric == spec[[2]])
   plot <- ggplot(panel_data, aes(gate_label, value, shape = gate_label)) +
     geom_point(size = 2.1, colour = winn_colour, stroke = 0) +
@@ -122,7 +115,7 @@ for (spec in list(
     guides(shape = guide_legend(override.aes = list(colour = winn_colour)))
   save_panel(plot, paste0("S2", spec[[1]], "_", spec[[2]]), 174, 55, panel_data)
 }
-seed_gate <- read_csv(file.path(final_root, "tables", "simulation_seed_ablation_metrics.csv"),
+seed_gate <- read_csv(file.path(input_root, "simulation_seed_ablation_metrics.csv"),
                       show_col_types = FALSE) |>
   filter(method_id %in% c("G_SS", "G_AS", "G_SA", "G_AA")) |>
   mutate(
@@ -131,9 +124,9 @@ seed_gate <- read_csv(file.path(final_root, "tables", "simulation_seed_ablation_
     gate_label = factor(gate_label, levels = rev(names(gate_colours)))
   )
 for (spec in list(
-  list("D", "truth_log1p_rmse", "Simulation clean-truth RMSE", "Clean-truth RMSE"),
-  list("E", "truth_metabolite_profile_icc_mean", "Simulation feature ICC(A,1)", "ICC(A,1) to clean truth"),
-  list("F", "truth_sample_profile_pearson_mean", "Simulation sample correlation", "Pearson r to clean truth"))) {
+  list("D", "truth_log1p_rmse", "Simulation ground-truth RMSE", "Ground-truth RMSE"),
+  list("E", "truth_metabolite_profile_icc_mean", "Simulation feature ICC(A,1)", "ICC(A,1) to ground truth"),
+  list("F", "truth_sample_profile_pearson_mean", "Simulation sample correlation", "Pearson r to ground truth"))) {
   panel_data <- seed_gate |> filter(metric == spec[[2]]) |> group_by(method_id, gate_label) |>
     mutate(method_mean = mean(value), method_se = sd(value) / sqrt(n())) |> ungroup()
   summary_data <- panel_data |> distinct(method_id, gate_label, method_mean, method_se)
@@ -146,14 +139,16 @@ for (spec in list(
                  linewidth = line_width, colour = palette_ink) +
     geom_point(data = summary_data, aes(method_mean, gate_label), inherit.aes = FALSE,
                shape = 23, fill = winn_colour, colour = palette_ink, size = 2.3, stroke = point_stroke) +
+    scale_x_continuous(n.breaks = 4, expand = expansion(mult = c(.06, .10))) +
     labs(title = paste(spec[[1]], spec[[3]]), x = spec[[4]], y = NULL) +
     theme_panel(9.2) +
-    theme(legend.position = "none", panel.grid.major.y = element_blank())
+    theme(legend.position = "none", panel.grid.major.y = element_blank(),
+          plot.margin = margin(3, 12, 3, 4))
   save_panel(plot, paste0("S2", spec[[1]], "_", spec[[2]]), 85, 55, panel_data)
 }
 
 # S9: categorical batch trajectory ------------------------------------------------------
-trajectory <- read_csv(file.path(source_root, "SF_categorical_batch_r2_trajectory.csv"),
+trajectory <- read_csv(file.path(input_root, "categorical_batch_r2_trajectory.csv"),
                        show_col_types = FALSE) |>
   mutate(dataset = factor(dataset, levels = unname(dataset_labels)),
          stage = factor(stage, levels = c("Raw", "Outlier shrinkage", "Selective drift",
@@ -169,7 +164,7 @@ for (spec in list(list("A", "simulation", "Simulation"), list("B", "mtbls79", "M
     scale_x_discrete(labels = c("Raw" = "Raw", "Outlier shrinkage" = "MAD",
                                 "Selective drift" = "Drift", "Selective batch" = "Batch",
                                 "PQN" = "PQN")) +
-    labs(title = paste(spec[[1]], spec[[3]]), x = NULL, y = "Batch weighted-PC R²") +
+    labs(title = paste(spec[[1]], spec[[3]]), x = NULL, y = "Variance explained by batch") +
     theme_panel(9.2) +
     theme(axis.text.x = element_text(angle = 0, hjust = 0.5))
   save_panel(plot, paste0("S9", spec[[1]], "_batch_r2_", spec[[2]]), 85, 50, panel_data)

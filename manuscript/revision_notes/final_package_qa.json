@@ -1,0 +1,32 @@
+{
+  "main": {
+    "pages": 7,
+    "pdf_sha256": "4bd98279fe1008058b61f8b8d21e131d6282537f845c4c1ce0af7e85caf3b530",
+    "source_sha256": "5f55b1f2d5dc1e686ab0f5c28161ae2dc792e26d8648a7af291f1e47022a65b3",
+    "out_of_page_characters": [],
+    "unresolved_errors": [],
+    "overfull_boxes": []
+  },
+  "supplementary": {
+    "pages": 45,
+    "pdf_sha256": "4da305d7e82e642e6c946f6d5265494371e6385424d4c2d4cc7d6bbf611b91b8",
+    "source_sha256": "62e7d828c53aa2b48c431e8ee45ab0b8540621c6a2ba743f68f3d6c6af279220",
+    "out_of_page_characters": [],
+    "unresolved_errors": [],
+    "overfull_boxes": []
+  },
+  "inline_author_notes_remaining": 0,
+  "main_figure_count": 4,
+  "main_alt_text_count": 4,
+  "guidance_url": "https://academic.oup.com/bioinformatics/pages/author-guidelines",
+  "guidance_checked": "2026-11-14",
+  "author_notes_addressed": 33,
+  "numerical_checks": 386,
+  "figure_checks": 428,
+  "targeted_rows_reproduced": 14877,
+  "package_tests_passed": 105,
+  "confounding_designs_verified": 160,
+  "analysis_code_revision": "853541434d507e9cfe0a6a94c205b0e7d1b39f29",
+  "package_docs_revision": "d9e81b5",
+  "visual_review": "All 7 article pages, 45 supplementary pages, and 23 figure-atlas pages inspected."
+}

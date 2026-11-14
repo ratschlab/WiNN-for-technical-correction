@@ -1,0 +1,31 @@
+dataset_key,dataset,stage,value,id
+simulation,Simulation,Raw,0.965647338615417,1
+simulation,Simulation,Outlier shrinkage,0.96654180919283,1
+simulation,Simulation,Selective drift,0.988644543399555,1
+simulation,Simulation,Selective batch,0.00105305722086291,1
+simulation,Simulation,PQN,0.00104441467773887,1
+mtbls79,MTBLS79,Raw,0.36098533296055,2
+mtbls79,MTBLS79,Outlier shrinkage,0.357984777237142,2
+mtbls79,MTBLS79,Selective drift,0.358112733471753,2
+mtbls79,MTBLS79,Selective batch,0.0108828350455865,2
+mtbls79,MTBLS79,PQN,0.0108837435440364,2
+clinical_fiams,Clinical FIA-MS,Raw,0.150509455379697,3
+clinical_fiams,Clinical FIA-MS,Outlier shrinkage,0.15822003960981,3
+clinical_fiams,Clinical FIA-MS,Selective drift,0.173065442485729,3
+clinical_fiams,Clinical FIA-MS,Selective batch,0.00172742614220366,3
+clinical_fiams,Clinical FIA-MS,PQN,0.00209422396564622,3
+batchcorr_set1,BatchCorr Set 1,Raw,0.561111591272931,4
+batchcorr_set1,BatchCorr Set 1,Outlier shrinkage,0.568121519981498,4
+batchcorr_set1,BatchCorr Set 1,Selective drift,0.613541892245326,4
+batchcorr_set1,BatchCorr Set 1,Selective batch,2.7400523531157e-4,4
+batchcorr_set1,BatchCorr Set 1,PQN,5.6347557327368e-4,4
+sacurine,Sacurine,Raw,0.131658082609212,5
+sacurine,Sacurine,Outlier shrinkage,0.129641086172234,5
+sacurine,Sacurine,Selective drift,0.137825126466048,5
+sacurine,Sacurine,Selective batch,5.1283367676491e-4,5
+sacurine,Sacurine,PQN,6.1694213206163e-4,5
+waveica,WaveICA,Raw,0.69436740649987,6
+waveica,WaveICA,Outlier shrinkage,0.696520411780516,6
+waveica,WaveICA,Selective drift,0.812966995430736,6
+waveica,WaveICA,Selective batch,0.0028081328140907,6
+waveica,WaveICA,PQN,0.00256077164587594,6

@@ -1,0 +1,8 @@
+% Keep the OUP running-header rules out of a column-width paragraph.
+% This fixes template output-box warnings without changing body dimensions.
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\@oddhead}{\rule{\textwidth}{1\p@}}{\hrule width\textwidth height1\p@}{}{}
+\patchcmd{\@evenhead}{\rule{\textwidth}{1\p@}}{\hrule width\textwidth height1\p@}{}{}
+\setlength{\headheight}{19pt}
+\makeatother

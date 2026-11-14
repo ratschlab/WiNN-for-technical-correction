@@ -1,0 +1,429 @@
+check,path,passed,detail
+referenced PDF exists,figures/F1_winn_overview.pdf,True,main.tex -> figures/F1_winn_overview.pdf
+referenced PDF exists,figures/F2_simulation.pdf,True,main.tex -> figures/F2_simulation.pdf
+referenced PDF exists,figures/F3_replicates.pdf,True,main.tex -> figures/F3_replicates.pdf
+referenced PDF exists,figures/F4_biological_structure.pdf,True,main.tex -> figures/F4_biological_structure.pdf
+referenced PDF exists,S7A_lobo_mtbls79_cow_vs_sheep.pdf,True,supplementary.tex -> figures/supplementary_panels/S7A_lobo_mtbls79_cow_vs_sheep.pdf
+referenced PDF exists,S7B_lobo_waveica_biological_group.pdf,True,supplementary.tex -> figures/supplementary_panels/S7B_lobo_waveica_biological_group.pdf
+referenced PDF exists,S7C_lobo_sacurine_age.pdf,True,supplementary.tex -> figures/supplementary_panels/S7C_lobo_sacurine_age.pdf
+referenced PDF exists,S7D_lobo_sacurine_bmi.pdf,True,supplementary.tex -> figures/supplementary_panels/S7D_lobo_sacurine_bmi.pdf
+referenced PDF exists,S7E_lobo_sacurine_gender.pdf,True,supplementary.tex -> figures/supplementary_panels/S7E_lobo_sacurine_gender.pdf
+referenced PDF exists,figures/supplementary_panels/S1A_stage_heldout_qc_cv_mean.pdf,True,supplementary.tex -> figures/supplementary_panels/S1A_stage_heldout_qc_cv_mean.pdf
+referenced PDF exists,figures/supplementary_panels/S1B_stage_residual_run_order_gam_mean_deviance.pdf,True,supplementary.tex -> figures/supplementary_panels/S1B_stage_residual_run_order_gam_mean_deviance.pdf
+referenced PDF exists,figures/supplementary_panels/S1C_stage_batch_weighted_pc_r2_categorical.pdf,True,supplementary.tex -> figures/supplementary_panels/S1C_stage_batch_weighted_pc_r2_categorical.pdf
+referenced PDF exists,figures/supplementary_panels/S2A_heldout_qc_cv_mean.pdf,True,supplementary.tex -> figures/supplementary_panels/S2A_heldout_qc_cv_mean.pdf
+referenced PDF exists,figures/supplementary_panels/S2B_residual_run_order_gam_mean_deviance.pdf,True,supplementary.tex -> figures/supplementary_panels/S2B_residual_run_order_gam_mean_deviance.pdf
+referenced PDF exists,figures/supplementary_panels/S2C_batch_weighted_pc_r2_categorical.pdf,True,supplementary.tex -> figures/supplementary_panels/S2C_batch_weighted_pc_r2_categorical.pdf
+referenced PDF exists,figures/supplementary_panels/S2D_truth_log1p_rmse.pdf,True,supplementary.tex -> figures/supplementary_panels/S2D_truth_log1p_rmse.pdf
+referenced PDF exists,figures/supplementary_panels/S2E_truth_metabolite_profile_icc_mean.pdf,True,supplementary.tex -> figures/supplementary_panels/S2E_truth_metabolite_profile_icc_mean.pdf
+referenced PDF exists,figures/supplementary_panels/S2F_truth_sample_profile_pearson_mean.pdf,True,supplementary.tex -> figures/supplementary_panels/S2F_truth_sample_profile_pearson_mean.pdf
+referenced PDF exists,figures/supplementary_panels/S3A_simulation_heldout_qc_cv_mean.pdf,True,supplementary.tex -> figures/supplementary_panels/S3A_simulation_heldout_qc_cv_mean.pdf
+referenced PDF exists,figures/supplementary_panels/S3B_simulation_residual_run_order_gam_mean_deviance.pdf,True,supplementary.tex -> figures/supplementary_panels/S3B_simulation_residual_run_order_gam_mean_deviance.pdf
+referenced PDF exists,figures/supplementary_panels/S3C_simulation_batch_weighted_pc_r2_categorical.pdf,True,supplementary.tex -> figures/supplementary_panels/S3C_simulation_batch_weighted_pc_r2_categorical.pdf
+referenced PDF exists,figures/supplementary_panels/S3D_simulation_truth_log1p_rmse.pdf,True,supplementary.tex -> figures/supplementary_panels/S3D_simulation_truth_log1p_rmse.pdf
+referenced PDF exists,figures/supplementary_panels/S3E_simulation_truth_metabolite_profile_icc_mean.pdf,True,supplementary.tex -> figures/supplementary_panels/S3E_simulation_truth_metabolite_profile_icc_mean.pdf
+referenced PDF exists,figures/supplementary_panels/S3F_simulation_truth_sample_profile_pearson_mean.pdf,True,supplementary.tex -> figures/supplementary_panels/S3F_simulation_truth_sample_profile_pearson_mean.pdf
+referenced PDF exists,figures/supplementary_panels/S4A_reference_simulation.pdf,True,supplementary.tex -> figures/supplementary_panels/S4A_reference_simulation.pdf
+referenced PDF exists,figures/supplementary_panels/S4B_reference_mtbls79.pdf,True,supplementary.tex -> figures/supplementary_panels/S4B_reference_mtbls79.pdf
+referenced PDF exists,figures/supplementary_panels/S4C_reference_clinical_fiams.pdf,True,supplementary.tex -> figures/supplementary_panels/S4C_reference_clinical_fiams.pdf
+referenced PDF exists,figures/supplementary_panels/S4D_reference_batchcorr_set1.pdf,True,supplementary.tex -> figures/supplementary_panels/S4D_reference_batchcorr_set1.pdf
+referenced PDF exists,figures/supplementary_panels/S4E_reference_sacurine.pdf,True,supplementary.tex -> figures/supplementary_panels/S4E_reference_sacurine.pdf
+referenced PDF exists,figures/supplementary_panels/S4F_reference_waveica.pdf,True,supplementary.tex -> figures/supplementary_panels/S4F_reference_waveica.pdf
+referenced PDF exists,figures/supplementary_panels/S5A_partial_heldout_qc_cv_mean.pdf,True,supplementary.tex -> figures/supplementary_panels/S5A_partial_heldout_qc_cv_mean.pdf
+referenced PDF exists,figures/supplementary_panels/S5B_partial_residual_run_order_gam_mean_deviance.pdf,True,supplementary.tex -> figures/supplementary_panels/S5B_partial_residual_run_order_gam_mean_deviance.pdf
+referenced PDF exists,figures/supplementary_panels/S5C_partial_batch_weighted_pc_r2_categorical.pdf,True,supplementary.tex -> figures/supplementary_panels/S5C_partial_batch_weighted_pc_r2_categorical.pdf
+referenced PDF exists,figures/supplementary_panels/S5D_partial_clean_sample_profile_pearson_mean.pdf,True,supplementary.tex -> figures/supplementary_panels/S5D_partial_clean_sample_profile_pearson_mean.pdf
+referenced PDF exists,figures/supplementary_panels/S5E_partial_median_attenuation_ratio_clean_responsive.pdf,True,supplementary.tex -> figures/supplementary_panels/S5E_partial_median_attenuation_ratio_clean_responsive.pdf
+referenced PDF exists,figures/supplementary_panels/S5F_partial_empirical_fdr.pdf,True,supplementary.tex -> figures/supplementary_panels/S5F_partial_empirical_fdr.pdf
+referenced PDF exists,figures/supplementary_panels/S6A_permutation_mtbls79_cow_vs_sheep.pdf,True,supplementary.tex -> figures/supplementary_panels/S6A_permutation_mtbls79_cow_vs_sheep.pdf
+referenced PDF exists,figures/supplementary_panels/S6B_effect_variance_mtbls79_cow_vs_sheep.pdf,True,supplementary.tex -> figures/supplementary_panels/S6B_effect_variance_mtbls79_cow_vs_sheep.pdf
+referenced PDF exists,figures/supplementary_panels/S6C_permutation_waveica_biological_group.pdf,True,supplementary.tex -> figures/supplementary_panels/S6C_permutation_waveica_biological_group.pdf
+referenced PDF exists,figures/supplementary_panels/S6D_effect_variance_waveica_biological_group.pdf,True,supplementary.tex -> figures/supplementary_panels/S6D_effect_variance_waveica_biological_group.pdf
+referenced PDF exists,figures/supplementary_panels/S6E_permutation_sacurine_age.pdf,True,supplementary.tex -> figures/supplementary_panels/S6E_permutation_sacurine_age.pdf
+referenced PDF exists,figures/supplementary_panels/S6F_effect_variance_sacurine_age.pdf,True,supplementary.tex -> figures/supplementary_panels/S6F_effect_variance_sacurine_age.pdf
+referenced PDF exists,figures/supplementary_panels/S6G_permutation_sacurine_bmi.pdf,True,supplementary.tex -> figures/supplementary_panels/S6G_permutation_sacurine_bmi.pdf
+referenced PDF exists,figures/supplementary_panels/S6H_effect_variance_sacurine_bmi.pdf,True,supplementary.tex -> figures/supplementary_panels/S6H_effect_variance_sacurine_bmi.pdf
+referenced PDF exists,figures/supplementary_panels/S6I_permutation_sacurine_gender.pdf,True,supplementary.tex -> figures/supplementary_panels/S6I_permutation_sacurine_gender.pdf
+referenced PDF exists,figures/supplementary_panels/S6J_effect_variance_sacurine_gender.pdf,True,supplementary.tex -> figures/supplementary_panels/S6J_effect_variance_sacurine_gender.pdf
+referenced PDF exists,figures/supplementary_panels/S8A_batchcorr_set1_batch_weighted_pc_r2_categorical.pdf,True,supplementary.tex -> figures/supplementary_panels/S8A_batchcorr_set1_batch_weighted_pc_r2_categorical.pdf
+referenced PDF exists,figures/supplementary_panels/S8B_batchcorr_set1_sample_replicate_pearson_median.pdf,True,supplementary.tex -> figures/supplementary_panels/S8B_batchcorr_set1_sample_replicate_pearson_median.pdf
+referenced PDF exists,figures/supplementary_panels/S8C_batchcorr_set1_genuine_replicate_icc_median.pdf,True,supplementary.tex -> figures/supplementary_panels/S8C_batchcorr_set1_genuine_replicate_icc_median.pdf
+referenced PDF exists,figures/supplementary_panels/S8D_clinical_fiams_batch_weighted_pc_r2_categorical.pdf,True,supplementary.tex -> figures/supplementary_panels/S8D_clinical_fiams_batch_weighted_pc_r2_categorical.pdf
+referenced PDF exists,figures/supplementary_panels/S8E_clinical_fiams_sample_replicate_pearson_median.pdf,True,supplementary.tex -> figures/supplementary_panels/S8E_clinical_fiams_sample_replicate_pearson_median.pdf
+referenced PDF exists,figures/supplementary_panels/S8F_clinical_fiams_genuine_replicate_icc_median.pdf,True,supplementary.tex -> figures/supplementary_panels/S8F_clinical_fiams_genuine_replicate_icc_median.pdf
+referenced PDF exists,figures/supplementary_panels/S9A_batch_r2_simulation.pdf,True,supplementary.tex -> figures/supplementary_panels/S9A_batch_r2_simulation.pdf
+referenced PDF exists,figures/supplementary_panels/S9B_batch_r2_mtbls79.pdf,True,supplementary.tex -> figures/supplementary_panels/S9B_batch_r2_mtbls79.pdf
+referenced PDF exists,figures/supplementary_panels/S9C_batch_r2_clinical_fiams.pdf,True,supplementary.tex -> figures/supplementary_panels/S9C_batch_r2_clinical_fiams.pdf
+referenced PDF exists,figures/supplementary_panels/S9D_batch_r2_batchcorr_set1.pdf,True,supplementary.tex -> figures/supplementary_panels/S9D_batch_r2_batchcorr_set1.pdf
+referenced PDF exists,figures/supplementary_panels/S9E_batch_r2_sacurine.pdf,True,supplementary.tex -> figures/supplementary_panels/S9E_batch_r2_sacurine.pdf
+referenced PDF exists,figures/supplementary_panels/S9F_batch_r2_waveica.pdf,True,supplementary.tex -> figures/supplementary_panels/S9F_batch_r2_waveica.pdf
+referenced PDF exists,figures/supplementary_panels/S10A_sacurine_age_weighted_pc_r2.pdf,True,supplementary.tex -> figures/supplementary_panels/S10A_sacurine_age_weighted_pc_r2.pdf
+referenced PDF exists,figures/supplementary_panels/S10B_sacurine_bmi_weighted_pc_r2.pdf,True,supplementary.tex -> figures/supplementary_panels/S10B_sacurine_bmi_weighted_pc_r2.pdf
+referenced PDF exists,figures/supplementary_panels/S10C_sacurine_gender_weighted_pc_r2.pdf,True,supplementary.tex -> figures/supplementary_panels/S10C_sacurine_gender_weighted_pc_r2.pdf
+current displayed endpoint terminology,figures/F1_winn_overview.pdf,True,
+no obsolete displayed method label,figures/F1_winn_overview.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/F2_simulation.pdf,True,
+no obsolete displayed method label,figures/F2_simulation.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/F3_replicates.pdf,True,
+no obsolete displayed method label,figures/F3_replicates.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/F4_biological_structure.pdf,True,
+no obsolete displayed method label,figures/F4_biological_structure.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/Main_figures.pdf,True,
+no obsolete displayed method label,figures/Main_figures.pdf,True,4 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/WiNN_figures.pdf,True,
+no obsolete displayed method label,figures/WiNN_figures.pdf,True,23 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/compiled_supplementary/Figure_S1.pdf,True,
+no obsolete displayed method label,figures/compiled_supplementary/Figure_S1.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/compiled_supplementary/Figure_S10.pdf,True,
+no obsolete displayed method label,figures/compiled_supplementary/Figure_S10.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/compiled_supplementary/Figure_S2.pdf,True,
+no obsolete displayed method label,figures/compiled_supplementary/Figure_S2.pdf,True,2 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/compiled_supplementary/Figure_S3.pdf,True,
+no obsolete displayed method label,figures/compiled_supplementary/Figure_S3.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/compiled_supplementary/Figure_S4.pdf,True,
+no obsolete displayed method label,figures/compiled_supplementary/Figure_S4.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/compiled_supplementary/Figure_S5.pdf,True,
+no obsolete displayed method label,figures/compiled_supplementary/Figure_S5.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/compiled_supplementary/Figure_S6.pdf,True,
+no obsolete displayed method label,figures/compiled_supplementary/Figure_S6.pdf,True,5 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/compiled_supplementary/Figure_S7.pdf,True,
+no obsolete displayed method label,figures/compiled_supplementary/Figure_S7.pdf,True,5 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/compiled_supplementary/Figure_S8.pdf,True,
+no obsolete displayed method label,figures/compiled_supplementary/Figure_S8.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/compiled_supplementary/Figure_S9.pdf,True,
+no obsolete displayed method label,figures/compiled_supplementary/Figure_S9.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/compiled_supplementary/Supplementary_figures.pdf,True,
+no obsolete displayed method label,figures/compiled_supplementary/Supplementary_figures.pdf,True,19 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/main_panels/F2A_selective_forced_truth_rmse.pdf,True,
+no obsolete displayed method label,figures/main_panels/F2A_selective_forced_truth_rmse.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/main_panels/F2B_truth_log1p_rmse.pdf,True,
+no obsolete displayed method label,figures/main_panels/F2B_truth_log1p_rmse.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/main_panels/F2C_truth_metabolite_profile_icc_mean.pdf,True,
+no obsolete displayed method label,figures/main_panels/F2C_truth_metabolite_profile_icc_mean.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/main_panels/F2D_truth_sample_profile_pearson_mean.pdf,True,
+no obsolete displayed method label,figures/main_panels/F2D_truth_sample_profile_pearson_mean.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/main_panels/F2E_median_attenuation_ratio_clean_responsive.pdf,True,
+no obsolete displayed method label,figures/main_panels/F2E_median_attenuation_ratio_clean_responsive.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/main_panels/F2F_empirical_fdr.pdf,True,
+no obsolete displayed method label,figures/main_panels/F2F_empirical_fdr.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/main_panels/F3A_batchcorr_qc_cv_vs_run_order_deviance.pdf,True,
+no obsolete displayed method label,figures/main_panels/F3A_batchcorr_qc_cv_vs_run_order_deviance.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/main_panels/F3B_clinical_qc_cv_vs_run_order_deviance.pdf,True,
+no obsolete displayed method label,figures/main_panels/F3B_clinical_qc_cv_vs_run_order_deviance.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/main_panels/F3C_batchcorr_batch_variance_vs_replicate_icc.pdf,True,
+no obsolete displayed method label,figures/main_panels/F3C_batchcorr_batch_variance_vs_replicate_icc.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/main_panels/F3D_clinical_plate_variance_vs_replicate_icc.pdf,True,
+no obsolete displayed method label,figures/main_panels/F3D_clinical_plate_variance_vs_replicate_icc.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/main_panels/F4A_waveica_batch_vs_group.pdf,True,
+no obsolete displayed method label,figures/main_panels/F4A_waveica_batch_vs_group.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/main_panels/F4B_mtbls79_batch_vs_group.pdf,True,
+no obsolete displayed method label,figures/main_panels/F4B_mtbls79_batch_vs_group.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S10A_sacurine_age_weighted_pc_r2.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S10A_sacurine_age_weighted_pc_r2.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S10B_sacurine_bmi_weighted_pc_r2.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S10B_sacurine_bmi_weighted_pc_r2.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S10C_sacurine_gender_weighted_pc_r2.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S10C_sacurine_gender_weighted_pc_r2.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S1A_stage_heldout_qc_cv_mean.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S1A_stage_heldout_qc_cv_mean.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S1B_stage_residual_run_order_gam_mean_deviance.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S1B_stage_residual_run_order_gam_mean_deviance.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S1C_stage_batch_weighted_pc_r2_categorical.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S1C_stage_batch_weighted_pc_r2_categorical.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S2A_heldout_qc_cv_mean.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S2A_heldout_qc_cv_mean.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S2B_residual_run_order_gam_mean_deviance.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S2B_residual_run_order_gam_mean_deviance.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S2C_batch_weighted_pc_r2_categorical.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S2C_batch_weighted_pc_r2_categorical.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S2D_truth_log1p_rmse.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S2D_truth_log1p_rmse.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S2E_truth_metabolite_profile_icc_mean.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S2E_truth_metabolite_profile_icc_mean.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S2F_truth_sample_profile_pearson_mean.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S2F_truth_sample_profile_pearson_mean.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S3A_simulation_heldout_qc_cv_mean.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S3A_simulation_heldout_qc_cv_mean.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S3B_simulation_residual_run_order_gam_mean_deviance.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S3B_simulation_residual_run_order_gam_mean_deviance.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S3C_simulation_batch_weighted_pc_r2_categorical.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S3C_simulation_batch_weighted_pc_r2_categorical.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S3D_simulation_truth_log1p_rmse.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S3D_simulation_truth_log1p_rmse.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S3E_simulation_truth_metabolite_profile_icc_mean.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S3E_simulation_truth_metabolite_profile_icc_mean.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S3F_simulation_truth_sample_profile_pearson_mean.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S3F_simulation_truth_sample_profile_pearson_mean.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S4A_reference_simulation.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S4A_reference_simulation.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S4B_reference_mtbls79.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S4B_reference_mtbls79.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S4C_reference_clinical_fiams.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S4C_reference_clinical_fiams.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S4D_reference_batchcorr_set1.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S4D_reference_batchcorr_set1.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S4E_reference_sacurine.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S4E_reference_sacurine.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S4F_reference_waveica.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S4F_reference_waveica.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S5A_partial_heldout_qc_cv_mean.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S5A_partial_heldout_qc_cv_mean.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S5B_partial_residual_run_order_gam_mean_deviance.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S5B_partial_residual_run_order_gam_mean_deviance.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S5C_partial_batch_weighted_pc_r2_categorical.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S5C_partial_batch_weighted_pc_r2_categorical.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S5D_partial_clean_sample_profile_pearson_mean.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S5D_partial_clean_sample_profile_pearson_mean.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S5E_partial_median_attenuation_ratio_clean_responsive.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S5E_partial_median_attenuation_ratio_clean_responsive.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S5F_partial_empirical_fdr.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S5F_partial_empirical_fdr.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S6A_permutation_mtbls79_cow_vs_sheep.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S6A_permutation_mtbls79_cow_vs_sheep.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S6B_effect_variance_mtbls79_cow_vs_sheep.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S6B_effect_variance_mtbls79_cow_vs_sheep.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S6C_permutation_waveica_biological_group.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S6C_permutation_waveica_biological_group.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S6D_effect_variance_waveica_biological_group.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S6D_effect_variance_waveica_biological_group.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S6E_permutation_sacurine_age.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S6E_permutation_sacurine_age.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S6F_effect_variance_sacurine_age.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S6F_effect_variance_sacurine_age.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S6G_permutation_sacurine_bmi.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S6G_permutation_sacurine_bmi.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S6H_effect_variance_sacurine_bmi.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S6H_effect_variance_sacurine_bmi.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S6I_permutation_sacurine_gender.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S6I_permutation_sacurine_gender.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S6J_effect_variance_sacurine_gender.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S6J_effect_variance_sacurine_gender.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S7A_lobo_mtbls79_cow_vs_sheep.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S7A_lobo_mtbls79_cow_vs_sheep.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S7B_lobo_waveica_biological_group.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S7B_lobo_waveica_biological_group.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S7C_lobo_sacurine_age.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S7C_lobo_sacurine_age.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S7D_lobo_sacurine_bmi.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S7D_lobo_sacurine_bmi.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S7E_lobo_sacurine_gender.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S7E_lobo_sacurine_gender.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S8A_batchcorr_set1_batch_weighted_pc_r2_categorical.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S8A_batchcorr_set1_batch_weighted_pc_r2_categorical.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S8B_batchcorr_set1_sample_replicate_pearson_median.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S8B_batchcorr_set1_sample_replicate_pearson_median.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S8C_batchcorr_set1_genuine_replicate_icc_median.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S8C_batchcorr_set1_genuine_replicate_icc_median.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S8D_clinical_fiams_batch_weighted_pc_r2_categorical.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S8D_clinical_fiams_batch_weighted_pc_r2_categorical.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S8E_clinical_fiams_sample_replicate_pearson_median.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S8E_clinical_fiams_sample_replicate_pearson_median.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S8F_clinical_fiams_genuine_replicate_icc_median.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S8F_clinical_fiams_genuine_replicate_icc_median.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S9A_batch_r2_simulation.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S9A_batch_r2_simulation.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S9B_batch_r2_mtbls79.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S9B_batch_r2_mtbls79.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S9C_batch_r2_clinical_fiams.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S9C_batch_r2_clinical_fiams.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S9D_batch_r2_batchcorr_set1.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S9D_batch_r2_batchcorr_set1.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S9E_batch_r2_sacurine.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S9E_batch_r2_sacurine.pdf,True,1 pages; 0 obsolete labels
+current displayed endpoint terminology,figures/supplementary_panels/S9F_batch_r2_waveica.pdf,True,
+no obsolete displayed method label,figures/supplementary_panels/S9F_batch_r2_waveica.pdf,True,1 pages; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/F2A_selective_forced_truth_rmse.csv,True,40 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/F2B_truth_log1p_rmse.csv,True,70 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/F2C_truth_metabolite_profile_icc_mean.csv,True,70 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/F2D_truth_sample_profile_pearson_mean.csv,True,70 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/F2E_median_attenuation_ratio_clean_responsive.csv,True,18 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/F2F_empirical_fdr.csv,True,18 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/F3A_batchcorr_qc_cv_vs_run_order_deviance.csv,True,7 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/F3B_clinical_qc_cv_vs_run_order_deviance.csv,True,7 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/F3C_batchcorr_batch_variance_vs_replicate_icc.csv,True,7 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/F3D_clinical_plate_variance_vs_replicate_icc.csv,True,7 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/F4A_waveica_batch_vs_group.csv,True,7 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/F4B_mtbls79_batch_vs_group.csv,True,7 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S10A_sacurine_age_weighted_pc_r2.csv,True,8 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S10B_sacurine_bmi_weighted_pc_r2.csv,True,8 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S10C_sacurine_gender_weighted_pc_r2.csv,True,8 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S1A_stage_heldout_qc_cv_mean.csv,True,24 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S1B_stage_residual_run_order_gam_mean_deviance.csv,True,24 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S1C_stage_batch_weighted_pc_r2_categorical.csv,True,24 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S2A_heldout_qc_cv_mean.csv,True,24 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S2B_residual_run_order_gam_mean_deviance.csv,True,24 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S2C_batch_weighted_pc_r2_categorical.csv,True,24 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S2D_truth_log1p_rmse.csv,True,40 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S2E_truth_metabolite_profile_icc_mean.csv,True,40 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S2F_truth_sample_profile_pearson_mean.csv,True,40 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S3A_simulation_heldout_qc_cv_mean.csv,True,90 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S3B_simulation_residual_run_order_gam_mean_deviance.csv,True,90 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S3C_simulation_batch_weighted_pc_r2_categorical.csv,True,90 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S3D_simulation_truth_log1p_rmse.csv,True,90 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S3E_simulation_truth_metabolite_profile_icc_mean.csv,True,90 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S3F_simulation_truth_sample_profile_pearson_mean.csv,True,90 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S4A_reference_simulation.csv,True,80 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S4B_reference_mtbls79.csv,True,80 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S4C_reference_clinical_fiams.csv,True,80 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S4D_reference_batchcorr_set1.csv,True,80 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S4E_reference_sacurine.csv,True,80 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S4F_reference_waveica.csv,True,80 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S5A_partial_heldout_qc_cv_mean.csv,True,36 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S5B_partial_residual_run_order_gam_mean_deviance.csv,True,36 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S5C_partial_batch_weighted_pc_r2_categorical.csv,True,36 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S5D_partial_clean_sample_profile_pearson_mean.csv,True,36 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S5E_partial_median_attenuation_ratio_clean_responsive.csv,True,36 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S5F_partial_empirical_fdr.csv,True,36 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,True,8 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S6B_effect_variance_mtbls79_cow_vs_sheep.csv,True,8 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S6C_permutation_waveica_biological_group.csv,True,8 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S6D_effect_variance_waveica_biological_group.csv,True,8 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S6E_permutation_sacurine_age.csv,True,8 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S6F_effect_variance_sacurine_age.csv,True,8 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S6G_permutation_sacurine_bmi.csv,True,8 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S6H_effect_variance_sacurine_bmi.csv,True,8 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S6I_permutation_sacurine_gender.csv,True,8 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S6J_effect_variance_sacurine_gender.csv,True,8 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S7A_lobo_mtbls79_cow_vs_sheep.csv,True,192 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S7B_lobo_waveica_biological_group.csv,True,72 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S7C_lobo_sacurine_age.csv,True,48 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S7D_lobo_sacurine_bmi.csv,True,48 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S7E_lobo_sacurine_gender.csv,True,48 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S8A_batchcorr_set1_batch_weighted_pc_r2_categorical.csv,True,8 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S8B_batchcorr_set1_sample_replicate_pearson_median.csv,True,8 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S8C_batchcorr_set1_genuine_replicate_icc_median.csv,True,8 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S8D_clinical_fiams_batch_weighted_pc_r2_categorical.csv,True,8 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S8E_clinical_fiams_sample_replicate_pearson_median.csv,True,8 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S8F_clinical_fiams_genuine_replicate_icc_median.csv,True,8 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S9A_batch_r2_simulation.csv,True,5 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S9B_batch_r2_mtbls79.csv,True,5 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S9C_batch_r2_clinical_fiams.csv,True,5 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S9D_batch_r2_batchcorr_set1.csv,True,5 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S9E_batch_r2_sacurine.csv,True,5 rows; 0 obsolete labels
+no obsolete source-data display label,figures/source_data/S9F_batch_r2_waveica.csv,True,5 rows; 0 obsolete labels
+PNG has provenance entry,figures/supplementary_panels/S10A_sacurine_age_weighted_pc_r2.png,True,
+PNG source PDF unchanged,figures/supplementary_panels/S10A_sacurine_age_weighted_pc_r2.png,True,
+PNG bytes match rendered preview,figures/supplementary_panels/S10A_sacurine_age_weighted_pc_r2.png,True,
+PNG readable,figures/supplementary_panels/S10A_sacurine_age_weighted_pc_r2.png,True,2055x709
+no obsolete raster method label,figures/supplementary_panels/S10A_sacurine_age_weighted_pc_r2.png,True,0 obsolete labels
+PNG has provenance entry,figures/supplementary_panels/S10B_sacurine_bmi_weighted_pc_r2.png,True,
+PNG source PDF unchanged,figures/supplementary_panels/S10B_sacurine_bmi_weighted_pc_r2.png,True,
+PNG bytes match rendered preview,figures/supplementary_panels/S10B_sacurine_bmi_weighted_pc_r2.png,True,
+PNG readable,figures/supplementary_panels/S10B_sacurine_bmi_weighted_pc_r2.png,True,2055x709
+no obsolete raster method label,figures/supplementary_panels/S10B_sacurine_bmi_weighted_pc_r2.png,True,0 obsolete labels
+PNG has provenance entry,figures/supplementary_panels/S10C_sacurine_gender_weighted_pc_r2.png,True,
+PNG source PDF unchanged,figures/supplementary_panels/S10C_sacurine_gender_weighted_pc_r2.png,True,
+PNG bytes match rendered preview,figures/supplementary_panels/S10C_sacurine_gender_weighted_pc_r2.png,True,
+PNG readable,figures/supplementary_panels/S10C_sacurine_gender_weighted_pc_r2.png,True,2055x709
+no obsolete raster method label,figures/supplementary_panels/S10C_sacurine_gender_weighted_pc_r2.png,True,0 obsolete labels
+PNG has provenance entry,figures/supplementary_panels/S4A_reference_simulation.png,True,
+PNG source PDF unchanged,figures/supplementary_panels/S4A_reference_simulation.png,True,
+PNG bytes match rendered preview,figures/supplementary_panels/S4A_reference_simulation.png,True,
+PNG readable,figures/supplementary_panels/S4A_reference_simulation.png,True,1000x646
+no obsolete raster method label,figures/supplementary_panels/S4A_reference_simulation.png,True,0 obsolete labels
+PNG has provenance entry,figures/supplementary_panels/S4B_reference_mtbls79.png,True,
+PNG source PDF unchanged,figures/supplementary_panels/S4B_reference_mtbls79.png,True,
+PNG bytes match rendered preview,figures/supplementary_panels/S4B_reference_mtbls79.png,True,
+PNG readable,figures/supplementary_panels/S4B_reference_mtbls79.png,True,1000x646
+no obsolete raster method label,figures/supplementary_panels/S4B_reference_mtbls79.png,True,0 obsolete labels
+PNG has provenance entry,figures/supplementary_panels/S4C_reference_clinical_fiams.png,True,
+PNG source PDF unchanged,figures/supplementary_panels/S4C_reference_clinical_fiams.png,True,
+PNG bytes match rendered preview,figures/supplementary_panels/S4C_reference_clinical_fiams.png,True,
+PNG readable,figures/supplementary_panels/S4C_reference_clinical_fiams.png,True,1000x646
+no obsolete raster method label,figures/supplementary_panels/S4C_reference_clinical_fiams.png,True,0 obsolete labels
+PNG has provenance entry,figures/supplementary_panels/S4D_reference_batchcorr_set1.png,True,
+PNG source PDF unchanged,figures/supplementary_panels/S4D_reference_batchcorr_set1.png,True,
+PNG bytes match rendered preview,figures/supplementary_panels/S4D_reference_batchcorr_set1.png,True,
+PNG readable,figures/supplementary_panels/S4D_reference_batchcorr_set1.png,True,1000x646
+no obsolete raster method label,figures/supplementary_panels/S4D_reference_batchcorr_set1.png,True,0 obsolete labels
+PNG has provenance entry,figures/supplementary_panels/S4E_reference_sacurine.png,True,
+PNG source PDF unchanged,figures/supplementary_panels/S4E_reference_sacurine.png,True,
+PNG bytes match rendered preview,figures/supplementary_panels/S4E_reference_sacurine.png,True,
+PNG readable,figures/supplementary_panels/S4E_reference_sacurine.png,True,1000x646
+no obsolete raster method label,figures/supplementary_panels/S4E_reference_sacurine.png,True,0 obsolete labels
+PNG has provenance entry,figures/supplementary_panels/S4F_reference_waveica.png,True,
+PNG source PDF unchanged,figures/supplementary_panels/S4F_reference_waveica.png,True,
+PNG bytes match rendered preview,figures/supplementary_panels/S4F_reference_waveica.png,True,
+PNG readable,figures/supplementary_panels/S4F_reference_waveica.png,True,1000x646
+no obsolete raster method label,figures/supplementary_panels/S4F_reference_waveica.png,True,0 obsolete labels
+PNG has provenance entry,figures/supplementary_panels/S6A_permutation_mtbls79_cow_vs_sheep.png,True,
+PNG source PDF unchanged,figures/supplementary_panels/S6A_permutation_mtbls79_cow_vs_sheep.png,True,
+PNG bytes match rendered preview,figures/supplementary_panels/S6A_permutation_mtbls79_cow_vs_sheep.png,True,
+PNG readable,figures/supplementary_panels/S6A_permutation_mtbls79_cow_vs_sheep.png,True,2055x825
+no obsolete raster method label,figures/supplementary_panels/S6A_permutation_mtbls79_cow_vs_sheep.png,True,0 obsolete labels
+PNG has provenance entry,figures/supplementary_panels/S6B_effect_variance_mtbls79_cow_vs_sheep.png,True,
+PNG source PDF unchanged,figures/supplementary_panels/S6B_effect_variance_mtbls79_cow_vs_sheep.png,True,
+PNG bytes match rendered preview,figures/supplementary_panels/S6B_effect_variance_mtbls79_cow_vs_sheep.png,True,
+PNG readable,figures/supplementary_panels/S6B_effect_variance_mtbls79_cow_vs_sheep.png,True,2055x825
+no obsolete raster method label,figures/supplementary_panels/S6B_effect_variance_mtbls79_cow_vs_sheep.png,True,0 obsolete labels
+PNG has provenance entry,figures/supplementary_panels/S6C_permutation_waveica_biological_group.png,True,
+PNG source PDF unchanged,figures/supplementary_panels/S6C_permutation_waveica_biological_group.png,True,
+PNG bytes match rendered preview,figures/supplementary_panels/S6C_permutation_waveica_biological_group.png,True,
+PNG readable,figures/supplementary_panels/S6C_permutation_waveica_biological_group.png,True,2055x825
+no obsolete raster method label,figures/supplementary_panels/S6C_permutation_waveica_biological_group.png,True,0 obsolete labels
+PNG has provenance entry,figures/supplementary_panels/S6D_effect_variance_waveica_biological_group.png,True,
+PNG source PDF unchanged,figures/supplementary_panels/S6D_effect_variance_waveica_biological_group.png,True,
+PNG bytes match rendered preview,figures/supplementary_panels/S6D_effect_variance_waveica_biological_group.png,True,
+PNG readable,figures/supplementary_panels/S6D_effect_variance_waveica_biological_group.png,True,2055x825
+no obsolete raster method label,figures/supplementary_panels/S6D_effect_variance_waveica_biological_group.png,True,0 obsolete labels
+PNG has provenance entry,figures/supplementary_panels/S6E_permutation_sacurine_age.png,True,
+PNG source PDF unchanged,figures/supplementary_panels/S6E_permutation_sacurine_age.png,True,
+PNG bytes match rendered preview,figures/supplementary_panels/S6E_permutation_sacurine_age.png,True,
+PNG readable,figures/supplementary_panels/S6E_permutation_sacurine_age.png,True,2055x825
+no obsolete raster method label,figures/supplementary_panels/S6E_permutation_sacurine_age.png,True,0 obsolete labels
+PNG has provenance entry,figures/supplementary_panels/S6F_effect_variance_sacurine_age.png,True,
+PNG source PDF unchanged,figures/supplementary_panels/S6F_effect_variance_sacurine_age.png,True,
+PNG bytes match rendered preview,figures/supplementary_panels/S6F_effect_variance_sacurine_age.png,True,
+PNG readable,figures/supplementary_panels/S6F_effect_variance_sacurine_age.png,True,2055x825
+no obsolete raster method label,figures/supplementary_panels/S6F_effect_variance_sacurine_age.png,True,0 obsolete labels
+PNG has provenance entry,figures/supplementary_panels/S6G_permutation_sacurine_bmi.png,True,
+PNG source PDF unchanged,figures/supplementary_panels/S6G_permutation_sacurine_bmi.png,True,
+PNG bytes match rendered preview,figures/supplementary_panels/S6G_permutation_sacurine_bmi.png,True,
+PNG readable,figures/supplementary_panels/S6G_permutation_sacurine_bmi.png,True,2055x825
+no obsolete raster method label,figures/supplementary_panels/S6G_permutation_sacurine_bmi.png,True,0 obsolete labels
+PNG has provenance entry,figures/supplementary_panels/S6H_effect_variance_sacurine_bmi.png,True,
+PNG source PDF unchanged,figures/supplementary_panels/S6H_effect_variance_sacurine_bmi.png,True,
+PNG bytes match rendered preview,figures/supplementary_panels/S6H_effect_variance_sacurine_bmi.png,True,
+PNG readable,figures/supplementary_panels/S6H_effect_variance_sacurine_bmi.png,True,2055x825
+no obsolete raster method label,figures/supplementary_panels/S6H_effect_variance_sacurine_bmi.png,True,0 obsolete labels
+PNG has provenance entry,figures/supplementary_panels/S6I_permutation_sacurine_gender.png,True,
+PNG source PDF unchanged,figures/supplementary_panels/S6I_permutation_sacurine_gender.png,True,
+PNG bytes match rendered preview,figures/supplementary_panels/S6I_permutation_sacurine_gender.png,True,
+PNG readable,figures/supplementary_panels/S6I_permutation_sacurine_gender.png,True,2055x825
+no obsolete raster method label,figures/supplementary_panels/S6I_permutation_sacurine_gender.png,True,0 obsolete labels
+PNG has provenance entry,figures/supplementary_panels/S6J_effect_variance_sacurine_gender.png,True,
+PNG source PDF unchanged,figures/supplementary_panels/S6J_effect_variance_sacurine_gender.png,True,
+PNG bytes match rendered preview,figures/supplementary_panels/S6J_effect_variance_sacurine_gender.png,True,
+PNG readable,figures/supplementary_panels/S6J_effect_variance_sacurine_gender.png,True,2055x825
+no obsolete raster method label,figures/supplementary_panels/S6J_effect_variance_sacurine_gender.png,True,0 obsolete labels
+PNG has provenance entry,figures/supplementary_panels/S8A_batchcorr_set1_batch_weighted_pc_r2_categorical.png,True,
+PNG source PDF unchanged,figures/supplementary_panels/S8A_batchcorr_set1_batch_weighted_pc_r2_categorical.png,True,
+PNG bytes match rendered preview,figures/supplementary_panels/S8A_batchcorr_set1_batch_weighted_pc_r2_categorical.png,True,
+PNG readable,figures/supplementary_panels/S8A_batchcorr_set1_batch_weighted_pc_r2_categorical.png,True,1000x646
+no obsolete raster method label,figures/supplementary_panels/S8A_batchcorr_set1_batch_weighted_pc_r2_categorical.png,True,0 obsolete labels
+PNG has provenance entry,figures/supplementary_panels/S8B_batchcorr_set1_sample_replicate_pearson_median.png,True,
+PNG source PDF unchanged,figures/supplementary_panels/S8B_batchcorr_set1_sample_replicate_pearson_median.png,True,
+PNG bytes match rendered preview,figures/supplementary_panels/S8B_batchcorr_set1_sample_replicate_pearson_median.png,True,
+PNG readable,figures/supplementary_panels/S8B_batchcorr_set1_sample_replicate_pearson_median.png,True,1000x646
+no obsolete raster method label,figures/supplementary_panels/S8B_batchcorr_set1_sample_replicate_pearson_median.png,True,0 obsolete labels
+PNG has provenance entry,figures/supplementary_panels/S8C_batchcorr_set1_genuine_replicate_icc_median.png,True,
+PNG source PDF unchanged,figures/supplementary_panels/S8C_batchcorr_set1_genuine_replicate_icc_median.png,True,
+PNG bytes match rendered preview,figures/supplementary_panels/S8C_batchcorr_set1_genuine_replicate_icc_median.png,True,
+PNG readable,figures/supplementary_panels/S8C_batchcorr_set1_genuine_replicate_icc_median.png,True,1000x646
+no obsolete raster method label,figures/supplementary_panels/S8C_batchcorr_set1_genuine_replicate_icc_median.png,True,0 obsolete labels
+PNG has provenance entry,figures/supplementary_panels/S8D_clinical_fiams_batch_weighted_pc_r2_categorical.png,True,
+PNG source PDF unchanged,figures/supplementary_panels/S8D_clinical_fiams_batch_weighted_pc_r2_categorical.png,True,
+PNG bytes match rendered preview,figures/supplementary_panels/S8D_clinical_fiams_batch_weighted_pc_r2_categorical.png,True,
+PNG readable,figures/supplementary_panels/S8D_clinical_fiams_batch_weighted_pc_r2_categorical.png,True,1000x646
+no obsolete raster method label,figures/supplementary_panels/S8D_clinical_fiams_batch_weighted_pc_r2_categorical.png,True,0 obsolete labels
+PNG has provenance entry,figures/supplementary_panels/S8E_clinical_fiams_sample_replicate_pearson_median.png,True,
+PNG source PDF unchanged,figures/supplementary_panels/S8E_clinical_fiams_sample_replicate_pearson_median.png,True,
+PNG bytes match rendered preview,figures/supplementary_panels/S8E_clinical_fiams_sample_replicate_pearson_median.png,True,
+PNG readable,figures/supplementary_panels/S8E_clinical_fiams_sample_replicate_pearson_median.png,True,1000x646
+no obsolete raster method label,figures/supplementary_panels/S8E_clinical_fiams_sample_replicate_pearson_median.png,True,0 obsolete labels
+PNG has provenance entry,figures/supplementary_panels/S8F_clinical_fiams_genuine_replicate_icc_median.png,True,
+PNG source PDF unchanged,figures/supplementary_panels/S8F_clinical_fiams_genuine_replicate_icc_median.png,True,
+PNG bytes match rendered preview,figures/supplementary_panels/S8F_clinical_fiams_genuine_replicate_icc_median.png,True,
+PNG readable,figures/supplementary_panels/S8F_clinical_fiams_genuine_replicate_icc_median.png,True,1000x646
+no obsolete raster method label,figures/supplementary_panels/S8F_clinical_fiams_genuine_replicate_icc_median.png,True,0 obsolete labels
+figure atlas bookmarks,figures/WiNN_figures.pdf,True,Figure 1; Figure 2; Figure 3; Figure 4; Figure S1; Figure S2; Figure S3; Figure S4; Figure S5; Figure S6; Figure S7; Figure S8; Figure S9; Figure S10

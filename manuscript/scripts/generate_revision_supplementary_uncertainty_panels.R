@@ -61,10 +61,10 @@ for (spec in specs4) {
  save_panel(p, stem, d)
 }
 specs8 <- list(
- c("A", "batchcorr_set1", "batch_weighted_pc_r2_categorical", "BatchCorr batch structure", "Weighted-PC R2"),
+ c("A", "batchcorr_set1", "batch_weighted_pc_r2_categorical", "BatchCorr batch structure", "Variance explained by batch"),
  c("B", "batchcorr_set1", "sample_replicate_pearson_median", "BatchCorr replicate profiles", "Replicate-profile Pearson r"),
  c("C", "batchcorr_set1", "genuine_replicate_icc_median", "BatchCorr replicate agreement", "Replicate ICC(A,1)"),
- c("D", "clinical_fiams", "batch_weighted_pc_r2_categorical", "Clinical plate structure", "Weighted-PC R2"),
+ c("D", "clinical_fiams", "batch_weighted_pc_r2_categorical", "Clinical plate structure", "Variance explained by batch"),
  c("E", "clinical_fiams", "sample_replicate_pearson_median", "Clinical replicate profiles", "Replicate-profile Pearson r"),
  c("F", "clinical_fiams", "genuine_replicate_icc_median", "Clinical replicate agreement", "Replicate ICC(A,1)"))
 for (spec in specs8) {
@@ -105,7 +105,7 @@ for (spec in specs10) {
   scale_fill_manual(values = colors, drop = FALSE) +
   scale_x_continuous(expand = expansion(mult = c(.12, .20))) +
   scale_y_continuous(expand = expansion(mult = c(.08, .10))) +
-  labs(title = paste(spec[1], spec[3]), x = "Batch weighted-PC R² (%)", y = "Covariate weighted-PC R² (%)") +
+  labs(title = paste(spec[1], spec[3]), x = "Variance explained by batch (%)", y = "Variance explained\nby covariate (%)") +
   panel_theme + theme(panel.grid.major.y = element_line(colour = "#E2E7ED", linewidth = line_width),
                       plot.margin = margin(3, 10, 3, 4))
  save_panel(p, stem, d, width = 174, height = 60)

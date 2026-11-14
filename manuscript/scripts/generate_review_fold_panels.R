@@ -19,7 +19,7 @@ d$metric <- factor(d$metric, levels = c("pearson", "spearman", "sign_concordance
 d <- d[!is.na(d$metric), ]
 panels <- list(
   list("mtbls79", "cow_vs_sheep", "S7A_lobo_mtbls79_cow_vs_sheep", "A  MTBLS79 cow versus sheep"),
-  list("waveica", "biological_group", "S7B_lobo_waveica_biological_group", "B  WaveICA deposited groups"),
+  list("waveica", "biological_group", "S7B_lobo_waveica_biological_group", "B  WaveICA biological groups"),
   list("sacurine", "age", "S7C_lobo_sacurine_age", "C  Sacurine age"),
   list("sacurine", "bmi", "S7D_lobo_sacurine_bmi", "D  Sacurine BMI"),
   list("sacurine", "gender", "S7E_lobo_sacurine_gender", "E  Sacurine gender")
