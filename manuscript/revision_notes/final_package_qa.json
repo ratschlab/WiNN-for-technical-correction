@@ -1,16 +1,16 @@
 {
   "main": {
     "pages": 7,
-    "pdf_sha256": "4db21d42dd0351464edd99c702003df357e0b71d70f99128e42dbb83a7d37aca",
-    "source_sha256": "81e25546bb0bf57465aa5cd559c63187a6e7c7c332dc6bb821d70584da7e0143",
+    "pdf_sha256": "43766a1752a8743506fae3ca3de076127cfa591f0bade3fbce118179470bb185",
+    "source_sha256": "a68fe5996c1e7ca17657e4f75b9a0565562a6658c275b63dd53eef9356d98d26",
     "out_of_page_characters": [],
     "unresolved_errors": [],
     "overfull_boxes": []
   },
   "supplementary": {
     "pages": 47,
-    "pdf_sha256": "8db60af5059461a6b465738a19b422e0276e1ee74e954f40b9b73fbb475fed69",
-    "source_sha256": "17e43a8d180502867bce92916d7792818e06e52042482ec68fc015d43306c076",
+    "pdf_sha256": "98f54f6005fcdf5280a1d1ee1d4a80616e68e68971d6d115d2aa88970ad83cda",
+    "source_sha256": "bae786472ee678114d4c0e0d422d798e724eac3366750b008338bfcdd1941385",
     "out_of_page_characters": [],
     "unresolved_errors": [],
     "overfull_boxes": []
@@ -19,5 +19,34 @@
   "main_figure_count": 4,
   "main_alt_text_count": 4,
   "guidance_url": "https://academic.oup.com/bioinformatics/pages/author-guidelines",
-  "guidance_checked": "2026-11-14"
+  "guidance_checked": "2026-11-14",
+  "overleaf_verification": {
+    "checked_utc": "2026-11-14T14:48:13.174287+00:00",
+    "source_commit": "239757d",
+    "project": "https://www.overleaf.com/project/68bade5d0a8ed64f1f526000",
+    "main": {
+      "pages": 7,
+      "errors": 0,
+      "warnings": 9,
+      "overfull_boxes": 0
+    },
+    "supplementary": {
+      "pages": 47,
+      "errors": 0,
+      "warnings": 12,
+      "overfull_boxes": 0
+    },
+    "main_document_restored": true,
+    "figure2_visually_verified": true,
+    "screenshot_sha256": "50f693e62625e643a84ad1b79d26b1286d39a2b2adb83f26f5b83b71837b6457"
+  },
+  "focused_scope": {
+    "analysis_source_revision": "0fa1b32a3898cb6dd449870e30c7a80e8e563e57",
+    "winn_version": "0.1.6",
+    "confounding_fits": 190,
+    "protected_files": 439,
+    "protected_main_text_blocks": 4,
+    "selection_limits_main_subsection_removed": true,
+    "calibration_comparison_supplement_only": true
+  }
 }

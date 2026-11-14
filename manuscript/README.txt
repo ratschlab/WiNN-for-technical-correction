@@ -14,7 +14,7 @@ figures included by main.tex. Individual panels and plotted source CSVs are
 under figures/main_panels, figures/supplementary_panels and figures/source_data.
 Compiled supplementary figures are under figures/compiled_supplementary.
 For direct review of every figure, open figures/WiNN_figures.pdf, with bookmarks
-for Figures 1-4 and Supplementary Figures S1-S10.
+for Figures 1-4 and Supplementary Figures S1-S11.
 Captions and endpoint definitions are in the manuscript and supplement.
 
 WiNN is the primary configuration. Supplementary comparisons distinguish
@@ -64,3 +64,17 @@ https://github.com/ratschlab/WiNN-for-technical-correction/tree/853541434d507e9c
 The numerical-results provenance remains revision 491a6f9; this code fix does
 not change archived results. Package documentation is updated at d9e81b5,
 while the analyzed implementation remains package commit 50b72a4.
+
+Focused confounding revision and supplementary relocation
+--------------------------------------------------------
+Figure 2E-F now uses the original technical artifacts and WiNN 0.1.6 with a
+180:270 allocation that reaches complete batch separation. The retained marginal
+group contrast and Welch/BH detection sensitivity accompany FDR. All 190 planned
+fits are included; generated/figure2_confounding contains the protocol and checks.
+Figure 2A-D and the selective/forced narrative remain unchanged.
+The former main-text Section 3.5 is in Supplementary Methods S10. Figure S11
+compares an experimental permutation gate separately; it was not used in any
+correction benchmark. scripts/calibration_revision/README.md defines this scope.
+Scientific code/results snapshot:
+https://github.com/ratschlab/WiNN-for-technical-correction/tree/0fa1b32a3898cb6dd449870e30c7a80e8e563e57
+The documents compile to seven main-text and 47 supplementary pages.
