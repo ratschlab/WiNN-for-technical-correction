@@ -1,0 +1,112 @@
+{
+  "schema": "winn_permutation_calibration_derivative_biology_v1",
+  "frozen_before_analysis": true,
+  "scope": "Evaluation of existing frozen matrices only; no correction, tuning, or method selection is permitted.",
+  "provenance": {
+    "package_version": "0.1.7.9999",
+    "package_commit": "ab4969792c98bd86208a28a4e83b7a69e204b9fc",
+    "package_tarball_sha256": "72c90896ac28f3ee4000a5c6d5287e7d4031e307c40b787d001755a6982c4c29",
+    "analysis_commit": "codex/permutation-drift-rerun; recorded final code commit before publication",
+    "release_root": "/cluster/scratch/ttanna/winn017_permutation_release_20261114"
+  },
+  "methods": [
+    "Raw",
+    "ComBat",
+    "QC-RLSC",
+    "QC-RFSC",
+    "TIGER",
+    "SERRF",
+    "WiNN auto (QC)",
+    "WiNN auto-batch (QC)",
+    "WiNN fixed default (no QC)"
+  ],
+  "primary_winn_mode": "WiNN fixed default (no QC)",
+  "secondary_winn_modes": [
+    "WiNN auto (QC)",
+    "WiNN auto-batch (QC)"
+  ],
+  "common_processing": {
+    "transformation": "log1p frozen nonnegative intensity",
+    "feature_panel": "Within each dataset, the exact intersection of feature identifiers across all nine frozen method matrices, in raw-matrix order; no method-specific feature removal.",
+    "sample_panel": "Within each dataset, the exact intersection of correction-unit identifiers across all nine frozen matrices and frozen metadata, in raw-matrix order.",
+    "bootstrap_replicates": 2000,
+    "permutation_replicates": 5000,
+    "confidence_level": 0.95,
+    "multiple_testing": "Benjamini-Hochberg within each method-dataset-biological-endpoint family",
+    "association_fdr": 0.05,
+    "pca_components": 5,
+    "weighted_pc_label": "Variance-weighted mean R-squared across principal components 1-5",
+    "bootstrap_seed": 2026072701,
+    "permutation_seed": 2026072702,
+    "matching_seed": 2026072703,
+    "simulation_seed_bootstrap_seed": 2026072704
+  },
+  "datasets": {
+    "simulation": {
+      "independent_unit": "completed simulation seed",
+      "endpoints": [
+        "truth_log1p_rmse",
+        "truth_metabolite_profile_icc_mean",
+        "truth_sample_profile_pearson_mean",
+        "heldout_qc_cv_mean",
+        "residual_run_order_gam_mean_deviance",
+        "residual_ljung_box_proportion_significant",
+        "batch_weighted_pc_r2_categorical"
+      ],
+      "bootstrap": "Resample the completed frozen seeds with replacement and preserve method pairing within seed.",
+      "permutation": "Not applicable because truth recovery is observed directly."
+    },
+    "waveica": {
+      "independent_unit": "study sample",
+      "endpoint": "deposited biological_group with neutral labels group_0 and group_1",
+      "bootstrap": "Resample study samples within batch-by-group strata; use identical draws for every method and recompute each metric.",
+      "permutation": "Permute group labels among study samples within batch while preserving group counts.",
+      "association_model": "Two-group feature model on log1p intensities with Benjamini-Hochberg FDR.",
+      "leave_one_batch_out": "Estimate group_1-minus-group_0 log1p effects in training batches and independently in the held-out batch."
+    },
+    "mtbls79": {
+      "independent_unit": "sample_rep biological identity",
+      "endpoint": "deposited cow-versus-sheep class",
+      "bootstrap": "Resample biological identities within class and carry all repeated injections of an identity together.",
+      "permutation": "Permute class labels at biological-identity level; repeated injections retain the assigned label.",
+      "association_model": "Average log1p repeated injections by biological identity, then fit a two-group feature model with Benjamini-Hochberg FDR.",
+      "leave_one_batch_out": "Within each fold, average at most one profile per biological identity and estimate cow-minus-sheep effects independently in training and held-out batches."
+    },
+    "sacurine": {
+      "independent_unit": "study sample",
+      "endpoints": [
+        "age",
+        "bmi",
+        "gender"
+      ],
+      "bootstrap": "Resample study samples within batch and use identical draws for all methods.",
+      "permutation": "Freedman-Lane residual permutation within batch for each focal covariate, with the other biological covariates and sampling factor retained as nuisance terms.",
+      "association_model": "Osmolality-normalized intensities; multivariable log1p feature model containing standardized age, standardized BMI, deposited gender, and sampling factor.",
+      "leave_one_batch_out": "Two-batch effect replication where the focal covariate is estimable in both training and held-out samples."
+    },
+    "batchcorr_set1": {
+      "independent_unit": "accession_id",
+      "endpoints": [
+        "replicate_profile_correlation",
+        "replicate_icc",
+        "cross_batch_top1_matching",
+        "cross_batch_mean_reciprocal_rank"
+      ],
+      "bootstrap": "Cluster bootstrap accessions and carry every replicate injection together.",
+      "permutation": "Not applicable to the primary replicate-preservation endpoints.",
+      "matching": "Each study profile queries study profiles in a different batch; rank candidate accessions by Pearson similarity and exclude the query profile."
+    },
+    "clinical_fiams": {
+      "independent_unit": "anonymized biological sample",
+      "endpoints": [
+        "replicate_profile_correlation",
+        "replicate_icc",
+        "cross_plate_top1_matching",
+        "cross_plate_mean_reciprocal_rank"
+      ],
+      "bootstrap": "Cluster bootstrap anonymized biological samples and carry all pair-collapsed correction units together.",
+      "permutation": "Not applicable to the primary replicate-preservation endpoints.",
+      "matching": "Each clinical profile queries clinical profiles on a different plate; rank candidate biological samples by Pearson similarity. Identifiers are hashed in public derivative output."
+    }
+  }
+}

@@ -90,8 +90,9 @@ def selected_settings():
             if r["Dataset"] != dataset:
                 continue
             source = "inferred" if r["BatchSource"].startswith("auto") else "supplied"
+            drift_error = "FWER" if "maxT" in r["Test"] else "FDR"
             setting = (f"batches {source} ({r['Segments']}); {r['Test']}; {r['Smoother']} smoother; "
-                       f"drift FDR {r['DriftFDR']}; batch FDR {r['BatchFDR']}; PQN {pqn.get(r['PQN'], r['PQN'])}")
+                       f"drift {drift_error} {r['DriftFDR']}; batch FDR {r['BatchFDR']}; PQN {pqn.get(r['PQN'], r['PQN'])}")
             tuned = r["Mode"] != "WiNN"
             lines.append(row([dataset, r["Mode"], setting, "grid" if tuned else "1",
                               "Package training-QC score" if tuned else "Prespecified"]))
@@ -99,7 +100,7 @@ def selected_settings():
     lines = lines[:-1]
     caption = ("Selected correction settings for every dataset and method. Comparator candidates were "
                "prespecified or scored on labelled training QCs only. WiNN (QC-tuned) and WiNN (inferred "
-               "segments) selected settings from the package grid (36 or 72 candidates; Section~S1) using "
+               "segments) selected settings from the package grid (36 nominal candidates; Section~S1) using "
                "training QCs only; segment counts are shown in parentheses. WiNN uses one prespecified "
                "configuration in every dataset and receives no QC identities. Raw is the identity operation, "
                "and TIGER uses its native $4\\times4$ ensemble with injection order and 500 trees in every dataset.")

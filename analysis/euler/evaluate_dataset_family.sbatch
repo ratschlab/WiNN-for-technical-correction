@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=winn016_eval
+#SBATCH --job-name=winn017_eval
 #SBATCH --output=slurm-%x-%A_%a.out
 #SBATCH --error=slurm-%x-%A_%a.err
 #SBATCH --time=36:00:00

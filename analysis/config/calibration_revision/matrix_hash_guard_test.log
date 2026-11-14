@@ -1,0 +1,1 @@
+PASS: integer byte metadata accepted; changed content, wrong exact size and incomplete set rejected.

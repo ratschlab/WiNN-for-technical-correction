@@ -1,0 +1,14 @@
+[
+  {
+    "archive": "supplement_20261114",
+    "files": 15,
+    "manifest_sha256": "cc93ee017492d6f7fb831824418584b152877536778ab4be9d9b2ccd5b5d1861",
+    "all_hashes_and_exact_bytes_verified": true
+  },
+  {
+    "archive": "derivative_20261114",
+    "files": 13,
+    "manifest_sha256": "bce0c626194bb8a061954adcd3d46cecc72255781e703e81c25c4f3146cfd87e",
+    "all_hashes_and_exact_bytes_verified": true
+  }
+]

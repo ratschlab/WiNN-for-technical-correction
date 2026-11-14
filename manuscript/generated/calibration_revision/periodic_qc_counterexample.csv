@@ -1,0 +1,2 @@
+"n","qc_period","mad","mad_entries_changed","rho10","q_statistic","asymptotic_p","permutation_raw_p","permutation_maxT_p","selected","permutations","permutation_seed"
+100,10,0,0,0.9,102.598521190593,0,0.001,0.001,TRUE,999,104729

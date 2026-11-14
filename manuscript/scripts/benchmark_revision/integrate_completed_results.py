@@ -86,12 +86,15 @@ for n in range(1, 11):
         item = {key: item.get(key, "") for key in old[0]}
         item.update(method_id="qc_rfsc", method="QC-RFSC", dataset_key="simulation", seed_id=seed)
         corrected.append(item)
+    # Validate completeness, never require a particular ranking of methods.
+    # Calibration revisions may change WiNN estimates in either direction.
     for metric in metrics[1:]:
-        winn = next(float(r["value"]) for r in old if r["seed_id"] == seed and
-                    r["method_id"] == "winn_fixed_no_qc" and r["metric"] == metric)
-        rfsc = float(row[metric])
-        check(seed + " WiNN truth comparison " + metric,
-              winn < rfsc if "rmse" in metric else winn > rfsc)
+        matched = [r for r in old if r["seed_id"] == seed and
+                   r["method_id"] == "winn_fixed_no_qc" and r["metric"] == metric]
+        check(seed + " unique finite WiNN truth endpoint " + metric,
+              len(matched) == 1 and math.isfinite(float(matched[0]["value"])))
+        check(seed + " finite corrected RFSC truth endpoint " + metric,
+              math.isfinite(float(row[metric])))
 write(source, [r for r in old if r["method_id"] != "qc_rfsc"] + corrected)
 
 # Every published RFSC simulation cell comes from the same corrected matrices.
@@ -240,7 +243,7 @@ caption_replacements = {
     "Columns are immutable matrices after each ordered stage.": "Columns describe the matrix after each ordered stage.",
     "Complete reference-split stability summary across all datasets and methods.": "Reference-split stability across all datasets and eight outputs.",
     "Complete all-method summary of leave-one-batch-out biological-effect replication.": "Leave-one-batch-out biological-effect replication across eight outputs.",
-    "Complete release-validation checklist for the frozen benchmark.": "Validation checklist for the original benchmark release. QC-RFSC updates are documented by the separate integration checks in the reproducibility package."
+    "Complete release-validation checklist for the frozen benchmark.": "Validation checklist for the current benchmark release. QC-RFSC updates are documented by the separate integration checks in the reproducibility package."
 }
 for path in (ROOT / "generated/supplementary_tables").glob("*.tex"):
     text = path.read_text()

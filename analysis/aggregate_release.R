@@ -212,11 +212,10 @@ write.csv(
 selection_manifest <- read_required(file.path(
   release_root, "analysis", "config", "endpoint_free_selection_manifest.csv"
 ))
-write.csv(
-  selection_manifest,
-  file.path(table_dir, "configuration_selection_manifest.csv"),
-  row.names = FALSE, na = ""
-)
+# Retain both public names for the same frozen configuration table.
+for (name in c("configuration_selection_manifest.csv", "endpoint_free_selection_manifest.csv")) {
+  write.csv(selection_manifest, file.path(table_dir, name), row.names = FALSE, na = "")
+}
 primary_competitor_candidates <- read_required(file.path(
   release_root, "analysis", "config", "primary_competitor_candidate_scores.csv"
 ))
@@ -313,11 +312,14 @@ primary_winn_parameters <- bind_rows(lapply(dataset_order, function(dataset_key)
       pelt_penalty = as.numeric(scalar("pelt_penalty", NA_real_)),
       test = as.character(scalar("test", NA_character_)),
       ljung_box_fitdf = as.integer(scalar("ljung_box_fitdf", NA_integer_)),
+      drift_calibration = as.character(scalar("drift_calibration", NA_character_)),
+      n_permutations = as.integer(scalar("n_permutations", NA_integer_)),
+      permutation_seed = as.integer(scalar("permutation_seed", NA_integer_)),
       lag = as.character(scalar("lag", NA_character_)),
       spline_method = as.character(scalar("spline_method", NA_character_)),
-      acorr_fdr = as.numeric(scalar("acorr_fdr", NA_real_)),
-      anova_fdr = as.numeric(scalar("anova_fdr", NA_real_)),
-      normalization = as.character(scalar("normalization", NA_character_)),
+      acorr_fdr = as.numeric(scalar("acorr_fdr", scalar("fdr_threshold", NA_real_))),
+      anova_fdr = as.numeric(scalar("anova_fdr", scalar("fdr_threshold", NA_real_))),
+      normalization = as.character(scalar("normalization", scalar("median_adjustment", NA_character_))),
       scale_by_batch = as.logical(scalar("scale_by_batch", NA)),
       training_qc_quality_score = as.numeric(scalar("quality_score", NA_real_)),
       training_qc_mean_cv = as.numeric(scalar("mean_cv", NA_real_)),
@@ -638,9 +640,13 @@ for (index in seq_len(nrow(reference_tasks))) {
     candidate_rows[[candidate_row_index]] <- candidates
   } else if (!is.null(details$selected_parameters)) {
     parameters <- details$selected_parameters
+    if (as.character(task$method_id) %in% c("winn_auto_qc", "winn_auto_batch_qc")) {
+      candidate_count <- 36L # Nominal unchanged package grid; cached fits can be shared.
+    }
     keep <- intersect(
       c(
         "parameters", "batch_option", "pelt_penalty", "test",
+        "drift_calibration", "n_permutations", "permutation_seed",
         "ljung_box_fitdf", "lag", "spline_method", "acorr_fdr",
         "anova_fdr", "normalization", "scale_by_batch"
       ),

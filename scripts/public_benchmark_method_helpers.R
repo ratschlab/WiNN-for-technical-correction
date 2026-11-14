@@ -176,7 +176,7 @@ parse_winn_auto_messages <- function(messages) {
   }
   list(
     test = extract("Autocorrelation test: ([^ ]+)", "Ljung-Box"),
-    acorr_fdr = as.numeric(extract("Autocorrelation test: [^\\n]+\\(FDR: ([0-9.]+)\\)", "0.05")),
+    acorr_fdr = as.numeric(extract("Autocorrelation test: [^\\n]+\\((?:FDR|gate threshold): ([0-9.]+)\\)", NA_character_)),
     spline_method = extract("Spline method: ([^\\n]+)", "conservative"),
     anova_fdr = as.numeric(extract("Batch correction FDR: ([0-9.]+)", "0.05")),
     normalization = extract("Normalization: ([^\\n]+)", "shrink"),
@@ -199,29 +199,29 @@ run_winn_auto_tuning_subset <- function(x_tune, control_ids, meta_df, auto_batch
   list(params = params, captured = captured)
 }
 
-winn_drift_test_table <- function(data, batch, run_order, test, fdr_threshold) {
-  model_df <- get(".autocorrelation_model_df", envir = asNamespace("winn"))(test)
-  resolve_lag <- get(".resolve_autocorrelation_lag", envir = asNamespace("winn"))
+winn_drift_test_table <- function(data, batch, run_order, test, fdr_threshold,
+                                  drift_calibration = "permutation",
+                                  n_permutations = 999L,
+                                  permutation_seed = 104729L) {
+  # Use the same statistics, column ordering and adjustment as correction.
+  ns <- asNamespace("winn")
+  model_df <- get(".autocorrelation_model_df", envir = ns)(test)
+  resolve_lag <- get(".resolve_autocorrelation_lag", envir = ns)
+  segment_tests <- get(".compute_segment_autocorrelation_tests", envir = ns)
   rows <- list()
   for (batch_id in unique(batch)) {
     idx <- which(batch == batch_id)
+    idx <- idx[order(run_order[idx])]
     segment <- data[, idx, drop = FALSE]
     segment_order <- run_order[idx]
     lag_value <- resolve_lag(NULL, length(idx), model_df)
-    p_values <- apply(segment, 1, function(v) {
-      z <- log1p(v)
-      if (test == "Ljung-Box") {
-        if (is.na(lag_value)) return(NA_real_)
-        tryCatch(stats::Box.test(z, lag = lag_value, type = "Ljung-Box", fitdf = model_df)$p.value, error = function(e) NA_real_)
-      } else {
-        tryCatch(lmtest::dwtest(z ~ segment_order)$p.value, error = function(e) NA_real_)
-      }
-    })
-    adjusted <- stats::p.adjust(p_values, method = "fdr")
+    result <- segment_tests(segment, segment_order, test, lag_value, model_df,
+                            drift_calibration, n_permutations, permutation_seed)
+    adjusted <- result$adjusted_p_value
     rows[[length(rows) + 1L]] <- data.frame(
       feature_id = rownames(data), batch = as.character(batch_id), test = test,
       lag = if (test == "Ljung-Box") lag_value else NA_integer_,
-      p_value = p_values, p_adj = adjusted,
+      p_value = result$raw_p_value, p_adj = adjusted,
       selected_for_drift = is.finite(adjusted) & adjusted < fdr_threshold,
       stringsAsFactors = FALSE
     )

@@ -1,0 +1,7 @@
+{
+  "rows": 27,
+  "old_input_exact_reproduction": true,
+  "unchanged_comparator_rows": 18,
+  "bootstrap_draws": 5000,
+  "seed": 20261027
+}

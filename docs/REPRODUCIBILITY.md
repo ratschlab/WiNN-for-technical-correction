@@ -2,9 +2,11 @@
 
 ## Frozen software and inputs
 
-All final WiNN runs use the bundled 0.1.6 source archive. Each production task checks the installed package version, installation path, and source-archive SHA-256 before loading a dataset. Run manifests retain the package record, input and output hashes, seed, runtime, warnings, and session information.
+Current WiNN runs use the bundled development archive 0.1.7.9999, pinned in `package/frozen_package.json`. Each production task checks the installed package version, installation path, and source-archive SHA-256 before loading a dataset. Run manifests retain the package record, input and output hashes, seed, runtime, warnings, and session information.
 
-WiNN 0.1.6 replaced 0.1.4 because the earlier versions silently fell back from the documented spline smoothers to LOESS or linear fits. Only WiNN outputs depend on that change, so the 0.1.6 release re-ran the three WiNN configurations, with Raw as a reproduction check, and reused every comparator output from the validated 0.1.4 release (`analysis/euler/submit_winn_rerun.sh`, `analysis/splice_winn_rerun.R`). The re-run used the same input matrices, seeds, reference partitions and resampling indices, so comparator and WiNN results remain paired. The Raw rows reproduced the previous release to within 5e-14, and `analysis/combine_winn_rerun_validation.R` combines the validation of the re-run with that of the reused comparator outputs.
+The current revision replaces only drift-gate calibration: the same Ljung–Box statistic uses 999 joint-column permutations, maxT adjustment and the plus-one correction, with default seed 104729. The fixed-mode threshold is 0.05; the unchanged QC-tuning grid considers 0.01, 0.05 and 0.10. Adjusted probabilities are not passed through BH again. All three WiNN modes and their dependent estimates were rerun on the same inputs, seeds, reference splits and resampling draws. Current publication Raw and comparator rows, including corrected QC-RFSC, are retained exactly. Detailed validation and execution instructions are in `analysis/config/calibration_revision/README.md`.
+
+Historically, WiNN 0.1.6 replaced 0.1.4 because the earlier versions silently fell back from the documented spline smoothers to LOESS or linear fits. Only WiNN outputs depend on that change, so the 0.1.6 release re-ran the three WiNN configurations, with Raw as a reproduction check, and reused every comparator output from the validated 0.1.4 release (`analysis/euler/submit_winn_rerun.sh`, `analysis/splice_winn_rerun.R`). The re-run used the same input matrices, seeds, reference partitions and resampling indices, so comparator and WiNN results remain paired. The Raw rows reproduced the previous release to within 5e-14, and `analysis/combine_winn_rerun_validation.R` combines the validation of the re-run with that of the reused comparator outputs.
 
 Public downloads are pinned to a source commit or file checksum. Download scripts reuse a file only after validation and record its URL, size, checksum, and download date.
 
@@ -28,11 +30,13 @@ TIGER has one narrower method-specific safeguard. If a training-QC split makes T
 
 The released Euler analysis reused a correction artifact only when its input, output, dimensions, seed, package, and configuration were recoverable and checksum-validated. Because those large matrices are not committed, a clean public reproduction refits the corresponding method. Both decisions are recorded in the reuse audit; matrix loading time is never reported as fitting runtime.
 
-The internal cohort is processed on independent adjacent-pair units. Its technical diagnostics never use the original alternating duplicate-injection sequence.
+The internal cohort is fitted on adjacent-injection pair means. Its technical diagnostics do not use the original alternating duplicate-injection sequence. Repeated preparations remain grouped by biological sample in uncertainty calculations; sample-level resampling does not additionally account for within-patient longitudinal dependence.
 
 ## Metrics
 
 The common technical endpoints are held-out QC CV, residual run-order GAM deviance, residual Ljung-Box structure, categorical batch weighted-PC R-squared, runtime, and output coverage. Truth recovery is used only for the simulation. Biological and replicate endpoints follow each dataset's actual design; no pseudo-replicates are created. Metabolite ICC(A,1) is reported only where matched cross-batch feature ratings support that definition. Clinical FIA-MS and BatchCorr Set 1 instead report their explicitly named between/within feature repeatability ratio, alongside genuine replicate-profile agreement.
+
+Residual Ljung–Box positivity retains the frozen asymptotic/BH diagnostic so the endpoint definition is unchanged. It is distinct from the new permutation-calibrated production selection gate.
 
 Batch is always passed to weighted-PC R-squared as a categorical factor. Automated validation fails if the categorical metric note is absent.
 
@@ -44,7 +48,7 @@ The cumulative sequence is Raw, outlier shrinkage, selective drift correction, s
 
 The repeated simulation contains 10 prespecified seeds. `SIM01` is distributed because it is the common input for the primary comparison and main ablation; `SIM02` through `SIM10` are reconstructed from the component-level seed ledger. Reconstructed matrices are checked with the frozen identities in `analysis/config/simulation_bundle_hashes.csv`. The cross-platform gate uses a nine-decimal quantized matrix hash, while exact reference-platform object hashes are retained as provenance diagnostics. This accommodates harmless last-bit differences between R platforms without allowing changes in dimensions, names, or numerical content at the declared precision.
 
-The reference analysis contains 10 splits for each dataset and method. The partial-confounding grid contains 10 seeds and 16 conditions per seed; it evaluates only Raw and fixed/default WiNN because its purpose is to characterize WiNN's identifiability boundary.
+The reference analysis contains 10 splits for each dataset and method. The partial-confounding grid contains 10 seeds and 16 conditions per seed; it evaluates Raw and fixed/default WiNN under a stylized Gaussian design. It describes attenuation and false-discovery tradeoffs under the specified overlap patterns; it does not establish a general identifiability boundary.
 
 ## Figures and aggregate tables
 

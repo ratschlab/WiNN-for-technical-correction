@@ -1,0 +1,33 @@
+{
+  "dataset": "mtbls79",
+  "method_id": "winn_fixed_no_qc",
+  "comparison": "Current published WiNN 0.1.6 versus new 0.1.7.9999 primary fit",
+  "old": {
+    "matrix_file_sha256": "81b2f99eebb6730ab335da7cc69237aecf2ff3e4baf76e64071582503622ab7b",
+    "matrix_object_sha256": "4f9e54a24a83e65901a01769b24936023f63a21ecd50b7017e15808802a85d7a",
+    "selected_and_corrected_drift_profiles": 52,
+    "batch_r2": 0.0108837435440366,
+    "biological_r2": 0.442051185348432,
+    "differential_features": 1097
+  },
+  "new": {
+    "matrix_file_sha256": "7d096840b4dd03fb329cfb66b15ec084b90fa08e4bcac252b0dd7168951fc2c4",
+    "matrix_object_sha256": "a75a8e8fe96f1b79189f8b22cb887a4fda7fb78217cc646c3c0ea77d9d871ee4",
+    "selected_and_corrected_drift_profiles": 13,
+    "batch_r2": 0.0108817642468996,
+    "biological_r2": 0.442056359952226,
+    "differential_features": 1097
+  },
+  "new_derivative_input_equals_new_primary": true,
+  "study": {
+    "columns": 134,
+    "changed_cells": 72755,
+    "changed_features": 2488
+  },
+  "qc": {
+    "columns": 38,
+    "changed_cells": 42408,
+    "changed_features": 2488
+  },
+  "interpretation": "The unchanged discovery count and nearly unchanged rounded multivariate endpoints do not reflect reuse: corrected matrices and drift selections changed."
+}

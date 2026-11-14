@@ -1,0 +1,18 @@
+{
+  "package": "winn",
+  "version": "0.1.6",
+  "git_commit": "50b72a4ae7fc4093c4c624ebd0fb512bff58fa7a",
+  "git_commit_time": "2026-11-10T15:05:56+01:00",
+  "source_archive": "package/winn_0.1.6.tar.gz",
+  "source_archive_sha256": "e40a2c3fd709f11a456ac3721379da3549e89c619e5a164743e203fe1e9be7ab",
+  "source_archive_build_time": "2026-11-10T19:44:22+01:00",
+  "source_archive_build_command": "git archive 50b72a4 | R CMD build --no-build-vignettes --no-manual winn",
+  "release_freeze_date": "2026-11-10",
+  "production_status": "frozen",
+  "supersedes": {
+    "version": "0.1.4",
+    "git_commit": "a6130a123a5a56a089a0e3a0465e55bbf31e0cc6",
+    "source_archive_sha256": "71a0964cee2778b2e5789d20621147e074c7945e813cf76af2ceeb696104aae1",
+    "reason": "In 0.1.4 (and 0.1.5) mgcv::s() inside mgcv::gam() formulas raised 'invalid type (list)', so every spline fit silently fell back to LOESS (conservative smoother) or lm (standard smoother). 0.1.6 uses s() so the documented P-spline and cubic-spline GAM smoothers are used."
+  }
+}

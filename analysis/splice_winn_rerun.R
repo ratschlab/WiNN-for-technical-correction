@@ -122,6 +122,13 @@ for (rel in union(old_files, new_files)) {
     }
     next
   }
+  # New calibration fields belong only to WiNN's own selected-setting table.
+  if (identical(rel, "tables/primary_winn_selected_parameters.csv") &&
+      all(grepl("^winn_", old$method_id)) && all(grepl("^winn_", new$method_id))) {
+    file.copy(file.path(new_root, rel), dest, overwrite = TRUE)
+    note(rel, "replaced_entirely (WiNN selected settings and calibration provenance)", n_old, n_new, n_new, 0L, source = src_label)
+    next
+  }
   if (!identical(sort(names(old)), sort(names(new)))) {
     stop(rel, ": column sets differ between releases: ",
          paste(setdiff(union(names(old), names(new)), intersect(names(old), names(new))), collapse = ", "))

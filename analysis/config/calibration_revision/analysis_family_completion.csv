@@ -1,0 +1,6 @@
+"analysis_family","expected","observed","complete"
+"primary_evaluations",6,6,TRUE
+"ablation_evaluations",6,6,TRUE
+"simulation_seed_evaluations",10,10,TRUE
+"reference_split_evaluations",60,60,TRUE
+"partial_confounding_tasks",160,160,TRUE

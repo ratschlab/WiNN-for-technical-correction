@@ -9,7 +9,8 @@ out <- opt('--output-root',file.path(root,'generated/review_validation'));dir.cr
 source(file.path(here,'doBC.R'))
 source(file.path(root,'scripts/benchmark_revision/frozen_winn_ablation_helpers.R'))
 hashes <- read.csv(file.path(root,'scripts/benchmark_revision/simulation_bundle_hashes.csv'))
-reference <- read.csv(file.path(root,'generated/revision_panel_inputs/simulation_seed_method_metrics.csv'))
+# Optional external release input; the publication snapshot remains the default.
+reference <- read.csv(opt('--reference',file.path(root,'generated/revision_panel_inputs/simulation_seed_method_metrics.csv')))
 run_seed <- function(seed) {
  p <- readRDS(file.path(input,paste0('input_',seed,'.rds')))
  checks <- do.call(rbind,lapply(c('raw_intensity','clean_ground_truth'),function(object) {

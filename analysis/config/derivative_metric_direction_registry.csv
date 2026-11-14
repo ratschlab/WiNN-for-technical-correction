@@ -1,0 +1,27 @@
+metric,display_name,direction,metric_class,target_type,datasets,definition
+heldout_qc_cv_mean,Held-out QC CV mean,lower,technical,continuous,all,Mean feature-wise coefficient of variation among hidden or external reference samples.
+residual_run_order_gam_mean_deviance,Residual run-order GAM deviance,lower,technical,continuous,all,Mean deviance explained by within-batch run order after correction.
+residual_ljung_box_proportion_significant,Ljung-Box-positive profile proportion,lower,technical,continuous,all,Proportion of feature-batch profiles significant after the established multiplicity correction.
+batch_weighted_pc_r2_categorical,Batch weighted-PC R-squared,lower,technical,categorical,all,Variance-weighted mean R-squared across principal components 1-5 with batch explicitly represented as a factor.
+biological_weighted_pc_r2,Biological weighted-PC R-squared,higher,preservation,categorical,"MTBLS79; WaveICA",Variance-weighted mean R-squared across principal components 1-5 for the deposited categorical biological endpoint.
+age_weighted_pc_r2,Age weighted-PC R-squared,higher,preservation,continuous,Sacurine,Variance-weighted mean R-squared across principal components 1-5 for age.
+bmi_weighted_pc_r2,BMI weighted-PC R-squared,higher,preservation,continuous,Sacurine,Variance-weighted mean R-squared across principal components 1-5 for BMI.
+gender_weighted_pc_r2,Gender weighted-PC R-squared,higher,preservation,categorical,Sacurine,Variance-weighted mean R-squared across principal components 1-5 for deposited gender.
+biological_associated_features,Significant biological associations,descriptive,association,count,"MTBLS79; WaveICA; Sacurine",Number of features passing Benjamini-Hochberg FDR; a larger count is not inherently beneficial.
+effect_pearson,Feature-effect Pearson correlation,higher,replication,continuous,"MTBLS79; WaveICA; Sacurine",Pearson correlation between training-batch and held-out-batch feature effects.
+effect_spearman,Feature-effect Spearman correlation,higher,replication,continuous,"MTBLS79; WaveICA; Sacurine",Spearman correlation between training-batch and held-out-batch feature effects.
+effect_sign_concordance,Feature-effect sign concordance,higher,replication,proportion,"MTBLS79; WaveICA; Sacurine",Proportion of features with the same effect direction in training and held-out batches.
+effect_attenuation,Median absolute effect attenuation,descriptive,replication,continuous,"MTBLS79; WaveICA; Sacurine",Median held-out absolute effect divided by training absolute effect; interpretation depends on calibration.
+within_group_variance,Within-group or residual variance,descriptive,preservation,continuous,"MTBLS79; WaveICA; Sacurine",Median feature-wise within-group or model-residual variance on the log1p scale.
+standardized_effect_magnitude,Standardized effect magnitude,descriptive,preservation,continuous,"MTBLS79; WaveICA; Sacurine",Median absolute standardized feature effect on the log1p scale.
+sample_replicate_pearson_median,Replicate-profile Pearson correlation,higher,preservation,continuous,"MTBLS79; BatchCorr Set 1; clinical FIA-MS",Median within-identity profile correlation across genuine replicate correction units.
+genuine_replicate_icc_median,Replicate ICC(A,1),higher,preservation,continuous,"BatchCorr Set 1; clinical FIA-MS",Median absolute-agreement ICC across genuine replicate profiles.
+feature_repeatability_ratio_median,Feature repeatability ratio,higher,preservation,continuous,"BatchCorr Set 1; clinical FIA-MS",Median between-identity variance divided by between- plus within-identity variance.
+cross_batch_top1_accuracy,Cross-batch top-1 matching accuracy,higher,preservation,proportion,"BatchCorr Set 1; clinical FIA-MS",Proportion of queries whose most similar eligible profile has the same biological identity.
+cross_batch_mean_reciprocal_rank,Cross-batch mean reciprocal rank,higher,preservation,continuous,"BatchCorr Set 1; clinical FIA-MS",Mean reciprocal rank of the first eligible profile with the same biological identity.
+truth_log1p_rmse,Truth log1p RMSE,lower,truth,continuous,Simulation,Root mean squared error from the frozen clean truth matrix on the log1p scale.
+truth_metabolite_profile_icc_mean,Truth metabolite ICC(A,1),higher,truth,continuous,Simulation,Mean feature-wise absolute-agreement ICC against frozen clean truth.
+truth_sample_profile_pearson_mean,Truth sample-profile Pearson correlation,higher,truth,continuous,Simulation,Mean sample-wise profile correlation against frozen clean truth.
+retained_features,Retained features,descriptive,coverage,count,all,Number of features in the common frozen comparison panel.
+retained_samples,Retained samples,descriptive,coverage,count,all,Number of correction units in the common frozen comparison panel.
+runtime_sec,Runtime,lower,computational,continuous,all,Previously saved correction runtime; derivative analyses do not change it.

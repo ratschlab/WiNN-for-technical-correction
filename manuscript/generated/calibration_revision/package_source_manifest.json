@@ -1,0 +1,10 @@
+{
+  "package_version": "0.1.7.9999",
+  "package_commit": "ab4969792c98bd86208a28a4e83b7a69e204b9fc",
+  "source_archive_sha256": "72c90896ac28f3ee4000a5c6d5287e7d4031e307c40b787d001755a6982c4c29",
+  "files": {
+    "scripts/calibration_revision/source_snapshot/winn/DESCRIPTION": "0ce4c45ca72de55ce7e3dfd3f0a4859095db1c0693385dc63e0a8c0cb3a8a36b",
+    "scripts/calibration_revision/source_snapshot/winn/R/winn-ablation.R": "e0783e131f52b39e58330a5bc33ec975cdbb9ed0d4eec305048f0d387722aaba",
+    "scripts/calibration_revision/source_snapshot/winn/R/winn.R": "2592b80afacb6c25fc4e3162ce7b66270c0f0470ddcec6587160f9df4ca1b05f"
+  }
+}

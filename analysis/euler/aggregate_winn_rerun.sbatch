@@ -1,9 +1,9 @@
 #!/bin/bash
-#SBATCH --job-name=winn016_aggregate_rerun
+#SBATCH --job-name=winn017_aggregate_rerun
 #SBATCH --output=slurm-%x-%j.out
 #SBATCH --error=slurm-%x-%j.err
-#SBATCH --time=12:00:00
-#SBATCH --mem-per-cpu=48G
+#SBATCH --time=00:15:00
+#SBATCH --mem-per-cpu=8G
 #SBATCH --cpus-per-task=1
 
 set -euo pipefail

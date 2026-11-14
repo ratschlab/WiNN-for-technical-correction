@@ -293,6 +293,9 @@ selection_provenance_ok <-
   all(is.finite(as.numeric(selection$selection_seed))) &&
   all(nzchar(selection$source_package)) &&
   all(nzchar(selection$source_version)) &&
+  all(selection$source_version[grepl("^winn_", selection$method_id)] == frozen_spec$version) &&
+  all(selection$candidate_count[selection$method_id %in% c("winn_auto_qc", "winn_auto_batch_qc")] == 36L) &&
+  all(selection$candidate_count[selection$method_id == "winn_fixed_no_qc"] == 1L) &&
   all(nzchar(selection$information_available_during_selection)) &&
   all(nzchar(selection$departure_justification)) &&
   all(selection_frozen)
@@ -419,8 +422,12 @@ winn_parameters <- read.csv(
 auto_rows <- winn_parameters$method_id %in% c("winn_auto_qc", "winn_auto_batch_qc")
 winn_parameter_ok <-
   nrow(winn_parameters) == 18L &&
+  all(c("drift_calibration", "n_permutations", "permutation_seed") %in% names(winn_parameters)) &&
   !anyDuplicated(paste(winn_parameters$dataset_key, winn_parameters$method_id)) &&
   all(winn_parameters$ljung_box_fitdf == 0L) &&
+  all(winn_parameters$drift_calibration == "permutation") &&
+  all(winn_parameters$n_permutations == 999L) &&
+  all(winn_parameters$permutation_seed == 104729L) &&
   all(is.finite(winn_parameters$training_qc_quality_score[auto_rows])) &&
   all(is.na(winn_parameters$training_qc_quality_score[!auto_rows]))
 add_check(
