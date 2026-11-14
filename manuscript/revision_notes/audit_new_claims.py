@@ -120,8 +120,8 @@ for r in effects:
 for dataset, endpoint in (("mtbls79","cow_vs_sheep"), ("waveica","biological_group"), ("sacurine","age"), ("sacurine","bmi"), ("sacurine","gender")):
     r = one(effects, dataset_key=dataset, endpoint=endpoint, method_id="winn_fixed_no_qc")
     for field in ("slope_through_origin_vs_raw", "sign_concordance_vs_raw"):
-        check_token(f"Supplement fixed-WiNN feature effects {dataset} {endpoint} {field}", "supplementary.tex",
-            "WiNN slopes were", f"{float(r[field]):.3f}", VALIDATION / "paired_feature_effects_descriptive.csv", r[field])
+        check_token(f"Main fixed-WiNN feature effects {dataset} {endpoint} {field}", "main.tex",
+            "We compared biological effects for the same features", f"{float(r[field]):.3f}", VALIDATION / "paired_feature_effects_descriptive.csv", r[field])
 
 # Independently recompute S6 null tails from all 225,000 frozen counts.
 distribution_path = ROOT / "generated/revision_panel_inputs/permutation_null.csv.gz"

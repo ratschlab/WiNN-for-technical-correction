@@ -7,7 +7,7 @@ stopifnot(requireNamespace("ggplot2", quietly = TRUE))
 library(ggplot2)
 source(file.path(dirname(script), "method_palette.R"))
 d <- read.csv(file.path(root, "generated", "supplementary_table_data",
-                        "leave_one_batch_out_bootstrap_summary.csv"), check.names = FALSE)
+                        "table_s12_lobo_fold_level.csv"), check.names = FALSE)
 method_ids <- c("raw", "combat", "qc_rlsc", "tiger", "serrf",
                 "winn_auto_qc", "winn_auto_batch_qc", "winn_fixed_no_qc")
 method_labels <- c("Raw", "ComBat", "QC-RLSC", "TIGER", "SERRF",

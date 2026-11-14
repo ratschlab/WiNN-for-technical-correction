@@ -52,7 +52,7 @@ python3 scripts/assemble_main_figures.py
 python3 scripts/assemble_supplementary_figures.py
 ```
 
-Main/S5 sources are in `../revision_panel_inputs/`. The S6 exact 5,000-draw null distributions are supplied compressed as `../revision_panel_inputs/permutation_null.csv.gz`; S7 uses the included `leave_one_batch_out_bootstrap_summary.csv` and displays individual batch folds. These rendering commands do not perform correction or tune parameters.
+Main/S5 sources are in `../revision_panel_inputs/`. The S6 exact 5,000-draw null distributions are supplied compressed as `../revision_panel_inputs/permutation_null.csv.gz`; S7 uses `table_s12_lobo_fold_level.csv`, the current WiNN 0.1.6 fold-level table (`leave_one_batch_out_bootstrap_summary.csv` is an identical compatibility copy) and displays individual batch folds. These rendering commands do not perform correction or tune parameters.
 
 ## Published numbering (condensed supplement)
 

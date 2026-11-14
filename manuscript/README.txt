@@ -78,3 +78,23 @@ correction benchmark. scripts/calibration_revision/README.md defines this scope.
 Scientific code/results snapshot:
 https://github.com/ratschlab/WiNN-for-technical-correction/tree/0fa1b32a3898cb6dd449870e30c7a80e8e563e57
 The documents compile to seven main-text and 47 supplementary pages.
+
+Final supplementary review (15 November 2026)
+-------------------------------------------
+Main Results Section 3.4 now reports matched-feature biological effects and
+cross-batch effect agreement from Supplementary Table S9 and Figure S7.
+Detailed tables and fold intervals remain in the supplement; the selection-test
+and preprocessing section remains entirely in S10.
+Figure S7 previously read a stale pre-0.1.6 bootstrap export. Its five panels now
+read the existing 11 November fold-level table used by the text and summary
+statistics. No fits were rerun. Main Figures 1-4, including all of Figure 2,
+and the selective/forced results are byte-identical to the preceding revision.
+
+Verify this finalization with:
+  python3 scripts/audit_supplement_finalization.py
+  python3 scripts/figure2_confounding/audit_scope.py --allow-finalized-s7
+Rebuild S7 and its bundles with:
+  Rscript scripts/generate_review_fold_panels.R
+  python3 scripts/assemble_supplementary_figures.py --figure S7
+The explicit scope-audit option permits only the documented S7 source/rendering
+refresh and its source README; all other protected scientific files remain fixed.

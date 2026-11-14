@@ -138,6 +138,23 @@ for method in ("Raw", "WiNN"):
     check(f"MTBLS79 discoveries {method}", MT, f"{int(row['Significant']):,}")
 check("MTBLS79 tested features", MT, f"{int(row['Tested']):,}")
 
+# Feature-level results promoted from the supplement; no analysis was refitted.
+from statistics import median
+fx = read(VAL / "paired_feature_effects_descriptive.csv")
+folds = read(DATA / "table_s12_lobo_fold_level.csv")
+for dataset, endpoint in (("mtbls79", "cow_vs_sheep"), ("waveica", "biological_group"),
+                          ("sacurine", "age"), ("sacurine", "bmi"), ("sacurine", "gender")):
+    row = one(fx, dataset_key=dataset, endpoint=endpoint, method_id="winn_fixed_no_qc")
+    for field in ("slope_through_origin_vs_raw", "sign_concordance_vs_raw"):
+        check(f"Matched effects {dataset} {endpoint} {field}",
+              "We compared biological effects for the same features", f"{float(row[field]):.3f}")
+    for method in ("raw", "winn_fixed_no_qc"):
+        values = [float(r["bootstrap_mean"]) for r in folds if r["dataset_key"] == dataset
+                  and r["endpoint"] == endpoint and r["method_id"] == method and r["metric"] == "pearson"]
+        assert len(values) == {"mtbls79": 8, "waveica": 3, "sacurine": 2}[dataset]
+        check(f"Cross-batch Pearson {dataset} {endpoint} {method}",
+              "We also compared feature effects estimated", f"{median(values):.3f}")
+
 # Ablations
 s15 = {(r["Dataset"], r["Policy"], r["Metric"]): float(r["Value"]) for r in read(DATA / "table_s15_selective_forced.csv")}
 datasets = sorted({k[0] for k in s15})

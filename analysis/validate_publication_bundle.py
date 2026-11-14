@@ -81,6 +81,19 @@ def validate():
         require((MANUSCRIPT / 'figures' / name).is_file(), 'Missing main figure ' + name)
     for name in ['references.bib', 'oup-authoring-template.cls']:
         require((MANUSCRIPT / name).is_file(), 'Missing manuscript source ' + name)
+    # S7 must use the same frozen 0.1.6 fold results as the manuscript text.
+    fold_path = MANUSCRIPT / 'generated/supplementary_table_data/table_s12_lobo_fold_level.csv'
+    folded = read(fold_path)
+    archive = read(ROOT / 'results/final/revision_inputs/supplement_20261111/derivative/tables/leave_one_batch_out_bootstrap_summary.csv.gz')
+    keys = ('dataset_key', 'endpoint', 'method_id', 'metric', 'heldout_batch')
+    frozen = {tuple(r[k] for k in keys): r for r in archive}
+    require(len(folded) == 408, 'Incomplete current S7 fold table')
+    for row in folded:
+        original = frozen[tuple(row[k] for k in keys)]
+        for field in ('bootstrap_mean', 'ci_lower', 'ci_upper', 'valid_bootstrap'):
+            require(math.isclose(float(row[field]), float(original[field]), rel_tol=0, abs_tol=1e-12),
+                    'S7 differs from frozen 0.1.6 results: ' + str(tuple(row[k] for k in keys)))
+    subprocess.run([sys.executable, str(MANUSCRIPT / 'scripts/audit_supplement_finalization.py')], check=True)
     # The immutable analysis revision precedes the documentation commit that
     # cites it. The later commit supplies both documents together.
     documents = [(MANUSCRIPT / name).is_file() for name in ['main.tex', 'supplementary.tex']]

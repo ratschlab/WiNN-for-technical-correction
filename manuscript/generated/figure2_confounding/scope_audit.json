@@ -1,7 +1,23 @@
 {
   "baseline_commit": "706616f",
   "protected_files": 439,
-  "all_identical": true,
+  "all_identical": false,
+  "unchanged_files": 426,
+  "approved_s7_finalization_changes": [
+    "figures/compiled_supplementary/Figure_S7.pdf",
+    "figures/source_data/S7A_lobo_mtbls79_cow_vs_sheep.csv",
+    "figures/source_data/S7B_lobo_waveica_biological_group.csv",
+    "figures/source_data/S7C_lobo_sacurine_age.csv",
+    "figures/source_data/S7D_lobo_sacurine_bmi.csv",
+    "figures/source_data/S7E_lobo_sacurine_gender.csv",
+    "figures/supplementary_panels/S7A_lobo_mtbls79_cow_vs_sheep.pdf",
+    "figures/supplementary_panels/S7B_lobo_waveica_biological_group.pdf",
+    "figures/supplementary_panels/S7C_lobo_sacurine_age.pdf",
+    "figures/supplementary_panels/S7D_lobo_sacurine_bmi.pdf",
+    "figures/supplementary_panels/S7E_lobo_sacurine_gender.pdf",
+    "generated/supplementary_table_data/README.md",
+    "generated/supplementary_table_data/leave_one_batch_out_bootstrap_summary.csv"
+  ],
   "figure_2_A_to_D_placement_unchanged": true,
   "protected_main_text_blocks": 4,
   "baseline_manifest_sha256": "83cc18def8e3681575e432c1b6214649f059dea3dde3244f296e6a9754d7b1ed"

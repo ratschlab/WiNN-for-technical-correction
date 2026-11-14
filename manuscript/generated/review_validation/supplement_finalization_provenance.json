@@ -1,0 +1,82 @@
+{
+  "reason": "Finalization: replace stale pre-0.1.6 S7 plot input with the existing 11 November 2026 fold-level results. No correction refit; no changes to Figure 2 or other main figures.",
+  "previous_manuscript_commit": "ed24601",
+  "frozen_analysis_revision": "0fa1b32a3898cb6dd449870e30c7a80e8e563e57",
+  "frozen_archive_path": "results/final/revision_inputs/supplement_20261111/derivative/tables/leave_one_batch_out_bootstrap_summary.csv.gz",
+  "frozen_archive_sha256": "a2f527d1d4e90bc2ce712e9795693261e7c55e78078e60082e08e6a44a6313b4",
+  "canonical_fold_source_sha256": "56c160a2ace83a05c34cd14b421958a015138175a3b1028f73d457e5a490929a",
+  "unchanged_main_figures": {
+    "figures/F1_winn_overview.pdf": "304cbd3148f570c06947c2b973c91ca831f416b8ad36fa2fc5755e28f72bf355",
+    "figures/F2_simulation.pdf": "360d854f2c269475b1d069d6707717427bd23634a0cd890aff6f8753b806b226",
+    "figures/F3_replicates.pdf": "e01027a8349546b5399f045a4561747c2e8227761e5751fcbf518e2c7dcbb17f",
+    "figures/F4_biological_structure.pdf": "bb6918d7b260c0c50ef9db7eac0956af58e0d173d59f67d2ed6c708788ea36be",
+    "figures/Main_figures.pdf": "670af6b3881ab9a59b0292fbcc4e7e21794cc8fb86ab590253e1b04ad26465eb"
+  },
+  "updated_s7_files": [
+    {
+      "path": "figures/compiled_supplementary/Figure_S7.pdf",
+      "previous_sha256": "0226e4c416ff3e644ccddb1537e933a6561e06a085eceb49e506ff04c0190418",
+      "sha256": "a45d6aceace0f0119fd6b2a34151685719cb69f8bcc2b07dab7cb88119a97e67"
+    },
+    {
+      "path": "figures/source_data/S7A_lobo_mtbls79_cow_vs_sheep.csv",
+      "previous_sha256": "bd766fd728c08d43c202ef8bb66cf60af976cfa1cf36529f557ae7e9ef91c38f",
+      "sha256": "3adff0d1d1b10400f8ce3604d62d29d3db9a94a391c1eb409327695cad7272ee"
+    },
+    {
+      "path": "figures/source_data/S7B_lobo_waveica_biological_group.csv",
+      "previous_sha256": "921e3e82dc81bdd31821367543e52a386dd808ffefeaf703820bd7e8a21035df",
+      "sha256": "03f59e8d8e1fc17b64f1a92ff4e8eddbf95204bc7a5dd752fcc9191eed220844"
+    },
+    {
+      "path": "figures/source_data/S7C_lobo_sacurine_age.csv",
+      "previous_sha256": "f394ffa07152f081c908d0b5ecb99f7596b2385f1693a27b965975e8e839086a",
+      "sha256": "de50c6acbf5448f902b1f343568d3dde6df8d6d60c19d6a11ab8b91472697a0a"
+    },
+    {
+      "path": "figures/source_data/S7D_lobo_sacurine_bmi.csv",
+      "previous_sha256": "ede874bd5e1c42cadda9b0bbc6ceaac688572eeff309529ea222df523d90e4e8",
+      "sha256": "b0efd3b687e7821578e81af2597e333d0eab5ee6703fa24a0059962545b168f0"
+    },
+    {
+      "path": "figures/source_data/S7E_lobo_sacurine_gender.csv",
+      "previous_sha256": "e54af5ccddfdb2cf69cf2fdae317a8c491ee4900fd124242d1addd5ceeb3e2c3",
+      "sha256": "6cc812d3beae982c099ac024e7aee0372bdce5c2dbd5b54519341b783baa2a46"
+    },
+    {
+      "path": "figures/supplementary_panels/S7A_lobo_mtbls79_cow_vs_sheep.pdf",
+      "previous_sha256": "9a110ad6b7dc203d35bbbecae2906c528324444f6f6d76cf5c5d6e81dca5a494",
+      "sha256": "db908a9ae1b15eaa5faf35f924b63488f4ba9bcfc73a8ee7305988caba0ac13f"
+    },
+    {
+      "path": "figures/supplementary_panels/S7B_lobo_waveica_biological_group.pdf",
+      "previous_sha256": "6e0e49bd4ba0219ed0d763dc520493e48afc90258b604beaed0a08065e638d2d",
+      "sha256": "fbb14e9dca40604682e01f49b76f7e04f2f0b87c3dada0385742fd1956446aca"
+    },
+    {
+      "path": "figures/supplementary_panels/S7C_lobo_sacurine_age.pdf",
+      "previous_sha256": "1f2a60376713ef6a72901e39fd61507338616edccbbac691f7d3b58759d9e0ff",
+      "sha256": "7e713dc9231a9109077bc5799c452121f155f280a91107f98e8a0bb5bb116699"
+    },
+    {
+      "path": "figures/supplementary_panels/S7D_lobo_sacurine_bmi.pdf",
+      "previous_sha256": "c06d6efd3f15b9feaed2b75f529f567828dbae4a700f7e2fce4c6e96461a4823",
+      "sha256": "93e56b224574b04bc41d3d24b628a5ecf392d144cd75943fd88906d36e251286"
+    },
+    {
+      "path": "figures/supplementary_panels/S7E_lobo_sacurine_gender.pdf",
+      "previous_sha256": "be81eb1a052631c6c94a79aaaeedb00b6f005df407cfbe0b351c2fdac7b3e538",
+      "sha256": "591d3447eed5366ffbb145f117ca1ad1ff3965dbcec37837e5cb2ab555c346f1"
+    },
+    {
+      "path": "generated/supplementary_table_data/README.md",
+      "previous_sha256": "39b6ba2488552ed55a0c7a40d1158fdcdd92af92fea4e6745d255af262384b6d",
+      "sha256": "70f05de14a64ad48d11f3f022b03f10867413b08c8f3e68eac5cce60c1387c61"
+    },
+    {
+      "path": "generated/supplementary_table_data/leave_one_batch_out_bootstrap_summary.csv",
+      "previous_sha256": "19c11907491b78f18c62cc4ee68dd058219fa91b5743728610a50ca585b06ab4",
+      "sha256": "56c160a2ace83a05c34cd14b421958a015138175a3b1028f73d457e5a490929a"
+    }
+  ]
+}

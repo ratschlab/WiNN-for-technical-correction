@@ -8,6 +8,7 @@ or downscaling is performed. Continued figures remain multipage PDFs.
 Requires pypdf. Run from any directory with:
     python3 scripts/assemble_supplementary_figures.py
 """
+import argparse
 from collections import OrderedDict
 from pathlib import Path
 import re
@@ -78,10 +79,19 @@ def assemble_page(writer, rows):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--figure", action="append", choices=[f"S{n}" for n in range(1, 12)],
+                        help="Rebuild only this figure; reuse other compiled figures in the bundles.")
+    selected = parser.parse_args().figure
     OUTPUT.mkdir(parents=True, exist_ok=True)
     layouts = figure_layouts()
     paths = []
     for figure_id, pages in layouts.items():
+        path = OUTPUT / f"Figure_{figure_id}.pdf"
+        if selected and figure_id not in selected:
+            assert path.is_file(), path
+            paths.append(path)
+            continue
         writer = PdfWriter()
         dimensions = [assemble_page(writer, rows) for rows in pages]
         writer.add_metadata({"/Title": f"Supplementary Figure {figure_id}",

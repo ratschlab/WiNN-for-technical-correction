@@ -98,16 +98,16 @@ S24 matched-feature row sacurine gender serrf,generated/supplementary_tables/tab
 S24 matched-feature row sacurine gender winn_auto_qc,generated/supplementary_tables/table_s24_paired_feature_effects.tex,0.924 & 0.885 & 0.974,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
 S24 matched-feature row sacurine gender winn_auto_batch_qc,generated/supplementary_tables/table_s24_paired_feature_effects.tex,0.915 & 0.894 & 0.974,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
 S24 matched-feature row sacurine gender winn_fixed_no_qc,generated/supplementary_tables/table_s24_paired_feature_effects.tex,0.871 & 0.929 & 0.975,generated/review_validation/paired_feature_effects_descriptive.csv,three matched-feature summaries,True
-Supplement fixed-WiNN feature effects mtbls79 cow_vs_sheep slope_through_origin_vs_raw,supplementary.tex,0.980,generated/review_validation/paired_feature_effects_descriptive.csv,0.979747080381147,True
-Supplement fixed-WiNN feature effects mtbls79 cow_vs_sheep sign_concordance_vs_raw,supplementary.tex,0.969,generated/review_validation/paired_feature_effects_descriptive.csv,0.968649517684887,True
-Supplement fixed-WiNN feature effects waveica biological_group slope_through_origin_vs_raw,supplementary.tex,0.968,generated/review_validation/paired_feature_effects_descriptive.csv,0.967791728988995,True
-Supplement fixed-WiNN feature effects waveica biological_group sign_concordance_vs_raw,supplementary.tex,0.951,generated/review_validation/paired_feature_effects_descriptive.csv,0.951400711964092,True
-Supplement fixed-WiNN feature effects sacurine age slope_through_origin_vs_raw,supplementary.tex,0.936,generated/review_validation/paired_feature_effects_descriptive.csv,0.935847833555337,True
-Supplement fixed-WiNN feature effects sacurine age sign_concordance_vs_raw,supplementary.tex,0.973,generated/review_validation/paired_feature_effects_descriptive.csv,0.973451327433628,True
-Supplement fixed-WiNN feature effects sacurine bmi slope_through_origin_vs_raw,supplementary.tex,0.969,generated/review_validation/paired_feature_effects_descriptive.csv,0.969099534565002,True
-Supplement fixed-WiNN feature effects sacurine bmi sign_concordance_vs_raw,supplementary.tex,0.947,generated/review_validation/paired_feature_effects_descriptive.csv,0.946902654867257,True
-Supplement fixed-WiNN feature effects sacurine gender slope_through_origin_vs_raw,supplementary.tex,0.871,generated/review_validation/paired_feature_effects_descriptive.csv,0.871428184564188,True
-Supplement fixed-WiNN feature effects sacurine gender sign_concordance_vs_raw,supplementary.tex,0.929,generated/review_validation/paired_feature_effects_descriptive.csv,0.929203539823009,True
+Main fixed-WiNN feature effects mtbls79 cow_vs_sheep slope_through_origin_vs_raw,main.tex,0.980,generated/review_validation/paired_feature_effects_descriptive.csv,0.979747080381147,True
+Main fixed-WiNN feature effects mtbls79 cow_vs_sheep sign_concordance_vs_raw,main.tex,0.969,generated/review_validation/paired_feature_effects_descriptive.csv,0.968649517684887,True
+Main fixed-WiNN feature effects waveica biological_group slope_through_origin_vs_raw,main.tex,0.968,generated/review_validation/paired_feature_effects_descriptive.csv,0.967791728988995,True
+Main fixed-WiNN feature effects waveica biological_group sign_concordance_vs_raw,main.tex,0.951,generated/review_validation/paired_feature_effects_descriptive.csv,0.951400711964092,True
+Main fixed-WiNN feature effects sacurine age slope_through_origin_vs_raw,main.tex,0.936,generated/review_validation/paired_feature_effects_descriptive.csv,0.935847833555337,True
+Main fixed-WiNN feature effects sacurine age sign_concordance_vs_raw,main.tex,0.973,generated/review_validation/paired_feature_effects_descriptive.csv,0.973451327433628,True
+Main fixed-WiNN feature effects sacurine bmi slope_through_origin_vs_raw,main.tex,0.969,generated/review_validation/paired_feature_effects_descriptive.csv,0.969099534565002,True
+Main fixed-WiNN feature effects sacurine bmi sign_concordance_vs_raw,main.tex,0.947,generated/review_validation/paired_feature_effects_descriptive.csv,0.946902654867257,True
+Main fixed-WiNN feature effects sacurine gender slope_through_origin_vs_raw,main.tex,0.871,generated/review_validation/paired_feature_effects_descriptive.csv,0.871428184564188,True
+Main fixed-WiNN feature effects sacurine gender sign_concordance_vs_raw,main.tex,0.929,generated/review_validation/paired_feature_effects_descriptive.csv,0.929203539823009,True
 S6A raw null_q99,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,10.010000000000218,generated/revision_panel_inputs/permutation_null.csv.gz,10.010000000000218,True
 S6A raw null_q999,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,480.12400000002526,generated/revision_panel_inputs/permutation_null.csv.gz,480.12400000002526,True
 S6A raw null_max,figures/source_data/S6A_permutation_mtbls79_cow_vs_sheep.csv,827,generated/revision_panel_inputs/permutation_null.csv.gz,827,True

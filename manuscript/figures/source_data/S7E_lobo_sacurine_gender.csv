@@ -2,96 +2,96 @@
 "ne1","gender","raw","Raw","Pearson effect
 correlation",0.458918930468712,0.190100343685077,0.674449891918585,2000,"sacurine","Sacurine","Raw",7.9625
 "ne1","gender","raw","Raw","Spearman effect
-correlation",0.328200337680484,0.127463362499168,0.512117406347728,2000,"sacurine","Sacurine","Raw",7.9625
+correlation",0.328200337680484,0.127463362499169,0.512117406347728,2000,"sacurine","Sacurine","Raw",7.9625
 "ne1","gender","raw","Raw","Sign
 concordance",0.630800884955752,0.495575221238938,0.761061946902655,2000,"sacurine","Sacurine","Raw",7.9625
+"ne2","gender","raw","Raw","Pearson effect
+correlation",0.465638678294867,0.211059449518711,0.669358205549011,2000,"sacurine","Sacurine","Raw",8.0375
+"ne2","gender","raw","Raw","Spearman effect
+correlation",0.331357729223501,0.131500765187305,0.50982829030541,2000,"sacurine","Sacurine","Raw",8.0375
+"ne2","gender","raw","Raw","Sign
+concordance",0.63229203539823,0.486725663716814,0.752212389380531,2000,"sacurine","Sacurine","Raw",8.0375
 "ne1","gender","combat","ComBat","Pearson effect
 correlation",0.46629633887405,0.199288813673631,0.678454216872881,2000,"sacurine","Sacurine","ComBat",6.9625
 "ne1","gender","combat","ComBat","Spearman effect
 correlation",0.326312084137335,0.121583272340142,0.511012875108124,2000,"sacurine","Sacurine","ComBat",6.9625
 "ne1","gender","combat","ComBat","Sign
 concordance",0.613893805309734,0.468805309734513,0.743362831858407,2000,"sacurine","Sacurine","ComBat",6.9625
+"ne2","gender","combat","ComBat","Pearson effect
+correlation",0.472983983129896,0.215926191573216,0.6754802154319,2000,"sacurine","Sacurine","ComBat",7.0375
+"ne2","gender","combat","ComBat","Spearman effect
+correlation",0.32944231153104,0.120463146250583,0.511001023022157,2000,"sacurine","Sacurine","ComBat",7.0375
+"ne2","gender","combat","ComBat","Sign
+concordance",0.615327433628319,0.460176991150442,0.752212389380531,2000,"sacurine","Sacurine","ComBat",7.0375
 "ne1","gender","qc_rlsc","QC-RLSC","Pearson effect
-correlation",0.453132152317615,0.187580780219773,0.670430427625904,2000,"sacurine","Sacurine","QC-RLSC",5.9625
+correlation",0.453132152317615,0.187580780219772,0.670430427625904,2000,"sacurine","Sacurine","QC-RLSC",5.9625
 "ne1","gender","qc_rlsc","QC-RLSC","Spearman effect
 correlation",0.319201028012509,0.111368229755805,0.504653711158427,2000,"sacurine","Sacurine","QC-RLSC",5.9625
 "ne1","gender","qc_rlsc","QC-RLSC","Sign
 concordance",0.63008407079646,0.504424778761062,0.743584070796459,2000,"sacurine","Sacurine","QC-RLSC",5.9625
-"ne1","gender","tiger","TIGER","Pearson effect
-correlation",0.448903377628797,0.182377888801257,0.666177713889161,2000,"sacurine","Sacurine","TIGER",4.9625
-"ne1","gender","tiger","TIGER","Spearman effect
-correlation",0.310218032636902,0.106024602435292,0.497010363297625,2000,"sacurine","Sacurine","TIGER",4.9625
-"ne1","gender","tiger","TIGER","Sign
-concordance",0.64703982300885,0.52212389380531,0.761061946902655,2000,"sacurine","Sacurine","TIGER",4.9625
-"ne1","gender","serrf","SERRF","Pearson effect
-correlation",0.448684965232817,0.19078808005812,0.663238110101778,2000,"sacurine","Sacurine","SERRF",3.9625
-"ne1","gender","serrf","SERRF","Spearman effect
-correlation",0.311320185142059,0.108283152571695,0.496961083571761,2000,"sacurine","Sacurine","SERRF",3.9625
-"ne1","gender","serrf","SERRF","Sign
-concordance",0.648796460176991,0.52212389380531,0.761061946902655,2000,"sacurine","Sacurine","SERRF",3.9625
-"ne1","gender","winn_auto_qc","WiNN (QC-tuned)","Pearson effect
-correlation",0.41305761570007,0.170142846519973,0.622373782454126,2000,"sacurine","Sacurine","WiNN (QC-tuned)",2.9625
-"ne1","gender","winn_auto_qc","WiNN (QC-tuned)","Spearman effect
-correlation",0.313846787876772,0.115768056756937,0.494499592454588,2000,"sacurine","Sacurine","WiNN (QC-tuned)",2.9625
-"ne1","gender","winn_auto_qc","WiNN (QC-tuned)","Sign
-concordance",0.682845132743363,0.47787610619469,0.832079646017698,2000,"sacurine","Sacurine","WiNN (QC-tuned)",2.9625
-"ne1","gender","winn_auto_batch_qc","WiNN (inferred segments)","Pearson effect
-correlation",0.407581093076004,0.165497633335778,0.61392271188426,2000,"sacurine","Sacurine","WiNN (inferred segments)",1.9625
-"ne1","gender","winn_auto_batch_qc","WiNN (inferred segments)","Spearman effect
-correlation",0.308032944640362,0.116851586931932,0.485689126023022,2000,"sacurine","Sacurine","WiNN (inferred segments)",1.9625
-"ne1","gender","winn_auto_batch_qc","WiNN (inferred segments)","Sign
-concordance",0.671477876106195,0.47787610619469,0.831858407079646,2000,"sacurine","Sacurine","WiNN (inferred segments)",1.9625
-"ne1","gender","winn_fixed_no_qc","WiNN","Pearson effect
-correlation",0.406803181271938,0.163973080127399,0.616955245878568,2000,"sacurine","Sacurine","WiNN",0.9625
-"ne1","gender","winn_fixed_no_qc","WiNN","Spearman effect
-correlation",0.306193172366758,0.110768971654801,0.486058827932663,2000,"sacurine","Sacurine","WiNN",0.9625
-"ne1","gender","winn_fixed_no_qc","WiNN","Sign
-concordance",0.658637168141593,0.530973451327434,0.769911504424779,2000,"sacurine","Sacurine","WiNN",0.9625
-"ne2","gender","raw","Raw","Pearson effect
-correlation",0.465638678294867,0.211059449518712,0.669358205549011,2000,"sacurine","Sacurine","Raw",8.0375
-"ne2","gender","raw","Raw","Spearman effect
-correlation",0.331357729223501,0.131500765187305,0.509828290305409,2000,"sacurine","Sacurine","Raw",8.0375
-"ne2","gender","raw","Raw","Sign
-concordance",0.63229203539823,0.486725663716814,0.752212389380531,2000,"sacurine","Sacurine","Raw",8.0375
-"ne2","gender","combat","ComBat","Pearson effect
-correlation",0.472983983129896,0.215926191573216,0.675480215431899,2000,"sacurine","Sacurine","ComBat",7.0375
-"ne2","gender","combat","ComBat","Spearman effect
-correlation",0.32944231153104,0.120463146250582,0.511001023022157,2000,"sacurine","Sacurine","ComBat",7.0375
-"ne2","gender","combat","ComBat","Sign
-concordance",0.615327433628319,0.460176991150442,0.752212389380531,2000,"sacurine","Sacurine","ComBat",7.0375
 "ne2","gender","qc_rlsc","QC-RLSC","Pearson effect
 correlation",0.459844931914769,0.197301265709161,0.670157926630179,2000,"sacurine","Sacurine","QC-RLSC",6.0375
 "ne2","gender","qc_rlsc","QC-RLSC","Spearman effect
 correlation",0.321999779592787,0.113044364229157,0.502219459045845,2000,"sacurine","Sacurine","QC-RLSC",6.0375
 "ne2","gender","qc_rlsc","QC-RLSC","Sign
 concordance",0.629491150442478,0.504424778761062,0.743362831858407,2000,"sacurine","Sacurine","QC-RLSC",6.0375
+"ne1","gender","tiger","TIGER","Pearson effect
+correlation",0.448903377628797,0.182377888801256,0.666177713889162,2000,"sacurine","Sacurine","TIGER",4.9625
+"ne1","gender","tiger","TIGER","Spearman effect
+correlation",0.310218032636902,0.106024602435292,0.497010363297625,2000,"sacurine","Sacurine","TIGER",4.9625
+"ne1","gender","tiger","TIGER","Sign
+concordance",0.64703982300885,0.52212389380531,0.761061946902655,2000,"sacurine","Sacurine","TIGER",4.9625
 "ne2","gender","tiger","TIGER","Pearson effect
 correlation",0.455518140488965,0.187199632475152,0.665037979817355,2000,"sacurine","Sacurine","TIGER",5.0375
 "ne2","gender","tiger","TIGER","Spearman effect
-correlation",0.312788005689001,0.10983057755007,0.492765445139397,2000,"sacurine","Sacurine","TIGER",5.0375
+correlation",0.312788005689001,0.109830577550069,0.492765445139397,2000,"sacurine","Sacurine","TIGER",5.0375
 "ne2","gender","tiger","TIGER","Sign
 concordance",0.64666814159292,0.52212389380531,0.752433628318583,2000,"sacurine","Sacurine","TIGER",5.0375
+"ne1","gender","serrf","SERRF","Pearson effect
+correlation",0.448684965232817,0.19078808005812,0.663238110101778,2000,"sacurine","Sacurine","SERRF",3.9625
+"ne1","gender","serrf","SERRF","Spearman effect
+correlation",0.311320185142059,0.108283152571695,0.496961083571761,2000,"sacurine","Sacurine","SERRF",3.9625
+"ne1","gender","serrf","SERRF","Sign
+concordance",0.648796460176991,0.52212389380531,0.761061946902655,2000,"sacurine","Sacurine","SERRF",3.9625
 "ne2","gender","serrf","SERRF","Pearson effect
-correlation",0.455341046870624,0.19708647280992,0.660293929525588,2000,"sacurine","Sacurine","SERRF",4.0375
+correlation",0.455341046870624,0.197086472809921,0.660293929525588,2000,"sacurine","Sacurine","SERRF",4.0375
 "ne2","gender","serrf","SERRF","Spearman effect
 correlation",0.314078660423182,0.106787710426509,0.491351720007985,2000,"sacurine","Sacurine","SERRF",4.0375
 "ne2","gender","serrf","SERRF","Sign
 concordance",0.648256637168142,0.52212389380531,0.761061946902655,2000,"sacurine","Sacurine","SERRF",4.0375
+"ne1","gender","winn_auto_qc","WiNN (QC-tuned)","Pearson effect
+correlation",0.414150325146904,0.171036714325328,0.622465335174461,2000,"sacurine","Sacurine","WiNN (QC-tuned)",2.9625
+"ne1","gender","winn_auto_qc","WiNN (QC-tuned)","Spearman effect
+correlation",0.315365306241267,0.118334553197152,0.494750565573225,2000,"sacurine","Sacurine","WiNN (QC-tuned)",2.9625
+"ne1","gender","winn_auto_qc","WiNN (QC-tuned)","Sign
+concordance",0.683632743362832,0.47787610619469,0.84070796460177,2000,"sacurine","Sacurine","WiNN (QC-tuned)",2.9625
 "ne2","gender","winn_auto_qc","WiNN (QC-tuned)","Pearson effect
-correlation",0.419816807357756,0.182104714296425,0.616355291085716,2000,"sacurine","Sacurine","WiNN (QC-tuned)",3.0375
+correlation",0.420940107233621,0.182860900351053,0.617351008580902,2000,"sacurine","Sacurine","WiNN (QC-tuned)",3.0375
 "ne2","gender","winn_auto_qc","WiNN (QC-tuned)","Spearman effect
-correlation",0.316727626588595,0.114175510679353,0.498584819349258,2000,"sacurine","Sacurine","WiNN (QC-tuned)",3.0375
+correlation",0.318218839410473,0.112590242198416,0.502505780491051,2000,"sacurine","Sacurine","WiNN (QC-tuned)",3.0375
 "ne2","gender","winn_auto_qc","WiNN (QC-tuned)","Sign
-concordance",0.683411504424779,0.486725663716814,0.831858407079646,2000,"sacurine","Sacurine","WiNN (QC-tuned)",3.0375
+concordance",0.684004424778761,0.486725663716814,0.831858407079646,2000,"sacurine","Sacurine","WiNN (QC-tuned)",3.0375
+"ne1","gender","winn_auto_batch_qc","WiNN (inferred segments)","Pearson effect
+correlation",0.411977831426269,0.167254230432453,0.617571644990806,2000,"sacurine","Sacurine","WiNN (inferred segments)",1.9625
+"ne1","gender","winn_auto_batch_qc","WiNN (inferred segments)","Spearman effect
+correlation",0.31039302764655,0.119016567968594,0.487787569033203,2000,"sacurine","Sacurine","WiNN (inferred segments)",1.9625
+"ne1","gender","winn_auto_batch_qc","WiNN (inferred segments)","Sign
+concordance",0.674194690265487,0.47787610619469,0.831858407079646,2000,"sacurine","Sacurine","WiNN (inferred segments)",1.9625
 "ne2","gender","winn_auto_batch_qc","WiNN (inferred segments)","Pearson effect
-correlation",0.414505174729403,0.170230652713314,0.613668443990523,2000,"sacurine","Sacurine","WiNN (inferred segments)",2.0375
+correlation",0.418966806943388,0.177334404189895,0.6162168930796,2000,"sacurine","Sacurine","WiNN (inferred segments)",2.0375
 "ne2","gender","winn_auto_batch_qc","WiNN (inferred segments)","Spearman effect
-correlation",0.311084311996806,0.113172241998802,0.492413209461707,2000,"sacurine","Sacurine","WiNN (inferred segments)",2.0375
+correlation",0.313303434193892,0.115046950894936,0.498663833255706,2000,"sacurine","Sacurine","WiNN (inferred segments)",2.0375
 "ne2","gender","winn_auto_batch_qc","WiNN (inferred segments)","Sign
-concordance",0.67133185840708,0.47787610619469,0.823008849557522,2000,"sacurine","Sacurine","WiNN (inferred segments)",2.0375
+concordance",0.673942477876106,0.47787610619469,0.823008849557522,2000,"sacurine","Sacurine","WiNN (inferred segments)",2.0375
+"ne1","gender","winn_fixed_no_qc","WiNN","Pearson effect
+correlation",0.412580660747506,0.169022806105762,0.619496268438202,2000,"sacurine","Sacurine","WiNN",0.9625
+"ne1","gender","winn_fixed_no_qc","WiNN","Spearman effect
+correlation",0.311720307405682,0.114207740035931,0.492434626388981,2000,"sacurine","Sacurine","WiNN",0.9625
+"ne1","gender","winn_fixed_no_qc","WiNN","Sign
+concordance",0.660991150442478,0.530973451327434,0.769911504424779,2000,"sacurine","Sacurine","WiNN",0.9625
 "ne2","gender","winn_fixed_no_qc","WiNN","Pearson effect
-correlation",0.413465155943347,0.171749171462604,0.6122459939945,2000,"sacurine","Sacurine","WiNN",1.0375
+correlation",0.419250620063509,0.17937339591311,0.61586426123917,2000,"sacurine","Sacurine","WiNN",1.0375
 "ne2","gender","winn_fixed_no_qc","WiNN","Spearman effect
-correlation",0.308878385122097,0.10581854248453,0.492426517067004,2000,"sacurine","Sacurine","WiNN",1.0375
+correlation",0.314440045079513,0.109256063277663,0.498397681149777,2000,"sacurine","Sacurine","WiNN",1.0375
 "ne2","gender","winn_fixed_no_qc","WiNN","Sign
-concordance",0.657986725663717,0.530973451327434,0.769911504424779,2000,"sacurine","Sacurine","WiNN",1.0375
+concordance",0.660132743362832,0.530973451327434,0.769911504424779,2000,"sacurine","Sacurine","WiNN",1.0375
