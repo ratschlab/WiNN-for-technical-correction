@@ -151,3 +151,24 @@ partial_confounding_portable_hash_policy <- function() {
     exact_object_hash_status = "recorded diagnostic only"
   )
 }
+
+# Verify the two authoritative v3 matrices with exact column lookup. Intensity
+# hashes are diagnostic only: exponentiation is not cross-platform invariant.
+partial_confounding_verify_frozen_inputs <- function(constructed, portable_row) {
+  objects <- c("raw_log_with_biology", "clean_log_with_biology")
+  columns <- paste0(objects, "_quantized_9_sha256")
+  if (!is.data.frame(portable_row) || nrow(portable_row) != 1L ||
+      !all(c("hash_schema", "quantization_digits", columns) %in% names(portable_row)) ||
+      !all(objects %in% names(constructed)) ||
+      !identical(as.character(portable_row[["hash_schema"]]),
+                 .partial_confounding_portable_hash_schema) ||
+      !identical(as.integer(portable_row[["quantization_digits"]]),
+                 .partial_confounding_portable_hash_digits)) return(FALSE)
+  all(vapply(seq_along(objects), function(i) {
+    expected <- as.character(portable_row[[columns[[i]]]])
+    length(expected) == 1L && !is.na(expected) &&
+      grepl("^[0-9a-f]{64}$", expected) &&
+      identical(partial_confounding_portable_matrix_sha256(
+        constructed[[objects[[i]]]]), expected)
+  }, logical(1)))
+}

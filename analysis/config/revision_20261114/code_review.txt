@@ -1,0 +1,64 @@
+WiNN author-note code review, 14 November 2026
+
+Scope: GitHub analysis revision 9613f5b and package revision 50b72a4;
+independent local checks used R 4.6.1 on macOS arm64. Public inputs and all
+archived aggregate results were retained. No correction benchmark was refitted.
+
+Checks completed
+- Package testthat suite: 105 passed, zero failures/warnings/skips.
+- Revised package README example executed successfully, returning 20 x 48.
+- Baseline publication validator: all semantic checks and 876 file hashes pass.
+- Re-executed verify_null_gate_calibration.R in an isolated directory: 8,000
+  replicate rows, including 1,000 seeds per n=20,50,100,200 before/after MAD.
+- Re-executed run_targeted_biology_audit.R: 4,800 drift-gate, 800 batch-gate,
+  and 1,200 preparation-replicate rows plus summaries and counterexample.
+- Compared all nine corresponding publication CSVs: all 14,877 rows match
+  exactly, including numerical values and strings.
+- Reconstructed all 160 publication partial-confounding scenarios from frozen
+  bundles: authoritative pre-exponentiation log-matrix hashes all match.
+  Verified 450 study samples, 225 cases and 100 responsive features each;
+  maximum batch allocation (90,90,45,0,0); phenotype coefficients independently
+  agree with lm within 1e-12 for responsive and null features.
+
+Reproducibility fix
+The partial-confounding runner previously used abbreviated intensity-hash
+column names; R partially matched diagnostic-only columns. The v3 contract
+instead gates the log matrices before exponentiation, because intensity
+rounding can differ across platforms. The runner now verifies exact named
+log-hash fields and the schema/digit count. Regression tests reject corrupted
+or absent authoritative fields and duplicate rows, and accept changed
+intensity diagnostics. This fixes preflight portability, not stored results.
+
+Interpretation
+The confounding design is a controlled stress experiment, not a comprehensive
+realistic biological model. Maximum batch alignment retains one mixed plate;
+it is not complete confounding. Strong symmetric signals in 450 independent
+simulated samples explain high power in the randomized setting. Recovery uses
+the realized ground-truth coefficient on the same log1p scale. Seed-level
+empirical_fdr is a false-discovery proportion; its mean estimates FDR.
+The reproduced all-null drift results show that the nominal 5% BH threshold
+does not ensure 5% experiment-level FDR for these short-segment Ljung-Box
+p-values. Reproduced MAD/PQN results confirm attenuation of rare and widespread
+coordinated responses, without technical artifacts.
+
+QC-RFSC
+The corrected adapter's empirical points have no rerun bootstrap/permutation
+uncertainty. Earlier-adapter uncertainty is not transferable. WaveICA's point
+uses the same 568 study samples; MTBLS79's generic biological point uses 134
+study injections, unlike the 20 sample-collapsed means in the main figure.
+It must not be substituted. The clinical corrected RFSC CV 16.8798% and residual
+drift 11.6661% are above primary WiNN 12.29% and 7.5728%; the claim of lowest
+values among the seven primary methods is supported.
+The archived QC-RLSC diagnosis reports 182.8436% held-out CV and 266,216 warnings
+with qcrlscR 0.1.3 on MTBLS79. Sparse training-QC coverage and extrapolation
+support a layout/configuration-specific instability diagnosis.
+
+Limits
+This is not a repeat of every large correction, bootstrap, or permutation run.
+The live QC-RFSC wrapper test could not run in the default local R library
+because statTarget is absent; archived 225 integration checks are validated.
+Clinical row-level data are restricted. Sample-level bootstrap clustering
+cannot be assumed to establish patient-level independence for longitudinal
+samples. Package algorithm and analyzed version remain unchanged; GitHub
+package documentation revision d9e81b5 records corrected assumptions and a
+randomized illustrative biological signal.

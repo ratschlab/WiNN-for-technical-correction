@@ -57,3 +57,7 @@ tables:
 	python3 manuscript/scripts/generate_review2_support_tables.py
 	$(R) manuscript/scripts/generate_s24_paired_effects_table.R
 	python3 manuscript/scripts/condense_supplementary_tables.py
+
+# Lightweight reconstruction check; no method fitting or private inputs.
+test-confounding-inputs:
+	$(R) analysis/test_partial_confounding_inputs.R

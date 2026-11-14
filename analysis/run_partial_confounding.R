@@ -66,16 +66,8 @@ portable_hashes <- read.csv(
   stringsAsFactors = FALSE, check.names = FALSE
 )
 portable_row <- portable_hashes[portable_hashes$scenario_id == scenario_id, , drop = FALSE]
-if (nrow(portable_row) != 1L ||
-    !identical(
-      partial_confounding_portable_matrix_sha256(x),
-      portable_row$raw_intensity_quantized_9_sha256[[1L]]
-    ) ||
-    !identical(
-      partial_confounding_portable_matrix_sha256(clean),
-      portable_row$clean_ground_truth_quantized_9_sha256[[1L]]
-    )) {
-  stop("Reconstructed scenario matrices do not match the frozen portable hashes.", call. = FALSE)
+if (!partial_confounding_verify_frozen_inputs(constructed, portable_row)) {
+  stop("Reconstructed scenario log matrices do not match the frozen portable hashes.", call. = FALSE)
 }
 
 metadata <- constructed$correction_metadata

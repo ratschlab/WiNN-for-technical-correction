@@ -17,6 +17,19 @@ Only WiNN depends on this change, so only WiNN was recomputed:
 
 The exact aggregate inputs for the current tables are in `results/final/revision_inputs/supplement_20261111/` and `results/final/revision_inputs/derivative_20261111/`; each directory has a README and an uncompressed SHA-256 manifest. The WiNN 0.1.4 release remains available at commit [`f59db42`](https://github.com/ratschlab/WiNN-for-technical-correction/tree/f59db4273bc65d2f09d4cd7705a1b9cbcaf84a3c) (analysis revision [`97e5ea3`](https://github.com/ratschlab/WiNN-for-technical-correction/tree/97e5ea3cadb44fe74ee914528ff19a2940fe95d7)), and the original benchmark at [`21de7c4`](https://github.com/ratschlab/WiNN-for-technical-correction/tree/21de7c448bfa5545d27c5a930161fb0bd8e40d85); `package/winn_0.1.4.tar.gz` is kept for that provenance.
 
+## Author-note review (14 November 2026)
+
+The review re-executed the null-gate and biological-preparation experiments;
+all 14,877 rows in their nine archived result CSVs matched exactly. The package
+test suite passed 105 assertions. The partial-confounding preflight now checks
+the authoritative log-matrix hashes with exact field names; diagnostic intensity
+hashes are no longer used as cross-platform gates. `make test-confounding-inputs`
+reconstructs and checks all 160 publication scenarios without fitting a method.
+The older 320-scenario construction configuration is retained as provenance;
+the publication task manifest selects ten seeds and 16 scenarios per seed.
+Scope, findings and limits are recorded in
+[`analysis/config/revision_20261114/code_review.txt`](analysis/config/revision_20261114/code_review.txt).
+
 ## QC-RFSC and revision analyses
 
 - The QC-RFSC wrapper in `scripts/benchmark_helpers.R` assigns neutral identifiers to every injection and marks only authorized training references as QCs. Returned relative abundances are restored using raw training-QC feature medians. Features not returned by the native implementation retain their input abundance.
