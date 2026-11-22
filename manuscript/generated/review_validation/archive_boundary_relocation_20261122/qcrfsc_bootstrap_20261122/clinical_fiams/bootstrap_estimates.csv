@@ -1,0 +1,6 @@
+"dataset_key","method_id","method","metric","direction","point_estimate","bootstrap_mean","bootstrap_se","ci_lower","ci_upper","valid_bootstrap"
+"clinical_fiams","qc_rfsc","QC-RFSC","batch_weighted_pc_r2_categorical","lower",0.020605458448264,0.0337874957345226,0.00765665682694182,0.0207674732408044,0.0504095757721097,2000
+"clinical_fiams","qc_rfsc","QC-RFSC","sample_replicate_pearson_median","higher",0.986180780658088,0.985981667514794,0.000518491642618715,0.984894348674506,0.986704883025726,2000
+"clinical_fiams","qc_rfsc","QC-RFSC","genuine_replicate_icc_median","higher",0.983627909601192,0.983724823307983,0.000673350034397199,0.982734184058267,0.98512078565278,2000
+"clinical_fiams","qc_rfsc","QC-RFSC","cross_batch_top1_accuracy","higher",0.833955223880597,0.833523537366689,0.0200865136148172,0.794007490636704,0.871268656716418,2000
+"clinical_fiams","qc_rfsc","QC-RFSC","cross_batch_mean_reciprocal_rank","higher",0.867244044219706,0.866751248283059,0.0169119216302705,0.832451381952689,0.899459537343045,2000

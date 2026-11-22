@@ -1,0 +1,3 @@
+"dataset_key","method_id","biological_associated_features","standardized_effect_magnitude","within_group_variance","features","study_samples","model"
+"waveica","raw",206,0.0823361700796857,0.420172370954563,6461,568,"ordinary pooled-variance two-group model; BH threshold 0.05; no permutation null rerun"
+"waveica","qc_rfsc",393,0.101706224254422,0.247614083515336,6461,568,"ordinary pooled-variance two-group model; BH threshold 0.05; no permutation null rerun"

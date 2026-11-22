@@ -1,0 +1,3 @@
+"seed_id","method","truth_log1p_rmse","truth_metabolite_profile_icc_mean","truth_sample_profile_pearson_mean","heldout_qc_cv_mean","uncorrected_features","rng","ntree","coCV","Frule"
+"SIM10","raw",0.291738246535687,0.599639701154964,0.518310901203034,43.4947793580392,0,2026073614,500,30,0.8
+"SIM10","corrected",0.132418525615877,0.845832310210456,0.821720447094198,14.3474409979928,1,2026073614,500,30,0.8

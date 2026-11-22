@@ -1,0 +1,3 @@
+"dataset_key","method_id","method","metric","direction","point_estimate","bootstrap_mean","bootstrap_se","ci_lower","ci_upper","valid_bootstrap"
+"mtbls79","qc_rfsc","QC-RFSC","batch_weighted_pc_r2_categorical","lower",0.18928817833772,0.193176194504195,0.0162464370408039,0.162247002391242,0.226878348678855,2000
+"mtbls79","qc_rfsc","QC-RFSC","biological_weighted_pc_r2","higher",0.436730579019025,0.423018826550756,0.0253307592506652,0.374495128192922,0.472115048782049,2000

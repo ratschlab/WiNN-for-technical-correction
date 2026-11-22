@@ -1,7 +1,7 @@
 \begin{landscape}
 \footnotesize
 \begin{longtable}{p{3.3cm}p{2.4cm}p{4.1cm}p{4.1cm}p{4.1cm}}
-\caption{Same-information baseline validation on the ten canonical simulation seeds. Mean-only batch correction and study-sample ANCOVA use all injections without reference or biological labels. Upper rows give mean $\pm$ standard error across seeds. Lower rows give paired WiNN advantages and 95\% $t_9$ intervals; positive values favor WiNN (comparator minus WiNN for RMSE, WiNN minus comparator for ICC and correlation). WiNN improves all three truth endpoints in every paired seed.}\label{tab:supp_baseline_truth}\\
+\caption{Same-information baseline validation on the ten canonical simulation seeds. Mean-only batch correction and all-injection ANCOVA use all injections without reference or biological labels. Upper rows give mean $\pm$ standard error across seeds. Lower rows give paired WiNN advantages and 95\% $t_9$ intervals; positive values favor WiNN (comparator minus WiNN for RMSE, WiNN minus comparator for ICC and correlation). WiNN improves all three truth endpoints in every paired seed.}\label{tab:supp_baseline_truth}\\
 \toprule
 Method & Held-out QC CV (\%) & Truth log1p RMSE & Feature ICC & Sample correlation \\
 \midrule
@@ -14,11 +14,11 @@ Method & Held-out QC CV (\%) & Truth log1p RMSE & Feature ICC & Sample correlati
 \endlastfoot
 Raw & $44.550 \pm 0.285$ & $0.2927 \pm 0.0015$ & $0.5879 \pm 0.0020$ & $0.5189 \pm 0.0021$ \\
 Mean-only batch & $15.623 \pm 0.193$ & $0.1164 \pm 0.0004$ & $0.8487 \pm 0.0008$ & $0.8454 \pm 0.0008$ \\
-Study-sample ANCOVA & $12.695 \pm 0.134$ & $0.0981 \pm 0.0004$ & $0.8870 \pm 0.0006$ & $0.8842 \pm 0.0008$ \\
+All-injection ANCOVA & $12.695 \pm 0.134$ & $0.0981 \pm 0.0004$ & $0.8870 \pm 0.0006$ & $0.8842 \pm 0.0008$ \\
 WiNN & $8.415 \pm 0.057$ & $0.0722 \pm 0.0004$ & $0.9231 \pm 0.0005$ & $0.9247 \pm 0.0010$ \\
 \midrule
 \multicolumn{5}{l}{Paired WiNN advantage over comparator [95\% interval]} \\
 Mean-only batch & --- & 0.044 [0.043, 0.045] & 0.074 [0.073, 0.076] & 0.079 [0.078, 0.081] \\
-Study-sample ANCOVA & --- & 0.026 [0.025, 0.026] & 0.036 [0.035, 0.037] & 0.041 [0.039, 0.042] \\
+All-injection ANCOVA & --- & 0.026 [0.025, 0.026] & 0.036 [0.035, 0.037] & 0.041 [0.039, 0.042] \\
 \end{longtable}
 \end{landscape}

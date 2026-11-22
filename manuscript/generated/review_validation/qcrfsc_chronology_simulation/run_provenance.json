@@ -1,0 +1,29 @@
+{
+  "fit_job": "21887239",
+  "endpoint_evaluation_job": "21887529",
+  "seed_ids": [
+    "SIM01",
+    "SIM02",
+    "SIM03",
+    "SIM04",
+    "SIM05",
+    "SIM06",
+    "SIM07",
+    "SIM08",
+    "SIM09",
+    "SIM10"
+  ],
+  "ntree": 500,
+  "coCV": 30,
+  "Frule": 0.8,
+  "rng_formula": "2026072610 + as.integer(SIM suffix) * 100 + 4",
+  "raw_and_truth_sha256_verified": true,
+  "native_REGfit_training_identity_and_chronology_asserted": true,
+  "finite_ljung_box_tests": 50000,
+  "unavailable_ljung_box_tests": 0,
+  "integration_checks": 220,
+  "winn_better_truth_seed_comparisons": 30,
+  "truth_seed_comparisons": 30,
+  "other_methods_unchanged": true,
+  "figure_2EF_unchanged": true
+}

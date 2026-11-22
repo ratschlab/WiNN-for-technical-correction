@@ -1,0 +1,42 @@
+check,passed,detail
+mtbls79 batch_weighted_pc_r2_categorical complete archived pairing,True,
+mtbls79 batch_weighted_pc_r2_categorical all raw draws reproduce,True,1.1046719095020308e-14
+mtbls79 biological_weighted_pc_r2 complete archived pairing,True,
+mtbls79 biological_weighted_pc_r2 all raw draws reproduce,True,1.0547118733938987e-15
+mtbls79 raw and QC-RFSC draw hashes identical,True,912ec3a1d7f741cbc636b16ddc6b9053ae03188dd1b72da30f9789e260f9bf92
+clinical_fiams batch_weighted_pc_r2_categorical complete archived pairing,True,
+clinical_fiams batch_weighted_pc_r2_categorical all raw draws reproduce,True,4.396982777876701e-12
+clinical_fiams cross_batch_mean_reciprocal_rank complete archived pairing,True,
+clinical_fiams cross_batch_mean_reciprocal_rank all raw draws reproduce,True,1.1102230246251565e-15
+clinical_fiams cross_batch_top1_accuracy complete archived pairing,True,
+clinical_fiams cross_batch_top1_accuracy all raw draws reproduce,True,9.992007221626409e-16
+clinical_fiams genuine_replicate_icc_median complete archived pairing,True,
+clinical_fiams genuine_replicate_icc_median all raw draws reproduce,True,2.9976021664879227e-15
+clinical_fiams sample_replicate_pearson_median complete archived pairing,True,
+clinical_fiams sample_replicate_pearson_median all raw draws reproduce,True,3.9968028886505635e-15
+clinical_fiams raw and QC-RFSC draw hashes identical,True,932eb6c3edc7c607a80bdf138151c0bd2f3b12356d7eefa93f804bc4c17610a0
+batchcorr_set1 batch_weighted_pc_r2_categorical complete archived pairing,True,
+batchcorr_set1 batch_weighted_pc_r2_categorical all raw draws reproduce,True,1.9984014443252818e-15
+batchcorr_set1 cross_batch_mean_reciprocal_rank complete archived pairing,True,
+batchcorr_set1 cross_batch_mean_reciprocal_rank all raw draws reproduce,True,9.992007221626409e-16
+batchcorr_set1 cross_batch_top1_accuracy complete archived pairing,True,
+batchcorr_set1 cross_batch_top1_accuracy all raw draws reproduce,True,1.0547118733938987e-15
+batchcorr_set1 genuine_replicate_icc_median complete archived pairing,True,
+batchcorr_set1 genuine_replicate_icc_median all raw draws reproduce,True,4.9960036108132044e-15
+batchcorr_set1 sample_replicate_pearson_median complete archived pairing,True,
+batchcorr_set1 sample_replicate_pearson_median all raw draws reproduce,True,1.9984014443252818e-15
+batchcorr_set1 raw and QC-RFSC draw hashes identical,True,5acacbd861364d6ec1871959b6e3bc8e0b805adb299453bb8c869c8446f14eea
+sacurine age_weighted_pc_r2 complete archived pairing,True,
+sacurine age_weighted_pc_r2 all raw draws reproduce,True,4.0245584642661925e-16
+sacurine batch_weighted_pc_r2_categorical complete archived pairing,True,
+sacurine batch_weighted_pc_r2_categorical all raw draws reproduce,True,1.0269562977782698e-15
+sacurine bmi_weighted_pc_r2 complete archived pairing,True,
+sacurine bmi_weighted_pc_r2 all raw draws reproduce,True,8.014422459012849e-16
+sacurine gender_weighted_pc_r2 complete archived pairing,True,
+sacurine gender_weighted_pc_r2 all raw draws reproduce,True,8.98586760555986e-16
+sacurine raw and QC-RFSC draw hashes identical,True,4da356e3c99ce3542e0e85fe2f5356f08b465b2d61fe3b5ee8ec300f1fec3f5d
+waveica batch_weighted_pc_r2_categorical complete archived pairing,True,
+waveica batch_weighted_pc_r2_categorical all raw draws reproduce,True,9.729994587814872e-13
+waveica biological_weighted_pc_r2 complete archived pairing,True,
+waveica biological_weighted_pc_r2 all raw draws reproduce,True,8.161899975323017e-13
+waveica raw and QC-RFSC draw hashes identical,True,113fcac5e8da95f9fc45783c79515db89ddce7b21f0bd48cda4d1acfc04ae155

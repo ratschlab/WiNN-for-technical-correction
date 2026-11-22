@@ -7,3 +7,4 @@
 "winn_auto_qc","WiNN (QC-tuned)","genuine_replicate_icc_median","higher",0.990695125362182,0.990710116644513,0.989945633042886,0.991555226811125,2000,"clinical_fiams","Clinical FIA-MS","WiNN (QC-tuned)"
 "winn_auto_batch_qc","WiNN (inferred segments)","genuine_replicate_icc_median","higher",0.990627243487714,0.990528975444528,0.989705584677913,0.991507453406939,2000,"clinical_fiams","Clinical FIA-MS","WiNN (inferred segments)"
 "winn_fixed_no_qc","WiNN","genuine_replicate_icc_median","higher",0.98986978429495,0.989791311274273,0.988795870065768,0.990665866394709,2000,"clinical_fiams","Clinical FIA-MS","WiNN"
+"qc_rfsc","QC-RFSC","genuine_replicate_icc_median","higher",0.983628549942097,0.983784604463567,0.982906081834435,0.985120723378362,2000,"clinical_fiams","Clinical FIA-MS","QC-RFSC"

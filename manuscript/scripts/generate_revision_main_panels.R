@@ -85,9 +85,21 @@ theme_panel <- function(base_size = 9.5) {
     )
 }
 
+# Limit regeneration to named figures, preserving unrelated panel files.
+figure_arg <- grep("^--figures=", commandArgs(trailingOnly = TRUE), value = TRUE)
+selected_figures <- if (length(figure_arg)) strsplit(sub("^--figures=", "", figure_arg[[1]]), ",")[[1]] else NULL
+panel_arg <- grep("^--panels=", commandArgs(trailingOnly = TRUE), value = TRUE)
+selected_panels <- if (length(panel_arg)) strsplit(sub("^--panels=", "", panel_arg[[1]]), ",")[[1]] else NULL
+want_figure <- function(id) is.null(selected_figures) || id %in% selected_figures
+want_panel <- function(id, panel) want_figure(id) && (is.null(selected_panels) || paste0(id, panel) %in% selected_panels)
+# The confounding renderer writes its two linked panels together.
+if (!is.null(selected_panels) && xor("F2E" %in% selected_panels, "F2F" %in% selected_panels)) {
+  stop("Select F2E and F2F together, or omit both.")
+}
 panel_manifest <- list()
 save_panel <- function(plot, directory, stem, width_mm, height_mm, source_data,
                        figure_id, panel_id, title) {
+  if (!want_panel(figure_id, panel_id)) return(invisible(NULL))
   pdf_path <- file.path(directory, paste0(stem, ".pdf"))
   png_path <- file.path(directory, paste0(stem, ".png"))
   csv_path <- file.path(panel_source_dir, paste0(stem, ".csv"))
@@ -202,7 +214,7 @@ for (spec in simulation_specs[2:4]) {
 s3_specs <- list(
   list("A", "heldout_qc_cv_mean", "Held-out QC CV", "Held-out QC CV (%)"),
   list("B", "residual_run_order_gam_mean_deviance", "Residual run-order drift", "Residual run-order drift"),
-  list("C", "batch_weighted_pc_r2_categorical", "Variance explained by batch", "Variance explained by batch"),
+  list("C", "batch_weighted_pc_r2_categorical", "Batch association", expression("Weighted-PC "*R^2)),
   list("D", "truth_log1p_rmse", "Ground-truth RMSE", "Ground-truth RMSE"),
   list("E", "truth_metabolite_profile_icc_mean", "Feature ICC(A,1)", "ICC(A,1) to ground truth"),
   list("F", "truth_sample_profile_pearson_mean", "Sample correlation", "Pearson r to ground truth")
@@ -225,41 +237,61 @@ for (spec in s3_specs) {
   save_panel(plot,supp_dir,paste0("S3",spec[[1]],"_simulation_",spec[[2]]),85,65,panel_data,"S3",spec[[1]],spec[[3]])
 }
 
-gate_truth <- read_csv(file.path(revision_inputs, "selective_forced_truth_rmse.csv"), show_col_types = FALSE) |>
-  mutate(policy = factor(method_id, levels = c("G_AA", "G_SA", "G_AS", "G_SS"),
-                         labels = c("Force both", "Force batch", "Force drift", "Selective")))
-gate_summary <- gate_truth |> distinct(policy, method_mean, method_se)
-p <- ggplot(gate_truth, aes(value, policy)) +
-  geom_point(position = position_jitter(width = 0, height = .075, seed = 2026),
-             shape = 16, colour = winn_colour, size = 1.35, alpha = palette_point_alpha) +
-  geom_segment(data = gate_summary, aes(x = method_mean - method_se, xend = method_mean + method_se,
-                                       y = policy, yend = policy), linewidth = line_width, colour = palette_ink) +
-  geom_point(data = gate_summary, aes(x = method_mean), shape = 23, fill = winn_colour,
-             colour = palette_ink, size = 2.4, stroke = point_stroke) +
-  scale_x_continuous(limits = c(.070, .080), breaks = c(.070, .075, .080),
-                     expand = expansion(mult = c(.04, .12)), labels = scales::label_number(accuracy = .001)) +
-  labs(title = "A Selective vs forced correction", x = "Ground-truth RMSE", y = NULL) +
-  theme_panel() + theme(panel.grid.major.y = element_blank())
-save_panel(p, main_dir, "F2A_selective_forced_truth_rmse", 85, 50, gate_truth,
-           "F2", "A", "Selective vs forced correction")
+if (want_panel("F2", "A")) {
+  source(file.path(dirname(script_path), "final_review_gating_matching/plot_paired_gate.R"), local=TRUE)
+  paired_gate <- plot_paired_gate(package_root)
+  save_panel(paired_gate$plot, main_dir, "F2A_selective_forced_truth_rmse", 85, 50,
+             paired_gate$data, "F2", "A", "Paired benefit of selection")
+}
 
 # -----------------------------------------------------------------------------
 # Main Figure 3: empirical technical and repeated-identity trade-offs.
 # -----------------------------------------------------------------------------
 
 identity_file <- file.path(revision_inputs, "eccb2026_identity_tradeoffs_v2.csv")
-# Replace earlier-adapter QC-RFSC rows; current empirical results are points only.
+# Current QC-RFSC outputs use the validated adapter and the common endpoint rules.
+rfsc_endpoints <- read_csv(file.path(package_root, "generated", "review_validation",
+  "qcrfsc_completed_empirical_all_endpoints.csv"), show_col_types = FALSE)
+rfsc_endpoint <- function(dataset, metric_id) {
+  z <- filter(rfsc_endpoints, dataset_key == dataset, metric == metric_id)
+  stopifnot(nrow(z) == 1L, is.finite(z$value), z$denominator > 0)
+  z
+}
+rfsc_technical_se <- function(dataset, metric_id) {
+  z <- rfsc_endpoint(dataset, metric_id)
+  z$value / sqrt(z$denominator)
+}
+rfsc_bootstrap <- read_csv(file.path(package_root, "generated", "review_validation",
+  "qcrfsc_bootstrap_estimates.csv"), show_col_types = FALSE)
+rfsc_bootstrap_row <- function(dataset, metric_id) {
+  z <- filter(rfsc_bootstrap, dataset_key == dataset, metric == metric_id)
+  stopifnot(nrow(z) == 1L, z$valid_bootstrap == 2000L,
+            is.finite(z$point_estimate), is.finite(z$bootstrap_se))
+  z
+}
+rfsc_bootstrap_se <- function(dataset, metric_id) rfsc_bootstrap_row(dataset, metric_id)$bootstrap_se
 rfsc <- read_csv(file.path(package_root, "generated", "supplementary_table_data",
                           "table_s26_qcrfsc_empirical.csv"), show_col_types = FALSE)
 rfsc_identity <- rfsc |> filter(dataset_key %in% c("batchcorr_set1", "clinical_fiams")) |>
   transmute(dataset_key, dataset_label = dataset, method_id = "qc_rfsc",
-    qc_cv = qcrfsc_cv_percent, qc_cv_se = NA_real_,
+    qc_cv = qcrfsc_cv_percent,
+    qc_cv_se = vapply(dataset_key, rfsc_technical_se, numeric(1), metric_id="heldout_qc_cv_sd"),
     residual_run_order_gam_deviance_percent = residual_gam_percent,
-    residual_run_order_gam_deviance_percent_se = NA_real_,
+    residual_run_order_gam_deviance_percent_se = 100 * vapply(dataset_key, rfsc_technical_se,
+      numeric(1), metric_id="residual_run_order_gam_sd_deviance"),
     batch_pc_variance_percent = 100 * batch_weighted_pc_r2,
-    batch_pc_variance_percent_se = NA_real_,
+    batch_pc_variance_percent_se = 100 * vapply(dataset_key, rfsc_bootstrap_se,
+      numeric(1), metric_id="batch_weighted_pc_r2_categorical"),
     point_estimate_genuine_replicate_icc_median = replicate_profile_icc,
-    bootstrap_se_genuine_replicate_icc_median = NA_real_)
+    bootstrap_se_genuine_replicate_icc_median = vapply(dataset_key, rfsc_bootstrap_se,
+      numeric(1), metric_id="genuine_replicate_icc_median"))
+for (i in seq_len(nrow(rfsc_identity))) {
+  z <- rfsc_identity[i, ]
+  stopifnot(abs(z$batch_pc_variance_percent / 100 - rfsc_bootstrap_row(z$dataset_key,
+    "batch_weighted_pc_r2_categorical")$point_estimate) < 1e-8,
+    abs(z$point_estimate_genuine_replicate_icc_median - rfsc_bootstrap_row(z$dataset_key,
+    "genuine_replicate_icc_median")$point_estimate) < 1e-8)
+}
 identity <- read_csv(identity_file, show_col_types = FALSE) |>
   filter(method_id %in% setdiff(main_method_ids, "qc_rfsc")) |>
   bind_rows(rfsc_identity) |>
@@ -284,6 +316,8 @@ make_identity_scatter <- function(panel_data, panel_id, title, kind, stem) {
         aes(qc_cv, residual_run_order_gam_deviance_percent,
             label = method_label, colour = method_label),
         size = 3.2, seed = 2026, max.overlaps = Inf, force = 1.2,
+        nudge_x = ifelse(panel_data$method_id == "raw" & panel_id == "B", .8, 0),
+        nudge_y = ifelse(panel_data$method_id == "raw" & panel_id == "B", .65, 0),
         min.segment.length = 0, box.padding = 0.16, point.padding = 0.12,
         segment.size = line_width, show.legend = FALSE
       ) +
@@ -306,7 +340,7 @@ make_identity_scatter <- function(panel_data, panel_id, title, kind, stem) {
         label_data <- panel_data |>
           mutate(label_x = ifelse(method_id == "raw", 58, 17),
                  label_y = unname(c(raw = .886, combat = .941,
-                   qc_rlsc = .952, qc_rfsc = .906, tiger = .930, serrf = .919,
+                   qc_rlsc = .952, qc_rfsc = .904, tiger = .930, serrf = .921,
                    winn_fixed_no_qc = .963)[method_id]))
         list(
           geom_segment(data = label_data,
@@ -329,12 +363,10 @@ make_identity_scatter <- function(panel_data, panel_id, title, kind, stem) {
         )
       }) +
       labs(
-        x = ifelse(
-          unique(as.character(panel_data$dataset_label)) == "Clinical FIA-MS",
-          "Variance explained by plate (%)",
-          "Variance explained by batch (%)"
-        ),
-        y = "Replicate-profile ICC(A,1)"
+        x = if (unique(as.character(panel_data$dataset_label)) == "Clinical FIA-MS")
+          expression("Plate association, weighted-PC "*R^2*" (%)") else
+          expression("Batch association, weighted-PC "*R^2*" (%)"),
+        y = "Replicate ICC(A,1)"
       )
   }
 
@@ -346,7 +378,7 @@ make_identity_scatter <- function(panel_data, panel_id, title, kind, stem) {
     coord_cartesian(clip = "off") +
     labs(title = paste(panel_id, title)) +
     theme_panel(9.4) +
-    theme(legend.position = "none")
+    theme(legend.position = "none", plot.margin = margin(5, 4, 3, 4))
 
   save_panel(
     plot, main_dir, stem, 85, 50, panel_data, "F3", panel_id, title
@@ -378,7 +410,7 @@ make_identity_scatter(
 # Main Figure 2E-F: identifiability boundary.
 # -----------------------------------------------------------------------------
 
-if (file.exists(file.path(package_root, "generated/figure2_confounding/summary.csv"))) {
+if (want_panel("F2", "E") && file.exists(file.path(package_root, "generated/figure2_confounding/summary.csv"))) {
   source(file.path(dirname(script_path), "figure2_confounding/plot.R"))
   revised <- plot_figure2_confounding(package_root)
   for (spec in revised) panel_manifest[[length(panel_manifest) + 1L]] <- data.frame(
@@ -444,11 +476,10 @@ for (spec in confounding_main_specs) {
 }
 
 public_effect_file <- file.path(revision_inputs, "eccb2026_public_effect_tradeoffs_v2.csv")
-# Revised WaveICA endpoint uses the same 568 study samples as the other methods.
+# WaveICA uses the same 568 study samples as the other methods.
 # MTBLS79 uses the independently reevaluated mean log1p profiles of 20 extracts,
-# not the generic 134-injection RFSC group endpoint. Neither RFSC point has SEs.
-rfsc_endpoints <- read_csv(file.path(package_root, "generated", "review_validation",
-  "qcrfsc_completed_empirical_all_endpoints.csv"), show_col_types = FALSE)
+# not the generic 134-injection RFSC group endpoint. Uncertainty uses 2,000
+# paired biological-unit bootstrap draws from the common evaluation protocol.
 rfsc_waveica <- rfsc_endpoints |>
   filter(dataset_key == "waveica", metric %in%
     c("batch_weighted_pc_r2_categorical", "biological_weighted_pc_r2"))
@@ -457,7 +488,8 @@ rfsc_public <- tibble(dataset_key = "waveica", method_id = "qc_rfsc",
   dataset_label = "WaveICA: group 0 vs 1",
   batch_pc_variance_percent = 100 * rfsc_waveica$value[rfsc_waveica$metric == "batch_weighted_pc_r2_categorical"],
   biological_pc_variance_percent = 100 * rfsc_waveica$value[rfsc_waveica$metric == "biological_weighted_pc_r2"],
-  batch_pc_variance_percent_se = NA_real_, biological_pc_variance_percent_se = NA_real_)
+  batch_pc_variance_percent_se = 100 * rfsc_bootstrap_se("waveica", "batch_weighted_pc_r2_categorical"),
+  biological_pc_variance_percent_se = 100 * rfsc_bootstrap_se("waveica", "biological_weighted_pc_r2"))
 rfsc_mtbls79 <- read_csv(file.path(package_root, "generated", "review_validation",
   "qcrfsc_mtbls79_sample_means.csv"), show_col_types = FALSE) |>
   filter(method_id == "qc_rfsc")
@@ -466,8 +498,16 @@ stopifnot(nrow(rfsc_mtbls79) == 1L, rfsc_mtbls79$batch_n == 134L,
 rfsc_public <- bind_rows(rfsc_public,
   rfsc_mtbls79 |> transmute(dataset_key, method_id,
     dataset_label = "MTBLS79: cow vs sheep", batch_pc_variance_percent,
-    biological_pc_variance_percent, batch_pc_variance_percent_se = NA_real_,
-    biological_pc_variance_percent_se = NA_real_))
+    biological_pc_variance_percent,
+    batch_pc_variance_percent_se = 100 * rfsc_bootstrap_se("mtbls79", "batch_weighted_pc_r2_categorical"),
+    biological_pc_variance_percent_se = 100 * rfsc_bootstrap_se("mtbls79", "biological_weighted_pc_r2")))
+for (i in seq_len(nrow(rfsc_public))) {
+  z <- rfsc_public[i, ]
+  stopifnot(abs(z$batch_pc_variance_percent / 100 - rfsc_bootstrap_row(z$dataset_key,
+    "batch_weighted_pc_r2_categorical")$point_estimate) < 1e-8,
+    abs(z$biological_pc_variance_percent / 100 - rfsc_bootstrap_row(z$dataset_key,
+    "biological_weighted_pc_r2")$point_estimate) < 1e-8)
+}
 public_effect <- read_csv(public_effect_file, show_col_types = FALSE) |>
   filter(method_id %in% setdiff(main_method_ids, "qc_rfsc")) |>
   bind_rows(rfsc_public) |>
@@ -509,11 +549,11 @@ for (spec in public_specs) {
     coord_cartesian(clip = "off") +
     labs(
       title = paste(spec[[1]], spec[[3]]),
-      x = "Variance explained by batch (%)",
-      y = "Variance explained\nby biological group (%)"
+      x = expression("Batch association, weighted-PC "*R^2*" (%)"),
+      y = expression(atop("Group association,", "weighted-PC "*R^2*" (%)"))
     ) +
     theme_panel(9.4) +
-    theme(legend.position = "none")
+    theme(legend.position = "none", plot.margin = margin(5, 4, 3, 4))
   save_panel(
     plot, main_dir, spec[[4]], 85, 50, panel_data,
     "F4", spec[[1]], spec[[3]]
@@ -524,7 +564,7 @@ for (spec in public_specs) {
 partial_specs <- list(
   list("A", "heldout_qc_cv_mean", "Held-out QC CV", "Held-out QC CV (%)"),
   list("B", "residual_run_order_gam_mean_deviance", "Residual run-order drift", "Residual run-order drift"),
-  list("C", "batch_weighted_pc_r2_categorical", "Variance explained by batch", "Variance explained by batch"),
+  list("C", "batch_weighted_pc_r2_categorical", "Batch association", expression("Weighted-PC "*R^2)),
   list("D", "clean_sample_profile_pearson_mean", "Ground-truth sample recovery", "Pearson r to ground truth"),
   list("E", "median_attenuation_ratio_clean_responsive", "Ground-truth effect recovery", "Corrected / ground-truth effect"),
   list("F", "empirical_fdr", "Empirical false-discovery rate", "Empirical FDR")
@@ -555,4 +595,11 @@ for (spec in partial_specs) {
 
 # -----------------------------------------------------------------------------
 
-write_csv(bind_rows(panel_manifest), file.path(package_root, "generated", "revision_main_panel_manifest.csv"))
+manifest_path <- file.path(package_root, "generated", "revision_main_panel_manifest.csv")
+new_manifest <- bind_rows(panel_manifest)
+if ((!is.null(selected_figures) || !is.null(selected_panels)) && file.exists(manifest_path)) {
+  old_manifest <- read_csv(manifest_path, show_col_types = FALSE)
+  replaced_keys <- paste0(new_manifest$figure, new_manifest$panel)
+  new_manifest <- bind_rows(filter(old_manifest, !paste0(figure, panel) %in% replaced_keys), new_manifest)
+}
+write_csv(new_manifest, manifest_path)

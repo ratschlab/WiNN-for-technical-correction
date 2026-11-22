@@ -7,11 +7,11 @@ ROOT=Path(__file__).resolve().parents[2]; F=ROOT/'figures'; MM=72/25.4
 names=['F2A_selective_forced_truth_rmse.pdf','F2B_truth_log1p_rmse.pdf',
        'F2C_truth_metabolite_profile_icc_mean.pdf','F2D_truth_sample_profile_pearson_mean.pdf',
        'F2E_median_attenuation_ratio_clean_responsive.pdf','F2F_empirical_fdr.pdf']
-page=PageObject.create_blank_page(width=175*MM,height=156*MM)
+page=PageObject.create_blank_page(width=175*MM,height=153*MM)
 rows=[]
 for i,name in enumerate(names):
     p=F/'main_panels'/name; q=PdfReader(p).pages[0]; scale=85*MM/float(q.mediabox.width)
-    x=(i%2)*90*MM; y=(156-(i//2+1)*50-(i//2)*3)*MM+50*MM-float(q.mediabox.height)*scale
+    x=(i%2)*90*MM; y=(153-(i//2+1)*50-(i//2)*1.5)*MM+50*MM-float(q.mediabox.height)*scale
     page.merge_transformed_page(q,Transformation().scale(scale).translate(x,y))
     rows.append(dict(figure='F2_simulation.pdf',panel=name,panel_sha256=hashlib.sha256(p.read_bytes()).hexdigest(),
                      width_mm=85,height_mm=50,x_mm=x/MM,y_mm=y/MM))

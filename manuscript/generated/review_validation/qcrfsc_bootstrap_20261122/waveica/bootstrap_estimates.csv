@@ -1,0 +1,3 @@
+"dataset_key","method_id","method","metric","direction","point_estimate","bootstrap_mean","bootstrap_se","ci_lower","ci_upper","valid_bootstrap"
+"waveica","qc_rfsc","QC-RFSC","batch_weighted_pc_r2_categorical","lower",0.515953725788583,0.508907821696188,0.00862044639267989,0.491843508679379,0.525988201705377,2000
+"waveica","qc_rfsc","QC-RFSC","biological_weighted_pc_r2","higher",0.00859524436407063,0.00945792539361649,0.00287750723931997,0.00447362300158031,0.0156477522820378,2000

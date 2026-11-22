@@ -1,0 +1,6 @@
+"check","invalid_input_rejected"
+"missing_seed",TRUE
+"duplicate_seed",TRUE
+"nonfinite_rmse",TRUE
+"wrong_seed",TRUE
+"wrong_policy",TRUE

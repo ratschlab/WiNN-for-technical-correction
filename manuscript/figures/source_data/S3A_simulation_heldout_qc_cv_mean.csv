@@ -79,13 +79,13 @@ heldout_qc_cv_mean,13.159246754266,lower,1000,percent,,simulation,serrf,SERRF,SI
 heldout_qc_cv_mean,8.3676832540341,lower,1000,percent,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM10,WiNN (QC-tuned),8.414460422608993,0.058912134872008186
 heldout_qc_cv_mean,14.064056328151,lower,1000,percent,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM10,WiNN (inferred segments),14.08106717480257,0.6591021606091811
 heldout_qc_cv_mean,8.30129862556567,lower,1000,percent,,simulation,winn_fixed_no_qc,WiNN,SIM10,WiNN,8.41494624052402,0.05668382698821019
-heldout_qc_cv_mean,14.7280131359941,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM01,QC-RFSC,15.91619282340851,1.9785796275920546
-heldout_qc_cv_mean,32.0168289753813,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM02,QC-RFSC,15.91619282340851,1.9785796275920546
-heldout_qc_cv_mean,19.0850132446883,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM03,QC-RFSC,15.91619282340851,1.9785796275920546
-heldout_qc_cv_mean,13.2173359565027,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM04,QC-RFSC,15.91619282340851,1.9785796275920546
-heldout_qc_cv_mean,10.2234590360892,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM05,QC-RFSC,15.91619282340851,1.9785796275920546
-heldout_qc_cv_mean,13.2096444309348,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM06,QC-RFSC,15.91619282340851,1.9785796275920546
-heldout_qc_cv_mean,17.6021780056693,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM07,QC-RFSC,15.91619282340851,1.9785796275920546
-heldout_qc_cv_mean,10.9401985050664,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM08,QC-RFSC,15.91619282340851,1.9785796275920546
-heldout_qc_cv_mean,13.7477848350727,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM09,QC-RFSC,15.91619282340851,1.9785796275920546
-heldout_qc_cv_mean,14.3914721086863,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM10,QC-RFSC,15.91619282340851,1.9785796275920546
+heldout_qc_cv_mean,14.7280131359941,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM01,QC-RFSC,15.89673400901804,1.981112733436203
+heldout_qc_cv_mean,32.0168289753813,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM02,QC-RFSC,15.89673400901804,1.981112733436203
+heldout_qc_cv_mean,19.0850132446883,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM03,QC-RFSC,15.89673400901804,1.981112733436203
+heldout_qc_cv_mean,13.1220840644924,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM04,QC-RFSC,15.89673400901804,1.981112733436203
+heldout_qc_cv_mean,10.2228560941738,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM05,QC-RFSC,15.89673400901804,1.981112733436203
+heldout_qc_cv_mean,13.2096444309348,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM06,QC-RFSC,15.89673400901804,1.981112733436203
+heldout_qc_cv_mean,17.6021780056693,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM07,QC-RFSC,15.89673400901804,1.981112733436203
+heldout_qc_cv_mean,10.9401985050664,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM08,QC-RFSC,15.89673400901804,1.981112733436203
+heldout_qc_cv_mean,13.6930826357872,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM09,QC-RFSC,15.89673400901804,1.981112733436203
+heldout_qc_cv_mean,14.3474409979928,lower,1000,percent,,simulation,qc_rfsc,QC-RFSC,SIM10,QC-RFSC,15.89673400901804,1.981112733436203

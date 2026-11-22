@@ -14,6 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 FIGURES = ROOT / 'figures'
 PANELS = FIGURES / 'main_panels'
 MM = 72 / 25.4
+ROW_GAP_MM = 1.5  # Blank inter-panel space; native panel geometry is unchanged.
 SPECS = [
     ('F2_simulation.pdf', [
         'F2A_selective_forced_truth_rmse.pdf', 'F2B_truth_log1p_rmse.pdf',
@@ -28,7 +29,7 @@ SPECS = [
 manifest = []
 for filename, panel_names in SPECS:
     rows = len(panel_names) // 2
-    height_mm = rows * 50 + (rows - 1) * 3
+    height_mm = rows * 50 + (rows - 1) * ROW_GAP_MM
     page = PageObject.create_blank_page(width=175 * MM, height=height_mm * MM)
     for index, name in enumerate(panel_names):
         source = PANELS / name
@@ -40,7 +41,7 @@ for filename, panel_names in SPECS:
         scale = 85 * MM / float(panel.mediabox.width)
         row, column = divmod(index, 2)
         x = column * 90 * MM
-        y = (height_mm - (row + 1) * 50 - row * 3) * MM
+        y = (height_mm - (row + 1) * 50 - row * ROW_GAP_MM) * MM
         y += 50 * MM - float(panel.mediabox.height) * scale
         page.merge_transformed_page(panel, Transformation().scale(scale).translate(x, y))
         manifest.append(dict(figure=filename, panel=name,

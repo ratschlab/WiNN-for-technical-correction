@@ -1,0 +1,6 @@
+"dataset_key","method_id","metric","point_estimate"
+"batchcorr_set1","qc_rfsc","batch_weighted_pc_r2_categorical",0.168624993045559
+"batchcorr_set1","qc_rfsc","sample_replicate_pearson_median",0.918190726603839
+"batchcorr_set1","qc_rfsc","genuine_replicate_icc_median",0.910106106378004
+"batchcorr_set1","qc_rfsc","cross_batch_top1_accuracy",0.489177489177489
+"batchcorr_set1","qc_rfsc","cross_batch_mean_reciprocal_rank",0.547918495425851

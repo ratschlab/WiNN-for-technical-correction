@@ -1,0 +1,6 @@
+"dataset_key","method_id","method","metric","direction","point_estimate","bootstrap_mean","bootstrap_se","ci_lower","ci_upper","valid_bootstrap"
+"clinical_fiams","raw","Raw","batch_weighted_pc_r2_categorical","lower",0.150509455379697,0.160166491982653,0.0151554807625888,0.131739547830875,0.191634191439085,2000
+"clinical_fiams","raw","Raw","sample_replicate_pearson_median","higher",0.983467072627652,0.983418544995061,0.00083855891855397,0.981328449179864,0.984698428653594,2000
+"clinical_fiams","raw","Raw","genuine_replicate_icc_median","higher",0.980951466319722,0.980940588881264,0.00105535380697376,0.978530344666092,0.982608564502347,2000
+"clinical_fiams","raw","Raw","cross_batch_top1_accuracy","higher",0.751865671641791,0.750902111245689,0.0231781353980702,0.705528190830236,0.794776119402985,2000
+"clinical_fiams","raw","Raw","cross_batch_mean_reciprocal_rank","higher",0.793563085196202,0.792760472704236,0.0203584823477662,0.7506958479,0.831903162742821,2000

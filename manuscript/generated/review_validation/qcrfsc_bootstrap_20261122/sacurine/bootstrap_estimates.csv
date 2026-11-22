@@ -1,0 +1,5 @@
+"dataset_key","method_id","method","metric","direction","point_estimate","bootstrap_mean","bootstrap_se","ci_lower","ci_upper","valid_bootstrap"
+"sacurine","qc_rfsc","QC-RFSC","batch_weighted_pc_r2_categorical","lower",0.00245413004657617,0.0102240504714148,0.00932228538823498,0.00112094144755673,0.0367675248009736,2000
+"sacurine","qc_rfsc","QC-RFSC","age_weighted_pc_r2","higher",0.0467699046704699,0.056353168306498,0.0189358220319504,0.0282259974662726,0.100083009176226,2000
+"sacurine","qc_rfsc","QC-RFSC","bmi_weighted_pc_r2","higher",0.0149621225030365,0.0210834021933167,0.0101344949468312,0.00723778277256958,0.0449806380345501,2000
+"sacurine","qc_rfsc","QC-RFSC","gender_weighted_pc_r2","higher",0.0509955720513223,0.0528657314321822,0.0162756550536509,0.0251537785966938,0.0899123328109939,2000

@@ -1,0 +1,5 @@
+"candidate_id","fold_id","seed","error","n_validation_qc","n_features_input","n_features_scored","mean_training_qc_profile_correlation","mean_training_qc_cv_fraction","qc_only_score"
+1,"full_training_qcs_in_sample",12132001,"",41,120,120,0.981980844816951,0.493739832993082,0.73511092832041
+2,"full_training_qcs_in_sample",230102815,"",41,120,120,0.981934227723849,0.499639080562171,0.732114687442763
+3,"full_training_qcs_in_sample",18792031,"",41,120,120,0.989996970075108,0.358827547851697,0.810583196149259
+4,"full_training_qcs_in_sample",105584749,"",41,120,120,0.989946560708574,0.359242001137726,0.810325560139711

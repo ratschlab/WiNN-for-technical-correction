@@ -79,13 +79,13 @@ truth_sample_profile_pearson_mean,0.871615854957594,higher,450,correlation,,simu
 truth_sample_profile_pearson_mean,0.925027624622739,higher,450,correlation,,simulation,winn_auto_qc,WiNN (QC-tuned),SIM10,WiNN (QC-tuned),0.9249961970469738,0.0010037217137541393
 truth_sample_profile_pearson_mean,0.889611864131123,higher,450,correlation,,simulation,winn_auto_batch_qc,WiNN (inferred segments),SIM10,WiNN (inferred segments),0.8796963061938341,0.0037533964925308885
 truth_sample_profile_pearson_mean,0.925074514653524,higher,450,correlation,,simulation,winn_fixed_no_qc,WiNN,SIM10,WiNN,0.924745257414109,9.86743957990273e-4
-truth_sample_profile_pearson_mean,0.848295670714416,higher,450,correlation,,simulation,qc_rfsc,QC-RFSC,SIM01,QC-RFSC,0.8229365227490864,0.00589209599189167
-truth_sample_profile_pearson_mean,0.845627840053801,higher,450,correlation,,simulation,qc_rfsc,QC-RFSC,SIM02,QC-RFSC,0.8229365227490864,0.00589209599189167
-truth_sample_profile_pearson_mean,0.820358142866478,higher,450,correlation,,simulation,qc_rfsc,QC-RFSC,SIM03,QC-RFSC,0.8229365227490864,0.00589209599189167
-truth_sample_profile_pearson_mean,0.818974205221605,higher,450,correlation,,simulation,qc_rfsc,QC-RFSC,SIM04,QC-RFSC,0.8229365227490864,0.00589209599189167
-truth_sample_profile_pearson_mean,0.792381399847334,higher,450,correlation,,simulation,qc_rfsc,QC-RFSC,SIM05,QC-RFSC,0.8229365227490864,0.00589209599189167
-truth_sample_profile_pearson_mean,0.835999444088927,higher,450,correlation,,simulation,qc_rfsc,QC-RFSC,SIM06,QC-RFSC,0.8229365227490864,0.00589209599189167
-truth_sample_profile_pearson_mean,0.826587196441546,higher,450,correlation,,simulation,qc_rfsc,QC-RFSC,SIM07,QC-RFSC,0.8229365227490864,0.00589209599189167
-truth_sample_profile_pearson_mean,0.794361090694473,higher,450,correlation,,simulation,qc_rfsc,QC-RFSC,SIM08,QC-RFSC,0.8229365227490864,0.00589209599189167
-truth_sample_profile_pearson_mean,0.825584613338243,higher,450,correlation,,simulation,qc_rfsc,QC-RFSC,SIM09,QC-RFSC,0.8229365227490864,0.00589209599189167
-truth_sample_profile_pearson_mean,0.821195624224041,higher,450,correlation,,simulation,qc_rfsc,QC-RFSC,SIM10,QC-RFSC,0.8229365227490864,0.00589209599189167
+truth_sample_profile_pearson_mean,0.84843811424126,higher,450,correlation,,simulation,qc_rfsc,QC-RFSC,SIM01,QC-RFSC,0.8236742986496366,0.005929300469588809
+truth_sample_profile_pearson_mean,0.845716825705797,higher,450,correlation,,simulation,qc_rfsc,QC-RFSC,SIM02,QC-RFSC,0.8236742986496366,0.005929300469588809
+truth_sample_profile_pearson_mean,0.820428088005336,higher,450,correlation,,simulation,qc_rfsc,QC-RFSC,SIM03,QC-RFSC,0.8236742986496366,0.005929300469588809
+truth_sample_profile_pearson_mean,0.819657060873403,higher,450,correlation,,simulation,qc_rfsc,QC-RFSC,SIM04,QC-RFSC,0.8236742986496366,0.005929300469588809
+truth_sample_profile_pearson_mean,0.792637315586241,higher,450,correlation,,simulation,qc_rfsc,QC-RFSC,SIM05,QC-RFSC,0.8236742986496366,0.005929300469588809
+truth_sample_profile_pearson_mean,0.836107238636769,higher,450,correlation,,simulation,qc_rfsc,QC-RFSC,SIM06,QC-RFSC,0.8236742986496366,0.005929300469588809
+truth_sample_profile_pearson_mean,0.826671836229625,higher,450,correlation,,simulation,qc_rfsc,QC-RFSC,SIM07,QC-RFSC,0.8236742986496366,0.005929300469588809
+truth_sample_profile_pearson_mean,0.794434637413168,higher,450,correlation,,simulation,qc_rfsc,QC-RFSC,SIM08,QC-RFSC,0.8236742986496366,0.005929300469588809
+truth_sample_profile_pearson_mean,0.830931422710569,higher,450,correlation,,simulation,qc_rfsc,QC-RFSC,SIM09,QC-RFSC,0.8236742986496366,0.005929300469588809
+truth_sample_profile_pearson_mean,0.821720447094198,higher,450,correlation,,simulation,qc_rfsc,QC-RFSC,SIM10,QC-RFSC,0.8236742986496366,0.005929300469588809

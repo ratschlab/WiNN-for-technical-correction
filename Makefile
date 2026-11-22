@@ -46,6 +46,7 @@ config-manifest:
 	$(R) analysis/write_config_manifest.R
 
 report:
+	$(R) manuscript/scripts/generate_overview_figure.R
 	$(R) manuscript/scripts/generate_revision_ablation_panels.R
 	$(R) manuscript/scripts/generate_review_fold_panels.R
 	$(R) manuscript/scripts/generate_revision_main_panels.R
@@ -60,6 +61,7 @@ tables:
 	$(PYTHON) manuscript/scripts/generate_review2_support_tables.py
 	$(R) manuscript/scripts/generate_s24_paired_effects_table.R
 	$(PYTHON) manuscript/scripts/condense_supplementary_tables.py
+	$(PYTHON) analysis/sync_publication_summaries.py
 
 # Lightweight reconstruction check; no method fitting or private inputs.
 test-confounding-inputs:

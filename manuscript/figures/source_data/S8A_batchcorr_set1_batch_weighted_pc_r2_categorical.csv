@@ -7,3 +7,4 @@
 "winn_auto_qc","WiNN (QC-tuned)","batch_weighted_pc_r2_categorical","lower",0.00057607122217269,0.0125024683101898,0.00735856120700035,0.0190939629963065,2000,"batchcorr_set1","BatchCorr Set 1","WiNN (QC-tuned)"
 "winn_auto_batch_qc","WiNN (inferred segments)","batch_weighted_pc_r2_categorical","lower",0.00684362608957494,0.0184980199837387,0.0115855229094522,0.0269126985028576,2000,"batchcorr_set1","BatchCorr Set 1","WiNN (inferred segments)"
 "winn_fixed_no_qc","WiNN","batch_weighted_pc_r2_categorical","lower",0.00056347557327367,0.0124120692634349,0.00716320861920421,0.0192414890652,2000,"batchcorr_set1","BatchCorr Set 1","WiNN"
+"qc_rfsc","QC-RFSC","batch_weighted_pc_r2_categorical","lower",0.168624993045559,0.179072199507611,0.161379808228025,0.19823081584945,2000,"batchcorr_set1","BatchCorr Set 1","QC-RFSC"

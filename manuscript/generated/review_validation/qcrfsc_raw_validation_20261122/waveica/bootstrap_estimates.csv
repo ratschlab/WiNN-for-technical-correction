@@ -1,0 +1,3 @@
+"dataset_key","method_id","method","metric","direction","point_estimate","bootstrap_mean","bootstrap_se","ci_lower","ci_upper","valid_bootstrap"
+"waveica","raw","Raw","batch_weighted_pc_r2_categorical","lower",0.694367406499871,0.689886668268993,0.00625708759000319,0.677038306903508,0.701469778493037,2000
+"waveica","raw","Raw","biological_weighted_pc_r2","higher",0.00276573078388549,0.00315996487091519,0.00127240734694951,0.00100908162767558,0.00584524070853228,2000

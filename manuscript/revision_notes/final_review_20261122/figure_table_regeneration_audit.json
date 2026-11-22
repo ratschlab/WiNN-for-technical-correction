@@ -1,0 +1,89 @@
+{
+  "protected_figures": {
+    "figures/main_panels/F2A_selective_forced_truth_rmse.pdf": true,
+    "figures/main_panels/F2E_median_attenuation_ratio_clean_responsive.pdf": true,
+    "figures/main_panels/F2F_empirical_fdr.pdf": true,
+    "figures/source_data/F2E_median_attenuation_ratio_clean_responsive.csv": true,
+    "figures/source_data/F2F_empirical_fdr.csv": true
+  },
+  "non_rfsc_F2BCD": {
+    "F2B_truth_log1p_rmse.csv": {
+      "rows": 60,
+      "all_non_rfsc_values_and_coordinates_unchanged": true
+    },
+    "F2C_truth_metabolite_profile_icc_mean.csv": {
+      "rows": 60,
+      "all_non_rfsc_values_and_coordinates_unchanged": true
+    },
+    "F2D_truth_sample_profile_pearson_mean.csv": {
+      "rows": 60,
+      "all_non_rfsc_values_and_coordinates_unchanged": true
+    }
+  },
+  "full_table_regeneration": "PASS in isolated clone and live manuscript",
+  "command": "Rscript scripts/generate_supplementary_tables.R --final-root=<publication-repo>/results/final/revision_inputs/supplement_20261111; Rscript scripts/nearest_baseline/generate_validation_tables.R; python3 scripts/generate_review2_support_tables.py; Rscript scripts/generate_s24_paired_effects_table.R; python3 scripts/condense_supplementary_tables.py",
+  "current_endpoint_and_interval_rows_exact": {
+    "qcrfsc_bootstrap_estimates.csv": 18,
+    "frozen_identity_retrieval_estimates.csv": 44,
+    "frozen_identity_retrieval_paired_differences.csv": 40,
+    "qcrfsc_completed_empirical_all_endpoints.csv": 84,
+    "qcrfsc_completed_simulation_summary.csv": 6
+  },
+  "scientific_table_csv_rows_exact": {
+    "table_s16_cumulative_stages.csv": 36,
+    "table_s14_reference_splits.csv": 48,
+    "table_s7_clinical.csv": 8,
+    "leave_one_batch_out_bootstrap_summary.csv": 408,
+    "table_s12_lobo_fold_level.csv": 408,
+    "table_s18_safeguards.csv": 2,
+    "table_s10_runtime_retention.csv": 48,
+    "table_s26_qcrfsc_empirical.csv": 5,
+    "table_s15_selective_forced.csv": 104,
+    "table_s12_lobo_summary.csv": 120,
+    "tiger_nonfinite_feature_fallback.csv": 76,
+    "table_s4_simulation.csv": 9,
+    "table_s11_association_permutation.csv": 40,
+    "table_s13_partial_confounding.csv": 16,
+    "table_s8_sacurine.csv": 8,
+    "intensity_domain_safeguard.csv": 684,
+    "table_s17_winn_parameters.csv": 18,
+    "table_s20_nonestimable.csv": 9,
+    "table_s5_mtbls79.csv": 8,
+    "table_s9_waveica.csv": 8,
+    "endpoint_free_selection_manifest.csv": 54,
+    "table_s6_batchcorr.csv": 8
+  },
+  "provenance_only_table_changes": [
+    "69-panel validation updated to72 with source inventory",
+    "current chronology integration filenames"
+  ],
+  "figure1_size_mm": [
+    175,
+    53
+  ],
+  "figure1_font_sizes_pt": [
+    7,
+    8,
+    9
+  ],
+  "axes_updated": [
+    "F3C",
+    "F3D",
+    "F4A",
+    "F4B",
+    "S2C",
+    "S3C",
+    "S5C",
+    "S8A",
+    "S8D",
+    "S9A-F",
+    "S10A-C"
+  ],
+  "final_figure_package_audit": {
+    "vector_pdfs": 90,
+    "raster_previews": 25,
+    "checks": 442,
+    "failed": 0
+  },
+  "public_wrapper_validation": "PASS on Euler R4.5.1/statTarget1.38.0: lazy loading, canonical equivalence, chronological positions, authorized controls, hidden-ID invariance, abundance scaling, native bracketed equivalence, unchanged installed namespace"
+}

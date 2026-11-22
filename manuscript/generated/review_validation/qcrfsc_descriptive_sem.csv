@@ -1,0 +1,11 @@
+dataset_key,method_id,metric,point_estimate,descriptive_sem,denominator,units,uncertainty_scope
+mtbls79,qc_rfsc,heldout_qc_cv_mean,15.6881195296124,0.21755827456609267,2488,percent,descriptive feature/profile SEM; features are not independent experimental replicates
+mtbls79,qc_rfsc,residual_run_order_gam_mean_deviance,0.157727609966725,0.0012732400640163718,19904,proportion,descriptive feature/profile SEM; features are not independent experimental replicates
+clinical_fiams,qc_rfsc,heldout_qc_cv_mean,16.906965807526,0.27329074755619776,1594,percent,descriptive feature/profile SEM; features are not independent experimental replicates
+clinical_fiams,qc_rfsc,residual_run_order_gam_mean_deviance,0.116043752788247,0.0010528211040683679,12752,proportion,descriptive feature/profile SEM; features are not independent experimental replicates
+batchcorr_set1,qc_rfsc,heldout_qc_cv_mean,42.9229903313747,2.581089218048673,199,percent,descriptive feature/profile SEM; features are not independent experimental replicates
+batchcorr_set1,qc_rfsc,residual_run_order_gam_mean_deviance,0.121140209234102,0.0034458610743862083,1990,proportion,descriptive feature/profile SEM; features are not independent experimental replicates
+sacurine,qc_rfsc,heldout_qc_cv_mean,13.6442943562489,1.4238928507355866,113,percent,descriptive feature/profile SEM; features are not independent experimental replicates
+sacurine,qc_rfsc,residual_run_order_gam_mean_deviance,0.0335616155302128,0.003032306081733129,226,proportion,descriptive feature/profile SEM; features are not independent experimental replicates
+waveica,qc_rfsc,heldout_qc_cv_mean,28.8917940135068,0.33359969778753334,6461,percent,descriptive feature/profile SEM; features are not independent experimental replicates
+waveica,qc_rfsc,residual_run_order_gam_mean_deviance,0.127555288287791,0.0009878523678479901,19383,proportion,descriptive feature/profile SEM; features are not independent experimental replicates

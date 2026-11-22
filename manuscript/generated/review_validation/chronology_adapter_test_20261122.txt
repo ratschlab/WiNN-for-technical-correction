@@ -1,0 +1,2 @@
+PASS: exact authorized references; hidden-ID rename invariance; mapping/dimensions; training-QC abundance scaling; native equivalence with boundary QCs; chronological ranks with both endpoint QCs withheld; installed namespace unchanged.
+statTarget version: 1.38.0 ; isolated REGfit calls asserted: 4 

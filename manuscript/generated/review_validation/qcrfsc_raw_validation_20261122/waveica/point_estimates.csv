@@ -1,0 +1,3 @@
+"dataset_key","method_id","metric","point_estimate"
+"waveica","raw","batch_weighted_pc_r2_categorical",0.694367406499871
+"waveica","raw","biological_weighted_pc_r2",0.00276573078388549

@@ -29,7 +29,13 @@ assert '[AUTHOR NOTE:' not in (ROOT/'supplementary.tex').read_text()
 report['inline_author_notes_remaining']=0
 report['main_figure_count']=len(re.findall(r'\\begin\{figure\*?\}',main))
 report['main_alt_text_count']=main.count(r'\textbf{Alt text:}')
+assert report['main_alt_text_count']==0
+report['submission_alt_text_count']=(ROOT/'figure_alt_text.txt').read_text().count('Figure ')
+assert report['submission_alt_text_count']==report['main_figure_count']
+for name in ('main.tex','supplementary.tex'):
+    text=(ROOT/name).read_text()
+    assert not re.search(r'revised confounding experiment|former .*?analysis|original .*?experiment|original partial.confounding|revised confounding|former .*?analysis|earlier versions|revision generators|no recomputed uncertainty',text,re.I),name
 report['guidance_url']='https://academic.oup.com/bioinformatics/pages/author-guidelines'
-report['guidance_checked']='2026-11-14'
+report['guidance_checked']='2026-11-22'
 (ROOT/'revision_notes/final_package_qa.json').write_text(json.dumps(report,indent=2)+'\n')
 print(json.dumps({k:dict(pages=v['pages'],outside=len(v['out_of_page_characters']),errors=len(v['unresolved_errors']),overfull=v['overfull_boxes']) for k,v in report.items() if isinstance(v,dict)},indent=2))

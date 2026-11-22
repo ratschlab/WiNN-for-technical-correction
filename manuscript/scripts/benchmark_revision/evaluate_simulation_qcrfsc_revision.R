@@ -22,4 +22,9 @@ out <- file.path(output_root,seed_id)
 dir.create(out,recursive=TRUE,showWarnings=FALSE)
 y$metrics$seed_id <- seed_id
 write.csv(y$metrics,file.path(out,"metrics.csv"),row.names=FALSE)
+write.csv(data.frame(seed_id=seed_id,profiles=nrow(y$ljung_box),
+ finite_raw_tests=sum(is.finite(y$ljung_box$p_value)),
+ finite_adjusted_tests=sum(is.finite(y$ljung_box$p_adj)),
+ unavailable_tests=sum(!is.finite(y$ljung_box$p_adj))),
+ file.path(out,"ljung_box_validity_audit.csv"),row.names=FALSE)
 writeLines("status=complete",file.path(out,"COMPLETE.txt"))

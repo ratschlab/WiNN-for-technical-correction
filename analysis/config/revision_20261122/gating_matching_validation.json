@@ -1,0 +1,19 @@
+{
+  "null_seeds_completed": 4000,
+  "null_selected_counts_match_changed_features": true,
+  "null_segment_counts": {
+    "20": 1000,
+    "50": 1000,
+    "100": 1000,
+    "200": 1000
+  },
+  "empirical_archived_raw_and_selective_points_and_intervals_reproduced_tolerance": 1e-12,
+  "empirical_queries_identical_across_policies": true,
+  "simulation_seeds_per_contrast": 10,
+  "figure_2B_to_F_unchanged_by_this_analysis": true,
+  "null_current_diagnostic_counts_equal_archived_all_4000_seeds": true,
+  "null_guard_rerun_replicates_and_summary_byte_identical": true,
+  "paired_exact_seed_grid_finite_guards_validated": true,
+  "paired_invalid_fixture_cases_rejected": 5,
+  "empirical_cached_validation_rerun_passed": true
+}

@@ -1,0 +1,6 @@
+status=complete
+seed_id=SIM10
+statTarget=1.38.0
+exact_frozen_input_hashes_verified=TRUE
+acquisition_chronology_preserved=TRUE
+endpoint_guard_relaxation_only=TRUE

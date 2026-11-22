@@ -7,7 +7,9 @@ source(file.path(here,'original_benchmark_helpers.R'));source(file.path(here,'fr
 suppressPackageStartupMessages({library(dplyr);library(tibble)})
 p<-readRDS(file.path(opt('--input-root',here),paste0('input_',dataset,'.rds')))
 input_results<-opt('--matrix-root',file.path(here,'results'));out<-file.path(opt('--output-root',file.path(here,'empirical_evaluation')),dataset);dir.create(out,recursive=TRUE,showWarnings=FALSE)
-for(method in c('legacy','corrected')) {
+methods <- strsplit(opt('--methods','legacy,corrected'),',',fixed=TRUE)[[1]]
+stopifnot(all(methods %in% c('legacy','corrected')))
+for(method in methods) {
  filename<-if(method=='legacy')'legacy_reproduced_matrix.rds' else 'corrected_training_qc_abundance.rds'
  x<-readRDS(file.path(input_results,dataset,filename))
  value<-evaluate_release_matrix(dataset,paste0('qc_rfsc_',method),paste('QC-RFSC',method),x,p)
@@ -15,5 +17,5 @@ for(method in c('legacy','corrected')) {
  method_dir<-file.path(out,method);dir.create(method_dir,recursive=TRUE,showWarnings=FALSE)
  for(field in names(value))write.csv(value[[field]],file.path(method_dir,paste0(field,'.csv')),row.names=FALSE)
 }
-writeLines(c('status=complete',paste0('dataset=',dataset),'scope=frozen endpoint definitions; refitted QC-RFSC only; uncertainty and other-method matrix re-evaluation remain'),file.path(out,'COMPLETE.txt'))
+writeLines(c('status=complete',paste0('dataset=',dataset),'scope=point endpoint definitions; conditional bootstrap supplied by bootstrap_empirical_qcrfsc.R'),file.path(out,'COMPLETE.txt'))
 capture.output(sessionInfo(),file=file.path(out,'sessionInfo.txt'))

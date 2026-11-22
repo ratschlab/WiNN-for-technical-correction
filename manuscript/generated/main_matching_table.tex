@@ -1,0 +1,23 @@
+\begin{table}[t]
+\centering\small
+\caption{Cross-batch sample matching (top-1 accuracy, \%).}
+\label{tab:matching}
+\begin{tabular}{lrr}
+\toprule
+Method & BatchCorr & Clinical \\
+\midrule
+Raw & 46.3 & 75.2 \\
+ComBat & 71.6 & 84.7 \\
+QC-RLSC & 71.3 & 85.4 \\
+QC-RFSC & 48.9 & 83.4 \\
+TIGER & 69.4 & 88.1 \\
+SERRF & 69.3 & 87.7 \\
+WiNN & 71.1 & 86.6 \\
+Mean-only batch & 70.3 & 85.4 \\
+All-injection ANCOVA & 72.6 & 85.1 \\
+\midrule
+Chance & 0.16 & 0.22 \\
+\bottomrule
+\end{tabular}
+\par\smallskip{\raggedright\footnotesize Queries: 693 from 346 plant lines (BatchCorr); 536 pair means from 267 samples (clinical). WiNN minus raw: 24.8 percentage points (95\% paired interval 20.5--29.2) and 11.4 (7.3--15.7), respectively. Candidate pools are fixed across methods. QC-RFSC includes native filtering and raw-value fallback (Supplementary Methods S3). Full paired intervals: Supplementary~Table~S10.\par}
+\end{table}

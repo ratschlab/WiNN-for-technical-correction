@@ -1,0 +1,3 @@
+status=complete
+dataset=sacurine
+scope=point endpoint definitions; conditional bootstrap supplied by bootstrap_empirical_qcrfsc.R

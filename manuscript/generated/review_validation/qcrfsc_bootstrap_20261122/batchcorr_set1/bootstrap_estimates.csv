@@ -1,0 +1,6 @@
+"dataset_key","method_id","method","metric","direction","point_estimate","bootstrap_mean","bootstrap_se","ci_lower","ci_upper","valid_bootstrap"
+"batchcorr_set1","qc_rfsc","QC-RFSC","batch_weighted_pc_r2_categorical","lower",0.168624993045559,0.179072199507611,0.00953120445317129,0.161379808228025,0.19823081584945,2000
+"batchcorr_set1","qc_rfsc","QC-RFSC","sample_replicate_pearson_median","higher",0.918190726603839,0.91846576557382,0.00361217390561968,0.911898014103254,0.925244279014461,2000
+"batchcorr_set1","qc_rfsc","QC-RFSC","genuine_replicate_icc_median","higher",0.910106106378004,0.909987964854116,0.00302909400290239,0.903009581046992,0.916933735892983,2000
+"batchcorr_set1","qc_rfsc","QC-RFSC","cross_batch_top1_accuracy","higher",0.489177489177489,0.490099994958521,0.0257454242362538,0.440335272366522,0.538693160583032,2000
+"batchcorr_set1","qc_rfsc","QC-RFSC","cross_batch_mean_reciprocal_rank","higher",0.547918495425851,0.548740645242432,0.0237971488591496,0.503124756167844,0.595271282945887,2000

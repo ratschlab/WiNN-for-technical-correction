@@ -1,0 +1,5 @@
+"dataset","contrast","difference","ci_lower","ci_upper","bootstrap_replicates"
+"batchcorr_set1","selective_minus_raw",0.248196248196248,0.204941860465116,0.292024380495604,2000
+"batchcorr_set1","selective_minus_forced",0.00288600288600283,-0.0130062508888016,0.0175695461200586,2000
+"clinical_fiams","selective_minus_raw",0.113805970149254,0.0730337078651686,0.157305971702039,2000
+"clinical_fiams","selective_minus_forced",0.00559701492537312,-0.00559701492537312,0.0168539325842696,2000

@@ -1,0 +1,3 @@
+Command: Rscript analysis/test_qcrfsc_public_wrapper.R
+Environment: Euler r/4.5.1; statTarget 1.38.0; R_LIBS_USER=/cluster/project/platt/tanmay/metabolomics_winn_robustness/Rlib_4.5
+PASS: lazy public wrapper; exact canonical equivalence; chronological positions with unbracketed controls; hidden-ID invariance; training-QC abundance scale; native equivalence for bracketed controls; installed statTarget unchanged.

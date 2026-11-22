@@ -14,7 +14,7 @@ from pypdf import PdfReader
 from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1]
-OLD_TERMINOLOGY = re.compile(r'clean[ -](?:truth|reference)|to clean|held-out reference CV|deposited groups|weighted[ -]PC R|run-order deviance', re.I)
+OLD_TERMINOLOGY = re.compile(r'clean[ -](?:truth|reference)|to clean|held-out reference CV|deposited groups|run-order deviance', re.I)
 
 OLD = re.compile(r'\bwinn\s*(?:fixed|auto)|\bfixed[\s-]+winn\b', re.I)
 

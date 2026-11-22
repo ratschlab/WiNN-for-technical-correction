@@ -110,7 +110,10 @@ evaluate_release_matrix <- function(dataset_key, method_id, method_label, matrix
   if (nrow(lb)) {
     grouping <- interaction(lb$method, lb$batch, lb$segment_id, drop = TRUE)
     lb$p_adj <- ave(lb$p_value, grouping, FUN = function(value) stats::p.adjust(value, method = "BH"))
-    lb$is_autocorrelated <- is.finite(lb$p_adj) & lb$p_adj < 0.05
+    # An unavailable test must not be counted as a nonsignificant test.
+    # The current RFSC profile exports contain no unavailable tests; this
+    # explicit finite-test denominator also defines degenerate future inputs.
+    lb$is_autocorrelated <- ifelse(is.finite(lb$p_adj), lb$p_adj < 0.05, NA)
   }
 
   batch_r2 <- weighted_pc_r2_explicit(
@@ -124,7 +127,7 @@ evaluate_release_matrix <- function(dataset_key, method_id, method_label, matrix
     evaluation_metric_row("heldout_qc_cv_median", stats::median(qc, na.rm = TRUE), "lower", sum(is.finite(qc)), "percent"),
     evaluation_metric_row("residual_run_order_gam_mean_deviance", mean(gam$explained, na.rm = TRUE), "lower", sum(is.finite(gam$explained)), "proportion"),
     evaluation_metric_row("residual_run_order_gam_sd_deviance", stats::sd(gam$explained, na.rm = TRUE), "lower", sum(is.finite(gam$explained)), "proportion"),
-    evaluation_metric_row("residual_ljung_box_proportion_significant", mean(lb$is_autocorrelated, na.rm = TRUE), "lower", sum(is.finite(lb$p_adj)), "proportion"),
+    evaluation_metric_row("residual_ljung_box_proportion_significant", if (any(is.finite(lb$p_adj))) mean(lb$is_autocorrelated, na.rm = TRUE) else NA_real_, "lower", sum(is.finite(lb$p_adj)), "proportion"),
     evaluation_metric_row("batch_weighted_pc_r2_categorical", batch_r2, "lower", length(study$ids), "weighted R-squared", "Batch is explicitly categorical."),
     evaluation_metric_row("retained_features", nrow(matrix), "higher", nrow(prepared$x), "features"),
     evaluation_metric_row("retained_samples", ncol(matrix), "higher", ncol(prepared$x), "samples"),

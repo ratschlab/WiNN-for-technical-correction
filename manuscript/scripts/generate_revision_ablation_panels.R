@@ -18,6 +18,9 @@ panel_source_dir <- file.path(manuscript_root, "figures", "source_data")
 source(file.path(manuscript_root, "scripts", "method_palette.R"))
 dir.create(supp_dir, recursive = TRUE, showWarnings = FALSE)
 dir.create(panel_source_dir, recursive = TRUE, showWarnings = FALSE)
+panel_arg <- grep("^--panels=", commandArgs(TRUE), value=TRUE)
+selected_panels <- if(length(panel_arg)) strsplit(sub("^--panels=", "", panel_arg[1]), ",", fixed=TRUE)[[1]] else character()
+
 
 pt_to_mm <- 25.4 / 72.27
 line_width <- 0.45 * pt_to_mm
@@ -52,6 +55,8 @@ theme_panel <- function(base_size = 9.5) {
     )
 }
 save_panel <- function(plot, stem, width_mm, height_mm, source_data) {
+  panel_id <- sub("_.*$", "", stem)
+  if(length(selected_panels) && !panel_id %in% selected_panels) return(invisible(NULL))
   ggsave(file.path(supp_dir, paste0(stem, ".pdf")), plot, width = width_mm, height = height_mm,
          units = "mm", device = grDevices::pdf, useDingbats = FALSE, bg = "white")
   write_csv(as.data.frame(source_data), file.path(panel_source_dir, paste0(stem, ".csv")), na = "")
@@ -79,11 +84,15 @@ for (spec in list(
   plot <- ggplot(panel_data, aes(stage_short, dataset, fill = benefit_display)) +
     geom_tile(colour = "white", linewidth = line_width) +
     scale_fill_gradient2(low = "#B2182B", mid = "#F7F7F7", high = "#2166AC",
-                         midpoint = 0, limits = c(-limit, limit), oob = squish) +
+                         midpoint = 0, limits = c(-limit, limit), oob = squish,
+                         breaks = c(-limit, 0, limit), labels = scales::label_number(accuracy = .1)) +
     labs(title = paste(spec[[1]], spec[[3]]), x = NULL, y = NULL, fill = spec[[4]]) +
     theme_panel(9.2) +
     theme(axis.text.x = element_text(angle = 28, hjust = 1), axis.line = element_blank(),
-          axis.ticks = element_blank(), panel.grid = element_blank(), legend.position = "bottom")
+          axis.ticks = element_blank(), panel.grid = element_blank(), legend.position = "bottom",
+          legend.title = element_text(size=9), legend.text=element_text(size=9)) +
+    guides(fill=guide_colourbar(title.position="top", title.hjust=.5,
+      barwidth=grid::unit(38,"mm"), barheight=grid::unit(2.5,"mm")))
   save_panel(plot, paste0("S1", spec[[1]], "_stage_", spec[[2]]), 85, 55, panel_data)
 }
 
@@ -103,7 +112,7 @@ gate_data <- read_csv(file.path(input_root, "selective_vs_forced_metrics_long.cs
 for (spec in list(
   list("A", "heldout_qc_cv_mean", "Held-out QC CV", "Held-out QC CV (%)"),
   list("B", "residual_run_order_gam_mean_deviance", "Residual run-order drift", "Residual run-order drift"),
-  list("C", "batch_weighted_pc_r2_categorical", "Variance explained by batch", "Variance explained by batch"))) {
+  list("C", "batch_weighted_pc_r2_categorical", "Batch association", expression(atop("Batch association,", "weighted-PC"~R^2))))) {
   panel_data <- gate_data |> filter(metric == spec[[2]])
   plot <- ggplot(panel_data, aes(gate_label, value, shape = gate_label)) +
     geom_point(size = 2.1, colour = winn_colour, stroke = 0) +
@@ -113,6 +122,9 @@ for (spec in list(
     theme_panel(9.2) +
     theme(axis.text.x = element_blank(), axis.ticks.x = element_blank(), legend.position = "bottom") +
     guides(shape = guide_legend(override.aes = list(colour = winn_colour)))
+  # Wide numerical ticks narrow the S2C panels; the strips have ample space
+  # between centres, so let complete dataset names extend beyond their boxes.
+  if (spec[[1]] == "C") plot <- plot + theme(strip.clip = "off")
   save_panel(plot, paste0("S2", spec[[1]], "_", spec[[2]]), 174, 55, panel_data)
 }
 seed_gate <- read_csv(file.path(input_root, "simulation_seed_ablation_metrics.csv"),
@@ -164,7 +176,7 @@ for (spec in list(list("A", "simulation", "Simulation"), list("B", "mtbls79", "M
     scale_x_discrete(labels = c("Raw" = "Raw", "Outlier shrinkage" = "MAD",
                                 "Selective drift" = "Drift", "Selective batch" = "Batch",
                                 "PQN" = "PQN")) +
-    labs(title = paste(spec[[1]], spec[[3]]), x = NULL, y = "Variance explained by batch") +
+    labs(title = paste(spec[[1]], spec[[3]]), x = NULL, y = expression(atop("Batch association,", "weighted-PC"~R^2))) +
     theme_panel(9.2) +
     theme(axis.text.x = element_text(angle = 0, hjust = 0.5))
   save_panel(plot, paste0("S9", spec[[1]], "_batch_r2_", spec[[2]]), 85, 50, panel_data)

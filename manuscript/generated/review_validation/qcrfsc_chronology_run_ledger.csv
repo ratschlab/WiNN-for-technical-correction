@@ -1,0 +1,6 @@
+dataset_key,chronology_fit_job,point_evaluation_job,bootstrap_job,bootstrap_draws,scope,note
+mtbls79,21887205_1,21887347_1,21887826_1,2000,chronological corrected matrix; fitted-correction conditional bootstrap,required stages completed
+clinical_fiams,21887205_2,21887347_2,21887826_2,2000,chronological corrected matrix; fitted-correction conditional bootstrap,required stages completed
+batchcorr_set1,21887205_3,21887347_3,21887347_3,2000,chronological corrected matrix; fitted-correction conditional bootstrap,required stages completed
+sacurine,21887205_4,21887347_4,21887347_4,2000,chronological corrected matrix; fitted-correction conditional bootstrap,required stages completed
+waveica,21887205_5,21887347_5,21887826_5,2000,chronological corrected matrix; fitted-correction conditional bootstrap,point stage completed; redundant downstream bootstrap cancelled after independent bootstrap completed

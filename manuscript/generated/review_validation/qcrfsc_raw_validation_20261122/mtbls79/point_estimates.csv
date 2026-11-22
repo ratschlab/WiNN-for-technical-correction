@@ -1,0 +1,3 @@
+"dataset_key","method_id","metric","point_estimate"
+"mtbls79","raw","batch_weighted_pc_r2_categorical",0.360985332960551
+"mtbls79","raw","biological_weighted_pc_r2",0.435424656261188

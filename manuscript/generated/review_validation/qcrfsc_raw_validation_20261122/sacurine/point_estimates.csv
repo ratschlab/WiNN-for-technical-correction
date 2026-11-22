@@ -1,0 +1,5 @@
+"dataset_key","method_id","metric","point_estimate"
+"sacurine","raw","batch_weighted_pc_r2_categorical",0.131658082609212
+"sacurine","raw","age_weighted_pc_r2",0.0389675243006807
+"sacurine","raw","bmi_weighted_pc_r2",0.013023189674179
+"sacurine","raw","gender_weighted_pc_r2",0.0203637888867617

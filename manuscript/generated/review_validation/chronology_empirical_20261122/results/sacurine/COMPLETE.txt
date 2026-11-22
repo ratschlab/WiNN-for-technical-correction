@@ -1,0 +1,6 @@
+status=complete
+dataset=sacurine
+statTarget=1.38.0
+mode=full
+input_sha256=f93bc72dbe6c9c9db9855b98e3422db52e54e294a4a89622f644b5176263a58c
+output_sha256=4e62176c8c4b71f65b4a756e9cf87c57e3dbd3cdabd3dc7edd3fa071c69d1196

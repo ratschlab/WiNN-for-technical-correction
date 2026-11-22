@@ -1,0 +1,6 @@
+status=complete
+dataset=batchcorr_set1
+statTarget=1.38.0
+mode=full
+input_sha256=0ce473b2f1b9db0345f2e9235ac86e028235fc01d52506d2fe159616fbb8b09d
+output_sha256=393d419583ec28bb22a409b27b227a63a57f456054f53a67233305dcf4b69290

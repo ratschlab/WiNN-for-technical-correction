@@ -1,55 +1,24 @@
 {
   "main": {
     "pages": 7,
-    "pdf_sha256": "9659450b43d42cc690ae1727b0e19d6ddf5f3db54e9ab0619d93ea092290307d",
-    "source_sha256": "21e08d596d3b07fd967cdb3932539d9f69d577f96b7e5392e0b731317a9d6ba7",
+    "pdf_sha256": "e51178776b1acec317c97dd9eff3e8f8da3a90660a3bde0321bffa155745d3d0",
+    "source_sha256": "9f1613af73139e53eb7cf8200ff188e996657a7e1ba239fa64896208f13d2485",
     "out_of_page_characters": [],
     "unresolved_errors": [],
     "overfull_boxes": []
   },
   "supplementary": {
-    "pages": 47,
-    "pdf_sha256": "54f1dddd64683b2614b59f978ecaa847c78ec1148aca05cdc4b988dc38dce1fc",
-    "source_sha256": "e85f19f23a5c77cc70d8c3187dddf50d98bfdfadfa5613ad1a0757bdfb456579",
+    "pages": 48,
+    "pdf_sha256": "c8254c744d00b903055ad8ad3d0255360691234b48bcc6b8dbee490bb75ea22a",
+    "source_sha256": "43372ad9ee762049fecf62d2c2e65e06d4fc23aa3a08b9c29c81718eb054e21f",
     "out_of_page_characters": [],
     "unresolved_errors": [],
     "overfull_boxes": []
   },
   "inline_author_notes_remaining": 0,
   "main_figure_count": 4,
-  "main_alt_text_count": 4,
+  "main_alt_text_count": 0,
+  "submission_alt_text_count": 4,
   "guidance_url": "https://academic.oup.com/bioinformatics/pages/author-guidelines",
-  "guidance_checked": "2026-11-14",
-  "final_supplement_review": {
-    "promoted_section": "3.4 Feature-level effects and cross-batch agreement",
-    "main_pages": 7,
-    "supplementary_pages": 47,
-    "visual_review_all_pages": true,
-    "main_figures_unchanged": true,
-    "selection_limits_remain_in_supplement": true,
-    "s7_current_fold_records_verified": 408,
-    "numerical_claim_checks": 424,
-    "figure_package_checks": 442,
-    "correction_fits_rerun": false
-  },
-  "overleaf_verification": {
-    "checked_utc": "2026-11-14T20:05:17.999301+00:00",
-    "source_commit": "83ed698",
-    "project": "https://www.overleaf.com/project/68bade5d0a8ed64f1f526000",
-    "main": {
-      "pages": 7,
-      "errors": 0,
-      "warnings": 9,
-      "overfull_boxes": 0
-    },
-    "supplementary": {
-      "pages": 47,
-      "errors": 0,
-      "warnings": 12,
-      "overfull_boxes": 0
-    },
-    "main_document_restored": true,
-    "promoted_section_visually_verified": true,
-    "screenshot_sha256": "8d3cd3c6b666b22735bcc63d0ed708c07a08979c06430a065b4d70d9753eeddb"
-  }
+  "guidance_checked": "2026-11-22"
 }

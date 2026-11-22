@@ -1,100 +1,34 @@
-WiNN manuscript package
+WiNN manuscript and reproducibility package
 
-Article: main.tex
-Supplementary Methods, Results and tables: supplementary.tex
-References: references.bib
+main.tex contains the article; supplementary.tex contains supplementary methods,
+results, figures and tables. Both use the included Bioinformatics/OUP template.
+Build both documents with: bash scripts/build_manuscript.sh
+In Overleaf, choose main.tex or supplementary.tex as the main document.
 
-In Overleaf, compile main.tex for the article. Select supplementary.tex as the
-main document to compile the supplement, then restore main.tex for the article.
-Both sources use the included journal class and bibliography style.
+Figures are supplied as vector PDFs with source data under figures/. The complete
+bookmarked atlas is figures/WiNN_figures.pdf. figure_alt_text.txt contains four
+figure descriptions for the journal's accessibility/submission fields; these are
+not printed in the article.
 
-Compiled main figures: figures/F1_winn_overview.pdf, F2_simulation.pdf,
-F3_replicates.pdf and F4_biological_structure.pdf. These are the same vector
-figures included by main.tex. Individual panels and plotted source CSVs are
-under figures/main_panels, figures/supplementary_panels and figures/source_data.
-Compiled supplementary figures are under figures/compiled_supplementary.
-For direct review of every figure, open figures/WiNN_figures.pdf, with bookmarks
-for Figures 1-4 and Supplementary Figures S1-S11.
-Captions and endpoint definitions are in the manuscript and supplement.
+The correction benchmarks use WiNN 0.1.6, package commit 50b72a4. The experimental
+permutation gate in Supplementary Methods S10 is a separate calibration analysis
+and is not used in Figure 2 or the empirical correction benchmarks.
 
-WiNN is the primary configuration. Supplementary comparisons distinguish
-WiNN (QC-tuned) and WiNN (inferred segments); Methods define both modes.
-Analysis identifiers and API values retain their original names.
+Reproduction of the final focused analyses:
+- scripts/final_review_gating_matching/README.md: paired simulation policy effects,
+  null-data perturbation and empirical sample matching.
+- scripts/benchmark_revision/README.md: chronological, identifier-safe QC-RFSC
+  implementation, training-QC selection, abundance scaling and paired uncertainty.
+- scripts/figure2_confounding/: phenotype-allocation experiments underlying
+  Figure 2E-F; raw technical artifacts and WiNN configuration are fixed.
 
-Reproducible figure and table generators are in scripts/. Supporting tables,
-validation results and provenance are in generated/. Private clinical matrices
-and identity maps are excluded. All benchmark results use WiNN 0.1.6 (package
-commit 50b72a4, frozen 11 November 2026), which corrects the mgcv smoother calls
-of earlier versions; only WiNN outputs were recomputed, and raw and comparator
-outputs are reused from the validated 0.1.4 release.
-
-The supplement prints 13 condensed tables assembled by
-scripts/condense_supplementary_tables.py; generated/supplementary_table_data/README.md
-maps them to the detailed generator outputs, which remain available as source data.
-Every numerical claim in the text was audited against these source files
-before release.
-
-Code and results snapshot (WiNN 0.1.6 analysis release):
-https://github.com/ratschlab/WiNN-for-technical-correction/tree/491a6f9027f4a7ad7d6d17fc11d3b986bd5b0b13
-The later documentation commit records this citation in the manuscript sources
-without changing the numerical results.
-
-Author-note revision (14 November 2026)
---------------------------------------
-All 33 inline author notes were assessed; decisions are recorded in
-revision_notes/author_note_decisions_20261114.csv. Reader-facing endpoint
-terminology is shared by the text, figures and supplementary tables; original
-CSV metric keys and filenames remain stable.
-
-Build both PDFs with: bash scripts/build_manuscript.sh
-Run numerical audits with:
-  python3 revision_notes/audit_main_text_claims.py
-  python3 revision_notes/audit_new_claims.py
-The main-text audit now uses bundled source CSVs, with no private release paths.
-The full null/preparation reruns reproduced 14,877 archived rows exactly.
-
-Formatting was checked against Bioinformatics author guidance accessed on
-14 November 2026: https://academic.oup.com/bioinformatics/pages/author-guidelines
-The article uses the OUP two-column template, a structured abstract, four main
-figures, figure alt text and an acknowledgement of AI assistance. The disclosure
-must also be included in the journal cover letter at submission.
-
-Updated analysis code (portable confounding validation and comparable QC-RFSC evaluation):
-https://github.com/ratschlab/WiNN-for-technical-correction/tree/853541434d507e9cfe0a6a94c205b0e7d1b39f29
-The numerical-results provenance remains revision 491a6f9; this code fix does
-not change archived results. Package documentation is updated at d9e81b5,
-while the analyzed implementation remains package commit 50b72a4.
-
-Focused confounding revision and supplementary relocation
---------------------------------------------------------
-Figure 2E-F now uses the original technical artifacts and WiNN 0.1.6 with a
-180:270 allocation that reaches complete batch separation. The retained marginal
-group contrast and Welch/BH detection sensitivity accompany FDR. All 190 planned
-fits are included; generated/figure2_confounding contains the protocol and checks.
-Figure 2A-D and the selective/forced narrative remain unchanged.
-The former main-text Section 3.5 is in Supplementary Methods S10. Figure S11
-compares an experimental permutation gate separately; it was not used in any
-correction benchmark. scripts/calibration_revision/README.md defines this scope.
-Scientific code/results snapshot:
-https://github.com/ratschlab/WiNN-for-technical-correction/tree/0fa1b32a3898cb6dd449870e30c7a80e8e563e57
-The documents compile to seven main-text and 47 supplementary pages.
-
-Final supplementary review (15 November 2026)
--------------------------------------------
-Main Results Section 3.4 now reports matched-feature biological effects and
-cross-batch effect agreement from Supplementary Table S9 and Figure S7.
-Detailed tables and fold intervals remain in the supplement; the selection-test
-and preprocessing section remains entirely in S10.
-Figure S7 previously read a stale pre-0.1.6 bootstrap export. Its five panels now
-read the existing 11 November fold-level table used by the text and summary
-statistics. No fits were rerun. Main Figures 1-4, including all of Figure 2,
-and the selective/forced results are byte-identical to the preceding revision.
-
-Verify this finalization with:
+Numerical and layout checks:
   python3 scripts/audit_supplement_finalization.py
-  python3 scripts/figure2_confounding/audit_scope.py --allow-finalized-s7
-Rebuild S7 and its bundles with:
-  Rscript scripts/generate_review_fold_panels.R
-  python3 scripts/assemble_supplementary_figures.py --figure S7
-The explicit scope-audit option permits only the documented S7 source/rendering
-refresh and its source README; all other protected scientific files remain fixed.
+  python3 scripts/check_manuscript_layout.py
+  python3 scripts/audit_figure_package.py
+Input hashes, method settings, finite-sample checks, aggregate bootstrap results
+and figure source CSVs are supplied under generated/ and figures/source_data/.
+Clinical raw measurements and identity maps are not included.
+
+Formatting guidance was checked on 22 November 2026:
+https://academic.oup.com/bioinformatics/pages/author-guidelines

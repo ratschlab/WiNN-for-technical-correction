@@ -2,9 +2,9 @@ method_id,method,metric,direction,point_estimate,bootstrap_mean,ci_lower,ci_uppe
 raw,Raw,batch_weighted_pc_r2_categorical,lower,0.150509455380117,0.160166491982643,0.131739547830889,0.191634191439024,2000,clinical_fiams,Clinical FIA-MS,Raw
 combat,ComBat,batch_weighted_pc_r2_categorical,lower,0.00325637124010471,0.0154094621595511,0.00782945263560488,0.0263304380067727,2000,clinical_fiams,Clinical FIA-MS,ComBat
 qc_rlsc,QC-RLSC,batch_weighted_pc_r2_categorical,lower,0.00150491062425847,0.0133155008512274,0.00637789832872844,0.0240140316178052,2000,clinical_fiams,Clinical FIA-MS,QC-RLSC
-qc_rfsc,QC-RFSC,batch_weighted_pc_r2_categorical,lower,0.0198201318450002,0.0328832177051235,0.0200030238378986,0.0498701207990233,2000,clinical_fiams,Clinical FIA-MS,QC-RFSC
 tiger,TIGER,batch_weighted_pc_r2_categorical,lower,0.0302796966078738,0.0426991570048515,0.0254319251884167,0.0633405838420778,2000,clinical_fiams,Clinical FIA-MS,TIGER
 serrf,SERRF,batch_weighted_pc_r2_categorical,lower,0.00559464409863119,0.0171568352430315,0.00897828119336019,0.0283396999268617,2000,clinical_fiams,Clinical FIA-MS,SERRF
 winn_auto_qc,WiNN auto (QC),batch_weighted_pc_r2_categorical,lower,0.00217047664873671,0.01415354536452,0.00778240873255903,0.0233477754237979,2000,clinical_fiams,Clinical FIA-MS,WiNN auto
 winn_auto_batch_qc,WiNN auto-batch (QC),batch_weighted_pc_r2_categorical,lower,0.0113683590801656,0.0236845428153222,0.0129515795187088,0.0374467226861981,2000,clinical_fiams,Clinical FIA-MS,WiNN auto-batch
 winn_fixed_no_qc,WiNN fixed default (no QC),batch_weighted_pc_r2_categorical,lower,0.00209422396564255,0.0141418296442006,0.00735722500710666,0.023367640896292,2000,clinical_fiams,Clinical FIA-MS,WiNN fixed
+qc_rfsc,QC-RFSC,batch_weighted_pc_r2_categorical,lower,0.021225685586006,0.0343015281842749,0.0211054963447636,0.0513030460198975,2000,clinical_fiams,Clinical FIA-MS,QC-RFSC

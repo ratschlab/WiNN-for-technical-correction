@@ -1,5 +1,37 @@
-# Revision adapter: neutral IDs and training-QC-only abundance reference.
-# This is a new analysis protocol; frozen published results are preserved.
+# Chronological adapter: neutral IDs and training-QC-only abundance reference.
+# Isolated copies of statTarget functions retain the native forest algorithm.
+# Only REGfit's first/last-column QC guards are removed: RF predictions outside
+# the training-QC range use the fitted terminal leaves without relocating QCs.
+.qcrfsc_chronological_environment <- new.env(parent = asNamespace("statTarget"))
+.qcrfsc_native_regfit <- getFromNamespace("REGfit", "statTarget")
+.qcrfsc_statements <- as.list(body(.qcrfsc_native_regfit))[-1L]
+.qcrfsc_remove <- vapply(.qcrfsc_statements, function(e) {
+  s <- paste(deparse(e), collapse=" ")
+  grepl("^st_QC <-|^ed_QC <-|^if \\(length\\(st_QC\\)|^if \\(length\\(ed_QC\\)", s)
+}, logical(1))
+stopifnot(sum(.qcrfsc_remove) == 4L)
+.qcrfsc_assert <- quote({
+  cn_audit <- colnames(x)
+  expected_audit <- getOption("qcrfsc_authorized_names")
+  found_audit <- cn_audit[grepl("QC|qc|Qc", cn_audit)]
+  stopifnot(identical(cn_audit, getOption("qcrfsc_chronological_names")),
+            identical(as.numeric(y), as.numeric(seq_along(cn_audit))),
+            setequal(found_audit, expected_audit), length(found_audit)>=2L)
+  if (exists(".rfsc_inner_audit", envir=.GlobalEnv, inherits=FALSE)) {
+    audit_rows <- get(".rfsc_inner_audit", envir=.GlobalEnv)
+    audit_rows[[length(audit_rows)+1L]] <- data.frame(call=length(audit_rows)+1L,
+      available=length(cn_audit),authorized=length(expected_audit),used=length(found_audit),
+      unauthorized=sum(!found_audit %in% expected_audit),chronological=TRUE)
+    assign(".rfsc_inner_audit",audit_rows,envir=.GlobalEnv)
+  }
+})
+body(.qcrfsc_native_regfit) <- as.call(c(list(as.name("{"),.qcrfsc_assert),
+                                      .qcrfsc_statements[!.qcrfsc_remove]))
+environment(.qcrfsc_native_regfit) <- .qcrfsc_chronological_environment
+.qcrfsc_chronological_environment$REGfit <- .qcrfsc_native_regfit
+.qcrfsc_shiftCor <- getFromNamespace("shiftCor", "statTarget")
+environment(.qcrfsc_shiftCor) <- .qcrfsc_chronological_environment
+
 run_qc_rfsc_review <- function(x_mat, control_ids, meta_df, ntree = 500, coCV = 30, Frule = 0.8, output_scale = c("training_qc_abundance", "relative_ratio")) {
   output_scale <- match.arg(output_scale)
   md <- align_meta_to_mat(x_mat, meta_df) |>
@@ -9,16 +41,6 @@ run_qc_rfsc_review <- function(x_mat, control_ids, meta_df, ntree = 500, coCV = 
   control_ids <- intersect(control_ids, md$sample_id)
   if (length(control_ids) < 2L) {
     stop("QC-RFSC requires at least 2 QC controls.")
-  }
-
-  first_id <- md$sample_id[1]
-  last_id <- md$sample_id[nrow(md)]
-  if (!(first_id %in% control_ids) || !(last_id %in% control_ids)) {
-    first_qc <- control_ids[which.min(md$run_order[match(control_ids, md$sample_id)])]
-    last_qc <- control_ids[which.max(md$run_order[match(control_ids, md$sample_id)])]
-    reordered_ids <- c(first_qc, setdiff(md$sample_id, c(first_qc, last_qc)), last_qc)
-    md <- md[match(reordered_ids, md$sample_id), , drop = FALSE]
-    x_ord <- x_ord[, reordered_ids, drop = FALSE]
   }
 
   qc_flag <- md$sample_id %in% control_ids
@@ -43,10 +65,6 @@ run_qc_rfsc_review <- function(x_mat, control_ids, meta_df, ntree = 500, coCV = 
     stringsAsFactors = FALSE
   )
 
-  if (!is.na(samPeno$class[1]) || !is.na(samPeno$class[nrow(samPeno)])) {
-    stop("QC-RFSC setup failed to place QC at first and last positions.")
-  }
-
   samFile <- data.frame(name = safe_feature_ids, x_ord, check.names = FALSE)
   colnames(samFile)[-1] <- stat_names
 
@@ -59,10 +77,11 @@ run_qc_rfsc_review <- function(x_mat, control_ids, meta_df, ntree = 500, coCV = 
   write.csv(samPeno, "samPeno.csv", row.names = FALSE, quote = FALSE)
   write.csv(samFile, "samFile.csv", row.names = FALSE, quote = FALSE)
 
-  previous_options <- options(qcrfsc_authorized_names = stat_names[qc_flag])
+  previous_options <- options(qcrfsc_authorized_names = stat_names[qc_flag],
+                              qcrfsc_chronological_names = stat_names)
   on.exit(options(previous_options), add = TRUE)
   run_silently(
-    statTarget::shiftCor(
+    .qcrfsc_shiftCor(
       samPeno = "samPeno.csv",
       samFile = "samFile.csv",
       Frule = Frule,
@@ -110,5 +129,7 @@ run_qc_rfsc_review <- function(x_mat, control_ids, meta_df, ntree = 500, coCV = 
   attr(full, "qcrfsc_sample_id_map") <- data.frame(original_id = md$sample_id, internal_id = stat_names, training_reference = qc_flag)
   attr(full, "qcrfsc_training_ids") <- md$sample_id[qc_flag]
   attr(full, "qcrfsc_abundance_reference") <- abundance_reference
+  attr(full, "qcrfsc_order_policy") <- "chronological injection ranks; no QC relocation; native RF endpoint extrapolation"
+  attr(full, "qcrfsc_outside_training_range_count") <- sum(seq_len(nrow(md)) < min(which(qc_flag)) | seq_len(nrow(md)) > max(which(qc_flag)))
   full
 }

@@ -1,0 +1,6 @@
+status=complete
+dataset=mtbls79
+statTarget=1.38.0
+mode=full
+input_sha256=534b8cb02685f04aeff548208d3127967d756e0203c4c56ee056b445c6b4a408
+output_sha256=0f8bf8118c607e8fc7aec3dc6e73bb0961a914240f4a45e22a763e91ac945988

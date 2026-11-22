@@ -1,0 +1,4 @@
+"dataset","method","training_cv_percent","heldout_cv_percent","median_intensity","nonfinite","uncorrected_features","uncorrected_samples"
+"waveica","raw",51.6248375999061,49.6615125014856,34803.92095,0,0,0
+"waveica","legacy",19.1552482506415,16.8629439487961,0.9954697,0,407,0
+"waveica","corrected",19.8251754015963,28.8917940135068,34376.4108355912,0,459,0

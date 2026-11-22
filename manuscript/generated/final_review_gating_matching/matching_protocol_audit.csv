@@ -1,0 +1,7 @@
+"dataset","policy","study_profiles","eligible_queries","eligible_identities","all_identities","candidate_min","candidate_max","matching_candidates_min","matching_candidates_max","chance_accuracy","exact_top_ties"
+"batchcorr_set1","raw",710,693,346,357,635,667,1,2,0.0015750520608581,0
+"batchcorr_set1","selective",710,693,346,357,635,667,1,2,0.0015750520608581,0
+"batchcorr_set1","forced",710,693,346,357,635,667,1,2,0.0015750520608581,0
+"clinical_fiams","raw",536,536,267,267,456,482,1,3,0.00217570538726289,0
+"clinical_fiams","selective",536,536,267,267,456,482,1,3,0.00217570538726289,0
+"clinical_fiams","forced",536,536,267,267,456,482,1,3,0.00217570538726289,0

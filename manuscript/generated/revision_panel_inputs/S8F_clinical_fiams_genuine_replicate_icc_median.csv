@@ -2,9 +2,9 @@ method_id,method,metric,direction,point_estimate,bootstrap_mean,ci_lower,ci_uppe
 raw,Raw,genuine_replicate_icc_median,higher,0.980951466319722,0.980940588881264,0.978530344666093,0.982608564502345,2000,clinical_fiams,Clinical FIA-MS,Raw
 combat,ComBat,genuine_replicate_icc_median,higher,0.985936215950446,0.985923480168083,0.984376293080136,0.98686389447761,2000,clinical_fiams,Clinical FIA-MS,ComBat
 qc_rlsc,QC-RLSC,genuine_replicate_icc_median,higher,0.985576552808628,0.985559054012035,0.983888495019806,0.987179165015623,2000,clinical_fiams,Clinical FIA-MS,QC-RLSC
-qc_rfsc,QC-RFSC,genuine_replicate_icc_median,higher,0.989369318335347,0.989185189672095,0.988070043004415,0.990469357046533,2000,clinical_fiams,Clinical FIA-MS,QC-RFSC
 tiger,TIGER,genuine_replicate_icc_median,higher,0.989190248939538,0.989282111106844,0.988376530317461,0.990095400867184,2000,clinical_fiams,Clinical FIA-MS,TIGER
 serrf,SERRF,genuine_replicate_icc_median,higher,0.987794959818335,0.987817973836058,0.986605175229639,0.988762092088713,2000,clinical_fiams,Clinical FIA-MS,SERRF
 winn_auto_qc,WiNN auto (QC),genuine_replicate_icc_median,higher,0.990695125362182,0.990710116644513,0.989945633042886,0.991555226811125,2000,clinical_fiams,Clinical FIA-MS,WiNN auto
 winn_auto_batch_qc,WiNN auto-batch (QC),genuine_replicate_icc_median,higher,0.990627243487714,0.990528975444528,0.989705584677913,0.991507453406939,2000,clinical_fiams,Clinical FIA-MS,WiNN auto-batch
 winn_fixed_no_qc,WiNN fixed default (no QC),genuine_replicate_icc_median,higher,0.98986978429495,0.989791311274273,0.988795870065768,0.990665866394709,2000,clinical_fiams,Clinical FIA-MS,WiNN fixed
+qc_rfsc,QC-RFSC,genuine_replicate_icc_median,higher,0.983628549942097,0.983784604463567,0.982906081834435,0.985120723378362,2000,clinical_fiams,Clinical FIA-MS,QC-RFSC

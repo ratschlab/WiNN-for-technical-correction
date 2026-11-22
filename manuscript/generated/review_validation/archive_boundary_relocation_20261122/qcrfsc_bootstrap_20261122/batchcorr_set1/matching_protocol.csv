@@ -1,0 +1,2 @@
+"dataset_key","method_id","eligible_queries","eligible_identities","all_identities","candidate_min","candidate_median","candidate_max","chance_top1","exact_top_ties"
+"batchcorr_set1","qc_rfsc",693,346,357,635,636,667,0.0015750520608581,0

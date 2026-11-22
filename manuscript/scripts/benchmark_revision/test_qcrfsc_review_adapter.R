@@ -1,6 +1,7 @@
 # Integration checks with the real statTarget REGfit training-index implementation.
 args <- commandArgs(FALSE);file_arg<-grep('^--file=',args,value=TRUE);script<-if(length(file_arg))sub('^--file=','',file_arg[1]) else args[match('-f',args)+1L];here<-dirname(normalizePath(script))
 source(file.path(here,'original_benchmark_helpers.R'))
+native_before <- digest::digest(list(body(getFromNamespace('REGfit','statTarget')),body(statTarget::shiftCor)),algo='sha256')
 source(file.path(here,'qcrfsc_review_adapter.R'))
 suppressPackageStartupMessages(library(dplyr))
 set.seed(281)
@@ -9,13 +10,7 @@ x<-outer(exp(seq(2,9,length.out=f)),exp(rnorm(n,0,.03))) * matrix(exp(rnorm(f*n,
 rownames(x)<-paste0('metabolite',seq_len(f));colnames(x)<-paste0('sample',seq_len(n))
 md<-data.frame(sample_id=colnames(x),batch=rep(1:2,each=20),run_order=seq_len(n))
 controls<-colnames(x)[c(1,5,10,15,20,21,25,30,35,40)]
-.adversarial_checked <- 0L
-invisible(capture.output(trace('REGfit',where=asNamespace('statTarget'),print=FALSE,tracer=quote({
-  used<-colnames(x)[grepl('QC|qc|Qc',colnames(x))]
-  allowed<-intersect(colnames(x),getOption('qcrfsc_authorized_names'))
-  stopifnot(setequal(used,allowed))
-  assign('.adversarial_checked',get('.adversarial_checked',envir=.GlobalEnv)+1L,envir=.GlobalEnv)
-}))))
+.rfsc_inner_audit <- list()
 run<-function(x,md,controls,scale='training_qc_abundance'){
  set.seed(9124)
  invisible(capture.output(y<-run_qc_rfsc_review(x,controls,md,ntree=30,coCV=100,Frule=.8,output_scale=scale)))
@@ -34,7 +29,20 @@ stopifnot(!anyDuplicated(map$internal_id),setequal(map$original_id,colnames(xx))
 r<-run(x,md,controls,'relative_ratio')
 expected<-r*apply(x[,controls,drop=FALSE],1,median)
 stopifnot(isTRUE(all.equal(unname(a),unname(expected),check.attributes=FALSE,tolerance=1e-12)))
-stopifnot(.adversarial_checked>0L,identical(sort(attr(a,'qcrfsc_training_ids')),sort(controls)))
-untrace('REGfit',where=asNamespace('statTarget'))
-cat('PASS: real REGfit uses exactly authorized controls; adversarial hidden IDs cannot leak; mapping and dimensions preserved; non-oracle abundance restoration verified.\n')
-cat('statTarget version:',as.character(packageVersion('statTarget')),'; REGfit calls asserted:',.adversarial_checked,'\n')
+stopifnot(length(.rfsc_inner_audit)>0L,identical(sort(attr(a,'qcrfsc_training_ids')),sort(controls)))
+# With QCs already at the endpoints, the copied algorithm must be numerically
+# identical to native statTarget under the same seed, before any guard removal matters.
+chronological <- .qcrfsc_shiftCor
+.qcrfsc_shiftCor <- statTarget::shiftCor
+native <- run(x,md,controls)
+.qcrfsc_shiftCor <- chronological
+stopifnot(isTRUE(all.equal(unname(a),unname(native),check.attributes=FALSE,tolerance=0)))
+# Neither endpoint is an authorized QC: keep every original acquisition rank.
+interior_controls <- controls[!controls %in% colnames(x)[c(1,n)]]
+interior <- run(x,md,interior_controls)
+stopifnot(identical(attr(interior,'qcrfsc_sample_id_map')$original_id,as.character(md$sample_id)),
+          attr(interior,'qcrfsc_outside_training_range_count')==9L,
+          all(vapply(.rfsc_inner_audit,function(r)r$chronological,logical(1))),
+          native_before==digest::digest(list(body(getFromNamespace('REGfit','statTarget')),body(statTarget::shiftCor)),algo='sha256'))
+cat('PASS: exact authorized references; hidden-ID rename invariance; mapping/dimensions; training-QC abundance scaling; native equivalence with boundary QCs; chronological ranks with both endpoint QCs withheld; installed namespace unchanged.\n')
+cat('statTarget version:',as.character(packageVersion('statTarget')),'; isolated REGfit calls asserted:',length(.rfsc_inner_audit),'\n')

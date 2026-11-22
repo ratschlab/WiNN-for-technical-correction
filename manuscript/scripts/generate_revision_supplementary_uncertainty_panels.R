@@ -1,17 +1,22 @@
 #!/usr/bin/env Rscript
 # Rebuild S4, S8 and S10 from the original aggregate panel inputs.
-# QC-RFSC is omitted because these analyses have not been repeated for its revised adapter.
-# Every other estimate, uncertainty interval and hidden-reference split is unchanged.
+# QC-RFSC conditional uncertainty is included in S8/S10. S4 reference-split
+# refitting is a separate analysis and remains restricted to its eight outputs.
 args <- commandArgs(trailingOnly = FALSE)
 script <- normalizePath(sub("^--file=", "", grep("^--file=", args, value = TRUE)))
 root <- dirname(dirname(script))
+figure_arg <- grep("^--figures=", commandArgs(trailingOnly=TRUE), value=TRUE)
+selected_figures <- if(length(figure_arg)) strsplit(sub("^--figures=", "", figure_arg[1]), ",")[[1]] else NULL
+want_figure <- function(id) is.null(selected_figures) || id %in% selected_figures
 suppressPackageStartupMessages({library(ggplot2); library(ggrepel)})
 source(file.path(dirname(script), "method_palette.R"))
 input <- file.path(root, "generated", "revision_panel_inputs")
 out <- file.path(root, "figures", "supplementary_panels")
 source_out <- file.path(root, "figures", "source_data")
-ids <- c("raw", "combat", "qc_rlsc", "tiger", "serrf", "winn_auto_qc", "winn_auto_batch_qc", "winn_fixed_no_qc")
-labels <- setNames(c("Raw", "ComBat", "QC-RLSC", "TIGER", "SERRF", "WiNN (QC-tuned)", "WiNN (inferred segments)", "WiNN"), ids)
+ids <- c("raw", "combat", "qc_rlsc", "qc_rfsc", "tiger", "serrf", "winn_auto_qc", "winn_auto_batch_qc", "winn_fixed_no_qc")
+labels <- setNames(c("Raw", "ComBat", "QC-RLSC", "QC-RFSC", "TIGER", "SERRF", "WiNN (QC-tuned)", "WiNN (inferred segments)", "WiNN"), ids)
+rfsc <- read.csv(file.path(root,"generated/review_validation/qcrfsc_bootstrap_estimates.csv"))
+stopifnot(all(rfsc$valid_bootstrap==2000))
 colors <- palette_method_colours[unname(labels)]
 line_width <- 0.45 * 25.4 / 72.27
 point_stroke <- 0.35 * 25.4 / 72.27
@@ -27,16 +32,18 @@ panel_theme <- theme_classic(base_size = 9.5, base_family = "sans") + theme(
  axis.title = element_text(colour = "#263247", size = 9.3),
  axis.text = element_text(colour = "#263247", size = 9.1),
  legend.position = "none", panel.grid.major.y = element_blank(),
- plot.margin = margin(3, 4, 3, 4))
-read_input <- function(stem, rows) {
+ plot.margin = margin(5, 4, 3, 4))
+read_input <- function(stem, rows, include_rfsc=FALSE) {
  d <- read.csv(file.path(input, paste0(stem, ".csv")), check.names = FALSE)
- d <- d[d$method_id %in% ids, , drop = FALSE]
- stopifnot(nrow(d) == rows, setequal(unique(d$method_id), ids))
+ expected <- if(include_rfsc)ids else setdiff(ids,"qc_rfsc")
+ d <- d[d$method_id %in% expected, , drop = FALSE]
+ stopifnot(nrow(d) == rows, setequal(unique(d$method_id), expected))
  d$method_label <- factor(unname(labels[d$method_id]), levels = rev(unname(labels)))
  if ("method" %in% names(d)) d$method <- unname(labels[d$method_id])
  d
 }
 save_panel <- function(p, stem, data, width = 85, height = 55) {
+ if(!want_figure(sub("^(S[0-9]+).*", "\\1", stem))) return(invisible(NULL))
  ggsave(file.path(out, paste0(stem, ".pdf")), p, width = width, height = height,
         units = "mm", device = "pdf", useDingbats = FALSE, bg = "white")
  ggsave(file.path(out, paste0(stem, ".png")), p, width = width, height = height,
@@ -49,7 +56,7 @@ specs4 <- list(c("A","simulation","Simulation"), c("B","mtbls79","MTBLS79"),
 for (spec in specs4) {
  stem <- paste0("S4", spec[1], "_reference_", spec[2]); d <- read_input(stem, 80)
  means <- unique(d[c("method_id", "method_label", "method_mean")])
- stopifnot(all(vapply(ids, function(id) abs(mean(d$value[d$method_id == id]) - means$method_mean[means$method_id == id]) < 1e-10, logical(1))))
+ stopifnot(all(vapply(setdiff(ids,"qc_rfsc"), function(id) abs(mean(d$value[d$method_id == id]) - means$method_mean[means$method_id == id]) < 1e-10, logical(1))))
  p <- ggplot(d, aes(value, method_label, colour = method_label)) +
   geom_point(position = position_jitter(width = 0, height = .08, seed = 2026),
              shape = 16, size = 1.3, alpha = palette_point_alpha) +
@@ -61,27 +68,31 @@ for (spec in specs4) {
  save_panel(p, stem, d)
 }
 specs8 <- list(
- c("A", "batchcorr_set1", "batch_weighted_pc_r2_categorical", "BatchCorr batch structure", "Variance explained by batch"),
+ c("A", "batchcorr_set1", "batch_weighted_pc_r2_categorical", "BatchCorr batch association", "Batch association"),
  c("B", "batchcorr_set1", "sample_replicate_pearson_median", "BatchCorr replicate profiles", "Replicate-profile Pearson r"),
  c("C", "batchcorr_set1", "genuine_replicate_icc_median", "BatchCorr replicate agreement", "Replicate ICC(A,1)"),
- c("D", "clinical_fiams", "batch_weighted_pc_r2_categorical", "Clinical plate structure", "Variance explained by batch"),
+ c("D", "clinical_fiams", "batch_weighted_pc_r2_categorical", "Clinical plate association", "Plate association"),
  c("E", "clinical_fiams", "sample_replicate_pearson_median", "Clinical replicate profiles", "Replicate-profile Pearson r"),
  c("F", "clinical_fiams", "genuine_replicate_icc_median", "Clinical replicate agreement", "Replicate ICC(A,1)"))
 for (spec in specs8) {
- stem <- paste0("S8", spec[1], "_", spec[2], "_", spec[3]); d <- read_input(stem, 8)
+ stem <- paste0("S8", spec[1], "_", spec[2], "_", spec[3]); d <- read_input(stem, 9, TRUE)
  stopifnot(all(d$valid_bootstrap == 2000), all(d$ci_lower <= d$ci_upper))
  p <- ggplot(d, aes(point_estimate, method_label, colour = method_label)) +
   geom_segment(aes(x = ci_lower, xend = ci_upper, y = method_label, yend = method_label), linewidth = line_width) +
   geom_point(size = 2.1, shape = 16, stroke = 0) + scale_colour_manual(values = colors, drop = FALSE) +
   scale_x_continuous(expand = expansion(mult = c(.08, .16))) +
-  labs(title = paste(spec[1], spec[4]), x = spec[5], y = NULL) + panel_theme +
-  theme(plot.margin = margin(3, 12, 3, 4))
+  labs(title = paste(spec[1], spec[4]),
+       x = if(spec[3]=="batch_weighted_pc_r2_categorical") {
+         if(spec[2]=="clinical_fiams") expression(atop('Plate association,', 'weighted-PC '*R^2)) else
+           expression(atop('Batch association,', 'weighted-PC '*R^2))
+       } else spec[5], y = NULL) + panel_theme +
+  theme(plot.margin = margin(5, 12, 3, 4))
  save_panel(p, stem, d)
 }
 specs10 <- list(c("A", "age_weighted_pc_r2", "Sacurine age"),
  c("B", "bmi_weighted_pc_r2", "Sacurine BMI"), c("C", "gender_weighted_pc_r2", "Sacurine gender"))
 for (spec in specs10) {
- stem <- paste0("S10", spec[1], "_sacurine_", spec[2]); d <- read_input(stem, 8)
+ stem <- paste0("S10", spec[1], "_sacurine_", spec[2]); d <- read_input(stem, 9, TRUE)
  stopifnot(all(is.finite(as.matrix(d[c("x", "x_se", "y", "y_se")]))))
  # Put labels in one column, with leaders to the unchanged estimates.
  # Acquisition-variance removal clusters seven methods near x=0.
@@ -105,9 +116,10 @@ for (spec in specs10) {
   scale_fill_manual(values = colors, drop = FALSE) +
   scale_x_continuous(expand = expansion(mult = c(.12, .20))) +
   scale_y_continuous(expand = expansion(mult = c(.08, .10))) +
-  labs(title = paste(spec[1], spec[3]), x = "Variance explained by batch (%)", y = "Variance explained\nby covariate (%)") +
+  labs(title = paste(spec[1], spec[3]), x = expression('Batch association, weighted-PC '*R^2*' (%)'),
+       y = expression(atop('Covariate association,', 'weighted-PC '*R^2*' (%)'))) +
   panel_theme + theme(panel.grid.major.y = element_line(colour = "#E2E7ED", linewidth = line_width),
-                      plot.margin = margin(3, 10, 3, 4))
+                      plot.margin = margin(5, 10, 3, 4))
  save_panel(p, stem, d, width = 174, height = 60)
 }
-cat("Rebuilt 15 supplementary panels with unchanged non-RFSC inputs.\n")
+cat("Rebuilt selected supplementary panels with unchanged non-RFSC inputs.\n")

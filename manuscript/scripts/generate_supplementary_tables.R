@@ -8,6 +8,10 @@ file_arg <- grep("^--file=", args_full, value = TRUE)
 if (length(file_arg) != 1L) stop("Run with Rscript or R --file.")
 script_path <- normalizePath(sub("^--file=", "", file_arg), mustWork = TRUE)
 package_root <- dirname(dirname(script_path))
+# Require the complete current RFSC release before rewriting any output table.
+status <- system2("python3", c(shQuote(file.path(package_root, "scripts", "benchmark_revision",
+  "integrate_current_results.py")), "--check-only"))
+if (status != 0) stop("Current chronological RFSC fits/uncertainty are incomplete.")
 cli <- commandArgs(trailingOnly = TRUE)
 analysis_arg <- grep("^--analysis-root=", cli, value = TRUE)
 final_arg <- grep("^--final-root=", cli, value = TRUE)
@@ -104,6 +108,7 @@ write_longtable <- function(data, stem, caption, label, colspec, headers,
                             notes = NULL, arraystretch = NULL) {
   stopifnot(ncol(data) == length(headers))
   body <- apply(as.data.frame(data), 1, function(row) {
+    row <- ifelse(grepl("^<[0-9]", row), paste0("$", row, "$"), row)
     paste0(paste(row, collapse = " & "), " \\\\")
   })
   open_landscape <- if (landscape) "\\begin{landscape}" else ""
@@ -331,7 +336,7 @@ runtime <- primary |>
 write_csv_copy(runtime, "table_s10_runtime_retention")
 write_longtable(
   runtime, "table_s10_runtime_retention",
-  "Runtime, retained dimensions and WiNN correction counts for all primary dataset-method fits. A dash marks a correction reused from a validated frozen run, for which matrix-loading time was not reported as algorithm runtime. Correction counts are defined only for WiNN modes.",
+  "Runtime, retained dimensions and WiNN correction counts for eight outputs. QC-RFSC is not included in this runtime summary. A dash marks a correction reused from a validated frozen run, for which matrix-loading time was not reported as algorithm runtime. Correction counts are defined only for WiNN modes.",
   "tab:supp_runtime", "llrrrrrr",
   c("Dataset", "Method", "Runtime (s)", "Features", "Samples", "Drift feat.", "Drift profiles", "Batch feat."),
   landscape = TRUE
@@ -454,7 +459,7 @@ partial <- partial_raw |>
 write_csv_copy(partial, "table_s13_partial_confounding")
 write_longtable(
   partial, "table_s13_partial_confounding",
-  "Complete WiNN partial-confounding summary over ten seeds. Cells are mean $\\pm$ seed-level standard error. The clean-reference ratio divides the signed corrected phenotype coefficient by its coefficient in the clean simulated matrix. The injected-effect ratio divides by the corresponding signed injected coefficient, $+0.35$ or $-0.35$. These denominators differ and the two ratios are not interchangeable.",
+  "Complete WiNN partial-overlap sensitivity summary over ten seeds. Cells are mean $\\pm$ seed-level standard error. The clean-reference ratio divides the signed corrected phenotype coefficient by its coefficient in the clean simulated matrix. The injected-effect ratio divides by the corresponding signed injected coefficient, $+0.35$ or $-0.35$. These denominators differ and the two ratios are not interchangeable.",
   "tab:supp_partial_confounding", "llrrrrrrrr",
   c("Alignment axis", "Strength", "QC CV", "GAM", "Batch $R^2$", "Clean Pearson", "Clean ratio", "Injected ratio", "TPR", "FDR"),
   landscape = TRUE, size = "\\tiny"
@@ -592,7 +597,7 @@ write_longtable(
   params, "table_s17_winn_parameters",
   "WiNN parameters for every dataset and operating mode. WiNN uses the same frozen settings in every dataset and receives no QC identities. Automatic-mode settings were selected from the prespecified grid using labelled training QCs only.",
   "tab:supp_winn_parameters", "lllrlrrrr",
-  c("Dataset", "Mode", "Batch source", "Segments", "Test", "Smoother", "Drift FDR", "Batch FDR", "PQN"),
+  c("Dataset", "Mode", "Batch source", "Segments", "Test", "Smoother", "Nominal drift BH", "Nominal batch BH", "PQN"),
   landscape = TRUE, size = "\\tiny"
 )
 
@@ -635,10 +640,13 @@ figure_panels <- c(
   list.files(file.path(package_root, "figures", "main_panels"), pattern = "[.]pdf$"),
   list.files(file.path(package_root, "figures", "supplementary_panels"), pattern = "[.]pdf$")
 )
-if(length(figure_panels) != 69L) stop("The current table requires the audited 69-panel figure package.")
+panel_sources <- file.path(package_root, "figures", "source_data", sub("[.]pdf$", ".csv", figure_panels))
+if(length(figure_panels) != 72L || !all(file.exists(panel_sources))) {
+  stop("The current table requires all 72 figure panels and their numerical source files.")
+}
 figure_row <- validation$Check == "all figures have source data"
 validation$Check[figure_row] <- "all declared figure panels have source data"
-validation$Detail[figure_row] <- "69 of 69 figure-panel/source entries"
+validation$Detail[figure_row] <- "72 of 72 figure-panel/source entries"
 write_csv_copy(validation, "table_s19_release_validation")
 write_longtable(
   validation, "table_s19_release_validation",
@@ -676,15 +684,15 @@ manifest <- data.frame(
   file = table_files,
   generated_from = "archived primary benchmark and local derivative aggregate export; supplied in supplement_20260727",
   publication_revision = ifelse(grepl("^table_s4_", table_files),
-    "corrected ten-seed RFSC results applied by integrate_completed_results.py",
-    "current labels and RFSC exclusions applied by integrate_completed_results.py; S21-S31 have separate source mappings"),
+    "corrected ten-seed RFSC results applied by integrate_current_results.py",
+    "current labels and RFSC exclusions applied by integrate_current_results.py; S21-S31 have separate source mappings"),
   stringsAsFactors = FALSE
 )
 write_csv(manifest, file.path(out_csv, "supplementary_table_manifest.csv"))
 message("Generated ", nrow(manifest), " supplementary TeX tables in ", out_tex)
 
 # Apply the validated corrected RFSC results after generating the original tables.
-status <- system2("python3", shQuote(file.path(package_root, "scripts", "benchmark_revision", "integrate_completed_results.py")))
+status <- system2("python3", shQuote(file.path(package_root, "scripts", "benchmark_revision", "integrate_current_results.py")))
 if (status != 0) stop("Corrected RFSC table integration failed.")
 
 # Keep generated display labels consistent without renaming analysis identifiers.

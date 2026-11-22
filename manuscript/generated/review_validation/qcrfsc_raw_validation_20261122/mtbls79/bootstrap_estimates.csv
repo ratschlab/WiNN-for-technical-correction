@@ -1,0 +1,3 @@
+"dataset_key","method_id","method","metric","direction","point_estimate","bootstrap_mean","bootstrap_se","ci_lower","ci_upper","valid_bootstrap"
+"mtbls79","raw","Raw","batch_weighted_pc_r2_categorical","lower",0.360985332960551,0.357585090039479,0.0156110547447767,0.327496135409191,0.388716637447298,2000
+"mtbls79","raw","Raw","biological_weighted_pc_r2","higher",0.435424656261188,0.421335091419143,0.0242845298117596,0.373402354988626,0.46985060887306,2000

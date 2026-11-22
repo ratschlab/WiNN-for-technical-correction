@@ -1,0 +1,13 @@
+#!/usr/bin/env Rscript
+args<-commandArgs(TRUE);ds<-sub('^--dataset=','',args[startsWith(args,'--dataset=')]);stopifnot(length(ds)==1L)
+here<-dirname(normalizePath(sub('^--file=','',grep('^--file=',commandArgs(FALSE),value=TRUE)[1])))
+old<-readRDS(file.path(here,'results',ds,'corrected_training_qc_abundance.rds'))
+new<-readRDS(file.path(here,'chronology_results_20261122',ds,'corrected_training_qc_abundance.rds'))
+stopifnot(identical(dimnames(old),dimnames(new)),all(is.finite(new)),grepl('no QC relocation',attr(new,'qcrfsc_order_policy')))
+p<-readRDS(file.path(here,paste0('input_',ds,'.rds')))
+stopifnot(identical(attr(new,'qcrfsc_sample_id_map')$original_id,as.character(p$meta$sample_id[order(p$meta$run_order)])))
+delta<-as.vector(new)-as.vector(old)
+equal<-all(delta==0)
+if(ds!='clinical_fiams')stopifnot(equal)
+out<-data.frame(dataset_key=ds,n_features=nrow(new),n_injections=ncol(new),identical_numeric_matrix=equal,changed_cells=sum(delta!=0),max_absolute_change=max(abs(delta)),relative_frobenius_change=sqrt(sum(delta^2)/sum(as.vector(old)^2)),outside_training_qc_range=attr(new,'qcrfsc_outside_training_range_count'),chronological_ids_preserved=TRUE,selected_params=read.csv(file.path(here,'chronology_results_20261122',ds,'selected_parameters.csv'))$params,old_matrix_file_sha256=digest::digest(file=file.path(here,'results',ds,'corrected_training_qc_abundance.rds'),algo='sha256'),new_matrix_file_sha256=digest::digest(file=file.path(here,'chronology_results_20261122',ds,'corrected_training_qc_abundance.rds'),algo='sha256'))
+write.csv(out,file.path(here,'chronology_results_20261122',ds,'chronology_matrix_audit.csv'),row.names=FALSE)

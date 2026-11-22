@@ -1,0 +1,5 @@
+"dataset_key","method_id","metric","point_estimate"
+"sacurine","qc_rfsc","batch_weighted_pc_r2_categorical",0.00245413004657617
+"sacurine","qc_rfsc","age_weighted_pc_r2",0.0467699046704699
+"sacurine","qc_rfsc","bmi_weighted_pc_r2",0.0149621225030365
+"sacurine","qc_rfsc","gender_weighted_pc_r2",0.0509955720513223

@@ -1,0 +1,3 @@
+"dataset_key","method_id","metabolite_icc_a1_median","features","endpoint"
+"mtbls79","raw",0.548997409303439,2488,"median across features of median pairwise-batch ICC(A,1), using shared extracts; point estimate"
+"mtbls79","qc_rfsc",0.604173326440372,2488,"median across features of median pairwise-batch ICC(A,1), using shared extracts; point estimate"

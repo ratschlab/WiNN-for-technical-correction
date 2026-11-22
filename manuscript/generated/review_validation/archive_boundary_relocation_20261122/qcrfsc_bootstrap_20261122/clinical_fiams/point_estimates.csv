@@ -1,0 +1,6 @@
+"dataset_key","method_id","metric","point_estimate"
+"clinical_fiams","qc_rfsc","batch_weighted_pc_r2_categorical",0.020605458448264
+"clinical_fiams","qc_rfsc","sample_replicate_pearson_median",0.986180780658088
+"clinical_fiams","qc_rfsc","genuine_replicate_icc_median",0.983627909601192
+"clinical_fiams","qc_rfsc","cross_batch_top1_accuracy",0.833955223880597
+"clinical_fiams","qc_rfsc","cross_batch_mean_reciprocal_rank",0.867244044219706

@@ -21,7 +21,7 @@ rows <- lapply(c("raw","qc_rfsc"),function(method) {
     batch_pc_variance_percent=100*pca_r2_from_log(z,as.character(md$batch),"categorical"),
     biological_pc_variance_percent=100*pca_r2_from_log(means,group,"categorical"),
     batch_n=ncol(z),biological_n=ncol(means),features=nrow(z),
-    biological_unit="mean log1p profile per sample extract",uncertainty="not recomputed")
+    biological_unit="mean log1p profile per sample extract",uncertainty="paired biological-unit intervals supplied in qcrfsc_bootstrap_estimates.csv")
 })
 result <- do.call(rbind,rows)
 reference <- read.csv(file.path(root,"generated/revision_panel_inputs/eccb2026_public_effect_tradeoffs_v2.csv"))

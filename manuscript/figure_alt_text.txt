@@ -1,0 +1,7 @@
+Figure 1: Randomized acquisition is followed by tests for run-order and batch effects, with correction applied to selected features.
+
+Figure 2: WiNN has the lowest simulation error and highest truth agreement. Increasing phenotype alignment with batch or acquisition order reduces the retained group contrast. Complete batch separation eliminates discoveries after correction.
+
+Figure 3: WiNN reduces held-out QC variability and batch structure and increases replicate agreement in the plant and clinical datasets; comparator rankings vary by endpoint.
+
+Figure 4: WiNN reduces batch association in WaveICA and MTBLS79 while retaining relative biological group association.

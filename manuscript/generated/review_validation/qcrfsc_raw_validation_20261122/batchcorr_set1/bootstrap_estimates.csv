@@ -1,0 +1,6 @@
+"dataset_key","method_id","method","metric","direction","point_estimate","bootstrap_mean","bootstrap_se","ci_lower","ci_upper","valid_bootstrap"
+"batchcorr_set1","raw","Raw","batch_weighted_pc_r2_categorical","lower",0.561111591272931,0.566258362237227,0.0124294428640572,0.542453250812979,0.590481682209038,2000
+"batchcorr_set1","raw","Raw","sample_replicate_pearson_median","higher",0.911453639180002,0.912723079580538,0.00456953934792923,0.904608504723684,0.923686632425548,2000
+"batchcorr_set1","raw","Raw","genuine_replicate_icc_median","higher",0.8853604114021,0.885110515309074,0.00481734642650174,0.875527898475818,0.892773502618595,2000
+"batchcorr_set1","raw","Raw","cross_batch_top1_accuracy","higher",0.463203463203463,0.46394349220311,0.0255858894566843,0.413026299350325,0.513006722794672,2000
+"batchcorr_set1","raw","Raw","cross_batch_mean_reciprocal_rank","higher",0.527636947384144,0.528461176904646,0.0237111202423067,0.481481400479675,0.573618502580915,2000

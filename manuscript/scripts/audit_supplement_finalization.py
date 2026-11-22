@@ -29,8 +29,14 @@ for panel in sorted((ROOT / 'figures/source_data').glob('S7?_lobo_*.csv')):
 assert seen == set(expected)
 provenance = json.loads((ROOT / 'generated/review_validation/supplement_finalization_provenance.json').read_text())
 assert sha(canonical) == provenance['canonical_fold_source_sha256']
-for name, digest in provenance['unchanged_main_figures'].items():
+# The November 22 review explicitly revises F1, F2A and F3/F4.
+# Preserve confounding panels/data and all non-QC-RFSC truth results.
+protected = json.loads((ROOT / 'revision_notes/final_review_20261122/protected_figure2.json').read_text())
+for name, digest in protected['files'].items():
     assert sha(ROOT / name) == digest, name
+for name, expected_rows in protected['non_rfsc_rows'].items():
+    current_rows = [r for r in read(ROOT/name) if r['method_id']!='qc_rfsc']
+    assert current_rows == expected_rows, name
 for row in provenance['updated_s7_files']:
     assert sha(ROOT / row['path']) == row['sha256'], row['path']
-print('PASS: all 408 S7 fold rows and intervals match WiNN 0.1.6; all main figures unchanged.')
+print('PASS: all 408 S7 fold rows and intervals match WiNN 0.1.6; Figure 2E--F and non-QC-RFSC truth results unchanged.')

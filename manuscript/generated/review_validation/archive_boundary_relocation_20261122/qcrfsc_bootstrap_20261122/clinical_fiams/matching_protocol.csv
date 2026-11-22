@@ -1,0 +1,2 @@
+"dataset_key","method_id","eligible_queries","eligible_identities","all_identities","candidate_min","candidate_median","candidate_max","chance_top1","exact_top_ties"
+"clinical_fiams","qc_rfsc",536,267,267,456,458,482,0.00217570538726289,0
