@@ -29,7 +29,11 @@ for panel in sorted((ROOT / 'figures/source_data').glob('S7?_lobo_*.csv')):
 assert seen == set(expected)
 provenance = json.loads((ROOT / 'generated/review_validation/supplement_finalization_provenance.json').read_text())
 assert sha(canonical) == provenance['canonical_fold_source_sha256']
-# The November 22 review explicitly revises F1, F2A and F3/F4.
+# Figure 1 is the author's handmade Illustrator artwork. Preserve its exact
+# bytes from c0c1e4f (also restored in 02021f7); do not regenerate this figure.
+assert sha(ROOT / 'figures/F1_winn_overview.pdf') == \
+    '304cbd3148f570c06947c2b973c91ca831f416b8ad36fa2fc5755e28f72bf355', \
+    "Figure 1 differs from the author's protected handmade artwork"
 # Preserve confounding panels/data and all non-QC-RFSC truth results.
 protected = json.loads((ROOT / 'revision_notes/final_review_20261122/protected_figure2.json').read_text())
 for name, digest in protected['files'].items():
@@ -39,4 +43,4 @@ for name, expected_rows in protected['non_rfsc_rows'].items():
     assert current_rows == expected_rows, name
 for row in provenance['updated_s7_files']:
     assert sha(ROOT / row['path']) == row['sha256'], row['path']
-print('PASS: all 408 S7 fold rows and intervals match WiNN 0.1.6; Figure 2E--F and non-QC-RFSC truth results unchanged.')
+print('PASS: handmade Figure 1 preserved; all 408 S7 fold rows and intervals match WiNN 0.1.6; Figure 2E--F and non-QC-RFSC truth results unchanged.')

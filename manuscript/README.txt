@@ -10,6 +10,12 @@ bookmarked atlas is figures/WiNN_figures.pdf. figure_alt_text.txt contains four
 figure descriptions for the journal's accessibility/submission fields; these are
 not printed in the article.
 
+Figure 1 (figures/F1_winn_overview.pdf) is the author's handmade Illustrator
+artwork. Preserve this file; do not redraw or regenerate it. Its SHA256 is
+304cbd3148f570c06947c2b973c91ca831f416b8ad36fa2fc5755e28f72bf355,
+checked by scripts/audit_supplement_finalization.py. Changes to this artwork
+require an explicit author request.
+
 The correction benchmarks use WiNN 0.1.6, package commit 50b72a4. The experimental
 permutation gate in Supplementary Methods S10 is a separate calibration analysis
 and is not used in Figure 2 or the empirical correction benchmarks.
