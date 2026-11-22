@@ -89,7 +89,7 @@ Only selected feature-segment profiles are detrended. The primary configuration 
 z_{ij}^{\mathrm{drift}}=z_{ij}-\left\{\widehat f_i^{(s)}(t_j)-\overline{\widehat f_i^{(s)}}\right\},\qquad
 \overline{\widehat f_i^{(s)}}=n_s^{-1}\sum_{j\in s}\widehat f_i^{(s)}(t_j).
 \]
-Centering preserves the segment mean on the log1p scale before inverse transformation. The returned intensities are floored at zero after inverse transformation; this safeguard can alter the mean. The forced-drift ablation fits the same correction to every testable profile and bypasses only the gate.
+Selection determines whether a trend is fitted, whereas the centered fitted curve determines the correction magnitude. Small fitted trends produce small adjustments, but a marginal gate result does not guarantee a flat fit. Centering preserves the segment mean on the log1p scale before inverse transformation. The returned intensities are floored at zero after inverse transformation; this safeguard can alter the mean. The forced-drift ablation fits the same correction to every testable profile and bypasses only the gate.
 
 \subsection{Residual batch gate}
 
